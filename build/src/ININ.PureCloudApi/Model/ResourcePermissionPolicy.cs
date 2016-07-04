@@ -26,11 +26,12 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PolicyName">PolicyName.</param>
         /// <param name="PolicyDescription">PolicyDescription.</param>
         /// <param name="ActionSetKey">ActionSetKey.</param>
+        /// <param name="AllowConditions">AllowConditions (default to false).</param>
         /// <param name="ResourceConditionNode">ResourceConditionNode.</param>
         /// <param name="NamedResources">NamedResources.</param>
         /// <param name="ResourceCondition">ResourceCondition.</param>
         /// <param name="ActionSet">ActionSet.</param>
-        public ResourcePermissionPolicy(string Id = null, string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, string ActionSetKey = null, ResourceConditionNode ResourceConditionNode = null, List<string> NamedResources = null, string ResourceCondition = null, List<string> ActionSet = null)
+        public ResourcePermissionPolicy(string Id = null, string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, string ActionSetKey = null, bool? AllowConditions = null, ResourceConditionNode ResourceConditionNode = null, List<string> NamedResources = null, string ResourceCondition = null, List<string> ActionSet = null)
         {
             this.Id = Id;
             this.Domain = Domain;
@@ -38,6 +39,15 @@ namespace ININ.PureCloudApi.Model
             this.PolicyName = PolicyName;
             this.PolicyDescription = PolicyDescription;
             this.ActionSetKey = ActionSetKey;
+            // use default value if no "AllowConditions" provided
+            if (AllowConditions == null)
+            {
+                this.AllowConditions = false;
+            }
+            else
+            {
+                this.AllowConditions = AllowConditions;
+            }
             this.ResourceConditionNode = ResourceConditionNode;
             this.NamedResources = NamedResources;
             this.ResourceCondition = ResourceCondition;
@@ -75,6 +85,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="actionSetKey", EmitDefaultValue=false)]
         public string ActionSetKey { get; set; }
         /// <summary>
+        /// Gets or Sets AllowConditions
+        /// </summary>
+        [DataMember(Name="allowConditions", EmitDefaultValue=false)]
+        public bool? AllowConditions { get; set; }
+        /// <summary>
         /// Gets or Sets ResourceConditionNode
         /// </summary>
         [DataMember(Name="resourceConditionNode", EmitDefaultValue=false)]
@@ -108,6 +123,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PolicyName: ").Append(PolicyName).Append("\n");
             sb.Append("  PolicyDescription: ").Append(PolicyDescription).Append("\n");
             sb.Append("  ActionSetKey: ").Append(ActionSetKey).Append("\n");
+            sb.Append("  AllowConditions: ").Append(AllowConditions).Append("\n");
             sb.Append("  ResourceConditionNode: ").Append(ResourceConditionNode).Append("\n");
             sb.Append("  NamedResources: ").Append(NamedResources).Append("\n");
             sb.Append("  ResourceCondition: ").Append(ResourceCondition).Append("\n");
@@ -179,6 +195,11 @@ namespace ININ.PureCloudApi.Model
                     this.ActionSetKey.Equals(other.ActionSetKey)
                 ) &&
                 (
+                    this.AllowConditions == other.AllowConditions ||
+                    this.AllowConditions != null &&
+                    this.AllowConditions.Equals(other.AllowConditions)
+                ) &&
+                (
                     this.ResourceConditionNode == other.ResourceConditionNode ||
                     this.ResourceConditionNode != null &&
                     this.ResourceConditionNode.Equals(other.ResourceConditionNode)
@@ -223,6 +244,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PolicyDescription.GetHashCode();
                 if (this.ActionSetKey != null)
                     hash = hash * 59 + this.ActionSetKey.GetHashCode();
+                if (this.AllowConditions != null)
+                    hash = hash * 59 + this.AllowConditions.GetHashCode();
                 if (this.ResourceConditionNode != null)
                     hash = hash * 59 + this.ResourceConditionNode.GetHashCode();
                 if (this.NamedResources != null)

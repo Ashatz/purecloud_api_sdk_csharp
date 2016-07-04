@@ -18,6 +18,39 @@ namespace ININ.PureCloudApi.Model
     public partial class DncList :  IEquatable<DncList>
     {
         /// <summary>
+        /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
+        /// </summary>
+        /// <value>the type of dnc list being created, rds (csv file), gryphon, or dnc.com</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DncSourceTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Rds for "RDS"
+            /// </summary>
+            [EnumMember(Value = "RDS")]
+            Rds,
+            
+            /// <summary>
+            /// Enum DncDotCom for "DNC_DOT_COM"
+            /// </summary>
+            [EnumMember(Value = "DNC_DOT_COM")]
+            DncDotCom,
+            
+            /// <summary>
+            /// Enum Gryphon for "GRYPHON"
+            /// </summary>
+            [EnumMember(Value = "GRYPHON")]
+            Gryphon
+        }
+
+        /// <summary>
+        /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
+        /// </summary>
+        /// <value>the type of dnc list being created, rds (csv file), gryphon, or dnc.com</value>
+        [DataMember(Name="dncSourceType", EmitDefaultValue=false)]
+        public DncSourceTypeEnum? DncSourceType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="DncList" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -29,7 +62,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="PhoneNumberColumns">the name of the columns containing the numbers not to be called (required).</param>
         /// <param name="ImportStatus">the status of the import process.</param>
-        public DncList(string Name = null, int? Version = null, List<string> PhoneNumberColumns = null, ImportStatus ImportStatus = null)
+        /// <param name="DncCodes">the list of dnc.com codes to be treated as DNC.</param>
+        public DncList(string Name = null, int? Version = null, List<string> PhoneNumberColumns = null, ImportStatus ImportStatus = null, List<string> DncCodes = null)
         {
             // to ensure "PhoneNumberColumns" is required (not null)
             if (PhoneNumberColumns == null)
@@ -43,6 +77,7 @@ namespace ININ.PureCloudApi.Model
             this.Name = Name;
             this.Version = Version;
             this.ImportStatus = ImportStatus;
+            this.DncCodes = DncCodes;
         }
         
         /// <summary>
@@ -93,6 +128,24 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="size", EmitDefaultValue=false)]
         public long? Size { get; private set; }
         /// <summary>
+        /// the loginId if the dncSourceType is dnc.com
+        /// </summary>
+        /// <value>the loginId if the dncSourceType is dnc.com</value>
+        [DataMember(Name="loginId", EmitDefaultValue=false)]
+        public string LoginId { get; private set; }
+        /// <summary>
+        /// the list of dnc.com codes to be treated as DNC
+        /// </summary>
+        /// <value>the list of dnc.com codes to be treated as DNC</value>
+        [DataMember(Name="dncCodes", EmitDefaultValue=false)]
+        public List<string> DncCodes { get; set; }
+        /// <summary>
+        /// the license number if the dncSourceType is gryphon
+        /// </summary>
+        /// <value>the license number if the dncSourceType is gryphon</value>
+        [DataMember(Name="licenseId", EmitDefaultValue=false)]
+        public string LicenseId { get; private set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -114,6 +167,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
+            sb.Append("  DncSourceType: ").Append(DncSourceType).Append("\n");
+            sb.Append("  LoginId: ").Append(LoginId).Append("\n");
+            sb.Append("  DncCodes: ").Append(DncCodes).Append("\n");
+            sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -192,6 +249,26 @@ namespace ININ.PureCloudApi.Model
                     this.Size.Equals(other.Size)
                 ) &&
                 (
+                    this.DncSourceType == other.DncSourceType ||
+                    this.DncSourceType != null &&
+                    this.DncSourceType.Equals(other.DncSourceType)
+                ) &&
+                (
+                    this.LoginId == other.LoginId ||
+                    this.LoginId != null &&
+                    this.LoginId.Equals(other.LoginId)
+                ) &&
+                (
+                    this.DncCodes == other.DncCodes ||
+                    this.DncCodes != null &&
+                    this.DncCodes.SequenceEqual(other.DncCodes)
+                ) &&
+                (
+                    this.LicenseId == other.LicenseId ||
+                    this.LicenseId != null &&
+                    this.LicenseId.Equals(other.LicenseId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -225,6 +302,14 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ImportStatus.GetHashCode();
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
+                if (this.DncSourceType != null)
+                    hash = hash * 59 + this.DncSourceType.GetHashCode();
+                if (this.LoginId != null)
+                    hash = hash * 59 + this.LoginId.GetHashCode();
+                if (this.DncCodes != null)
+                    hash = hash * 59 + this.DncCodes.GetHashCode();
+                if (this.LicenseId != null)
+                    hash = hash * 59 + this.LicenseId.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

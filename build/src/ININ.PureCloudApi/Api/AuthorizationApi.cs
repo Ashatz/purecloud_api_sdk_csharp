@@ -206,9 +206,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole PatchRolesRoleId (string roleId, DomainOrganizationRole body = null);
+        DomainOrganizationRole PatchRolesRoleId (string roleId, DomainOrganizationRole body);
 
         /// <summary>
         /// Patch Organization Role for needsUpdate Field
@@ -218,9 +218,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> PatchRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRole body = null);
+        ApiResponse<DomainOrganizationRole> PatchRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRole body);
         /// <summary>
         /// Create an organization role.
         /// </summary>
@@ -228,9 +228,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole PostRoles (DomainOrganizationRole body = null);
+        DomainOrganizationRole PostRoles (DomainOrganizationRole body);
 
         /// <summary>
         /// Create an organization role.
@@ -239,9 +239,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> PostRolesWithHttpInfo (DomainOrganizationRole body = null);
+        ApiResponse<DomainOrganizationRole> PostRolesWithHttpInfo (DomainOrganizationRole body);
         /// <summary>
         /// Restores all default roles
         /// </summary>
@@ -264,7 +264,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
         ApiResponse<OrganizationRoleEntityListing> PostRolesDefaultWithHttpInfo (bool? force = null);
         /// <summary>
-        ///  Get an unsaved org role to default role comparison
+        /// Get an unsaved org role to default role comparison
         /// </summary>
         /// <remarks>
         /// Allows users to compare their existing roles in an unsaved state to its default role
@@ -272,12 +272,12 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>DomainOrgRoleDifference</returns>
-        DomainOrgRoleDifference PostRolesLeftroleIdComparedefaultRightroleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        DomainOrgRoleDifference PostRolesLeftroleIdComparedefaultRightroleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body);
 
         /// <summary>
-        ///  Get an unsaved org role to default role comparison
+        /// Get an unsaved org role to default role comparison
         /// </summary>
         /// <remarks>
         /// Allows users to compare their existing roles in an unsaved state to its default role
@@ -285,9 +285,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
-        ApiResponse<DomainOrgRoleDifference> PostRolesLeftroleIdComparedefaultRightroleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        ApiResponse<DomainOrgRoleDifference> PostRolesLeftroleIdComparedefaultRightroleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body);
         /// <summary>
         /// Restore specified default roles
         /// </summary>
@@ -295,9 +295,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization roles list</param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        OrganizationRoleEntityListing PutRolesDefault (List<DomainOrganizationRole> body = null);
+        OrganizationRoleEntityListing PutRolesDefault (List<DomainOrganizationRole> body);
 
         /// <summary>
         /// Restore specified default roles
@@ -306,9 +306,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization roles list</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        ApiResponse<OrganizationRoleEntityListing> PutRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body = null);
+        ApiResponse<OrganizationRoleEntityListing> PutRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body);
         /// <summary>
         /// Update an organization role.
         /// </summary>
@@ -317,9 +317,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole PutRolesRoleId (string roleId, DomainOrganizationRole body = null);
+        DomainOrganizationRole PutRolesRoleId (string roleId, DomainOrganizationRole body);
 
         /// <summary>
         /// Update an organization role.
@@ -329,9 +329,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> PutRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRole body = null);
+        ApiResponse<DomainOrganizationRole> PutRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRole body);
         /// <summary>
         /// Sets the users for the role
         /// </summary>
@@ -340,9 +340,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> PutRolesRoleIdUsersAdd (string roleId, List<string> body = null);
+        List<string> PutRolesRoleIdUsersAdd (string roleId, List<string> body);
 
         /// <summary>
         /// Sets the users for the role
@@ -352,9 +352,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> PutRolesRoleIdUsersAddWithHttpInfo (string roleId, List<string> body = null);
+        ApiResponse<List<string>> PutRolesRoleIdUsersAddWithHttpInfo (string roleId, List<string> body);
         /// <summary>
         /// Removes the users from the role
         /// </summary>
@@ -363,9 +363,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> PutRolesRoleIdUsersRemove (string roleId, List<string> body = null);
+        List<string> PutRolesRoleIdUsersRemove (string roleId, List<string> body);
 
         /// <summary>
         /// Removes the users from the role
@@ -375,9 +375,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> PutRolesRoleIdUsersRemoveWithHttpInfo (string roleId, List<string> body = null);
+        ApiResponse<List<string>> PutRolesRoleIdUsersRemoveWithHttpInfo (string roleId, List<string> body);
         /// <summary>
         /// Sets the user&#39;s roles
         /// </summary>
@@ -386,9 +386,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
-        UserAuthorization PutUserIdRoles (string userId, List<string> body = null);
+        UserAuthorization PutUserIdRoles (string userId, List<string> body);
 
         /// <summary>
         /// Sets the user&#39;s roles
@@ -398,9 +398,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
-        ApiResponse<UserAuthorization> PutUserIdRolesWithHttpInfo (string userId, List<string> body = null);
+        ApiResponse<UserAuthorization> PutUserIdRolesWithHttpInfo (string userId, List<string> body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -595,9 +595,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> PatchRolesRoleIdAsync (string roleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrganizationRole> PatchRolesRoleIdAsync (string roleId, DomainOrganizationRole body);
 
         /// <summary>
         /// Patch Organization Role for needsUpdate Field
@@ -607,9 +607,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PatchRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PatchRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRole body);
         /// <summary>
         /// Create an organization role.
         /// </summary>
@@ -617,9 +617,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> PostRolesAsync (DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrganizationRole> PostRolesAsync (DomainOrganizationRole body);
 
         /// <summary>
         /// Create an organization role.
@@ -628,9 +628,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostRolesAsyncWithHttpInfo (DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostRolesAsyncWithHttpInfo (DomainOrganizationRole body);
         /// <summary>
         /// Restores all default roles
         /// </summary>
@@ -653,7 +653,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PostRolesDefaultAsyncWithHttpInfo (bool? force = null);
         /// <summary>
-        ///  Get an unsaved org role to default role comparison
+        /// Get an unsaved org role to default role comparison
         /// </summary>
         /// <remarks>
         /// Allows users to compare their existing roles in an unsaved state to its default role
@@ -661,12 +661,12 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
-        System.Threading.Tasks.Task<DomainOrgRoleDifference> PostRolesLeftroleIdComparedefaultRightroleIdAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrgRoleDifference> PostRolesLeftroleIdComparedefaultRightroleIdAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body);
 
         /// <summary>
-        ///  Get an unsaved org role to default role comparison
+        /// Get an unsaved org role to default role comparison
         /// </summary>
         /// <remarks>
         /// Allows users to compare their existing roles in an unsaved state to its default role
@@ -674,9 +674,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> PostRolesLeftroleIdComparedefaultRightroleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> PostRolesLeftroleIdComparedefaultRightroleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body);
         /// <summary>
         /// Restore specified default roles
         /// </summary>
@@ -684,9 +684,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization roles list</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationRoleEntityListing> PutRolesDefaultAsync (List<DomainOrganizationRole> body = null);
+        System.Threading.Tasks.Task<OrganizationRoleEntityListing> PutRolesDefaultAsync (List<DomainOrganizationRole> body);
 
         /// <summary>
         /// Restore specified default roles
@@ -695,9 +695,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization roles list</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PutRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PutRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body);
         /// <summary>
         /// Update an organization role.
         /// </summary>
@@ -706,9 +706,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> PutRolesRoleIdAsync (string roleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrganizationRole> PutRolesRoleIdAsync (string roleId, DomainOrganizationRole body);
 
         /// <summary>
         /// Update an organization role.
@@ -718,9 +718,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRole body);
         /// <summary>
         /// Sets the users for the role
         /// </summary>
@@ -729,9 +729,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> PutRolesRoleIdUsersAddAsync (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<List<string>> PutRolesRoleIdUsersAddAsync (string roleId, List<string> body);
 
         /// <summary>
         /// Sets the users for the role
@@ -741,9 +741,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRolesRoleIdUsersAddAsyncWithHttpInfo (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRolesRoleIdUsersAddAsyncWithHttpInfo (string roleId, List<string> body);
         /// <summary>
         /// Removes the users from the role
         /// </summary>
@@ -752,9 +752,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> PutRolesRoleIdUsersRemoveAsync (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<List<string>> PutRolesRoleIdUsersRemoveAsync (string roleId, List<string> body);
 
         /// <summary>
         /// Removes the users from the role
@@ -764,9 +764,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRolesRoleIdUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRolesRoleIdUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body);
         /// <summary>
         /// Sets the user&#39;s roles
         /// </summary>
@@ -775,9 +775,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
-        System.Threading.Tasks.Task<UserAuthorization> PutUserIdRolesAsync (string userId, List<string> body = null);
+        System.Threading.Tasks.Task<UserAuthorization> PutUserIdRolesAsync (string userId, List<string> body);
 
         /// <summary>
         /// Sets the user&#39;s roles
@@ -787,9 +787,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserIdRolesAsyncWithHttpInfo (string userId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserIdRolesAsyncWithHttpInfo (string userId, List<string> body);
         #endregion Asynchronous Operations
     }
 
@@ -2141,9 +2141,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole PatchRolesRoleId (string roleId, DomainOrganizationRole body = null)
+        public DomainOrganizationRole PatchRolesRoleId (string roleId, DomainOrganizationRole body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = PatchRolesRoleIdWithHttpInfo(roleId, body);
              return localVarResponse.Data;
@@ -2154,13 +2154,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > PatchRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrganizationRole > PatchRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRole body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PatchRolesRoleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PatchRolesRoleId");
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2227,9 +2230,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> PatchRolesRoleIdAsync (string roleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> PatchRolesRoleIdAsync (string roleId, DomainOrganizationRole body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = await PatchRolesRoleIdAsyncWithHttpInfo(roleId, body);
              return localVarResponse.Data;
@@ -2241,13 +2244,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PatchRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PatchRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRole body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PatchRolesRoleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PatchRolesRoleId");
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2313,9 +2319,9 @@ namespace ININ.PureCloudApi.Api
         /// Create an organization role. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole PostRoles (DomainOrganizationRole body = null)
+        public DomainOrganizationRole PostRoles (DomainOrganizationRole body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = PostRolesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2325,10 +2331,13 @@ namespace ININ.PureCloudApi.Api
         /// Create an organization role. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > PostRolesWithHttpInfo (DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrganizationRole > PostRolesWithHttpInfo (DomainOrganizationRole body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostRoles");
 
             var localVarPath = "/api/v2/authorization/roles";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2393,9 +2402,9 @@ namespace ININ.PureCloudApi.Api
         /// Create an organization role. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> PostRolesAsync (DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> PostRolesAsync (DomainOrganizationRole body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = await PostRolesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2406,10 +2415,13 @@ namespace ININ.PureCloudApi.Api
         /// Create an organization role. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostRolesAsyncWithHttpInfo (DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostRolesAsyncWithHttpInfo (DomainOrganizationRole body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostRoles");
 
             var localVarPath = "/api/v2/authorization/roles";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2618,28 +2630,28 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        ///  Get an unsaved org role to default role comparison Allows users to compare their existing roles in an unsaved state to its default role
+        /// Get an unsaved org role to default role comparison Allows users to compare their existing roles in an unsaved state to its default role
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>DomainOrgRoleDifference</returns>
-        public DomainOrgRoleDifference PostRolesLeftroleIdComparedefaultRightroleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public DomainOrgRoleDifference PostRolesLeftroleIdComparedefaultRightroleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
         {
              ApiResponse<DomainOrgRoleDifference> localVarResponse = PostRolesLeftroleIdComparedefaultRightroleIdWithHttpInfo(leftRoleId, rightRoleId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  Get an unsaved org role to default role comparison Allows users to compare their existing roles in an unsaved state to its default role
+        /// Get an unsaved org role to default role comparison Allows users to compare their existing roles in an unsaved state to its default role
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
-        public ApiResponse< DomainOrgRoleDifference > PostRolesLeftroleIdComparedefaultRightroleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrgRoleDifference > PostRolesLeftroleIdComparedefaultRightroleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
         {
             // verify the required parameter 'leftRoleId' is set
             if (leftRoleId == null)
@@ -2647,6 +2659,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'rightRoleId' is set
             if (rightRoleId == null)
                 throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->PostRolesLeftroleIdComparedefaultRightroleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostRolesLeftroleIdComparedefaultRightroleId");
 
             var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2710,14 +2725,14 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        ///  Get an unsaved org role to default role comparison Allows users to compare their existing roles in an unsaved state to its default role
+        /// Get an unsaved org role to default role comparison Allows users to compare their existing roles in an unsaved state to its default role
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
-        public async System.Threading.Tasks.Task<DomainOrgRoleDifference> PostRolesLeftroleIdComparedefaultRightroleIdAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrgRoleDifference> PostRolesLeftroleIdComparedefaultRightroleIdAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
         {
              ApiResponse<DomainOrgRoleDifference> localVarResponse = await PostRolesLeftroleIdComparedefaultRightroleIdAsyncWithHttpInfo(leftRoleId, rightRoleId, body);
              return localVarResponse.Data;
@@ -2725,14 +2740,14 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        ///  Get an unsaved org role to default role comparison Allows users to compare their existing roles in an unsaved state to its default role
+        /// Get an unsaved org role to default role comparison Allows users to compare their existing roles in an unsaved state to its default role
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> PostRolesLeftroleIdComparedefaultRightroleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> PostRolesLeftroleIdComparedefaultRightroleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
         {
             // verify the required parameter 'leftRoleId' is set
             if (leftRoleId == null)
@@ -2740,6 +2755,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'rightRoleId' is set
             if (rightRoleId == null)
                 throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->PostRolesLeftroleIdComparedefaultRightroleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostRolesLeftroleIdComparedefaultRightroleId");
 
             var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2806,9 +2824,9 @@ namespace ININ.PureCloudApi.Api
         /// Restore specified default roles 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization roles list</param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        public OrganizationRoleEntityListing PutRolesDefault (List<DomainOrganizationRole> body = null)
+        public OrganizationRoleEntityListing PutRolesDefault (List<DomainOrganizationRole> body)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = PutRolesDefaultWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2818,10 +2836,13 @@ namespace ININ.PureCloudApi.Api
         /// Restore specified default roles 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization roles list</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        public ApiResponse< OrganizationRoleEntityListing > PutRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body = null)
+        public ApiResponse< OrganizationRoleEntityListing > PutRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutRolesDefault");
 
             var localVarPath = "/api/v2/authorization/roles/default";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2886,9 +2907,9 @@ namespace ININ.PureCloudApi.Api
         /// Restore specified default roles 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization roles list</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> PutRolesDefaultAsync (List<DomainOrganizationRole> body = null)
+        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> PutRolesDefaultAsync (List<DomainOrganizationRole> body)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = await PutRolesDefaultAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2899,10 +2920,13 @@ namespace ININ.PureCloudApi.Api
         /// Restore specified default roles 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization roles list</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PutRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PutRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutRolesDefault");
 
             var localVarPath = "/api/v2/authorization/roles/default";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2968,9 +2992,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole PutRolesRoleId (string roleId, DomainOrganizationRole body = null)
+        public DomainOrganizationRole PutRolesRoleId (string roleId, DomainOrganizationRole body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = PutRolesRoleIdWithHttpInfo(roleId, body);
              return localVarResponse.Data;
@@ -2981,13 +3005,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > PutRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrganizationRole > PutRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRole body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRolesRoleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutRolesRoleId");
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3054,9 +3081,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> PutRolesRoleIdAsync (string roleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> PutRolesRoleIdAsync (string roleId, DomainOrganizationRole body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = await PutRolesRoleIdAsyncWithHttpInfo(roleId, body);
              return localVarResponse.Data;
@@ -3068,13 +3095,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRole body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRolesRoleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutRolesRoleId");
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3141,9 +3171,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> PutRolesRoleIdUsersAdd (string roleId, List<string> body = null)
+        public List<string> PutRolesRoleIdUsersAdd (string roleId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = PutRolesRoleIdUsersAddWithHttpInfo(roleId, body);
              return localVarResponse.Data;
@@ -3154,13 +3184,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > PutRolesRoleIdUsersAddWithHttpInfo (string roleId, List<string> body = null)
+        public ApiResponse< List<string> > PutRolesRoleIdUsersAddWithHttpInfo (string roleId, List<string> body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRolesRoleIdUsersAdd");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutRolesRoleIdUsersAdd");
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}/users/add";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3227,9 +3260,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> PutRolesRoleIdUsersAddAsync (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<List<string>> PutRolesRoleIdUsersAddAsync (string roleId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = await PutRolesRoleIdUsersAddAsyncWithHttpInfo(roleId, body);
              return localVarResponse.Data;
@@ -3241,13 +3274,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRolesRoleIdUsersAddAsyncWithHttpInfo (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRolesRoleIdUsersAddAsyncWithHttpInfo (string roleId, List<string> body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRolesRoleIdUsersAdd");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutRolesRoleIdUsersAdd");
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}/users/add";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3314,9 +3350,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> PutRolesRoleIdUsersRemove (string roleId, List<string> body = null)
+        public List<string> PutRolesRoleIdUsersRemove (string roleId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = PutRolesRoleIdUsersRemoveWithHttpInfo(roleId, body);
              return localVarResponse.Data;
@@ -3327,13 +3363,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > PutRolesRoleIdUsersRemoveWithHttpInfo (string roleId, List<string> body = null)
+        public ApiResponse< List<string> > PutRolesRoleIdUsersRemoveWithHttpInfo (string roleId, List<string> body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRolesRoleIdUsersRemove");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutRolesRoleIdUsersRemove");
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}/users/remove";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3400,9 +3439,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> PutRolesRoleIdUsersRemoveAsync (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<List<string>> PutRolesRoleIdUsersRemoveAsync (string roleId, List<string> body)
         {
              ApiResponse<List<string>> localVarResponse = await PutRolesRoleIdUsersRemoveAsyncWithHttpInfo(roleId, body);
              return localVarResponse.Data;
@@ -3414,13 +3453,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of user IDs</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRolesRoleIdUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRolesRoleIdUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRolesRoleIdUsersRemove");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutRolesRoleIdUsersRemove");
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}/users/remove";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3487,9 +3529,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
-        public UserAuthorization PutUserIdRoles (string userId, List<string> body = null)
+        public UserAuthorization PutUserIdRoles (string userId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = PutUserIdRolesWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -3500,13 +3542,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
-        public ApiResponse< UserAuthorization > PutUserIdRolesWithHttpInfo (string userId, List<string> body = null)
+        public ApiResponse< UserAuthorization > PutUserIdRolesWithHttpInfo (string userId, List<string> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->PutUserIdRoles");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutUserIdRoles");
 
             var localVarPath = "/api/v2/users/{userId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3573,9 +3618,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
-        public async System.Threading.Tasks.Task<UserAuthorization> PutUserIdRolesAsync (string userId, List<string> body = null)
+        public async System.Threading.Tasks.Task<UserAuthorization> PutUserIdRolesAsync (string userId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = await PutUserIdRolesAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -3587,13 +3632,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserIdRolesAsyncWithHttpInfo (string userId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserIdRolesAsyncWithHttpInfo (string userId, List<string> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->PutUserIdRoles");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutUserIdRoles");
 
             var localVarPath = "/api/v2/users/{userId}/roles";
             var localVarPathParams = new Dictionary<String, String>();

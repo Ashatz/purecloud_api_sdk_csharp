@@ -82,9 +82,9 @@ namespace ININ.PureCloudApi.Api
         /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        OAuthClient PostClients (OAuthClient body = null);
+        OAuthClient PostClients (OAuthClient body);
 
         /// <summary>
         /// Create OAuth client
@@ -93,9 +93,9 @@ namespace ININ.PureCloudApi.Api
         /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        ApiResponse<OAuthClient> PostClientsWithHttpInfo (OAuthClient body = null);
+        ApiResponse<OAuthClient> PostClientsWithHttpInfo (OAuthClient body);
         /// <summary>
         /// Regenerate Client Secret
         /// </summary>
@@ -125,9 +125,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        OAuthClient PutClientsClientId (string clientId, OAuthClient body = null);
+        OAuthClient PutClientsClientId (string clientId, OAuthClient body);
 
         /// <summary>
         /// Update OAuth Client
@@ -137,9 +137,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        ApiResponse<OAuthClient> PutClientsClientIdWithHttpInfo (string clientId, OAuthClient body = null);
+        ApiResponse<OAuthClient> PutClientsClientIdWithHttpInfo (string clientId, OAuthClient body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -210,9 +210,9 @@ namespace ININ.PureCloudApi.Api
         /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        System.Threading.Tasks.Task<OAuthClient> PostClientsAsync (OAuthClient body = null);
+        System.Threading.Tasks.Task<OAuthClient> PostClientsAsync (OAuthClient body);
 
         /// <summary>
         /// Create OAuth client
@@ -221,9 +221,9 @@ namespace ININ.PureCloudApi.Api
         /// The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostClientsAsyncWithHttpInfo (OAuthClient body = null);
+        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostClientsAsyncWithHttpInfo (OAuthClient body);
         /// <summary>
         /// Regenerate Client Secret
         /// </summary>
@@ -253,9 +253,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        System.Threading.Tasks.Task<OAuthClient> PutClientsClientIdAsync (string clientId, OAuthClient body = null);
+        System.Threading.Tasks.Task<OAuthClient> PutClientsClientIdAsync (string clientId, OAuthClient body);
 
         /// <summary>
         /// Update OAuth Client
@@ -265,9 +265,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutClientsClientIdAsyncWithHttpInfo (string clientId, OAuthClient body = null);
+        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutClientsClientIdAsyncWithHttpInfo (string clientId, OAuthClient body);
         #endregion Asynchronous Operations
     }
 
@@ -807,9 +807,9 @@ namespace ININ.PureCloudApi.Api
         /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        public OAuthClient PostClients (OAuthClient body = null)
+        public OAuthClient PostClients (OAuthClient body)
         {
              ApiResponse<OAuthClient> localVarResponse = PostClientsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -819,10 +819,13 @@ namespace ININ.PureCloudApi.Api
         /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        public ApiResponse< OAuthClient > PostClientsWithHttpInfo (OAuthClient body = null)
+        public ApiResponse< OAuthClient > PostClientsWithHttpInfo (OAuthClient body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PostClients");
 
             var localVarPath = "/api/v2/oauth/clients";
             var localVarPathParams = new Dictionary<String, String>();
@@ -887,9 +890,9 @@ namespace ININ.PureCloudApi.Api
         /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        public async System.Threading.Tasks.Task<OAuthClient> PostClientsAsync (OAuthClient body = null)
+        public async System.Threading.Tasks.Task<OAuthClient> PostClientsAsync (OAuthClient body)
         {
              ApiResponse<OAuthClient> localVarResponse = await PostClientsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -900,10 +903,13 @@ namespace ININ.PureCloudApi.Api
         /// Create OAuth client The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is &#39;CODE&#39; which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the &#39;TOKEN&#39; grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the &#39;CLIENT-CREDENTIALS&#39; grant may be used. In this case the client must be granted roles  via the &#39;roleIds&#39; field.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostClientsAsyncWithHttpInfo (OAuthClient body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostClientsAsyncWithHttpInfo (OAuthClient body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PostClients");
 
             var localVarPath = "/api/v2/oauth/clients";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1120,9 +1126,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        public OAuthClient PutClientsClientId (string clientId, OAuthClient body = null)
+        public OAuthClient PutClientsClientId (string clientId, OAuthClient body)
         {
              ApiResponse<OAuthClient> localVarResponse = PutClientsClientIdWithHttpInfo(clientId, body);
              return localVarResponse.Data;
@@ -1133,13 +1139,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        public ApiResponse< OAuthClient > PutClientsClientIdWithHttpInfo (string clientId, OAuthClient body = null)
+        public ApiResponse< OAuthClient > PutClientsClientIdWithHttpInfo (string clientId, OAuthClient body)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PutClientsClientId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PutClientsClientId");
 
             var localVarPath = "/api/v2/oauth/clients/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1206,9 +1215,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        public async System.Threading.Tasks.Task<OAuthClient> PutClientsClientIdAsync (string clientId, OAuthClient body = null)
+        public async System.Threading.Tasks.Task<OAuthClient> PutClientsClientIdAsync (string clientId, OAuthClient body)
         {
              ApiResponse<OAuthClient> localVarResponse = await PutClientsClientIdAsyncWithHttpInfo(clientId, body);
              return localVarResponse.Data;
@@ -1220,13 +1229,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <param name="body">Client (optional)</param>
+        /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutClientsClientIdAsyncWithHttpInfo (string clientId, OAuthClient body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutClientsClientIdAsyncWithHttpInfo (string clientId, OAuthClient body)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PutClientsClientId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PutClientsClientId");
 
             var localVarPath = "/api/v2/oauth/clients/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();

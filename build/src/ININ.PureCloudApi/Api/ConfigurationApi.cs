@@ -82,9 +82,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <param name="body">KeyRotationSchedule</param>
         /// <returns>KeyRotationSchedule</returns>
-        KeyRotationSchedule PutRecordingkeysRotationschedule (KeyRotationSchedule body = null);
+        KeyRotationSchedule PutRecordingkeysRotationschedule (KeyRotationSchedule body);
 
         /// <summary>
         /// Update key rotation schedule
@@ -93,9 +93,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <param name="body">KeyRotationSchedule</param>
         /// <returns>ApiResponse of KeyRotationSchedule</returns>
-        ApiResponse<KeyRotationSchedule> PutRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body = null);
+        ApiResponse<KeyRotationSchedule> PutRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -166,9 +166,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <param name="body">KeyRotationSchedule</param>
         /// <returns>Task of KeyRotationSchedule</returns>
-        System.Threading.Tasks.Task<KeyRotationSchedule> PutRecordingkeysRotationscheduleAsync (KeyRotationSchedule body = null);
+        System.Threading.Tasks.Task<KeyRotationSchedule> PutRecordingkeysRotationscheduleAsync (KeyRotationSchedule body);
 
         /// <summary>
         /// Update key rotation schedule
@@ -177,9 +177,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <param name="body">KeyRotationSchedule</param>
         /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body);
         #endregion Asynchronous Operations
     }
 
@@ -709,9 +709,9 @@ namespace ININ.PureCloudApi.Api
         /// Update key rotation schedule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <param name="body">KeyRotationSchedule</param>
         /// <returns>KeyRotationSchedule</returns>
-        public KeyRotationSchedule PutRecordingkeysRotationschedule (KeyRotationSchedule body = null)
+        public KeyRotationSchedule PutRecordingkeysRotationschedule (KeyRotationSchedule body)
         {
              ApiResponse<KeyRotationSchedule> localVarResponse = PutRecordingkeysRotationscheduleWithHttpInfo(body);
              return localVarResponse.Data;
@@ -721,10 +721,13 @@ namespace ININ.PureCloudApi.Api
         /// Update key rotation schedule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <param name="body">KeyRotationSchedule</param>
         /// <returns>ApiResponse of KeyRotationSchedule</returns>
-        public ApiResponse< KeyRotationSchedule > PutRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body = null)
+        public ApiResponse< KeyRotationSchedule > PutRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConfigurationApi->PutRecordingkeysRotationschedule");
 
             var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
             var localVarPathParams = new Dictionary<String, String>();
@@ -789,9 +792,9 @@ namespace ININ.PureCloudApi.Api
         /// Update key rotation schedule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <param name="body">KeyRotationSchedule</param>
         /// <returns>Task of KeyRotationSchedule</returns>
-        public async System.Threading.Tasks.Task<KeyRotationSchedule> PutRecordingkeysRotationscheduleAsync (KeyRotationSchedule body = null)
+        public async System.Threading.Tasks.Task<KeyRotationSchedule> PutRecordingkeysRotationscheduleAsync (KeyRotationSchedule body)
         {
              ApiResponse<KeyRotationSchedule> localVarResponse = await PutRecordingkeysRotationscheduleAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -802,10 +805,13 @@ namespace ININ.PureCloudApi.Api
         /// Update key rotation schedule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">KeyRotationSchedule (optional)</param>
+        /// <param name="body">KeyRotationSchedule</param>
         /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConfigurationApi->PutRecordingkeysRotationschedule");
 
             var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
             var localVarPathParams = new Dictionary<String, String>();

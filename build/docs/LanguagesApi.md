@@ -189,7 +189,7 @@ namespace Example
 
 <a name="postlanguages"></a>
 
-## [**Language**](Language.html) PostLanguages (Language body = null)
+## [**Language**](Language.html) PostLanguages (Language body)
 
 Create Language
 
@@ -214,7 +214,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new LanguagesApi();
-            var body = new Language(); // Language | Language (optional) 
+            var body = new Language(); // Language | Language
 
             try
             {
@@ -236,7 +236,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Language**](Language.html)| Language | [optional]  |
+| **body** | [**Language**](Language.html)| Language |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -245,7 +245,7 @@ namespace Example
 
 <a name="putlanguageid"></a>
 
-## [**Language**](Language.html) PutLanguageId (string languageId, Language body = null)
+## [**Language**](Language.html) PutLanguageId (string languageId, Language body)
 
 Update Language
 
@@ -271,7 +271,7 @@ namespace Example
 
             var apiInstance = new LanguagesApi();
             var languageId = languageId_example;  // string | Language ID
-            var body = new Language(); // Language | Language (optional) 
+            var body = new Language(); // Language | Language
 
             try
             {
@@ -294,7 +294,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **languageId** | **string**| Language ID |  |
-| **body** | [**Language**](Language.html)| Language | [optional]  |
+| **body** | [**Language**](Language.html)| Language |  |
 {: class="table table-striped"}
 
 ### Return type

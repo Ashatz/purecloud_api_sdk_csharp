@@ -244,7 +244,19 @@ namespace ININ.PureCloudApi.Model
             /// Enum Owaiting for "oWaiting"
             /// </summary>
             [EnumMember(Value = "oWaiting")]
-            Owaiting
+            Owaiting,
+            
+            /// <summary>
+            /// Enum Oonqueueusers for "oOnQueueUsers"
+            /// </summary>
+            [EnumMember(Value = "oOnQueueUsers")]
+            Oonqueueusers,
+            
+            /// <summary>
+            /// Enum Ooffqueueusers for "oOffQueueUsers"
+            /// </summary>
+            [EnumMember(Value = "oOffQueueUsers")]
+            Ooffqueueusers
         }
 
         /// <summary>

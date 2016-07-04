@@ -917,14 +917,14 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="body">AuditSearch</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>AuditSearchResult</returns>
-        AuditSearchResult PostAudits (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
+        AuditSearchResult PostAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
 
         /// <summary>
         /// Retrieves audits for dialer.
@@ -933,14 +933,14 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="body">AuditSearch</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>ApiResponse of AuditSearchResult</returns>
-        ApiResponse<AuditSearchResult> PostAuditsWithHttpInfo (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
+        ApiResponse<AuditSearchResult> PostAuditsWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
         /// <summary>
         /// Create callable time set
         /// </summary>
@@ -948,9 +948,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>CallableTimeSet</returns>
-        CallableTimeSet PostCallabletimesets (CallableTimeSet body = null);
+        CallableTimeSet PostCallabletimesets (CallableTimeSet body);
 
         /// <summary>
         /// Create callable time set
@@ -959,9 +959,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        ApiResponse<CallableTimeSet> PostCallabletimesetsWithHttpInfo (CallableTimeSet body = null);
+        ApiResponse<CallableTimeSet> PostCallabletimesetsWithHttpInfo (CallableTimeSet body);
         /// <summary>
         /// Create a dialer call analysis response set.
         /// </summary>
@@ -969,9 +969,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>ResponseSet</returns>
-        ResponseSet PostCallanalysisresponsesets (ResponseSet body = null);
+        ResponseSet PostCallanalysisresponsesets (ResponseSet body);
 
         /// <summary>
         /// Create a dialer call analysis response set.
@@ -980,9 +980,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        ApiResponse<ResponseSet> PostCallanalysisresponsesetsWithHttpInfo (ResponseSet body = null);
+        ApiResponse<ResponseSet> PostCallanalysisresponsesetsWithHttpInfo (ResponseSet body);
         /// <summary>
         /// Create a campaign.
         /// </summary>
@@ -990,9 +990,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Campaign</returns>
-        Campaign PostCampaigns (Campaign body = null);
+        Campaign PostCampaigns (Campaign body);
 
         /// <summary>
         /// Create a campaign.
@@ -1001,9 +1001,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>ApiResponse of Campaign</returns>
-        ApiResponse<Campaign> PostCampaignsWithHttpInfo (Campaign body = null);
+        ApiResponse<Campaign> PostCampaignsWithHttpInfo (Campaign body);
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign
         /// </summary>
@@ -1012,9 +1012,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ContactCallbackRequest</returns>
-        ContactCallbackRequest PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body = null);
+        ContactCallbackRequest PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body);
 
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign
@@ -1024,9 +1024,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ApiResponse of ContactCallbackRequest</returns>
-        ApiResponse<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
+        ApiResponse<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body);
         /// <summary>
         /// Get progress for a list of campaigns
         /// </summary>
@@ -1034,9 +1034,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign IDs (optional)</param>
+        /// <param name="body">Campaign IDs</param>
         /// <returns>List&lt;CampaignProgress&gt;</returns>
-        List<CampaignProgress> PostCampaignsProgress (List<string> body = null);
+        List<CampaignProgress> PostCampaignsProgress (List<string> body);
 
         /// <summary>
         /// Get progress for a list of campaigns
@@ -1045,9 +1045,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign IDs (optional)</param>
+        /// <param name="body">Campaign IDs</param>
         /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
-        ApiResponse<List<CampaignProgress>> PostCampaignsProgressWithHttpInfo (List<string> body = null);
+        ApiResponse<List<CampaignProgress>> PostCampaignsProgressWithHttpInfo (List<string> body);
         /// <summary>
         /// Create a contact List.
         /// </summary>
@@ -1055,9 +1055,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>ContactList</returns>
-        ContactList PostContactlists (ContactList body = null);
+        ContactList PostContactlists (ContactList body);
 
         /// <summary>
         /// Create a contact List.
@@ -1066,9 +1066,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>ApiResponse of ContactList</returns>
-        ApiResponse<ContactList> PostContactlistsWithHttpInfo (ContactList body = null);
+        ApiResponse<ContactList> PostContactlistsWithHttpInfo (ContactList body);
         /// <summary>
         /// Add contacts to a contact list.
         /// </summary>
@@ -1077,10 +1077,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>DialerContact</returns>
-        DialerContact PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body = null, bool? priority = null);
+        DialerContact PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null);
 
         /// <summary>
         /// Add contacts to a contact list.
@@ -1090,10 +1090,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>ApiResponse of DialerContact</returns>
-        ApiResponse<DialerContact> PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null);
+        ApiResponse<DialerContact> PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null);
         /// <summary>
         /// Initiate the export of a contact list.
         /// </summary>
@@ -1143,9 +1143,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>DncList</returns>
-        DncList PostDnclists (DncList body = null);
+        DncList PostDnclists (DncList body);
 
         /// <summary>
         /// Create dialer DNC list
@@ -1154,9 +1154,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>ApiResponse of DncList</returns>
-        ApiResponse<DncList> PostDnclistsWithHttpInfo (DncList body = null);
+        ApiResponse<DncList> PostDnclistsWithHttpInfo (DncList body);
         /// <summary>
         /// Initiate the export of a dnc list.
         /// </summary>
@@ -1186,9 +1186,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <param name="body">DNC Phone Numbers</param>
         /// <returns></returns>
-        void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body = null);
+        void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body);
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -1198,9 +1198,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <param name="body">DNC Phone Numbers</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostDnclistsDnclistIdPhonenumbersWithHttpInfo (string dncListId, List<string> body = null);
+        ApiResponse<Object> PostDnclistsDnclistIdPhonenumbersWithHttpInfo (string dncListId, List<string> body);
         /// <summary>
         /// Create a Dialer Call Analysis Response Set.
         /// </summary>
@@ -1208,9 +1208,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>RuleSet</returns>
-        RuleSet PostRulesets (RuleSet body = null);
+        RuleSet PostRulesets (RuleSet body);
 
         /// <summary>
         /// Create a Dialer Call Analysis Response Set.
@@ -1219,9 +1219,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>ApiResponse of RuleSet</returns>
-        ApiResponse<RuleSet> PostRulesetsWithHttpInfo (RuleSet body = null);
+        ApiResponse<RuleSet> PostRulesetsWithHttpInfo (RuleSet body);
         /// <summary>
         /// Create a new campaign sequence.
         /// </summary>
@@ -1229,9 +1229,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>CampaignSequence</returns>
-        CampaignSequence PostSequences (CampaignSequence body = null);
+        CampaignSequence PostSequences (CampaignSequence body);
 
         /// <summary>
         /// Create a new campaign sequence.
@@ -1240,9 +1240,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        ApiResponse<CampaignSequence> PostSequencesWithHttpInfo (CampaignSequence body = null);
+        ApiResponse<CampaignSequence> PostSequencesWithHttpInfo (CampaignSequence body);
         /// <summary>
         /// Update callable time set
         /// </summary>
@@ -1251,9 +1251,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>CallableTimeSet</returns>
-        CallableTimeSet PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body = null);
+        CallableTimeSet PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body);
 
         /// <summary>
         /// Update callable time set
@@ -1263,9 +1263,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        ApiResponse<CallableTimeSet> PutCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null);
+        ApiResponse<CallableTimeSet> PutCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId, CallableTimeSet body);
         /// <summary>
         /// Update a dialer call analysis response set.
         /// </summary>
@@ -1274,9 +1274,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>ResponseSet</returns>
-        ResponseSet PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body = null);
+        ResponseSet PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body);
 
         /// <summary>
         /// Update a dialer call analysis response set.
@@ -1286,9 +1286,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        ApiResponse<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId, ResponseSet body = null);
+        ApiResponse<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId, ResponseSet body);
         /// <summary>
         /// Update a campaign.
         /// </summary>
@@ -1297,9 +1297,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Campaign</returns>
-        Campaign PutCampaignsCampaignId (string campaignId, Campaign body = null);
+        Campaign PutCampaignsCampaignId (string campaignId, Campaign body);
 
         /// <summary>
         /// Update a campaign.
@@ -1309,9 +1309,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>ApiResponse of Campaign</returns>
-        ApiResponse<Campaign> PutCampaignsCampaignIdWithHttpInfo (string campaignId, Campaign body = null);
+        ApiResponse<Campaign> PutCampaignsCampaignIdWithHttpInfo (string campaignId, Campaign body);
         /// <summary>
         /// Send notification that an agent&#39;s state changed 
         /// </summary>
@@ -1321,9 +1321,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
-        /// <param name="body">agent (optional)</param>
+        /// <param name="body">agent</param>
         /// <returns>string</returns>
-        string PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body = null);
+        string PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body);
 
         /// <summary>
         /// Send notification that an agent&#39;s state changed 
@@ -1334,9 +1334,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
-        /// <param name="body">agent (optional)</param>
+        /// <param name="body">agent</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PutCampaignsCampaignIdAgentsUserIdWithHttpInfo (string campaignId, string userId, Agent body = null);
+        ApiResponse<string> PutCampaignsCampaignIdAgentsUserIdWithHttpInfo (string campaignId, string userId, Agent body);
         /// <summary>
         /// Update a contact list.
         /// </summary>
@@ -1345,9 +1345,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>ContactList</returns>
-        ContactList PutContactlistsContactlistId (string contactListId, ContactList body = null);
+        ContactList PutContactlistsContactlistId (string contactListId, ContactList body);
 
         /// <summary>
         /// Update a contact list.
@@ -1357,9 +1357,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>ApiResponse of ContactList</returns>
-        ApiResponse<ContactList> PutContactlistsContactlistIdWithHttpInfo (string contactListId, ContactList body = null);
+        ApiResponse<ContactList> PutContactlistsContactlistIdWithHttpInfo (string contactListId, ContactList body);
         /// <summary>
         /// Update a contact.
         /// </summary>
@@ -1369,9 +1369,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <returns>DialerContact</returns>
-        DialerContact PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, DialerContact body = null);
+        DialerContact PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, DialerContact body);
 
         /// <summary>
         /// Update a contact.
@@ -1382,9 +1382,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <returns>ApiResponse of DialerContact</returns>
-        ApiResponse<DialerContact> PutContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId, DialerContact body = null);
+        ApiResponse<DialerContact> PutContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId, DialerContact body);
         /// <summary>
         /// Update dialer DNC list
         /// </summary>
@@ -1393,9 +1393,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>DncList</returns>
-        DncList PutDnclistsDnclistId (string dncListId, DncList body = null);
+        DncList PutDnclistsDnclistId (string dncListId, DncList body);
 
         /// <summary>
         /// Update dialer DNC list
@@ -1405,9 +1405,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>ApiResponse of DncList</returns>
-        ApiResponse<DncList> PutDnclistsDnclistIdWithHttpInfo (string dncListId, DncList body = null);
+        ApiResponse<DncList> PutDnclistsDnclistIdWithHttpInfo (string dncListId, DncList body);
         /// <summary>
         /// Update a RuleSet.
         /// </summary>
@@ -1416,9 +1416,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>RuleSet</returns>
-        RuleSet PutRulesetsRulesetId (string ruleSetId, RuleSet body = null);
+        RuleSet PutRulesetsRulesetId (string ruleSetId, RuleSet body);
 
         /// <summary>
         /// Update a RuleSet.
@@ -1428,9 +1428,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>ApiResponse of RuleSet</returns>
-        ApiResponse<RuleSet> PutRulesetsRulesetIdWithHttpInfo (string ruleSetId, RuleSet body = null);
+        ApiResponse<RuleSet> PutRulesetsRulesetIdWithHttpInfo (string ruleSetId, RuleSet body);
         /// <summary>
         /// Update a new campaign schedule.
         /// </summary>
@@ -1439,9 +1439,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <param name="body">CampaignSchedule</param>
         /// <returns>CampaignSchedule</returns>
-        CampaignSchedule PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body = null);
+        CampaignSchedule PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body);
 
         /// <summary>
         /// Update a new campaign schedule.
@@ -1451,9 +1451,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <param name="body">CampaignSchedule</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
-        ApiResponse<CampaignSchedule> PutSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId, CampaignSchedule body = null);
+        ApiResponse<CampaignSchedule> PutSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId, CampaignSchedule body);
         /// <summary>
         /// Update a new sequence schedule.
         /// </summary>
@@ -1462,9 +1462,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <param name="body">SequenceSchedule</param>
         /// <returns>SequenceSchedule</returns>
-        SequenceSchedule PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body = null);
+        SequenceSchedule PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body);
 
         /// <summary>
         /// Update a new sequence schedule.
@@ -1474,9 +1474,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <param name="body">SequenceSchedule</param>
         /// <returns>ApiResponse of SequenceSchedule</returns>
-        ApiResponse<SequenceSchedule> PutSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId, SequenceSchedule body = null);
+        ApiResponse<SequenceSchedule> PutSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId, SequenceSchedule body);
         /// <summary>
         /// Update a new campaign sequence.
         /// </summary>
@@ -1485,9 +1485,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>CampaignSequence</returns>
-        CampaignSequence PutSequencesSequenceId (string sequenceId, CampaignSequence body = null);
+        CampaignSequence PutSequencesSequenceId (string sequenceId, CampaignSequence body);
 
         /// <summary>
         /// Update a new campaign sequence.
@@ -1497,9 +1497,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        ApiResponse<CampaignSequence> PutSequencesSequenceIdWithHttpInfo (string sequenceId, CampaignSequence body = null);
+        ApiResponse<CampaignSequence> PutSequencesSequenceIdWithHttpInfo (string sequenceId, CampaignSequence body);
         /// <summary>
         /// Update the Dialer wrap up code mapping.
         /// </summary>
@@ -1507,9 +1507,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">wrapUpCodeMapping (optional)</param>
+        /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>WrapUpCodeMapping</returns>
-        WrapUpCodeMapping PutWrapupcodemappings (WrapUpCodeMapping body = null);
+        WrapUpCodeMapping PutWrapupcodemappings (WrapUpCodeMapping body);
 
         /// <summary>
         /// Update the Dialer wrap up code mapping.
@@ -1518,9 +1518,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">wrapUpCodeMapping (optional)</param>
+        /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>ApiResponse of WrapUpCodeMapping</returns>
-        ApiResponse<WrapUpCodeMapping> PutWrapupcodemappingsWithHttpInfo (WrapUpCodeMapping body = null);
+        ApiResponse<WrapUpCodeMapping> PutWrapupcodemappingsWithHttpInfo (WrapUpCodeMapping body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -2426,14 +2426,14 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="body">AuditSearch</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of AuditSearchResult</returns>
-        System.Threading.Tasks.Task<AuditSearchResult> PostAuditsAsync (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
+        System.Threading.Tasks.Task<AuditSearchResult> PostAuditsAsync (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
 
         /// <summary>
         /// Retrieves audits for dialer.
@@ -2442,14 +2442,14 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="body">AuditSearch</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuditSearchResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuditSearchResult>> PostAuditsAsyncWithHttpInfo (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
+        System.Threading.Tasks.Task<ApiResponse<AuditSearchResult>> PostAuditsAsyncWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
         /// <summary>
         /// Create callable time set
         /// </summary>
@@ -2457,9 +2457,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of CallableTimeSet</returns>
-        System.Threading.Tasks.Task<CallableTimeSet> PostCallabletimesetsAsync (CallableTimeSet body = null);
+        System.Threading.Tasks.Task<CallableTimeSet> PostCallabletimesetsAsync (CallableTimeSet body);
 
         /// <summary>
         /// Create callable time set
@@ -2468,9 +2468,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PostCallabletimesetsAsyncWithHttpInfo (CallableTimeSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PostCallabletimesetsAsyncWithHttpInfo (CallableTimeSet body);
         /// <summary>
         /// Create a dialer call analysis response set.
         /// </summary>
@@ -2478,9 +2478,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>Task of ResponseSet</returns>
-        System.Threading.Tasks.Task<ResponseSet> PostCallanalysisresponsesetsAsync (ResponseSet body = null);
+        System.Threading.Tasks.Task<ResponseSet> PostCallanalysisresponsesetsAsync (ResponseSet body);
 
         /// <summary>
         /// Create a dialer call analysis response set.
@@ -2489,9 +2489,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body);
         /// <summary>
         /// Create a campaign.
         /// </summary>
@@ -2499,9 +2499,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Task of Campaign</returns>
-        System.Threading.Tasks.Task<Campaign> PostCampaignsAsync (Campaign body = null);
+        System.Threading.Tasks.Task<Campaign> PostCampaignsAsync (Campaign body);
 
         /// <summary>
         /// Create a campaign.
@@ -2510,9 +2510,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Campaign>> PostCampaignsAsyncWithHttpInfo (Campaign body = null);
+        System.Threading.Tasks.Task<ApiResponse<Campaign>> PostCampaignsAsyncWithHttpInfo (Campaign body);
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign
         /// </summary>
@@ -2521,9 +2521,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ContactCallbackRequest</returns>
-        System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleAsync (string campaignId, ContactCallbackRequest body = null);
+        System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleAsync (string campaignId, ContactCallbackRequest body);
 
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign
@@ -2533,9 +2533,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ApiResponse (ContactCallbackRequest)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body);
         /// <summary>
         /// Get progress for a list of campaigns
         /// </summary>
@@ -2543,9 +2543,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign IDs (optional)</param>
+        /// <param name="body">Campaign IDs</param>
         /// <returns>Task of List&lt;CampaignProgress&gt;</returns>
-        System.Threading.Tasks.Task<List<CampaignProgress>> PostCampaignsProgressAsync (List<string> body = null);
+        System.Threading.Tasks.Task<List<CampaignProgress>> PostCampaignsProgressAsync (List<string> body);
 
         /// <summary>
         /// Get progress for a list of campaigns
@@ -2554,9 +2554,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign IDs (optional)</param>
+        /// <param name="body">Campaign IDs</param>
         /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostCampaignsProgressAsyncWithHttpInfo (List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostCampaignsProgressAsyncWithHttpInfo (List<string> body);
         /// <summary>
         /// Create a contact List.
         /// </summary>
@@ -2564,9 +2564,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>Task of ContactList</returns>
-        System.Threading.Tasks.Task<ContactList> PostContactlistsAsync (ContactList body = null);
+        System.Threading.Tasks.Task<ContactList> PostContactlistsAsync (ContactList body);
 
         /// <summary>
         /// Create a contact List.
@@ -2575,9 +2575,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactList>> PostContactlistsAsyncWithHttpInfo (ContactList body = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactList>> PostContactlistsAsyncWithHttpInfo (ContactList body);
         /// <summary>
         /// Add contacts to a contact list.
         /// </summary>
@@ -2586,10 +2586,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>Task of DialerContact</returns>
-        System.Threading.Tasks.Task<DialerContact> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body = null, bool? priority = null);
+        System.Threading.Tasks.Task<DialerContact> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null);
 
         /// <summary>
         /// Add contacts to a contact list.
@@ -2599,10 +2599,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DialerContact>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null);
+        System.Threading.Tasks.Task<ApiResponse<DialerContact>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null);
         /// <summary>
         /// Initiate the export of a contact list.
         /// </summary>
@@ -2652,9 +2652,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>Task of DncList</returns>
-        System.Threading.Tasks.Task<DncList> PostDnclistsAsync (DncList body = null);
+        System.Threading.Tasks.Task<DncList> PostDnclistsAsync (DncList body);
 
         /// <summary>
         /// Create dialer DNC list
@@ -2663,9 +2663,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DncList>> PostDnclistsAsyncWithHttpInfo (DncList body = null);
+        System.Threading.Tasks.Task<ApiResponse<DncList>> PostDnclistsAsyncWithHttpInfo (DncList body);
         /// <summary>
         /// Initiate the export of a dnc list.
         /// </summary>
@@ -2695,9 +2695,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostDnclistsDnclistIdPhonenumbersAsync (string dncListId, List<string> body = null);
+        System.Threading.Tasks.Task PostDnclistsDnclistIdPhonenumbersAsync (string dncListId, List<string> body);
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -2707,9 +2707,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body);
         /// <summary>
         /// Create a Dialer Call Analysis Response Set.
         /// </summary>
@@ -2717,9 +2717,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>Task of RuleSet</returns>
-        System.Threading.Tasks.Task<RuleSet> PostRulesetsAsync (RuleSet body = null);
+        System.Threading.Tasks.Task<RuleSet> PostRulesetsAsync (RuleSet body);
 
         /// <summary>
         /// Create a Dialer Call Analysis Response Set.
@@ -2728,9 +2728,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RuleSet>> PostRulesetsAsyncWithHttpInfo (RuleSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<RuleSet>> PostRulesetsAsyncWithHttpInfo (RuleSet body);
         /// <summary>
         /// Create a new campaign sequence.
         /// </summary>
@@ -2738,9 +2738,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>Task of CampaignSequence</returns>
-        System.Threading.Tasks.Task<CampaignSequence> PostSequencesAsync (CampaignSequence body = null);
+        System.Threading.Tasks.Task<CampaignSequence> PostSequencesAsync (CampaignSequence body);
 
         /// <summary>
         /// Create a new campaign sequence.
@@ -2749,9 +2749,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PostSequencesAsyncWithHttpInfo (CampaignSequence body = null);
+        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PostSequencesAsyncWithHttpInfo (CampaignSequence body);
         /// <summary>
         /// Update callable time set
         /// </summary>
@@ -2760,9 +2760,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of CallableTimeSet</returns>
-        System.Threading.Tasks.Task<CallableTimeSet> PutCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId, CallableTimeSet body = null);
+        System.Threading.Tasks.Task<CallableTimeSet> PutCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId, CallableTimeSet body);
 
         /// <summary>
         /// Update callable time set
@@ -2772,9 +2772,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body);
         /// <summary>
         /// Update a dialer call analysis response set.
         /// </summary>
@@ -2783,9 +2783,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>Task of ResponseSet</returns>
-        System.Threading.Tasks.Task<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId, ResponseSet body = null);
+        System.Threading.Tasks.Task<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId, ResponseSet body);
 
         /// <summary>
         /// Update a dialer call analysis response set.
@@ -2795,9 +2795,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body);
         /// <summary>
         /// Update a campaign.
         /// </summary>
@@ -2806,9 +2806,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Task of Campaign</returns>
-        System.Threading.Tasks.Task<Campaign> PutCampaignsCampaignIdAsync (string campaignId, Campaign body = null);
+        System.Threading.Tasks.Task<Campaign> PutCampaignsCampaignIdAsync (string campaignId, Campaign body);
 
         /// <summary>
         /// Update a campaign.
@@ -2818,9 +2818,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Campaign>> PutCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, Campaign body = null);
+        System.Threading.Tasks.Task<ApiResponse<Campaign>> PutCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, Campaign body);
         /// <summary>
         /// Send notification that an agent&#39;s state changed 
         /// </summary>
@@ -2830,9 +2830,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
-        /// <param name="body">agent (optional)</param>
+        /// <param name="body">agent</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PutCampaignsCampaignIdAgentsUserIdAsync (string campaignId, string userId, Agent body = null);
+        System.Threading.Tasks.Task<string> PutCampaignsCampaignIdAgentsUserIdAsync (string campaignId, string userId, Agent body);
 
         /// <summary>
         /// Send notification that an agent&#39;s state changed 
@@ -2843,9 +2843,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
-        /// <param name="body">agent (optional)</param>
+        /// <param name="body">agent</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo (string campaignId, string userId, Agent body = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo (string campaignId, string userId, Agent body);
         /// <summary>
         /// Update a contact list.
         /// </summary>
@@ -2854,9 +2854,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>Task of ContactList</returns>
-        System.Threading.Tasks.Task<ContactList> PutContactlistsContactlistIdAsync (string contactListId, ContactList body = null);
+        System.Threading.Tasks.Task<ContactList> PutContactlistsContactlistIdAsync (string contactListId, ContactList body);
 
         /// <summary>
         /// Update a contact list.
@@ -2866,9 +2866,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactList>> PutContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, ContactList body = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactList>> PutContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, ContactList body);
         /// <summary>
         /// Update a contact.
         /// </summary>
@@ -2878,9 +2878,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <returns>Task of DialerContact</returns>
-        System.Threading.Tasks.Task<DialerContact> PutContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId, DialerContact body = null);
+        System.Threading.Tasks.Task<DialerContact> PutContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId, DialerContact body);
 
         /// <summary>
         /// Update a contact.
@@ -2891,9 +2891,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DialerContact>> PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId, DialerContact body = null);
+        System.Threading.Tasks.Task<ApiResponse<DialerContact>> PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId, DialerContact body);
         /// <summary>
         /// Update dialer DNC list
         /// </summary>
@@ -2902,9 +2902,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>Task of DncList</returns>
-        System.Threading.Tasks.Task<DncList> PutDnclistsDnclistIdAsync (string dncListId, DncList body = null);
+        System.Threading.Tasks.Task<DncList> PutDnclistsDnclistIdAsync (string dncListId, DncList body);
 
         /// <summary>
         /// Update dialer DNC list
@@ -2914,9 +2914,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DncList>> PutDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, DncList body = null);
+        System.Threading.Tasks.Task<ApiResponse<DncList>> PutDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, DncList body);
         /// <summary>
         /// Update a RuleSet.
         /// </summary>
@@ -2925,9 +2925,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>Task of RuleSet</returns>
-        System.Threading.Tasks.Task<RuleSet> PutRulesetsRulesetIdAsync (string ruleSetId, RuleSet body = null);
+        System.Threading.Tasks.Task<RuleSet> PutRulesetsRulesetIdAsync (string ruleSetId, RuleSet body);
 
         /// <summary>
         /// Update a RuleSet.
@@ -2937,9 +2937,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId, RuleSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId, RuleSet body);
         /// <summary>
         /// Update a new campaign schedule.
         /// </summary>
@@ -2948,9 +2948,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of CampaignSchedule</returns>
-        System.Threading.Tasks.Task<CampaignSchedule> PutSchedulesCampaignsCampaignIdAsync (string campaignId, CampaignSchedule body = null);
+        System.Threading.Tasks.Task<CampaignSchedule> PutSchedulesCampaignsCampaignIdAsync (string campaignId, CampaignSchedule body);
 
         /// <summary>
         /// Update a new campaign schedule.
@@ -2960,9 +2960,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, CampaignSchedule body);
         /// <summary>
         /// Update a new sequence schedule.
         /// </summary>
@@ -2971,9 +2971,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of SequenceSchedule</returns>
-        System.Threading.Tasks.Task<SequenceSchedule> PutSchedulesSequencesSequenceIdAsync (string sequenceId, SequenceSchedule body = null);
+        System.Threading.Tasks.Task<SequenceSchedule> PutSchedulesSequencesSequenceIdAsync (string sequenceId, SequenceSchedule body);
 
         /// <summary>
         /// Update a new sequence schedule.
@@ -2983,9 +2983,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, SequenceSchedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, SequenceSchedule body);
         /// <summary>
         /// Update a new campaign sequence.
         /// </summary>
@@ -2994,9 +2994,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>Task of CampaignSequence</returns>
-        System.Threading.Tasks.Task<CampaignSequence> PutSequencesSequenceIdAsync (string sequenceId, CampaignSequence body = null);
+        System.Threading.Tasks.Task<CampaignSequence> PutSequencesSequenceIdAsync (string sequenceId, CampaignSequence body);
 
         /// <summary>
         /// Update a new campaign sequence.
@@ -3006,9 +3006,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, CampaignSequence body = null);
+        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, CampaignSequence body);
         /// <summary>
         /// Update the Dialer wrap up code mapping.
         /// </summary>
@@ -3016,9 +3016,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">wrapUpCodeMapping (optional)</param>
+        /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>Task of WrapUpCodeMapping</returns>
-        System.Threading.Tasks.Task<WrapUpCodeMapping> PutWrapupcodemappingsAsync (WrapUpCodeMapping body = null);
+        System.Threading.Tasks.Task<WrapUpCodeMapping> PutWrapupcodemappingsAsync (WrapUpCodeMapping body);
 
         /// <summary>
         /// Update the Dialer wrap up code mapping.
@@ -3027,9 +3027,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">wrapUpCodeMapping (optional)</param>
+        /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> PutWrapupcodemappingsAsyncWithHttpInfo (WrapUpCodeMapping body = null);
+        System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> PutWrapupcodemappingsAsyncWithHttpInfo (WrapUpCodeMapping body);
         #endregion Asynchronous Operations
     }
 
@@ -9184,14 +9184,14 @@ namespace ININ.PureCloudApi.Api
         /// Retrieves audits for dialer. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="body">AuditSearch</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>AuditSearchResult</returns>
-        public AuditSearchResult PostAudits (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
+        public AuditSearchResult PostAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         {
              ApiResponse<AuditSearchResult> localVarResponse = PostAuditsWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
              return localVarResponse.Data;
@@ -9201,15 +9201,18 @@ namespace ININ.PureCloudApi.Api
         /// Retrieves audits for dialer. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="body">AuditSearch</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>ApiResponse of AuditSearchResult</returns>
-        public ApiResponse< AuditSearchResult > PostAuditsWithHttpInfo (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
+        public ApiResponse< AuditSearchResult > PostAuditsWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostAudits");
 
             var localVarPath = "/api/v2/outbound/audits";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9279,14 +9282,14 @@ namespace ININ.PureCloudApi.Api
         /// Retrieves audits for dialer. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="body">AuditSearch</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of AuditSearchResult</returns>
-        public async System.Threading.Tasks.Task<AuditSearchResult> PostAuditsAsync (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
+        public async System.Threading.Tasks.Task<AuditSearchResult> PostAuditsAsync (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         {
              ApiResponse<AuditSearchResult> localVarResponse = await PostAuditsAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
              return localVarResponse.Data;
@@ -9297,15 +9300,18 @@ namespace ININ.PureCloudApi.Api
         /// Retrieves audits for dialer. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">AuditSearch (optional)</param>
+        /// <param name="body">AuditSearch</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to entity.name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuditSearchResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AuditSearchResult>> PostAuditsAsyncWithHttpInfo (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AuditSearchResult>> PostAuditsAsyncWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostAudits");
 
             var localVarPath = "/api/v2/outbound/audits";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9375,9 +9381,9 @@ namespace ININ.PureCloudApi.Api
         /// Create callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>CallableTimeSet</returns>
-        public CallableTimeSet PostCallabletimesets (CallableTimeSet body = null)
+        public CallableTimeSet PostCallabletimesets (CallableTimeSet body)
         {
              ApiResponse<CallableTimeSet> localVarResponse = PostCallabletimesetsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -9387,10 +9393,13 @@ namespace ININ.PureCloudApi.Api
         /// Create callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        public ApiResponse< CallableTimeSet > PostCallabletimesetsWithHttpInfo (CallableTimeSet body = null)
+        public ApiResponse< CallableTimeSet > PostCallabletimesetsWithHttpInfo (CallableTimeSet body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCallabletimesets");
 
             var localVarPath = "/api/v2/outbound/callabletimesets";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9455,9 +9464,9 @@ namespace ININ.PureCloudApi.Api
         /// Create callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of CallableTimeSet</returns>
-        public async System.Threading.Tasks.Task<CallableTimeSet> PostCallabletimesetsAsync (CallableTimeSet body = null)
+        public async System.Threading.Tasks.Task<CallableTimeSet> PostCallabletimesetsAsync (CallableTimeSet body)
         {
              ApiResponse<CallableTimeSet> localVarResponse = await PostCallabletimesetsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -9468,10 +9477,13 @@ namespace ININ.PureCloudApi.Api
         /// Create callable time set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PostCallabletimesetsAsyncWithHttpInfo (CallableTimeSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PostCallabletimesetsAsyncWithHttpInfo (CallableTimeSet body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCallabletimesets");
 
             var localVarPath = "/api/v2/outbound/callabletimesets";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9536,9 +9548,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>ResponseSet</returns>
-        public ResponseSet PostCallanalysisresponsesets (ResponseSet body = null)
+        public ResponseSet PostCallanalysisresponsesets (ResponseSet body)
         {
              ApiResponse<ResponseSet> localVarResponse = PostCallanalysisresponsesetsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -9548,10 +9560,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        public ApiResponse< ResponseSet > PostCallanalysisresponsesetsWithHttpInfo (ResponseSet body = null)
+        public ApiResponse< ResponseSet > PostCallanalysisresponsesetsWithHttpInfo (ResponseSet body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCallanalysisresponsesets");
 
             var localVarPath = "/api/v2/outbound/callanalysisresponsesets";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9616,9 +9631,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>Task of ResponseSet</returns>
-        public async System.Threading.Tasks.Task<ResponseSet> PostCallanalysisresponsesetsAsync (ResponseSet body = null)
+        public async System.Threading.Tasks.Task<ResponseSet> PostCallanalysisresponsesetsAsync (ResponseSet body)
         {
              ApiResponse<ResponseSet> localVarResponse = await PostCallanalysisresponsesetsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -9629,10 +9644,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a dialer call analysis response set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCallanalysisresponsesets");
 
             var localVarPath = "/api/v2/outbound/callanalysisresponsesets";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9697,9 +9715,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Campaign</returns>
-        public Campaign PostCampaigns (Campaign body = null)
+        public Campaign PostCampaigns (Campaign body)
         {
              ApiResponse<Campaign> localVarResponse = PostCampaignsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -9709,10 +9727,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>ApiResponse of Campaign</returns>
-        public ApiResponse< Campaign > PostCampaignsWithHttpInfo (Campaign body = null)
+        public ApiResponse< Campaign > PostCampaignsWithHttpInfo (Campaign body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCampaigns");
 
             var localVarPath = "/api/v2/outbound/campaigns";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9777,9 +9798,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Task of Campaign</returns>
-        public async System.Threading.Tasks.Task<Campaign> PostCampaignsAsync (Campaign body = null)
+        public async System.Threading.Tasks.Task<Campaign> PostCampaignsAsync (Campaign body)
         {
              ApiResponse<Campaign> localVarResponse = await PostCampaignsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -9790,10 +9811,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PostCampaignsAsyncWithHttpInfo (Campaign body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PostCampaignsAsyncWithHttpInfo (Campaign body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCampaigns");
 
             var localVarPath = "/api/v2/outbound/campaigns";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9859,9 +9883,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ContactCallbackRequest</returns>
-        public ContactCallbackRequest PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body = null)
+        public ContactCallbackRequest PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body)
         {
              ApiResponse<ContactCallbackRequest> localVarResponse = PostCampaignsCampaignIdCallbackScheduleWithHttpInfo(campaignId, body);
              return localVarResponse.Data;
@@ -9872,13 +9896,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ApiResponse of ContactCallbackRequest</returns>
-        public ApiResponse< ContactCallbackRequest > PostCampaignsCampaignIdCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body = null)
+        public ApiResponse< ContactCallbackRequest > PostCampaignsCampaignIdCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostCampaignsCampaignIdCallbackSchedule");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCampaignsCampaignIdCallbackSchedule");
 
             var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/callback/schedule";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9945,9 +9972,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ContactCallbackRequest</returns>
-        public async System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleAsync (string campaignId, ContactCallbackRequest body = null)
+        public async System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleAsync (string campaignId, ContactCallbackRequest body)
         {
              ApiResponse<ContactCallbackRequest> localVarResponse = await PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo(campaignId, body);
              return localVarResponse.Data;
@@ -9959,13 +9986,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">ContactCallbackRequest (optional)</param>
+        /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ApiResponse (ContactCallbackRequest)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostCampaignsCampaignIdCallbackSchedule");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCampaignsCampaignIdCallbackSchedule");
 
             var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/callback/schedule";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10031,9 +10061,9 @@ namespace ININ.PureCloudApi.Api
         /// Get progress for a list of campaigns 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign IDs (optional)</param>
+        /// <param name="body">Campaign IDs</param>
         /// <returns>List&lt;CampaignProgress&gt;</returns>
-        public List<CampaignProgress> PostCampaignsProgress (List<string> body = null)
+        public List<CampaignProgress> PostCampaignsProgress (List<string> body)
         {
              ApiResponse<List<CampaignProgress>> localVarResponse = PostCampaignsProgressWithHttpInfo(body);
              return localVarResponse.Data;
@@ -10043,10 +10073,13 @@ namespace ININ.PureCloudApi.Api
         /// Get progress for a list of campaigns 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign IDs (optional)</param>
+        /// <param name="body">Campaign IDs</param>
         /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
-        public ApiResponse< List<CampaignProgress> > PostCampaignsProgressWithHttpInfo (List<string> body = null)
+        public ApiResponse< List<CampaignProgress> > PostCampaignsProgressWithHttpInfo (List<string> body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCampaignsProgress");
 
             var localVarPath = "/api/v2/outbound/campaigns/progress";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10111,9 +10144,9 @@ namespace ININ.PureCloudApi.Api
         /// Get progress for a list of campaigns 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign IDs (optional)</param>
+        /// <param name="body">Campaign IDs</param>
         /// <returns>Task of List&lt;CampaignProgress&gt;</returns>
-        public async System.Threading.Tasks.Task<List<CampaignProgress>> PostCampaignsProgressAsync (List<string> body = null)
+        public async System.Threading.Tasks.Task<List<CampaignProgress>> PostCampaignsProgressAsync (List<string> body)
         {
              ApiResponse<List<CampaignProgress>> localVarResponse = await PostCampaignsProgressAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -10124,10 +10157,13 @@ namespace ININ.PureCloudApi.Api
         /// Get progress for a list of campaigns 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Campaign IDs (optional)</param>
+        /// <param name="body">Campaign IDs</param>
         /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostCampaignsProgressAsyncWithHttpInfo (List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostCampaignsProgressAsyncWithHttpInfo (List<string> body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCampaignsProgress");
 
             var localVarPath = "/api/v2/outbound/campaigns/progress";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10192,9 +10228,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>ContactList</returns>
-        public ContactList PostContactlists (ContactList body = null)
+        public ContactList PostContactlists (ContactList body)
         {
              ApiResponse<ContactList> localVarResponse = PostContactlistsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -10204,10 +10240,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>ApiResponse of ContactList</returns>
-        public ApiResponse< ContactList > PostContactlistsWithHttpInfo (ContactList body = null)
+        public ApiResponse< ContactList > PostContactlistsWithHttpInfo (ContactList body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostContactlists");
 
             var localVarPath = "/api/v2/outbound/contactlists";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10272,9 +10311,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>Task of ContactList</returns>
-        public async System.Threading.Tasks.Task<ContactList> PostContactlistsAsync (ContactList body = null)
+        public async System.Threading.Tasks.Task<ContactList> PostContactlistsAsync (ContactList body)
         {
              ApiResponse<ContactList> localVarResponse = await PostContactlistsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -10285,10 +10324,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a contact List. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> PostContactlistsAsyncWithHttpInfo (ContactList body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> PostContactlistsAsyncWithHttpInfo (ContactList body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostContactlists");
 
             var localVarPath = "/api/v2/outbound/contactlists";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10354,10 +10396,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>DialerContact</returns>
-        public DialerContact PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body = null, bool? priority = null)
+        public DialerContact PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null)
         {
              ApiResponse<DialerContact> localVarResponse = PostContactlistsContactlistIdContactsWithHttpInfo(contactListId, body, priority);
              return localVarResponse.Data;
@@ -10368,14 +10410,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>ApiResponse of DialerContact</returns>
-        public ApiResponse< DialerContact > PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null)
+        public ApiResponse< DialerContact > PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostContactlistsContactlistIdContacts");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostContactlistsContactlistIdContacts");
 
             var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10443,10 +10488,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>Task of DialerContact</returns>
-        public async System.Threading.Tasks.Task<DialerContact> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body = null, bool? priority = null)
+        public async System.Threading.Tasks.Task<DialerContact> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null)
         {
              ApiResponse<DialerContact> localVarResponse = await PostContactlistsContactlistIdContactsAsyncWithHttpInfo(contactListId, body, priority);
              return localVarResponse.Data;
@@ -10458,14 +10503,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DialerContact>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body = null, bool? priority = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DialerContact>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostContactlistsContactlistIdContacts");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostContactlistsContactlistIdContacts");
 
             var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10836,9 +10884,9 @@ namespace ININ.PureCloudApi.Api
         /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>DncList</returns>
-        public DncList PostDnclists (DncList body = null)
+        public DncList PostDnclists (DncList body)
         {
              ApiResponse<DncList> localVarResponse = PostDnclistsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -10848,10 +10896,13 @@ namespace ININ.PureCloudApi.Api
         /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>ApiResponse of DncList</returns>
-        public ApiResponse< DncList > PostDnclistsWithHttpInfo (DncList body = null)
+        public ApiResponse< DncList > PostDnclistsWithHttpInfo (DncList body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostDnclists");
 
             var localVarPath = "/api/v2/outbound/dnclists";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10916,9 +10967,9 @@ namespace ININ.PureCloudApi.Api
         /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>Task of DncList</returns>
-        public async System.Threading.Tasks.Task<DncList> PostDnclistsAsync (DncList body = null)
+        public async System.Threading.Tasks.Task<DncList> PostDnclistsAsync (DncList body)
         {
              ApiResponse<DncList> localVarResponse = await PostDnclistsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -10929,10 +10980,13 @@ namespace ININ.PureCloudApi.Api
         /// Create dialer DNC list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DncList>> PostDnclistsAsyncWithHttpInfo (DncList body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DncList>> PostDnclistsAsyncWithHttpInfo (DncList body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostDnclists");
 
             var localVarPath = "/api/v2/outbound/dnclists";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11151,9 +11205,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <param name="body">DNC Phone Numbers</param>
         /// <returns></returns>
-        public void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body = null)
+        public void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body)
         {
              PostDnclistsDnclistIdPhonenumbersWithHttpInfo(dncListId, body);
         }
@@ -11163,13 +11217,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <param name="body">DNC Phone Numbers</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostDnclistsDnclistIdPhonenumbersWithHttpInfo (string dncListId, List<string> body = null)
+        public ApiResponse<Object> PostDnclistsDnclistIdPhonenumbersWithHttpInfo (string dncListId, List<string> body)
         {
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostDnclistsDnclistIdPhonenumbers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostDnclistsDnclistIdPhonenumbers");
 
             var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11236,9 +11293,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostDnclistsDnclistIdPhonenumbersAsync (string dncListId, List<string> body = null)
+        public async System.Threading.Tasks.Task PostDnclistsDnclistIdPhonenumbersAsync (string dncListId, List<string> body)
         {
              await PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo(dncListId, body);
 
@@ -11249,13 +11306,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DNC Phone Numbers (optional)</param>
+        /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body)
         {
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostDnclistsDnclistIdPhonenumbers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostDnclistsDnclistIdPhonenumbers");
 
             var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11321,9 +11381,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a Dialer Call Analysis Response Set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>RuleSet</returns>
-        public RuleSet PostRulesets (RuleSet body = null)
+        public RuleSet PostRulesets (RuleSet body)
         {
              ApiResponse<RuleSet> localVarResponse = PostRulesetsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -11333,10 +11393,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a Dialer Call Analysis Response Set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>ApiResponse of RuleSet</returns>
-        public ApiResponse< RuleSet > PostRulesetsWithHttpInfo (RuleSet body = null)
+        public ApiResponse< RuleSet > PostRulesetsWithHttpInfo (RuleSet body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostRulesets");
 
             var localVarPath = "/api/v2/outbound/rulesets";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11401,9 +11464,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a Dialer Call Analysis Response Set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>Task of RuleSet</returns>
-        public async System.Threading.Tasks.Task<RuleSet> PostRulesetsAsync (RuleSet body = null)
+        public async System.Threading.Tasks.Task<RuleSet> PostRulesetsAsync (RuleSet body)
         {
              ApiResponse<RuleSet> localVarResponse = await PostRulesetsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -11414,10 +11477,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a Dialer Call Analysis Response Set. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> PostRulesetsAsyncWithHttpInfo (RuleSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> PostRulesetsAsyncWithHttpInfo (RuleSet body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostRulesets");
 
             var localVarPath = "/api/v2/outbound/rulesets";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11482,9 +11548,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>CampaignSequence</returns>
-        public CampaignSequence PostSequences (CampaignSequence body = null)
+        public CampaignSequence PostSequences (CampaignSequence body)
         {
              ApiResponse<CampaignSequence> localVarResponse = PostSequencesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -11494,10 +11560,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        public ApiResponse< CampaignSequence > PostSequencesWithHttpInfo (CampaignSequence body = null)
+        public ApiResponse< CampaignSequence > PostSequencesWithHttpInfo (CampaignSequence body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostSequences");
 
             var localVarPath = "/api/v2/outbound/sequences";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11562,9 +11631,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>Task of CampaignSequence</returns>
-        public async System.Threading.Tasks.Task<CampaignSequence> PostSequencesAsync (CampaignSequence body = null)
+        public async System.Threading.Tasks.Task<CampaignSequence> PostSequencesAsync (CampaignSequence body)
         {
              ApiResponse<CampaignSequence> localVarResponse = await PostSequencesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -11575,10 +11644,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a new campaign sequence. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PostSequencesAsyncWithHttpInfo (CampaignSequence body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PostSequencesAsyncWithHttpInfo (CampaignSequence body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostSequences");
 
             var localVarPath = "/api/v2/outbound/sequences";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11644,9 +11716,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>CallableTimeSet</returns>
-        public CallableTimeSet PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body = null)
+        public CallableTimeSet PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body)
         {
              ApiResponse<CallableTimeSet> localVarResponse = PutCallabletimesetsCallabletimesetIdWithHttpInfo(callableTimeSetId, body);
              return localVarResponse.Data;
@@ -11657,13 +11729,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        public ApiResponse< CallableTimeSet > PutCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null)
+        public ApiResponse< CallableTimeSet > PutCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId, CallableTimeSet body)
         {
             // verify the required parameter 'callableTimeSetId' is set
             if (callableTimeSetId == null)
                 throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->PutCallabletimesetsCallabletimesetId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutCallabletimesetsCallabletimesetId");
 
             var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11730,9 +11805,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of CallableTimeSet</returns>
-        public async System.Threading.Tasks.Task<CallableTimeSet> PutCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId, CallableTimeSet body = null)
+        public async System.Threading.Tasks.Task<CallableTimeSet> PutCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId, CallableTimeSet body)
         {
              ApiResponse<CallableTimeSet> localVarResponse = await PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo(callableTimeSetId, body);
              return localVarResponse.Data;
@@ -11744,13 +11819,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <param name="body">DialerCallableTimeSet (optional)</param>
+        /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body)
         {
             // verify the required parameter 'callableTimeSetId' is set
             if (callableTimeSetId == null)
                 throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->PutCallabletimesetsCallabletimesetId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutCallabletimesetsCallabletimesetId");
 
             var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11817,9 +11895,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>ResponseSet</returns>
-        public ResponseSet PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body = null)
+        public ResponseSet PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body)
         {
              ApiResponse<ResponseSet> localVarResponse = PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo(callAnalysisSetId, body);
              return localVarResponse.Data;
@@ -11830,13 +11908,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        public ApiResponse< ResponseSet > PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId, ResponseSet body = null)
+        public ApiResponse< ResponseSet > PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId, ResponseSet body)
         {
             // verify the required parameter 'callAnalysisSetId' is set
             if (callAnalysisSetId == null)
                 throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->PutCallanalysisresponsesetsCallanalysissetId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutCallanalysisresponsesetsCallanalysissetId");
 
             var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11903,9 +11984,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>Task of ResponseSet</returns>
-        public async System.Threading.Tasks.Task<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId, ResponseSet body = null)
+        public async System.Threading.Tasks.Task<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId, ResponseSet body)
         {
              ApiResponse<ResponseSet> localVarResponse = await PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo(callAnalysisSetId, body);
              return localVarResponse.Data;
@@ -11917,13 +11998,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <param name="body">ResponseSet (optional)</param>
+        /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body)
         {
             // verify the required parameter 'callAnalysisSetId' is set
             if (callAnalysisSetId == null)
                 throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->PutCallanalysisresponsesetsCallanalysissetId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutCallanalysisresponsesetsCallanalysissetId");
 
             var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11990,9 +12074,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Campaign</returns>
-        public Campaign PutCampaignsCampaignId (string campaignId, Campaign body = null)
+        public Campaign PutCampaignsCampaignId (string campaignId, Campaign body)
         {
              ApiResponse<Campaign> localVarResponse = PutCampaignsCampaignIdWithHttpInfo(campaignId, body);
              return localVarResponse.Data;
@@ -12003,13 +12087,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>ApiResponse of Campaign</returns>
-        public ApiResponse< Campaign > PutCampaignsCampaignIdWithHttpInfo (string campaignId, Campaign body = null)
+        public ApiResponse< Campaign > PutCampaignsCampaignIdWithHttpInfo (string campaignId, Campaign body)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutCampaignsCampaignId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutCampaignsCampaignId");
 
             var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12076,9 +12163,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Task of Campaign</returns>
-        public async System.Threading.Tasks.Task<Campaign> PutCampaignsCampaignIdAsync (string campaignId, Campaign body = null)
+        public async System.Threading.Tasks.Task<Campaign> PutCampaignsCampaignIdAsync (string campaignId, Campaign body)
         {
              ApiResponse<Campaign> localVarResponse = await PutCampaignsCampaignIdAsyncWithHttpInfo(campaignId, body);
              return localVarResponse.Data;
@@ -12090,13 +12177,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">Campaign (optional)</param>
+        /// <param name="body">Campaign</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PutCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, Campaign body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PutCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, Campaign body)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutCampaignsCampaignId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutCampaignsCampaignId");
 
             var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12164,9 +12254,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
-        /// <param name="body">agent (optional)</param>
+        /// <param name="body">agent</param>
         /// <returns>string</returns>
-        public string PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body = null)
+        public string PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body)
         {
              ApiResponse<string> localVarResponse = PutCampaignsCampaignIdAgentsUserIdWithHttpInfo(campaignId, userId, body);
              return localVarResponse.Data;
@@ -12178,9 +12268,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
-        /// <param name="body">agent (optional)</param>
+        /// <param name="body">agent</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PutCampaignsCampaignIdAgentsUserIdWithHttpInfo (string campaignId, string userId, Agent body = null)
+        public ApiResponse< string > PutCampaignsCampaignIdAgentsUserIdWithHttpInfo (string campaignId, string userId, Agent body)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
@@ -12188,6 +12278,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling OutboundApi->PutCampaignsCampaignIdAgentsUserId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutCampaignsCampaignIdAgentsUserId");
 
             var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agents/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12256,9 +12349,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
-        /// <param name="body">agent (optional)</param>
+        /// <param name="body">agent</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PutCampaignsCampaignIdAgentsUserIdAsync (string campaignId, string userId, Agent body = null)
+        public async System.Threading.Tasks.Task<string> PutCampaignsCampaignIdAgentsUserIdAsync (string campaignId, string userId, Agent body)
         {
              ApiResponse<string> localVarResponse = await PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo(campaignId, userId, body);
              return localVarResponse.Data;
@@ -12271,9 +12364,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="userId">Agent&#39;s user ID</param>
-        /// <param name="body">agent (optional)</param>
+        /// <param name="body">agent</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo (string campaignId, string userId, Agent body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo (string campaignId, string userId, Agent body)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
@@ -12281,6 +12374,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling OutboundApi->PutCampaignsCampaignIdAgentsUserId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutCampaignsCampaignIdAgentsUserId");
 
             var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agents/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12348,9 +12444,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>ContactList</returns>
-        public ContactList PutContactlistsContactlistId (string contactListId, ContactList body = null)
+        public ContactList PutContactlistsContactlistId (string contactListId, ContactList body)
         {
              ApiResponse<ContactList> localVarResponse = PutContactlistsContactlistIdWithHttpInfo(contactListId, body);
              return localVarResponse.Data;
@@ -12361,13 +12457,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>ApiResponse of ContactList</returns>
-        public ApiResponse< ContactList > PutContactlistsContactlistIdWithHttpInfo (string contactListId, ContactList body = null)
+        public ApiResponse< ContactList > PutContactlistsContactlistIdWithHttpInfo (string contactListId, ContactList body)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PutContactlistsContactlistId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutContactlistsContactlistId");
 
             var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12434,9 +12533,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>Task of ContactList</returns>
-        public async System.Threading.Tasks.Task<ContactList> PutContactlistsContactlistIdAsync (string contactListId, ContactList body = null)
+        public async System.Threading.Tasks.Task<ContactList> PutContactlistsContactlistIdAsync (string contactListId, ContactList body)
         {
              ApiResponse<ContactList> localVarResponse = await PutContactlistsContactlistIdAsyncWithHttpInfo(contactListId, body);
              return localVarResponse.Data;
@@ -12448,13 +12547,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <param name="body">ContactList (optional)</param>
+        /// <param name="body">ContactList</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> PutContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, ContactList body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> PutContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, ContactList body)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
                 throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PutContactlistsContactlistId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutContactlistsContactlistId");
 
             var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12522,9 +12624,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <returns>DialerContact</returns>
-        public DialerContact PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, DialerContact body = null)
+        public DialerContact PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, DialerContact body)
         {
              ApiResponse<DialerContact> localVarResponse = PutContactlistsContactlistIdContactsContactIdWithHttpInfo(contactListId, contactId, body);
              return localVarResponse.Data;
@@ -12536,9 +12638,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <returns>ApiResponse of DialerContact</returns>
-        public ApiResponse< DialerContact > PutContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId, DialerContact body = null)
+        public ApiResponse< DialerContact > PutContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId, DialerContact body)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -12546,6 +12648,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->PutContactlistsContactlistIdContactsContactId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutContactlistsContactlistIdContactsContactId");
 
             var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12614,9 +12719,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <returns>Task of DialerContact</returns>
-        public async System.Threading.Tasks.Task<DialerContact> PutContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId, DialerContact body = null)
+        public async System.Threading.Tasks.Task<DialerContact> PutContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId, DialerContact body)
         {
              ApiResponse<DialerContact> localVarResponse = await PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo(contactListId, contactId, body);
              return localVarResponse.Data;
@@ -12629,9 +12734,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <param name="body">Contact (optional)</param>
+        /// <param name="body">Contact</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DialerContact>> PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId, DialerContact body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DialerContact>> PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId, DialerContact body)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -12639,6 +12744,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->PutContactlistsContactlistIdContactsContactId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutContactlistsContactlistIdContactsContactId");
 
             var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12706,9 +12814,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>DncList</returns>
-        public DncList PutDnclistsDnclistId (string dncListId, DncList body = null)
+        public DncList PutDnclistsDnclistId (string dncListId, DncList body)
         {
              ApiResponse<DncList> localVarResponse = PutDnclistsDnclistIdWithHttpInfo(dncListId, body);
              return localVarResponse.Data;
@@ -12719,13 +12827,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>ApiResponse of DncList</returns>
-        public ApiResponse< DncList > PutDnclistsDnclistIdWithHttpInfo (string dncListId, DncList body = null)
+        public ApiResponse< DncList > PutDnclistsDnclistIdWithHttpInfo (string dncListId, DncList body)
         {
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PutDnclistsDnclistId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutDnclistsDnclistId");
 
             var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12792,9 +12903,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>Task of DncList</returns>
-        public async System.Threading.Tasks.Task<DncList> PutDnclistsDnclistIdAsync (string dncListId, DncList body = null)
+        public async System.Threading.Tasks.Task<DncList> PutDnclistsDnclistIdAsync (string dncListId, DncList body)
         {
              ApiResponse<DncList> localVarResponse = await PutDnclistsDnclistIdAsyncWithHttpInfo(dncListId, body);
              return localVarResponse.Data;
@@ -12806,13 +12917,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <param name="body">DncList (optional)</param>
+        /// <param name="body">DncList</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DncList>> PutDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, DncList body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DncList>> PutDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, DncList body)
         {
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
                 throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PutDnclistsDnclistId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutDnclistsDnclistId");
 
             var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12879,9 +12993,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>RuleSet</returns>
-        public RuleSet PutRulesetsRulesetId (string ruleSetId, RuleSet body = null)
+        public RuleSet PutRulesetsRulesetId (string ruleSetId, RuleSet body)
         {
              ApiResponse<RuleSet> localVarResponse = PutRulesetsRulesetIdWithHttpInfo(ruleSetId, body);
              return localVarResponse.Data;
@@ -12892,13 +13006,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>ApiResponse of RuleSet</returns>
-        public ApiResponse< RuleSet > PutRulesetsRulesetIdWithHttpInfo (string ruleSetId, RuleSet body = null)
+        public ApiResponse< RuleSet > PutRulesetsRulesetIdWithHttpInfo (string ruleSetId, RuleSet body)
         {
             // verify the required parameter 'ruleSetId' is set
             if (ruleSetId == null)
                 throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->PutRulesetsRulesetId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutRulesetsRulesetId");
 
             var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12965,9 +13082,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>Task of RuleSet</returns>
-        public async System.Threading.Tasks.Task<RuleSet> PutRulesetsRulesetIdAsync (string ruleSetId, RuleSet body = null)
+        public async System.Threading.Tasks.Task<RuleSet> PutRulesetsRulesetIdAsync (string ruleSetId, RuleSet body)
         {
              ApiResponse<RuleSet> localVarResponse = await PutRulesetsRulesetIdAsyncWithHttpInfo(ruleSetId, body);
              return localVarResponse.Data;
@@ -12979,13 +13096,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <param name="body">RuleSet (optional)</param>
+        /// <param name="body">RuleSet</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId, RuleSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId, RuleSet body)
         {
             // verify the required parameter 'ruleSetId' is set
             if (ruleSetId == null)
                 throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->PutRulesetsRulesetId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutRulesetsRulesetId");
 
             var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13052,9 +13172,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <param name="body">CampaignSchedule</param>
         /// <returns>CampaignSchedule</returns>
-        public CampaignSchedule PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body = null)
+        public CampaignSchedule PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body)
         {
              ApiResponse<CampaignSchedule> localVarResponse = PutSchedulesCampaignsCampaignIdWithHttpInfo(campaignId, body);
              return localVarResponse.Data;
@@ -13065,13 +13185,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <param name="body">CampaignSchedule</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
-        public ApiResponse< CampaignSchedule > PutSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId, CampaignSchedule body = null)
+        public ApiResponse< CampaignSchedule > PutSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId, CampaignSchedule body)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutSchedulesCampaignsCampaignId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutSchedulesCampaignsCampaignId");
 
             var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13138,9 +13261,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of CampaignSchedule</returns>
-        public async System.Threading.Tasks.Task<CampaignSchedule> PutSchedulesCampaignsCampaignIdAsync (string campaignId, CampaignSchedule body = null)
+        public async System.Threading.Tasks.Task<CampaignSchedule> PutSchedulesCampaignsCampaignIdAsync (string campaignId, CampaignSchedule body)
         {
              ApiResponse<CampaignSchedule> localVarResponse = await PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo(campaignId, body);
              return localVarResponse.Data;
@@ -13152,13 +13275,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <param name="body">CampaignSchedule (optional)</param>
+        /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, CampaignSchedule body)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
                 throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutSchedulesCampaignsCampaignId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutSchedulesCampaignsCampaignId");
 
             var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13225,9 +13351,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <param name="body">SequenceSchedule</param>
         /// <returns>SequenceSchedule</returns>
-        public SequenceSchedule PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body = null)
+        public SequenceSchedule PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body)
         {
              ApiResponse<SequenceSchedule> localVarResponse = PutSchedulesSequencesSequenceIdWithHttpInfo(sequenceId, body);
              return localVarResponse.Data;
@@ -13238,13 +13364,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <param name="body">SequenceSchedule</param>
         /// <returns>ApiResponse of SequenceSchedule</returns>
-        public ApiResponse< SequenceSchedule > PutSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId, SequenceSchedule body = null)
+        public ApiResponse< SequenceSchedule > PutSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId, SequenceSchedule body)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSchedulesSequencesSequenceId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutSchedulesSequencesSequenceId");
 
             var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13311,9 +13440,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of SequenceSchedule</returns>
-        public async System.Threading.Tasks.Task<SequenceSchedule> PutSchedulesSequencesSequenceIdAsync (string sequenceId, SequenceSchedule body = null)
+        public async System.Threading.Tasks.Task<SequenceSchedule> PutSchedulesSequencesSequenceIdAsync (string sequenceId, SequenceSchedule body)
         {
              ApiResponse<SequenceSchedule> localVarResponse = await PutSchedulesSequencesSequenceIdAsyncWithHttpInfo(sequenceId, body);
              return localVarResponse.Data;
@@ -13325,13 +13454,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <param name="body">SequenceSchedule (optional)</param>
+        /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, SequenceSchedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, SequenceSchedule body)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSchedulesSequencesSequenceId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutSchedulesSequencesSequenceId");
 
             var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13398,9 +13530,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>CampaignSequence</returns>
-        public CampaignSequence PutSequencesSequenceId (string sequenceId, CampaignSequence body = null)
+        public CampaignSequence PutSequencesSequenceId (string sequenceId, CampaignSequence body)
         {
              ApiResponse<CampaignSequence> localVarResponse = PutSequencesSequenceIdWithHttpInfo(sequenceId, body);
              return localVarResponse.Data;
@@ -13411,13 +13543,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        public ApiResponse< CampaignSequence > PutSequencesSequenceIdWithHttpInfo (string sequenceId, CampaignSequence body = null)
+        public ApiResponse< CampaignSequence > PutSequencesSequenceIdWithHttpInfo (string sequenceId, CampaignSequence body)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSequencesSequenceId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutSequencesSequenceId");
 
             var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13484,9 +13619,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>Task of CampaignSequence</returns>
-        public async System.Threading.Tasks.Task<CampaignSequence> PutSequencesSequenceIdAsync (string sequenceId, CampaignSequence body = null)
+        public async System.Threading.Tasks.Task<CampaignSequence> PutSequencesSequenceIdAsync (string sequenceId, CampaignSequence body)
         {
              ApiResponse<CampaignSequence> localVarResponse = await PutSequencesSequenceIdAsyncWithHttpInfo(sequenceId, body);
              return localVarResponse.Data;
@@ -13498,13 +13633,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <param name="body">Organization (optional)</param>
+        /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, CampaignSequence body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, CampaignSequence body)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
                 throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSequencesSequenceId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutSequencesSequenceId");
 
             var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13570,9 +13708,9 @@ namespace ININ.PureCloudApi.Api
         /// Update the Dialer wrap up code mapping. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">wrapUpCodeMapping (optional)</param>
+        /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>WrapUpCodeMapping</returns>
-        public WrapUpCodeMapping PutWrapupcodemappings (WrapUpCodeMapping body = null)
+        public WrapUpCodeMapping PutWrapupcodemappings (WrapUpCodeMapping body)
         {
              ApiResponse<WrapUpCodeMapping> localVarResponse = PutWrapupcodemappingsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -13582,10 +13720,13 @@ namespace ININ.PureCloudApi.Api
         /// Update the Dialer wrap up code mapping. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">wrapUpCodeMapping (optional)</param>
+        /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>ApiResponse of WrapUpCodeMapping</returns>
-        public ApiResponse< WrapUpCodeMapping > PutWrapupcodemappingsWithHttpInfo (WrapUpCodeMapping body = null)
+        public ApiResponse< WrapUpCodeMapping > PutWrapupcodemappingsWithHttpInfo (WrapUpCodeMapping body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutWrapupcodemappings");
 
             var localVarPath = "/api/v2/outbound/wrapupcodemappings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13650,9 +13791,9 @@ namespace ININ.PureCloudApi.Api
         /// Update the Dialer wrap up code mapping. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">wrapUpCodeMapping (optional)</param>
+        /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>Task of WrapUpCodeMapping</returns>
-        public async System.Threading.Tasks.Task<WrapUpCodeMapping> PutWrapupcodemappingsAsync (WrapUpCodeMapping body = null)
+        public async System.Threading.Tasks.Task<WrapUpCodeMapping> PutWrapupcodemappingsAsync (WrapUpCodeMapping body)
         {
              ApiResponse<WrapUpCodeMapping> localVarResponse = await PutWrapupcodemappingsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -13663,10 +13804,13 @@ namespace ININ.PureCloudApi.Api
         /// Update the Dialer wrap up code mapping. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">wrapUpCodeMapping (optional)</param>
+        /// <param name="body">wrapUpCodeMapping</param>
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> PutWrapupcodemappingsAsyncWithHttpInfo (WrapUpCodeMapping body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> PutWrapupcodemappingsAsyncWithHttpInfo (WrapUpCodeMapping body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutWrapupcodemappings");
 
             var localVarPath = "/api/v2/outbound/wrapupcodemappings";
             var localVarPathParams = new Dictionary<String, String>();

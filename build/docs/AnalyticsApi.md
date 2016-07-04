@@ -652,7 +652,7 @@ This endpoint does require any parameters.
 
 <a name="postconversationsaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostConversationsAggregatesQuery (AggregationQuery body = null)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostConversationsAggregatesQuery (AggregationQuery body)
 
 Query for conversation aggregates
 
@@ -677,7 +677,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AnalyticsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query (optional) 
+            var body = new AggregationQuery(); // AggregationQuery | query
 
             try
             {
@@ -699,7 +699,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -708,7 +708,7 @@ namespace Example
 
 <a name="postconversationsconversationiddetailsproperties"></a>
 
-## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body = null)
+## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body)
 
 Index conversation properties
 
@@ -734,7 +734,7 @@ namespace Example
 
             var apiInstance = new AnalyticsApi();
             var conversationId = conversationId_example;  // string | conversationId
-            var body = new PropertyIndexRequest(); // PropertyIndexRequest | request (optional) 
+            var body = new PropertyIndexRequest(); // PropertyIndexRequest | request
 
             try
             {
@@ -757,7 +757,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request | [optional]  |
+| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -766,7 +766,7 @@ namespace Example
 
 <a name="postconversationsdetailsquery"></a>
 
-## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) PostConversationsDetailsQuery (ConversationQuery body = null)
+## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) PostConversationsDetailsQuery (ConversationQuery body)
 
 Query for conversation details
 
@@ -791,7 +791,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AnalyticsApi();
-            var body = new ConversationQuery(); // ConversationQuery | query (optional) 
+            var body = new ConversationQuery(); // ConversationQuery | query
 
             try
             {
@@ -813,7 +813,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationQuery**](ConversationQuery.html)| query | [optional]  |
+| **body** | [**ConversationQuery**](ConversationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -822,7 +822,7 @@ namespace Example
 
 <a name="postevaluationsaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostEvaluationsAggregatesQuery (AggregationQuery body = null)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostEvaluationsAggregatesQuery (AggregationQuery body)
 
 Query for evaluation aggregates
 
@@ -847,7 +847,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AnalyticsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query (optional) 
+            var body = new AggregationQuery(); // AggregationQuery | query
 
             try
             {
@@ -869,7 +869,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -878,7 +878,7 @@ namespace Example
 
 <a name="postqueuesobservationsquery"></a>
 
-## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostQueuesObservationsQuery (ObservationQuery body = null)
+## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostQueuesObservationsQuery (ObservationQuery body)
 
 Query for queue observations
 
@@ -903,7 +903,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AnalyticsApi();
-            var body = new ObservationQuery(); // ObservationQuery | query (optional) 
+            var body = new ObservationQuery(); // ObservationQuery | query
 
             try
             {
@@ -925,7 +925,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query | [optional]  |
+| **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -934,7 +934,7 @@ namespace Example
 
 <a name="postreportingschedules"></a>
 
-## [**ReportSchedule**](ReportSchedule.html) PostReportingSchedules (ReportSchedule body = null)
+## [**ReportSchedule**](ReportSchedule.html) PostReportingSchedules (ReportSchedule body)
 
 Create a scheduled report job
 
@@ -959,7 +959,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AnalyticsApi();
-            var body = new ReportSchedule(); // ReportSchedule | ReportSchedule (optional) 
+            var body = new ReportSchedule(); // ReportSchedule | ReportSchedule
 
             try
             {
@@ -981,7 +981,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule | [optional]  |
+| **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1046,7 +1046,7 @@ namespace Example
 
 <a name="postusersaggregatesquery"></a>
 
-## [**PresenceQueryResponse**](PresenceQueryResponse.html) PostUsersAggregatesQuery (AggregationQuery body = null)
+## [**PresenceQueryResponse**](PresenceQueryResponse.html) PostUsersAggregatesQuery (AggregationQuery body)
 
 Query for user aggregates
 
@@ -1071,7 +1071,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AnalyticsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query (optional) 
+            var body = new AggregationQuery(); // AggregationQuery | query
 
             try
             {
@@ -1093,7 +1093,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1102,7 +1102,7 @@ namespace Example
 
 <a name="postusersobservationsquery"></a>
 
-## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostUsersObservationsQuery (ObservationQuery body = null)
+## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostUsersObservationsQuery (ObservationQuery body)
 
 Query for user observations
 
@@ -1127,7 +1127,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AnalyticsApi();
-            var body = new ObservationQuery(); // ObservationQuery | query (optional) 
+            var body = new ObservationQuery(); // ObservationQuery | query
 
             try
             {
@@ -1149,7 +1149,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query | [optional]  |
+| **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1158,7 +1158,7 @@ namespace Example
 
 <a name="putreportingschedulesscheduleid"></a>
 
-## [**ReportSchedule**](ReportSchedule.html) PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body = null)
+## [**ReportSchedule**](ReportSchedule.html) PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body)
 
 Update a scheduled report job.
 
@@ -1184,7 +1184,7 @@ namespace Example
 
             var apiInstance = new AnalyticsApi();
             var scheduleId = scheduleId_example;  // string | Schedule ID
-            var body = new ReportSchedule(); // ReportSchedule | ReportSchedule (optional) 
+            var body = new ReportSchedule(); // ReportSchedule | ReportSchedule
 
             try
             {
@@ -1207,7 +1207,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scheduleId** | **string**| Schedule ID |  |
-| **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule | [optional]  |
+| **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule |  |
 {: class="table table-striped"}
 
 ### Return type

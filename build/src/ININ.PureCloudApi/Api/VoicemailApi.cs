@@ -207,9 +207,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="body">VoicemailMessage (optional)</param>
+        /// <param name="body">VoicemailMessage</param>
         /// <returns>VoicemailMessage</returns>
-        VoicemailMessage PutMessagesMessageId (string messageId, VoicemailMessage body = null);
+        VoicemailMessage PutMessagesMessageId (string messageId, VoicemailMessage body);
 
         /// <summary>
         /// Update a message.
@@ -219,9 +219,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="body">VoicemailMessage (optional)</param>
+        /// <param name="body">VoicemailMessage</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        ApiResponse<VoicemailMessage> PutMessagesMessageIdWithHttpInfo (string messageId, VoicemailMessage body = null);
+        ApiResponse<VoicemailMessage> PutMessagesMessageIdWithHttpInfo (string messageId, VoicemailMessage body);
         /// <summary>
         /// Update a policy
         /// </summary>
@@ -229,9 +229,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        VoicemailOrganizationPolicy PutPolicy (VoicemailOrganizationPolicy body = null);
+        VoicemailOrganizationPolicy PutPolicy (VoicemailOrganizationPolicy body);
 
         /// <summary>
         /// Update a policy
@@ -240,9 +240,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        ApiResponse<VoicemailOrganizationPolicy> PutPolicyWithHttpInfo (VoicemailOrganizationPolicy body = null);
+        ApiResponse<VoicemailOrganizationPolicy> PutPolicyWithHttpInfo (VoicemailOrganizationPolicy body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -438,9 +438,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="body">VoicemailMessage (optional)</param>
+        /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of VoicemailMessage</returns>
-        System.Threading.Tasks.Task<VoicemailMessage> PutMessagesMessageIdAsync (string messageId, VoicemailMessage body = null);
+        System.Threading.Tasks.Task<VoicemailMessage> PutMessagesMessageIdAsync (string messageId, VoicemailMessage body);
 
         /// <summary>
         /// Update a message.
@@ -450,9 +450,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="body">VoicemailMessage (optional)</param>
+        /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PutMessagesMessageIdAsyncWithHttpInfo (string messageId, VoicemailMessage body = null);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PutMessagesMessageIdAsyncWithHttpInfo (string messageId, VoicemailMessage body);
         /// <summary>
         /// Update a policy
         /// </summary>
@@ -460,9 +460,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutPolicyAsync (VoicemailOrganizationPolicy body = null);
+        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutPolicyAsync (VoicemailOrganizationPolicy body);
 
         /// <summary>
         /// Update a policy
@@ -471,9 +471,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutPolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutPolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body);
         #endregion Asynchronous Operations
     }
 
@@ -1930,9 +1930,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="body">VoicemailMessage (optional)</param>
+        /// <param name="body">VoicemailMessage</param>
         /// <returns>VoicemailMessage</returns>
-        public VoicemailMessage PutMessagesMessageId (string messageId, VoicemailMessage body = null)
+        public VoicemailMessage PutMessagesMessageId (string messageId, VoicemailMessage body)
         {
              ApiResponse<VoicemailMessage> localVarResponse = PutMessagesMessageIdWithHttpInfo(messageId, body);
              return localVarResponse.Data;
@@ -1943,13 +1943,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="body">VoicemailMessage (optional)</param>
+        /// <param name="body">VoicemailMessage</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        public ApiResponse< VoicemailMessage > PutMessagesMessageIdWithHttpInfo (string messageId, VoicemailMessage body = null)
+        public ApiResponse< VoicemailMessage > PutMessagesMessageIdWithHttpInfo (string messageId, VoicemailMessage body)
         {
             // verify the required parameter 'messageId' is set
             if (messageId == null)
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->PutMessagesMessageId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutMessagesMessageId");
 
             var localVarPath = "/api/v2/voicemail/messages/{messageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2016,9 +2019,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="body">VoicemailMessage (optional)</param>
+        /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of VoicemailMessage</returns>
-        public async System.Threading.Tasks.Task<VoicemailMessage> PutMessagesMessageIdAsync (string messageId, VoicemailMessage body = null)
+        public async System.Threading.Tasks.Task<VoicemailMessage> PutMessagesMessageIdAsync (string messageId, VoicemailMessage body)
         {
              ApiResponse<VoicemailMessage> localVarResponse = await PutMessagesMessageIdAsyncWithHttpInfo(messageId, body);
              return localVarResponse.Data;
@@ -2030,13 +2033,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="body">VoicemailMessage (optional)</param>
+        /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PutMessagesMessageIdAsyncWithHttpInfo (string messageId, VoicemailMessage body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PutMessagesMessageIdAsyncWithHttpInfo (string messageId, VoicemailMessage body)
         {
             // verify the required parameter 'messageId' is set
             if (messageId == null)
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->PutMessagesMessageId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutMessagesMessageId");
 
             var localVarPath = "/api/v2/voicemail/messages/{messageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2102,9 +2108,9 @@ namespace ININ.PureCloudApi.Api
         /// Update a policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        public VoicemailOrganizationPolicy PutPolicy (VoicemailOrganizationPolicy body = null)
+        public VoicemailOrganizationPolicy PutPolicy (VoicemailOrganizationPolicy body)
         {
              ApiResponse<VoicemailOrganizationPolicy> localVarResponse = PutPolicyWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2114,10 +2120,13 @@ namespace ININ.PureCloudApi.Api
         /// Update a policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        public ApiResponse< VoicemailOrganizationPolicy > PutPolicyWithHttpInfo (VoicemailOrganizationPolicy body = null)
+        public ApiResponse< VoicemailOrganizationPolicy > PutPolicyWithHttpInfo (VoicemailOrganizationPolicy body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutPolicy");
 
             var localVarPath = "/api/v2/voicemail/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2182,9 +2191,9 @@ namespace ININ.PureCloudApi.Api
         /// Update a policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutPolicyAsync (VoicemailOrganizationPolicy body = null)
+        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutPolicyAsync (VoicemailOrganizationPolicy body)
         {
              ApiResponse<VoicemailOrganizationPolicy> localVarResponse = await PutPolicyAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2195,10 +2204,13 @@ namespace ININ.PureCloudApi.Api
         /// Update a policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutPolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutPolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutPolicy");
 
             var localVarPath = "/api/v2/voicemail/policy";
             var localVarPathParams = new Dictionary<String, String>();

@@ -9,16 +9,16 @@ title: ContactSales
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Email** | **string** |  | [optional] |
-| **FirstName** | **string** |  | [optional] |
-| **LastName** | **string** |  | [optional] |
-| **ContactPhone** | **string** |  | [optional] |
-| **Country** | **string** |  | [optional] |
-| **Title** | **string** |  | [optional] |
-| **Message** | **string** |  | [optional] |
-| **Language** | **string** |  | [optional] |
-| **ProductName** | **string** |  | [optional] |
-| **QuoteId** | **string** |  | [optional] |
+| **Email** | **string** | Email | |
+| **FirstName** | **string** | First Name | |
+| **LastName** | **string** | Last Name | |
+| **ContactPhone** | **string** | Phone | |
+| **Country** | **string** | Country | |
+| **Title** | **string** | Title | |
+| **Message** | **string** | Message | |
+| **Language** | **string** | Language | |
+| **ProductName** | **string** | Product Name | |
+| **QuoteId** | **string** | Quote Id | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

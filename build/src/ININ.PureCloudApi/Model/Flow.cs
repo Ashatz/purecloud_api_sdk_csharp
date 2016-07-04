@@ -111,14 +111,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Type">Type.</param>
         /// <param name="LockedUser">LockedUser.</param>
         /// <param name="Active">Active (default to false).</param>
+        /// <param name="System">System (default to false).</param>
         /// <param name="Deleted">Deleted (default to false).</param>
         /// <param name="PublishedVersion">PublishedVersion.</param>
-        /// <param name="CheckedInVersion">CheckedInVersion.</param>
         /// <param name="SavedVersion">SavedVersion.</param>
-        /// <param name="System">System (default to false).</param>
+        /// <param name="InputSchema">InputSchema.</param>
+        /// <param name="OutputSchema">OutputSchema.</param>
+        /// <param name="CheckedInVersion">CheckedInVersion.</param>
         /// <param name="PublishStatus">PublishStatus.</param>
         /// <param name="PublishedBy">PublishedBy.</param>
-        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion CheckedInVersion = null, FlowVersion SavedVersion = null, bool? System = null, PublishStatusEnum? PublishStatus = null, UriReference PublishedBy = null)
+        /// <param name="CurrentOperation">CurrentOperation.</param>
+        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, PublishStatusEnum? PublishStatus = null, UriReference PublishedBy = null, Operation CurrentOperation = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -133,6 +136,15 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Active = Active;
             }
+            // use default value if no "System" provided
+            if (System == null)
+            {
+                this.System = false;
+            }
+            else
+            {
+                this.System = System;
+            }
             // use default value if no "Deleted" provided
             if (Deleted == null)
             {
@@ -143,19 +155,13 @@ namespace ININ.PureCloudApi.Model
                 this.Deleted = Deleted;
             }
             this.PublishedVersion = PublishedVersion;
-            this.CheckedInVersion = CheckedInVersion;
             this.SavedVersion = SavedVersion;
-            // use default value if no "System" provided
-            if (System == null)
-            {
-                this.System = false;
-            }
-            else
-            {
-                this.System = System;
-            }
+            this.InputSchema = InputSchema;
+            this.OutputSchema = OutputSchema;
+            this.CheckedInVersion = CheckedInVersion;
             this.PublishStatus = PublishStatus;
             this.PublishedBy = PublishedBy;
+            this.CurrentOperation = CurrentOperation;
         }
         
         /// <summary>
@@ -185,6 +191,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
         /// <summary>
+        /// Gets or Sets System
+        /// </summary>
+        [DataMember(Name="system", EmitDefaultValue=false)]
+        public bool? System { get; set; }
+        /// <summary>
         /// Gets or Sets Deleted
         /// </summary>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
@@ -195,25 +206,35 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="publishedVersion", EmitDefaultValue=false)]
         public FlowVersion PublishedVersion { get; set; }
         /// <summary>
-        /// Gets or Sets CheckedInVersion
-        /// </summary>
-        [DataMember(Name="checkedInVersion", EmitDefaultValue=false)]
-        public FlowVersion CheckedInVersion { get; set; }
-        /// <summary>
         /// Gets or Sets SavedVersion
         /// </summary>
         [DataMember(Name="savedVersion", EmitDefaultValue=false)]
         public FlowVersion SavedVersion { get; set; }
         /// <summary>
-        /// Gets or Sets System
+        /// Gets or Sets InputSchema
         /// </summary>
-        [DataMember(Name="system", EmitDefaultValue=false)]
-        public bool? System { get; set; }
+        [DataMember(Name="inputSchema", EmitDefaultValue=false)]
+        public Object InputSchema { get; set; }
+        /// <summary>
+        /// Gets or Sets OutputSchema
+        /// </summary>
+        [DataMember(Name="outputSchema", EmitDefaultValue=false)]
+        public Object OutputSchema { get; set; }
+        /// <summary>
+        /// Gets or Sets CheckedInVersion
+        /// </summary>
+        [DataMember(Name="checkedInVersion", EmitDefaultValue=false)]
+        public FlowVersion CheckedInVersion { get; set; }
         /// <summary>
         /// Gets or Sets PublishedBy
         /// </summary>
         [DataMember(Name="publishedBy", EmitDefaultValue=false)]
         public UriReference PublishedBy { get; set; }
+        /// <summary>
+        /// Gets or Sets CurrentOperation
+        /// </summary>
+        [DataMember(Name="currentOperation", EmitDefaultValue=false)]
+        public Operation CurrentOperation { get; set; }
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -234,13 +255,16 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  LockedUser: ").Append(LockedUser).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
+            sb.Append("  System: ").Append(System).Append("\n");
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
             sb.Append("  PublishedVersion: ").Append(PublishedVersion).Append("\n");
-            sb.Append("  CheckedInVersion: ").Append(CheckedInVersion).Append("\n");
             sb.Append("  SavedVersion: ").Append(SavedVersion).Append("\n");
-            sb.Append("  System: ").Append(System).Append("\n");
+            sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
+            sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
+            sb.Append("  CheckedInVersion: ").Append(CheckedInVersion).Append("\n");
             sb.Append("  PublishStatus: ").Append(PublishStatus).Append("\n");
             sb.Append("  PublishedBy: ").Append(PublishedBy).Append("\n");
+            sb.Append("  CurrentOperation: ").Append(CurrentOperation).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -309,6 +333,11 @@ namespace ININ.PureCloudApi.Model
                     this.Active.Equals(other.Active)
                 ) &&
                 (
+                    this.System == other.System ||
+                    this.System != null &&
+                    this.System.Equals(other.System)
+                ) &&
+                (
                     this.Deleted == other.Deleted ||
                     this.Deleted != null &&
                     this.Deleted.Equals(other.Deleted)
@@ -319,19 +348,24 @@ namespace ININ.PureCloudApi.Model
                     this.PublishedVersion.Equals(other.PublishedVersion)
                 ) &&
                 (
-                    this.CheckedInVersion == other.CheckedInVersion ||
-                    this.CheckedInVersion != null &&
-                    this.CheckedInVersion.Equals(other.CheckedInVersion)
-                ) &&
-                (
                     this.SavedVersion == other.SavedVersion ||
                     this.SavedVersion != null &&
                     this.SavedVersion.Equals(other.SavedVersion)
                 ) &&
                 (
-                    this.System == other.System ||
-                    this.System != null &&
-                    this.System.Equals(other.System)
+                    this.InputSchema == other.InputSchema ||
+                    this.InputSchema != null &&
+                    this.InputSchema.Equals(other.InputSchema)
+                ) &&
+                (
+                    this.OutputSchema == other.OutputSchema ||
+                    this.OutputSchema != null &&
+                    this.OutputSchema.Equals(other.OutputSchema)
+                ) &&
+                (
+                    this.CheckedInVersion == other.CheckedInVersion ||
+                    this.CheckedInVersion != null &&
+                    this.CheckedInVersion.Equals(other.CheckedInVersion)
                 ) &&
                 (
                     this.PublishStatus == other.PublishStatus ||
@@ -342,6 +376,11 @@ namespace ININ.PureCloudApi.Model
                     this.PublishedBy == other.PublishedBy ||
                     this.PublishedBy != null &&
                     this.PublishedBy.Equals(other.PublishedBy)
+                ) &&
+                (
+                    this.CurrentOperation == other.CurrentOperation ||
+                    this.CurrentOperation != null &&
+                    this.CurrentOperation.Equals(other.CurrentOperation)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -373,20 +412,26 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.LockedUser.GetHashCode();
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
+                if (this.System != null)
+                    hash = hash * 59 + this.System.GetHashCode();
                 if (this.Deleted != null)
                     hash = hash * 59 + this.Deleted.GetHashCode();
                 if (this.PublishedVersion != null)
                     hash = hash * 59 + this.PublishedVersion.GetHashCode();
-                if (this.CheckedInVersion != null)
-                    hash = hash * 59 + this.CheckedInVersion.GetHashCode();
                 if (this.SavedVersion != null)
                     hash = hash * 59 + this.SavedVersion.GetHashCode();
-                if (this.System != null)
-                    hash = hash * 59 + this.System.GetHashCode();
+                if (this.InputSchema != null)
+                    hash = hash * 59 + this.InputSchema.GetHashCode();
+                if (this.OutputSchema != null)
+                    hash = hash * 59 + this.OutputSchema.GetHashCode();
+                if (this.CheckedInVersion != null)
+                    hash = hash * 59 + this.CheckedInVersion.GetHashCode();
                 if (this.PublishStatus != null)
                     hash = hash * 59 + this.PublishStatus.GetHashCode();
                 if (this.PublishedBy != null)
                     hash = hash * 59 + this.PublishedBy.GetHashCode();
+                if (this.CurrentOperation != null)
+                    hash = hash * 59 + this.CurrentOperation.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

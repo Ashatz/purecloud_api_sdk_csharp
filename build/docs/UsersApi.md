@@ -12,7 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserIdRoutingskillsSkillId**](UsersApi.html#deleteuseridroutingskillsskillid) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
 | [**DeleteUserIdStationAssociatedstation**](UsersApi.html#deleteuseridstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
 | [**DeleteUserIdStationDefaultstation**](UsersApi.html#deleteuseridstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
-| [**GetMe**](UsersApi.html#getme) | **GET** /api/v2/users/me | Get user. |
+| [**GetMe**](UsersApi.html#getme) | **GET** /api/v2/users/me | Get current user details. |
 | [**GetSearch**](UsersApi.html#getsearch) | **GET** /api/v2/users/search | Search using q64 |
 | [**GetUserId**](UsersApi.html#getuserid) | **GET** /api/v2/users/{userId} | Get user. |
 | [**GetUserIdCallforwarding**](UsersApi.html#getuseridcallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
@@ -326,9 +326,9 @@ void (empty response body)
 
 ## [**UserMe**](UserMe.html) GetMe (List<string> expand = null)
 
-Get user.
+Get current user details.
 
-
+This request is not valid when using the Client Credentials OAuth grant.
 
 ### Example
 ~~~csharp
@@ -349,11 +349,11 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new UsersApi();
-            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
-                // Get user.
+                // Get current user details.
                 UserMe result = apiInstance.GetMe(expand);
                 Debug.WriteLine(result);
             }
@@ -371,7 +371,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -956,7 +956,7 @@ namespace Example
 
 <a name="getusers"></a>
 
-## [**UsersEntityListing**](UsersEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null)
+## [**UsersEntityListing**](UsersEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
 
 Get the list of available users.
 
@@ -984,17 +984,13 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var id = new List<string>(); // List<string> | id (optional) 
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            var role = role_example;  // string | Role (optional) 
-            var name = name_example;  // string | Name (optional) 
-            var username = username_example;  // string | Username (optional) 
-            var skill = new List<string>(); // List<string> | Skill (optional) 
+            var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get the list of available users.
-                UsersEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortBy, role, name, username, skill, expand);
+                UsersEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1014,11 +1010,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **id** | [**List<string>**](string.html)| id | [optional]  |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **role** | **string**| Role | [optional]  |
-| **name** | **string**| Name | [optional]  |
-| **username** | **string**| Username | [optional]  |
-| **skill** | [**List<string>**](string.html)| Skill | [optional]  |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
@@ -1028,7 +1020,7 @@ namespace Example
 
 <a name="patchuserid"></a>
 
-## [**User**](User.html) PatchUserId (string userId, User body = null)
+## [**User**](User.html) PatchUserId (string userId, User body)
 
 Update user
 
@@ -1054,7 +1046,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = new User(); // User |  (optional) 
+            var body = new User(); // User | User
 
             try
             {
@@ -1077,7 +1069,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**User**](User.html)|  | [optional]  |
+| **body** | [**User**](User.html)| User |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1086,7 +1078,7 @@ namespace Example
 
 <a name="patchuseridcallforwarding"></a>
 
-## [**CallForwarding**](CallForwarding.html) PatchUserIdCallforwarding (string userId, CallForwarding body = null)
+## [**CallForwarding**](CallForwarding.html) PatchUserIdCallforwarding (string userId, CallForwarding body)
 
 Patch a user's CallForwarding
 
@@ -1112,7 +1104,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = new CallForwarding(); // CallForwarding |  (optional) 
+            var body = new CallForwarding(); // CallForwarding | Call forwarding
 
             try
             {
@@ -1135,7 +1127,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**CallForwarding**](CallForwarding.html)|  | [optional]  |
+| **body** | [**CallForwarding**](CallForwarding.html)| Call forwarding |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1144,7 +1136,7 @@ namespace Example
 
 <a name="patchuseridgeolocationsclientid"></a>
 
-## [**Geolocation**](Geolocation.html) PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body = null)
+## [**Geolocation**](Geolocation.html) PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body)
 
 Patch a user's Geolocation
 
@@ -1171,7 +1163,7 @@ namespace Example
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | user Id
             var clientId = clientId_example;  // string | client Id
-            var body = new Geolocation(); // Geolocation |  (optional) 
+            var body = new Geolocation(); // Geolocation | Geolocation
 
             try
             {
@@ -1195,7 +1187,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **clientId** | **string**| client Id |  |
-| **body** | [**Geolocation**](Geolocation.html)|  | [optional]  |
+| **body** | [**Geolocation**](Geolocation.html)| Geolocation |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1204,7 +1196,7 @@ namespace Example
 
 <a name="patchuseridqueues"></a>
 
-## [**UserQueue**](UserQueue.html) PatchUserIdQueues (string userId, List<UserQueue> body = null)
+## [**UserQueue**](UserQueue.html) PatchUserIdQueues (string userId, List<UserQueue> body)
 
 Join or unjoin a set of queues for a user
 
@@ -1230,7 +1222,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = new List<UserQueue>(); // List<UserQueue> | User Queues (optional) 
+            var body = new List<UserQueue>(); // List<UserQueue> | User Queues
 
             try
             {
@@ -1253,7 +1245,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**List<UserQueue>**](UserQueue.html)| User Queues | [optional]  |
+| **body** | [**List<UserQueue>**](UserQueue.html)| User Queues |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1262,7 +1254,7 @@ namespace Example
 
 <a name="patchuseridqueuesqueueid"></a>
 
-## [**UserQueue**](UserQueue.html) PatchUserIdQueuesQueueId (string queueId, string userId, UserQueue body = null)
+## [**UserQueue**](UserQueue.html) PatchUserIdQueuesQueueId (string queueId, string userId, UserQueue body)
 
 Join or unjoin a queue for a user
 
@@ -1289,7 +1281,7 @@ namespace Example
             var apiInstance = new UsersApi();
             var queueId = queueId_example;  // string | Queue ID
             var userId = userId_example;  // string | User ID
-            var body = new UserQueue(); // UserQueue | Queue Member (optional) 
+            var body = new UserQueue(); // UserQueue | Queue Member
 
             try
             {
@@ -1313,7 +1305,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **userId** | **string**| User ID |  |
-| **body** | [**UserQueue**](UserQueue.html)| Queue Member | [optional]  |
+| **body** | [**UserQueue**](UserQueue.html)| Queue Member |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1322,7 +1314,7 @@ namespace Example
 
 <a name="postsearch"></a>
 
-## [**UsersSearchResponse**](UsersSearchResponse.html) PostSearch (UserSearchRequest body = null)
+## [**UsersSearchResponse**](UsersSearchResponse.html) PostSearch (UserSearchRequest body)
 
 Search
 
@@ -1347,7 +1339,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new UsersApi();
-            var body = new UserSearchRequest(); // UserSearchRequest | Search request options (optional) 
+            var body = new UserSearchRequest(); // UserSearchRequest | Search request options
 
             try
             {
@@ -1369,7 +1361,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options | [optional]  |
+| **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1378,7 +1370,7 @@ namespace Example
 
 <a name="postuseridroutingskills"></a>
 
-## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkill body = null)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkill body)
 
 Add routing skill to user
 
@@ -1404,7 +1396,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill (optional) 
+            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
 
             try
             {
@@ -1427,7 +1419,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill | [optional]  |
+| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1436,7 +1428,7 @@ namespace Example
 
 <a name="postusers"></a>
 
-## [**User**](User.html) PostUsers (CreateUser body = null)
+## [**User**](User.html) PostUsers (CreateUser body)
 
 Create user
 
@@ -1461,7 +1453,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new UsersApi();
-            var body = new CreateUser(); // CreateUser | User (optional) 
+            var body = new CreateUser(); // CreateUser | User
 
             try
             {
@@ -1483,7 +1475,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateUser**](CreateUser.html)| User | [optional]  |
+| **body** | [**CreateUser**](CreateUser.html)| User |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1492,7 +1484,7 @@ namespace Example
 
 <a name="postusersaggregatesquery"></a>
 
-## [**PresenceQueryResponse**](PresenceQueryResponse.html) PostUsersAggregatesQuery (AggregationQuery body = null)
+## [**PresenceQueryResponse**](PresenceQueryResponse.html) PostUsersAggregatesQuery (AggregationQuery body)
 
 Query for user aggregates
 
@@ -1517,7 +1509,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new UsersApi();
-            var body = new AggregationQuery(); // AggregationQuery | query (optional) 
+            var body = new AggregationQuery(); // AggregationQuery | query
 
             try
             {
@@ -1539,7 +1531,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1548,7 +1540,7 @@ namespace Example
 
 <a name="postusersobservationsquery"></a>
 
-## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostUsersObservationsQuery (ObservationQuery body = null)
+## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostUsersObservationsQuery (ObservationQuery body)
 
 Query for user observations
 
@@ -1573,7 +1565,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new UsersApi();
-            var body = new ObservationQuery(); // ObservationQuery | query (optional) 
+            var body = new ObservationQuery(); // ObservationQuery | query
 
             try
             {
@@ -1595,7 +1587,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query | [optional]  |
+| **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1604,7 +1596,7 @@ namespace Example
 
 <a name="putuseridcallforwarding"></a>
 
-## [**CallForwarding**](CallForwarding.html) PutUserIdCallforwarding (string userId, CallForwarding body = null)
+## [**CallForwarding**](CallForwarding.html) PutUserIdCallforwarding (string userId, CallForwarding body)
 
 Update a user's CallForwarding
 
@@ -1630,7 +1622,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = new CallForwarding(); // CallForwarding |  (optional) 
+            var body = new CallForwarding(); // CallForwarding | Call forwarding
 
             try
             {
@@ -1653,7 +1645,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**CallForwarding**](CallForwarding.html)|  | [optional]  |
+| **body** | [**CallForwarding**](CallForwarding.html)| Call forwarding |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1720,7 +1712,7 @@ namespace Example
 
 <a name="putuseridroles"></a>
 
-## [**UserAuthorization**](UserAuthorization.html) PutUserIdRoles (string userId, List<string> body = null)
+## [**UserAuthorization**](UserAuthorization.html) PutUserIdRoles (string userId, List<string> body)
 
 Sets the user's roles
 
@@ -1746,7 +1738,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = ;  // List<string> |  (optional) 
+            var body = ;  // List<string> | List of roles
 
             try
             {
@@ -1769,7 +1761,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | **List<string>**|  | [optional]  |
+| **body** | **List<string>**| List of roles |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1778,7 +1770,7 @@ namespace Example
 
 <a name="putuseridroutingskillsskillid"></a>
 
-## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body = null)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body)
 
 Update routing skill proficiency or state.
 
@@ -1805,7 +1797,7 @@ namespace Example
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
             var skillId = skillId_example;  // string | 
-            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill (optional) 
+            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
 
             try
             {
@@ -1829,7 +1821,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **skillId** | **string**|  |  |
-| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill | [optional]  |
+| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1838,7 +1830,7 @@ namespace Example
 
 <a name="putuseridroutingstatus"></a>
 
-## [**RoutingStatus**](RoutingStatus.html) PutUserIdRoutingstatus (string userId, RoutingStatus body = null)
+## [**RoutingStatus**](RoutingStatus.html) PutUserIdRoutingstatus (string userId, RoutingStatus body)
 
 Update the routing status of a user
 
@@ -1864,7 +1856,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = new RoutingStatus(); // RoutingStatus | Routing Status (optional) 
+            var body = new RoutingStatus(); // RoutingStatus | Routing Status
 
             try
             {
@@ -1887,7 +1879,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**RoutingStatus**](RoutingStatus.html)| Routing Status | [optional]  |
+| **body** | [**RoutingStatus**](RoutingStatus.html)| Routing Status |  |
 {: class="table table-striped"}
 
 ### Return type

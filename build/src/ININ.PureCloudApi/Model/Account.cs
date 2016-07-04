@@ -20,29 +20,34 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Account" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Account() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Account" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="OrgLegalName">OrgLegalName.</param>
-        /// <param name="BillingAddressLine1">BillingAddressLine1.</param>
+        /// <param name="OrgLegalName">Org legal name (required).</param>
+        /// <param name="BillingAddressLine1">Billing Address (required).</param>
         /// <param name="BillingAddressLine2">BillingAddressLine2.</param>
-        /// <param name="BillingAddressCity">BillingAddressCity.</param>
-        /// <param name="BillingAddressState">BillingAddressState.</param>
-        /// <param name="BillingAddressZipCode">BillingAddressZipCode.</param>
-        /// <param name="BillingAddressCountry">BillingAddressCountry.</param>
+        /// <param name="BillingAddressCity">Billing City (required).</param>
+        /// <param name="BillingAddressState">Billing State (required).</param>
+        /// <param name="BillingAddressZipCode">Billing ZipCode (required).</param>
+        /// <param name="BillingAddressCountry">Billing Country (required).</param>
         /// <param name="LegalAddressLine1">LegalAddressLine1.</param>
         /// <param name="LegalAddressLine2">LegalAddressLine2.</param>
         /// <param name="LegalAddressCity">LegalAddressCity.</param>
         /// <param name="LegalAddressState">LegalAddressState.</param>
         /// <param name="LegalAddressZipCode">LegalAddressZipCode.</param>
         /// <param name="LegalAddressCountry">LegalAddressCountry.</param>
-        /// <param name="BillingContactFirstName">BillingContactFirstName.</param>
-        /// <param name="BillingContactLastName">BillingContactLastName.</param>
-        /// <param name="BillingContactEmail">BillingContactEmail.</param>
-        /// <param name="BillingContactPhone">BillingContactPhone.</param>
+        /// <param name="BillingContactFirstName">Billing Contact first name. (required).</param>
+        /// <param name="BillingContactLastName">Billing Contact last name. (required).</param>
+        /// <param name="BillingContactEmail">Billing Contact email. (required).</param>
+        /// <param name="BillingContactPhone">Billing Contact phone (required).</param>
         /// <param name="PurchaseOrderNumber">PurchaseOrderNumber.</param>
         /// <param name="IsTaxExempt">IsTaxExempt (default to false).</param>
         /// <param name="Currency">Currency.</param>
-        /// <param name="PaymentTerm">PaymentTerm.</param>
-        /// <param name="ContractTerm">ContractTerm.</param>
+        /// <param name="PaymentTerm">Payment Term (required).</param>
+        /// <param name="ContractTerm">Contract Term (required).</param>
         /// <param name="AutoRenew">AutoRenew (default to false).</param>
         /// <param name="Enabled">Enabled (default to false).</param>
         /// <param name="MinCommitQuantities">MinCommitQuantities.</param>
@@ -50,24 +55,122 @@ namespace ININ.PureCloudApi.Model
         /// <param name="OneTimeCharges">OneTimeCharges.</param>
         public Account(string Name = null, string OrgLegalName = null, string BillingAddressLine1 = null, string BillingAddressLine2 = null, string BillingAddressCity = null, string BillingAddressState = null, string BillingAddressZipCode = null, string BillingAddressCountry = null, string LegalAddressLine1 = null, string LegalAddressLine2 = null, string LegalAddressCity = null, string LegalAddressState = null, string LegalAddressZipCode = null, string LegalAddressCountry = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactEmail = null, string BillingContactPhone = null, string PurchaseOrderNumber = null, bool? IsTaxExempt = null, string Currency = null, string PaymentTerm = null, int? ContractTerm = null, bool? AutoRenew = null, bool? Enabled = null, Dictionary<string, int?> MinCommitQuantities = null, Dictionary<string, int?> EstimatedQuantities = null, List<string> OneTimeCharges = null)
         {
+            // to ensure "OrgLegalName" is required (not null)
+            if (OrgLegalName == null)
+            {
+                throw new InvalidDataException("OrgLegalName is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.OrgLegalName = OrgLegalName;
+            }
+            // to ensure "BillingAddressLine1" is required (not null)
+            if (BillingAddressLine1 == null)
+            {
+                throw new InvalidDataException("BillingAddressLine1 is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.BillingAddressLine1 = BillingAddressLine1;
+            }
+            // to ensure "BillingAddressCity" is required (not null)
+            if (BillingAddressCity == null)
+            {
+                throw new InvalidDataException("BillingAddressCity is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.BillingAddressCity = BillingAddressCity;
+            }
+            // to ensure "BillingAddressState" is required (not null)
+            if (BillingAddressState == null)
+            {
+                throw new InvalidDataException("BillingAddressState is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.BillingAddressState = BillingAddressState;
+            }
+            // to ensure "BillingAddressZipCode" is required (not null)
+            if (BillingAddressZipCode == null)
+            {
+                throw new InvalidDataException("BillingAddressZipCode is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.BillingAddressZipCode = BillingAddressZipCode;
+            }
+            // to ensure "BillingAddressCountry" is required (not null)
+            if (BillingAddressCountry == null)
+            {
+                throw new InvalidDataException("BillingAddressCountry is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.BillingAddressCountry = BillingAddressCountry;
+            }
+            // to ensure "BillingContactFirstName" is required (not null)
+            if (BillingContactFirstName == null)
+            {
+                throw new InvalidDataException("BillingContactFirstName is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.BillingContactFirstName = BillingContactFirstName;
+            }
+            // to ensure "BillingContactLastName" is required (not null)
+            if (BillingContactLastName == null)
+            {
+                throw new InvalidDataException("BillingContactLastName is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.BillingContactLastName = BillingContactLastName;
+            }
+            // to ensure "BillingContactEmail" is required (not null)
+            if (BillingContactEmail == null)
+            {
+                throw new InvalidDataException("BillingContactEmail is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.BillingContactEmail = BillingContactEmail;
+            }
+            // to ensure "BillingContactPhone" is required (not null)
+            if (BillingContactPhone == null)
+            {
+                throw new InvalidDataException("BillingContactPhone is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.BillingContactPhone = BillingContactPhone;
+            }
+            // to ensure "PaymentTerm" is required (not null)
+            if (PaymentTerm == null)
+            {
+                throw new InvalidDataException("PaymentTerm is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.PaymentTerm = PaymentTerm;
+            }
+            // to ensure "ContractTerm" is required (not null)
+            if (ContractTerm == null)
+            {
+                throw new InvalidDataException("ContractTerm is a required property for Account and cannot be null");
+            }
+            else
+            {
+                this.ContractTerm = ContractTerm;
+            }
             this.Name = Name;
-            this.OrgLegalName = OrgLegalName;
-            this.BillingAddressLine1 = BillingAddressLine1;
             this.BillingAddressLine2 = BillingAddressLine2;
-            this.BillingAddressCity = BillingAddressCity;
-            this.BillingAddressState = BillingAddressState;
-            this.BillingAddressZipCode = BillingAddressZipCode;
-            this.BillingAddressCountry = BillingAddressCountry;
             this.LegalAddressLine1 = LegalAddressLine1;
             this.LegalAddressLine2 = LegalAddressLine2;
             this.LegalAddressCity = LegalAddressCity;
             this.LegalAddressState = LegalAddressState;
             this.LegalAddressZipCode = LegalAddressZipCode;
             this.LegalAddressCountry = LegalAddressCountry;
-            this.BillingContactFirstName = BillingContactFirstName;
-            this.BillingContactLastName = BillingContactLastName;
-            this.BillingContactEmail = BillingContactEmail;
-            this.BillingContactPhone = BillingContactPhone;
             this.PurchaseOrderNumber = PurchaseOrderNumber;
             // use default value if no "IsTaxExempt" provided
             if (IsTaxExempt == null)
@@ -79,8 +182,6 @@ namespace ININ.PureCloudApi.Model
                 this.IsTaxExempt = IsTaxExempt;
             }
             this.Currency = Currency;
-            this.PaymentTerm = PaymentTerm;
-            this.ContractTerm = ContractTerm;
             // use default value if no "AutoRenew" provided
             if (AutoRenew == null)
             {
@@ -116,13 +217,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets OrgLegalName
+        /// Org legal name
         /// </summary>
+        /// <value>Org legal name</value>
         [DataMember(Name="orgLegalName", EmitDefaultValue=false)]
         public string OrgLegalName { get; set; }
         /// <summary>
-        /// Gets or Sets BillingAddressLine1
+        /// Billing Address
         /// </summary>
+        /// <value>Billing Address</value>
         [DataMember(Name="billingAddressLine1", EmitDefaultValue=false)]
         public string BillingAddressLine1 { get; set; }
         /// <summary>
@@ -131,23 +234,27 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="billingAddressLine2", EmitDefaultValue=false)]
         public string BillingAddressLine2 { get; set; }
         /// <summary>
-        /// Gets or Sets BillingAddressCity
+        /// Billing City
         /// </summary>
+        /// <value>Billing City</value>
         [DataMember(Name="billingAddressCity", EmitDefaultValue=false)]
         public string BillingAddressCity { get; set; }
         /// <summary>
-        /// Gets or Sets BillingAddressState
+        /// Billing State
         /// </summary>
+        /// <value>Billing State</value>
         [DataMember(Name="billingAddressState", EmitDefaultValue=false)]
         public string BillingAddressState { get; set; }
         /// <summary>
-        /// Gets or Sets BillingAddressZipCode
+        /// Billing ZipCode
         /// </summary>
+        /// <value>Billing ZipCode</value>
         [DataMember(Name="billingAddressZipCode", EmitDefaultValue=false)]
         public string BillingAddressZipCode { get; set; }
         /// <summary>
-        /// Gets or Sets BillingAddressCountry
+        /// Billing Country
         /// </summary>
+        /// <value>Billing Country</value>
         [DataMember(Name="billingAddressCountry", EmitDefaultValue=false)]
         public string BillingAddressCountry { get; set; }
         /// <summary>
@@ -181,23 +288,27 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="legalAddressCountry", EmitDefaultValue=false)]
         public string LegalAddressCountry { get; set; }
         /// <summary>
-        /// Gets or Sets BillingContactFirstName
+        /// Billing Contact first name.
         /// </summary>
+        /// <value>Billing Contact first name.</value>
         [DataMember(Name="billingContactFirstName", EmitDefaultValue=false)]
         public string BillingContactFirstName { get; set; }
         /// <summary>
-        /// Gets or Sets BillingContactLastName
+        /// Billing Contact last name.
         /// </summary>
+        /// <value>Billing Contact last name.</value>
         [DataMember(Name="billingContactLastName", EmitDefaultValue=false)]
         public string BillingContactLastName { get; set; }
         /// <summary>
-        /// Gets or Sets BillingContactEmail
+        /// Billing Contact email.
         /// </summary>
+        /// <value>Billing Contact email.</value>
         [DataMember(Name="billingContactEmail", EmitDefaultValue=false)]
         public string BillingContactEmail { get; set; }
         /// <summary>
-        /// Gets or Sets BillingContactPhone
+        /// Billing Contact phone
         /// </summary>
+        /// <value>Billing Contact phone</value>
         [DataMember(Name="billingContactPhone", EmitDefaultValue=false)]
         public string BillingContactPhone { get; set; }
         /// <summary>
@@ -216,13 +327,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
         /// <summary>
-        /// Gets or Sets PaymentTerm
+        /// Payment Term
         /// </summary>
+        /// <value>Payment Term</value>
         [DataMember(Name="paymentTerm", EmitDefaultValue=false)]
         public string PaymentTerm { get; set; }
         /// <summary>
-        /// Gets or Sets ContractTerm
+        /// Contract Term
         /// </summary>
+        /// <value>Contract Term</value>
         [DataMember(Name="contractTerm", EmitDefaultValue=false)]
         public int? ContractTerm { get; set; }
         /// <summary>

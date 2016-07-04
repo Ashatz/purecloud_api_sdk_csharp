@@ -362,7 +362,7 @@ namespace Example
 
 <a name="postlibraries"></a>
 
-## [**Library**](Library.html) PostLibraries (Library body = null)
+## [**Library**](Library.html) PostLibraries (Library body)
 
 Create a response library.
 
@@ -387,7 +387,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ResponseManagementApi();
-            var body = new Library(); // Library | Library (optional) 
+            var body = new Library(); // Library | Library
 
             try
             {
@@ -409,7 +409,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Library**](Library.html)| Library | [optional]  |
+| **body** | [**Library**](Library.html)| Library |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -418,7 +418,7 @@ namespace Example
 
 <a name="postresponses"></a>
 
-## [**Response**](Response.html) PostResponses (Response body = null)
+## [**Response**](Response.html) PostResponses (Response body)
 
 Create a response.
 
@@ -443,7 +443,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ResponseManagementApi();
-            var body = new Response(); // Response | Response (optional) 
+            var body = new Response(); // Response | Response
 
             try
             {
@@ -465,7 +465,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Response**](Response.html)| Response | [optional]  |
+| **body** | [**Response**](Response.html)| Response |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -474,7 +474,7 @@ namespace Example
 
 <a name="postresponsesquery"></a>
 
-## [**ResponseQueryResults**](ResponseQueryResults.html) PostResponsesQuery (ResponseQueryRequest body = null)
+## [**ResponseQueryResults**](ResponseQueryResults.html) PostResponsesQuery (ResponseQueryRequest body)
 
 Query responses
 
@@ -499,7 +499,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ResponseManagementApi();
-            var body = new ResponseQueryRequest(); // ResponseQueryRequest | Response (optional) 
+            var body = new ResponseQueryRequest(); // ResponseQueryRequest | Response
 
             try
             {
@@ -521,7 +521,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ResponseQueryRequest**](ResponseQueryRequest.html)| Response | [optional]  |
+| **body** | [**ResponseQueryRequest**](ResponseQueryRequest.html)| Response |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -530,7 +530,7 @@ namespace Example
 
 <a name="putlibrarieslibraryid"></a>
 
-## [**Library**](Library.html) PutLibrariesLibraryId (string libraryId, Library body = null)
+## [**Library**](Library.html) PutLibrariesLibraryId (string libraryId, Library body)
 
 Update an existing response library.
 
@@ -556,7 +556,7 @@ namespace Example
 
             var apiInstance = new ResponseManagementApi();
             var libraryId = libraryId_example;  // string | Library ID
-            var body = new Library(); // Library | Library (optional) 
+            var body = new Library(); // Library | Library
 
             try
             {
@@ -579,7 +579,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **libraryId** | **string**| Library ID |  |
-| **body** | [**Library**](Library.html)| Library | [optional]  |
+| **body** | [**Library**](Library.html)| Library |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -588,7 +588,7 @@ namespace Example
 
 <a name="putresponsesresponseid"></a>
 
-## [**Response**](Response.html) PutResponsesResponseId (string responseId, Response body = null)
+## [**Response**](Response.html) PutResponsesResponseId (string responseId, Response body)
 
 Update an existing response.
 
@@ -614,7 +614,7 @@ namespace Example
 
             var apiInstance = new ResponseManagementApi();
             var responseId = responseId_example;  // string | Response ID
-            var body = new Response(); // Response | Response (optional) 
+            var body = new Response(); // Response | Response
 
             try
             {
@@ -637,7 +637,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **responseId** | **string**| Response ID |  |
-| **body** | [**Response**](Response.html)| Response | [optional]  |
+| **body** | [**Response**](Response.html)| Response |  |
 {: class="table table-striped"}
 
 ### Return type

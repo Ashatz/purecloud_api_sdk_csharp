@@ -572,10 +572,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">calibration (optional)</param>
+        /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Calibration</returns>
-        Calibration PostCalibrations (Calibration body = null, string expand = null);
+        Calibration PostCalibrations (Calibration body, string expand = null);
 
         /// <summary>
         /// Create a calibration
@@ -584,10 +584,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">calibration (optional)</param>
+        /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> PostCalibrationsWithHttpInfo (Calibration body = null, string expand = null);
+        ApiResponse<Calibration> PostCalibrationsWithHttpInfo (Calibration body, string expand = null);
         /// <summary>
         /// Create an evaluation
         /// </summary>
@@ -596,10 +596,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
-        Evaluation PostConversationsConversationIdEvaluations (string conversationId, Evaluation body = null, string expand = null);
+        Evaluation PostConversationsConversationIdEvaluations (string conversationId, Evaluation body, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -609,10 +609,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> PostConversationsConversationIdEvaluationsWithHttpInfo (string conversationId, Evaluation body = null, string expand = null);
+        ApiResponse<Evaluation> PostConversationsConversationIdEvaluationsWithHttpInfo (string conversationId, Evaluation body, string expand = null);
         /// <summary>
         /// Query for evaluation aggregates
         /// </summary>
@@ -620,9 +620,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>AggregateQueryResponse</returns>
-        AggregateQueryResponse PostEvaluationsAggregatesQuery (AggregationQuery body = null);
+        AggregateQueryResponse PostEvaluationsAggregatesQuery (AggregationQuery body);
 
         /// <summary>
         /// Query for evaluation aggregates
@@ -631,9 +631,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        ApiResponse<AggregateQueryResponse> PostEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body = null);
+        ApiResponse<AggregateQueryResponse> PostEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body);
         /// <summary>
         /// Score evaluation
         /// </summary>
@@ -641,9 +641,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">evaluationAndScoringSet (optional)</param>
+        /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>EvaluationScoringSet</returns>
-        EvaluationScoringSet PostEvaluationsScoring (EvaluationFormAndScoringSet body = null);
+        EvaluationScoringSet PostEvaluationsScoring (EvaluationFormAndScoringSet body);
 
         /// <summary>
         /// Score evaluation
@@ -652,9 +652,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">evaluationAndScoringSet (optional)</param>
+        /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>ApiResponse of EvaluationScoringSet</returns>
-        ApiResponse<EvaluationScoringSet> PostEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body = null);
+        ApiResponse<EvaluationScoringSet> PostEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body);
         /// <summary>
         /// Create an evaluation form.
         /// </summary>
@@ -662,9 +662,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm PostForms (EvaluationForm body = null);
+        EvaluationForm PostForms (EvaluationForm body);
 
         /// <summary>
         /// Create an evaluation form.
@@ -673,9 +673,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> PostFormsWithHttpInfo (EvaluationForm body = null);
+        ApiResponse<EvaluationForm> PostFormsWithHttpInfo (EvaluationForm body);
         /// <summary>
         /// Create a Keyword Set
         /// </summary>
@@ -683,10 +683,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <param name="expand">queueId (optional)</param>
         /// <returns>KeywordSet</returns>
-        KeywordSet PostKeywordsets (KeywordSet body = null, string expand = null);
+        KeywordSet PostKeywordsets (KeywordSet body, string expand = null);
 
         /// <summary>
         /// Create a Keyword Set
@@ -695,10 +695,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <param name="expand">queueId (optional)</param>
         /// <returns>ApiResponse of KeywordSet</returns>
-        ApiResponse<KeywordSet> PostKeywordsetsWithHttpInfo (KeywordSet body = null, string expand = null);
+        ApiResponse<KeywordSet> PostKeywordsetsWithHttpInfo (KeywordSet body, string expand = null);
         /// <summary>
         /// Publish an evaluation form.
         /// </summary>
@@ -706,9 +706,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm PostPublishedforms (EvaluationForm body = null);
+        EvaluationForm PostPublishedforms (EvaluationForm body);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -717,9 +717,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> PostPublishedformsWithHttpInfo (EvaluationForm body = null);
+        ApiResponse<EvaluationForm> PostPublishedformsWithHttpInfo (EvaluationForm body);
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
         /// </summary>
@@ -728,9 +728,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="body">Calibration (optional)</param>
+        /// <param name="body">Calibration</param>
         /// <returns>Calibration</returns>
-        Calibration PutCalibrationsCalibrationId (string calibrationId, Calibration body = null);
+        Calibration PutCalibrationsCalibrationId (string calibrationId, Calibration body);
 
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -740,9 +740,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="body">Calibration (optional)</param>
+        /// <param name="body">Calibration</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> PutCalibrationsCalibrationIdWithHttpInfo (string calibrationId, Calibration body = null);
+        ApiResponse<Calibration> PutCalibrationsCalibrationIdWithHttpInfo (string calibrationId, Calibration body);
         /// <summary>
         /// Update an evaluation
         /// </summary>
@@ -752,10 +752,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
         /// <param name="evaluationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
-        Evaluation PutConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        Evaluation PutConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, Evaluation body, string expand = null);
 
         /// <summary>
         /// Update an evaluation
@@ -766,10 +766,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
         /// <param name="evaluationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> PutConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        ApiResponse<Evaluation> PutConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null);
         /// <summary>
         /// Update an evaluation form.
         /// </summary>
@@ -778,9 +778,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm PutFormsFormId (string formId, EvaluationForm body = null);
+        EvaluationForm PutFormsFormId (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update an evaluation form.
@@ -790,9 +790,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> PutFormsFormIdWithHttpInfo (string formId, EvaluationForm body = null);
+        ApiResponse<EvaluationForm> PutFormsFormIdWithHttpInfo (string formId, EvaluationForm body);
         /// <summary>
         /// Update a keywordSet to the specified keywordSet via PUT.
         /// </summary>
@@ -801,9 +801,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <returns>KeywordSet</returns>
-        KeywordSet PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body = null);
+        KeywordSet PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body);
 
         /// <summary>
         /// Update a keywordSet to the specified keywordSet via PUT.
@@ -813,9 +813,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <returns>ApiResponse of KeywordSet</returns>
-        ApiResponse<KeywordSet> PutKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId, KeywordSet body = null);
+        ApiResponse<KeywordSet> PutKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId, KeywordSet body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -1376,10 +1376,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">calibration (optional)</param>
+        /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (Calibration body = null, string expand = null);
+        System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (Calibration body, string expand = null);
 
         /// <summary>
         /// Create a calibration
@@ -1388,10 +1388,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">calibration (optional)</param>
+        /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (Calibration body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (Calibration body, string expand = null);
         /// <summary>
         /// Create an evaluation
         /// </summary>
@@ -1400,10 +1400,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> PostConversationsConversationIdEvaluationsAsync (string conversationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> PostConversationsConversationIdEvaluationsAsync (string conversationId, Evaluation body, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -1413,10 +1413,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostConversationsConversationIdEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostConversationsConversationIdEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body, string expand = null);
         /// <summary>
         /// Query for evaluation aggregates
         /// </summary>
@@ -1424,9 +1424,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of AggregateQueryResponse</returns>
-        System.Threading.Tasks.Task<AggregateQueryResponse> PostEvaluationsAggregatesQueryAsync (AggregationQuery body = null);
+        System.Threading.Tasks.Task<AggregateQueryResponse> PostEvaluationsAggregatesQueryAsync (AggregationQuery body);
 
         /// <summary>
         /// Query for evaluation aggregates
@@ -1435,9 +1435,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
         /// <summary>
         /// Score evaluation
         /// </summary>
@@ -1445,9 +1445,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">evaluationAndScoringSet (optional)</param>
+        /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of EvaluationScoringSet</returns>
-        System.Threading.Tasks.Task<EvaluationScoringSet> PostEvaluationsScoringAsync (EvaluationFormAndScoringSet body = null);
+        System.Threading.Tasks.Task<EvaluationScoringSet> PostEvaluationsScoringAsync (EvaluationFormAndScoringSet body);
 
         /// <summary>
         /// Score evaluation
@@ -1456,9 +1456,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">evaluationAndScoringSet (optional)</param>
+        /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of ApiResponse (EvaluationScoringSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> PostEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> PostEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body);
         /// <summary>
         /// Create an evaluation form.
         /// </summary>
@@ -1466,9 +1466,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> PostFormsAsync (EvaluationForm body = null);
+        System.Threading.Tasks.Task<EvaluationForm> PostFormsAsync (EvaluationForm body);
 
         /// <summary>
         /// Create an evaluation form.
@@ -1477,9 +1477,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostFormsAsyncWithHttpInfo (EvaluationForm body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostFormsAsyncWithHttpInfo (EvaluationForm body);
         /// <summary>
         /// Create a Keyword Set
         /// </summary>
@@ -1487,10 +1487,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <param name="expand">queueId (optional)</param>
         /// <returns>Task of KeywordSet</returns>
-        System.Threading.Tasks.Task<KeywordSet> PostKeywordsetsAsync (KeywordSet body = null, string expand = null);
+        System.Threading.Tasks.Task<KeywordSet> PostKeywordsetsAsync (KeywordSet body, string expand = null);
 
         /// <summary>
         /// Create a Keyword Set
@@ -1499,10 +1499,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <param name="expand">queueId (optional)</param>
         /// <returns>Task of ApiResponse (KeywordSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PostKeywordsetsAsyncWithHttpInfo (KeywordSet body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PostKeywordsetsAsyncWithHttpInfo (KeywordSet body, string expand = null);
         /// <summary>
         /// Publish an evaluation form.
         /// </summary>
@@ -1510,9 +1510,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> PostPublishedformsAsync (EvaluationForm body = null);
+        System.Threading.Tasks.Task<EvaluationForm> PostPublishedformsAsync (EvaluationForm body);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -1521,9 +1521,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostPublishedformsAsyncWithHttpInfo (EvaluationForm body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostPublishedformsAsyncWithHttpInfo (EvaluationForm body);
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
         /// </summary>
@@ -1532,9 +1532,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="body">Calibration (optional)</param>
+        /// <param name="body">Calibration</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> PutCalibrationsCalibrationIdAsync (string calibrationId, Calibration body = null);
+        System.Threading.Tasks.Task<Calibration> PutCalibrationsCalibrationIdAsync (string calibrationId, Calibration body);
 
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -1544,9 +1544,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="body">Calibration (optional)</param>
+        /// <param name="body">Calibration</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> PutCalibrationsCalibrationIdAsyncWithHttpInfo (string calibrationId, Calibration body = null);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> PutCalibrationsCalibrationIdAsyncWithHttpInfo (string calibrationId, Calibration body);
         /// <summary>
         /// Update an evaluation
         /// </summary>
@@ -1556,10 +1556,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
         /// <param name="evaluationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> PutConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> PutConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, Evaluation body, string expand = null);
 
         /// <summary>
         /// Update an evaluation
@@ -1570,10 +1570,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
         /// <param name="evaluationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PutConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PutConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null);
         /// <summary>
         /// Update an evaluation form.
         /// </summary>
@@ -1582,9 +1582,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> PutFormsFormIdAsync (string formId, EvaluationForm body = null);
+        System.Threading.Tasks.Task<EvaluationForm> PutFormsFormIdAsync (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update an evaluation form.
@@ -1594,9 +1594,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormsFormIdAsyncWithHttpInfo (string formId, EvaluationForm body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormsFormIdAsyncWithHttpInfo (string formId, EvaluationForm body);
         /// <summary>
         /// Update a keywordSet to the specified keywordSet via PUT.
         /// </summary>
@@ -1605,9 +1605,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <returns>Task of KeywordSet</returns>
-        System.Threading.Tasks.Task<KeywordSet> PutKeywordsetsKeywordsetIdAsync (string keywordSetId, KeywordSet body = null);
+        System.Threading.Tasks.Task<KeywordSet> PutKeywordsetsKeywordsetIdAsync (string keywordSetId, KeywordSet body);
 
         /// <summary>
         /// Update a keywordSet to the specified keywordSet via PUT.
@@ -1617,9 +1617,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <returns>Task of ApiResponse (KeywordSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId, KeywordSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId, KeywordSet body);
         #endregion Asynchronous Operations
     }
 
@@ -5063,10 +5063,10 @@ namespace ININ.PureCloudApi.Api
         /// Create a calibration 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">calibration (optional)</param>
+        /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Calibration</returns>
-        public Calibration PostCalibrations (Calibration body = null, string expand = null)
+        public Calibration PostCalibrations (Calibration body, string expand = null)
         {
              ApiResponse<Calibration> localVarResponse = PostCalibrationsWithHttpInfo(body, expand);
              return localVarResponse.Data;
@@ -5076,11 +5076,14 @@ namespace ININ.PureCloudApi.Api
         /// Create a calibration 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">calibration (optional)</param>
+        /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > PostCalibrationsWithHttpInfo (Calibration body = null, string expand = null)
+        public ApiResponse< Calibration > PostCalibrationsWithHttpInfo (Calibration body, string expand = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostCalibrations");
 
             var localVarPath = "/api/v2/quality/calibrations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5146,10 +5149,10 @@ namespace ININ.PureCloudApi.Api
         /// Create a calibration 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">calibration (optional)</param>
+        /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (Calibration body = null, string expand = null)
+        public async System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (Calibration body, string expand = null)
         {
              ApiResponse<Calibration> localVarResponse = await PostCalibrationsAsyncWithHttpInfo(body, expand);
              return localVarResponse.Data;
@@ -5160,11 +5163,14 @@ namespace ININ.PureCloudApi.Api
         /// Create a calibration 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">calibration (optional)</param>
+        /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (Calibration body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (Calibration body, string expand = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostCalibrations");
 
             var localVarPath = "/api/v2/quality/calibrations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5231,10 +5237,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
-        public Evaluation PostConversationsConversationIdEvaluations (string conversationId, Evaluation body = null, string expand = null)
+        public Evaluation PostConversationsConversationIdEvaluations (string conversationId, Evaluation body, string expand = null)
         {
              ApiResponse<Evaluation> localVarResponse = PostConversationsConversationIdEvaluationsWithHttpInfo(conversationId, body, expand);
              return localVarResponse.Data;
@@ -5245,14 +5251,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > PostConversationsConversationIdEvaluationsWithHttpInfo (string conversationId, Evaluation body = null, string expand = null)
+        public ApiResponse< Evaluation > PostConversationsConversationIdEvaluationsWithHttpInfo (string conversationId, Evaluation body, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PostConversationsConversationIdEvaluations");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostConversationsConversationIdEvaluations");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5320,10 +5329,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> PostConversationsConversationIdEvaluationsAsync (string conversationId, Evaluation body = null, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> PostConversationsConversationIdEvaluationsAsync (string conversationId, Evaluation body, string expand = null)
         {
              ApiResponse<Evaluation> localVarResponse = await PostConversationsConversationIdEvaluationsAsyncWithHttpInfo(conversationId, body, expand);
              return localVarResponse.Data;
@@ -5335,14 +5344,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostConversationsConversationIdEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostConversationsConversationIdEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PostConversationsConversationIdEvaluations");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostConversationsConversationIdEvaluations");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5409,9 +5421,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for evaluation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>AggregateQueryResponse</returns>
-        public AggregateQueryResponse PostEvaluationsAggregatesQuery (AggregationQuery body = null)
+        public AggregateQueryResponse PostEvaluationsAggregatesQuery (AggregationQuery body)
         {
              ApiResponse<AggregateQueryResponse> localVarResponse = PostEvaluationsAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5421,10 +5433,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for evaluation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        public ApiResponse< AggregateQueryResponse > PostEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body = null)
+        public ApiResponse< AggregateQueryResponse > PostEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostEvaluationsAggregatesQuery");
 
             var localVarPath = "/api/v2/analytics/evaluations/aggregates/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5489,9 +5504,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for evaluation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of AggregateQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostEvaluationsAggregatesQueryAsync (AggregationQuery body = null)
+        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostEvaluationsAggregatesQueryAsync (AggregationQuery body)
         {
              ApiResponse<AggregateQueryResponse> localVarResponse = await PostEvaluationsAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5502,10 +5517,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for evaluation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostEvaluationsAggregatesQuery");
 
             var localVarPath = "/api/v2/analytics/evaluations/aggregates/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5570,9 +5588,9 @@ namespace ININ.PureCloudApi.Api
         /// Score evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">evaluationAndScoringSet (optional)</param>
+        /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>EvaluationScoringSet</returns>
-        public EvaluationScoringSet PostEvaluationsScoring (EvaluationFormAndScoringSet body = null)
+        public EvaluationScoringSet PostEvaluationsScoring (EvaluationFormAndScoringSet body)
         {
              ApiResponse<EvaluationScoringSet> localVarResponse = PostEvaluationsScoringWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5582,10 +5600,13 @@ namespace ININ.PureCloudApi.Api
         /// Score evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">evaluationAndScoringSet (optional)</param>
+        /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>ApiResponse of EvaluationScoringSet</returns>
-        public ApiResponse< EvaluationScoringSet > PostEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body = null)
+        public ApiResponse< EvaluationScoringSet > PostEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostEvaluationsScoring");
 
             var localVarPath = "/api/v2/quality/evaluations/scoring";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5650,9 +5671,9 @@ namespace ININ.PureCloudApi.Api
         /// Score evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">evaluationAndScoringSet (optional)</param>
+        /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of EvaluationScoringSet</returns>
-        public async System.Threading.Tasks.Task<EvaluationScoringSet> PostEvaluationsScoringAsync (EvaluationFormAndScoringSet body = null)
+        public async System.Threading.Tasks.Task<EvaluationScoringSet> PostEvaluationsScoringAsync (EvaluationFormAndScoringSet body)
         {
              ApiResponse<EvaluationScoringSet> localVarResponse = await PostEvaluationsScoringAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5663,10 +5684,13 @@ namespace ININ.PureCloudApi.Api
         /// Score evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">evaluationAndScoringSet (optional)</param>
+        /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of ApiResponse (EvaluationScoringSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> PostEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> PostEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostEvaluationsScoring");
 
             var localVarPath = "/api/v2/quality/evaluations/scoring";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5731,9 +5755,9 @@ namespace ININ.PureCloudApi.Api
         /// Create an evaluation form. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm PostForms (EvaluationForm body = null)
+        public EvaluationForm PostForms (EvaluationForm body)
         {
              ApiResponse<EvaluationForm> localVarResponse = PostFormsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5743,10 +5767,13 @@ namespace ININ.PureCloudApi.Api
         /// Create an evaluation form. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > PostFormsWithHttpInfo (EvaluationForm body = null)
+        public ApiResponse< EvaluationForm > PostFormsWithHttpInfo (EvaluationForm body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostForms");
 
             var localVarPath = "/api/v2/quality/forms";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5811,9 +5838,9 @@ namespace ININ.PureCloudApi.Api
         /// Create an evaluation form. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> PostFormsAsync (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<EvaluationForm> PostFormsAsync (EvaluationForm body)
         {
              ApiResponse<EvaluationForm> localVarResponse = await PostFormsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5824,10 +5851,13 @@ namespace ININ.PureCloudApi.Api
         /// Create an evaluation form. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostFormsAsyncWithHttpInfo (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostFormsAsyncWithHttpInfo (EvaluationForm body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostForms");
 
             var localVarPath = "/api/v2/quality/forms";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5892,10 +5922,10 @@ namespace ININ.PureCloudApi.Api
         /// Create a Keyword Set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <param name="expand">queueId (optional)</param>
         /// <returns>KeywordSet</returns>
-        public KeywordSet PostKeywordsets (KeywordSet body = null, string expand = null)
+        public KeywordSet PostKeywordsets (KeywordSet body, string expand = null)
         {
              ApiResponse<KeywordSet> localVarResponse = PostKeywordsetsWithHttpInfo(body, expand);
              return localVarResponse.Data;
@@ -5905,11 +5935,14 @@ namespace ININ.PureCloudApi.Api
         /// Create a Keyword Set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <param name="expand">queueId (optional)</param>
         /// <returns>ApiResponse of KeywordSet</returns>
-        public ApiResponse< KeywordSet > PostKeywordsetsWithHttpInfo (KeywordSet body = null, string expand = null)
+        public ApiResponse< KeywordSet > PostKeywordsetsWithHttpInfo (KeywordSet body, string expand = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostKeywordsets");
 
             var localVarPath = "/api/v2/quality/keywordsets";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5975,10 +6008,10 @@ namespace ININ.PureCloudApi.Api
         /// Create a Keyword Set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <param name="expand">queueId (optional)</param>
         /// <returns>Task of KeywordSet</returns>
-        public async System.Threading.Tasks.Task<KeywordSet> PostKeywordsetsAsync (KeywordSet body = null, string expand = null)
+        public async System.Threading.Tasks.Task<KeywordSet> PostKeywordsetsAsync (KeywordSet body, string expand = null)
         {
              ApiResponse<KeywordSet> localVarResponse = await PostKeywordsetsAsyncWithHttpInfo(body, expand);
              return localVarResponse.Data;
@@ -5989,11 +6022,14 @@ namespace ININ.PureCloudApi.Api
         /// Create a Keyword Set 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <param name="expand">queueId (optional)</param>
         /// <returns>Task of ApiResponse (KeywordSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PostKeywordsetsAsyncWithHttpInfo (KeywordSet body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PostKeywordsetsAsyncWithHttpInfo (KeywordSet body, string expand = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostKeywordsets");
 
             var localVarPath = "/api/v2/quality/keywordsets";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6059,9 +6095,9 @@ namespace ININ.PureCloudApi.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm PostPublishedforms (EvaluationForm body = null)
+        public EvaluationForm PostPublishedforms (EvaluationForm body)
         {
              ApiResponse<EvaluationForm> localVarResponse = PostPublishedformsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6071,10 +6107,13 @@ namespace ININ.PureCloudApi.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > PostPublishedformsWithHttpInfo (EvaluationForm body = null)
+        public ApiResponse< EvaluationForm > PostPublishedformsWithHttpInfo (EvaluationForm body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostPublishedforms");
 
             var localVarPath = "/api/v2/quality/publishedforms";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6139,9 +6178,9 @@ namespace ININ.PureCloudApi.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> PostPublishedformsAsync (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<EvaluationForm> PostPublishedformsAsync (EvaluationForm body)
         {
              ApiResponse<EvaluationForm> localVarResponse = await PostPublishedformsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6152,10 +6191,13 @@ namespace ININ.PureCloudApi.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostPublishedformsAsyncWithHttpInfo (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostPublishedformsAsyncWithHttpInfo (EvaluationForm body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostPublishedforms");
 
             var localVarPath = "/api/v2/quality/publishedforms";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6221,9 +6263,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="body">Calibration (optional)</param>
+        /// <param name="body">Calibration</param>
         /// <returns>Calibration</returns>
-        public Calibration PutCalibrationsCalibrationId (string calibrationId, Calibration body = null)
+        public Calibration PutCalibrationsCalibrationId (string calibrationId, Calibration body)
         {
              ApiResponse<Calibration> localVarResponse = PutCalibrationsCalibrationIdWithHttpInfo(calibrationId, body);
              return localVarResponse.Data;
@@ -6234,13 +6276,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="body">Calibration (optional)</param>
+        /// <param name="body">Calibration</param>
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > PutCalibrationsCalibrationIdWithHttpInfo (string calibrationId, Calibration body = null)
+        public ApiResponse< Calibration > PutCalibrationsCalibrationIdWithHttpInfo (string calibrationId, Calibration body)
         {
             // verify the required parameter 'calibrationId' is set
             if (calibrationId == null)
                 throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->PutCalibrationsCalibrationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutCalibrationsCalibrationId");
 
             var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6307,9 +6352,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="body">Calibration (optional)</param>
+        /// <param name="body">Calibration</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> PutCalibrationsCalibrationIdAsync (string calibrationId, Calibration body = null)
+        public async System.Threading.Tasks.Task<Calibration> PutCalibrationsCalibrationIdAsync (string calibrationId, Calibration body)
         {
              ApiResponse<Calibration> localVarResponse = await PutCalibrationsCalibrationIdAsyncWithHttpInfo(calibrationId, body);
              return localVarResponse.Data;
@@ -6321,13 +6366,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="body">Calibration (optional)</param>
+        /// <param name="body">Calibration</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PutCalibrationsCalibrationIdAsyncWithHttpInfo (string calibrationId, Calibration body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PutCalibrationsCalibrationIdAsyncWithHttpInfo (string calibrationId, Calibration body)
         {
             // verify the required parameter 'calibrationId' is set
             if (calibrationId == null)
                 throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->PutCalibrationsCalibrationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutCalibrationsCalibrationId");
 
             var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6395,10 +6443,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
         /// <param name="evaluationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
-        public Evaluation PutConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        public Evaluation PutConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, Evaluation body, string expand = null)
         {
              ApiResponse<Evaluation> localVarResponse = PutConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo(conversationId, evaluationId, body, expand);
              return localVarResponse.Data;
@@ -6410,10 +6458,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
         /// <param name="evaluationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > PutConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        public ApiResponse< Evaluation > PutConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -6421,6 +6469,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'evaluationId' is set
             if (evaluationId == null)
                 throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->PutConversationsConversationIdEvaluationsEvaluationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutConversationsConversationIdEvaluationsEvaluationId");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6490,10 +6541,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
         /// <param name="evaluationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> PutConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> PutConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, Evaluation body, string expand = null)
         {
              ApiResponse<Evaluation> localVarResponse = await PutConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo(conversationId, evaluationId, body, expand);
              return localVarResponse.Data;
@@ -6506,10 +6557,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
         /// <param name="evaluationId"></param>
-        /// <param name="body">evaluation (optional)</param>
+        /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PutConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PutConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -6517,6 +6568,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'evaluationId' is set
             if (evaluationId == null)
                 throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->PutConversationsConversationIdEvaluationsEvaluationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutConversationsConversationIdEvaluationsEvaluationId");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6585,9 +6639,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm PutFormsFormId (string formId, EvaluationForm body = null)
+        public EvaluationForm PutFormsFormId (string formId, EvaluationForm body)
         {
              ApiResponse<EvaluationForm> localVarResponse = PutFormsFormIdWithHttpInfo(formId, body);
              return localVarResponse.Data;
@@ -6598,13 +6652,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > PutFormsFormIdWithHttpInfo (string formId, EvaluationForm body = null)
+        public ApiResponse< EvaluationForm > PutFormsFormIdWithHttpInfo (string formId, EvaluationForm body)
         {
             // verify the required parameter 'formId' is set
             if (formId == null)
                 throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->PutFormsFormId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutFormsFormId");
 
             var localVarPath = "/api/v2/quality/forms/{formId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6671,9 +6728,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> PutFormsFormIdAsync (string formId, EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<EvaluationForm> PutFormsFormIdAsync (string formId, EvaluationForm body)
         {
              ApiResponse<EvaluationForm> localVarResponse = await PutFormsFormIdAsyncWithHttpInfo(formId, body);
              return localVarResponse.Data;
@@ -6685,13 +6742,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Evaluation form</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormsFormIdAsyncWithHttpInfo (string formId, EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormsFormIdAsyncWithHttpInfo (string formId, EvaluationForm body)
         {
             // verify the required parameter 'formId' is set
             if (formId == null)
                 throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->PutFormsFormId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutFormsFormId");
 
             var localVarPath = "/api/v2/quality/forms/{formId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6758,9 +6818,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <returns>KeywordSet</returns>
-        public KeywordSet PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body = null)
+        public KeywordSet PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body)
         {
              ApiResponse<KeywordSet> localVarResponse = PutKeywordsetsKeywordsetIdWithHttpInfo(keywordSetId, body);
              return localVarResponse.Data;
@@ -6771,13 +6831,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <returns>ApiResponse of KeywordSet</returns>
-        public ApiResponse< KeywordSet > PutKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId, KeywordSet body = null)
+        public ApiResponse< KeywordSet > PutKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId, KeywordSet body)
         {
             // verify the required parameter 'keywordSetId' is set
             if (keywordSetId == null)
                 throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->PutKeywordsetsKeywordsetId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutKeywordsetsKeywordsetId");
 
             var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6844,9 +6907,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <returns>Task of KeywordSet</returns>
-        public async System.Threading.Tasks.Task<KeywordSet> PutKeywordsetsKeywordsetIdAsync (string keywordSetId, KeywordSet body = null)
+        public async System.Threading.Tasks.Task<KeywordSet> PutKeywordsetsKeywordsetIdAsync (string keywordSetId, KeywordSet body)
         {
              ApiResponse<KeywordSet> localVarResponse = await PutKeywordsetsKeywordsetIdAsyncWithHttpInfo(keywordSetId, body);
              return localVarResponse.Data;
@@ -6858,13 +6921,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <param name="body">keywordSet (optional)</param>
+        /// <param name="body">keywordSet</param>
         /// <returns>Task of ApiResponse (KeywordSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId, KeywordSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId, KeywordSet body)
         {
             // verify the required parameter 'keywordSetId' is set
             if (keywordSetId == null)
                 throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->PutKeywordsetsKeywordsetId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutKeywordsetsKeywordsetId");
 
             var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
             var localVarPathParams = new Dictionary<String, String>();

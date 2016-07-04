@@ -99,6 +99,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Active'
         }
         /// <summary>
+        /// Test the property 'System'
+        /// </summary>
+        [Test]
+        public void SystemTest()
+        {
+            // TODO: unit test for the property 'System'
+        }
+        /// <summary>
         /// Test the property 'Deleted'
         /// </summary>
         [Test]
@@ -115,14 +123,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'PublishedVersion'
         }
         /// <summary>
-        /// Test the property 'CheckedInVersion'
-        /// </summary>
-        [Test]
-        public void CheckedInVersionTest()
-        {
-            // TODO: unit test for the property 'CheckedInVersion'
-        }
-        /// <summary>
         /// Test the property 'SavedVersion'
         /// </summary>
         [Test]
@@ -131,12 +131,28 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'SavedVersion'
         }
         /// <summary>
-        /// Test the property 'System'
+        /// Test the property 'InputSchema'
         /// </summary>
         [Test]
-        public void SystemTest()
+        public void InputSchemaTest()
         {
-            // TODO: unit test for the property 'System'
+            // TODO: unit test for the property 'InputSchema'
+        }
+        /// <summary>
+        /// Test the property 'OutputSchema'
+        /// </summary>
+        [Test]
+        public void OutputSchemaTest()
+        {
+            // TODO: unit test for the property 'OutputSchema'
+        }
+        /// <summary>
+        /// Test the property 'CheckedInVersion'
+        /// </summary>
+        [Test]
+        public void CheckedInVersionTest()
+        {
+            // TODO: unit test for the property 'CheckedInVersion'
         }
         /// <summary>
         /// Test the property 'PublishStatus'
@@ -153,6 +169,14 @@ namespace ININ.PureCloudApi.Test
         public void PublishedByTest()
         {
             // TODO: unit test for the property 'PublishedBy'
+        }
+        /// <summary>
+        /// Test the property 'CurrentOperation'
+        /// </summary>
+        [Test]
+        public void CurrentOperationTest()
+        {
+            // TODO: unit test for the property 'CurrentOperation'
         }
         /// <summary>
         /// Test the property 'SelfUri'

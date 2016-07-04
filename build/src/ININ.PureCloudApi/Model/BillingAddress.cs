@@ -20,20 +20,65 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingAddress" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected BillingAddress() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BillingAddress" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Street">Street.</param>
-        /// <param name="City">City.</param>
-        /// <param name="CountryName">CountryName.</param>
-        /// <param name="StateName">StateName.</param>
-        /// <param name="PostalCode">PostalCode.</param>
+        /// <param name="Street">Street (required).</param>
+        /// <param name="City">City name (required).</param>
+        /// <param name="CountryName">Country name (required).</param>
+        /// <param name="StateName">State name (required).</param>
+        /// <param name="PostalCode">Postal Code (required).</param>
         public BillingAddress(string Name = null, string Street = null, string City = null, string CountryName = null, string StateName = null, string PostalCode = null)
         {
+            // to ensure "Street" is required (not null)
+            if (Street == null)
+            {
+                throw new InvalidDataException("Street is a required property for BillingAddress and cannot be null");
+            }
+            else
+            {
+                this.Street = Street;
+            }
+            // to ensure "City" is required (not null)
+            if (City == null)
+            {
+                throw new InvalidDataException("City is a required property for BillingAddress and cannot be null");
+            }
+            else
+            {
+                this.City = City;
+            }
+            // to ensure "CountryName" is required (not null)
+            if (CountryName == null)
+            {
+                throw new InvalidDataException("CountryName is a required property for BillingAddress and cannot be null");
+            }
+            else
+            {
+                this.CountryName = CountryName;
+            }
+            // to ensure "StateName" is required (not null)
+            if (StateName == null)
+            {
+                throw new InvalidDataException("StateName is a required property for BillingAddress and cannot be null");
+            }
+            else
+            {
+                this.StateName = StateName;
+            }
+            // to ensure "PostalCode" is required (not null)
+            if (PostalCode == null)
+            {
+                throw new InvalidDataException("PostalCode is a required property for BillingAddress and cannot be null");
+            }
+            else
+            {
+                this.PostalCode = PostalCode;
+            }
             this.Name = Name;
-            this.Street = Street;
-            this.City = City;
-            this.CountryName = CountryName;
-            this.StateName = StateName;
-            this.PostalCode = PostalCode;
         }
         
         /// <summary>
@@ -48,28 +93,33 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets Street
+        /// Street
         /// </summary>
+        /// <value>Street</value>
         [DataMember(Name="street", EmitDefaultValue=false)]
         public string Street { get; set; }
         /// <summary>
-        /// Gets or Sets City
+        /// City name
         /// </summary>
+        /// <value>City name</value>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
         /// <summary>
-        /// Gets or Sets CountryName
+        /// Country name
         /// </summary>
+        /// <value>Country name</value>
         [DataMember(Name="countryName", EmitDefaultValue=false)]
         public string CountryName { get; set; }
         /// <summary>
-        /// Gets or Sets StateName
+        /// State name
         /// </summary>
+        /// <value>State name</value>
         [DataMember(Name="stateName", EmitDefaultValue=false)]
         public string StateName { get; set; }
         /// <summary>
-        /// Gets or Sets PostalCode
+        /// Postal Code
         /// </summary>
+        /// <value>Postal Code</value>
         [DataMember(Name="postalCode", EmitDefaultValue=false)]
         public string PostalCode { get; set; }
         /// <summary>

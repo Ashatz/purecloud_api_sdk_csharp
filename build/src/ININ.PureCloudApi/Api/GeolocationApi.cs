@@ -63,9 +63,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation settings</param>
         /// <returns>GeolocationSettings</returns>
-        GeolocationSettings PatchSettings (GeolocationSettings body = null);
+        GeolocationSettings PatchSettings (GeolocationSettings body);
 
         /// <summary>
         /// Patch a organization&#39;s GeolocationSettings
@@ -74,9 +74,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation settings</param>
         /// <returns>ApiResponse of GeolocationSettings</returns>
-        ApiResponse<GeolocationSettings> PatchSettingsWithHttpInfo (GeolocationSettings body = null);
+        ApiResponse<GeolocationSettings> PatchSettingsWithHttpInfo (GeolocationSettings body);
         /// <summary>
         /// Patch a user&#39;s Geolocation
         /// </summary>
@@ -86,9 +86,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Geolocation</returns>
-        Geolocation PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body = null);
+        Geolocation PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body);
 
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -99,9 +99,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>ApiResponse of Geolocation</returns>
-        ApiResponse<Geolocation> PatchUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId, Geolocation body = null);
+        ApiResponse<Geolocation> PatchUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId, Geolocation body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -153,9 +153,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation settings</param>
         /// <returns>Task of GeolocationSettings</returns>
-        System.Threading.Tasks.Task<GeolocationSettings> PatchSettingsAsync (GeolocationSettings body = null);
+        System.Threading.Tasks.Task<GeolocationSettings> PatchSettingsAsync (GeolocationSettings body);
 
         /// <summary>
         /// Patch a organization&#39;s GeolocationSettings
@@ -164,9 +164,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation settings</param>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchSettingsAsyncWithHttpInfo (GeolocationSettings body = null);
+        System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchSettingsAsyncWithHttpInfo (GeolocationSettings body);
         /// <summary>
         /// Patch a user&#39;s Geolocation
         /// </summary>
@@ -176,9 +176,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Task of Geolocation</returns>
-        System.Threading.Tasks.Task<Geolocation> PatchUserIdGeolocationsClientIdAsync (string userId, string clientId, Geolocation body = null);
+        System.Threading.Tasks.Task<Geolocation> PatchUserIdGeolocationsClientIdAsync (string userId, string clientId, Geolocation body);
 
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -189,9 +189,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body);
         #endregion Asynchronous Operations
     }
 
@@ -592,9 +592,9 @@ namespace ININ.PureCloudApi.Api
         /// Patch a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation settings</param>
         /// <returns>GeolocationSettings</returns>
-        public GeolocationSettings PatchSettings (GeolocationSettings body = null)
+        public GeolocationSettings PatchSettings (GeolocationSettings body)
         {
              ApiResponse<GeolocationSettings> localVarResponse = PatchSettingsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -604,10 +604,13 @@ namespace ININ.PureCloudApi.Api
         /// Patch a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation settings</param>
         /// <returns>ApiResponse of GeolocationSettings</returns>
-        public ApiResponse< GeolocationSettings > PatchSettingsWithHttpInfo (GeolocationSettings body = null)
+        public ApiResponse< GeolocationSettings > PatchSettingsWithHttpInfo (GeolocationSettings body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchSettings");
 
             var localVarPath = "/api/v2/geolocations/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -672,9 +675,9 @@ namespace ININ.PureCloudApi.Api
         /// Patch a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation settings</param>
         /// <returns>Task of GeolocationSettings</returns>
-        public async System.Threading.Tasks.Task<GeolocationSettings> PatchSettingsAsync (GeolocationSettings body = null)
+        public async System.Threading.Tasks.Task<GeolocationSettings> PatchSettingsAsync (GeolocationSettings body)
         {
              ApiResponse<GeolocationSettings> localVarResponse = await PatchSettingsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -685,10 +688,13 @@ namespace ININ.PureCloudApi.Api
         /// Patch a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation settings</param>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchSettingsAsyncWithHttpInfo (GeolocationSettings body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchSettingsAsyncWithHttpInfo (GeolocationSettings body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchSettings");
 
             var localVarPath = "/api/v2/geolocations/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -755,9 +761,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Geolocation</returns>
-        public Geolocation PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body = null)
+        public Geolocation PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body)
         {
              ApiResponse<Geolocation> localVarResponse = PatchUserIdGeolocationsClientIdWithHttpInfo(userId, clientId, body);
              return localVarResponse.Data;
@@ -769,9 +775,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>ApiResponse of Geolocation</returns>
-        public ApiResponse< Geolocation > PatchUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId, Geolocation body = null)
+        public ApiResponse< Geolocation > PatchUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId, Geolocation body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -779,6 +785,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'clientId' is set
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->PatchUserIdGeolocationsClientId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchUserIdGeolocationsClientId");
 
             var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -847,9 +856,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Task of Geolocation</returns>
-        public async System.Threading.Tasks.Task<Geolocation> PatchUserIdGeolocationsClientIdAsync (string userId, string clientId, Geolocation body = null)
+        public async System.Threading.Tasks.Task<Geolocation> PatchUserIdGeolocationsClientIdAsync (string userId, string clientId, Geolocation body)
         {
              ApiResponse<Geolocation> localVarResponse = await PatchUserIdGeolocationsClientIdAsyncWithHttpInfo(userId, clientId, body);
              return localVarResponse.Data;
@@ -862,9 +871,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -872,6 +881,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'clientId' is set
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->PatchUserIdGeolocationsClientId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchUserIdGeolocationsClientId");
 
             var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();

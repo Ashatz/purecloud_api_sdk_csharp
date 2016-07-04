@@ -288,7 +288,7 @@ This endpoint does require any parameters.
 
 <a name="postchannelschannelidsubscriptions"></a>
 
-## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PostChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body = null)
+## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PostChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body)
 
 Add a list of subscriptions to the existing list of subscriptions
 
@@ -314,7 +314,7 @@ namespace Example
 
             var apiInstance = new NotificationsApi();
             var channelId = channelId_example;  // string | Channel ID
-            var body = new List<ChannelTopic>(); // List<ChannelTopic> | Topic (optional) 
+            var body = new List<ChannelTopic>(); // List<ChannelTopic> | Topic
 
             try
             {
@@ -337,7 +337,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **channelId** | **string**| Channel ID |  |
-| **body** | [**List<ChannelTopic>**](ChannelTopic.html)| Topic | [optional]  |
+| **body** | [**List<ChannelTopic>**](ChannelTopic.html)| Topic |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -346,7 +346,7 @@ namespace Example
 
 <a name="putchannelschannelidsubscriptions"></a>
 
-## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PutChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body = null)
+## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PutChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body)
 
 Replace the current list of subscriptions with a new list.
 
@@ -372,7 +372,7 @@ namespace Example
 
             var apiInstance = new NotificationsApi();
             var channelId = channelId_example;  // string | Channel ID
-            var body = new List<ChannelTopic>(); // List<ChannelTopic> | Topic (optional) 
+            var body = new List<ChannelTopic>(); // List<ChannelTopic> | Topic
 
             try
             {
@@ -395,7 +395,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **channelId** | **string**| Channel ID |  |
-| **body** | [**List<ChannelTopic>**](ChannelTopic.html)| Topic | [optional]  |
+| **body** | [**List<ChannelTopic>**](ChannelTopic.html)| Topic |  |
 {: class="table table-striped"}
 
 ### Return type

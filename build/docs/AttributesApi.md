@@ -186,7 +186,7 @@ namespace Example
 
 <a name="postattributes"></a>
 
-## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) PostAttributes (ININ.PureCloudApi.Model.Attribute body = null)
+## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) PostAttributes (ININ.PureCloudApi.Model.Attribute body)
 
 Create an attribute.
 
@@ -211,7 +211,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AttributesApi();
-            var body = new ININ.PureCloudApi.Model.Attribute(); // ININ.PureCloudApi.Model.Attribute | Attribute (optional) 
+            var body = new ININ.PureCloudApi.Model.Attribute(); // ININ.PureCloudApi.Model.Attribute | Attribute
 
             try
             {
@@ -233,7 +233,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ININ.PureCloudApi.Model.Attribute**](ININ.PureCloudApi.Model.Attribute.html)| Attribute | [optional]  |
+| **body** | [**ININ.PureCloudApi.Model.Attribute**](ININ.PureCloudApi.Model.Attribute.html)| Attribute |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -242,7 +242,7 @@ namespace Example
 
 <a name="postquery"></a>
 
-## [**AttributeEntityListing**](AttributeEntityListing.html) PostQuery (AttributeQueryRequest body = null)
+## [**AttributeEntityListing**](AttributeEntityListing.html) PostQuery (AttributeQueryRequest body)
 
 Query attributes
 
@@ -267,7 +267,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AttributesApi();
-            var body = new AttributeQueryRequest(); // AttributeQueryRequest | query (optional) 
+            var body = new AttributeQueryRequest(); // AttributeQueryRequest | query
 
             try
             {
@@ -289,7 +289,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AttributeQueryRequest**](AttributeQueryRequest.html)| query | [optional]  |
+| **body** | [**AttributeQueryRequest**](AttributeQueryRequest.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -298,7 +298,7 @@ namespace Example
 
 <a name="putattributeid"></a>
 
-## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) PutAttributeId (string attributeId, ININ.PureCloudApi.Model.Attribute body = null)
+## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) PutAttributeId (string attributeId, ININ.PureCloudApi.Model.Attribute body)
 
 Update an existing attribute.
 
@@ -324,7 +324,7 @@ namespace Example
 
             var apiInstance = new AttributesApi();
             var attributeId = attributeId_example;  // string | Attribute ID
-            var body = new ININ.PureCloudApi.Model.Attribute(); // ININ.PureCloudApi.Model.Attribute | Attribute (optional) 
+            var body = new ININ.PureCloudApi.Model.Attribute(); // ININ.PureCloudApi.Model.Attribute | Attribute
 
             try
             {
@@ -347,7 +347,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **attributeId** | **string**| Attribute ID |  |
-| **body** | [**ININ.PureCloudApi.Model.Attribute**](ININ.PureCloudApi.Model.Attribute.html)| Attribute | [optional]  |
+| **body** | [**ININ.PureCloudApi.Model.Attribute**](ININ.PureCloudApi.Model.Attribute.html)| Attribute |  |
 {: class="table table-striped"}
 
 ### Return type

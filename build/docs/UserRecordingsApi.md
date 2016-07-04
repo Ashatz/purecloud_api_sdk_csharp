@@ -299,7 +299,7 @@ namespace Example
 
 <a name="putrecordingid"></a>
 
-## [**UserRecording**](UserRecording.html) PutRecordingId (string recordingId, UserRecording body = null, string expand = null)
+## [**UserRecording**](UserRecording.html) PutRecordingId (string recordingId, UserRecording body, string expand = null)
 
 Update a user recording.
 
@@ -325,7 +325,7 @@ namespace Example
 
             var apiInstance = new UserRecordingsApi();
             var recordingId = recordingId_example;  // string | User Recording ID
-            var body = new UserRecording(); // UserRecording | UserRecording (optional) 
+            var body = new UserRecording(); // UserRecording | UserRecording
             var expand = expand_example;  // string | conversation (optional) 
 
             try
@@ -349,7 +349,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
-| **body** | [**UserRecording**](UserRecording.html)| UserRecording | [optional]  |
+| **body** | [**UserRecording**](UserRecording.html)| UserRecording |  |
 | **expand** | **string**| conversation | [optional]  |
 {: class="table table-striped"}
 

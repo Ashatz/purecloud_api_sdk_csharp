@@ -122,24 +122,24 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteUserIdStationDefaultstationWithHttpInfo (string userId);
         /// <summary>
-        /// Get user.
+        /// Get current user details.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This request is not valid when using the Client Credentials OAuth grant.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserMe</returns>
         UserMe GetMe (List<string> expand = null);
 
         /// <summary>
-        /// Get user.
+        /// Get current user details.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This request is not valid when using the Client Credentials OAuth grant.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserMe</returns>
         ApiResponse<UserMe> GetMeWithHttpInfo (List<string> expand = null);
         /// <summary>
@@ -378,14 +378,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="role">Role (optional)</param>
-        /// <param name="name">Name (optional)</param>
-        /// <param name="username">Username (optional)</param>
-        /// <param name="skill">Skill (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UsersEntityListing</returns>
-        UsersEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null);
+        UsersEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -397,14 +393,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="role">Role (optional)</param>
-        /// <param name="name">Name (optional)</param>
-        /// <param name="username">Username (optional)</param>
-        /// <param name="skill">Skill (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UsersEntityListing</returns>
-        ApiResponse<UsersEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null);
+        ApiResponse<UsersEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
         /// <summary>
         /// Update user
         /// </summary>
@@ -413,9 +405,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>User</returns>
-        User PatchUserId (string userId, User body = null);
+        User PatchUserId (string userId, User body);
 
         /// <summary>
         /// Update user
@@ -425,9 +417,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> PatchUserIdWithHttpInfo (string userId, User body = null);
+        ApiResponse<User> PatchUserIdWithHttpInfo (string userId, User body);
         /// <summary>
         /// Patch a user&#39;s CallForwarding
         /// </summary>
@@ -436,9 +428,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>CallForwarding</returns>
-        CallForwarding PatchUserIdCallforwarding (string userId, CallForwarding body = null);
+        CallForwarding PatchUserIdCallforwarding (string userId, CallForwarding body);
 
         /// <summary>
         /// Patch a user&#39;s CallForwarding
@@ -448,9 +440,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>ApiResponse of CallForwarding</returns>
-        ApiResponse<CallForwarding> PatchUserIdCallforwardingWithHttpInfo (string userId, CallForwarding body = null);
+        ApiResponse<CallForwarding> PatchUserIdCallforwardingWithHttpInfo (string userId, CallForwarding body);
         /// <summary>
         /// Patch a user&#39;s Geolocation
         /// </summary>
@@ -460,9 +452,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Geolocation</returns>
-        Geolocation PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body = null);
+        Geolocation PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body);
 
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -473,9 +465,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>ApiResponse of Geolocation</returns>
-        ApiResponse<Geolocation> PatchUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId, Geolocation body = null);
+        ApiResponse<Geolocation> PatchUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId, Geolocation body);
         /// <summary>
         /// Join or unjoin a set of queues for a user
         /// </summary>
@@ -484,9 +476,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">User Queues (optional)</param>
+        /// <param name="body">User Queues</param>
         /// <returns>UserQueue</returns>
-        UserQueue PatchUserIdQueues (string userId, List<UserQueue> body = null);
+        UserQueue PatchUserIdQueues (string userId, List<UserQueue> body);
 
         /// <summary>
         /// Join or unjoin a set of queues for a user
@@ -496,9 +488,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">User Queues (optional)</param>
+        /// <param name="body">User Queues</param>
         /// <returns>ApiResponse of UserQueue</returns>
-        ApiResponse<UserQueue> PatchUserIdQueuesWithHttpInfo (string userId, List<UserQueue> body = null);
+        ApiResponse<UserQueue> PatchUserIdQueuesWithHttpInfo (string userId, List<UserQueue> body);
         /// <summary>
         /// Join or unjoin a queue for a user
         /// </summary>
@@ -508,9 +500,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Queue Member (optional)</param>
+        /// <param name="body">Queue Member</param>
         /// <returns>UserQueue</returns>
-        UserQueue PatchUserIdQueuesQueueId (string queueId, string userId, UserQueue body = null);
+        UserQueue PatchUserIdQueuesQueueId (string queueId, string userId, UserQueue body);
 
         /// <summary>
         /// Join or unjoin a queue for a user
@@ -521,9 +513,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Queue Member (optional)</param>
+        /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of UserQueue</returns>
-        ApiResponse<UserQueue> PatchUserIdQueuesQueueIdWithHttpInfo (string queueId, string userId, UserQueue body = null);
+        ApiResponse<UserQueue> PatchUserIdQueuesQueueIdWithHttpInfo (string queueId, string userId, UserQueue body);
         /// <summary>
         /// Search
         /// </summary>
@@ -531,9 +523,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
-        UsersSearchResponse PostSearch (UserSearchRequest body = null);
+        UsersSearchResponse PostSearch (UserSearchRequest body);
 
         /// <summary>
         /// Search
@@ -542,9 +534,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
-        ApiResponse<UsersSearchResponse> PostSearchWithHttpInfo (UserSearchRequest body = null);
+        ApiResponse<UsersSearchResponse> PostSearchWithHttpInfo (UserSearchRequest body);
         /// <summary>
         /// Add routing skill to user
         /// </summary>
@@ -553,9 +545,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body = null);
+        UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body);
 
         /// <summary>
         /// Add routing skill to user
@@ -565,9 +557,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        ApiResponse<UserRoutingSkill> PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body = null);
+        ApiResponse<UserRoutingSkill> PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body);
         /// <summary>
         /// Create user
         /// </summary>
@@ -575,9 +567,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">User (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>User</returns>
-        User PostUsers (CreateUser body = null);
+        User PostUsers (CreateUser body);
 
         /// <summary>
         /// Create user
@@ -586,9 +578,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">User (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> PostUsersWithHttpInfo (CreateUser body = null);
+        ApiResponse<User> PostUsersWithHttpInfo (CreateUser body);
         /// <summary>
         /// Query for user aggregates
         /// </summary>
@@ -596,9 +588,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>PresenceQueryResponse</returns>
-        PresenceQueryResponse PostUsersAggregatesQuery (AggregationQuery body = null);
+        PresenceQueryResponse PostUsersAggregatesQuery (AggregationQuery body);
 
         /// <summary>
         /// Query for user aggregates
@@ -607,9 +599,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of PresenceQueryResponse</returns>
-        ApiResponse<PresenceQueryResponse> PostUsersAggregatesQueryWithHttpInfo (AggregationQuery body = null);
+        ApiResponse<PresenceQueryResponse> PostUsersAggregatesQueryWithHttpInfo (AggregationQuery body);
         /// <summary>
         /// Query for user observations
         /// </summary>
@@ -617,9 +609,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ObservationQueryResponse</returns>
-        ObservationQueryResponse PostUsersObservationsQuery (ObservationQuery body = null);
+        ObservationQueryResponse PostUsersObservationsQuery (ObservationQuery body);
 
         /// <summary>
         /// Query for user observations
@@ -628,9 +620,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of ObservationQueryResponse</returns>
-        ApiResponse<ObservationQueryResponse> PostUsersObservationsQueryWithHttpInfo (ObservationQuery body = null);
+        ApiResponse<ObservationQueryResponse> PostUsersObservationsQueryWithHttpInfo (ObservationQuery body);
         /// <summary>
         /// Update a user&#39;s CallForwarding
         /// </summary>
@@ -639,9 +631,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>CallForwarding</returns>
-        CallForwarding PutUserIdCallforwarding (string userId, CallForwarding body = null);
+        CallForwarding PutUserIdCallforwarding (string userId, CallForwarding body);
 
         /// <summary>
         /// Update a user&#39;s CallForwarding
@@ -651,9 +643,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>ApiResponse of CallForwarding</returns>
-        ApiResponse<CallForwarding> PutUserIdCallforwardingWithHttpInfo (string userId, CallForwarding body = null);
+        ApiResponse<CallForwarding> PutUserIdCallforwardingWithHttpInfo (string userId, CallForwarding body);
         /// <summary>
         /// Update an OutOfOffice
         /// </summary>
@@ -685,9 +677,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
-        UserAuthorization PutUserIdRoles (string userId, List<string> body = null);
+        UserAuthorization PutUserIdRoles (string userId, List<string> body);
 
         /// <summary>
         /// Sets the user&#39;s roles
@@ -697,9 +689,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
-        ApiResponse<UserAuthorization> PutUserIdRolesWithHttpInfo (string userId, List<string> body = null);
+        ApiResponse<UserAuthorization> PutUserIdRolesWithHttpInfo (string userId, List<string> body);
         /// <summary>
         /// Update routing skill proficiency or state.
         /// </summary>
@@ -709,9 +701,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId"></param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body = null);
+        UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
         /// Update routing skill proficiency or state.
@@ -722,9 +714,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId"></param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        ApiResponse<UserRoutingSkill> PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body = null);
+        ApiResponse<UserRoutingSkill> PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
         /// <summary>
         /// Update the routing status of a user
         /// </summary>
@@ -733,9 +725,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Routing Status (optional)</param>
+        /// <param name="body">Routing Status</param>
         /// <returns>RoutingStatus</returns>
-        RoutingStatus PutUserIdRoutingstatus (string userId, RoutingStatus body = null);
+        RoutingStatus PutUserIdRoutingstatus (string userId, RoutingStatus body);
 
         /// <summary>
         /// Update the routing status of a user
@@ -745,9 +737,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Routing Status (optional)</param>
+        /// <param name="body">Routing Status</param>
         /// <returns>ApiResponse of RoutingStatus</returns>
-        ApiResponse<RoutingStatus> PutUserIdRoutingstatusWithHttpInfo (string userId, RoutingStatus body = null);
+        ApiResponse<RoutingStatus> PutUserIdRoutingstatusWithHttpInfo (string userId, RoutingStatus body);
         /// <summary>
         /// Set associated station
         /// </summary>
@@ -904,24 +896,24 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserIdStationDefaultstationAsyncWithHttpInfo (string userId);
         /// <summary>
-        /// Get user.
+        /// Get current user details.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This request is not valid when using the Client Credentials OAuth grant.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserMe</returns>
         System.Threading.Tasks.Task<UserMe> GetMeAsync (List<string> expand = null);
 
         /// <summary>
-        /// Get user.
+        /// Get current user details.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This request is not valid when using the Client Credentials OAuth grant.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserMe)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserMe>> GetMeAsyncWithHttpInfo (List<string> expand = null);
         /// <summary>
@@ -1160,14 +1152,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="role">Role (optional)</param>
-        /// <param name="name">Name (optional)</param>
-        /// <param name="username">Username (optional)</param>
-        /// <param name="skill">Skill (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UsersEntityListing</returns>
-        System.Threading.Tasks.Task<UsersEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null);
+        System.Threading.Tasks.Task<UsersEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -1179,14 +1167,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="role">Role (optional)</param>
-        /// <param name="name">Name (optional)</param>
-        /// <param name="username">Username (optional)</param>
-        /// <param name="skill">Skill (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UsersEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UsersEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
         /// <summary>
         /// Update user
         /// </summary>
@@ -1195,9 +1179,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> PatchUserIdAsync (string userId, User body = null);
+        System.Threading.Tasks.Task<User> PatchUserIdAsync (string userId, User body);
 
         /// <summary>
         /// Update user
@@ -1207,9 +1191,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> PatchUserIdAsyncWithHttpInfo (string userId, User body = null);
+        System.Threading.Tasks.Task<ApiResponse<User>> PatchUserIdAsyncWithHttpInfo (string userId, User body);
         /// <summary>
         /// Patch a user&#39;s CallForwarding
         /// </summary>
@@ -1218,9 +1202,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>Task of CallForwarding</returns>
-        System.Threading.Tasks.Task<CallForwarding> PatchUserIdCallforwardingAsync (string userId, CallForwarding body = null);
+        System.Threading.Tasks.Task<CallForwarding> PatchUserIdCallforwardingAsync (string userId, CallForwarding body);
 
         /// <summary>
         /// Patch a user&#39;s CallForwarding
@@ -1230,9 +1214,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PatchUserIdCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body = null);
+        System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PatchUserIdCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body);
         /// <summary>
         /// Patch a user&#39;s Geolocation
         /// </summary>
@@ -1242,9 +1226,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Task of Geolocation</returns>
-        System.Threading.Tasks.Task<Geolocation> PatchUserIdGeolocationsClientIdAsync (string userId, string clientId, Geolocation body = null);
+        System.Threading.Tasks.Task<Geolocation> PatchUserIdGeolocationsClientIdAsync (string userId, string clientId, Geolocation body);
 
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -1255,9 +1239,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body);
         /// <summary>
         /// Join or unjoin a set of queues for a user
         /// </summary>
@@ -1266,9 +1250,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">User Queues (optional)</param>
+        /// <param name="body">User Queues</param>
         /// <returns>Task of UserQueue</returns>
-        System.Threading.Tasks.Task<UserQueue> PatchUserIdQueuesAsync (string userId, List<UserQueue> body = null);
+        System.Threading.Tasks.Task<UserQueue> PatchUserIdQueuesAsync (string userId, List<UserQueue> body);
 
         /// <summary>
         /// Join or unjoin a set of queues for a user
@@ -1278,9 +1262,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">User Queues (optional)</param>
+        /// <param name="body">User Queues</param>
         /// <returns>Task of ApiResponse (UserQueue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserIdQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body = null);
+        System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserIdQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body);
         /// <summary>
         /// Join or unjoin a queue for a user
         /// </summary>
@@ -1290,9 +1274,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Queue Member (optional)</param>
+        /// <param name="body">Queue Member</param>
         /// <returns>Task of UserQueue</returns>
-        System.Threading.Tasks.Task<UserQueue> PatchUserIdQueuesQueueIdAsync (string queueId, string userId, UserQueue body = null);
+        System.Threading.Tasks.Task<UserQueue> PatchUserIdQueuesQueueIdAsync (string queueId, string userId, UserQueue body);
 
         /// <summary>
         /// Join or unjoin a queue for a user
@@ -1303,9 +1287,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Queue Member (optional)</param>
+        /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse (UserQueue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserIdQueuesQueueIdAsyncWithHttpInfo (string queueId, string userId, UserQueue body = null);
+        System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserIdQueuesQueueIdAsyncWithHttpInfo (string queueId, string userId, UserQueue body);
         /// <summary>
         /// Search
         /// </summary>
@@ -1313,9 +1297,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
-        System.Threading.Tasks.Task<UsersSearchResponse> PostSearchAsync (UserSearchRequest body = null);
+        System.Threading.Tasks.Task<UsersSearchResponse> PostSearchAsync (UserSearchRequest body);
 
         /// <summary>
         /// Search
@@ -1324,9 +1308,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostSearchAsyncWithHttpInfo (UserSearchRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostSearchAsyncWithHttpInfo (UserSearchRequest body);
         /// <summary>
         /// Add routing skill to user
         /// </summary>
@@ -1335,9 +1319,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body = null);
+        System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body);
 
         /// <summary>
         /// Add routing skill to user
@@ -1347,9 +1331,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body = null);
+        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body);
         /// <summary>
         /// Create user
         /// </summary>
@@ -1357,9 +1341,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">User (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> PostUsersAsync (CreateUser body = null);
+        System.Threading.Tasks.Task<User> PostUsersAsync (CreateUser body);
 
         /// <summary>
         /// Create user
@@ -1368,9 +1352,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">User (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> PostUsersAsyncWithHttpInfo (CreateUser body = null);
+        System.Threading.Tasks.Task<ApiResponse<User>> PostUsersAsyncWithHttpInfo (CreateUser body);
         /// <summary>
         /// Query for user aggregates
         /// </summary>
@@ -1378,9 +1362,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of PresenceQueryResponse</returns>
-        System.Threading.Tasks.Task<PresenceQueryResponse> PostUsersAggregatesQueryAsync (AggregationQuery body = null);
+        System.Threading.Tasks.Task<PresenceQueryResponse> PostUsersAggregatesQueryAsync (AggregationQuery body);
 
         /// <summary>
         /// Query for user aggregates
@@ -1389,9 +1373,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (PresenceQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
         /// <summary>
         /// Query for user observations
         /// </summary>
@@ -1399,9 +1383,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ObservationQueryResponse</returns>
-        System.Threading.Tasks.Task<ObservationQueryResponse> PostUsersObservationsQueryAsync (ObservationQuery body = null);
+        System.Threading.Tasks.Task<ObservationQueryResponse> PostUsersObservationsQueryAsync (ObservationQuery body);
 
         /// <summary>
         /// Query for user observations
@@ -1410,9 +1394,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostUsersObservationsQueryAsyncWithHttpInfo (ObservationQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostUsersObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
         /// <summary>
         /// Update a user&#39;s CallForwarding
         /// </summary>
@@ -1421,9 +1405,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>Task of CallForwarding</returns>
-        System.Threading.Tasks.Task<CallForwarding> PutUserIdCallforwardingAsync (string userId, CallForwarding body = null);
+        System.Threading.Tasks.Task<CallForwarding> PutUserIdCallforwardingAsync (string userId, CallForwarding body);
 
         /// <summary>
         /// Update a user&#39;s CallForwarding
@@ -1433,9 +1417,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PutUserIdCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body = null);
+        System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PutUserIdCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body);
         /// <summary>
         /// Update an OutOfOffice
         /// </summary>
@@ -1467,9 +1451,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
-        System.Threading.Tasks.Task<UserAuthorization> PutUserIdRolesAsync (string userId, List<string> body = null);
+        System.Threading.Tasks.Task<UserAuthorization> PutUserIdRolesAsync (string userId, List<string> body);
 
         /// <summary>
         /// Sets the user&#39;s roles
@@ -1479,9 +1463,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserIdRolesAsyncWithHttpInfo (string userId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserIdRolesAsyncWithHttpInfo (string userId, List<string> body);
         /// <summary>
         /// Update routing skill proficiency or state.
         /// </summary>
@@ -1491,9 +1475,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId"></param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body = null);
+        System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
         /// Update routing skill proficiency or state.
@@ -1504,9 +1488,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId"></param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body = null);
+        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
         /// <summary>
         /// Update the routing status of a user
         /// </summary>
@@ -1515,9 +1499,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Routing Status (optional)</param>
+        /// <param name="body">Routing Status</param>
         /// <returns>Task of RoutingStatus</returns>
-        System.Threading.Tasks.Task<RoutingStatus> PutUserIdRoutingstatusAsync (string userId, RoutingStatus body = null);
+        System.Threading.Tasks.Task<RoutingStatus> PutUserIdRoutingstatusAsync (string userId, RoutingStatus body);
 
         /// <summary>
         /// Update the routing status of a user
@@ -1527,9 +1511,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Routing Status (optional)</param>
+        /// <param name="body">Routing Status</param>
         /// <returns>Task of ApiResponse (RoutingStatus)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoutingStatus>> PutUserIdRoutingstatusAsyncWithHttpInfo (string userId, RoutingStatus body = null);
+        System.Threading.Tasks.Task<ApiResponse<RoutingStatus>> PutUserIdRoutingstatusAsyncWithHttpInfo (string userId, RoutingStatus body);
         /// <summary>
         /// Set associated station
         /// </summary>
@@ -2438,10 +2422,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get user. 
+        /// Get current user details. This request is not valid when using the Client Credentials OAuth grant.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserMe</returns>
         public UserMe GetMe (List<string> expand = null)
         {
@@ -2450,10 +2434,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get user. 
+        /// Get current user details. This request is not valid when using the Client Credentials OAuth grant.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserMe</returns>
         public ApiResponse< UserMe > GetMeWithHttpInfo (List<string> expand = null)
         {
@@ -2511,10 +2495,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get user. 
+        /// Get current user details. This request is not valid when using the Client Credentials OAuth grant.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserMe</returns>
         public async System.Threading.Tasks.Task<UserMe> GetMeAsync (List<string> expand = null)
         {
@@ -2524,10 +2508,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get user. 
+        /// Get current user details. This request is not valid when using the Client Credentials OAuth grant.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserMe)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserMe>> GetMeAsyncWithHttpInfo (List<string> expand = null)
         {
@@ -4175,16 +4159,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="role">Role (optional)</param>
-        /// <param name="name">Name (optional)</param>
-        /// <param name="username">Username (optional)</param>
-        /// <param name="skill">Skill (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UsersEntityListing</returns>
-        public UsersEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null)
+        public UsersEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<UsersEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, sortBy, role, name, username, skill, expand);
+             ApiResponse<UsersEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand);
              return localVarResponse.Data;
         }
 
@@ -4195,14 +4175,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="role">Role (optional)</param>
-        /// <param name="name">Name (optional)</param>
-        /// <param name="username">Username (optional)</param>
-        /// <param name="skill">Skill (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UsersEntityListing</returns>
-        public ApiResponse< UsersEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null)
+        public ApiResponse< UsersEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/users";
@@ -4233,11 +4209,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (role != null) localVarQueryParams.Add("role", Configuration.ApiClient.ParameterToString(role)); // query parameter
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            if (username != null) localVarQueryParams.Add("username", Configuration.ApiClient.ParameterToString(username)); // query parameter
-            if (skill != null) localVarQueryParams.Add("skill", Configuration.ApiClient.ParameterToString(skill)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
@@ -4272,16 +4244,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="role">Role (optional)</param>
-        /// <param name="name">Name (optional)</param>
-        /// <param name="username">Username (optional)</param>
-        /// <param name="skill">Skill (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UsersEntityListing</returns>
-        public async System.Threading.Tasks.Task<UsersEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<UsersEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<UsersEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, sortBy, role, name, username, skill, expand);
+             ApiResponse<UsersEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand);
              return localVarResponse.Data;
 
         }
@@ -4293,14 +4261,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="role">Role (optional)</param>
-        /// <param name="name">Name (optional)</param>
-        /// <param name="username">Username (optional)</param>
-        /// <param name="skill">Skill (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UsersEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsersEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortBy = null, string role = null, string name = null, string username = null, List<string> skill = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UsersEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/users";
@@ -4331,11 +4295,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (role != null) localVarQueryParams.Add("role", Configuration.ApiClient.ParameterToString(role)); // query parameter
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            if (username != null) localVarQueryParams.Add("username", Configuration.ApiClient.ParameterToString(username)); // query parameter
-            if (skill != null) localVarQueryParams.Add("skill", Configuration.ApiClient.ParameterToString(skill)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
@@ -4368,9 +4328,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>User</returns>
-        public User PatchUserId (string userId, User body = null)
+        public User PatchUserId (string userId, User body)
         {
              ApiResponse<User> localVarResponse = PatchUserIdWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -4381,13 +4341,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>ApiResponse of User</returns>
-        public ApiResponse< User > PatchUserIdWithHttpInfo (string userId, User body = null)
+        public ApiResponse< User > PatchUserIdWithHttpInfo (string userId, User body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserId");
 
             var localVarPath = "/api/v2/users/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4454,9 +4417,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> PatchUserIdAsync (string userId, User body = null)
+        public async System.Threading.Tasks.Task<User> PatchUserIdAsync (string userId, User body)
         {
              ApiResponse<User> localVarResponse = await PatchUserIdAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -4468,13 +4431,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<User>> PatchUserIdAsyncWithHttpInfo (string userId, User body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> PatchUserIdAsyncWithHttpInfo (string userId, User body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserId");
 
             var localVarPath = "/api/v2/users/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4541,9 +4507,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>CallForwarding</returns>
-        public CallForwarding PatchUserIdCallforwarding (string userId, CallForwarding body = null)
+        public CallForwarding PatchUserIdCallforwarding (string userId, CallForwarding body)
         {
              ApiResponse<CallForwarding> localVarResponse = PatchUserIdCallforwardingWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -4554,13 +4520,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>ApiResponse of CallForwarding</returns>
-        public ApiResponse< CallForwarding > PatchUserIdCallforwardingWithHttpInfo (string userId, CallForwarding body = null)
+        public ApiResponse< CallForwarding > PatchUserIdCallforwardingWithHttpInfo (string userId, CallForwarding body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserIdCallforwarding");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserIdCallforwarding");
 
             var localVarPath = "/api/v2/users/{userId}/callforwarding";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4627,9 +4596,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>Task of CallForwarding</returns>
-        public async System.Threading.Tasks.Task<CallForwarding> PatchUserIdCallforwardingAsync (string userId, CallForwarding body = null)
+        public async System.Threading.Tasks.Task<CallForwarding> PatchUserIdCallforwardingAsync (string userId, CallForwarding body)
         {
              ApiResponse<CallForwarding> localVarResponse = await PatchUserIdCallforwardingAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -4641,13 +4610,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PatchUserIdCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PatchUserIdCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserIdCallforwarding");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserIdCallforwarding");
 
             var localVarPath = "/api/v2/users/{userId}/callforwarding";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4715,9 +4687,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Geolocation</returns>
-        public Geolocation PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body = null)
+        public Geolocation PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body)
         {
              ApiResponse<Geolocation> localVarResponse = PatchUserIdGeolocationsClientIdWithHttpInfo(userId, clientId, body);
              return localVarResponse.Data;
@@ -4729,9 +4701,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>ApiResponse of Geolocation</returns>
-        public ApiResponse< Geolocation > PatchUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId, Geolocation body = null)
+        public ApiResponse< Geolocation > PatchUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId, Geolocation body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -4739,6 +4711,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'clientId' is set
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling UsersApi->PatchUserIdGeolocationsClientId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserIdGeolocationsClientId");
 
             var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4807,9 +4782,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Task of Geolocation</returns>
-        public async System.Threading.Tasks.Task<Geolocation> PatchUserIdGeolocationsClientIdAsync (string userId, string clientId, Geolocation body = null)
+        public async System.Threading.Tasks.Task<Geolocation> PatchUserIdGeolocationsClientIdAsync (string userId, string clientId, Geolocation body)
         {
              ApiResponse<Geolocation> localVarResponse = await PatchUserIdGeolocationsClientIdAsyncWithHttpInfo(userId, clientId, body);
              return localVarResponse.Data;
@@ -4822,9 +4797,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Geolocation</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -4832,6 +4807,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'clientId' is set
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling UsersApi->PatchUserIdGeolocationsClientId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserIdGeolocationsClientId");
 
             var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4899,9 +4877,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">User Queues (optional)</param>
+        /// <param name="body">User Queues</param>
         /// <returns>UserQueue</returns>
-        public UserQueue PatchUserIdQueues (string userId, List<UserQueue> body = null)
+        public UserQueue PatchUserIdQueues (string userId, List<UserQueue> body)
         {
              ApiResponse<UserQueue> localVarResponse = PatchUserIdQueuesWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -4912,13 +4890,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">User Queues (optional)</param>
+        /// <param name="body">User Queues</param>
         /// <returns>ApiResponse of UserQueue</returns>
-        public ApiResponse< UserQueue > PatchUserIdQueuesWithHttpInfo (string userId, List<UserQueue> body = null)
+        public ApiResponse< UserQueue > PatchUserIdQueuesWithHttpInfo (string userId, List<UserQueue> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserIdQueues");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserIdQueues");
 
             var localVarPath = "/api/v2/users/{userId}/queues";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4985,9 +4966,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">User Queues (optional)</param>
+        /// <param name="body">User Queues</param>
         /// <returns>Task of UserQueue</returns>
-        public async System.Threading.Tasks.Task<UserQueue> PatchUserIdQueuesAsync (string userId, List<UserQueue> body = null)
+        public async System.Threading.Tasks.Task<UserQueue> PatchUserIdQueuesAsync (string userId, List<UserQueue> body)
         {
              ApiResponse<UserQueue> localVarResponse = await PatchUserIdQueuesAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -4999,13 +4980,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">User Queues (optional)</param>
+        /// <param name="body">User Queues</param>
         /// <returns>Task of ApiResponse (UserQueue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserIdQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserIdQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserIdQueues");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserIdQueues");
 
             var localVarPath = "/api/v2/users/{userId}/queues";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5073,9 +5057,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Queue Member (optional)</param>
+        /// <param name="body">Queue Member</param>
         /// <returns>UserQueue</returns>
-        public UserQueue PatchUserIdQueuesQueueId (string queueId, string userId, UserQueue body = null)
+        public UserQueue PatchUserIdQueuesQueueId (string queueId, string userId, UserQueue body)
         {
              ApiResponse<UserQueue> localVarResponse = PatchUserIdQueuesQueueIdWithHttpInfo(queueId, userId, body);
              return localVarResponse.Data;
@@ -5087,9 +5071,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Queue Member (optional)</param>
+        /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of UserQueue</returns>
-        public ApiResponse< UserQueue > PatchUserIdQueuesQueueIdWithHttpInfo (string queueId, string userId, UserQueue body = null)
+        public ApiResponse< UserQueue > PatchUserIdQueuesQueueIdWithHttpInfo (string queueId, string userId, UserQueue body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -5097,6 +5081,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserIdQueuesQueueId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserIdQueuesQueueId");
 
             var localVarPath = "/api/v2/users/{userId}/queues/{queueId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5165,9 +5152,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Queue Member (optional)</param>
+        /// <param name="body">Queue Member</param>
         /// <returns>Task of UserQueue</returns>
-        public async System.Threading.Tasks.Task<UserQueue> PatchUserIdQueuesQueueIdAsync (string queueId, string userId, UserQueue body = null)
+        public async System.Threading.Tasks.Task<UserQueue> PatchUserIdQueuesQueueIdAsync (string queueId, string userId, UserQueue body)
         {
              ApiResponse<UserQueue> localVarResponse = await PatchUserIdQueuesQueueIdAsyncWithHttpInfo(queueId, userId, body);
              return localVarResponse.Data;
@@ -5180,9 +5167,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Queue Member (optional)</param>
+        /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse (UserQueue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserIdQueuesQueueIdAsyncWithHttpInfo (string queueId, string userId, UserQueue body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserIdQueuesQueueIdAsyncWithHttpInfo (string queueId, string userId, UserQueue body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -5190,6 +5177,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserIdQueuesQueueId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserIdQueuesQueueId");
 
             var localVarPath = "/api/v2/users/{userId}/queues/{queueId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5256,9 +5246,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
-        public UsersSearchResponse PostSearch (UserSearchRequest body = null)
+        public UsersSearchResponse PostSearch (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = PostSearchWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5268,10 +5258,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
-        public ApiResponse< UsersSearchResponse > PostSearchWithHttpInfo (UserSearchRequest body = null)
+        public ApiResponse< UsersSearchResponse > PostSearchWithHttpInfo (UserSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostSearch");
 
             var localVarPath = "/api/v2/users/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5336,9 +5329,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
-        public async System.Threading.Tasks.Task<UsersSearchResponse> PostSearchAsync (UserSearchRequest body = null)
+        public async System.Threading.Tasks.Task<UsersSearchResponse> PostSearchAsync (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = await PostSearchAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5349,10 +5342,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostSearchAsyncWithHttpInfo (UserSearchRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostSearchAsyncWithHttpInfo (UserSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostSearch");
 
             var localVarPath = "/api/v2/users/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5418,9 +5414,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        public UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body = null)
+        public UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = PostUserIdRoutingskillsWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -5431,13 +5427,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        public ApiResponse< UserRoutingSkill > PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body = null)
+        public ApiResponse< UserRoutingSkill > PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PostUserIdRoutingskills");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserIdRoutingskills");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5504,9 +5503,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body = null)
+        public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = await PostUserIdRoutingskillsAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -5518,13 +5517,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PostUserIdRoutingskills");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserIdRoutingskills");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5590,9 +5592,9 @@ namespace ININ.PureCloudApi.Api
         /// Create user 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">User (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>User</returns>
-        public User PostUsers (CreateUser body = null)
+        public User PostUsers (CreateUser body)
         {
              ApiResponse<User> localVarResponse = PostUsersWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5602,10 +5604,13 @@ namespace ININ.PureCloudApi.Api
         /// Create user 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">User (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>ApiResponse of User</returns>
-        public ApiResponse< User > PostUsersWithHttpInfo (CreateUser body = null)
+        public ApiResponse< User > PostUsersWithHttpInfo (CreateUser body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsers");
 
             var localVarPath = "/api/v2/users";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5670,9 +5675,9 @@ namespace ININ.PureCloudApi.Api
         /// Create user 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">User (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> PostUsersAsync (CreateUser body = null)
+        public async System.Threading.Tasks.Task<User> PostUsersAsync (CreateUser body)
         {
              ApiResponse<User> localVarResponse = await PostUsersAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5683,10 +5688,13 @@ namespace ININ.PureCloudApi.Api
         /// Create user 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">User (optional)</param>
+        /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<User>> PostUsersAsyncWithHttpInfo (CreateUser body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> PostUsersAsyncWithHttpInfo (CreateUser body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsers");
 
             var localVarPath = "/api/v2/users";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5751,9 +5759,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for user aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>PresenceQueryResponse</returns>
-        public PresenceQueryResponse PostUsersAggregatesQuery (AggregationQuery body = null)
+        public PresenceQueryResponse PostUsersAggregatesQuery (AggregationQuery body)
         {
              ApiResponse<PresenceQueryResponse> localVarResponse = PostUsersAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5763,10 +5771,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for user aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of PresenceQueryResponse</returns>
-        public ApiResponse< PresenceQueryResponse > PostUsersAggregatesQueryWithHttpInfo (AggregationQuery body = null)
+        public ApiResponse< PresenceQueryResponse > PostUsersAggregatesQueryWithHttpInfo (AggregationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersAggregatesQuery");
 
             var localVarPath = "/api/v2/analytics/users/aggregates/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5831,9 +5842,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for user aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of PresenceQueryResponse</returns>
-        public async System.Threading.Tasks.Task<PresenceQueryResponse> PostUsersAggregatesQueryAsync (AggregationQuery body = null)
+        public async System.Threading.Tasks.Task<PresenceQueryResponse> PostUsersAggregatesQueryAsync (AggregationQuery body)
         {
              ApiResponse<PresenceQueryResponse> localVarResponse = await PostUsersAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5844,10 +5855,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for user aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (PresenceQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersAggregatesQuery");
 
             var localVarPath = "/api/v2/analytics/users/aggregates/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5912,9 +5926,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for user observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ObservationQueryResponse</returns>
-        public ObservationQueryResponse PostUsersObservationsQuery (ObservationQuery body = null)
+        public ObservationQueryResponse PostUsersObservationsQuery (ObservationQuery body)
         {
              ApiResponse<ObservationQueryResponse> localVarResponse = PostUsersObservationsQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5924,10 +5938,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for user observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of ObservationQueryResponse</returns>
-        public ApiResponse< ObservationQueryResponse > PostUsersObservationsQueryWithHttpInfo (ObservationQuery body = null)
+        public ApiResponse< ObservationQueryResponse > PostUsersObservationsQueryWithHttpInfo (ObservationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersObservationsQuery");
 
             var localVarPath = "/api/v2/analytics/users/observations/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5992,9 +6009,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for user observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ObservationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<ObservationQueryResponse> PostUsersObservationsQueryAsync (ObservationQuery body = null)
+        public async System.Threading.Tasks.Task<ObservationQueryResponse> PostUsersObservationsQueryAsync (ObservationQuery body)
         {
              ApiResponse<ObservationQueryResponse> localVarResponse = await PostUsersObservationsQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6005,10 +6022,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for user observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostUsersObservationsQueryAsyncWithHttpInfo (ObservationQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostUsersObservationsQueryAsyncWithHttpInfo (ObservationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersObservationsQuery");
 
             var localVarPath = "/api/v2/analytics/users/observations/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6074,9 +6094,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>CallForwarding</returns>
-        public CallForwarding PutUserIdCallforwarding (string userId, CallForwarding body = null)
+        public CallForwarding PutUserIdCallforwarding (string userId, CallForwarding body)
         {
              ApiResponse<CallForwarding> localVarResponse = PutUserIdCallforwardingWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -6087,13 +6107,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>ApiResponse of CallForwarding</returns>
-        public ApiResponse< CallForwarding > PutUserIdCallforwardingWithHttpInfo (string userId, CallForwarding body = null)
+        public ApiResponse< CallForwarding > PutUserIdCallforwardingWithHttpInfo (string userId, CallForwarding body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutUserIdCallforwarding");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserIdCallforwarding");
 
             var localVarPath = "/api/v2/users/{userId}/callforwarding";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6160,9 +6183,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>Task of CallForwarding</returns>
-        public async System.Threading.Tasks.Task<CallForwarding> PutUserIdCallforwardingAsync (string userId, CallForwarding body = null)
+        public async System.Threading.Tasks.Task<CallForwarding> PutUserIdCallforwardingAsync (string userId, CallForwarding body)
         {
              ApiResponse<CallForwarding> localVarResponse = await PutUserIdCallforwardingAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -6174,13 +6197,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Call forwarding</param>
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PutUserIdCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PutUserIdCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutUserIdCallforwarding");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserIdCallforwarding");
 
             var localVarPath = "/api/v2/users/{userId}/callforwarding";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6426,9 +6452,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
-        public UserAuthorization PutUserIdRoles (string userId, List<string> body = null)
+        public UserAuthorization PutUserIdRoles (string userId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = PutUserIdRolesWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -6439,13 +6465,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
-        public ApiResponse< UserAuthorization > PutUserIdRolesWithHttpInfo (string userId, List<string> body = null)
+        public ApiResponse< UserAuthorization > PutUserIdRolesWithHttpInfo (string userId, List<string> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutUserIdRoles");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserIdRoles");
 
             var localVarPath = "/api/v2/users/{userId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6512,9 +6541,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
-        public async System.Threading.Tasks.Task<UserAuthorization> PutUserIdRolesAsync (string userId, List<string> body = null)
+        public async System.Threading.Tasks.Task<UserAuthorization> PutUserIdRolesAsync (string userId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = await PutUserIdRolesAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -6526,13 +6555,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserIdRolesAsyncWithHttpInfo (string userId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserIdRolesAsyncWithHttpInfo (string userId, List<string> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutUserIdRoles");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserIdRoles");
 
             var localVarPath = "/api/v2/users/{userId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6600,9 +6632,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId"></param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        public UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body = null)
+        public UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = PutUserIdRoutingskillsSkillIdWithHttpInfo(userId, skillId, body);
              return localVarResponse.Data;
@@ -6614,9 +6646,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId"></param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        public ApiResponse< UserRoutingSkill > PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body = null)
+        public ApiResponse< UserRoutingSkill > PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -6624,6 +6656,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'skillId' is set
             if (skillId == null)
                 throw new ApiException(400, "Missing required parameter 'skillId' when calling UsersApi->PutUserIdRoutingskillsSkillId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserIdRoutingskillsSkillId");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6692,9 +6727,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId"></param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        public async System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body = null)
+        public async System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = await PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo(userId, skillId, body);
              return localVarResponse.Data;
@@ -6707,9 +6742,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId"></param>
-        /// <param name="body">Skill (optional)</param>
+        /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -6717,6 +6752,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'skillId' is set
             if (skillId == null)
                 throw new ApiException(400, "Missing required parameter 'skillId' when calling UsersApi->PutUserIdRoutingskillsSkillId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserIdRoutingskillsSkillId");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6784,9 +6822,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Routing Status (optional)</param>
+        /// <param name="body">Routing Status</param>
         /// <returns>RoutingStatus</returns>
-        public RoutingStatus PutUserIdRoutingstatus (string userId, RoutingStatus body = null)
+        public RoutingStatus PutUserIdRoutingstatus (string userId, RoutingStatus body)
         {
              ApiResponse<RoutingStatus> localVarResponse = PutUserIdRoutingstatusWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -6797,13 +6835,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Routing Status (optional)</param>
+        /// <param name="body">Routing Status</param>
         /// <returns>ApiResponse of RoutingStatus</returns>
-        public ApiResponse< RoutingStatus > PutUserIdRoutingstatusWithHttpInfo (string userId, RoutingStatus body = null)
+        public ApiResponse< RoutingStatus > PutUserIdRoutingstatusWithHttpInfo (string userId, RoutingStatus body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutUserIdRoutingstatus");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserIdRoutingstatus");
 
             var localVarPath = "/api/v2/users/{userId}/routingstatus";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6870,9 +6911,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Routing Status (optional)</param>
+        /// <param name="body">Routing Status</param>
         /// <returns>Task of RoutingStatus</returns>
-        public async System.Threading.Tasks.Task<RoutingStatus> PutUserIdRoutingstatusAsync (string userId, RoutingStatus body = null)
+        public async System.Threading.Tasks.Task<RoutingStatus> PutUserIdRoutingstatusAsync (string userId, RoutingStatus body)
         {
              ApiResponse<RoutingStatus> localVarResponse = await PutUserIdRoutingstatusAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -6884,13 +6925,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">Routing Status (optional)</param>
+        /// <param name="body">Routing Status</param>
         /// <returns>Task of ApiResponse (RoutingStatus)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RoutingStatus>> PutUserIdRoutingstatusAsyncWithHttpInfo (string userId, RoutingStatus body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RoutingStatus>> PutUserIdRoutingstatusAsyncWithHttpInfo (string userId, RoutingStatus body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutUserIdRoutingstatus");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserIdRoutingstatus");
 
             var localVarPath = "/api/v2/users/{userId}/routingstatus";
             var localVarPathParams = new Dictionary<String, String>();

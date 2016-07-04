@@ -9,9 +9,9 @@ title: PaymentMethod
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Type** | **string** |  | [optional] |
-| **ProviderName** | **string** |  | [optional] |
-| **Token** | **string** |  | [optional] |
+| **Type** | **string** | Method type | |
+| **ProviderName** | **string** | Provider name | |
+| **Token** | **string** | Payment token | |
 | **CardExpirationDate** | **string** | for payment methods of type CARD_TOKEN, the card&#39;s expiration date in the format YYYY-MM. | [optional] |
 | **CardLastFourDigits** | **string** |  | [optional] |
 | **CardType** | **string** | for payment methods of type CARD_TOKEN, the type of credit or debit card | [optional] |

@@ -20,30 +20,115 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactSales" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected ContactSales() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContactSales" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="FirstName">FirstName.</param>
-        /// <param name="LastName">LastName.</param>
-        /// <param name="ContactPhone">ContactPhone.</param>
-        /// <param name="Country">Country.</param>
-        /// <param name="Title">Title.</param>
-        /// <param name="Message">Message.</param>
-        /// <param name="Language">Language.</param>
-        /// <param name="ProductName">ProductName.</param>
-        /// <param name="QuoteId">QuoteId.</param>
+        /// <param name="Email">Email (required).</param>
+        /// <param name="FirstName">First Name (required).</param>
+        /// <param name="LastName">Last Name (required).</param>
+        /// <param name="ContactPhone">Phone (required).</param>
+        /// <param name="Country">Country (required).</param>
+        /// <param name="Title">Title (required).</param>
+        /// <param name="Message">Message (required).</param>
+        /// <param name="Language">Language (required).</param>
+        /// <param name="ProductName">Product Name (required).</param>
+        /// <param name="QuoteId">Quote Id (required).</param>
         public ContactSales(string Name = null, string Email = null, string FirstName = null, string LastName = null, string ContactPhone = null, string Country = null, string Title = null, string Message = null, string Language = null, string ProductName = null, string QuoteId = null)
         {
+            // to ensure "Email" is required (not null)
+            if (Email == null)
+            {
+                throw new InvalidDataException("Email is a required property for ContactSales and cannot be null");
+            }
+            else
+            {
+                this.Email = Email;
+            }
+            // to ensure "FirstName" is required (not null)
+            if (FirstName == null)
+            {
+                throw new InvalidDataException("FirstName is a required property for ContactSales and cannot be null");
+            }
+            else
+            {
+                this.FirstName = FirstName;
+            }
+            // to ensure "LastName" is required (not null)
+            if (LastName == null)
+            {
+                throw new InvalidDataException("LastName is a required property for ContactSales and cannot be null");
+            }
+            else
+            {
+                this.LastName = LastName;
+            }
+            // to ensure "ContactPhone" is required (not null)
+            if (ContactPhone == null)
+            {
+                throw new InvalidDataException("ContactPhone is a required property for ContactSales and cannot be null");
+            }
+            else
+            {
+                this.ContactPhone = ContactPhone;
+            }
+            // to ensure "Country" is required (not null)
+            if (Country == null)
+            {
+                throw new InvalidDataException("Country is a required property for ContactSales and cannot be null");
+            }
+            else
+            {
+                this.Country = Country;
+            }
+            // to ensure "Title" is required (not null)
+            if (Title == null)
+            {
+                throw new InvalidDataException("Title is a required property for ContactSales and cannot be null");
+            }
+            else
+            {
+                this.Title = Title;
+            }
+            // to ensure "Message" is required (not null)
+            if (Message == null)
+            {
+                throw new InvalidDataException("Message is a required property for ContactSales and cannot be null");
+            }
+            else
+            {
+                this.Message = Message;
+            }
+            // to ensure "Language" is required (not null)
+            if (Language == null)
+            {
+                throw new InvalidDataException("Language is a required property for ContactSales and cannot be null");
+            }
+            else
+            {
+                this.Language = Language;
+            }
+            // to ensure "ProductName" is required (not null)
+            if (ProductName == null)
+            {
+                throw new InvalidDataException("ProductName is a required property for ContactSales and cannot be null");
+            }
+            else
+            {
+                this.ProductName = ProductName;
+            }
+            // to ensure "QuoteId" is required (not null)
+            if (QuoteId == null)
+            {
+                throw new InvalidDataException("QuoteId is a required property for ContactSales and cannot be null");
+            }
+            else
+            {
+                this.QuoteId = QuoteId;
+            }
             this.Name = Name;
-            this.Email = Email;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.ContactPhone = ContactPhone;
-            this.Country = Country;
-            this.Title = Title;
-            this.Message = Message;
-            this.Language = Language;
-            this.ProductName = ProductName;
-            this.QuoteId = QuoteId;
         }
         
         /// <summary>
@@ -58,53 +143,63 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets Email
+        /// Email
         /// </summary>
+        /// <value>Email</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
         /// <summary>
-        /// Gets or Sets FirstName
+        /// First Name
         /// </summary>
+        /// <value>First Name</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
         /// <summary>
-        /// Gets or Sets LastName
+        /// Last Name
         /// </summary>
+        /// <value>Last Name</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
         /// <summary>
-        /// Gets or Sets ContactPhone
+        /// Phone
         /// </summary>
+        /// <value>Phone</value>
         [DataMember(Name="contactPhone", EmitDefaultValue=false)]
         public string ContactPhone { get; set; }
         /// <summary>
-        /// Gets or Sets Country
+        /// Country
         /// </summary>
+        /// <value>Country</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
         /// <summary>
-        /// Gets or Sets Title
+        /// Title
         /// </summary>
+        /// <value>Title</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
         /// <summary>
-        /// Gets or Sets Message
+        /// Message
         /// </summary>
+        /// <value>Message</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
         /// <summary>
-        /// Gets or Sets Language
+        /// Language
         /// </summary>
+        /// <value>Language</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
         /// <summary>
-        /// Gets or Sets ProductName
+        /// Product Name
         /// </summary>
+        /// <value>Product Name</value>
         [DataMember(Name="productName", EmitDefaultValue=false)]
         public string ProductName { get; set; }
         /// <summary>
-        /// Gets or Sets QuoteId
+        /// Quote Id
         /// </summary>
+        /// <value>Quote Id</value>
         [DataMember(Name="quoteId", EmitDefaultValue=false)]
         public string QuoteId { get; set; }
         /// <summary>

@@ -293,7 +293,7 @@ This endpoint does require any parameters.
 
 <a name="putdocumentsdocumentid"></a>
 
-## [**FaxDocument**](FaxDocument.html) PutDocumentsDocumentId (string documentId, FaxDocument body = null)
+## [**FaxDocument**](FaxDocument.html) PutDocumentsDocumentId (string documentId, FaxDocument body)
 
 Update a fax document.
 
@@ -319,7 +319,7 @@ namespace Example
 
             var apiInstance = new FaxApi();
             var documentId = documentId_example;  // string | Document ID
-            var body = new FaxDocument(); // FaxDocument | Document (optional) 
+            var body = new FaxDocument(); // FaxDocument | Document
 
             try
             {
@@ -342,7 +342,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-| **body** | [**FaxDocument**](FaxDocument.html)| Document | [optional]  |
+| **body** | [**FaxDocument**](FaxDocument.html)| Document |  |
 {: class="table table-striped"}
 
 ### Return type

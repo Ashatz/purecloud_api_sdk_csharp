@@ -659,12 +659,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Document</returns>
-        Document PostDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        Document PostDocuments (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null);
 
         /// <summary>
         /// Add a document.
@@ -673,12 +673,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
-        ApiResponse<Document> PostDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        ApiResponse<Document> PostDocumentsWithHttpInfo (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null);
         /// <summary>
         /// Update a document.
         /// </summary>
@@ -687,11 +687,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Document</returns>
-        Document PostDocumentsDocumentId (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        Document PostDocumentsDocumentId (string documentId, DocumentUpdate body, string expand = null, bool? _override = null);
 
         /// <summary>
         /// Update a document.
@@ -701,11 +701,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
-        ApiResponse<Document> PostDocumentsDocumentIdWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        ApiResponse<Document> PostDocumentsDocumentIdWithHttpInfo (string documentId, DocumentUpdate body, string expand = null, bool? _override = null);
         /// <summary>
         /// Replace the contents of a document.
         /// </summary>
@@ -714,10 +714,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ReplaceResponse</returns>
-        ReplaceResponse PostDocumentsDocumentIdContent (string documentId, ReplaceRequest body = null, bool? _override = null);
+        ReplaceResponse PostDocumentsDocumentIdContent (string documentId, ReplaceRequest body, bool? _override = null);
 
         /// <summary>
         /// Replace the contents of a document.
@@ -727,10 +727,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of ReplaceResponse</returns>
-        ApiResponse<ReplaceResponse> PostDocumentsDocumentIdContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
+        ApiResponse<ReplaceResponse> PostDocumentsDocumentIdContentWithHttpInfo (string documentId, ReplaceRequest body, bool? _override = null);
         /// <summary>
         /// Query content
         /// </summary>
@@ -761,9 +761,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>CreateShareResponse</returns>
-        CreateShareResponse PostShares (CreateShareRequest body = null);
+        CreateShareResponse PostShares (CreateShareRequest body);
 
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
@@ -772,9 +772,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>ApiResponse of CreateShareResponse</returns>
-        ApiResponse<CreateShareResponse> PostSharesWithHttpInfo (CreateShareRequest body = null);
+        ApiResponse<CreateShareResponse> PostSharesWithHttpInfo (CreateShareRequest body);
         /// <summary>
         /// Create a group workspace
         /// </summary>
@@ -782,9 +782,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
-        Workspace PostWorkspaces (WorkspaceCreate body = null);
+        Workspace PostWorkspaces (WorkspaceCreate body);
 
         /// <summary>
         /// Create a group workspace
@@ -793,9 +793,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
-        ApiResponse<Workspace> PostWorkspacesWithHttpInfo (WorkspaceCreate body = null);
+        ApiResponse<Workspace> PostWorkspacesWithHttpInfo (WorkspaceCreate body);
         /// <summary>
         /// Create a workspace tag
         /// </summary>
@@ -804,9 +804,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag (optional)</param>
+        /// <param name="body">tag</param>
         /// <returns>TagValue</returns>
-        TagValue PostWorkspacesWorkspaceIdTagvalues (string workspaceId, TagValue body = null);
+        TagValue PostWorkspacesWorkspaceIdTagvalues (string workspaceId, TagValue body);
 
         /// <summary>
         /// Create a workspace tag
@@ -816,9 +816,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag (optional)</param>
+        /// <param name="body">tag</param>
         /// <returns>ApiResponse of TagValue</returns>
-        ApiResponse<TagValue> PostWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, TagValue body = null);
+        ApiResponse<TagValue> PostWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, TagValue body);
         /// <summary>
         /// Perform a prefix query on tags in the workspace
         /// </summary>
@@ -827,10 +827,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>TagValueEntityListing</returns>
-        TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null);
+        TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body, string expand = null);
 
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -840,10 +840,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        ApiResponse<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
+        ApiResponse<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body, string expand = null);
         /// <summary>
         /// Update a workspace
         /// </summary>
@@ -852,9 +852,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
-        Workspace PutWorkspacesWorkspaceId (string workspaceId, Workspace body = null);
+        Workspace PutWorkspacesWorkspaceId (string workspaceId, Workspace body);
 
         /// <summary>
         /// Update a workspace
@@ -864,9 +864,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
-        ApiResponse<Workspace> PutWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, Workspace body = null);
+        ApiResponse<Workspace> PutWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, Workspace body);
         /// <summary>
         /// Add a member to a workspace
         /// </summary>
@@ -876,9 +876,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>WorkspaceMember</returns>
-        WorkspaceMember PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body = null);
+        WorkspaceMember PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body);
 
         /// <summary>
         /// Add a member to a workspace
@@ -889,9 +889,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        ApiResponse<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
+        ApiResponse<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body);
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
         /// </summary>
@@ -901,9 +901,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>TagValue</returns>
-        TagValue PutWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, TagValue body = null);
+        TagValue PutWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, TagValue body);
 
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
@@ -914,9 +914,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of TagValue</returns>
-        ApiResponse<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
+        ApiResponse<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, TagValue body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -1564,12 +1564,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of Document</returns>
-        System.Threading.Tasks.Task<Document> PostDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        System.Threading.Tasks.Task<Document> PostDocumentsAsync (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null);
 
         /// <summary>
         /// Add a document.
@@ -1578,12 +1578,12 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsAsyncWithHttpInfo (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null);
         /// <summary>
         /// Update a document.
         /// </summary>
@@ -1592,11 +1592,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of Document</returns>
-        System.Threading.Tasks.Task<Document> PostDocumentsDocumentIdAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        System.Threading.Tasks.Task<Document> PostDocumentsDocumentIdAsync (string documentId, DocumentUpdate body, string expand = null, bool? _override = null);
 
         /// <summary>
         /// Update a document.
@@ -1606,11 +1606,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsDocumentIdAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsDocumentIdAsyncWithHttpInfo (string documentId, DocumentUpdate body, string expand = null, bool? _override = null);
         /// <summary>
         /// Replace the contents of a document.
         /// </summary>
@@ -1619,10 +1619,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ReplaceResponse</returns>
-        System.Threading.Tasks.Task<ReplaceResponse> PostDocumentsDocumentIdContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null);
+        System.Threading.Tasks.Task<ReplaceResponse> PostDocumentsDocumentIdContentAsync (string documentId, ReplaceRequest body, bool? _override = null);
 
         /// <summary>
         /// Replace the contents of a document.
@@ -1632,10 +1632,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (ReplaceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, ReplaceRequest body, bool? _override = null);
         /// <summary>
         /// Query content
         /// </summary>
@@ -1666,9 +1666,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of CreateShareResponse</returns>
-        System.Threading.Tasks.Task<CreateShareResponse> PostSharesAsync (CreateShareRequest body = null);
+        System.Threading.Tasks.Task<CreateShareResponse> PostSharesAsync (CreateShareRequest body);
 
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
@@ -1677,9 +1677,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of ApiResponse (CreateShareResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostSharesAsyncWithHttpInfo (CreateShareRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostSharesAsyncWithHttpInfo (CreateShareRequest body);
         /// <summary>
         /// Create a group workspace
         /// </summary>
@@ -1687,9 +1687,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        System.Threading.Tasks.Task<Workspace> PostWorkspacesAsync (WorkspaceCreate body = null);
+        System.Threading.Tasks.Task<Workspace> PostWorkspacesAsync (WorkspaceCreate body);
 
         /// <summary>
         /// Create a group workspace
@@ -1698,9 +1698,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Workspace>> PostWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null);
+        System.Threading.Tasks.Task<ApiResponse<Workspace>> PostWorkspacesAsyncWithHttpInfo (WorkspaceCreate body);
         /// <summary>
         /// Create a workspace tag
         /// </summary>
@@ -1709,9 +1709,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag (optional)</param>
+        /// <param name="body">tag</param>
         /// <returns>Task of TagValue</returns>
-        System.Threading.Tasks.Task<TagValue> PostWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, TagValue body = null);
+        System.Threading.Tasks.Task<TagValue> PostWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, TagValue body);
 
         /// <summary>
         /// Create a workspace tag
@@ -1721,9 +1721,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag (optional)</param>
+        /// <param name="body">tag</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValue>> PostWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValue>> PostWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body);
         /// <summary>
         /// Perform a prefix query on tags in the workspace
         /// </summary>
@@ -1732,10 +1732,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null);
+        System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body, string expand = null);
 
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -1745,10 +1745,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body, string expand = null);
         /// <summary>
         /// Update a workspace
         /// </summary>
@@ -1757,9 +1757,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        System.Threading.Tasks.Task<Workspace> PutWorkspacesWorkspaceIdAsync (string workspaceId, Workspace body = null);
+        System.Threading.Tasks.Task<Workspace> PutWorkspacesWorkspaceIdAsync (string workspaceId, Workspace body);
 
         /// <summary>
         /// Update a workspace
@@ -1769,9 +1769,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Workspace>> PutWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, Workspace body = null);
+        System.Threading.Tasks.Task<ApiResponse<Workspace>> PutWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, Workspace body);
         /// <summary>
         /// Add a member to a workspace
         /// </summary>
@@ -1781,9 +1781,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of WorkspaceMember</returns>
-        System.Threading.Tasks.Task<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body = null);
+        System.Threading.Tasks.Task<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body);
 
         /// <summary>
         /// Add a member to a workspace
@@ -1794,9 +1794,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body);
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
         /// </summary>
@@ -1806,9 +1806,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of TagValue</returns>
-        System.Threading.Tasks.Task<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, TagValue body = null);
+        System.Threading.Tasks.Task<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, TagValue body);
 
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
@@ -1819,9 +1819,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValue>> PutWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValue>> PutWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body);
         #endregion Asynchronous Operations
     }
 
@@ -6162,12 +6162,12 @@ namespace ININ.PureCloudApi.Api
         /// Add a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Document</returns>
-        public Document PostDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        public Document PostDocuments (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
         {
              ApiResponse<Document> localVarResponse = PostDocumentsWithHttpInfo(body, copySource, moveSource, _override);
              return localVarResponse.Data;
@@ -6177,13 +6177,16 @@ namespace ININ.PureCloudApi.Api
         /// Add a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
-        public ApiResponse< Document > PostDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        public ApiResponse< Document > PostDocumentsWithHttpInfo (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostDocuments");
 
             var localVarPath = "/api/v2/contentmanagement/documents";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6251,12 +6254,12 @@ namespace ININ.PureCloudApi.Api
         /// Add a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of Document</returns>
-        public async System.Threading.Tasks.Task<Document> PostDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<Document> PostDocumentsAsync (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
         {
              ApiResponse<Document> localVarResponse = await PostDocumentsAsyncWithHttpInfo(body, copySource, moveSource, _override);
              return localVarResponse.Data;
@@ -6267,13 +6270,16 @@ namespace ININ.PureCloudApi.Api
         /// Add a document. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional)</param>
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source. (optional)</param>
         /// <param name="_override">Override any lock on the source document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsAsyncWithHttpInfo (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostDocuments");
 
             var localVarPath = "/api/v2/contentmanagement/documents";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6342,11 +6348,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Document</returns>
-        public Document PostDocumentsDocumentId (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public Document PostDocumentsDocumentId (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
         {
              ApiResponse<Document> localVarResponse = PostDocumentsDocumentIdWithHttpInfo(documentId, body, expand, _override);
              return localVarResponse.Data;
@@ -6357,15 +6363,18 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of Document</returns>
-        public ApiResponse< Document > PostDocumentsDocumentIdWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public ApiResponse< Document > PostDocumentsDocumentIdWithHttpInfo (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostDocumentsDocumentId");
 
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6434,11 +6443,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of Document</returns>
-        public async System.Threading.Tasks.Task<Document> PostDocumentsDocumentIdAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<Document> PostDocumentsDocumentIdAsync (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
         {
              ApiResponse<Document> localVarResponse = await PostDocumentsDocumentIdAsyncWithHttpInfo(documentId, body, expand, _override);
              return localVarResponse.Data;
@@ -6450,15 +6459,18 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Document (optional)</param>
+        /// <param name="body">Document</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsDocumentIdAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsDocumentIdAsyncWithHttpInfo (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostDocumentsDocumentId");
 
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6527,10 +6539,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ReplaceResponse</returns>
-        public ReplaceResponse PostDocumentsDocumentIdContent (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public ReplaceResponse PostDocumentsDocumentIdContent (string documentId, ReplaceRequest body, bool? _override = null)
         {
              ApiResponse<ReplaceResponse> localVarResponse = PostDocumentsDocumentIdContentWithHttpInfo(documentId, body, _override);
              return localVarResponse.Data;
@@ -6541,14 +6553,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>ApiResponse of ReplaceResponse</returns>
-        public ApiResponse< ReplaceResponse > PostDocumentsDocumentIdContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public ApiResponse< ReplaceResponse > PostDocumentsDocumentIdContentWithHttpInfo (string documentId, ReplaceRequest body, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentIdContent");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostDocumentsDocumentIdContent");
 
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6616,10 +6631,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ReplaceResponse</returns>
-        public async System.Threading.Tasks.Task<ReplaceResponse> PostDocumentsDocumentIdContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ReplaceResponse> PostDocumentsDocumentIdContentAsync (string documentId, ReplaceRequest body, bool? _override = null)
         {
              ApiResponse<ReplaceResponse> localVarResponse = await PostDocumentsDocumentIdContentAsyncWithHttpInfo(documentId, body, _override);
              return localVarResponse.Data;
@@ -6631,14 +6646,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="body">Replace Request (optional)</param>
+        /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document (optional)</param>
         /// <returns>Task of ApiResponse (ReplaceResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, ReplaceRequest body, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentIdContent");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostDocumentsDocumentIdContent");
 
             var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6878,9 +6896,9 @@ namespace ININ.PureCloudApi.Api
         /// Creates a new share or updates an existing share if the entity has already been shared 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>CreateShareResponse</returns>
-        public CreateShareResponse PostShares (CreateShareRequest body = null)
+        public CreateShareResponse PostShares (CreateShareRequest body)
         {
              ApiResponse<CreateShareResponse> localVarResponse = PostSharesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6890,10 +6908,13 @@ namespace ININ.PureCloudApi.Api
         /// Creates a new share or updates an existing share if the entity has already been shared 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>ApiResponse of CreateShareResponse</returns>
-        public ApiResponse< CreateShareResponse > PostSharesWithHttpInfo (CreateShareRequest body = null)
+        public ApiResponse< CreateShareResponse > PostSharesWithHttpInfo (CreateShareRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostShares");
 
             var localVarPath = "/api/v2/contentmanagement/shares";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6958,9 +6979,9 @@ namespace ININ.PureCloudApi.Api
         /// Creates a new share or updates an existing share if the entity has already been shared 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of CreateShareResponse</returns>
-        public async System.Threading.Tasks.Task<CreateShareResponse> PostSharesAsync (CreateShareRequest body = null)
+        public async System.Threading.Tasks.Task<CreateShareResponse> PostSharesAsync (CreateShareRequest body)
         {
              ApiResponse<CreateShareResponse> localVarResponse = await PostSharesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6971,10 +6992,13 @@ namespace ININ.PureCloudApi.Api
         /// Creates a new share or updates an existing share if the entity has already been shared 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required (optional)</param>
+        /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of ApiResponse (CreateShareResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostSharesAsyncWithHttpInfo (CreateShareRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostSharesAsyncWithHttpInfo (CreateShareRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostShares");
 
             var localVarPath = "/api/v2/contentmanagement/shares";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7039,9 +7063,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a group workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
-        public Workspace PostWorkspaces (WorkspaceCreate body = null)
+        public Workspace PostWorkspaces (WorkspaceCreate body)
         {
              ApiResponse<Workspace> localVarResponse = PostWorkspacesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -7051,10 +7075,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a group workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
-        public ApiResponse< Workspace > PostWorkspacesWithHttpInfo (WorkspaceCreate body = null)
+        public ApiResponse< Workspace > PostWorkspacesWithHttpInfo (WorkspaceCreate body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostWorkspaces");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7119,9 +7146,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a group workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        public async System.Threading.Tasks.Task<Workspace> PostWorkspacesAsync (WorkspaceCreate body = null)
+        public async System.Threading.Tasks.Task<Workspace> PostWorkspacesAsync (WorkspaceCreate body)
         {
              ApiResponse<Workspace> localVarResponse = await PostWorkspacesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -7132,10 +7159,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a group workspace 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PostWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PostWorkspacesAsyncWithHttpInfo (WorkspaceCreate body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostWorkspaces");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7201,9 +7231,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag (optional)</param>
+        /// <param name="body">tag</param>
         /// <returns>TagValue</returns>
-        public TagValue PostWorkspacesWorkspaceIdTagvalues (string workspaceId, TagValue body = null)
+        public TagValue PostWorkspacesWorkspaceIdTagvalues (string workspaceId, TagValue body)
         {
              ApiResponse<TagValue> localVarResponse = PostWorkspacesWorkspaceIdTagvaluesWithHttpInfo(workspaceId, body);
              return localVarResponse.Data;
@@ -7214,13 +7244,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag (optional)</param>
+        /// <param name="body">tag</param>
         /// <returns>ApiResponse of TagValue</returns>
-        public ApiResponse< TagValue > PostWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, TagValue body = null)
+        public ApiResponse< TagValue > PostWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, TagValue body)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvalues");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvalues");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7287,9 +7320,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag (optional)</param>
+        /// <param name="body">tag</param>
         /// <returns>Task of TagValue</returns>
-        public async System.Threading.Tasks.Task<TagValue> PostWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, TagValue body = null)
+        public async System.Threading.Tasks.Task<TagValue> PostWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, TagValue body)
         {
              ApiResponse<TagValue> localVarResponse = await PostWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo(workspaceId, body);
              return localVarResponse.Data;
@@ -7301,13 +7334,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">tag (optional)</param>
+        /// <param name="body">tag</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PostWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PostWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvalues");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvalues");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7374,10 +7410,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>TagValueEntityListing</returns>
-        public TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body, string expand = null)
         {
              ApiResponse<TagValueEntityListing> localVarResponse = PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo(workspaceId, body, expand);
              return localVarResponse.Data;
@@ -7388,14 +7424,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        public ApiResponse< TagValueEntityListing > PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public ApiResponse< TagValueEntityListing > PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvaluesQuery");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvaluesQuery");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7463,10 +7502,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        public async System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public async System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body, string expand = null)
         {
              ApiResponse<TagValueEntityListing> localVarResponse = await PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo(workspaceId, body, expand);
              return localVarResponse.Data;
@@ -7478,14 +7517,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvaluesQuery");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvaluesQuery");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7553,9 +7595,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
-        public Workspace PutWorkspacesWorkspaceId (string workspaceId, Workspace body = null)
+        public Workspace PutWorkspacesWorkspaceId (string workspaceId, Workspace body)
         {
              ApiResponse<Workspace> localVarResponse = PutWorkspacesWorkspaceIdWithHttpInfo(workspaceId, body);
              return localVarResponse.Data;
@@ -7566,13 +7608,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
-        public ApiResponse< Workspace > PutWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, Workspace body = null)
+        public ApiResponse< Workspace > PutWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, Workspace body)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutWorkspacesWorkspaceId");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7639,9 +7684,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        public async System.Threading.Tasks.Task<Workspace> PutWorkspacesWorkspaceIdAsync (string workspaceId, Workspace body = null)
+        public async System.Threading.Tasks.Task<Workspace> PutWorkspacesWorkspaceIdAsync (string workspaceId, Workspace body)
         {
              ApiResponse<Workspace> localVarResponse = await PutWorkspacesWorkspaceIdAsyncWithHttpInfo(workspaceId, body);
              return localVarResponse.Data;
@@ -7653,13 +7698,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PutWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, Workspace body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PutWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, Workspace body)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutWorkspacesWorkspaceId");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7727,9 +7775,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>WorkspaceMember</returns>
-        public WorkspaceMember PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body = null)
+        public WorkspaceMember PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body)
         {
              ApiResponse<WorkspaceMember> localVarResponse = PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo(workspaceId, memberId, body);
              return localVarResponse.Data;
@@ -7741,9 +7789,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        public ApiResponse< WorkspaceMember > PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
+        public ApiResponse< WorkspaceMember > PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -7751,6 +7799,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'memberId' is set
             if (memberId == null)
                 throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7819,9 +7870,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of WorkspaceMember</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body = null)
+        public async System.Threading.Tasks.Task<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body)
         {
              ApiResponse<WorkspaceMember> localVarResponse = await PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo(workspaceId, memberId, body);
              return localVarResponse.Data;
@@ -7834,9 +7885,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -7844,6 +7895,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'memberId' is set
             if (memberId == null)
                 throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7912,9 +7966,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>TagValue</returns>
-        public TagValue PutWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, TagValue body = null)
+        public TagValue PutWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, TagValue body)
         {
              ApiResponse<TagValue> localVarResponse = PutWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo(workspaceId, tagId, body);
              return localVarResponse.Data;
@@ -7926,9 +7980,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of TagValue</returns>
-        public ApiResponse< TagValue > PutWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
+        public ApiResponse< TagValue > PutWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, TagValue body)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -7936,6 +7990,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'tagId' is set
             if (tagId == null)
                 throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8004,9 +8061,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of TagValue</returns>
-        public async System.Threading.Tasks.Task<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, TagValue body = null)
+        public async System.Threading.Tasks.Task<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, TagValue body)
         {
              ApiResponse<TagValue> localVarResponse = await PutWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo(workspaceId, tagId, body);
              return localVarResponse.Data;
@@ -8019,9 +8076,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="body">Workspace (optional)</param>
+        /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PutWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PutWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -8029,6 +8086,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'tagId' is set
             if (tagId == null)
                 throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
 
             var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
             var localVarPathParams = new Dictionary<String, String>();

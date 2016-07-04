@@ -510,7 +510,7 @@ namespace Example
 
 <a name="putmessagesmessageid"></a>
 
-## [**VoicemailMessage**](VoicemailMessage.html) PutMessagesMessageId (string messageId, VoicemailMessage body = null)
+## [**VoicemailMessage**](VoicemailMessage.html) PutMessagesMessageId (string messageId, VoicemailMessage body)
 
 Update a message.
 
@@ -536,7 +536,7 @@ namespace Example
 
             var apiInstance = new VoicemailApi();
             var messageId = messageId_example;  // string | Message ID
-            var body = new VoicemailMessage(); // VoicemailMessage | VoicemailMessage (optional) 
+            var body = new VoicemailMessage(); // VoicemailMessage | VoicemailMessage
 
             try
             {
@@ -559,7 +559,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageId** | **string**| Message ID |  |
-| **body** | [**VoicemailMessage**](VoicemailMessage.html)| VoicemailMessage | [optional]  |
+| **body** | [**VoicemailMessage**](VoicemailMessage.html)| VoicemailMessage |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -568,7 +568,7 @@ namespace Example
 
 <a name="putpolicy"></a>
 
-## [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) PutPolicy (VoicemailOrganizationPolicy body = null)
+## [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) PutPolicy (VoicemailOrganizationPolicy body)
 
 Update a policy
 
@@ -593,7 +593,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new VoicemailApi();
-            var body = new VoicemailOrganizationPolicy(); // VoicemailOrganizationPolicy | Policy (optional) 
+            var body = new VoicemailOrganizationPolicy(); // VoicemailOrganizationPolicy | Policy
 
             try
             {
@@ -615,7 +615,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html)| Policy | [optional]  |
+| **body** | [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html)| Policy |  |
 {: class="table table-striped"}
 
 ### Return type

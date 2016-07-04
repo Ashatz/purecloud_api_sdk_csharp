@@ -18,6 +18,7 @@ title: VoiceXmlOperation
 | **Outputs** | **string** |  | [optional] |
 | **FetchAudio** | **string** |  | [optional] |
 | **TimeoutMS** | **int?** |  | [optional] |
+| **CurrentOperation** | [**Operation**](Operation.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -27,10 +27,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="FirstUri">FirstUri.</param>
-        /// <param name="NextUri">NextUri.</param>
         /// <param name="LastUri">LastUri.</param>
+        /// <param name="NextUri">NextUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public EdgeGroupEntityListing(int? PageSize = null, int? PageNumber = null, long? Total = null, List<EdgeGroup> Entities = null, string SelfUri = null, string PreviousUri = null, string FirstUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
+        public EdgeGroupEntityListing(int? PageSize = null, int? PageNumber = null, long? Total = null, List<EdgeGroup> Entities = null, string SelfUri = null, string PreviousUri = null, string FirstUri = null, string LastUri = null, string NextUri = null, int? PageCount = null)
         {
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
@@ -39,8 +39,8 @@ namespace ININ.PureCloudApi.Model
             this.SelfUri = SelfUri;
             this.PreviousUri = PreviousUri;
             this.FirstUri = FirstUri;
-            this.NextUri = NextUri;
             this.LastUri = LastUri;
+            this.NextUri = NextUri;
             this.PageCount = PageCount;
         }
         
@@ -80,15 +80,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="firstUri", EmitDefaultValue=false)]
         public string FirstUri { get; set; }
         /// <summary>
-        /// Gets or Sets NextUri
-        /// </summary>
-        [DataMember(Name="nextUri", EmitDefaultValue=false)]
-        public string NextUri { get; set; }
-        /// <summary>
         /// Gets or Sets LastUri
         /// </summary>
         [DataMember(Name="lastUri", EmitDefaultValue=false)]
         public string LastUri { get; set; }
+        /// <summary>
+        /// Gets or Sets NextUri
+        /// </summary>
+        [DataMember(Name="nextUri", EmitDefaultValue=false)]
+        public string NextUri { get; set; }
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
@@ -109,8 +109,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
             sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
-            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             sb.Append("  LastUri: ").Append(LastUri).Append("\n");
+            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -184,14 +184,14 @@ namespace ININ.PureCloudApi.Model
                     this.FirstUri.Equals(other.FirstUri)
                 ) &&
                 (
-                    this.NextUri == other.NextUri ||
-                    this.NextUri != null &&
-                    this.NextUri.Equals(other.NextUri)
-                ) &&
-                (
                     this.LastUri == other.LastUri ||
                     this.LastUri != null &&
                     this.LastUri.Equals(other.LastUri)
+                ) &&
+                (
+                    this.NextUri == other.NextUri ||
+                    this.NextUri != null &&
+                    this.NextUri.Equals(other.NextUri)
                 ) &&
                 (
                     this.PageCount == other.PageCount ||
@@ -225,10 +225,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PreviousUri.GetHashCode();
                 if (this.FirstUri != null)
                     hash = hash * 59 + this.FirstUri.GetHashCode();
-                if (this.NextUri != null)
-                    hash = hash * 59 + this.NextUri.GetHashCode();
                 if (this.LastUri != null)
                     hash = hash * 59 + this.LastUri.GetHashCode();
+                if (this.NextUri != null)
+                    hash = hash * 59 + this.NextUri.GetHashCode();
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
                 return hash;

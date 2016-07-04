@@ -123,7 +123,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Outputs">Outputs.</param>
         /// <param name="FetchAudio">FetchAudio.</param>
         /// <param name="TimeoutMS">TimeoutMS.</param>
-        public VoiceXmlOperation(string Name = null, TypeEnum? Type = null, MethodEnum? Method = null, EncodingEnum? Encoding = null, string Description = null, string Uri = null, string Inputs = null, string Outputs = null, string FetchAudio = null, int? TimeoutMS = null)
+        /// <param name="CurrentOperation">CurrentOperation.</param>
+        public VoiceXmlOperation(string Name = null, TypeEnum? Type = null, MethodEnum? Method = null, EncodingEnum? Encoding = null, string Description = null, string Uri = null, string Inputs = null, string Outputs = null, string FetchAudio = null, int? TimeoutMS = null, Operation CurrentOperation = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -135,6 +136,7 @@ namespace ININ.PureCloudApi.Model
             this.Outputs = Outputs;
             this.FetchAudio = FetchAudio;
             this.TimeoutMS = TimeoutMS;
+            this.CurrentOperation = CurrentOperation;
         }
         
         /// <summary>
@@ -179,6 +181,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="timeoutMS", EmitDefaultValue=false)]
         public int? TimeoutMS { get; set; }
         /// <summary>
+        /// Gets or Sets CurrentOperation
+        /// </summary>
+        [DataMember(Name="currentOperation", EmitDefaultValue=false)]
+        public Operation CurrentOperation { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -203,6 +210,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Outputs: ").Append(Outputs).Append("\n");
             sb.Append("  FetchAudio: ").Append(FetchAudio).Append("\n");
             sb.Append("  TimeoutMS: ").Append(TimeoutMS).Append("\n");
+            sb.Append("  CurrentOperation: ").Append(CurrentOperation).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -296,6 +304,11 @@ namespace ININ.PureCloudApi.Model
                     this.TimeoutMS.Equals(other.TimeoutMS)
                 ) &&
                 (
+                    this.CurrentOperation == other.CurrentOperation ||
+                    this.CurrentOperation != null &&
+                    this.CurrentOperation.Equals(other.CurrentOperation)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -335,6 +348,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.FetchAudio.GetHashCode();
                 if (this.TimeoutMS != null)
                     hash = hash * 59 + this.TimeoutMS.GetHashCode();
+                if (this.CurrentOperation != null)
+                    hash = hash * 59 + this.CurrentOperation.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

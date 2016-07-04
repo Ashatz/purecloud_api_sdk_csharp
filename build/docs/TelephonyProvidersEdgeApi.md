@@ -4314,7 +4314,7 @@ namespace Example
 
 <a name="postprovidersedges"></a>
 
-## [**Edge**](Edge.html) PostProvidersEdges (Edge body = null)
+## [**Edge**](Edge.html) PostProvidersEdges (Edge body)
 
 Create a edge.
 
@@ -4339,7 +4339,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new Edge(); // Edge | Edge (optional) 
+            var body = new Edge(); // Edge | Edge
 
             try
             {
@@ -4361,7 +4361,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Edge**](Edge.html)| Edge | [optional]  |
+| **body** | [**Edge**](Edge.html)| Edge |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4426,7 +4426,7 @@ namespace Example
 
 <a name="postprovidersedgescertificateauthorities"></a>
 
-## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) PostProvidersEdgesCertificateauthorities (DomainCertificateAuthority body = null)
+## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) PostProvidersEdgesCertificateauthorities (DomainCertificateAuthority body)
 
 Create a certificate authority.
 
@@ -4451,7 +4451,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new DomainCertificateAuthority(); // DomainCertificateAuthority | CertificateAuthority (optional) 
+            var body = new DomainCertificateAuthority(); // DomainCertificateAuthority | CertificateAuthority
 
             try
             {
@@ -4473,7 +4473,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DomainCertificateAuthority**](DomainCertificateAuthority.html)| CertificateAuthority | [optional]  |
+| **body** | [**DomainCertificateAuthority**](DomainCertificateAuthority.html)| CertificateAuthority |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4482,7 +4482,7 @@ namespace Example
 
 <a name="postprovidersedgesdidpools"></a>
 
-## [**DIDPool**](DIDPool.html) PostProvidersEdgesDidpools (DIDPool body = null)
+## [**DIDPool**](DIDPool.html) PostProvidersEdgesDidpools (DIDPool body)
 
 Create a new DID pool
 
@@ -4507,7 +4507,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new DIDPool(); // DIDPool |  (optional) 
+            var body = new DIDPool(); // DIDPool | DID pool
 
             try
             {
@@ -4529,7 +4529,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DIDPool**](DIDPool.html)|  | [optional]  |
+| **body** | [**DIDPool**](DIDPool.html)| DID pool |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4538,7 +4538,7 @@ namespace Example
 
 <a name="postprovidersedgesedgeidlogicalinterfaces"></a>
 
-## [**DomainLogicalInterface**](DomainLogicalInterface.html) PostProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, DomainLogicalInterface body = null)
+## [**DomainLogicalInterface**](DomainLogicalInterface.html) PostProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, DomainLogicalInterface body)
 
 Create an edge logical interface.
 
@@ -4564,7 +4564,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeId = edgeId_example;  // string | Edge ID
-            var body = new DomainLogicalInterface(); // DomainLogicalInterface |  (optional) 
+            var body = new DomainLogicalInterface(); // DomainLogicalInterface | Logical interface
 
             try
             {
@@ -4587,7 +4587,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
-| **body** | [**DomainLogicalInterface**](DomainLogicalInterface.html)|  | [optional]  |
+| **body** | [**DomainLogicalInterface**](DomainLogicalInterface.html)| Logical interface |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4596,7 +4596,7 @@ namespace Example
 
 <a name="postprovidersedgesedgeidlogsjobs"></a>
 
-## [**EdgeLogsJobResponse**](EdgeLogsJobResponse.html) PostProvidersEdgesEdgeIdLogsJobs (string edgeId, EdgeLogsJobRequest body = null)
+## [**EdgeLogsJobResponse**](EdgeLogsJobResponse.html) PostProvidersEdgesEdgeIdLogsJobs (string edgeId, EdgeLogsJobRequest body)
 
 Create a job to upload a list of Edge logs.
 
@@ -4622,7 +4622,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeId = edgeId_example;  // string | Edge ID
-            var body = new EdgeLogsJobRequest(); // EdgeLogsJobRequest | EdgeLogsJobRequest (optional) 
+            var body = new EdgeLogsJobRequest(); // EdgeLogsJobRequest | EdgeLogsJobRequest
 
             try
             {
@@ -4645,7 +4645,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
-| **body** | [**EdgeLogsJobRequest**](EdgeLogsJobRequest.html)| EdgeLogsJobRequest | [optional]  |
+| **body** | [**EdgeLogsJobRequest**](EdgeLogsJobRequest.html)| EdgeLogsJobRequest |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4654,7 +4654,7 @@ namespace Example
 
 <a name="postprovidersedgesedgeidlogsjobsjobidupload"></a>
 
-## void PostProvidersEdgesEdgeIdLogsJobsJobIdUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+## void PostProvidersEdgesEdgeIdLogsJobsJobIdUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
 
 Request that the specified fileIds be uploaded from the Edge.
 
@@ -4681,7 +4681,7 @@ namespace Example
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeId = edgeId_example;  // string | Edge ID
             var jobId = jobId_example;  // string | Job ID
-            var body = new EdgeLogsJobUploadRequest(); // EdgeLogsJobUploadRequest |  (optional) 
+            var body = new EdgeLogsJobUploadRequest(); // EdgeLogsJobUploadRequest | Log upload request
 
             try
             {
@@ -4704,7 +4704,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
 | **jobId** | **string**| Job ID |  |
-| **body** | [**EdgeLogsJobUploadRequest**](EdgeLogsJobUploadRequest.html)|  | [optional]  |
+| **body** | [**EdgeLogsJobUploadRequest**](EdgeLogsJobUploadRequest.html)| Log upload request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4769,7 +4769,7 @@ namespace Example
 
 <a name="postprovidersedgesedgeidsoftwareupdate"></a>
 
-## [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) PostProvidersEdgesEdgeIdSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+## [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) PostProvidersEdgesEdgeIdSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body)
 
 Starts a software update for this edge.
 
@@ -4795,7 +4795,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeId = edgeId_example;  // string | Edge ID
-            var body = new DomainEdgeSoftwareUpdateDto(); // DomainEdgeSoftwareUpdateDto |  (optional) 
+            var body = new DomainEdgeSoftwareUpdateDto(); // DomainEdgeSoftwareUpdateDto | Software update request
 
             try
             {
@@ -4818,7 +4818,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
-| **body** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html)|  | [optional]  |
+| **body** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html)| Software update request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4883,7 +4883,7 @@ namespace Example
 
 <a name="postprovidersedgesedgegroups"></a>
 
-## [**EdgeGroup**](EdgeGroup.html) PostProvidersEdgesEdgegroups (EdgeGroup body = null)
+## [**EdgeGroup**](EdgeGroup.html) PostProvidersEdgesEdgegroups (EdgeGroup body)
 
 Create an edge group.
 
@@ -4908,7 +4908,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new EdgeGroup(); // EdgeGroup | EdgeGroup (optional) 
+            var body = new EdgeGroup(); // EdgeGroup | EdgeGroup
 
             try
             {
@@ -4930,7 +4930,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EdgeGroup**](EdgeGroup.html)| EdgeGroup | [optional]  |
+| **body** | [**EdgeGroup**](EdgeGroup.html)| EdgeGroup |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4939,7 +4939,7 @@ namespace Example
 
 <a name="postprovidersedgesendpoints"></a>
 
-## [**Endpoint**](Endpoint.html) PostProvidersEdgesEndpoints (Endpoint body = null)
+## [**Endpoint**](Endpoint.html) PostProvidersEdgesEndpoints (Endpoint body)
 
 Create endpoint
 
@@ -4964,7 +4964,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new Endpoint(); // Endpoint | EndpointTemplate (optional) 
+            var body = new Endpoint(); // Endpoint | EndpointTemplate
 
             try
             {
@@ -4986,7 +4986,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate | [optional]  |
+| **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4995,7 +4995,7 @@ namespace Example
 
 <a name="postprovidersedgesextensionpools"></a>
 
-## [**Extension**](Extension.html) PostProvidersEdgesExtensionpools (ExtensionPool body = null)
+## [**Extension**](Extension.html) PostProvidersEdgesExtensionpools (ExtensionPool body)
 
 Create a new extension pool
 
@@ -5020,7 +5020,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new ExtensionPool(); // ExtensionPool | ExtensionPool (optional) 
+            var body = new ExtensionPool(); // ExtensionPool | ExtensionPool
 
             try
             {
@@ -5042,7 +5042,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ExtensionPool**](ExtensionPool.html)| ExtensionPool | [optional]  |
+| **body** | [**ExtensionPool**](ExtensionPool.html)| ExtensionPool |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5051,7 +5051,7 @@ namespace Example
 
 <a name="postprovidersedgesoutboundroutes"></a>
 
-## [**OutboundRoute**](OutboundRoute.html) PostProvidersEdgesOutboundroutes (OutboundRoute body = null)
+## [**OutboundRoute**](OutboundRoute.html) PostProvidersEdgesOutboundroutes (OutboundRoute body)
 
 Create outbound rule
 
@@ -5076,7 +5076,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new OutboundRoute(); // OutboundRoute | OutboundRoute (optional) 
+            var body = new OutboundRoute(); // OutboundRoute | OutboundRoute
 
             try
             {
@@ -5098,7 +5098,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute | [optional]  |
+| **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5107,7 +5107,7 @@ namespace Example
 
 <a name="postprovidersedgesphonebasesettings"></a>
 
-## [**PhoneBase**](PhoneBase.html) PostProvidersEdgesPhonebasesettings (PhoneBase body = null)
+## [**PhoneBase**](PhoneBase.html) PostProvidersEdgesPhonebasesettings (PhoneBase body)
 
 Create a new Phone Base Settings object
 
@@ -5132,7 +5132,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new PhoneBase(); // PhoneBase |  (optional) 
+            var body = new PhoneBase(); // PhoneBase | Phone base settings
 
             try
             {
@@ -5154,7 +5154,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PhoneBase**](PhoneBase.html)|  | [optional]  |
+| **body** | [**PhoneBase**](PhoneBase.html)| Phone base settings |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5163,7 +5163,7 @@ namespace Example
 
 <a name="postprovidersedgesphones"></a>
 
-## [**Phone**](Phone.html) PostProvidersEdgesPhones (Phone body = null)
+## [**Phone**](Phone.html) PostProvidersEdgesPhones (Phone body)
 
 Create a new Phone
 
@@ -5188,7 +5188,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new Phone(); // Phone |  (optional) 
+            var body = new Phone(); // Phone | Phone
 
             try
             {
@@ -5210,7 +5210,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Phone**](Phone.html)|  | [optional]  |
+| **body** | [**Phone**](Phone.html)| Phone |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5274,7 +5274,7 @@ void (empty response body)
 
 <a name="postprovidersedgesphonesreboot"></a>
 
-## void PostProvidersEdgesPhonesReboot (PhonesReboot body = null)
+## void PostProvidersEdgesPhonesReboot (PhonesReboot body)
 
 Reboot Multiple Phones
 
@@ -5299,7 +5299,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new PhonesReboot(); // PhonesReboot | body (optional) 
+            var body = new PhonesReboot(); // PhonesReboot | Phones
 
             try
             {
@@ -5320,7 +5320,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PhonesReboot**](PhonesReboot.html)| body | [optional]  |
+| **body** | [**PhonesReboot**](PhonesReboot.html)| Phones |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5329,7 +5329,7 @@ void (empty response body)
 
 <a name="postprovidersedgessites"></a>
 
-## [**Site**](Site.html) PostProvidersEdgesSites (Site body = null)
+## [**Site**](Site.html) PostProvidersEdgesSites (Site body)
 
 Create a Site.
 
@@ -5354,7 +5354,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new Site(); // Site | Site (optional) 
+            var body = new Site(); // Site | Site
 
             try
             {
@@ -5376,7 +5376,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Site**](Site.html)| Site | [optional]  |
+| **body** | [**Site**](Site.html)| Site |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5440,7 +5440,7 @@ void (empty response body)
 
 <a name="postprovidersedgestrunkbasesettings"></a>
 
-## [**TrunkBase**](TrunkBase.html) PostProvidersEdgesTrunkbasesettings (TrunkBase body = null)
+## [**TrunkBase**](TrunkBase.html) PostProvidersEdgesTrunkbasesettings (TrunkBase body)
 
 Create a Trunk Base Settings object
 
@@ -5465,7 +5465,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new TrunkBase(); // TrunkBase |  (optional) 
+            var body = new TrunkBase(); // TrunkBase | Trunk base settings
 
             try
             {
@@ -5487,7 +5487,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**TrunkBase**](TrunkBase.html)|  | [optional]  |
+| **body** | [**TrunkBase**](TrunkBase.html)| Trunk base settings |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5496,7 +5496,7 @@ namespace Example
 
 <a name="putprovidersedgescertificateauthoritiescertificateid"></a>
 
-## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) PutProvidersEdgesCertificateauthoritiesCertificateId (string certificateId, DomainCertificateAuthority body = null)
+## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) PutProvidersEdgesCertificateauthoritiesCertificateId (string certificateId, DomainCertificateAuthority body)
 
 Update a certificate authority.
 
@@ -5522,7 +5522,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var certificateId = certificateId_example;  // string | Certificate ID
-            var body = new DomainCertificateAuthority(); // DomainCertificateAuthority |  (optional) 
+            var body = new DomainCertificateAuthority(); // DomainCertificateAuthority | Certificate authority
 
             try
             {
@@ -5545,7 +5545,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **certificateId** | **string**| Certificate ID |  |
-| **body** | [**DomainCertificateAuthority**](DomainCertificateAuthority.html)|  | [optional]  |
+| **body** | [**DomainCertificateAuthority**](DomainCertificateAuthority.html)| Certificate authority |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5554,7 +5554,7 @@ namespace Example
 
 <a name="putprovidersedgesdidpoolsdidpoolid"></a>
 
-## [**DIDPool**](DIDPool.html) PutProvidersEdgesDidpoolsDidpoolId (string didPoolId, DIDPool body = null)
+## [**DIDPool**](DIDPool.html) PutProvidersEdgesDidpoolsDidpoolId (string didPoolId, DIDPool body)
 
 Update a DID Pool by ID.
 
@@ -5580,7 +5580,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var didPoolId = didPoolId_example;  // string | DID pool ID
-            var body = new DIDPool(); // DIDPool |  (optional) 
+            var body = new DIDPool(); // DIDPool | DID pool
 
             try
             {
@@ -5603,7 +5603,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **didPoolId** | **string**| DID pool ID |  |
-| **body** | [**DIDPool**](DIDPool.html)|  | [optional]  |
+| **body** | [**DIDPool**](DIDPool.html)| DID pool |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5612,7 +5612,7 @@ namespace Example
 
 <a name="putprovidersedgesdidsdidid"></a>
 
-## [**DID**](DID.html) PutProvidersEdgesDidsDidId (string didId, DID body = null)
+## [**DID**](DID.html) PutProvidersEdgesDidsDidId (string didId, DID body)
 
 Update a DID by ID.
 
@@ -5638,7 +5638,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var didId = didId_example;  // string | DID ID
-            var body = new DID(); // DID |  (optional) 
+            var body = new DID(); // DID | DID
 
             try
             {
@@ -5661,7 +5661,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **didId** | **string**| DID ID |  |
-| **body** | [**DID**](DID.html)|  | [optional]  |
+| **body** | [**DID**](DID.html)| DID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5670,7 +5670,7 @@ namespace Example
 
 <a name="putprovidersedgesedgeid"></a>
 
-## [**Edge**](Edge.html) PutProvidersEdgesEdgeId (string edgeId, Edge body = null)
+## [**Edge**](Edge.html) PutProvidersEdgesEdgeId (string edgeId, Edge body)
 
 Update a edge.
 
@@ -5696,7 +5696,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeId = edgeId_example;  // string | Edge ID
-            var body = new Edge(); // Edge | Edge (optional) 
+            var body = new Edge(); // Edge | Edge
 
             try
             {
@@ -5719,7 +5719,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
-| **body** | [**Edge**](Edge.html)| Edge | [optional]  |
+| **body** | [**Edge**](Edge.html)| Edge |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5728,7 +5728,7 @@ namespace Example
 
 <a name="putprovidersedgesedgeidlineslineid"></a>
 
-## [**EdgeLine**](EdgeLine.html) PutProvidersEdgesEdgeIdLinesLineId (string edgeId, string lineId, EdgeLine body = null)
+## [**EdgeLine**](EdgeLine.html) PutProvidersEdgesEdgeIdLinesLineId (string edgeId, string lineId, EdgeLine body)
 
 Update a line.
 
@@ -5755,7 +5755,7 @@ namespace Example
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeId = edgeId_example;  // string | Edge ID
             var lineId = lineId_example;  // string | Line ID
-            var body = new EdgeLine(); // EdgeLine | Line (optional) 
+            var body = new EdgeLine(); // EdgeLine | Line
 
             try
             {
@@ -5779,7 +5779,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
 | **lineId** | **string**| Line ID |  |
-| **body** | [**EdgeLine**](EdgeLine.html)| Line | [optional]  |
+| **body** | [**EdgeLine**](EdgeLine.html)| Line |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5788,7 +5788,7 @@ namespace Example
 
 <a name="putprovidersedgesedgeidlogicalinterfacesinterfaceid"></a>
 
-## [**DomainLogicalInterface**](DomainLogicalInterface.html) PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, DomainLogicalInterface body = null)
+## [**DomainLogicalInterface**](DomainLogicalInterface.html) PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, DomainLogicalInterface body)
 
 Update an edge logical interface.
 
@@ -5815,7 +5815,7 @@ namespace Example
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeId = edgeId_example;  // string | Edge ID
             var interfaceId = interfaceId_example;  // string | Interface ID
-            var body = new DomainLogicalInterface(); // DomainLogicalInterface |  (optional) 
+            var body = new DomainLogicalInterface(); // DomainLogicalInterface | Logical interface
 
             try
             {
@@ -5839,7 +5839,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
 | **interfaceId** | **string**| Interface ID |  |
-| **body** | [**DomainLogicalInterface**](DomainLogicalInterface.html)|  | [optional]  |
+| **body** | [**DomainLogicalInterface**](DomainLogicalInterface.html)| Logical interface |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5848,7 +5848,7 @@ namespace Example
 
 <a name="putprovidersedgesedgegroupsedgegroupid"></a>
 
-## [**EdgeGroup**](EdgeGroup.html) PutProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, EdgeGroup body = null)
+## [**EdgeGroup**](EdgeGroup.html) PutProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, EdgeGroup body)
 
 Update an edge group.
 
@@ -5874,7 +5874,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeGroupId = edgeGroupId_example;  // string | Edge group ID
-            var body = new EdgeGroup(); // EdgeGroup | EdgeGroup (optional) 
+            var body = new EdgeGroup(); // EdgeGroup | EdgeGroup
 
             try
             {
@@ -5897,7 +5897,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeGroupId** | **string**| Edge group ID |  |
-| **body** | [**EdgeGroup**](EdgeGroup.html)| EdgeGroup | [optional]  |
+| **body** | [**EdgeGroup**](EdgeGroup.html)| EdgeGroup |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5906,7 +5906,7 @@ namespace Example
 
 <a name="putprovidersedgesendpointsendpointid"></a>
 
-## [**Endpoint**](Endpoint.html) PutProvidersEdgesEndpointsEndpointId (string endpointId, Endpoint body = null)
+## [**Endpoint**](Endpoint.html) PutProvidersEdgesEndpointsEndpointId (string endpointId, Endpoint body)
 
 Update endpoint
 
@@ -5932,7 +5932,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var endpointId = endpointId_example;  // string | Endpoint ID
-            var body = new Endpoint(); // Endpoint | EndpointTemplate (optional) 
+            var body = new Endpoint(); // Endpoint | EndpointTemplate
 
             try
             {
@@ -5955,7 +5955,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **endpointId** | **string**| Endpoint ID |  |
-| **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate | [optional]  |
+| **body** | [**Endpoint**](Endpoint.html)| EndpointTemplate |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5964,7 +5964,7 @@ namespace Example
 
 <a name="putprovidersedgesextensionpoolsextensionpoolid"></a>
 
-## [**ExtensionPool**](ExtensionPool.html) PutProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId, ExtensionPool body = null)
+## [**ExtensionPool**](ExtensionPool.html) PutProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId, ExtensionPool body)
 
 Update an extension pool by ID
 
@@ -5990,7 +5990,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var extensionPoolId = extensionPoolId_example;  // string | Extension pool ID
-            var body = new ExtensionPool(); // ExtensionPool | ExtensionPool (optional) 
+            var body = new ExtensionPool(); // ExtensionPool | ExtensionPool
 
             try
             {
@@ -6013,7 +6013,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **extensionPoolId** | **string**| Extension pool ID |  |
-| **body** | [**ExtensionPool**](ExtensionPool.html)| ExtensionPool | [optional]  |
+| **body** | [**ExtensionPool**](ExtensionPool.html)| ExtensionPool |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6022,7 +6022,7 @@ namespace Example
 
 <a name="putprovidersedgesextensionsextensionid"></a>
 
-## [**Extension**](Extension.html) PutProvidersEdgesExtensionsExtensionId (string extensionId, Extension body = null)
+## [**Extension**](Extension.html) PutProvidersEdgesExtensionsExtensionId (string extensionId, Extension body)
 
 Update an extension by ID.
 
@@ -6048,7 +6048,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var extensionId = extensionId_example;  // string | Extension ID
-            var body = new Extension(); // Extension |  (optional) 
+            var body = new Extension(); // Extension | Extension
 
             try
             {
@@ -6071,7 +6071,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **extensionId** | **string**| Extension ID |  |
-| **body** | [**Extension**](Extension.html)|  | [optional]  |
+| **body** | [**Extension**](Extension.html)| Extension |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6080,7 +6080,7 @@ namespace Example
 
 <a name="putprovidersedgesoutboundroutesoutboundrouteid"></a>
 
-## [**OutboundRoute**](OutboundRoute.html) PutProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRoute body = null)
+## [**OutboundRoute**](OutboundRoute.html) PutProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRoute body)
 
 Update outbound route
 
@@ -6106,7 +6106,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
-            var body = new OutboundRoute(); // OutboundRoute | OutboundRoute (optional) 
+            var body = new OutboundRoute(); // OutboundRoute | OutboundRoute
 
             try
             {
@@ -6129,7 +6129,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **outboundRouteId** | **string**| Outbound route ID |  |
-| **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute | [optional]  |
+| **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6138,7 +6138,7 @@ namespace Example
 
 <a name="putprovidersedgesphonebasesettingsphonebaseid"></a>
 
-## [**PhoneBase**](PhoneBase.html) PutProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId, PhoneBase body = null)
+## [**PhoneBase**](PhoneBase.html) PutProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId, PhoneBase body)
 
 Update a Phone Base Settings by ID
 
@@ -6164,7 +6164,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var phoneBaseId = phoneBaseId_example;  // string | Phone base ID
-            var body = new PhoneBase(); // PhoneBase |  (optional) 
+            var body = new PhoneBase(); // PhoneBase | Phone base settings
 
             try
             {
@@ -6187,7 +6187,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **phoneBaseId** | **string**| Phone base ID |  |
-| **body** | [**PhoneBase**](PhoneBase.html)|  | [optional]  |
+| **body** | [**PhoneBase**](PhoneBase.html)| Phone base settings |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6196,7 +6196,7 @@ namespace Example
 
 <a name="putprovidersedgesphonesphoneid"></a>
 
-## [**Phone**](Phone.html) PutProvidersEdgesPhonesPhoneId (string phoneId, Phone body = null)
+## [**Phone**](Phone.html) PutProvidersEdgesPhonesPhoneId (string phoneId, Phone body)
 
 Update a Phone by ID
 
@@ -6222,7 +6222,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var phoneId = phoneId_example;  // string | Phone ID
-            var body = new Phone(); // Phone |  (optional) 
+            var body = new Phone(); // Phone | Phone
 
             try
             {
@@ -6245,7 +6245,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **phoneId** | **string**| Phone ID |  |
-| **body** | [**Phone**](Phone.html)|  | [optional]  |
+| **body** | [**Phone**](Phone.html)| Phone |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6254,7 +6254,7 @@ namespace Example
 
 <a name="putprovidersedgessitessiteid"></a>
 
-## [**Site**](Site.html) PutProvidersEdgesSitesSiteId (string siteId, Site body = null)
+## [**Site**](Site.html) PutProvidersEdgesSitesSiteId (string siteId, Site body)
 
 Update a Site by ID.
 
@@ -6280,7 +6280,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var siteId = siteId_example;  // string | Site ID
-            var body = new Site(); // Site | Site (optional) 
+            var body = new Site(); // Site | Site
 
             try
             {
@@ -6303,7 +6303,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **siteId** | **string**| Site ID |  |
-| **body** | [**Site**](Site.html)| Site | [optional]  |
+| **body** | [**Site**](Site.html)| Site |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6312,7 +6312,7 @@ namespace Example
 
 <a name="putprovidersedgessitessiteidnumberplans"></a>
 
-## [**List&lt;NumberPlan&gt;**](NumberPlan.html) PutProvidersEdgesSitesSiteIdNumberplans (string siteId, List<NumberPlan> body = null)
+## [**List&lt;NumberPlan&gt;**](NumberPlan.html) PutProvidersEdgesSitesSiteIdNumberplans (string siteId, List<NumberPlan> body)
 
 Update the list of Number Plans.
 
@@ -6338,7 +6338,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var siteId = siteId_example;  // string | Site ID
-            var body = new List<NumberPlan>(); // List<NumberPlan> |  (optional) 
+            var body = new List<NumberPlan>(); // List<NumberPlan> | List of number plans
 
             try
             {
@@ -6361,7 +6361,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **siteId** | **string**| Site ID |  |
-| **body** | [**List<NumberPlan>**](NumberPlan.html)|  | [optional]  |
+| **body** | [**List<NumberPlan>**](NumberPlan.html)| List of number plans |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6370,7 +6370,7 @@ namespace Example
 
 <a name="putprovidersedgestrunkbasesettingstrunkbasesettingsid"></a>
 
-## [**TrunkBase**](TrunkBase.html) PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, TrunkBase body = null)
+## [**TrunkBase**](TrunkBase.html) PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, TrunkBase body)
 
 Update a Trunk Base Settings object by ID
 
@@ -6396,7 +6396,7 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var trunkBaseSettingsId = trunkBaseSettingsId_example;  // string | Trunk Base ID
-            var body = new TrunkBase(); // TrunkBase |  (optional) 
+            var body = new TrunkBase(); // TrunkBase | Trunk base settings
 
             try
             {
@@ -6419,7 +6419,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **trunkBaseSettingsId** | **string**| Trunk Base ID |  |
-| **body** | [**TrunkBase**](TrunkBase.html)|  | [optional]  |
+| **body** | [**TrunkBase**](TrunkBase.html)| Trunk base settings |  |
 {: class="table table-striped"}
 
 ### Return type

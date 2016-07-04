@@ -300,7 +300,7 @@ namespace Example
 
 <a name="patchuseridpresencessourceid"></a>
 
-## [**UserPresence**](UserPresence.html) PatchUserIdPresencesSourceId (string userId, string sourceId, UserPresence body = null)
+## [**UserPresence**](UserPresence.html) PatchUserIdPresencesSourceId (string userId, string sourceId, UserPresence body)
 
 Patch a user's Presence
 
@@ -327,7 +327,7 @@ namespace Example
             var apiInstance = new PresenceApi();
             var userId = userId_example;  // string | user Id
             var sourceId = sourceId_example;  // string | Source
-            var body = new UserPresence(); // UserPresence |  (optional) 
+            var body = new UserPresence(); // UserPresence | User presence
 
             try
             {
@@ -351,7 +351,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **sourceId** | **string**| Source |  |
-| **body** | [**UserPresence**](UserPresence.html)|  | [optional]  |
+| **body** | [**UserPresence**](UserPresence.html)| User presence |  |
 {: class="table table-striped"}
 
 ### Return type

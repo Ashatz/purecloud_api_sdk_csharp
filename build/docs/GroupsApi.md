@@ -312,7 +312,7 @@ namespace Example
 
 <a name="postgroupidmembers"></a>
 
-## void PostGroupIdMembers (string groupId, GroupMembersUpdate body = null)
+## void PostGroupIdMembers (string groupId, GroupMembersUpdate body)
 
 Add members
 
@@ -338,7 +338,7 @@ namespace Example
 
             var apiInstance = new GroupsApi();
             var groupId = groupId_example;  // string | Group ID
-            var body = new GroupMembersUpdate(); // GroupMembersUpdate | Add members (optional) 
+            var body = new GroupMembersUpdate(); // GroupMembersUpdate | Add members
 
             try
             {
@@ -360,7 +360,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-| **body** | [**GroupMembersUpdate**](GroupMembersUpdate.html)| Add members | [optional]  |
+| **body** | [**GroupMembersUpdate**](GroupMembersUpdate.html)| Add members |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -369,7 +369,7 @@ void (empty response body)
 
 <a name="postgroups"></a>
 
-## [**Group**](Group.html) PostGroups (Group body = null)
+## [**Group**](Group.html) PostGroups (Group body)
 
 Create a group
 
@@ -394,7 +394,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new GroupsApi();
-            var body = new Group(); // Group |  (optional) 
+            var body = new Group(); // Group | Group
 
             try
             {
@@ -416,7 +416,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Group**](Group.html)|  | [optional]  |
+| **body** | [**Group**](Group.html)| Group |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -425,7 +425,7 @@ namespace Example
 
 <a name="postsearch"></a>
 
-## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (GroupSearchRequest body = null)
+## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (GroupSearchRequest body)
 
 Search
 
@@ -450,7 +450,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new GroupsApi();
-            var body = new GroupSearchRequest(); // GroupSearchRequest | Search request options (optional) 
+            var body = new GroupSearchRequest(); // GroupSearchRequest | Search request options
 
             try
             {
@@ -472,7 +472,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**GroupSearchRequest**](GroupSearchRequest.html)| Search request options | [optional]  |
+| **body** | [**GroupSearchRequest**](GroupSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 ### Return type

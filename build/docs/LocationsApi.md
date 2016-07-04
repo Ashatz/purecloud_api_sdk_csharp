@@ -189,7 +189,7 @@ namespace Example
 
 <a name="postsearch"></a>
 
-## [**LocationsSearchResponse**](LocationsSearchResponse.html) PostSearch (LocationSearchRequest body = null)
+## [**LocationsSearchResponse**](LocationsSearchResponse.html) PostSearch (LocationSearchRequest body)
 
 Search
 
@@ -214,7 +214,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new LocationsApi();
-            var body = new LocationSearchRequest(); // LocationSearchRequest | Search request options (optional) 
+            var body = new LocationSearchRequest(); // LocationSearchRequest | Search request options
 
             try
             {
@@ -236,7 +236,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**LocationSearchRequest**](LocationSearchRequest.html)| Search request options | [optional]  |
+| **body** | [**LocationSearchRequest**](LocationSearchRequest.html)| Search request options |  |
 {: class="table table-striped"}
 
 ### Return type

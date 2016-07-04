@@ -2293,7 +2293,7 @@ This endpoint does require any parameters.
 
 <a name="postaudits"></a>
 
-## [**AuditSearchResult**](AuditSearchResult.html) PostAudits (DialerAuditRequest body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
+## [**AuditSearchResult**](AuditSearchResult.html) PostAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
 
 Retrieves audits for dialer.
 
@@ -2318,7 +2318,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new DialerAuditRequest(); // DialerAuditRequest | AuditSearch (optional) 
+            var body = new DialerAuditRequest(); // DialerAuditRequest | AuditSearch
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to entity.name)
@@ -2345,7 +2345,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DialerAuditRequest**](DialerAuditRequest.html)| AuditSearch | [optional]  |
+| **body** | [**DialerAuditRequest**](DialerAuditRequest.html)| AuditSearch |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to entity.name] |
@@ -2359,7 +2359,7 @@ namespace Example
 
 <a name="postcallabletimesets"></a>
 
-## [**CallableTimeSet**](CallableTimeSet.html) PostCallabletimesets (CallableTimeSet body = null)
+## [**CallableTimeSet**](CallableTimeSet.html) PostCallabletimesets (CallableTimeSet body)
 
 Create callable time set
 
@@ -2384,7 +2384,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new CallableTimeSet(); // CallableTimeSet | DialerCallableTimeSet (optional) 
+            var body = new CallableTimeSet(); // CallableTimeSet | DialerCallableTimeSet
 
             try
             {
@@ -2406,7 +2406,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CallableTimeSet**](CallableTimeSet.html)| DialerCallableTimeSet | [optional]  |
+| **body** | [**CallableTimeSet**](CallableTimeSet.html)| DialerCallableTimeSet |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2415,7 +2415,7 @@ namespace Example
 
 <a name="postcallanalysisresponsesets"></a>
 
-## [**ResponseSet**](ResponseSet.html) PostCallanalysisresponsesets (ResponseSet body = null)
+## [**ResponseSet**](ResponseSet.html) PostCallanalysisresponsesets (ResponseSet body)
 
 Create a dialer call analysis response set.
 
@@ -2440,7 +2440,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new ResponseSet(); // ResponseSet | ResponseSet (optional) 
+            var body = new ResponseSet(); // ResponseSet | ResponseSet
 
             try
             {
@@ -2462,7 +2462,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ResponseSet**](ResponseSet.html)| ResponseSet | [optional]  |
+| **body** | [**ResponseSet**](ResponseSet.html)| ResponseSet |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2471,7 +2471,7 @@ namespace Example
 
 <a name="postcampaigns"></a>
 
-## [**Campaign**](Campaign.html) PostCampaigns (Campaign body = null)
+## [**Campaign**](Campaign.html) PostCampaigns (Campaign body)
 
 Create a campaign.
 
@@ -2496,7 +2496,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new Campaign(); // Campaign | Campaign (optional) 
+            var body = new Campaign(); // Campaign | Campaign
 
             try
             {
@@ -2518,7 +2518,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Campaign**](Campaign.html)| Campaign | [optional]  |
+| **body** | [**Campaign**](Campaign.html)| Campaign |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2527,7 +2527,7 @@ namespace Example
 
 <a name="postcampaignscampaignidcallbackschedule"></a>
 
-## [**ContactCallbackRequest**](ContactCallbackRequest.html) PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body = null)
+## [**ContactCallbackRequest**](ContactCallbackRequest.html) PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body)
 
 Schedule a Callback for a Dialer Campaign
 
@@ -2553,7 +2553,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var campaignId = campaignId_example;  // string | Campaign ID
-            var body = new ContactCallbackRequest(); // ContactCallbackRequest | ContactCallbackRequest (optional) 
+            var body = new ContactCallbackRequest(); // ContactCallbackRequest | ContactCallbackRequest
 
             try
             {
@@ -2576,7 +2576,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-| **body** | [**ContactCallbackRequest**](ContactCallbackRequest.html)| ContactCallbackRequest | [optional]  |
+| **body** | [**ContactCallbackRequest**](ContactCallbackRequest.html)| ContactCallbackRequest |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2585,7 +2585,7 @@ namespace Example
 
 <a name="postcampaignsprogress"></a>
 
-## [**List&lt;CampaignProgress&gt;**](CampaignProgress.html) PostCampaignsProgress (List<string> body = null)
+## [**List&lt;CampaignProgress&gt;**](CampaignProgress.html) PostCampaignsProgress (List<string> body)
 
 Get progress for a list of campaigns
 
@@ -2610,7 +2610,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = ;  // List<string> | Campaign IDs (optional) 
+            var body = ;  // List<string> | Campaign IDs
 
             try
             {
@@ -2632,7 +2632,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | **List<string>**| Campaign IDs | [optional]  |
+| **body** | **List<string>**| Campaign IDs |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2641,7 +2641,7 @@ namespace Example
 
 <a name="postcontactlists"></a>
 
-## [**ContactList**](ContactList.html) PostContactlists (ContactList body = null)
+## [**ContactList**](ContactList.html) PostContactlists (ContactList body)
 
 Create a contact List.
 
@@ -2666,7 +2666,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new ContactList(); // ContactList | ContactList (optional) 
+            var body = new ContactList(); // ContactList | ContactList
 
             try
             {
@@ -2688,7 +2688,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ContactList**](ContactList.html)| ContactList | [optional]  |
+| **body** | [**ContactList**](ContactList.html)| ContactList |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2697,7 +2697,7 @@ namespace Example
 
 <a name="postcontactlistscontactlistidcontacts"></a>
 
-## [**DialerContact**](DialerContact.html) PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body = null, bool? priority = null)
+## [**DialerContact**](DialerContact.html) PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null)
 
 Add contacts to a contact list.
 
@@ -2723,7 +2723,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var contactListId = contactListId_example;  // string | Contact List ID
-            var body = new List<DialerContact>(); // List<DialerContact> | Contact (optional) 
+            var body = new List<DialerContact>(); // List<DialerContact> | Contact
             var priority = true;  // bool? | Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional) 
 
             try
@@ -2747,7 +2747,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
-| **body** | [**List<DialerContact>**](DialerContact.html)| Contact | [optional]  |
+| **body** | [**List<DialerContact>**](DialerContact.html)| Contact |  |
 | **priority** | **bool?**| Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. | [optional]  |
 {: class="table table-striped"}
 
@@ -2868,7 +2868,7 @@ void (empty response body)
 
 <a name="postdnclists"></a>
 
-## [**DncList**](DncList.html) PostDnclists (DncList body = null)
+## [**DncList**](DncList.html) PostDnclists (DncList body)
 
 Create dialer DNC list
 
@@ -2893,7 +2893,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new DncList(); // DncList | DncList (optional) 
+            var body = new DncList(); // DncList | DncList
 
             try
             {
@@ -2915,7 +2915,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DncList**](DncList.html)| DncList | [optional]  |
+| **body** | [**DncList**](DncList.html)| DncList |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2980,7 +2980,7 @@ namespace Example
 
 <a name="postdnclistsdnclistidphonenumbers"></a>
 
-## void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body = null)
+## void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body)
 
 Add phone numbers to a Dialer DNC list.
 
@@ -3006,7 +3006,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var dncListId = dncListId_example;  // string | DncList ID
-            var body = ;  // List<string> | DNC Phone Numbers (optional) 
+            var body = ;  // List<string> | DNC Phone Numbers
 
             try
             {
@@ -3028,7 +3028,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
-| **body** | **List<string>**| DNC Phone Numbers | [optional]  |
+| **body** | **List<string>**| DNC Phone Numbers |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3037,7 +3037,7 @@ void (empty response body)
 
 <a name="postrulesets"></a>
 
-## [**RuleSet**](RuleSet.html) PostRulesets (RuleSet body = null)
+## [**RuleSet**](RuleSet.html) PostRulesets (RuleSet body)
 
 Create a Dialer Call Analysis Response Set.
 
@@ -3062,7 +3062,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new RuleSet(); // RuleSet | RuleSet (optional) 
+            var body = new RuleSet(); // RuleSet | RuleSet
 
             try
             {
@@ -3084,7 +3084,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RuleSet**](RuleSet.html)| RuleSet | [optional]  |
+| **body** | [**RuleSet**](RuleSet.html)| RuleSet |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3093,7 +3093,7 @@ namespace Example
 
 <a name="postsequences"></a>
 
-## [**CampaignSequence**](CampaignSequence.html) PostSequences (CampaignSequence body = null)
+## [**CampaignSequence**](CampaignSequence.html) PostSequences (CampaignSequence body)
 
 Create a new campaign sequence.
 
@@ -3118,7 +3118,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new CampaignSequence(); // CampaignSequence | Organization (optional) 
+            var body = new CampaignSequence(); // CampaignSequence | Organization
 
             try
             {
@@ -3140,7 +3140,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CampaignSequence**](CampaignSequence.html)| Organization | [optional]  |
+| **body** | [**CampaignSequence**](CampaignSequence.html)| Organization |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3149,7 +3149,7 @@ namespace Example
 
 <a name="putcallabletimesetscallabletimesetid"></a>
 
-## [**CallableTimeSet**](CallableTimeSet.html) PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body = null)
+## [**CallableTimeSet**](CallableTimeSet.html) PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body)
 
 Update callable time set
 
@@ -3175,7 +3175,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var callableTimeSetId = callableTimeSetId_example;  // string | Callable Time Set ID
-            var body = new CallableTimeSet(); // CallableTimeSet | DialerCallableTimeSet (optional) 
+            var body = new CallableTimeSet(); // CallableTimeSet | DialerCallableTimeSet
 
             try
             {
@@ -3198,7 +3198,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callableTimeSetId** | **string**| Callable Time Set ID |  |
-| **body** | [**CallableTimeSet**](CallableTimeSet.html)| DialerCallableTimeSet | [optional]  |
+| **body** | [**CallableTimeSet**](CallableTimeSet.html)| DialerCallableTimeSet |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3207,7 +3207,7 @@ namespace Example
 
 <a name="putcallanalysisresponsesetscallanalysissetid"></a>
 
-## [**ResponseSet**](ResponseSet.html) PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body = null)
+## [**ResponseSet**](ResponseSet.html) PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body)
 
 Update a dialer call analysis response set.
 
@@ -3233,7 +3233,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var callAnalysisSetId = callAnalysisSetId_example;  // string | Call Analysis Response Set ID
-            var body = new ResponseSet(); // ResponseSet | ResponseSet (optional) 
+            var body = new ResponseSet(); // ResponseSet | ResponseSet
 
             try
             {
@@ -3256,7 +3256,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
-| **body** | [**ResponseSet**](ResponseSet.html)| ResponseSet | [optional]  |
+| **body** | [**ResponseSet**](ResponseSet.html)| ResponseSet |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3265,7 +3265,7 @@ namespace Example
 
 <a name="putcampaignscampaignid"></a>
 
-## [**Campaign**](Campaign.html) PutCampaignsCampaignId (string campaignId, Campaign body = null)
+## [**Campaign**](Campaign.html) PutCampaignsCampaignId (string campaignId, Campaign body)
 
 Update a campaign.
 
@@ -3291,7 +3291,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var campaignId = campaignId_example;  // string | Campaign ID
-            var body = new Campaign(); // Campaign | Campaign (optional) 
+            var body = new Campaign(); // Campaign | Campaign
 
             try
             {
@@ -3314,7 +3314,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-| **body** | [**Campaign**](Campaign.html)| Campaign | [optional]  |
+| **body** | [**Campaign**](Campaign.html)| Campaign |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3323,7 +3323,7 @@ namespace Example
 
 <a name="putcampaignscampaignidagentsuserid"></a>
 
-## string** PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body = null)
+## string** PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body)
 
 Send notification that an agent's state changed 
 
@@ -3350,7 +3350,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var campaignId = campaignId_example;  // string | Campaign ID
             var userId = userId_example;  // string | Agent's user ID
-            var body = new Agent(); // Agent | agent (optional) 
+            var body = new Agent(); // Agent | agent
 
             try
             {
@@ -3374,7 +3374,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
 | **userId** | **string**| Agent&#39;s user ID |  |
-| **body** | [**Agent**](Agent.html)| agent | [optional]  |
+| **body** | [**Agent**](Agent.html)| agent |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3383,7 +3383,7 @@ namespace Example
 
 <a name="putcontactlistscontactlistid"></a>
 
-## [**ContactList**](ContactList.html) PutContactlistsContactlistId (string contactListId, ContactList body = null)
+## [**ContactList**](ContactList.html) PutContactlistsContactlistId (string contactListId, ContactList body)
 
 Update a contact list.
 
@@ -3409,7 +3409,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var contactListId = contactListId_example;  // string | ContactList ID
-            var body = new ContactList(); // ContactList | ContactList (optional) 
+            var body = new ContactList(); // ContactList | ContactList
 
             try
             {
@@ -3432,7 +3432,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| ContactList ID |  |
-| **body** | [**ContactList**](ContactList.html)| ContactList | [optional]  |
+| **body** | [**ContactList**](ContactList.html)| ContactList |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3441,7 +3441,7 @@ namespace Example
 
 <a name="putcontactlistscontactlistidcontactscontactid"></a>
 
-## [**DialerContact**](DialerContact.html) PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, DialerContact body = null)
+## [**DialerContact**](DialerContact.html) PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, DialerContact body)
 
 Update a contact.
 
@@ -3468,7 +3468,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var contactListId = contactListId_example;  // string | Contact List ID
             var contactId = contactId_example;  // string | Contact ID
-            var body = new DialerContact(); // DialerContact | Contact (optional) 
+            var body = new DialerContact(); // DialerContact | Contact
 
             try
             {
@@ -3492,7 +3492,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **contactId** | **string**| Contact ID |  |
-| **body** | [**DialerContact**](DialerContact.html)| Contact | [optional]  |
+| **body** | [**DialerContact**](DialerContact.html)| Contact |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3501,7 +3501,7 @@ namespace Example
 
 <a name="putdnclistsdnclistid"></a>
 
-## [**DncList**](DncList.html) PutDnclistsDnclistId (string dncListId, DncList body = null)
+## [**DncList**](DncList.html) PutDnclistsDnclistId (string dncListId, DncList body)
 
 Update dialer DNC list
 
@@ -3527,7 +3527,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var dncListId = dncListId_example;  // string | DncList ID
-            var body = new DncList(); // DncList | DncList (optional) 
+            var body = new DncList(); // DncList | DncList
 
             try
             {
@@ -3550,7 +3550,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
-| **body** | [**DncList**](DncList.html)| DncList | [optional]  |
+| **body** | [**DncList**](DncList.html)| DncList |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3559,7 +3559,7 @@ namespace Example
 
 <a name="putrulesetsrulesetid"></a>
 
-## [**RuleSet**](RuleSet.html) PutRulesetsRulesetId (string ruleSetId, RuleSet body = null)
+## [**RuleSet**](RuleSet.html) PutRulesetsRulesetId (string ruleSetId, RuleSet body)
 
 Update a RuleSet.
 
@@ -3585,7 +3585,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var ruleSetId = ruleSetId_example;  // string | Rule Set ID
-            var body = new RuleSet(); // RuleSet | RuleSet (optional) 
+            var body = new RuleSet(); // RuleSet | RuleSet
 
             try
             {
@@ -3608,7 +3608,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleSetId** | **string**| Rule Set ID |  |
-| **body** | [**RuleSet**](RuleSet.html)| RuleSet | [optional]  |
+| **body** | [**RuleSet**](RuleSet.html)| RuleSet |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3617,7 +3617,7 @@ namespace Example
 
 <a name="putschedulescampaignscampaignid"></a>
 
-## [**CampaignSchedule**](CampaignSchedule.html) PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body = null)
+## [**CampaignSchedule**](CampaignSchedule.html) PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body)
 
 Update a new campaign schedule.
 
@@ -3643,7 +3643,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var campaignId = campaignId_example;  // string | Campaign ID
-            var body = new CampaignSchedule(); // CampaignSchedule | CampaignSchedule (optional) 
+            var body = new CampaignSchedule(); // CampaignSchedule | CampaignSchedule
 
             try
             {
@@ -3666,7 +3666,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-| **body** | [**CampaignSchedule**](CampaignSchedule.html)| CampaignSchedule | [optional]  |
+| **body** | [**CampaignSchedule**](CampaignSchedule.html)| CampaignSchedule |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3675,7 +3675,7 @@ namespace Example
 
 <a name="putschedulessequencessequenceid"></a>
 
-## [**SequenceSchedule**](SequenceSchedule.html) PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body = null)
+## [**SequenceSchedule**](SequenceSchedule.html) PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body)
 
 Update a new sequence schedule.
 
@@ -3701,7 +3701,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var sequenceId = sequenceId_example;  // string | Sequence ID
-            var body = new SequenceSchedule(); // SequenceSchedule | SequenceSchedule (optional) 
+            var body = new SequenceSchedule(); // SequenceSchedule | SequenceSchedule
 
             try
             {
@@ -3724,7 +3724,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Sequence ID |  |
-| **body** | [**SequenceSchedule**](SequenceSchedule.html)| SequenceSchedule | [optional]  |
+| **body** | [**SequenceSchedule**](SequenceSchedule.html)| SequenceSchedule |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3733,7 +3733,7 @@ namespace Example
 
 <a name="putsequencessequenceid"></a>
 
-## [**CampaignSequence**](CampaignSequence.html) PutSequencesSequenceId (string sequenceId, CampaignSequence body = null)
+## [**CampaignSequence**](CampaignSequence.html) PutSequencesSequenceId (string sequenceId, CampaignSequence body)
 
 Update a new campaign sequence.
 
@@ -3759,7 +3759,7 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var sequenceId = sequenceId_example;  // string | Campaign Sequence ID
-            var body = new CampaignSequence(); // CampaignSequence | Organization (optional) 
+            var body = new CampaignSequence(); // CampaignSequence | Organization
 
             try
             {
@@ -3782,7 +3782,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Campaign Sequence ID |  |
-| **body** | [**CampaignSequence**](CampaignSequence.html)| Organization | [optional]  |
+| **body** | [**CampaignSequence**](CampaignSequence.html)| Organization |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3791,7 +3791,7 @@ namespace Example
 
 <a name="putwrapupcodemappings"></a>
 
-## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) PutWrapupcodemappings (WrapUpCodeMapping body = null)
+## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) PutWrapupcodemappings (WrapUpCodeMapping body)
 
 Update the Dialer wrap up code mapping.
 
@@ -3816,7 +3816,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OutboundApi();
-            var body = new WrapUpCodeMapping(); // WrapUpCodeMapping | wrapUpCodeMapping (optional) 
+            var body = new WrapUpCodeMapping(); // WrapUpCodeMapping | wrapUpCodeMapping
 
             try
             {
@@ -3838,7 +3838,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WrapUpCodeMapping**](WrapUpCodeMapping.html)| wrapUpCodeMapping | [optional]  |
+| **body** | [**WrapUpCodeMapping**](WrapUpCodeMapping.html)| wrapUpCodeMapping |  |
 {: class="table table-striped"}
 
 ### Return type

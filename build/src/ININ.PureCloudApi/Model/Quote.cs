@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class Quote :  IEquatable<Quote>
     {
         /// <summary>
-        /// Gets or Sets Type
+        /// Quote type
         /// </summary>
+        /// <value>Quote type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
@@ -38,8 +39,9 @@ namespace ININ.PureCloudApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets Status
+        /// Quote Status
         /// </summary>
+        /// <value>Quote Status</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -64,22 +66,29 @@ namespace ININ.PureCloudApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Quote type
         /// </summary>
+        /// <value>Quote type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
-        /// Gets or Sets Status
+        /// Quote Status
         /// </summary>
+        /// <value>Quote Status</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Quote" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Quote() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Quote" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="PurchaseOrder">PurchaseOrder.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Status">Status.</param>
+        /// <param name="PurchaseOrder">Purchase order (required).</param>
+        /// <param name="Type">Quote type (required).</param>
+        /// <param name="Status">Quote Status (required).</param>
         /// <param name="Currency">Currency.</param>
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="LastUpdatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -96,10 +105,34 @@ namespace ININ.PureCloudApi.Model
         /// <param name="IsAnnualPrepay">IsAnnualPrepay (default to false).</param>
         public Quote(string Name = null, string PurchaseOrder = null, TypeEnum? Type = null, StatusEnum? Status = null, string Currency = null, DateTime? CreatedDate = null, DateTime? LastUpdatedDate = null, string BillingContactEmail = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactPhone = null, bool? IncludeVoiceCharges = null, List<QuoteCharge> Charges = null, string EdgeControlModel = null, List<string> ReferralCodes = null, List<string> DiscountCodes = null, string SalesPartnerCode = null, bool? IsAnnualPrepay = null)
         {
+            // to ensure "PurchaseOrder" is required (not null)
+            if (PurchaseOrder == null)
+            {
+                throw new InvalidDataException("PurchaseOrder is a required property for Quote and cannot be null");
+            }
+            else
+            {
+                this.PurchaseOrder = PurchaseOrder;
+            }
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for Quote and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
+            // to ensure "Status" is required (not null)
+            if (Status == null)
+            {
+                throw new InvalidDataException("Status is a required property for Quote and cannot be null");
+            }
+            else
+            {
+                this.Status = Status;
+            }
             this.Name = Name;
-            this.PurchaseOrder = PurchaseOrder;
-            this.Type = Type;
-            this.Status = Status;
             this.Currency = Currency;
             this.CreatedDate = CreatedDate;
             this.LastUpdatedDate = LastUpdatedDate;
@@ -144,8 +177,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets PurchaseOrder
+        /// Purchase order
         /// </summary>
+        /// <value>Purchase order</value>
         [DataMember(Name="purchaseOrder", EmitDefaultValue=false)]
         public string PurchaseOrder { get; set; }
         /// <summary>

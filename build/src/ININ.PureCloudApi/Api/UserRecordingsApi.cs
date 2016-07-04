@@ -133,10 +133,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="body">UserRecording (optional)</param>
+        /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation (optional)</param>
         /// <returns>UserRecording</returns>
-        UserRecording PutRecordingId (string recordingId, UserRecording body = null, string expand = null);
+        UserRecording PutRecordingId (string recordingId, UserRecording body, string expand = null);
 
         /// <summary>
         /// Update a user recording.
@@ -146,10 +146,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="body">UserRecording (optional)</param>
+        /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation (optional)</param>
         /// <returns>ApiResponse of UserRecording</returns>
-        ApiResponse<UserRecording> PutRecordingIdWithHttpInfo (string recordingId, UserRecording body = null, string expand = null);
+        ApiResponse<UserRecording> PutRecordingIdWithHttpInfo (string recordingId, UserRecording body, string expand = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -271,10 +271,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="body">UserRecording (optional)</param>
+        /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation (optional)</param>
         /// <returns>Task of UserRecording</returns>
-        System.Threading.Tasks.Task<UserRecording> PutRecordingIdAsync (string recordingId, UserRecording body = null, string expand = null);
+        System.Threading.Tasks.Task<UserRecording> PutRecordingIdAsync (string recordingId, UserRecording body, string expand = null);
 
         /// <summary>
         /// Update a user recording.
@@ -284,10 +284,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="body">UserRecording (optional)</param>
+        /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation (optional)</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutRecordingIdAsyncWithHttpInfo (string recordingId, UserRecording body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutRecordingIdAsyncWithHttpInfo (string recordingId, UserRecording body, string expand = null);
         #endregion Asynchronous Operations
     }
 
@@ -1152,10 +1152,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="body">UserRecording (optional)</param>
+        /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation (optional)</param>
         /// <returns>UserRecording</returns>
-        public UserRecording PutRecordingId (string recordingId, UserRecording body = null, string expand = null)
+        public UserRecording PutRecordingId (string recordingId, UserRecording body, string expand = null)
         {
              ApiResponse<UserRecording> localVarResponse = PutRecordingIdWithHttpInfo(recordingId, body, expand);
              return localVarResponse.Data;
@@ -1166,14 +1166,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="body">UserRecording (optional)</param>
+        /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation (optional)</param>
         /// <returns>ApiResponse of UserRecording</returns>
-        public ApiResponse< UserRecording > PutRecordingIdWithHttpInfo (string recordingId, UserRecording body = null, string expand = null)
+        public ApiResponse< UserRecording > PutRecordingIdWithHttpInfo (string recordingId, UserRecording body, string expand = null)
         {
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->PutRecordingId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserRecordingsApi->PutRecordingId");
 
             var localVarPath = "/api/v2/userrecordings/{recordingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1241,10 +1244,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="body">UserRecording (optional)</param>
+        /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation (optional)</param>
         /// <returns>Task of UserRecording</returns>
-        public async System.Threading.Tasks.Task<UserRecording> PutRecordingIdAsync (string recordingId, UserRecording body = null, string expand = null)
+        public async System.Threading.Tasks.Task<UserRecording> PutRecordingIdAsync (string recordingId, UserRecording body, string expand = null)
         {
              ApiResponse<UserRecording> localVarResponse = await PutRecordingIdAsyncWithHttpInfo(recordingId, body, expand);
              return localVarResponse.Data;
@@ -1256,14 +1259,17 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="body">UserRecording (optional)</param>
+        /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation (optional)</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutRecordingIdAsyncWithHttpInfo (string recordingId, UserRecording body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutRecordingIdAsyncWithHttpInfo (string recordingId, UserRecording body, string expand = null)
         {
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->PutRecordingId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserRecordingsApi->PutRecordingId");
 
             var localVarPath = "/api/v2/userrecordings/{recordingId}";
             var localVarPathParams = new Dictionary<String, String>();

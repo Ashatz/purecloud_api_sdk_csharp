@@ -23,11 +23,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Resources">Resources.</param>
-        public Prompt(string Name = null, string Description = null, List<PromptAsset> Resources = null)
+        /// <param name="CurrentOperation">CurrentOperation.</param>
+        public Prompt(string Name = null, string Description = null, List<PromptAsset> Resources = null, Operation CurrentOperation = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Resources = Resources;
+            this.CurrentOperation = CurrentOperation;
         }
         
         /// <summary>
@@ -52,6 +54,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="resources", EmitDefaultValue=false)]
         public List<PromptAsset> Resources { get; set; }
         /// <summary>
+        /// Gets or Sets CurrentOperation
+        /// </summary>
+        [DataMember(Name="currentOperation", EmitDefaultValue=false)]
+        public Operation CurrentOperation { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -69,6 +76,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Resources: ").Append(Resources).Append("\n");
+            sb.Append("  CurrentOperation: ").Append(CurrentOperation).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -127,6 +135,11 @@ namespace ININ.PureCloudApi.Model
                     this.Resources.SequenceEqual(other.Resources)
                 ) &&
                 (
+                    this.CurrentOperation == other.CurrentOperation ||
+                    this.CurrentOperation != null &&
+                    this.CurrentOperation.Equals(other.CurrentOperation)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -152,6 +165,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Resources != null)
                     hash = hash * 59 + this.Resources.GetHashCode();
+                if (this.CurrentOperation != null)
+                    hash = hash * 59 + this.CurrentOperation.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

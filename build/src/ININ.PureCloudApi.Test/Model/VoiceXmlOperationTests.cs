@@ -139,6 +139,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'TimeoutMS'
         }
         /// <summary>
+        /// Test the property 'CurrentOperation'
+        /// </summary>
+        [Test]
+        public void CurrentOperationTest()
+        {
+            // TODO: unit test for the property 'CurrentOperation'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

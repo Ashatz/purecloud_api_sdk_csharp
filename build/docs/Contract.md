@@ -9,9 +9,9 @@ title: Contract
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Quote** | [**Quote**](Quote.html) |  | [optional] |
-| **SignerUrl** | **string** |  | [optional] |
-| **Job** | [**ContractJob**](ContractJob.html) |  | [optional] |
+| **Quote** | [**Quote**](Quote.html) | Quote | |
+| **SignerUrl** | **string** | Signer URL | |
+| **Job** | [**ContractJob**](ContractJob.html) | Job | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

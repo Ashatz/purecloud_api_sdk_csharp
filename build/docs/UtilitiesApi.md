@@ -123,7 +123,7 @@ namespace Example
 
 <a name="postdetails"></a>
 
-## [**ParsedCertificate**](ParsedCertificate.html) PostDetails (Certificate body = null)
+## [**ParsedCertificate**](ParsedCertificate.html) PostDetails (Certificate body)
 
 Returns the information about an X509 PEM encoded certificate or certificate chain.
 
@@ -148,7 +148,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new UtilitiesApi();
-            var body = new Certificate(); // Certificate |  (optional) 
+            var body = new Certificate(); // Certificate | Certificate
 
             try
             {
@@ -170,7 +170,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Certificate**](Certificate.html)|  | [optional]  |
+| **body** | [**Certificate**](Certificate.html)| Certificate |  |
 {: class="table table-striped"}
 
 ### Return type

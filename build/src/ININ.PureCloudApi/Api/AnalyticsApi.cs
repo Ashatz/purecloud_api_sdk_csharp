@@ -262,9 +262,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>AggregateQueryResponse</returns>
-        AggregateQueryResponse PostConversationsAggregatesQuery (AggregationQuery body = null);
+        AggregateQueryResponse PostConversationsAggregatesQuery (AggregationQuery body);
 
         /// <summary>
         /// Query for conversation aggregates
@@ -273,9 +273,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        ApiResponse<AggregateQueryResponse> PostConversationsAggregatesQueryWithHttpInfo (AggregationQuery body = null);
+        ApiResponse<AggregateQueryResponse> PostConversationsAggregatesQueryWithHttpInfo (AggregationQuery body);
         /// <summary>
         /// Index conversation properties
         /// </summary>
@@ -284,9 +284,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request (optional)</param>
+        /// <param name="body">request</param>
         /// <returns>PropertyIndexRequest</returns>
-        PropertyIndexRequest PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body = null);
+        PropertyIndexRequest PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body);
 
         /// <summary>
         /// Index conversation properties
@@ -296,9 +296,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request (optional)</param>
+        /// <param name="body">request</param>
         /// <returns>ApiResponse of PropertyIndexRequest</returns>
-        ApiResponse<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesWithHttpInfo (string conversationId, PropertyIndexRequest body = null);
+        ApiResponse<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesWithHttpInfo (string conversationId, PropertyIndexRequest body);
         /// <summary>
         /// Query for conversation details
         /// </summary>
@@ -306,9 +306,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>AnalyticsConversationQueryResponse</returns>
-        AnalyticsConversationQueryResponse PostConversationsDetailsQuery (ConversationQuery body = null);
+        AnalyticsConversationQueryResponse PostConversationsDetailsQuery (ConversationQuery body);
 
         /// <summary>
         /// Query for conversation details
@@ -317,9 +317,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of AnalyticsConversationQueryResponse</returns>
-        ApiResponse<AnalyticsConversationQueryResponse> PostConversationsDetailsQueryWithHttpInfo (ConversationQuery body = null);
+        ApiResponse<AnalyticsConversationQueryResponse> PostConversationsDetailsQueryWithHttpInfo (ConversationQuery body);
         /// <summary>
         /// Query for evaluation aggregates
         /// </summary>
@@ -327,9 +327,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>AggregateQueryResponse</returns>
-        AggregateQueryResponse PostEvaluationsAggregatesQuery (AggregationQuery body = null);
+        AggregateQueryResponse PostEvaluationsAggregatesQuery (AggregationQuery body);
 
         /// <summary>
         /// Query for evaluation aggregates
@@ -338,9 +338,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        ApiResponse<AggregateQueryResponse> PostEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body = null);
+        ApiResponse<AggregateQueryResponse> PostEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body);
         /// <summary>
         /// Query for queue observations
         /// </summary>
@@ -348,9 +348,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ObservationQueryResponse</returns>
-        ObservationQueryResponse PostQueuesObservationsQuery (ObservationQuery body = null);
+        ObservationQueryResponse PostQueuesObservationsQuery (ObservationQuery body);
 
         /// <summary>
         /// Query for queue observations
@@ -359,9 +359,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of ObservationQueryResponse</returns>
-        ApiResponse<ObservationQueryResponse> PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body = null);
+        ApiResponse<ObservationQueryResponse> PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body);
         /// <summary>
         /// Create a scheduled report job
         /// </summary>
@@ -369,9 +369,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a scheduled report job.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        ReportSchedule PostReportingSchedules (ReportSchedule body = null);
+        ReportSchedule PostReportingSchedules (ReportSchedule body);
 
         /// <summary>
         /// Create a scheduled report job
@@ -380,9 +380,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a scheduled report job.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        ApiResponse<ReportSchedule> PostReportingSchedulesWithHttpInfo (ReportSchedule body = null);
+        ApiResponse<ReportSchedule> PostReportingSchedulesWithHttpInfo (ReportSchedule body);
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue
         /// </summary>
@@ -411,9 +411,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>PresenceQueryResponse</returns>
-        PresenceQueryResponse PostUsersAggregatesQuery (AggregationQuery body = null);
+        PresenceQueryResponse PostUsersAggregatesQuery (AggregationQuery body);
 
         /// <summary>
         /// Query for user aggregates
@@ -422,9 +422,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of PresenceQueryResponse</returns>
-        ApiResponse<PresenceQueryResponse> PostUsersAggregatesQueryWithHttpInfo (AggregationQuery body = null);
+        ApiResponse<PresenceQueryResponse> PostUsersAggregatesQueryWithHttpInfo (AggregationQuery body);
         /// <summary>
         /// Query for user observations
         /// </summary>
@@ -432,9 +432,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ObservationQueryResponse</returns>
-        ObservationQueryResponse PostUsersObservationsQuery (ObservationQuery body = null);
+        ObservationQueryResponse PostUsersObservationsQuery (ObservationQuery body);
 
         /// <summary>
         /// Query for user observations
@@ -443,9 +443,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of ObservationQueryResponse</returns>
-        ApiResponse<ObservationQueryResponse> PostUsersObservationsQueryWithHttpInfo (ObservationQuery body = null);
+        ApiResponse<ObservationQueryResponse> PostUsersObservationsQueryWithHttpInfo (ObservationQuery body);
         /// <summary>
         /// Update a scheduled report job.
         /// </summary>
@@ -454,9 +454,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        ReportSchedule PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body = null);
+        ReportSchedule PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body);
 
         /// <summary>
         /// Update a scheduled report job.
@@ -466,9 +466,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        ApiResponse<ReportSchedule> PutReportingSchedulesScheduleIdWithHttpInfo (string scheduleId, ReportSchedule body = null);
+        ApiResponse<ReportSchedule> PutReportingSchedulesScheduleIdWithHttpInfo (string scheduleId, ReportSchedule body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -719,9 +719,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of AggregateQueryResponse</returns>
-        System.Threading.Tasks.Task<AggregateQueryResponse> PostConversationsAggregatesQueryAsync (AggregationQuery body = null);
+        System.Threading.Tasks.Task<AggregateQueryResponse> PostConversationsAggregatesQueryAsync (AggregationQuery body);
 
         /// <summary>
         /// Query for conversation aggregates
@@ -730,9 +730,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
         /// <summary>
         /// Index conversation properties
         /// </summary>
@@ -741,9 +741,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request (optional)</param>
+        /// <param name="body">request</param>
         /// <returns>Task of PropertyIndexRequest</returns>
-        System.Threading.Tasks.Task<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesAsync (string conversationId, PropertyIndexRequest body = null);
+        System.Threading.Tasks.Task<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesAsync (string conversationId, PropertyIndexRequest body);
 
         /// <summary>
         /// Index conversation properties
@@ -753,9 +753,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request (optional)</param>
+        /// <param name="body">request</param>
         /// <returns>Task of ApiResponse (PropertyIndexRequest)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PropertyIndexRequest>> PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo (string conversationId, PropertyIndexRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<PropertyIndexRequest>> PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo (string conversationId, PropertyIndexRequest body);
         /// <summary>
         /// Query for conversation details
         /// </summary>
@@ -763,9 +763,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of AnalyticsConversationQueryResponse</returns>
-        System.Threading.Tasks.Task<AnalyticsConversationQueryResponse> PostConversationsDetailsQueryAsync (ConversationQuery body = null);
+        System.Threading.Tasks.Task<AnalyticsConversationQueryResponse> PostConversationsDetailsQueryAsync (ConversationQuery body);
 
         /// <summary>
         /// Query for conversation details
@@ -774,9 +774,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AnalyticsConversationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationQueryResponse>> PostConversationsDetailsQueryAsyncWithHttpInfo (ConversationQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationQueryResponse>> PostConversationsDetailsQueryAsyncWithHttpInfo (ConversationQuery body);
         /// <summary>
         /// Query for evaluation aggregates
         /// </summary>
@@ -784,9 +784,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of AggregateQueryResponse</returns>
-        System.Threading.Tasks.Task<AggregateQueryResponse> PostEvaluationsAggregatesQueryAsync (AggregationQuery body = null);
+        System.Threading.Tasks.Task<AggregateQueryResponse> PostEvaluationsAggregatesQueryAsync (AggregationQuery body);
 
         /// <summary>
         /// Query for evaluation aggregates
@@ -795,9 +795,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
         /// <summary>
         /// Query for queue observations
         /// </summary>
@@ -805,9 +805,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ObservationQueryResponse</returns>
-        System.Threading.Tasks.Task<ObservationQueryResponse> PostQueuesObservationsQueryAsync (ObservationQuery body = null);
+        System.Threading.Tasks.Task<ObservationQueryResponse> PostQueuesObservationsQueryAsync (ObservationQuery body);
 
         /// <summary>
         /// Query for queue observations
@@ -816,9 +816,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
         /// <summary>
         /// Create a scheduled report job
         /// </summary>
@@ -826,9 +826,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a scheduled report job.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        System.Threading.Tasks.Task<ReportSchedule> PostReportingSchedulesAsync (ReportSchedule body = null);
+        System.Threading.Tasks.Task<ReportSchedule> PostReportingSchedulesAsync (ReportSchedule body);
 
         /// <summary>
         /// Create a scheduled report job
@@ -837,9 +837,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a scheduled report job.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostReportingSchedulesAsyncWithHttpInfo (ReportSchedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostReportingSchedulesAsyncWithHttpInfo (ReportSchedule body);
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue
         /// </summary>
@@ -868,9 +868,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of PresenceQueryResponse</returns>
-        System.Threading.Tasks.Task<PresenceQueryResponse> PostUsersAggregatesQueryAsync (AggregationQuery body = null);
+        System.Threading.Tasks.Task<PresenceQueryResponse> PostUsersAggregatesQueryAsync (AggregationQuery body);
 
         /// <summary>
         /// Query for user aggregates
@@ -879,9 +879,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (PresenceQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
         /// <summary>
         /// Query for user observations
         /// </summary>
@@ -889,9 +889,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ObservationQueryResponse</returns>
-        System.Threading.Tasks.Task<ObservationQueryResponse> PostUsersObservationsQueryAsync (ObservationQuery body = null);
+        System.Threading.Tasks.Task<ObservationQueryResponse> PostUsersObservationsQueryAsync (ObservationQuery body);
 
         /// <summary>
         /// Query for user observations
@@ -900,9 +900,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostUsersObservationsQueryAsyncWithHttpInfo (ObservationQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostUsersObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
         /// <summary>
         /// Update a scheduled report job.
         /// </summary>
@@ -911,9 +911,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        System.Threading.Tasks.Task<ReportSchedule> PutReportingSchedulesScheduleIdAsync (string scheduleId, ReportSchedule body = null);
+        System.Threading.Tasks.Task<ReportSchedule> PutReportingSchedulesScheduleIdAsync (string scheduleId, ReportSchedule body);
 
         /// <summary>
         /// Update a scheduled report job.
@@ -923,9 +923,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId, ReportSchedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId, ReportSchedule body);
         #endregion Asynchronous Operations
     }
 
@@ -2715,9 +2715,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for conversation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>AggregateQueryResponse</returns>
-        public AggregateQueryResponse PostConversationsAggregatesQuery (AggregationQuery body = null)
+        public AggregateQueryResponse PostConversationsAggregatesQuery (AggregationQuery body)
         {
              ApiResponse<AggregateQueryResponse> localVarResponse = PostConversationsAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2727,10 +2727,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for conversation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        public ApiResponse< AggregateQueryResponse > PostConversationsAggregatesQueryWithHttpInfo (AggregationQuery body = null)
+        public ApiResponse< AggregateQueryResponse > PostConversationsAggregatesQueryWithHttpInfo (AggregationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostConversationsAggregatesQuery");
 
             var localVarPath = "/api/v2/analytics/conversations/aggregates/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2795,9 +2798,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for conversation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of AggregateQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostConversationsAggregatesQueryAsync (AggregationQuery body = null)
+        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostConversationsAggregatesQueryAsync (AggregationQuery body)
         {
              ApiResponse<AggregateQueryResponse> localVarResponse = await PostConversationsAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2808,10 +2811,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for conversation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostConversationsAggregatesQuery");
 
             var localVarPath = "/api/v2/analytics/conversations/aggregates/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2877,9 +2883,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request (optional)</param>
+        /// <param name="body">request</param>
         /// <returns>PropertyIndexRequest</returns>
-        public PropertyIndexRequest PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body = null)
+        public PropertyIndexRequest PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body)
         {
              ApiResponse<PropertyIndexRequest> localVarResponse = PostConversationsConversationIdDetailsPropertiesWithHttpInfo(conversationId, body);
              return localVarResponse.Data;
@@ -2890,13 +2896,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request (optional)</param>
+        /// <param name="body">request</param>
         /// <returns>ApiResponse of PropertyIndexRequest</returns>
-        public ApiResponse< PropertyIndexRequest > PostConversationsConversationIdDetailsPropertiesWithHttpInfo (string conversationId, PropertyIndexRequest body = null)
+        public ApiResponse< PropertyIndexRequest > PostConversationsConversationIdDetailsPropertiesWithHttpInfo (string conversationId, PropertyIndexRequest body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling AnalyticsApi->PostConversationsConversationIdDetailsProperties");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostConversationsConversationIdDetailsProperties");
 
             var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details/properties";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2963,9 +2972,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request (optional)</param>
+        /// <param name="body">request</param>
         /// <returns>Task of PropertyIndexRequest</returns>
-        public async System.Threading.Tasks.Task<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesAsync (string conversationId, PropertyIndexRequest body = null)
+        public async System.Threading.Tasks.Task<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesAsync (string conversationId, PropertyIndexRequest body)
         {
              ApiResponse<PropertyIndexRequest> localVarResponse = await PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo(conversationId, body);
              return localVarResponse.Data;
@@ -2977,13 +2986,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request (optional)</param>
+        /// <param name="body">request</param>
         /// <returns>Task of ApiResponse (PropertyIndexRequest)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PropertyIndexRequest>> PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo (string conversationId, PropertyIndexRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PropertyIndexRequest>> PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo (string conversationId, PropertyIndexRequest body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling AnalyticsApi->PostConversationsConversationIdDetailsProperties");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostConversationsConversationIdDetailsProperties");
 
             var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details/properties";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3049,9 +3061,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for conversation details 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>AnalyticsConversationQueryResponse</returns>
-        public AnalyticsConversationQueryResponse PostConversationsDetailsQuery (ConversationQuery body = null)
+        public AnalyticsConversationQueryResponse PostConversationsDetailsQuery (ConversationQuery body)
         {
              ApiResponse<AnalyticsConversationQueryResponse> localVarResponse = PostConversationsDetailsQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3061,10 +3073,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for conversation details 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of AnalyticsConversationQueryResponse</returns>
-        public ApiResponse< AnalyticsConversationQueryResponse > PostConversationsDetailsQueryWithHttpInfo (ConversationQuery body = null)
+        public ApiResponse< AnalyticsConversationQueryResponse > PostConversationsDetailsQueryWithHttpInfo (ConversationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostConversationsDetailsQuery");
 
             var localVarPath = "/api/v2/analytics/conversations/details/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3129,9 +3144,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for conversation details 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of AnalyticsConversationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AnalyticsConversationQueryResponse> PostConversationsDetailsQueryAsync (ConversationQuery body = null)
+        public async System.Threading.Tasks.Task<AnalyticsConversationQueryResponse> PostConversationsDetailsQueryAsync (ConversationQuery body)
         {
              ApiResponse<AnalyticsConversationQueryResponse> localVarResponse = await PostConversationsDetailsQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3142,10 +3157,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for conversation details 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AnalyticsConversationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationQueryResponse>> PostConversationsDetailsQueryAsyncWithHttpInfo (ConversationQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationQueryResponse>> PostConversationsDetailsQueryAsyncWithHttpInfo (ConversationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostConversationsDetailsQuery");
 
             var localVarPath = "/api/v2/analytics/conversations/details/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3210,9 +3228,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for evaluation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>AggregateQueryResponse</returns>
-        public AggregateQueryResponse PostEvaluationsAggregatesQuery (AggregationQuery body = null)
+        public AggregateQueryResponse PostEvaluationsAggregatesQuery (AggregationQuery body)
         {
              ApiResponse<AggregateQueryResponse> localVarResponse = PostEvaluationsAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3222,10 +3240,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for evaluation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of AggregateQueryResponse</returns>
-        public ApiResponse< AggregateQueryResponse > PostEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body = null)
+        public ApiResponse< AggregateQueryResponse > PostEvaluationsAggregatesQueryWithHttpInfo (AggregationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostEvaluationsAggregatesQuery");
 
             var localVarPath = "/api/v2/analytics/evaluations/aggregates/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3290,9 +3311,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for evaluation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of AggregateQueryResponse</returns>
-        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostEvaluationsAggregatesQueryAsync (AggregationQuery body = null)
+        public async System.Threading.Tasks.Task<AggregateQueryResponse> PostEvaluationsAggregatesQueryAsync (AggregationQuery body)
         {
              ApiResponse<AggregateQueryResponse> localVarResponse = await PostEvaluationsAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3303,10 +3324,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for evaluation aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostEvaluationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostEvaluationsAggregatesQuery");
 
             var localVarPath = "/api/v2/analytics/evaluations/aggregates/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3371,9 +3395,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for queue observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ObservationQueryResponse</returns>
-        public ObservationQueryResponse PostQueuesObservationsQuery (ObservationQuery body = null)
+        public ObservationQueryResponse PostQueuesObservationsQuery (ObservationQuery body)
         {
              ApiResponse<ObservationQueryResponse> localVarResponse = PostQueuesObservationsQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3383,10 +3407,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for queue observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of ObservationQueryResponse</returns>
-        public ApiResponse< ObservationQueryResponse > PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body = null)
+        public ApiResponse< ObservationQueryResponse > PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostQueuesObservationsQuery");
 
             var localVarPath = "/api/v2/analytics/queues/observations/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3451,9 +3478,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for queue observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ObservationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<ObservationQueryResponse> PostQueuesObservationsQueryAsync (ObservationQuery body = null)
+        public async System.Threading.Tasks.Task<ObservationQueryResponse> PostQueuesObservationsQueryAsync (ObservationQuery body)
         {
              ApiResponse<ObservationQueryResponse> localVarResponse = await PostQueuesObservationsQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3464,10 +3491,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for queue observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostQueuesObservationsQuery");
 
             var localVarPath = "/api/v2/analytics/queues/observations/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3532,9 +3562,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a scheduled report job Create a scheduled report job.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        public ReportSchedule PostReportingSchedules (ReportSchedule body = null)
+        public ReportSchedule PostReportingSchedules (ReportSchedule body)
         {
              ApiResponse<ReportSchedule> localVarResponse = PostReportingSchedulesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3544,10 +3574,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a scheduled report job Create a scheduled report job.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        public ApiResponse< ReportSchedule > PostReportingSchedulesWithHttpInfo (ReportSchedule body = null)
+        public ApiResponse< ReportSchedule > PostReportingSchedulesWithHttpInfo (ReportSchedule body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostReportingSchedules");
 
             var localVarPath = "/api/v2/analytics/reporting/schedules";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3612,9 +3645,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a scheduled report job Create a scheduled report job.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        public async System.Threading.Tasks.Task<ReportSchedule> PostReportingSchedulesAsync (ReportSchedule body = null)
+        public async System.Threading.Tasks.Task<ReportSchedule> PostReportingSchedulesAsync (ReportSchedule body)
         {
              ApiResponse<ReportSchedule> localVarResponse = await PostReportingSchedulesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3625,10 +3658,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a scheduled report job Create a scheduled report job.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostReportingSchedulesAsyncWithHttpInfo (ReportSchedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostReportingSchedulesAsyncWithHttpInfo (ReportSchedule body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostReportingSchedules");
 
             var localVarPath = "/api/v2/analytics/reporting/schedules";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3846,9 +3882,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for user aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>PresenceQueryResponse</returns>
-        public PresenceQueryResponse PostUsersAggregatesQuery (AggregationQuery body = null)
+        public PresenceQueryResponse PostUsersAggregatesQuery (AggregationQuery body)
         {
              ApiResponse<PresenceQueryResponse> localVarResponse = PostUsersAggregatesQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3858,10 +3894,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for user aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of PresenceQueryResponse</returns>
-        public ApiResponse< PresenceQueryResponse > PostUsersAggregatesQueryWithHttpInfo (AggregationQuery body = null)
+        public ApiResponse< PresenceQueryResponse > PostUsersAggregatesQueryWithHttpInfo (AggregationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostUsersAggregatesQuery");
 
             var localVarPath = "/api/v2/analytics/users/aggregates/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3926,9 +3965,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for user aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of PresenceQueryResponse</returns>
-        public async System.Threading.Tasks.Task<PresenceQueryResponse> PostUsersAggregatesQueryAsync (AggregationQuery body = null)
+        public async System.Threading.Tasks.Task<PresenceQueryResponse> PostUsersAggregatesQueryAsync (AggregationQuery body)
         {
              ApiResponse<PresenceQueryResponse> localVarResponse = await PostUsersAggregatesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3939,10 +3978,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for user aggregates 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (PresenceQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostUsersAggregatesQuery");
 
             var localVarPath = "/api/v2/analytics/users/aggregates/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4007,9 +4049,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for user observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ObservationQueryResponse</returns>
-        public ObservationQueryResponse PostUsersObservationsQuery (ObservationQuery body = null)
+        public ObservationQueryResponse PostUsersObservationsQuery (ObservationQuery body)
         {
              ApiResponse<ObservationQueryResponse> localVarResponse = PostUsersObservationsQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -4019,10 +4061,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for user observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>ApiResponse of ObservationQueryResponse</returns>
-        public ApiResponse< ObservationQueryResponse > PostUsersObservationsQueryWithHttpInfo (ObservationQuery body = null)
+        public ApiResponse< ObservationQueryResponse > PostUsersObservationsQueryWithHttpInfo (ObservationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostUsersObservationsQuery");
 
             var localVarPath = "/api/v2/analytics/users/observations/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4087,9 +4132,9 @@ namespace ININ.PureCloudApi.Api
         /// Query for user observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ObservationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<ObservationQueryResponse> PostUsersObservationsQueryAsync (ObservationQuery body = null)
+        public async System.Threading.Tasks.Task<ObservationQueryResponse> PostUsersObservationsQueryAsync (ObservationQuery body)
         {
              ApiResponse<ObservationQueryResponse> localVarResponse = await PostUsersObservationsQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -4100,10 +4145,13 @@ namespace ININ.PureCloudApi.Api
         /// Query for user observations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">query (optional)</param>
+        /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostUsersObservationsQueryAsyncWithHttpInfo (ObservationQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostUsersObservationsQueryAsyncWithHttpInfo (ObservationQuery body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostUsersObservationsQuery");
 
             var localVarPath = "/api/v2/analytics/users/observations/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4169,9 +4217,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        public ReportSchedule PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body = null)
+        public ReportSchedule PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body)
         {
              ApiResponse<ReportSchedule> localVarResponse = PutReportingSchedulesScheduleIdWithHttpInfo(scheduleId, body);
              return localVarResponse.Data;
@@ -4182,13 +4230,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        public ApiResponse< ReportSchedule > PutReportingSchedulesScheduleIdWithHttpInfo (string scheduleId, ReportSchedule body = null)
+        public ApiResponse< ReportSchedule > PutReportingSchedulesScheduleIdWithHttpInfo (string scheduleId, ReportSchedule body)
         {
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
                 throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PutReportingSchedulesScheduleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PutReportingSchedulesScheduleId");
 
             var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4255,9 +4306,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        public async System.Threading.Tasks.Task<ReportSchedule> PutReportingSchedulesScheduleIdAsync (string scheduleId, ReportSchedule body = null)
+        public async System.Threading.Tasks.Task<ReportSchedule> PutReportingSchedulesScheduleIdAsync (string scheduleId, ReportSchedule body)
         {
              ApiResponse<ReportSchedule> localVarResponse = await PutReportingSchedulesScheduleIdAsyncWithHttpInfo(scheduleId, body);
              return localVarResponse.Data;
@@ -4269,13 +4320,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule (optional)</param>
+        /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId, ReportSchedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId, ReportSchedule body)
         {
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
                 throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PutReportingSchedulesScheduleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PutReportingSchedulesScheduleId");
 
             var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
             var localVarPathParams = new Dictionary<String, String>();

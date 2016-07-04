@@ -396,7 +396,7 @@ namespace Example
 
 <a name="postinteractionstatsrules"></a>
 
-## [**InteractionStatsRule**](InteractionStatsRule.html) PostInteractionstatsRules (InteractionStatsRule body = null)
+## [**InteractionStatsRule**](InteractionStatsRule.html) PostInteractionstatsRules (InteractionStatsRule body)
 
 Create an interaction stats rule.
 
@@ -421,7 +421,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AlertingApi();
-            var body = new InteractionStatsRule(); // InteractionStatsRule | AlertingRule (optional) 
+            var body = new InteractionStatsRule(); // InteractionStatsRule | AlertingRule
 
             try
             {
@@ -443,7 +443,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule | [optional]  |
+| **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -452,7 +452,7 @@ namespace Example
 
 <a name="putinteractionstatsalertsalertid"></a>
 
-## [**UnreadStatus**](UnreadStatus.html) PutInteractionstatsAlertsAlertId (string alertId, UnreadStatus body = null)
+## [**UnreadStatus**](UnreadStatus.html) PutInteractionstatsAlertsAlertId (string alertId, UnreadStatus body)
 
 Update an interaction stats alert read status
 
@@ -478,7 +478,7 @@ namespace Example
 
             var apiInstance = new AlertingApi();
             var alertId = alertId_example;  // string | Alert ID
-            var body = new UnreadStatus(); // UnreadStatus | InteractionStatsAlert (optional) 
+            var body = new UnreadStatus(); // UnreadStatus | InteractionStatsAlert
 
             try
             {
@@ -501,7 +501,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
-| **body** | [**UnreadStatus**](UnreadStatus.html)| InteractionStatsAlert | [optional]  |
+| **body** | [**UnreadStatus**](UnreadStatus.html)| InteractionStatsAlert |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -510,7 +510,7 @@ namespace Example
 
 <a name="putinteractionstatsrulesruleid"></a>
 
-## [**InteractionStatsRule**](InteractionStatsRule.html) PutInteractionstatsRulesRuleId (string ruleId, InteractionStatsRule body = null)
+## [**InteractionStatsRule**](InteractionStatsRule.html) PutInteractionstatsRulesRuleId (string ruleId, InteractionStatsRule body)
 
 Update an interaction stats rule
 
@@ -536,7 +536,7 @@ namespace Example
 
             var apiInstance = new AlertingApi();
             var ruleId = ruleId_example;  // string | Rule ID
-            var body = new InteractionStatsRule(); // InteractionStatsRule | AlertingRule (optional) 
+            var body = new InteractionStatsRule(); // InteractionStatsRule | AlertingRule
 
             try
             {
@@ -559,7 +559,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
-| **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule | [optional]  |
+| **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule |  |
 {: class="table table-striped"}
 
 ### Return type

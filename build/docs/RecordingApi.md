@@ -807,7 +807,7 @@ namespace Example
 
 <a name="patchmediaretentionpoliciespolicyid"></a>
 
-## [**Policy**](Policy.html) PatchMediaretentionpoliciesPolicyId (string policyId, Policy body = null)
+## [**Policy**](Policy.html) PatchMediaretentionpoliciesPolicyId (string policyId, Policy body)
 
 Patch a media retention policy
 
@@ -833,7 +833,7 @@ namespace Example
 
             var apiInstance = new RecordingApi();
             var policyId = policyId_example;  // string | Policy ID
-            var body = new Policy(); // Policy | Policy (optional) 
+            var body = new Policy(); // Policy | Policy
 
             try
             {
@@ -856,7 +856,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-| **body** | [**Policy**](Policy.html)| Policy | [optional]  |
+| **body** | [**Policy**](Policy.html)| Policy |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -865,7 +865,7 @@ namespace Example
 
 <a name="postconversationidrecordingsrecordingidannotations"></a>
 
-## [**Annotation**](Annotation.html) PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body = null)
+## [**Annotation**](Annotation.html) PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body)
 
 Create annotation
 
@@ -892,7 +892,7 @@ namespace Example
             var apiInstance = new RecordingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
             var recordingId = recordingId_example;  // string | Recording ID
-            var body = new Annotation(); // Annotation | annotation (optional) 
+            var body = new Annotation(); // Annotation | annotation
 
             try
             {
@@ -916,7 +916,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-| **body** | [**Annotation**](Annotation.html)| annotation | [optional]  |
+| **body** | [**Annotation**](Annotation.html)| annotation |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -925,7 +925,7 @@ namespace Example
 
 <a name="postmediaretentionpolicies"></a>
 
-## [**Policy**](Policy.html) PostMediaretentionpolicies (Policy body = null)
+## [**Policy**](Policy.html) PostMediaretentionpolicies (Policy body)
 
 Create media retention policy
 
@@ -950,7 +950,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RecordingApi();
-            var body = new Policy(); // Policy | Policy (optional) 
+            var body = new Policy(); // Policy | Policy
 
             try
             {
@@ -972,7 +972,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Policy**](Policy.html)| Policy | [optional]  |
+| **body** | [**Policy**](Policy.html)| Policy |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1040,7 +1040,7 @@ void (empty response body)
 
 <a name="putconversationidrecordingsrecordingidannotationsannotationid"></a>
 
-## [**Annotation**](Annotation.html) PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body = null)
+## [**Annotation**](Annotation.html) PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body)
 
 Update annotation
 
@@ -1068,7 +1068,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | Conversation ID
             var recordingId = recordingId_example;  // string | Recording ID
             var annotationId = annotationId_example;  // string | Annotation ID
-            var body = new Annotation(); // Annotation | annotation (optional) 
+            var body = new Annotation(); // Annotation | annotation
 
             try
             {
@@ -1093,7 +1093,7 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
 | **annotationId** | **string**| Annotation ID |  |
-| **body** | [**Annotation**](Annotation.html)| annotation | [optional]  |
+| **body** | [**Annotation**](Annotation.html)| annotation |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1102,7 +1102,7 @@ namespace Example
 
 <a name="putmediaretentionpoliciespolicyid"></a>
 
-## [**Policy**](Policy.html) PutMediaretentionpoliciesPolicyId (string policyId, Policy body = null)
+## [**Policy**](Policy.html) PutMediaretentionpoliciesPolicyId (string policyId, Policy body)
 
 Update a media retention policy
 
@@ -1128,7 +1128,7 @@ namespace Example
 
             var apiInstance = new RecordingApi();
             var policyId = policyId_example;  // string | Policy ID
-            var body = new Policy(); // Policy | Policy (optional) 
+            var body = new Policy(); // Policy | Policy
 
             try
             {
@@ -1151,7 +1151,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-| **body** | [**Policy**](Policy.html)| Policy | [optional]  |
+| **body** | [**Policy**](Policy.html)| Policy |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1160,7 +1160,7 @@ namespace Example
 
 <a name="putsettings"></a>
 
-## [**RecordingSettings**](RecordingSettings.html) PutSettings (RecordingSettings body = null)
+## [**RecordingSettings**](RecordingSettings.html) PutSettings (RecordingSettings body)
 
 Update the Recording Settings for the Organization
 
@@ -1185,7 +1185,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RecordingApi();
-            var body = new RecordingSettings(); // RecordingSettings |  (optional) 
+            var body = new RecordingSettings(); // RecordingSettings | Recording settings
 
             try
             {
@@ -1207,7 +1207,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RecordingSettings**](RecordingSettings.html)|  | [optional]  |
+| **body** | [**RecordingSettings**](RecordingSettings.html)| Recording settings |  |
 {: class="table table-striped"}
 
 ### Return type

@@ -9,9 +9,9 @@ title: Quote
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **PurchaseOrder** | **string** |  | [optional] |
-| **Type** | **string** |  | [optional] |
-| **Status** | **string** |  | [optional] |
+| **PurchaseOrder** | **string** | Purchase order | |
+| **Type** | **string** | Quote type | |
+| **Status** | **string** | Quote Status | |
 | **Currency** | **string** |  | [optional] |
 | **CreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **LastUpdatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

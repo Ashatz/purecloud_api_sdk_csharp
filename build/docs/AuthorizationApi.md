@@ -18,7 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRolesRoleId**](AuthorizationApi.html#patchrolesroleid) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
 | [**PostRoles**](AuthorizationApi.html#postroles) | **POST** /api/v2/authorization/roles | Create an organization role. |
 | [**PostRolesDefault**](AuthorizationApi.html#postrolesdefault) | **POST** /api/v2/authorization/roles/default | Restores all default roles |
-| [**PostRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.html#postrolesleftroleidcomparedefaultrightroleid) | **POST** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} |  Get an unsaved org role to default role comparison |
+| [**PostRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.html#postrolesleftroleidcomparedefaultrightroleid) | **POST** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an unsaved org role to default role comparison |
 | [**PutRolesDefault**](AuthorizationApi.html#putrolesdefault) | **PUT** /api/v2/authorization/roles/default | Restore specified default roles |
 | [**PutRolesRoleId**](AuthorizationApi.html#putrolesroleid) | **PUT** /api/v2/authorization/roles/{roleId} | Update an organization role. |
 | [**PutRolesRoleIdUsersAdd**](AuthorizationApi.html#putrolesroleidusersadd) | **PUT** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
@@ -487,7 +487,7 @@ namespace Example
 
 <a name="patchrolesroleid"></a>
 
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) PatchRolesRoleId (string roleId, DomainOrganizationRole body = null)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) PatchRolesRoleId (string roleId, DomainOrganizationRole body)
 
 Patch Organization Role for needsUpdate Field
 
@@ -513,7 +513,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
-            var body = new DomainOrganizationRole(); // DomainOrganizationRole |  (optional) 
+            var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role
 
             try
             {
@@ -536,7 +536,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)|  | [optional]  |
+| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)| Organization role |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -545,7 +545,7 @@ namespace Example
 
 <a name="postroles"></a>
 
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) PostRoles (DomainOrganizationRole body = null)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) PostRoles (DomainOrganizationRole body)
 
 Create an organization role.
 
@@ -570,7 +570,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AuthorizationApi();
-            var body = new DomainOrganizationRole(); // DomainOrganizationRole |  (optional) 
+            var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role
 
             try
             {
@@ -592,7 +592,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)|  | [optional]  |
+| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)| Organization role |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -657,9 +657,9 @@ namespace Example
 
 <a name="postrolesleftroleidcomparedefaultrightroleid"></a>
 
-## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) PostRolesLeftroleIdComparedefaultRightroleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) PostRolesLeftroleIdComparedefaultRightroleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
 
- Get an unsaved org role to default role comparison
+Get an unsaved org role to default role comparison
 
 Allows users to compare their existing roles in an unsaved state to its default role
 
@@ -684,11 +684,11 @@ namespace Example
             var apiInstance = new AuthorizationApi();
             var leftRoleId = leftRoleId_example;  // string | Left Role ID
             var rightRoleId = rightRoleId_example;  // string | Right Role id
-            var body = new DomainOrganizationRole(); // DomainOrganizationRole |  (optional) 
+            var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role
 
             try
             {
-                //  Get an unsaved org role to default role comparison
+                // Get an unsaved org role to default role comparison
                 DomainOrgRoleDifference result = apiInstance.PostRolesLeftroleIdComparedefaultRightroleId(leftRoleId, rightRoleId, body);
                 Debug.WriteLine(result);
             }
@@ -708,7 +708,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **leftRoleId** | **string**| Left Role ID |  |
 | **rightRoleId** | **string**| Right Role id |  |
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)|  | [optional]  |
+| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)| Organization role |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -717,7 +717,7 @@ namespace Example
 
 <a name="putrolesdefault"></a>
 
-## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) PutRolesDefault (List<DomainOrganizationRole> body = null)
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) PutRolesDefault (List<DomainOrganizationRole> body)
 
 Restore specified default roles
 
@@ -742,7 +742,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AuthorizationApi();
-            var body = new List<DomainOrganizationRole>(); // List<DomainOrganizationRole> |  (optional) 
+            var body = new List<DomainOrganizationRole>(); // List<DomainOrganizationRole> | Organization roles list
 
             try
             {
@@ -764,7 +764,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**List<DomainOrganizationRole>**](DomainOrganizationRole.html)|  | [optional]  |
+| **body** | [**List<DomainOrganizationRole>**](DomainOrganizationRole.html)| Organization roles list |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -773,7 +773,7 @@ namespace Example
 
 <a name="putrolesroleid"></a>
 
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) PutRolesRoleId (string roleId, DomainOrganizationRole body = null)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) PutRolesRoleId (string roleId, DomainOrganizationRole body)
 
 Update an organization role.
 
@@ -799,7 +799,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
-            var body = new DomainOrganizationRole(); // DomainOrganizationRole |  (optional) 
+            var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role
 
             try
             {
@@ -822,7 +822,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)|  | [optional]  |
+| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)| Organization role |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -831,7 +831,7 @@ namespace Example
 
 <a name="putrolesroleidusersadd"></a>
 
-## List&lt;string&gt;** PutRolesRoleIdUsersAdd (string roleId, List<string> body = null)
+## List&lt;string&gt;** PutRolesRoleIdUsersAdd (string roleId, List<string> body)
 
 Sets the users for the role
 
@@ -857,7 +857,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
-            var body = ;  // List<string> |  (optional) 
+            var body = ;  // List<string> | List of user IDs
 
             try
             {
@@ -880,7 +880,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **body** | **List<string>**|  | [optional]  |
+| **body** | **List<string>**| List of user IDs |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -889,7 +889,7 @@ namespace Example
 
 <a name="putrolesroleidusersremove"></a>
 
-## List&lt;string&gt;** PutRolesRoleIdUsersRemove (string roleId, List<string> body = null)
+## List&lt;string&gt;** PutRolesRoleIdUsersRemove (string roleId, List<string> body)
 
 Removes the users from the role
 
@@ -915,7 +915,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
-            var body = ;  // List<string> |  (optional) 
+            var body = ;  // List<string> | List of user IDs
 
             try
             {
@@ -938,7 +938,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **body** | **List<string>**|  | [optional]  |
+| **body** | **List<string>**| List of user IDs |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -947,7 +947,7 @@ namespace Example
 
 <a name="putuseridroles"></a>
 
-## [**UserAuthorization**](UserAuthorization.html) PutUserIdRoles (string userId, List<string> body = null)
+## [**UserAuthorization**](UserAuthorization.html) PutUserIdRoles (string userId, List<string> body)
 
 Sets the user's roles
 
@@ -973,7 +973,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var userId = userId_example;  // string | User ID
-            var body = ;  // List<string> |  (optional) 
+            var body = ;  // List<string> | List of roles
 
             try
             {
@@ -996,7 +996,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | **List<string>**|  | [optional]  |
+| **body** | **List<string>**| List of roles |  |
 {: class="table table-striped"}
 
 ### Return type

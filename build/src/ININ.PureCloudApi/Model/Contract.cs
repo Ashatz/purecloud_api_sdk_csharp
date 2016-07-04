@@ -20,16 +20,45 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Contract" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Contract() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Contract" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Quote">Quote.</param>
-        /// <param name="SignerUrl">SignerUrl.</param>
-        /// <param name="Job">Job.</param>
+        /// <param name="Quote">Quote (required).</param>
+        /// <param name="SignerUrl">Signer URL (required).</param>
+        /// <param name="Job">Job (required).</param>
         public Contract(string Name = null, Quote Quote = null, string SignerUrl = null, ContractJob Job = null)
         {
+            // to ensure "Quote" is required (not null)
+            if (Quote == null)
+            {
+                throw new InvalidDataException("Quote is a required property for Contract and cannot be null");
+            }
+            else
+            {
+                this.Quote = Quote;
+            }
+            // to ensure "SignerUrl" is required (not null)
+            if (SignerUrl == null)
+            {
+                throw new InvalidDataException("SignerUrl is a required property for Contract and cannot be null");
+            }
+            else
+            {
+                this.SignerUrl = SignerUrl;
+            }
+            // to ensure "Job" is required (not null)
+            if (Job == null)
+            {
+                throw new InvalidDataException("Job is a required property for Contract and cannot be null");
+            }
+            else
+            {
+                this.Job = Job;
+            }
             this.Name = Name;
-            this.Quote = Quote;
-            this.SignerUrl = SignerUrl;
-            this.Job = Job;
         }
         
         /// <summary>
@@ -44,18 +73,21 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets Quote
+        /// Quote
         /// </summary>
+        /// <value>Quote</value>
         [DataMember(Name="quote", EmitDefaultValue=false)]
         public Quote Quote { get; set; }
         /// <summary>
-        /// Gets or Sets SignerUrl
+        /// Signer URL
         /// </summary>
+        /// <value>Signer URL</value>
         [DataMember(Name="signerUrl", EmitDefaultValue=false)]
         public string SignerUrl { get; set; }
         /// <summary>
-        /// Gets or Sets Job
+        /// Job
         /// </summary>
+        /// <value>Job</value>
         [DataMember(Name="job", EmitDefaultValue=false)]
         public ContractJob Job { get; set; }
         /// <summary>

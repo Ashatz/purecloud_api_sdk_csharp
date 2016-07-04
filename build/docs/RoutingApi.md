@@ -1421,7 +1421,7 @@ namespace Example
 
 <a name="patchqueuesqueueidusers"></a>
 
-## [**QueueMember**](QueueMember.html) PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body = null)
+## [**QueueMember**](QueueMember.html) PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body)
 
 Join or unjoin a set of users for a queue
 
@@ -1447,7 +1447,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
-            var body = new List<QueueMember>(); // List<QueueMember> | Queue Members (optional) 
+            var body = new List<QueueMember>(); // List<QueueMember> | Queue Members
 
             try
             {
@@ -1470,7 +1470,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members | [optional]  |
+| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1479,7 +1479,7 @@ namespace Example
 
 <a name="patchqueuesqueueidusersmemberid"></a>
 
-## [**QueueMember**](QueueMember.html) PatchQueuesQueueIdUsersMemberId (string queueId, string memberId, QueueMember body = null)
+## [**QueueMember**](QueueMember.html) PatchQueuesQueueIdUsersMemberId (string queueId, string memberId, QueueMember body)
 
 Update the ring number of joined status for a User in a Queue
 
@@ -1506,7 +1506,7 @@ namespace Example
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
             var memberId = memberId_example;  // string | Member ID
-            var body = new QueueMember(); // QueueMember | Queue Member (optional) 
+            var body = new QueueMember(); // QueueMember | Queue Member
 
             try
             {
@@ -1530,7 +1530,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **memberId** | **string**| Member ID |  |
-| **body** | [**QueueMember**](QueueMember.html)| Queue Member | [optional]  |
+| **body** | [**QueueMember**](QueueMember.html)| Queue Member |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1539,7 +1539,7 @@ namespace Example
 
 <a name="postemaildomains"></a>
 
-## [**InboundDomain**](InboundDomain.html) PostEmailDomains (InboundDomain body = null)
+## [**InboundDomain**](InboundDomain.html) PostEmailDomains (InboundDomain body)
 
 Create a domain
 
@@ -1564,7 +1564,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var body = new InboundDomain(); // InboundDomain | Domain (optional) 
+            var body = new InboundDomain(); // InboundDomain | Domain
 
             try
             {
@@ -1586,7 +1586,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**InboundDomain**](InboundDomain.html)| Domain | [optional]  |
+| **body** | [**InboundDomain**](InboundDomain.html)| Domain |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1595,7 +1595,7 @@ namespace Example
 
 <a name="postemaildomainsdomainnameroutes"></a>
 
-## [**InboundRoute**](InboundRoute.html) PostEmailDomainsDomainnameRoutes (string domainName, InboundRoute body = null)
+## [**InboundRoute**](InboundRoute.html) PostEmailDomainsDomainnameRoutes (string domainName, InboundRoute body)
 
 Create a route
 
@@ -1621,7 +1621,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var domainName = domainName_example;  // string | email domain
-            var body = new InboundRoute(); // InboundRoute | Route (optional) 
+            var body = new InboundRoute(); // InboundRoute | Route
 
             try
             {
@@ -1644,7 +1644,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
-| **body** | [**InboundRoute**](InboundRoute.html)| Route | [optional]  |
+| **body** | [**InboundRoute**](InboundRoute.html)| Route |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1653,7 +1653,7 @@ namespace Example
 
 <a name="postqueues"></a>
 
-## [**Queue**](Queue.html) PostQueues (Queue body = null)
+## [**Queue**](Queue.html) PostQueues (Queue body)
 
 Create queue
 
@@ -1678,7 +1678,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var body = new Queue(); // Queue | Queue (optional) 
+            var body = new Queue(); // Queue | Queue
 
             try
             {
@@ -1700,7 +1700,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Queue**](Queue.html)| Queue | [optional]  |
+| **body** | [**Queue**](Queue.html)| Queue |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1709,7 +1709,7 @@ namespace Example
 
 <a name="postqueuesobservationsquery"></a>
 
-## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostQueuesObservationsQuery (ObservationQuery body = null)
+## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostQueuesObservationsQuery (ObservationQuery body)
 
 Query for queue observations
 
@@ -1734,7 +1734,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var body = new ObservationQuery(); // ObservationQuery | query (optional) 
+            var body = new ObservationQuery(); // ObservationQuery | query
 
             try
             {
@@ -1756,7 +1756,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query | [optional]  |
+| **body** | [**ObservationQuery**](ObservationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1765,7 +1765,7 @@ namespace Example
 
 <a name="postqueuesqueueidusers"></a>
 
-## [**QueueMember**](QueueMember.html) PostQueuesQueueIdUsers (string queueId, List<QueueMember> body = null, bool? delete = null)
+## [**QueueMember**](QueueMember.html) PostQueuesQueueIdUsers (string queueId, List<QueueMember> body, bool? delete = null)
 
 Bulk add or delete up to 100 queue members
 
@@ -1791,7 +1791,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
-            var body = new List<QueueMember>(); // List<QueueMember> | Queue Members (optional) 
+            var body = new List<QueueMember>(); // List<QueueMember> | Queue Members
             var delete = true;  // bool? | True to delete queue members (optional)  (default to false)
 
             try
@@ -1815,7 +1815,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members | [optional]  |
+| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members |  |
 | **delete** | **bool?**| True to delete queue members | [optional] [default to false] |
 {: class="table table-striped"}
 
@@ -1825,7 +1825,7 @@ namespace Example
 
 <a name="postqueuesqueueidwrapupcodes"></a>
 
-## [**WrapupCode**](WrapupCode.html) PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body = null)
+## [**WrapupCode**](WrapupCode.html) PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
 
 Add up to 100 wrap-up codes to a queue
 
@@ -1852,7 +1852,7 @@ namespace Example
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
             var codeId = codeId_example;  // string | Code ID
-            var body = new List<WrapupCode>(); // List<WrapupCode> |  (optional) 
+            var body = new List<WrapupCode>(); // List<WrapupCode> | List of wrapup codes
 
             try
             {
@@ -1876,7 +1876,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **codeId** | **string**| Code ID |  |
-| **body** | [**List<WrapupCode>**](WrapupCode.html)|  | [optional]  |
+| **body** | [**List<WrapupCode>**](WrapupCode.html)| List of wrapup codes |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1885,7 +1885,7 @@ namespace Example
 
 <a name="postskills"></a>
 
-## [**RoutingSkill**](RoutingSkill.html) PostSkills (RoutingSkill body = null)
+## [**RoutingSkill**](RoutingSkill.html) PostSkills (RoutingSkill body)
 
 Create Skill
 
@@ -1910,7 +1910,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var body = new RoutingSkill(); // RoutingSkill | Skill (optional) 
+            var body = new RoutingSkill(); // RoutingSkill | Skill
 
             try
             {
@@ -1932,7 +1932,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RoutingSkill**](RoutingSkill.html)| Skill | [optional]  |
+| **body** | [**RoutingSkill**](RoutingSkill.html)| Skill |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1941,7 +1941,7 @@ namespace Example
 
 <a name="postuseridroutingskills"></a>
 
-## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkill body = null)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkill body)
 
 Add routing skill to user
 
@@ -1967,7 +1967,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var userId = userId_example;  // string | User ID
-            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill (optional) 
+            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
 
             try
             {
@@ -1990,7 +1990,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill | [optional]  |
+| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1999,7 +1999,7 @@ namespace Example
 
 <a name="postwrapupcodes"></a>
 
-## [**CallableTimeSet**](CallableTimeSet.html) PostWrapupcodes (WrapupCode body = null)
+## [**CallableTimeSet**](CallableTimeSet.html) PostWrapupcodes (WrapupCode body)
 
 Create a wrap-up code
 
@@ -2024,7 +2024,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var body = new WrapupCode(); // WrapupCode | WrapupCode (optional) 
+            var body = new WrapupCode(); // WrapupCode | WrapupCode
 
             try
             {
@@ -2046,7 +2046,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode | [optional]  |
+| **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2055,7 +2055,7 @@ namespace Example
 
 <a name="putemaildomainsdomainnameroutesrouteid"></a>
 
-## [**InboundRoute**](InboundRoute.html) PutEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId, InboundRoute body = null)
+## [**InboundRoute**](InboundRoute.html) PutEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId, InboundRoute body)
 
 Update a route
 
@@ -2082,7 +2082,7 @@ namespace Example
             var apiInstance = new RoutingApi();
             var domainName = domainName_example;  // string | email domain
             var routeId = routeId_example;  // string | route ID
-            var body = new InboundRoute(); // InboundRoute | Route (optional) 
+            var body = new InboundRoute(); // InboundRoute | Route
 
             try
             {
@@ -2106,7 +2106,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
 | **routeId** | **string**| route ID |  |
-| **body** | [**InboundRoute**](InboundRoute.html)| Route | [optional]  |
+| **body** | [**InboundRoute**](InboundRoute.html)| Route |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2115,7 +2115,7 @@ namespace Example
 
 <a name="putqueuesqueueid"></a>
 
-## [**Queue**](Queue.html) PutQueuesQueueId (string queueId, Queue body = null)
+## [**Queue**](Queue.html) PutQueuesQueueId (string queueId, Queue body)
 
 Update a queue
 
@@ -2141,7 +2141,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
-            var body = new Queue(); // Queue | Queue (optional) 
+            var body = new Queue(); // Queue | Queue
 
             try
             {
@@ -2164,7 +2164,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **body** | [**Queue**](Queue.html)| Queue | [optional]  |
+| **body** | [**Queue**](Queue.html)| Queue |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2173,7 +2173,7 @@ namespace Example
 
 <a name="putuseridroutingskillsskillid"></a>
 
-## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body = null)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body)
 
 Update routing skill proficiency or state.
 
@@ -2200,7 +2200,7 @@ namespace Example
             var apiInstance = new RoutingApi();
             var userId = userId_example;  // string | User ID
             var skillId = skillId_example;  // string | 
-            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill (optional) 
+            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
 
             try
             {
@@ -2224,7 +2224,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **skillId** | **string**|  |  |
-| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill | [optional]  |
+| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2233,7 +2233,7 @@ namespace Example
 
 <a name="pututilization"></a>
 
-## [**Utilization**](Utilization.html) PutUtilization (Utilization body = null)
+## [**Utilization**](Utilization.html) PutUtilization (Utilization body)
 
 Update the utilization settings.
 
@@ -2258,7 +2258,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var body = new Utilization(); // Utilization | utilization (optional) 
+            var body = new Utilization(); // Utilization | utilization
 
             try
             {
@@ -2280,7 +2280,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Utilization**](Utilization.html)| utilization | [optional]  |
+| **body** | [**Utilization**](Utilization.html)| utilization |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2289,7 +2289,7 @@ namespace Example
 
 <a name="putwrapupcodescodeid"></a>
 
-## [**WrapupCode**](WrapupCode.html) PutWrapupcodesCodeId (string codeId, WrapupCode body = null)
+## [**WrapupCode**](WrapupCode.html) PutWrapupcodesCodeId (string codeId, WrapupCode body)
 
 Update wrap-up code
 
@@ -2315,7 +2315,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var codeId = codeId_example;  // string | Wrapup Code ID
-            var body = new WrapupCode(); // WrapupCode | WrapupCode (optional) 
+            var body = new WrapupCode(); // WrapupCode | WrapupCode
 
             try
             {
@@ -2338,7 +2338,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **codeId** | **string**| Wrapup Code ID |  |
-| **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode | [optional]  |
+| **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode |  |
 {: class="table table-striped"}
 
 ### Return type

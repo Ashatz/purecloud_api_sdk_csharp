@@ -9,11 +9,11 @@ title: BillingAddress
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Street** | **string** |  | [optional] |
-| **City** | **string** |  | [optional] |
-| **CountryName** | **string** |  | [optional] |
-| **StateName** | **string** |  | [optional] |
-| **PostalCode** | **string** |  | [optional] |
+| **Street** | **string** | Street | |
+| **City** | **string** | City name | |
+| **CountryName** | **string** | Country name | |
+| **StateName** | **string** | State name | |
+| **PostalCode** | **string** | Postal Code | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

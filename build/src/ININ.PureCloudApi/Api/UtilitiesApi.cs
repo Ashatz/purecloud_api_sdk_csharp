@@ -63,9 +63,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate</param>
         /// <returns>ParsedCertificate</returns>
-        ParsedCertificate PostDetails (Certificate body = null);
+        ParsedCertificate PostDetails (Certificate body);
 
         /// <summary>
         /// Returns the information about an X509 PEM encoded certificate or certificate chain.
@@ -74,9 +74,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate</param>
         /// <returns>ApiResponse of ParsedCertificate</returns>
-        ApiResponse<ParsedCertificate> PostDetailsWithHttpInfo (Certificate body = null);
+        ApiResponse<ParsedCertificate> PostDetailsWithHttpInfo (Certificate body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -128,9 +128,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate</param>
         /// <returns>Task of ParsedCertificate</returns>
-        System.Threading.Tasks.Task<ParsedCertificate> PostDetailsAsync (Certificate body = null);
+        System.Threading.Tasks.Task<ParsedCertificate> PostDetailsAsync (Certificate body);
 
         /// <summary>
         /// Returns the information about an X509 PEM encoded certificate or certificate chain.
@@ -139,9 +139,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate</param>
         /// <returns>Task of ApiResponse (ParsedCertificate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ParsedCertificate>> PostDetailsAsyncWithHttpInfo (Certificate body = null);
+        System.Threading.Tasks.Task<ApiResponse<ParsedCertificate>> PostDetailsAsyncWithHttpInfo (Certificate body);
         #endregion Asynchronous Operations
     }
 
@@ -530,9 +530,9 @@ namespace ININ.PureCloudApi.Api
         /// Returns the information about an X509 PEM encoded certificate or certificate chain. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate</param>
         /// <returns>ParsedCertificate</returns>
-        public ParsedCertificate PostDetails (Certificate body = null)
+        public ParsedCertificate PostDetails (Certificate body)
         {
              ApiResponse<ParsedCertificate> localVarResponse = PostDetailsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -542,10 +542,13 @@ namespace ININ.PureCloudApi.Api
         /// Returns the information about an X509 PEM encoded certificate or certificate chain. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate</param>
         /// <returns>ApiResponse of ParsedCertificate</returns>
-        public ApiResponse< ParsedCertificate > PostDetailsWithHttpInfo (Certificate body = null)
+        public ApiResponse< ParsedCertificate > PostDetailsWithHttpInfo (Certificate body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UtilitiesApi->PostDetails");
 
             var localVarPath = "/api/v2/certificate/details";
             var localVarPathParams = new Dictionary<String, String>();
@@ -610,9 +613,9 @@ namespace ININ.PureCloudApi.Api
         /// Returns the information about an X509 PEM encoded certificate or certificate chain. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate</param>
         /// <returns>Task of ParsedCertificate</returns>
-        public async System.Threading.Tasks.Task<ParsedCertificate> PostDetailsAsync (Certificate body = null)
+        public async System.Threading.Tasks.Task<ParsedCertificate> PostDetailsAsync (Certificate body)
         {
              ApiResponse<ParsedCertificate> localVarResponse = await PostDetailsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -623,10 +626,13 @@ namespace ININ.PureCloudApi.Api
         /// Returns the information about an X509 PEM encoded certificate or certificate chain. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate</param>
         /// <returns>Task of ApiResponse (ParsedCertificate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ParsedCertificate>> PostDetailsAsyncWithHttpInfo (Certificate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ParsedCertificate>> PostDetailsAsyncWithHttpInfo (Certificate body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UtilitiesApi->PostDetails");
 
             var localVarPath = "/api/v2/certificate/details";
             var localVarPathParams = new Dictionary<String, String>();

@@ -1705,9 +1705,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Edge</returns>
-        Edge PostProvidersEdges (Edge body = null);
+        Edge PostProvidersEdges (Edge body);
 
         /// <summary>
         /// Create a edge.
@@ -1716,9 +1716,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>ApiResponse of Edge</returns>
-        ApiResponse<Edge> PostProvidersEdgesWithHttpInfo (Edge body = null);
+        ApiResponse<Edge> PostProvidersEdgesWithHttpInfo (Edge body);
         /// <summary>
         /// Validates a street address
         /// </summary>
@@ -1747,9 +1747,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CertificateAuthority (optional)</param>
+        /// <param name="body">CertificateAuthority</param>
         /// <returns>DomainCertificateAuthority</returns>
-        DomainCertificateAuthority PostProvidersEdgesCertificateauthorities (DomainCertificateAuthority body = null);
+        DomainCertificateAuthority PostProvidersEdgesCertificateauthorities (DomainCertificateAuthority body);
 
         /// <summary>
         /// Create a certificate authority.
@@ -1758,9 +1758,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CertificateAuthority (optional)</param>
+        /// <param name="body">CertificateAuthority</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
-        ApiResponse<DomainCertificateAuthority> PostProvidersEdgesCertificateauthoritiesWithHttpInfo (DomainCertificateAuthority body = null);
+        ApiResponse<DomainCertificateAuthority> PostProvidersEdgesCertificateauthoritiesWithHttpInfo (DomainCertificateAuthority body);
         /// <summary>
         /// Create a new DID pool
         /// </summary>
@@ -1768,9 +1768,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>DIDPool</returns>
-        DIDPool PostProvidersEdgesDidpools (DIDPool body = null);
+        DIDPool PostProvidersEdgesDidpools (DIDPool body);
 
         /// <summary>
         /// Create a new DID pool
@@ -1779,9 +1779,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>ApiResponse of DIDPool</returns>
-        ApiResponse<DIDPool> PostProvidersEdgesDidpoolsWithHttpInfo (DIDPool body = null);
+        ApiResponse<DIDPool> PostProvidersEdgesDidpoolsWithHttpInfo (DIDPool body);
         /// <summary>
         /// Create an edge logical interface.
         /// </summary>
@@ -1790,9 +1790,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>DomainLogicalInterface</returns>
-        DomainLogicalInterface PostProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, DomainLogicalInterface body = null);
+        DomainLogicalInterface PostProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, DomainLogicalInterface body);
 
         /// <summary>
         /// Create an edge logical interface.
@@ -1802,9 +1802,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        ApiResponse<DomainLogicalInterface> PostProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId, DomainLogicalInterface body = null);
+        ApiResponse<DomainLogicalInterface> PostProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId, DomainLogicalInterface body);
         /// <summary>
         /// Create a job to upload a list of Edge logs.
         /// </summary>
@@ -1813,9 +1813,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">EdgeLogsJobRequest (optional)</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>EdgeLogsJobResponse</returns>
-        EdgeLogsJobResponse PostProvidersEdgesEdgeIdLogsJobs (string edgeId, EdgeLogsJobRequest body = null);
+        EdgeLogsJobResponse PostProvidersEdgesEdgeIdLogsJobs (string edgeId, EdgeLogsJobRequest body);
 
         /// <summary>
         /// Create a job to upload a list of Edge logs.
@@ -1825,9 +1825,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">EdgeLogsJobRequest (optional)</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>ApiResponse of EdgeLogsJobResponse</returns>
-        ApiResponse<EdgeLogsJobResponse> PostProvidersEdgesEdgeIdLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null);
+        ApiResponse<EdgeLogsJobResponse> PostProvidersEdgesEdgeIdLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body);
         /// <summary>
         /// Request that the specified fileIds be uploaded from the Edge.
         /// </summary>
@@ -1837,9 +1837,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Log upload request</param>
         /// <returns></returns>
-        void PostProvidersEdgesEdgeIdLogsJobsJobIdUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+        void PostProvidersEdgesEdgeIdLogsJobsJobIdUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body);
 
         /// <summary>
         /// Request that the specified fileIds be uploaded from the Edge.
@@ -1850,9 +1850,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Log upload request</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostProvidersEdgesEdgeIdLogsJobsJobIdUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+        ApiResponse<Object> PostProvidersEdgesEdgeIdLogsJobsJobIdUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body);
         /// <summary>
         /// Reboot an Edge
         /// </summary>
@@ -1882,9 +1882,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Software update request</param>
         /// <returns>DomainEdgeSoftwareUpdateDto</returns>
-        DomainEdgeSoftwareUpdateDto PostProvidersEdgesEdgeIdSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        DomainEdgeSoftwareUpdateDto PostProvidersEdgesEdgeIdSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body);
 
         /// <summary>
         /// Starts a software update for this edge.
@@ -1894,9 +1894,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Software update request</param>
         /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
-        ApiResponse<DomainEdgeSoftwareUpdateDto> PostProvidersEdgesEdgeIdSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        ApiResponse<DomainEdgeSoftwareUpdateDto> PostProvidersEdgesEdgeIdSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body);
         /// <summary>
         /// Unpair an Edge
         /// </summary>
@@ -1925,9 +1925,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>EdgeGroup</returns>
-        EdgeGroup PostProvidersEdgesEdgegroups (EdgeGroup body = null);
+        EdgeGroup PostProvidersEdgesEdgegroups (EdgeGroup body);
 
         /// <summary>
         /// Create an edge group.
@@ -1936,9 +1936,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
-        ApiResponse<EdgeGroup> PostProvidersEdgesEdgegroupsWithHttpInfo (EdgeGroup body = null);
+        ApiResponse<EdgeGroup> PostProvidersEdgesEdgegroupsWithHttpInfo (EdgeGroup body);
         /// <summary>
         /// Create endpoint
         /// </summary>
@@ -1946,9 +1946,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Endpoint</returns>
-        Endpoint PostProvidersEdgesEndpoints (Endpoint body = null);
+        Endpoint PostProvidersEdgesEndpoints (Endpoint body);
 
         /// <summary>
         /// Create endpoint
@@ -1957,9 +1957,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>ApiResponse of Endpoint</returns>
-        ApiResponse<Endpoint> PostProvidersEdgesEndpointsWithHttpInfo (Endpoint body = null);
+        ApiResponse<Endpoint> PostProvidersEdgesEndpointsWithHttpInfo (Endpoint body);
         /// <summary>
         /// Create a new extension pool
         /// </summary>
@@ -1967,9 +1967,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>Extension</returns>
-        Extension PostProvidersEdgesExtensionpools (ExtensionPool body = null);
+        Extension PostProvidersEdgesExtensionpools (ExtensionPool body);
 
         /// <summary>
         /// Create a new extension pool
@@ -1978,9 +1978,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>ApiResponse of Extension</returns>
-        ApiResponse<Extension> PostProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body = null);
+        ApiResponse<Extension> PostProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body);
         /// <summary>
         /// Create outbound rule
         /// </summary>
@@ -1988,9 +1988,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>OutboundRoute</returns>
-        OutboundRoute PostProvidersEdgesOutboundroutes (OutboundRoute body = null);
+        OutboundRoute PostProvidersEdgesOutboundroutes (OutboundRoute body);
 
         /// <summary>
         /// Create outbound rule
@@ -1999,9 +1999,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>ApiResponse of OutboundRoute</returns>
-        ApiResponse<OutboundRoute> PostProvidersEdgesOutboundroutesWithHttpInfo (OutboundRoute body = null);
+        ApiResponse<OutboundRoute> PostProvidersEdgesOutboundroutesWithHttpInfo (OutboundRoute body);
         /// <summary>
         /// Create a new Phone Base Settings object
         /// </summary>
@@ -2009,9 +2009,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>PhoneBase</returns>
-        PhoneBase PostProvidersEdgesPhonebasesettings (PhoneBase body = null);
+        PhoneBase PostProvidersEdgesPhonebasesettings (PhoneBase body);
 
         /// <summary>
         /// Create a new Phone Base Settings object
@@ -2020,9 +2020,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
-        ApiResponse<PhoneBase> PostProvidersEdgesPhonebasesettingsWithHttpInfo (PhoneBase body = null);
+        ApiResponse<PhoneBase> PostProvidersEdgesPhonebasesettingsWithHttpInfo (PhoneBase body);
         /// <summary>
         /// Create a new Phone
         /// </summary>
@@ -2030,9 +2030,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Phone</returns>
-        Phone PostProvidersEdgesPhones (Phone body = null);
+        Phone PostProvidersEdgesPhones (Phone body);
 
         /// <summary>
         /// Create a new Phone
@@ -2041,9 +2041,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>ApiResponse of Phone</returns>
-        ApiResponse<Phone> PostProvidersEdgesPhonesWithHttpInfo (Phone body = null);
+        ApiResponse<Phone> PostProvidersEdgesPhonesWithHttpInfo (Phone body);
         /// <summary>
         /// Reboot a Phone
         /// </summary>
@@ -2072,9 +2072,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Phones</param>
         /// <returns></returns>
-        void PostProvidersEdgesPhonesReboot (PhonesReboot body = null);
+        void PostProvidersEdgesPhonesReboot (PhonesReboot body);
 
         /// <summary>
         /// Reboot Multiple Phones
@@ -2083,9 +2083,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Phones</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostProvidersEdgesPhonesRebootWithHttpInfo (PhonesReboot body = null);
+        ApiResponse<Object> PostProvidersEdgesPhonesRebootWithHttpInfo (PhonesReboot body);
         /// <summary>
         /// Create a Site.
         /// </summary>
@@ -2093,9 +2093,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Site</returns>
-        Site PostProvidersEdgesSites (Site body = null);
+        Site PostProvidersEdgesSites (Site body);
 
         /// <summary>
         /// Create a Site.
@@ -2104,9 +2104,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>ApiResponse of Site</returns>
-        ApiResponse<Site> PostProvidersEdgesSitesWithHttpInfo (Site body = null);
+        ApiResponse<Site> PostProvidersEdgesSitesWithHttpInfo (Site body);
         /// <summary>
         /// Triggers the rebalance operation.
         /// </summary>
@@ -2135,9 +2135,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>TrunkBase</returns>
-        TrunkBase PostProvidersEdgesTrunkbasesettings (TrunkBase body = null);
+        TrunkBase PostProvidersEdgesTrunkbasesettings (TrunkBase body);
 
         /// <summary>
         /// Create a Trunk Base Settings object
@@ -2146,9 +2146,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        ApiResponse<TrunkBase> PostProvidersEdgesTrunkbasesettingsWithHttpInfo (TrunkBase body = null);
+        ApiResponse<TrunkBase> PostProvidersEdgesTrunkbasesettingsWithHttpInfo (TrunkBase body);
         /// <summary>
         /// Update a certificate authority.
         /// </summary>
@@ -2157,9 +2157,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate authority</param>
         /// <returns>DomainCertificateAuthority</returns>
-        DomainCertificateAuthority PutProvidersEdgesCertificateauthoritiesCertificateId (string certificateId, DomainCertificateAuthority body = null);
+        DomainCertificateAuthority PutProvidersEdgesCertificateauthoritiesCertificateId (string certificateId, DomainCertificateAuthority body);
 
         /// <summary>
         /// Update a certificate authority.
@@ -2169,9 +2169,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate authority</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
-        ApiResponse<DomainCertificateAuthority> PutProvidersEdgesCertificateauthoritiesCertificateIdWithHttpInfo (string certificateId, DomainCertificateAuthority body = null);
+        ApiResponse<DomainCertificateAuthority> PutProvidersEdgesCertificateauthoritiesCertificateIdWithHttpInfo (string certificateId, DomainCertificateAuthority body);
         /// <summary>
         /// Update a DID Pool by ID.
         /// </summary>
@@ -2180,9 +2180,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>DIDPool</returns>
-        DIDPool PutProvidersEdgesDidpoolsDidpoolId (string didPoolId, DIDPool body = null);
+        DIDPool PutProvidersEdgesDidpoolsDidpoolId (string didPoolId, DIDPool body);
 
         /// <summary>
         /// Update a DID Pool by ID.
@@ -2192,9 +2192,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>ApiResponse of DIDPool</returns>
-        ApiResponse<DIDPool> PutProvidersEdgesDidpoolsDidpoolIdWithHttpInfo (string didPoolId, DIDPool body = null);
+        ApiResponse<DIDPool> PutProvidersEdgesDidpoolsDidpoolIdWithHttpInfo (string didPoolId, DIDPool body);
         /// <summary>
         /// Update a DID by ID.
         /// </summary>
@@ -2203,9 +2203,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID</param>
         /// <returns>DID</returns>
-        DID PutProvidersEdgesDidsDidId (string didId, DID body = null);
+        DID PutProvidersEdgesDidsDidId (string didId, DID body);
 
         /// <summary>
         /// Update a DID by ID.
@@ -2215,9 +2215,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID</param>
         /// <returns>ApiResponse of DID</returns>
-        ApiResponse<DID> PutProvidersEdgesDidsDidIdWithHttpInfo (string didId, DID body = null);
+        ApiResponse<DID> PutProvidersEdgesDidsDidIdWithHttpInfo (string didId, DID body);
         /// <summary>
         /// Update a edge.
         /// </summary>
@@ -2226,9 +2226,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Edge</returns>
-        Edge PutProvidersEdgesEdgeId (string edgeId, Edge body = null);
+        Edge PutProvidersEdgesEdgeId (string edgeId, Edge body);
 
         /// <summary>
         /// Update a edge.
@@ -2238,9 +2238,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>ApiResponse of Edge</returns>
-        ApiResponse<Edge> PutProvidersEdgesEdgeIdWithHttpInfo (string edgeId, Edge body = null);
+        ApiResponse<Edge> PutProvidersEdgesEdgeIdWithHttpInfo (string edgeId, Edge body);
         /// <summary>
         /// Update a line.
         /// </summary>
@@ -2250,9 +2250,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line (optional)</param>
+        /// <param name="body">Line</param>
         /// <returns>EdgeLine</returns>
-        EdgeLine PutProvidersEdgesEdgeIdLinesLineId (string edgeId, string lineId, EdgeLine body = null);
+        EdgeLine PutProvidersEdgesEdgeIdLinesLineId (string edgeId, string lineId, EdgeLine body);
 
         /// <summary>
         /// Update a line.
@@ -2263,9 +2263,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line (optional)</param>
+        /// <param name="body">Line</param>
         /// <returns>ApiResponse of EdgeLine</returns>
-        ApiResponse<EdgeLine> PutProvidersEdgesEdgeIdLinesLineIdWithHttpInfo (string edgeId, string lineId, EdgeLine body = null);
+        ApiResponse<EdgeLine> PutProvidersEdgesEdgeIdLinesLineIdWithHttpInfo (string edgeId, string lineId, EdgeLine body);
         /// <summary>
         /// Update an edge logical interface.
         /// </summary>
@@ -2275,9 +2275,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>DomainLogicalInterface</returns>
-        DomainLogicalInterface PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, DomainLogicalInterface body = null);
+        DomainLogicalInterface PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, DomainLogicalInterface body);
 
         /// <summary>
         /// Update an edge logical interface.
@@ -2288,9 +2288,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        ApiResponse<DomainLogicalInterface> PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null);
+        ApiResponse<DomainLogicalInterface> PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body);
         /// <summary>
         /// Update an edge group.
         /// </summary>
@@ -2299,9 +2299,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>EdgeGroup</returns>
-        EdgeGroup PutProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, EdgeGroup body = null);
+        EdgeGroup PutProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, EdgeGroup body);
 
         /// <summary>
         /// Update an edge group.
@@ -2311,9 +2311,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
-        ApiResponse<EdgeGroup> PutProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId, EdgeGroup body = null);
+        ApiResponse<EdgeGroup> PutProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId, EdgeGroup body);
         /// <summary>
         /// Update endpoint
         /// </summary>
@@ -2322,9 +2322,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Endpoint</returns>
-        Endpoint PutProvidersEdgesEndpointsEndpointId (string endpointId, Endpoint body = null);
+        Endpoint PutProvidersEdgesEndpointsEndpointId (string endpointId, Endpoint body);
 
         /// <summary>
         /// Update endpoint
@@ -2334,9 +2334,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>ApiResponse of Endpoint</returns>
-        ApiResponse<Endpoint> PutProvidersEdgesEndpointsEndpointIdWithHttpInfo (string endpointId, Endpoint body = null);
+        ApiResponse<Endpoint> PutProvidersEdgesEndpointsEndpointIdWithHttpInfo (string endpointId, Endpoint body);
         /// <summary>
         /// Update an extension pool by ID
         /// </summary>
@@ -2345,9 +2345,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>ExtensionPool</returns>
-        ExtensionPool PutProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId, ExtensionPool body = null);
+        ExtensionPool PutProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId, ExtensionPool body);
 
         /// <summary>
         /// Update an extension pool by ID
@@ -2357,9 +2357,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>ApiResponse of ExtensionPool</returns>
-        ApiResponse<ExtensionPool> PutProvidersEdgesExtensionpoolsExtensionpoolIdWithHttpInfo (string extensionPoolId, ExtensionPool body = null);
+        ApiResponse<ExtensionPool> PutProvidersEdgesExtensionpoolsExtensionpoolIdWithHttpInfo (string extensionPoolId, ExtensionPool body);
         /// <summary>
         /// Update an extension by ID.
         /// </summary>
@@ -2368,9 +2368,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Extension</param>
         /// <returns>Extension</returns>
-        Extension PutProvidersEdgesExtensionsExtensionId (string extensionId, Extension body = null);
+        Extension PutProvidersEdgesExtensionsExtensionId (string extensionId, Extension body);
 
         /// <summary>
         /// Update an extension by ID.
@@ -2380,9 +2380,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Extension</param>
         /// <returns>ApiResponse of Extension</returns>
-        ApiResponse<Extension> PutProvidersEdgesExtensionsExtensionIdWithHttpInfo (string extensionId, Extension body = null);
+        ApiResponse<Extension> PutProvidersEdgesExtensionsExtensionIdWithHttpInfo (string extensionId, Extension body);
         /// <summary>
         /// Update outbound route
         /// </summary>
@@ -2391,9 +2391,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>OutboundRoute</returns>
-        OutboundRoute PutProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRoute body = null);
+        OutboundRoute PutProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRoute body);
 
         /// <summary>
         /// Update outbound route
@@ -2403,9 +2403,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>ApiResponse of OutboundRoute</returns>
-        ApiResponse<OutboundRoute> PutProvidersEdgesOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId, OutboundRoute body = null);
+        ApiResponse<OutboundRoute> PutProvidersEdgesOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId, OutboundRoute body);
         /// <summary>
         /// Update a Phone Base Settings by ID
         /// </summary>
@@ -2414,9 +2414,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>PhoneBase</returns>
-        PhoneBase PutProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId, PhoneBase body = null);
+        PhoneBase PutProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId, PhoneBase body);
 
         /// <summary>
         /// Update a Phone Base Settings by ID
@@ -2426,9 +2426,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
-        ApiResponse<PhoneBase> PutProvidersEdgesPhonebasesettingsPhonebaseIdWithHttpInfo (string phoneBaseId, PhoneBase body = null);
+        ApiResponse<PhoneBase> PutProvidersEdgesPhonebasesettingsPhonebaseIdWithHttpInfo (string phoneBaseId, PhoneBase body);
         /// <summary>
         /// Update a Phone by ID
         /// </summary>
@@ -2437,9 +2437,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Phone</returns>
-        Phone PutProvidersEdgesPhonesPhoneId (string phoneId, Phone body = null);
+        Phone PutProvidersEdgesPhonesPhoneId (string phoneId, Phone body);
 
         /// <summary>
         /// Update a Phone by ID
@@ -2449,9 +2449,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>ApiResponse of Phone</returns>
-        ApiResponse<Phone> PutProvidersEdgesPhonesPhoneIdWithHttpInfo (string phoneId, Phone body = null);
+        ApiResponse<Phone> PutProvidersEdgesPhonesPhoneIdWithHttpInfo (string phoneId, Phone body);
         /// <summary>
         /// Update a Site by ID.
         /// </summary>
@@ -2460,9 +2460,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Site</returns>
-        Site PutProvidersEdgesSitesSiteId (string siteId, Site body = null);
+        Site PutProvidersEdgesSitesSiteId (string siteId, Site body);
 
         /// <summary>
         /// Update a Site by ID.
@@ -2472,9 +2472,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>ApiResponse of Site</returns>
-        ApiResponse<Site> PutProvidersEdgesSitesSiteIdWithHttpInfo (string siteId, Site body = null);
+        ApiResponse<Site> PutProvidersEdgesSitesSiteIdWithHttpInfo (string siteId, Site body);
         /// <summary>
         /// Update the list of Number Plans.
         /// </summary>
@@ -2483,9 +2483,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of number plans</param>
         /// <returns>List&lt;NumberPlan&gt;</returns>
-        List<NumberPlan> PutProvidersEdgesSitesSiteIdNumberplans (string siteId, List<NumberPlan> body = null);
+        List<NumberPlan> PutProvidersEdgesSitesSiteIdNumberplans (string siteId, List<NumberPlan> body);
 
         /// <summary>
         /// Update the list of Number Plans.
@@ -2495,9 +2495,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of number plans</param>
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
-        ApiResponse<List<NumberPlan>> PutProvidersEdgesSitesSiteIdNumberplansWithHttpInfo (string siteId, List<NumberPlan> body = null);
+        ApiResponse<List<NumberPlan>> PutProvidersEdgesSitesSiteIdNumberplansWithHttpInfo (string siteId, List<NumberPlan> body);
         /// <summary>
         /// Update a Trunk Base Settings object by ID
         /// </summary>
@@ -2506,9 +2506,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>TrunkBase</returns>
-        TrunkBase PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, TrunkBase body = null);
+        TrunkBase PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, TrunkBase body);
 
         /// <summary>
         /// Update a Trunk Base Settings object by ID
@@ -2518,9 +2518,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        ApiResponse<TrunkBase> PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null);
+        ApiResponse<TrunkBase> PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId, TrunkBase body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -4214,9 +4214,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Task of Edge</returns>
-        System.Threading.Tasks.Task<Edge> PostProvidersEdgesAsync (Edge body = null);
+        System.Threading.Tasks.Task<Edge> PostProvidersEdgesAsync (Edge body);
 
         /// <summary>
         /// Create a edge.
@@ -4225,9 +4225,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Edge>> PostProvidersEdgesAsyncWithHttpInfo (Edge body = null);
+        System.Threading.Tasks.Task<ApiResponse<Edge>> PostProvidersEdgesAsyncWithHttpInfo (Edge body);
         /// <summary>
         /// Validates a street address
         /// </summary>
@@ -4256,9 +4256,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CertificateAuthority (optional)</param>
+        /// <param name="body">CertificateAuthority</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
-        System.Threading.Tasks.Task<DomainCertificateAuthority> PostProvidersEdgesCertificateauthoritiesAsync (DomainCertificateAuthority body = null);
+        System.Threading.Tasks.Task<DomainCertificateAuthority> PostProvidersEdgesCertificateauthoritiesAsync (DomainCertificateAuthority body);
 
         /// <summary>
         /// Create a certificate authority.
@@ -4267,9 +4267,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CertificateAuthority (optional)</param>
+        /// <param name="body">CertificateAuthority</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PostProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo (DomainCertificateAuthority body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PostProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo (DomainCertificateAuthority body);
         /// <summary>
         /// Create a new DID pool
         /// </summary>
@@ -4277,9 +4277,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>Task of DIDPool</returns>
-        System.Threading.Tasks.Task<DIDPool> PostProvidersEdgesDidpoolsAsync (DIDPool body = null);
+        System.Threading.Tasks.Task<DIDPool> PostProvidersEdgesDidpoolsAsync (DIDPool body);
 
         /// <summary>
         /// Create a new DID pool
@@ -4288,9 +4288,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DIDPool>> PostProvidersEdgesDidpoolsAsyncWithHttpInfo (DIDPool body = null);
+        System.Threading.Tasks.Task<ApiResponse<DIDPool>> PostProvidersEdgesDidpoolsAsyncWithHttpInfo (DIDPool body);
         /// <summary>
         /// Create an edge logical interface.
         /// </summary>
@@ -4299,9 +4299,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        System.Threading.Tasks.Task<DomainLogicalInterface> PostProvidersEdgesEdgeIdLogicalinterfacesAsync (string edgeId, DomainLogicalInterface body = null);
+        System.Threading.Tasks.Task<DomainLogicalInterface> PostProvidersEdgesEdgeIdLogicalinterfacesAsync (string edgeId, DomainLogicalInterface body);
 
         /// <summary>
         /// Create an edge logical interface.
@@ -4311,9 +4311,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PostProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId, DomainLogicalInterface body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PostProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId, DomainLogicalInterface body);
         /// <summary>
         /// Create a job to upload a list of Edge logs.
         /// </summary>
@@ -4322,9 +4322,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">EdgeLogsJobRequest (optional)</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of EdgeLogsJobResponse</returns>
-        System.Threading.Tasks.Task<EdgeLogsJobResponse> PostProvidersEdgesEdgeIdLogsJobsAsync (string edgeId, EdgeLogsJobRequest body = null);
+        System.Threading.Tasks.Task<EdgeLogsJobResponse> PostProvidersEdgesEdgeIdLogsJobsAsync (string edgeId, EdgeLogsJobRequest body);
 
         /// <summary>
         /// Create a job to upload a list of Edge logs.
@@ -4334,9 +4334,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">EdgeLogsJobRequest (optional)</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostProvidersEdgesEdgeIdLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostProvidersEdgesEdgeIdLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body);
         /// <summary>
         /// Request that the specified fileIds be uploaded from the Edge.
         /// </summary>
@@ -4346,9 +4346,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Log upload request</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostProvidersEdgesEdgeIdLogsJobsJobIdUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+        System.Threading.Tasks.Task PostProvidersEdgesEdgeIdLogsJobsJobIdUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body);
 
         /// <summary>
         /// Request that the specified fileIds be uploaded from the Edge.
@@ -4359,9 +4359,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Log upload request</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgesEdgeIdLogsJobsJobIdUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgesEdgeIdLogsJobsJobIdUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body);
         /// <summary>
         /// Reboot an Edge
         /// </summary>
@@ -4391,9 +4391,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Software update request</param>
         /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
-        System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostProvidersEdgesEdgeIdSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostProvidersEdgesEdgeIdSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body);
 
         /// <summary>
         /// Starts a software update for this edge.
@@ -4403,9 +4403,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Software update request</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostProvidersEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostProvidersEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body);
         /// <summary>
         /// Unpair an Edge
         /// </summary>
@@ -4434,9 +4434,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
-        System.Threading.Tasks.Task<EdgeGroup> PostProvidersEdgesEdgegroupsAsync (EdgeGroup body = null);
+        System.Threading.Tasks.Task<EdgeGroup> PostProvidersEdgesEdgegroupsAsync (EdgeGroup body);
 
         /// <summary>
         /// Create an edge group.
@@ -4445,9 +4445,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PostProvidersEdgesEdgegroupsAsyncWithHttpInfo (EdgeGroup body = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PostProvidersEdgesEdgegroupsAsyncWithHttpInfo (EdgeGroup body);
         /// <summary>
         /// Create endpoint
         /// </summary>
@@ -4455,9 +4455,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of Endpoint</returns>
-        System.Threading.Tasks.Task<Endpoint> PostProvidersEdgesEndpointsAsync (Endpoint body = null);
+        System.Threading.Tasks.Task<Endpoint> PostProvidersEdgesEndpointsAsync (Endpoint body);
 
         /// <summary>
         /// Create endpoint
@@ -4466,9 +4466,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of ApiResponse (Endpoint)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Endpoint>> PostProvidersEdgesEndpointsAsyncWithHttpInfo (Endpoint body = null);
+        System.Threading.Tasks.Task<ApiResponse<Endpoint>> PostProvidersEdgesEndpointsAsyncWithHttpInfo (Endpoint body);
         /// <summary>
         /// Create a new extension pool
         /// </summary>
@@ -4476,9 +4476,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>Task of Extension</returns>
-        System.Threading.Tasks.Task<Extension> PostProvidersEdgesExtensionpoolsAsync (ExtensionPool body = null);
+        System.Threading.Tasks.Task<Extension> PostProvidersEdgesExtensionpoolsAsync (ExtensionPool body);
 
         /// <summary>
         /// Create a new extension pool
@@ -4487,9 +4487,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (Extension)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Extension>> PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body = null);
+        System.Threading.Tasks.Task<ApiResponse<Extension>> PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body);
         /// <summary>
         /// Create outbound rule
         /// </summary>
@@ -4497,9 +4497,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRoute</returns>
-        System.Threading.Tasks.Task<OutboundRoute> PostProvidersEdgesOutboundroutesAsync (OutboundRoute body = null);
+        System.Threading.Tasks.Task<OutboundRoute> PostProvidersEdgesOutboundroutesAsync (OutboundRoute body);
 
         /// <summary>
         /// Create outbound rule
@@ -4508,9 +4508,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PostProvidersEdgesOutboundroutesAsyncWithHttpInfo (OutboundRoute body = null);
+        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PostProvidersEdgesOutboundroutesAsyncWithHttpInfo (OutboundRoute body);
         /// <summary>
         /// Create a new Phone Base Settings object
         /// </summary>
@@ -4518,9 +4518,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>Task of PhoneBase</returns>
-        System.Threading.Tasks.Task<PhoneBase> PostProvidersEdgesPhonebasesettingsAsync (PhoneBase body = null);
+        System.Threading.Tasks.Task<PhoneBase> PostProvidersEdgesPhonebasesettingsAsync (PhoneBase body);
 
         /// <summary>
         /// Create a new Phone Base Settings object
@@ -4529,9 +4529,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PostProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (PhoneBase body = null);
+        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PostProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (PhoneBase body);
         /// <summary>
         /// Create a new Phone
         /// </summary>
@@ -4539,9 +4539,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Task of Phone</returns>
-        System.Threading.Tasks.Task<Phone> PostProvidersEdgesPhonesAsync (Phone body = null);
+        System.Threading.Tasks.Task<Phone> PostProvidersEdgesPhonesAsync (Phone body);
 
         /// <summary>
         /// Create a new Phone
@@ -4550,9 +4550,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Phone>> PostProvidersEdgesPhonesAsyncWithHttpInfo (Phone body = null);
+        System.Threading.Tasks.Task<ApiResponse<Phone>> PostProvidersEdgesPhonesAsyncWithHttpInfo (Phone body);
         /// <summary>
         /// Reboot a Phone
         /// </summary>
@@ -4581,9 +4581,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Phones</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostProvidersEdgesPhonesRebootAsync (PhonesReboot body = null);
+        System.Threading.Tasks.Task PostProvidersEdgesPhonesRebootAsync (PhonesReboot body);
 
         /// <summary>
         /// Reboot Multiple Phones
@@ -4592,9 +4592,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Phones</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgesPhonesRebootAsyncWithHttpInfo (PhonesReboot body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgesPhonesRebootAsyncWithHttpInfo (PhonesReboot body);
         /// <summary>
         /// Create a Site.
         /// </summary>
@@ -4602,9 +4602,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Task of Site</returns>
-        System.Threading.Tasks.Task<Site> PostProvidersEdgesSitesAsync (Site body = null);
+        System.Threading.Tasks.Task<Site> PostProvidersEdgesSitesAsync (Site body);
 
         /// <summary>
         /// Create a Site.
@@ -4613,9 +4613,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Task of ApiResponse (Site)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Site>> PostProvidersEdgesSitesAsyncWithHttpInfo (Site body = null);
+        System.Threading.Tasks.Task<ApiResponse<Site>> PostProvidersEdgesSitesAsyncWithHttpInfo (Site body);
         /// <summary>
         /// Triggers the rebalance operation.
         /// </summary>
@@ -4644,9 +4644,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>Task of TrunkBase</returns>
-        System.Threading.Tasks.Task<TrunkBase> PostProvidersEdgesTrunkbasesettingsAsync (TrunkBase body = null);
+        System.Threading.Tasks.Task<TrunkBase> PostProvidersEdgesTrunkbasesettingsAsync (TrunkBase body);
 
         /// <summary>
         /// Create a Trunk Base Settings object
@@ -4655,9 +4655,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body = null);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body);
         /// <summary>
         /// Update a certificate authority.
         /// </summary>
@@ -4666,9 +4666,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate authority</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
-        System.Threading.Tasks.Task<DomainCertificateAuthority> PutProvidersEdgesCertificateauthoritiesCertificateIdAsync (string certificateId, DomainCertificateAuthority body = null);
+        System.Threading.Tasks.Task<DomainCertificateAuthority> PutProvidersEdgesCertificateauthoritiesCertificateIdAsync (string certificateId, DomainCertificateAuthority body);
 
         /// <summary>
         /// Update a certificate authority.
@@ -4678,9 +4678,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate authority</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PutProvidersEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo (string certificateId, DomainCertificateAuthority body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PutProvidersEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo (string certificateId, DomainCertificateAuthority body);
         /// <summary>
         /// Update a DID Pool by ID.
         /// </summary>
@@ -4689,9 +4689,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>Task of DIDPool</returns>
-        System.Threading.Tasks.Task<DIDPool> PutProvidersEdgesDidpoolsDidpoolIdAsync (string didPoolId, DIDPool body = null);
+        System.Threading.Tasks.Task<DIDPool> PutProvidersEdgesDidpoolsDidpoolIdAsync (string didPoolId, DIDPool body);
 
         /// <summary>
         /// Update a DID Pool by ID.
@@ -4701,9 +4701,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DIDPool>> PutProvidersEdgesDidpoolsDidpoolIdAsyncWithHttpInfo (string didPoolId, DIDPool body = null);
+        System.Threading.Tasks.Task<ApiResponse<DIDPool>> PutProvidersEdgesDidpoolsDidpoolIdAsyncWithHttpInfo (string didPoolId, DIDPool body);
         /// <summary>
         /// Update a DID by ID.
         /// </summary>
@@ -4712,9 +4712,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID</param>
         /// <returns>Task of DID</returns>
-        System.Threading.Tasks.Task<DID> PutProvidersEdgesDidsDidIdAsync (string didId, DID body = null);
+        System.Threading.Tasks.Task<DID> PutProvidersEdgesDidsDidIdAsync (string didId, DID body);
 
         /// <summary>
         /// Update a DID by ID.
@@ -4724,9 +4724,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID</param>
         /// <returns>Task of ApiResponse (DID)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DID>> PutProvidersEdgesDidsDidIdAsyncWithHttpInfo (string didId, DID body = null);
+        System.Threading.Tasks.Task<ApiResponse<DID>> PutProvidersEdgesDidsDidIdAsyncWithHttpInfo (string didId, DID body);
         /// <summary>
         /// Update a edge.
         /// </summary>
@@ -4735,9 +4735,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Task of Edge</returns>
-        System.Threading.Tasks.Task<Edge> PutProvidersEdgesEdgeIdAsync (string edgeId, Edge body = null);
+        System.Threading.Tasks.Task<Edge> PutProvidersEdgesEdgeIdAsync (string edgeId, Edge body);
 
         /// <summary>
         /// Update a edge.
@@ -4747,9 +4747,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Edge>> PutProvidersEdgesEdgeIdAsyncWithHttpInfo (string edgeId, Edge body = null);
+        System.Threading.Tasks.Task<ApiResponse<Edge>> PutProvidersEdgesEdgeIdAsyncWithHttpInfo (string edgeId, Edge body);
         /// <summary>
         /// Update a line.
         /// </summary>
@@ -4759,9 +4759,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line (optional)</param>
+        /// <param name="body">Line</param>
         /// <returns>Task of EdgeLine</returns>
-        System.Threading.Tasks.Task<EdgeLine> PutProvidersEdgesEdgeIdLinesLineIdAsync (string edgeId, string lineId, EdgeLine body = null);
+        System.Threading.Tasks.Task<EdgeLine> PutProvidersEdgesEdgeIdLinesLineIdAsync (string edgeId, string lineId, EdgeLine body);
 
         /// <summary>
         /// Update a line.
@@ -4772,9 +4772,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line (optional)</param>
+        /// <param name="body">Line</param>
         /// <returns>Task of ApiResponse (EdgeLine)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeLine>> PutProvidersEdgesEdgeIdLinesLineIdAsyncWithHttpInfo (string edgeId, string lineId, EdgeLine body = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeLine>> PutProvidersEdgesEdgeIdLinesLineIdAsyncWithHttpInfo (string edgeId, string lineId, EdgeLine body);
         /// <summary>
         /// Update an edge logical interface.
         /// </summary>
@@ -4784,9 +4784,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        System.Threading.Tasks.Task<DomainLogicalInterface> PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId, DomainLogicalInterface body = null);
+        System.Threading.Tasks.Task<DomainLogicalInterface> PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId, DomainLogicalInterface body);
 
         /// <summary>
         /// Update an edge logical interface.
@@ -4797,9 +4797,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body);
         /// <summary>
         /// Update an edge group.
         /// </summary>
@@ -4808,9 +4808,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
-        System.Threading.Tasks.Task<EdgeGroup> PutProvidersEdgesEdgegroupsEdgegroupIdAsync (string edgeGroupId, EdgeGroup body = null);
+        System.Threading.Tasks.Task<EdgeGroup> PutProvidersEdgesEdgegroupsEdgegroupIdAsync (string edgeGroupId, EdgeGroup body);
 
         /// <summary>
         /// Update an edge group.
@@ -4820,9 +4820,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PutProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PutProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body);
         /// <summary>
         /// Update endpoint
         /// </summary>
@@ -4831,9 +4831,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of Endpoint</returns>
-        System.Threading.Tasks.Task<Endpoint> PutProvidersEdgesEndpointsEndpointIdAsync (string endpointId, Endpoint body = null);
+        System.Threading.Tasks.Task<Endpoint> PutProvidersEdgesEndpointsEndpointIdAsync (string endpointId, Endpoint body);
 
         /// <summary>
         /// Update endpoint
@@ -4843,9 +4843,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of ApiResponse (Endpoint)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Endpoint>> PutProvidersEdgesEndpointsEndpointIdAsyncWithHttpInfo (string endpointId, Endpoint body = null);
+        System.Threading.Tasks.Task<ApiResponse<Endpoint>> PutProvidersEdgesEndpointsEndpointIdAsyncWithHttpInfo (string endpointId, Endpoint body);
         /// <summary>
         /// Update an extension pool by ID
         /// </summary>
@@ -4854,9 +4854,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ExtensionPool</returns>
-        System.Threading.Tasks.Task<ExtensionPool> PutProvidersEdgesExtensionpoolsExtensionpoolIdAsync (string extensionPoolId, ExtensionPool body = null);
+        System.Threading.Tasks.Task<ExtensionPool> PutProvidersEdgesExtensionpoolsExtensionpoolIdAsync (string extensionPoolId, ExtensionPool body);
 
         /// <summary>
         /// Update an extension pool by ID
@@ -4866,9 +4866,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PutProvidersEdgesExtensionpoolsExtensionpoolIdAsyncWithHttpInfo (string extensionPoolId, ExtensionPool body = null);
+        System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PutProvidersEdgesExtensionpoolsExtensionpoolIdAsyncWithHttpInfo (string extensionPoolId, ExtensionPool body);
         /// <summary>
         /// Update an extension by ID.
         /// </summary>
@@ -4877,9 +4877,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Extension</param>
         /// <returns>Task of Extension</returns>
-        System.Threading.Tasks.Task<Extension> PutProvidersEdgesExtensionsExtensionIdAsync (string extensionId, Extension body = null);
+        System.Threading.Tasks.Task<Extension> PutProvidersEdgesExtensionsExtensionIdAsync (string extensionId, Extension body);
 
         /// <summary>
         /// Update an extension by ID.
@@ -4889,9 +4889,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Extension</param>
         /// <returns>Task of ApiResponse (Extension)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Extension>> PutProvidersEdgesExtensionsExtensionIdAsyncWithHttpInfo (string extensionId, Extension body = null);
+        System.Threading.Tasks.Task<ApiResponse<Extension>> PutProvidersEdgesExtensionsExtensionIdAsyncWithHttpInfo (string extensionId, Extension body);
         /// <summary>
         /// Update outbound route
         /// </summary>
@@ -4900,9 +4900,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRoute</returns>
-        System.Threading.Tasks.Task<OutboundRoute> PutProvidersEdgesOutboundroutesOutboundrouteIdAsync (string outboundRouteId, OutboundRoute body = null);
+        System.Threading.Tasks.Task<OutboundRoute> PutProvidersEdgesOutboundroutesOutboundrouteIdAsync (string outboundRouteId, OutboundRoute body);
 
         /// <summary>
         /// Update outbound route
@@ -4912,9 +4912,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PutProvidersEdgesOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId, OutboundRoute body = null);
+        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PutProvidersEdgesOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId, OutboundRoute body);
         /// <summary>
         /// Update a Phone Base Settings by ID
         /// </summary>
@@ -4923,9 +4923,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>Task of PhoneBase</returns>
-        System.Threading.Tasks.Task<PhoneBase> PutProvidersEdgesPhonebasesettingsPhonebaseIdAsync (string phoneBaseId, PhoneBase body = null);
+        System.Threading.Tasks.Task<PhoneBase> PutProvidersEdgesPhonebasesettingsPhonebaseIdAsync (string phoneBaseId, PhoneBase body);
 
         /// <summary>
         /// Update a Phone Base Settings by ID
@@ -4935,9 +4935,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PutProvidersEdgesPhonebasesettingsPhonebaseIdAsyncWithHttpInfo (string phoneBaseId, PhoneBase body = null);
+        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PutProvidersEdgesPhonebasesettingsPhonebaseIdAsyncWithHttpInfo (string phoneBaseId, PhoneBase body);
         /// <summary>
         /// Update a Phone by ID
         /// </summary>
@@ -4946,9 +4946,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Task of Phone</returns>
-        System.Threading.Tasks.Task<Phone> PutProvidersEdgesPhonesPhoneIdAsync (string phoneId, Phone body = null);
+        System.Threading.Tasks.Task<Phone> PutProvidersEdgesPhonesPhoneIdAsync (string phoneId, Phone body);
 
         /// <summary>
         /// Update a Phone by ID
@@ -4958,9 +4958,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Phone>> PutProvidersEdgesPhonesPhoneIdAsyncWithHttpInfo (string phoneId, Phone body = null);
+        System.Threading.Tasks.Task<ApiResponse<Phone>> PutProvidersEdgesPhonesPhoneIdAsyncWithHttpInfo (string phoneId, Phone body);
         /// <summary>
         /// Update a Site by ID.
         /// </summary>
@@ -4969,9 +4969,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Task of Site</returns>
-        System.Threading.Tasks.Task<Site> PutProvidersEdgesSitesSiteIdAsync (string siteId, Site body = null);
+        System.Threading.Tasks.Task<Site> PutProvidersEdgesSitesSiteIdAsync (string siteId, Site body);
 
         /// <summary>
         /// Update a Site by ID.
@@ -4981,9 +4981,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Task of ApiResponse (Site)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Site>> PutProvidersEdgesSitesSiteIdAsyncWithHttpInfo (string siteId, Site body = null);
+        System.Threading.Tasks.Task<ApiResponse<Site>> PutProvidersEdgesSitesSiteIdAsyncWithHttpInfo (string siteId, Site body);
         /// <summary>
         /// Update the list of Number Plans.
         /// </summary>
@@ -4992,9 +4992,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of number plans</param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
-        System.Threading.Tasks.Task<List<NumberPlan>> PutProvidersEdgesSitesSiteIdNumberplansAsync (string siteId, List<NumberPlan> body = null);
+        System.Threading.Tasks.Task<List<NumberPlan>> PutProvidersEdgesSitesSiteIdNumberplansAsync (string siteId, List<NumberPlan> body);
 
         /// <summary>
         /// Update the list of Number Plans.
@@ -5004,9 +5004,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of number plans</param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutProvidersEdgesSitesSiteIdNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutProvidersEdgesSitesSiteIdNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body);
         /// <summary>
         /// Update a Trunk Base Settings object by ID
         /// </summary>
@@ -5015,9 +5015,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>Task of TrunkBase</returns>
-        System.Threading.Tasks.Task<TrunkBase> PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId, TrunkBase body = null);
+        System.Threading.Tasks.Task<TrunkBase> PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId, TrunkBase body);
 
         /// <summary>
         /// Update a Trunk Base Settings object by ID
@@ -5027,9 +5027,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId, TrunkBase body);
         #endregion Asynchronous Operations
     }
 
@@ -16594,9 +16594,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a edge. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Edge</returns>
-        public Edge PostProvidersEdges (Edge body = null)
+        public Edge PostProvidersEdges (Edge body)
         {
              ApiResponse<Edge> localVarResponse = PostProvidersEdgesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -16606,10 +16606,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a edge. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>ApiResponse of Edge</returns>
-        public ApiResponse< Edge > PostProvidersEdgesWithHttpInfo (Edge body = null)
+        public ApiResponse< Edge > PostProvidersEdgesWithHttpInfo (Edge body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdges");
 
             var localVarPath = "/api/v2/telephony/providers/edges";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16674,9 +16677,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a edge. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Task of Edge</returns>
-        public async System.Threading.Tasks.Task<Edge> PostProvidersEdgesAsync (Edge body = null)
+        public async System.Threading.Tasks.Task<Edge> PostProvidersEdgesAsync (Edge body)
         {
              ApiResponse<Edge> localVarResponse = await PostProvidersEdgesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -16687,10 +16690,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a edge. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Edge>> PostProvidersEdgesAsyncWithHttpInfo (Edge body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Edge>> PostProvidersEdgesAsyncWithHttpInfo (Edge body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdges");
 
             var localVarPath = "/api/v2/telephony/providers/edges";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16916,9 +16922,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a certificate authority. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CertificateAuthority (optional)</param>
+        /// <param name="body">CertificateAuthority</param>
         /// <returns>DomainCertificateAuthority</returns>
-        public DomainCertificateAuthority PostProvidersEdgesCertificateauthorities (DomainCertificateAuthority body = null)
+        public DomainCertificateAuthority PostProvidersEdgesCertificateauthorities (DomainCertificateAuthority body)
         {
              ApiResponse<DomainCertificateAuthority> localVarResponse = PostProvidersEdgesCertificateauthoritiesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -16928,10 +16934,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a certificate authority. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CertificateAuthority (optional)</param>
+        /// <param name="body">CertificateAuthority</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
-        public ApiResponse< DomainCertificateAuthority > PostProvidersEdgesCertificateauthoritiesWithHttpInfo (DomainCertificateAuthority body = null)
+        public ApiResponse< DomainCertificateAuthority > PostProvidersEdgesCertificateauthoritiesWithHttpInfo (DomainCertificateAuthority body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesCertificateauthorities");
 
             var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16996,9 +17005,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a certificate authority. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CertificateAuthority (optional)</param>
+        /// <param name="body">CertificateAuthority</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
-        public async System.Threading.Tasks.Task<DomainCertificateAuthority> PostProvidersEdgesCertificateauthoritiesAsync (DomainCertificateAuthority body = null)
+        public async System.Threading.Tasks.Task<DomainCertificateAuthority> PostProvidersEdgesCertificateauthoritiesAsync (DomainCertificateAuthority body)
         {
              ApiResponse<DomainCertificateAuthority> localVarResponse = await PostProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -17009,10 +17018,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a certificate authority. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CertificateAuthority (optional)</param>
+        /// <param name="body">CertificateAuthority</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PostProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo (DomainCertificateAuthority body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PostProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo (DomainCertificateAuthority body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesCertificateauthorities");
 
             var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities";
             var localVarPathParams = new Dictionary<String, String>();
@@ -17077,9 +17089,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a new DID pool 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>DIDPool</returns>
-        public DIDPool PostProvidersEdgesDidpools (DIDPool body = null)
+        public DIDPool PostProvidersEdgesDidpools (DIDPool body)
         {
              ApiResponse<DIDPool> localVarResponse = PostProvidersEdgesDidpoolsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -17089,10 +17101,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a new DID pool 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>ApiResponse of DIDPool</returns>
-        public ApiResponse< DIDPool > PostProvidersEdgesDidpoolsWithHttpInfo (DIDPool body = null)
+        public ApiResponse< DIDPool > PostProvidersEdgesDidpoolsWithHttpInfo (DIDPool body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesDidpools");
 
             var localVarPath = "/api/v2/telephony/providers/edges/didpools";
             var localVarPathParams = new Dictionary<String, String>();
@@ -17157,9 +17172,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a new DID pool 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>Task of DIDPool</returns>
-        public async System.Threading.Tasks.Task<DIDPool> PostProvidersEdgesDidpoolsAsync (DIDPool body = null)
+        public async System.Threading.Tasks.Task<DIDPool> PostProvidersEdgesDidpoolsAsync (DIDPool body)
         {
              ApiResponse<DIDPool> localVarResponse = await PostProvidersEdgesDidpoolsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -17170,10 +17185,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a new DID pool 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> PostProvidersEdgesDidpoolsAsyncWithHttpInfo (DIDPool body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> PostProvidersEdgesDidpoolsAsyncWithHttpInfo (DIDPool body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesDidpools");
 
             var localVarPath = "/api/v2/telephony/providers/edges/didpools";
             var localVarPathParams = new Dictionary<String, String>();
@@ -17239,9 +17257,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>DomainLogicalInterface</returns>
-        public DomainLogicalInterface PostProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, DomainLogicalInterface body = null)
+        public DomainLogicalInterface PostProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, DomainLogicalInterface body)
         {
              ApiResponse<DomainLogicalInterface> localVarResponse = PostProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo(edgeId, body);
              return localVarResponse.Data;
@@ -17252,13 +17270,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        public ApiResponse< DomainLogicalInterface > PostProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId, DomainLogicalInterface body = null)
+        public ApiResponse< DomainLogicalInterface > PostProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId, DomainLogicalInterface body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
                 throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogicalinterfaces");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogicalinterfaces");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces";
             var localVarPathParams = new Dictionary<String, String>();
@@ -17325,9 +17346,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        public async System.Threading.Tasks.Task<DomainLogicalInterface> PostProvidersEdgesEdgeIdLogicalinterfacesAsync (string edgeId, DomainLogicalInterface body = null)
+        public async System.Threading.Tasks.Task<DomainLogicalInterface> PostProvidersEdgesEdgeIdLogicalinterfacesAsync (string edgeId, DomainLogicalInterface body)
         {
              ApiResponse<DomainLogicalInterface> localVarResponse = await PostProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo(edgeId, body);
              return localVarResponse.Data;
@@ -17339,13 +17360,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PostProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId, DomainLogicalInterface body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PostProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId, DomainLogicalInterface body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
                 throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogicalinterfaces");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogicalinterfaces");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces";
             var localVarPathParams = new Dictionary<String, String>();
@@ -17412,9 +17436,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">EdgeLogsJobRequest (optional)</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>EdgeLogsJobResponse</returns>
-        public EdgeLogsJobResponse PostProvidersEdgesEdgeIdLogsJobs (string edgeId, EdgeLogsJobRequest body = null)
+        public EdgeLogsJobResponse PostProvidersEdgesEdgeIdLogsJobs (string edgeId, EdgeLogsJobRequest body)
         {
              ApiResponse<EdgeLogsJobResponse> localVarResponse = PostProvidersEdgesEdgeIdLogsJobsWithHttpInfo(edgeId, body);
              return localVarResponse.Data;
@@ -17425,13 +17449,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">EdgeLogsJobRequest (optional)</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>ApiResponse of EdgeLogsJobResponse</returns>
-        public ApiResponse< EdgeLogsJobResponse > PostProvidersEdgesEdgeIdLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null)
+        public ApiResponse< EdgeLogsJobResponse > PostProvidersEdgesEdgeIdLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
                 throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogsJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogsJobs");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs";
             var localVarPathParams = new Dictionary<String, String>();
@@ -17498,9 +17525,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">EdgeLogsJobRequest (optional)</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of EdgeLogsJobResponse</returns>
-        public async System.Threading.Tasks.Task<EdgeLogsJobResponse> PostProvidersEdgesEdgeIdLogsJobsAsync (string edgeId, EdgeLogsJobRequest body = null)
+        public async System.Threading.Tasks.Task<EdgeLogsJobResponse> PostProvidersEdgesEdgeIdLogsJobsAsync (string edgeId, EdgeLogsJobRequest body)
         {
              ApiResponse<EdgeLogsJobResponse> localVarResponse = await PostProvidersEdgesEdgeIdLogsJobsAsyncWithHttpInfo(edgeId, body);
              return localVarResponse.Data;
@@ -17512,13 +17539,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">EdgeLogsJobRequest (optional)</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostProvidersEdgesEdgeIdLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostProvidersEdgesEdgeIdLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
                 throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogsJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogsJobs");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs";
             var localVarPathParams = new Dictionary<String, String>();
@@ -17586,9 +17616,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Log upload request</param>
         /// <returns></returns>
-        public void PostProvidersEdgesEdgeIdLogsJobsJobIdUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        public void PostProvidersEdgesEdgeIdLogsJobsJobIdUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
         {
              PostProvidersEdgesEdgeIdLogsJobsJobIdUploadWithHttpInfo(edgeId, jobId, body);
         }
@@ -17599,9 +17629,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Log upload request</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostProvidersEdgesEdgeIdLogsJobsJobIdUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        public ApiResponse<Object> PostProvidersEdgesEdgeIdLogsJobsJobIdUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -17609,6 +17639,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'jobId' is set
             if (jobId == null)
                 throw new ApiException(400, "Missing required parameter 'jobId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogsJobsJobIdUpload");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogsJobsJobIdUpload");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload";
             var localVarPathParams = new Dictionary<String, String>();
@@ -17677,9 +17710,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Log upload request</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostProvidersEdgesEdgeIdLogsJobsJobIdUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        public async System.Threading.Tasks.Task PostProvidersEdgesEdgeIdLogsJobsJobIdUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
         {
              await PostProvidersEdgesEdgeIdLogsJobsJobIdUploadAsyncWithHttpInfo(edgeId, jobId, body);
 
@@ -17691,9 +17724,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="jobId">Job ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Log upload request</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgesEdgeIdLogsJobsJobIdUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgesEdgeIdLogsJobsJobIdUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -17701,6 +17734,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'jobId' is set
             if (jobId == null)
                 throw new ApiException(400, "Missing required parameter 'jobId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogsJobsJobIdUpload");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdLogsJobsJobIdUpload");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload";
             var localVarPathParams = new Dictionary<String, String>();
@@ -17921,9 +17957,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Software update request</param>
         /// <returns>DomainEdgeSoftwareUpdateDto</returns>
-        public DomainEdgeSoftwareUpdateDto PostProvidersEdgesEdgeIdSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        public DomainEdgeSoftwareUpdateDto PostProvidersEdgesEdgeIdSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body)
         {
              ApiResponse<DomainEdgeSoftwareUpdateDto> localVarResponse = PostProvidersEdgesEdgeIdSoftwareupdateWithHttpInfo(edgeId, body);
              return localVarResponse.Data;
@@ -17934,13 +17970,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Software update request</param>
         /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
-        public ApiResponse< DomainEdgeSoftwareUpdateDto > PostProvidersEdgesEdgeIdSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        public ApiResponse< DomainEdgeSoftwareUpdateDto > PostProvidersEdgesEdgeIdSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
                 throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdSoftwareupdate");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdSoftwareupdate");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18007,9 +18046,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Software update request</param>
         /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
-        public async System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostProvidersEdgesEdgeIdSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        public async System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostProvidersEdgesEdgeIdSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body)
         {
              ApiResponse<DomainEdgeSoftwareUpdateDto> localVarResponse = await PostProvidersEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo(edgeId, body);
              return localVarResponse.Data;
@@ -18021,13 +18060,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Software update request</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostProvidersEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostProvidersEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
                 throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdSoftwareupdate");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgeIdSoftwareupdate");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18246,9 +18288,9 @@ namespace ININ.PureCloudApi.Api
         /// Create an edge group. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>EdgeGroup</returns>
-        public EdgeGroup PostProvidersEdgesEdgegroups (EdgeGroup body = null)
+        public EdgeGroup PostProvidersEdgesEdgegroups (EdgeGroup body)
         {
              ApiResponse<EdgeGroup> localVarResponse = PostProvidersEdgesEdgegroupsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -18258,10 +18300,13 @@ namespace ININ.PureCloudApi.Api
         /// Create an edge group. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
-        public ApiResponse< EdgeGroup > PostProvidersEdgesEdgegroupsWithHttpInfo (EdgeGroup body = null)
+        public ApiResponse< EdgeGroup > PostProvidersEdgesEdgegroupsWithHttpInfo (EdgeGroup body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgegroups");
 
             var localVarPath = "/api/v2/telephony/providers/edges/edgegroups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18326,9 +18371,9 @@ namespace ININ.PureCloudApi.Api
         /// Create an edge group. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
-        public async System.Threading.Tasks.Task<EdgeGroup> PostProvidersEdgesEdgegroupsAsync (EdgeGroup body = null)
+        public async System.Threading.Tasks.Task<EdgeGroup> PostProvidersEdgesEdgegroupsAsync (EdgeGroup body)
         {
              ApiResponse<EdgeGroup> localVarResponse = await PostProvidersEdgesEdgegroupsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -18339,10 +18384,13 @@ namespace ININ.PureCloudApi.Api
         /// Create an edge group. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PostProvidersEdgesEdgegroupsAsyncWithHttpInfo (EdgeGroup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PostProvidersEdgesEdgegroupsAsyncWithHttpInfo (EdgeGroup body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEdgegroups");
 
             var localVarPath = "/api/v2/telephony/providers/edges/edgegroups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18407,9 +18455,9 @@ namespace ININ.PureCloudApi.Api
         /// Create endpoint 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Endpoint</returns>
-        public Endpoint PostProvidersEdgesEndpoints (Endpoint body = null)
+        public Endpoint PostProvidersEdgesEndpoints (Endpoint body)
         {
              ApiResponse<Endpoint> localVarResponse = PostProvidersEdgesEndpointsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -18419,10 +18467,13 @@ namespace ININ.PureCloudApi.Api
         /// Create endpoint 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>ApiResponse of Endpoint</returns>
-        public ApiResponse< Endpoint > PostProvidersEdgesEndpointsWithHttpInfo (Endpoint body = null)
+        public ApiResponse< Endpoint > PostProvidersEdgesEndpointsWithHttpInfo (Endpoint body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEndpoints");
 
             var localVarPath = "/api/v2/telephony/providers/edges/endpoints";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18487,9 +18538,9 @@ namespace ININ.PureCloudApi.Api
         /// Create endpoint 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of Endpoint</returns>
-        public async System.Threading.Tasks.Task<Endpoint> PostProvidersEdgesEndpointsAsync (Endpoint body = null)
+        public async System.Threading.Tasks.Task<Endpoint> PostProvidersEdgesEndpointsAsync (Endpoint body)
         {
              ApiResponse<Endpoint> localVarResponse = await PostProvidersEdgesEndpointsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -18500,10 +18551,13 @@ namespace ININ.PureCloudApi.Api
         /// Create endpoint 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of ApiResponse (Endpoint)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Endpoint>> PostProvidersEdgesEndpointsAsyncWithHttpInfo (Endpoint body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Endpoint>> PostProvidersEdgesEndpointsAsyncWithHttpInfo (Endpoint body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesEndpoints");
 
             var localVarPath = "/api/v2/telephony/providers/edges/endpoints";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18568,9 +18622,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a new extension pool 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>Extension</returns>
-        public Extension PostProvidersEdgesExtensionpools (ExtensionPool body = null)
+        public Extension PostProvidersEdgesExtensionpools (ExtensionPool body)
         {
              ApiResponse<Extension> localVarResponse = PostProvidersEdgesExtensionpoolsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -18580,10 +18634,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a new extension pool 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>ApiResponse of Extension</returns>
-        public ApiResponse< Extension > PostProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body = null)
+        public ApiResponse< Extension > PostProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesExtensionpools");
 
             var localVarPath = "/api/v2/telephony/providers/edges/extensionpools";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18648,9 +18705,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a new extension pool 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>Task of Extension</returns>
-        public async System.Threading.Tasks.Task<Extension> PostProvidersEdgesExtensionpoolsAsync (ExtensionPool body = null)
+        public async System.Threading.Tasks.Task<Extension> PostProvidersEdgesExtensionpoolsAsync (ExtensionPool body)
         {
              ApiResponse<Extension> localVarResponse = await PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -18661,10 +18718,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a new extension pool 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (Extension)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Extension>> PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Extension>> PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesExtensionpools");
 
             var localVarPath = "/api/v2/telephony/providers/edges/extensionpools";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18729,9 +18789,9 @@ namespace ININ.PureCloudApi.Api
         /// Create outbound rule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>OutboundRoute</returns>
-        public OutboundRoute PostProvidersEdgesOutboundroutes (OutboundRoute body = null)
+        public OutboundRoute PostProvidersEdgesOutboundroutes (OutboundRoute body)
         {
              ApiResponse<OutboundRoute> localVarResponse = PostProvidersEdgesOutboundroutesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -18741,10 +18801,13 @@ namespace ININ.PureCloudApi.Api
         /// Create outbound rule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>ApiResponse of OutboundRoute</returns>
-        public ApiResponse< OutboundRoute > PostProvidersEdgesOutboundroutesWithHttpInfo (OutboundRoute body = null)
+        public ApiResponse< OutboundRoute > PostProvidersEdgesOutboundroutesWithHttpInfo (OutboundRoute body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesOutboundroutes");
 
             var localVarPath = "/api/v2/telephony/providers/edges/outboundroutes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18809,9 +18872,9 @@ namespace ININ.PureCloudApi.Api
         /// Create outbound rule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRoute</returns>
-        public async System.Threading.Tasks.Task<OutboundRoute> PostProvidersEdgesOutboundroutesAsync (OutboundRoute body = null)
+        public async System.Threading.Tasks.Task<OutboundRoute> PostProvidersEdgesOutboundroutesAsync (OutboundRoute body)
         {
              ApiResponse<OutboundRoute> localVarResponse = await PostProvidersEdgesOutboundroutesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -18822,10 +18885,13 @@ namespace ININ.PureCloudApi.Api
         /// Create outbound rule 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PostProvidersEdgesOutboundroutesAsyncWithHttpInfo (OutboundRoute body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PostProvidersEdgesOutboundroutesAsyncWithHttpInfo (OutboundRoute body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesOutboundroutes");
 
             var localVarPath = "/api/v2/telephony/providers/edges/outboundroutes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18890,9 +18956,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a new Phone Base Settings object 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>PhoneBase</returns>
-        public PhoneBase PostProvidersEdgesPhonebasesettings (PhoneBase body = null)
+        public PhoneBase PostProvidersEdgesPhonebasesettings (PhoneBase body)
         {
              ApiResponse<PhoneBase> localVarResponse = PostProvidersEdgesPhonebasesettingsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -18902,10 +18968,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a new Phone Base Settings object 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
-        public ApiResponse< PhoneBase > PostProvidersEdgesPhonebasesettingsWithHttpInfo (PhoneBase body = null)
+        public ApiResponse< PhoneBase > PostProvidersEdgesPhonebasesettingsWithHttpInfo (PhoneBase body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesPhonebasesettings");
 
             var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18970,9 +19039,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a new Phone Base Settings object 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>Task of PhoneBase</returns>
-        public async System.Threading.Tasks.Task<PhoneBase> PostProvidersEdgesPhonebasesettingsAsync (PhoneBase body = null)
+        public async System.Threading.Tasks.Task<PhoneBase> PostProvidersEdgesPhonebasesettingsAsync (PhoneBase body)
         {
              ApiResponse<PhoneBase> localVarResponse = await PostProvidersEdgesPhonebasesettingsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -18983,10 +19052,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a new Phone Base Settings object 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PostProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (PhoneBase body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PostProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (PhoneBase body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesPhonebasesettings");
 
             var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19051,9 +19123,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a new Phone 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Phone</returns>
-        public Phone PostProvidersEdgesPhones (Phone body = null)
+        public Phone PostProvidersEdgesPhones (Phone body)
         {
              ApiResponse<Phone> localVarResponse = PostProvidersEdgesPhonesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -19063,10 +19135,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a new Phone 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>ApiResponse of Phone</returns>
-        public ApiResponse< Phone > PostProvidersEdgesPhonesWithHttpInfo (Phone body = null)
+        public ApiResponse< Phone > PostProvidersEdgesPhonesWithHttpInfo (Phone body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesPhones");
 
             var localVarPath = "/api/v2/telephony/providers/edges/phones";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19131,9 +19206,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a new Phone 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Task of Phone</returns>
-        public async System.Threading.Tasks.Task<Phone> PostProvidersEdgesPhonesAsync (Phone body = null)
+        public async System.Threading.Tasks.Task<Phone> PostProvidersEdgesPhonesAsync (Phone body)
         {
              ApiResponse<Phone> localVarResponse = await PostProvidersEdgesPhonesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -19144,10 +19219,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a new Phone 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Phone>> PostProvidersEdgesPhonesAsyncWithHttpInfo (Phone body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Phone>> PostProvidersEdgesPhonesAsyncWithHttpInfo (Phone body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesPhones");
 
             var localVarPath = "/api/v2/telephony/providers/edges/phones";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19363,9 +19441,9 @@ namespace ININ.PureCloudApi.Api
         /// Reboot Multiple Phones 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Phones</param>
         /// <returns></returns>
-        public void PostProvidersEdgesPhonesReboot (PhonesReboot body = null)
+        public void PostProvidersEdgesPhonesReboot (PhonesReboot body)
         {
              PostProvidersEdgesPhonesRebootWithHttpInfo(body);
         }
@@ -19374,10 +19452,13 @@ namespace ININ.PureCloudApi.Api
         /// Reboot Multiple Phones 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Phones</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostProvidersEdgesPhonesRebootWithHttpInfo (PhonesReboot body = null)
+        public ApiResponse<Object> PostProvidersEdgesPhonesRebootWithHttpInfo (PhonesReboot body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesPhonesReboot");
 
             var localVarPath = "/api/v2/telephony/providers/edges/phones/reboot";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19442,9 +19523,9 @@ namespace ININ.PureCloudApi.Api
         /// Reboot Multiple Phones 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Phones</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostProvidersEdgesPhonesRebootAsync (PhonesReboot body = null)
+        public async System.Threading.Tasks.Task PostProvidersEdgesPhonesRebootAsync (PhonesReboot body)
         {
              await PostProvidersEdgesPhonesRebootAsyncWithHttpInfo(body);
 
@@ -19454,10 +19535,13 @@ namespace ININ.PureCloudApi.Api
         /// Reboot Multiple Phones 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Phones</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgesPhonesRebootAsyncWithHttpInfo (PhonesReboot body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgesPhonesRebootAsyncWithHttpInfo (PhonesReboot body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesPhonesReboot");
 
             var localVarPath = "/api/v2/telephony/providers/edges/phones/reboot";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19522,9 +19606,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a Site. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Site</returns>
-        public Site PostProvidersEdgesSites (Site body = null)
+        public Site PostProvidersEdgesSites (Site body)
         {
              ApiResponse<Site> localVarResponse = PostProvidersEdgesSitesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -19534,10 +19618,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a Site. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>ApiResponse of Site</returns>
-        public ApiResponse< Site > PostProvidersEdgesSitesWithHttpInfo (Site body = null)
+        public ApiResponse< Site > PostProvidersEdgesSitesWithHttpInfo (Site body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesSites");
 
             var localVarPath = "/api/v2/telephony/providers/edges/sites";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19602,9 +19689,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a Site. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Task of Site</returns>
-        public async System.Threading.Tasks.Task<Site> PostProvidersEdgesSitesAsync (Site body = null)
+        public async System.Threading.Tasks.Task<Site> PostProvidersEdgesSitesAsync (Site body)
         {
              ApiResponse<Site> localVarResponse = await PostProvidersEdgesSitesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -19615,10 +19702,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a Site. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Task of ApiResponse (Site)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Site>> PostProvidersEdgesSitesAsyncWithHttpInfo (Site body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Site>> PostProvidersEdgesSitesAsyncWithHttpInfo (Site body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesSites");
 
             var localVarPath = "/api/v2/telephony/providers/edges/sites";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19834,9 +19924,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a Trunk Base Settings object 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>TrunkBase</returns>
-        public TrunkBase PostProvidersEdgesTrunkbasesettings (TrunkBase body = null)
+        public TrunkBase PostProvidersEdgesTrunkbasesettings (TrunkBase body)
         {
              ApiResponse<TrunkBase> localVarResponse = PostProvidersEdgesTrunkbasesettingsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -19846,10 +19936,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a Trunk Base Settings object 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        public ApiResponse< TrunkBase > PostProvidersEdgesTrunkbasesettingsWithHttpInfo (TrunkBase body = null)
+        public ApiResponse< TrunkBase > PostProvidersEdgesTrunkbasesettingsWithHttpInfo (TrunkBase body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesTrunkbasesettings");
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19914,9 +20007,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a Trunk Base Settings object 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>Task of TrunkBase</returns>
-        public async System.Threading.Tasks.Task<TrunkBase> PostProvidersEdgesTrunkbasesettingsAsync (TrunkBase body = null)
+        public async System.Threading.Tasks.Task<TrunkBase> PostProvidersEdgesTrunkbasesettingsAsync (TrunkBase body)
         {
              ApiResponse<TrunkBase> localVarResponse = await PostProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -19927,10 +20020,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a Trunk Base Settings object 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesTrunkbasesettings");
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19996,9 +20092,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate authority</param>
         /// <returns>DomainCertificateAuthority</returns>
-        public DomainCertificateAuthority PutProvidersEdgesCertificateauthoritiesCertificateId (string certificateId, DomainCertificateAuthority body = null)
+        public DomainCertificateAuthority PutProvidersEdgesCertificateauthoritiesCertificateId (string certificateId, DomainCertificateAuthority body)
         {
              ApiResponse<DomainCertificateAuthority> localVarResponse = PutProvidersEdgesCertificateauthoritiesCertificateIdWithHttpInfo(certificateId, body);
              return localVarResponse.Data;
@@ -20009,13 +20105,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate authority</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
-        public ApiResponse< DomainCertificateAuthority > PutProvidersEdgesCertificateauthoritiesCertificateIdWithHttpInfo (string certificateId, DomainCertificateAuthority body = null)
+        public ApiResponse< DomainCertificateAuthority > PutProvidersEdgesCertificateauthoritiesCertificateIdWithHttpInfo (string certificateId, DomainCertificateAuthority body)
         {
             // verify the required parameter 'certificateId' is set
             if (certificateId == null)
                 throw new ApiException(400, "Missing required parameter 'certificateId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesCertificateauthoritiesCertificateId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesCertificateauthoritiesCertificateId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20082,9 +20181,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate authority</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
-        public async System.Threading.Tasks.Task<DomainCertificateAuthority> PutProvidersEdgesCertificateauthoritiesCertificateIdAsync (string certificateId, DomainCertificateAuthority body = null)
+        public async System.Threading.Tasks.Task<DomainCertificateAuthority> PutProvidersEdgesCertificateauthoritiesCertificateIdAsync (string certificateId, DomainCertificateAuthority body)
         {
              ApiResponse<DomainCertificateAuthority> localVarResponse = await PutProvidersEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo(certificateId, body);
              return localVarResponse.Data;
@@ -20096,13 +20195,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Certificate authority</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PutProvidersEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo (string certificateId, DomainCertificateAuthority body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PutProvidersEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo (string certificateId, DomainCertificateAuthority body)
         {
             // verify the required parameter 'certificateId' is set
             if (certificateId == null)
                 throw new ApiException(400, "Missing required parameter 'certificateId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesCertificateauthoritiesCertificateId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesCertificateauthoritiesCertificateId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20169,9 +20271,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>DIDPool</returns>
-        public DIDPool PutProvidersEdgesDidpoolsDidpoolId (string didPoolId, DIDPool body = null)
+        public DIDPool PutProvidersEdgesDidpoolsDidpoolId (string didPoolId, DIDPool body)
         {
              ApiResponse<DIDPool> localVarResponse = PutProvidersEdgesDidpoolsDidpoolIdWithHttpInfo(didPoolId, body);
              return localVarResponse.Data;
@@ -20182,13 +20284,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>ApiResponse of DIDPool</returns>
-        public ApiResponse< DIDPool > PutProvidersEdgesDidpoolsDidpoolIdWithHttpInfo (string didPoolId, DIDPool body = null)
+        public ApiResponse< DIDPool > PutProvidersEdgesDidpoolsDidpoolIdWithHttpInfo (string didPoolId, DIDPool body)
         {
             // verify the required parameter 'didPoolId' is set
             if (didPoolId == null)
                 throw new ApiException(400, "Missing required parameter 'didPoolId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesDidpoolsDidpoolId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesDidpoolsDidpoolId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/didpools/{didPoolId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20255,9 +20360,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>Task of DIDPool</returns>
-        public async System.Threading.Tasks.Task<DIDPool> PutProvidersEdgesDidpoolsDidpoolIdAsync (string didPoolId, DIDPool body = null)
+        public async System.Threading.Tasks.Task<DIDPool> PutProvidersEdgesDidpoolsDidpoolIdAsync (string didPoolId, DIDPool body)
         {
              ApiResponse<DIDPool> localVarResponse = await PutProvidersEdgesDidpoolsDidpoolIdAsyncWithHttpInfo(didPoolId, body);
              return localVarResponse.Data;
@@ -20269,13 +20374,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID pool</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> PutProvidersEdgesDidpoolsDidpoolIdAsyncWithHttpInfo (string didPoolId, DIDPool body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> PutProvidersEdgesDidpoolsDidpoolIdAsyncWithHttpInfo (string didPoolId, DIDPool body)
         {
             // verify the required parameter 'didPoolId' is set
             if (didPoolId == null)
                 throw new ApiException(400, "Missing required parameter 'didPoolId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesDidpoolsDidpoolId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesDidpoolsDidpoolId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/didpools/{didPoolId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20342,9 +20450,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID</param>
         /// <returns>DID</returns>
-        public DID PutProvidersEdgesDidsDidId (string didId, DID body = null)
+        public DID PutProvidersEdgesDidsDidId (string didId, DID body)
         {
              ApiResponse<DID> localVarResponse = PutProvidersEdgesDidsDidIdWithHttpInfo(didId, body);
              return localVarResponse.Data;
@@ -20355,13 +20463,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID</param>
         /// <returns>ApiResponse of DID</returns>
-        public ApiResponse< DID > PutProvidersEdgesDidsDidIdWithHttpInfo (string didId, DID body = null)
+        public ApiResponse< DID > PutProvidersEdgesDidsDidIdWithHttpInfo (string didId, DID body)
         {
             // verify the required parameter 'didId' is set
             if (didId == null)
                 throw new ApiException(400, "Missing required parameter 'didId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesDidsDidId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesDidsDidId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/dids/{didId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20428,9 +20539,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID</param>
         /// <returns>Task of DID</returns>
-        public async System.Threading.Tasks.Task<DID> PutProvidersEdgesDidsDidIdAsync (string didId, DID body = null)
+        public async System.Threading.Tasks.Task<DID> PutProvidersEdgesDidsDidIdAsync (string didId, DID body)
         {
              ApiResponse<DID> localVarResponse = await PutProvidersEdgesDidsDidIdAsyncWithHttpInfo(didId, body);
              return localVarResponse.Data;
@@ -20442,13 +20553,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didId">DID ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">DID</param>
         /// <returns>Task of ApiResponse (DID)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DID>> PutProvidersEdgesDidsDidIdAsyncWithHttpInfo (string didId, DID body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DID>> PutProvidersEdgesDidsDidIdAsyncWithHttpInfo (string didId, DID body)
         {
             // verify the required parameter 'didId' is set
             if (didId == null)
                 throw new ApiException(400, "Missing required parameter 'didId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesDidsDidId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesDidsDidId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/dids/{didId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20515,9 +20629,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Edge</returns>
-        public Edge PutProvidersEdgesEdgeId (string edgeId, Edge body = null)
+        public Edge PutProvidersEdgesEdgeId (string edgeId, Edge body)
         {
              ApiResponse<Edge> localVarResponse = PutProvidersEdgesEdgeIdWithHttpInfo(edgeId, body);
              return localVarResponse.Data;
@@ -20528,13 +20642,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>ApiResponse of Edge</returns>
-        public ApiResponse< Edge > PutProvidersEdgesEdgeIdWithHttpInfo (string edgeId, Edge body = null)
+        public ApiResponse< Edge > PutProvidersEdgesEdgeIdWithHttpInfo (string edgeId, Edge body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
                 throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20601,9 +20718,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Task of Edge</returns>
-        public async System.Threading.Tasks.Task<Edge> PutProvidersEdgesEdgeIdAsync (string edgeId, Edge body = null)
+        public async System.Threading.Tasks.Task<Edge> PutProvidersEdgesEdgeIdAsync (string edgeId, Edge body)
         {
              ApiResponse<Edge> localVarResponse = await PutProvidersEdgesEdgeIdAsyncWithHttpInfo(edgeId, body);
              return localVarResponse.Data;
@@ -20615,13 +20732,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="body">Edge (optional)</param>
+        /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Edge>> PutProvidersEdgesEdgeIdAsyncWithHttpInfo (string edgeId, Edge body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Edge>> PutProvidersEdgesEdgeIdAsyncWithHttpInfo (string edgeId, Edge body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
                 throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20689,9 +20809,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line (optional)</param>
+        /// <param name="body">Line</param>
         /// <returns>EdgeLine</returns>
-        public EdgeLine PutProvidersEdgesEdgeIdLinesLineId (string edgeId, string lineId, EdgeLine body = null)
+        public EdgeLine PutProvidersEdgesEdgeIdLinesLineId (string edgeId, string lineId, EdgeLine body)
         {
              ApiResponse<EdgeLine> localVarResponse = PutProvidersEdgesEdgeIdLinesLineIdWithHttpInfo(edgeId, lineId, body);
              return localVarResponse.Data;
@@ -20703,9 +20823,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line (optional)</param>
+        /// <param name="body">Line</param>
         /// <returns>ApiResponse of EdgeLine</returns>
-        public ApiResponse< EdgeLine > PutProvidersEdgesEdgeIdLinesLineIdWithHttpInfo (string edgeId, string lineId, EdgeLine body = null)
+        public ApiResponse< EdgeLine > PutProvidersEdgesEdgeIdLinesLineIdWithHttpInfo (string edgeId, string lineId, EdgeLine body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -20713,6 +20833,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'lineId' is set
             if (lineId == null)
                 throw new ApiException(400, "Missing required parameter 'lineId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeIdLinesLineId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeIdLinesLineId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20781,9 +20904,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line (optional)</param>
+        /// <param name="body">Line</param>
         /// <returns>Task of EdgeLine</returns>
-        public async System.Threading.Tasks.Task<EdgeLine> PutProvidersEdgesEdgeIdLinesLineIdAsync (string edgeId, string lineId, EdgeLine body = null)
+        public async System.Threading.Tasks.Task<EdgeLine> PutProvidersEdgesEdgeIdLinesLineIdAsync (string edgeId, string lineId, EdgeLine body)
         {
              ApiResponse<EdgeLine> localVarResponse = await PutProvidersEdgesEdgeIdLinesLineIdAsyncWithHttpInfo(edgeId, lineId, body);
              return localVarResponse.Data;
@@ -20796,9 +20919,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line (optional)</param>
+        /// <param name="body">Line</param>
         /// <returns>Task of ApiResponse (EdgeLine)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeLine>> PutProvidersEdgesEdgeIdLinesLineIdAsyncWithHttpInfo (string edgeId, string lineId, EdgeLine body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeLine>> PutProvidersEdgesEdgeIdLinesLineIdAsyncWithHttpInfo (string edgeId, string lineId, EdgeLine body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -20806,6 +20929,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'lineId' is set
             if (lineId == null)
                 throw new ApiException(400, "Missing required parameter 'lineId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeIdLinesLineId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeIdLinesLineId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20874,9 +21000,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>DomainLogicalInterface</returns>
-        public DomainLogicalInterface PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, DomainLogicalInterface body = null)
+        public DomainLogicalInterface PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, DomainLogicalInterface body)
         {
              ApiResponse<DomainLogicalInterface> localVarResponse = PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo(edgeId, interfaceId, body);
              return localVarResponse.Data;
@@ -20888,9 +21014,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        public ApiResponse< DomainLogicalInterface > PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null)
+        public ApiResponse< DomainLogicalInterface > PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -20898,6 +21024,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'interfaceId' is set
             if (interfaceId == null)
                 throw new ApiException(400, "Missing required parameter 'interfaceId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20966,9 +21095,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        public async System.Threading.Tasks.Task<DomainLogicalInterface> PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId, DomainLogicalInterface body = null)
+        public async System.Threading.Tasks.Task<DomainLogicalInterface> PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId, DomainLogicalInterface body)
         {
              ApiResponse<DomainLogicalInterface> localVarResponse = await PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo(edgeId, interfaceId, body);
              return localVarResponse.Data;
@@ -20981,9 +21110,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Logical interface</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -20991,6 +21120,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'interfaceId' is set
             if (interfaceId == null)
                 throw new ApiException(400, "Missing required parameter 'interfaceId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21058,9 +21190,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>EdgeGroup</returns>
-        public EdgeGroup PutProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, EdgeGroup body = null)
+        public EdgeGroup PutProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, EdgeGroup body)
         {
              ApiResponse<EdgeGroup> localVarResponse = PutProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo(edgeGroupId, body);
              return localVarResponse.Data;
@@ -21071,13 +21203,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
-        public ApiResponse< EdgeGroup > PutProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId, EdgeGroup body = null)
+        public ApiResponse< EdgeGroup > PutProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId, EdgeGroup body)
         {
             // verify the required parameter 'edgeGroupId' is set
             if (edgeGroupId == null)
                 throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgegroupsEdgegroupId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgegroupsEdgegroupId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21144,9 +21279,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
-        public async System.Threading.Tasks.Task<EdgeGroup> PutProvidersEdgesEdgegroupsEdgegroupIdAsync (string edgeGroupId, EdgeGroup body = null)
+        public async System.Threading.Tasks.Task<EdgeGroup> PutProvidersEdgesEdgegroupsEdgegroupIdAsync (string edgeGroupId, EdgeGroup body)
         {
              ApiResponse<EdgeGroup> localVarResponse = await PutProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo(edgeGroupId, body);
              return localVarResponse.Data;
@@ -21158,13 +21293,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <param name="body">EdgeGroup (optional)</param>
+        /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PutProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PutProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body)
         {
             // verify the required parameter 'edgeGroupId' is set
             if (edgeGroupId == null)
                 throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgegroupsEdgegroupId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEdgegroupsEdgegroupId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21231,9 +21369,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Endpoint</returns>
-        public Endpoint PutProvidersEdgesEndpointsEndpointId (string endpointId, Endpoint body = null)
+        public Endpoint PutProvidersEdgesEndpointsEndpointId (string endpointId, Endpoint body)
         {
              ApiResponse<Endpoint> localVarResponse = PutProvidersEdgesEndpointsEndpointIdWithHttpInfo(endpointId, body);
              return localVarResponse.Data;
@@ -21244,13 +21382,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>ApiResponse of Endpoint</returns>
-        public ApiResponse< Endpoint > PutProvidersEdgesEndpointsEndpointIdWithHttpInfo (string endpointId, Endpoint body = null)
+        public ApiResponse< Endpoint > PutProvidersEdgesEndpointsEndpointIdWithHttpInfo (string endpointId, Endpoint body)
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
                 throw new ApiException(400, "Missing required parameter 'endpointId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEndpointsEndpointId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEndpointsEndpointId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/endpoints/{endpointId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21317,9 +21458,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of Endpoint</returns>
-        public async System.Threading.Tasks.Task<Endpoint> PutProvidersEdgesEndpointsEndpointIdAsync (string endpointId, Endpoint body = null)
+        public async System.Threading.Tasks.Task<Endpoint> PutProvidersEdgesEndpointsEndpointIdAsync (string endpointId, Endpoint body)
         {
              ApiResponse<Endpoint> localVarResponse = await PutProvidersEdgesEndpointsEndpointIdAsyncWithHttpInfo(endpointId, body);
              return localVarResponse.Data;
@@ -21331,13 +21472,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <param name="body">EndpointTemplate (optional)</param>
+        /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of ApiResponse (Endpoint)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Endpoint>> PutProvidersEdgesEndpointsEndpointIdAsyncWithHttpInfo (string endpointId, Endpoint body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Endpoint>> PutProvidersEdgesEndpointsEndpointIdAsyncWithHttpInfo (string endpointId, Endpoint body)
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
                 throw new ApiException(400, "Missing required parameter 'endpointId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEndpointsEndpointId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesEndpointsEndpointId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/endpoints/{endpointId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21404,9 +21548,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>ExtensionPool</returns>
-        public ExtensionPool PutProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId, ExtensionPool body = null)
+        public ExtensionPool PutProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId, ExtensionPool body)
         {
              ApiResponse<ExtensionPool> localVarResponse = PutProvidersEdgesExtensionpoolsExtensionpoolIdWithHttpInfo(extensionPoolId, body);
              return localVarResponse.Data;
@@ -21417,13 +21561,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>ApiResponse of ExtensionPool</returns>
-        public ApiResponse< ExtensionPool > PutProvidersEdgesExtensionpoolsExtensionpoolIdWithHttpInfo (string extensionPoolId, ExtensionPool body = null)
+        public ApiResponse< ExtensionPool > PutProvidersEdgesExtensionpoolsExtensionpoolIdWithHttpInfo (string extensionPoolId, ExtensionPool body)
         {
             // verify the required parameter 'extensionPoolId' is set
             if (extensionPoolId == null)
                 throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesExtensionpoolsExtensionpoolId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesExtensionpoolsExtensionpoolId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21490,9 +21637,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ExtensionPool</returns>
-        public async System.Threading.Tasks.Task<ExtensionPool> PutProvidersEdgesExtensionpoolsExtensionpoolIdAsync (string extensionPoolId, ExtensionPool body = null)
+        public async System.Threading.Tasks.Task<ExtensionPool> PutProvidersEdgesExtensionpoolsExtensionpoolIdAsync (string extensionPoolId, ExtensionPool body)
         {
              ApiResponse<ExtensionPool> localVarResponse = await PutProvidersEdgesExtensionpoolsExtensionpoolIdAsyncWithHttpInfo(extensionPoolId, body);
              return localVarResponse.Data;
@@ -21504,13 +21651,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <param name="body">ExtensionPool (optional)</param>
+        /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PutProvidersEdgesExtensionpoolsExtensionpoolIdAsyncWithHttpInfo (string extensionPoolId, ExtensionPool body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PutProvidersEdgesExtensionpoolsExtensionpoolIdAsyncWithHttpInfo (string extensionPoolId, ExtensionPool body)
         {
             // verify the required parameter 'extensionPoolId' is set
             if (extensionPoolId == null)
                 throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesExtensionpoolsExtensionpoolId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesExtensionpoolsExtensionpoolId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21577,9 +21727,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Extension</param>
         /// <returns>Extension</returns>
-        public Extension PutProvidersEdgesExtensionsExtensionId (string extensionId, Extension body = null)
+        public Extension PutProvidersEdgesExtensionsExtensionId (string extensionId, Extension body)
         {
              ApiResponse<Extension> localVarResponse = PutProvidersEdgesExtensionsExtensionIdWithHttpInfo(extensionId, body);
              return localVarResponse.Data;
@@ -21590,13 +21740,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Extension</param>
         /// <returns>ApiResponse of Extension</returns>
-        public ApiResponse< Extension > PutProvidersEdgesExtensionsExtensionIdWithHttpInfo (string extensionId, Extension body = null)
+        public ApiResponse< Extension > PutProvidersEdgesExtensionsExtensionIdWithHttpInfo (string extensionId, Extension body)
         {
             // verify the required parameter 'extensionId' is set
             if (extensionId == null)
                 throw new ApiException(400, "Missing required parameter 'extensionId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesExtensionsExtensionId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesExtensionsExtensionId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/extensions/{extensionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21663,9 +21816,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Extension</param>
         /// <returns>Task of Extension</returns>
-        public async System.Threading.Tasks.Task<Extension> PutProvidersEdgesExtensionsExtensionIdAsync (string extensionId, Extension body = null)
+        public async System.Threading.Tasks.Task<Extension> PutProvidersEdgesExtensionsExtensionIdAsync (string extensionId, Extension body)
         {
              ApiResponse<Extension> localVarResponse = await PutProvidersEdgesExtensionsExtensionIdAsyncWithHttpInfo(extensionId, body);
              return localVarResponse.Data;
@@ -21677,13 +21830,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionId">Extension ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Extension</param>
         /// <returns>Task of ApiResponse (Extension)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Extension>> PutProvidersEdgesExtensionsExtensionIdAsyncWithHttpInfo (string extensionId, Extension body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Extension>> PutProvidersEdgesExtensionsExtensionIdAsyncWithHttpInfo (string extensionId, Extension body)
         {
             // verify the required parameter 'extensionId' is set
             if (extensionId == null)
                 throw new ApiException(400, "Missing required parameter 'extensionId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesExtensionsExtensionId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesExtensionsExtensionId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/extensions/{extensionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21750,9 +21906,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>OutboundRoute</returns>
-        public OutboundRoute PutProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRoute body = null)
+        public OutboundRoute PutProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRoute body)
         {
              ApiResponse<OutboundRoute> localVarResponse = PutProvidersEdgesOutboundroutesOutboundrouteIdWithHttpInfo(outboundRouteId, body);
              return localVarResponse.Data;
@@ -21763,13 +21919,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>ApiResponse of OutboundRoute</returns>
-        public ApiResponse< OutboundRoute > PutProvidersEdgesOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId, OutboundRoute body = null)
+        public ApiResponse< OutboundRoute > PutProvidersEdgesOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId, OutboundRoute body)
         {
             // verify the required parameter 'outboundRouteId' is set
             if (outboundRouteId == null)
                 throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesOutboundroutesOutboundrouteId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesOutboundroutesOutboundrouteId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21836,9 +21995,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRoute</returns>
-        public async System.Threading.Tasks.Task<OutboundRoute> PutProvidersEdgesOutboundroutesOutboundrouteIdAsync (string outboundRouteId, OutboundRoute body = null)
+        public async System.Threading.Tasks.Task<OutboundRoute> PutProvidersEdgesOutboundroutesOutboundrouteIdAsync (string outboundRouteId, OutboundRoute body)
         {
              ApiResponse<OutboundRoute> localVarResponse = await PutProvidersEdgesOutboundroutesOutboundrouteIdAsyncWithHttpInfo(outboundRouteId, body);
              return localVarResponse.Data;
@@ -21850,13 +22009,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <param name="body">OutboundRoute (optional)</param>
+        /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PutProvidersEdgesOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId, OutboundRoute body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PutProvidersEdgesOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId, OutboundRoute body)
         {
             // verify the required parameter 'outboundRouteId' is set
             if (outboundRouteId == null)
                 throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesOutboundroutesOutboundrouteId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesOutboundroutesOutboundrouteId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -21923,9 +22085,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>PhoneBase</returns>
-        public PhoneBase PutProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId, PhoneBase body = null)
+        public PhoneBase PutProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId, PhoneBase body)
         {
              ApiResponse<PhoneBase> localVarResponse = PutProvidersEdgesPhonebasesettingsPhonebaseIdWithHttpInfo(phoneBaseId, body);
              return localVarResponse.Data;
@@ -21936,13 +22098,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
-        public ApiResponse< PhoneBase > PutProvidersEdgesPhonebasesettingsPhonebaseIdWithHttpInfo (string phoneBaseId, PhoneBase body = null)
+        public ApiResponse< PhoneBase > PutProvidersEdgesPhonebasesettingsPhonebaseIdWithHttpInfo (string phoneBaseId, PhoneBase body)
         {
             // verify the required parameter 'phoneBaseId' is set
             if (phoneBaseId == null)
                 throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesPhonebasesettingsPhonebaseId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesPhonebasesettingsPhonebaseId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -22009,9 +22174,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>Task of PhoneBase</returns>
-        public async System.Threading.Tasks.Task<PhoneBase> PutProvidersEdgesPhonebasesettingsPhonebaseIdAsync (string phoneBaseId, PhoneBase body = null)
+        public async System.Threading.Tasks.Task<PhoneBase> PutProvidersEdgesPhonebasesettingsPhonebaseIdAsync (string phoneBaseId, PhoneBase body)
         {
              ApiResponse<PhoneBase> localVarResponse = await PutProvidersEdgesPhonebasesettingsPhonebaseIdAsyncWithHttpInfo(phoneBaseId, body);
              return localVarResponse.Data;
@@ -22023,13 +22188,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone base settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PutProvidersEdgesPhonebasesettingsPhonebaseIdAsyncWithHttpInfo (string phoneBaseId, PhoneBase body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PutProvidersEdgesPhonebasesettingsPhonebaseIdAsyncWithHttpInfo (string phoneBaseId, PhoneBase body)
         {
             // verify the required parameter 'phoneBaseId' is set
             if (phoneBaseId == null)
                 throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesPhonebasesettingsPhonebaseId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesPhonebasesettingsPhonebaseId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -22096,9 +22264,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Phone</returns>
-        public Phone PutProvidersEdgesPhonesPhoneId (string phoneId, Phone body = null)
+        public Phone PutProvidersEdgesPhonesPhoneId (string phoneId, Phone body)
         {
              ApiResponse<Phone> localVarResponse = PutProvidersEdgesPhonesPhoneIdWithHttpInfo(phoneId, body);
              return localVarResponse.Data;
@@ -22109,13 +22277,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>ApiResponse of Phone</returns>
-        public ApiResponse< Phone > PutProvidersEdgesPhonesPhoneIdWithHttpInfo (string phoneId, Phone body = null)
+        public ApiResponse< Phone > PutProvidersEdgesPhonesPhoneIdWithHttpInfo (string phoneId, Phone body)
         {
             // verify the required parameter 'phoneId' is set
             if (phoneId == null)
                 throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesPhonesPhoneId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesPhonesPhoneId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/phones/{phoneId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -22182,9 +22353,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Task of Phone</returns>
-        public async System.Threading.Tasks.Task<Phone> PutProvidersEdgesPhonesPhoneIdAsync (string phoneId, Phone body = null)
+        public async System.Threading.Tasks.Task<Phone> PutProvidersEdgesPhonesPhoneIdAsync (string phoneId, Phone body)
         {
              ApiResponse<Phone> localVarResponse = await PutProvidersEdgesPhonesPhoneIdAsyncWithHttpInfo(phoneId, body);
              return localVarResponse.Data;
@@ -22196,13 +22367,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Phone>> PutProvidersEdgesPhonesPhoneIdAsyncWithHttpInfo (string phoneId, Phone body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Phone>> PutProvidersEdgesPhonesPhoneIdAsyncWithHttpInfo (string phoneId, Phone body)
         {
             // verify the required parameter 'phoneId' is set
             if (phoneId == null)
                 throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesPhonesPhoneId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesPhonesPhoneId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/phones/{phoneId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -22269,9 +22443,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Site</returns>
-        public Site PutProvidersEdgesSitesSiteId (string siteId, Site body = null)
+        public Site PutProvidersEdgesSitesSiteId (string siteId, Site body)
         {
              ApiResponse<Site> localVarResponse = PutProvidersEdgesSitesSiteIdWithHttpInfo(siteId, body);
              return localVarResponse.Data;
@@ -22282,13 +22456,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>ApiResponse of Site</returns>
-        public ApiResponse< Site > PutProvidersEdgesSitesSiteIdWithHttpInfo (string siteId, Site body = null)
+        public ApiResponse< Site > PutProvidersEdgesSitesSiteIdWithHttpInfo (string siteId, Site body)
         {
             // verify the required parameter 'siteId' is set
             if (siteId == null)
                 throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -22355,9 +22532,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Task of Site</returns>
-        public async System.Threading.Tasks.Task<Site> PutProvidersEdgesSitesSiteIdAsync (string siteId, Site body = null)
+        public async System.Threading.Tasks.Task<Site> PutProvidersEdgesSitesSiteIdAsync (string siteId, Site body)
         {
              ApiResponse<Site> localVarResponse = await PutProvidersEdgesSitesSiteIdAsyncWithHttpInfo(siteId, body);
              return localVarResponse.Data;
@@ -22369,13 +22546,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body">Site (optional)</param>
+        /// <param name="body">Site</param>
         /// <returns>Task of ApiResponse (Site)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Site>> PutProvidersEdgesSitesSiteIdAsyncWithHttpInfo (string siteId, Site body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Site>> PutProvidersEdgesSitesSiteIdAsyncWithHttpInfo (string siteId, Site body)
         {
             // verify the required parameter 'siteId' is set
             if (siteId == null)
                 throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -22442,9 +22622,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of number plans</param>
         /// <returns>List&lt;NumberPlan&gt;</returns>
-        public List<NumberPlan> PutProvidersEdgesSitesSiteIdNumberplans (string siteId, List<NumberPlan> body = null)
+        public List<NumberPlan> PutProvidersEdgesSitesSiteIdNumberplans (string siteId, List<NumberPlan> body)
         {
              ApiResponse<List<NumberPlan>> localVarResponse = PutProvidersEdgesSitesSiteIdNumberplansWithHttpInfo(siteId, body);
              return localVarResponse.Data;
@@ -22455,13 +22635,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of number plans</param>
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
-        public ApiResponse< List<NumberPlan> > PutProvidersEdgesSitesSiteIdNumberplansWithHttpInfo (string siteId, List<NumberPlan> body = null)
+        public ApiResponse< List<NumberPlan> > PutProvidersEdgesSitesSiteIdNumberplansWithHttpInfo (string siteId, List<NumberPlan> body)
         {
             // verify the required parameter 'siteId' is set
             if (siteId == null)
                 throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteIdNumberplans");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteIdNumberplans");
 
             var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans";
             var localVarPathParams = new Dictionary<String, String>();
@@ -22528,9 +22711,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of number plans</param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
-        public async System.Threading.Tasks.Task<List<NumberPlan>> PutProvidersEdgesSitesSiteIdNumberplansAsync (string siteId, List<NumberPlan> body = null)
+        public async System.Threading.Tasks.Task<List<NumberPlan>> PutProvidersEdgesSitesSiteIdNumberplansAsync (string siteId, List<NumberPlan> body)
         {
              ApiResponse<List<NumberPlan>> localVarResponse = await PutProvidersEdgesSitesSiteIdNumberplansAsyncWithHttpInfo(siteId, body);
              return localVarResponse.Data;
@@ -22542,13 +22725,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">List of number plans</param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutProvidersEdgesSitesSiteIdNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutProvidersEdgesSitesSiteIdNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body)
         {
             // verify the required parameter 'siteId' is set
             if (siteId == null)
                 throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteIdNumberplans");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteIdNumberplans");
 
             var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans";
             var localVarPathParams = new Dictionary<String, String>();
@@ -22615,9 +22801,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>TrunkBase</returns>
-        public TrunkBase PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, TrunkBase body = null)
+        public TrunkBase PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, TrunkBase body)
         {
              ApiResponse<TrunkBase> localVarResponse = PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo(trunkBaseSettingsId, body);
              return localVarResponse.Data;
@@ -22628,13 +22814,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        public ApiResponse< TrunkBase > PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null)
+        public ApiResponse< TrunkBase > PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId, TrunkBase body)
         {
             // verify the required parameter 'trunkBaseSettingsId' is set
             if (trunkBaseSettingsId == null)
                 throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -22701,9 +22890,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>Task of TrunkBase</returns>
-        public async System.Threading.Tasks.Task<TrunkBase> PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId, TrunkBase body = null)
+        public async System.Threading.Tasks.Task<TrunkBase> PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId, TrunkBase body)
         {
              ApiResponse<TrunkBase> localVarResponse = await PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo(trunkBaseSettingsId, body);
              return localVarResponse.Data;
@@ -22715,13 +22904,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Trunk base settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId, TrunkBase body)
         {
             // verify the required parameter 'trunkBaseSettingsId' is set
             if (trunkBaseSettingsId == null)
                 throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId");
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
             var localVarPathParams = new Dictionary<String, String>();

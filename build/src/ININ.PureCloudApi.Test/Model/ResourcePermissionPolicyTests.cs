@@ -99,6 +99,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'ActionSetKey'
         }
         /// <summary>
+        /// Test the property 'AllowConditions'
+        /// </summary>
+        [Test]
+        public void AllowConditionsTest()
+        {
+            // TODO: unit test for the property 'AllowConditions'
+        }
+        /// <summary>
         /// Test the property 'ResourceConditionNode'
         /// </summary>
         [Test]

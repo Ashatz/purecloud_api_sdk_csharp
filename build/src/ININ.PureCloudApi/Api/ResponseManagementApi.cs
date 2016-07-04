@@ -153,9 +153,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Library</returns>
-        Library PostLibraries (Library body = null);
+        Library PostLibraries (Library body);
 
         /// <summary>
         /// Create a response library.
@@ -164,9 +164,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>ApiResponse of Library</returns>
-        ApiResponse<Library> PostLibrariesWithHttpInfo (Library body = null);
+        ApiResponse<Library> PostLibrariesWithHttpInfo (Library body);
         /// <summary>
         /// Create a response.
         /// </summary>
@@ -174,9 +174,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Response</returns>
-        Response PostResponses (Response body = null);
+        Response PostResponses (Response body);
 
         /// <summary>
         /// Create a response.
@@ -185,9 +185,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> PostResponsesWithHttpInfo (Response body = null);
+        ApiResponse<Response> PostResponsesWithHttpInfo (Response body);
         /// <summary>
         /// Query responses
         /// </summary>
@@ -195,9 +195,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>ResponseQueryResults</returns>
-        ResponseQueryResults PostResponsesQuery (ResponseQueryRequest body = null);
+        ResponseQueryResults PostResponsesQuery (ResponseQueryRequest body);
 
         /// <summary>
         /// Query responses
@@ -206,9 +206,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>ApiResponse of ResponseQueryResults</returns>
-        ApiResponse<ResponseQueryResults> PostResponsesQueryWithHttpInfo (ResponseQueryRequest body = null);
+        ApiResponse<ResponseQueryResults> PostResponsesQueryWithHttpInfo (ResponseQueryRequest body);
         /// <summary>
         /// Update an existing response library.
         /// </summary>
@@ -217,9 +217,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Library</returns>
-        Library PutLibrariesLibraryId (string libraryId, Library body = null);
+        Library PutLibrariesLibraryId (string libraryId, Library body);
 
         /// <summary>
         /// Update an existing response library.
@@ -229,9 +229,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>ApiResponse of Library</returns>
-        ApiResponse<Library> PutLibrariesLibraryIdWithHttpInfo (string libraryId, Library body = null);
+        ApiResponse<Library> PutLibrariesLibraryIdWithHttpInfo (string libraryId, Library body);
         /// <summary>
         /// Update an existing response.
         /// </summary>
@@ -240,9 +240,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Response</returns>
-        Response PutResponsesResponseId (string responseId, Response body = null);
+        Response PutResponsesResponseId (string responseId, Response body);
 
         /// <summary>
         /// Update an existing response.
@@ -252,9 +252,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> PutResponsesResponseIdWithHttpInfo (string responseId, Response body = null);
+        ApiResponse<Response> PutResponsesResponseIdWithHttpInfo (string responseId, Response body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -396,9 +396,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Task of Library</returns>
-        System.Threading.Tasks.Task<Library> PostLibrariesAsync (Library body = null);
+        System.Threading.Tasks.Task<Library> PostLibrariesAsync (Library body);
 
         /// <summary>
         /// Create a response library.
@@ -407,9 +407,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Task of ApiResponse (Library)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Library>> PostLibrariesAsyncWithHttpInfo (Library body = null);
+        System.Threading.Tasks.Task<ApiResponse<Library>> PostLibrariesAsyncWithHttpInfo (Library body);
         /// <summary>
         /// Create a response.
         /// </summary>
@@ -417,9 +417,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of Response</returns>
-        System.Threading.Tasks.Task<Response> PostResponsesAsync (Response body = null);
+        System.Threading.Tasks.Task<Response> PostResponsesAsync (Response body);
 
         /// <summary>
         /// Create a response.
@@ -428,9 +428,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsesAsyncWithHttpInfo (Response body = null);
+        System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsesAsyncWithHttpInfo (Response body);
         /// <summary>
         /// Query responses
         /// </summary>
@@ -438,9 +438,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of ResponseQueryResults</returns>
-        System.Threading.Tasks.Task<ResponseQueryResults> PostResponsesQueryAsync (ResponseQueryRequest body = null);
+        System.Threading.Tasks.Task<ResponseQueryResults> PostResponsesQueryAsync (ResponseQueryRequest body);
 
         /// <summary>
         /// Query responses
@@ -449,9 +449,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of ApiResponse (ResponseQueryResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseQueryResults>> PostResponsesQueryAsyncWithHttpInfo (ResponseQueryRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<ResponseQueryResults>> PostResponsesQueryAsyncWithHttpInfo (ResponseQueryRequest body);
         /// <summary>
         /// Update an existing response library.
         /// </summary>
@@ -460,9 +460,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Task of Library</returns>
-        System.Threading.Tasks.Task<Library> PutLibrariesLibraryIdAsync (string libraryId, Library body = null);
+        System.Threading.Tasks.Task<Library> PutLibrariesLibraryIdAsync (string libraryId, Library body);
 
         /// <summary>
         /// Update an existing response library.
@@ -472,9 +472,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Task of ApiResponse (Library)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Library>> PutLibrariesLibraryIdAsyncWithHttpInfo (string libraryId, Library body = null);
+        System.Threading.Tasks.Task<ApiResponse<Library>> PutLibrariesLibraryIdAsyncWithHttpInfo (string libraryId, Library body);
         /// <summary>
         /// Update an existing response.
         /// </summary>
@@ -483,9 +483,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of Response</returns>
-        System.Threading.Tasks.Task<Response> PutResponsesResponseIdAsync (string responseId, Response body = null);
+        System.Threading.Tasks.Task<Response> PutResponsesResponseIdAsync (string responseId, Response body);
 
         /// <summary>
         /// Update an existing response.
@@ -495,9 +495,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsesResponseIdAsyncWithHttpInfo (string responseId, Response body = null);
+        System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsesResponseIdAsyncWithHttpInfo (string responseId, Response body);
         #endregion Asynchronous Operations
     }
 
@@ -1518,9 +1518,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a response library. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Library</returns>
-        public Library PostLibraries (Library body = null)
+        public Library PostLibraries (Library body)
         {
              ApiResponse<Library> localVarResponse = PostLibrariesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1530,10 +1530,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a response library. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>ApiResponse of Library</returns>
-        public ApiResponse< Library > PostLibrariesWithHttpInfo (Library body = null)
+        public ApiResponse< Library > PostLibrariesWithHttpInfo (Library body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostLibraries");
 
             var localVarPath = "/api/v2/responsemanagement/libraries";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1598,9 +1601,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a response library. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Task of Library</returns>
-        public async System.Threading.Tasks.Task<Library> PostLibrariesAsync (Library body = null)
+        public async System.Threading.Tasks.Task<Library> PostLibrariesAsync (Library body)
         {
              ApiResponse<Library> localVarResponse = await PostLibrariesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1611,10 +1614,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a response library. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Task of ApiResponse (Library)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Library>> PostLibrariesAsyncWithHttpInfo (Library body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Library>> PostLibrariesAsyncWithHttpInfo (Library body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostLibraries");
 
             var localVarPath = "/api/v2/responsemanagement/libraries";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1679,9 +1685,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a response. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Response</returns>
-        public Response PostResponses (Response body = null)
+        public Response PostResponses (Response body)
         {
              ApiResponse<Response> localVarResponse = PostResponsesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1691,10 +1697,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a response. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>ApiResponse of Response</returns>
-        public ApiResponse< Response > PostResponsesWithHttpInfo (Response body = null)
+        public ApiResponse< Response > PostResponsesWithHttpInfo (Response body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponses");
 
             var localVarPath = "/api/v2/responsemanagement/responses";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1759,9 +1768,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a response. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of Response</returns>
-        public async System.Threading.Tasks.Task<Response> PostResponsesAsync (Response body = null)
+        public async System.Threading.Tasks.Task<Response> PostResponsesAsync (Response body)
         {
              ApiResponse<Response> localVarResponse = await PostResponsesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1772,10 +1781,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a response. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsesAsyncWithHttpInfo (Response body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsesAsyncWithHttpInfo (Response body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponses");
 
             var localVarPath = "/api/v2/responsemanagement/responses";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1840,9 +1852,9 @@ namespace ININ.PureCloudApi.Api
         /// Query responses 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>ResponseQueryResults</returns>
-        public ResponseQueryResults PostResponsesQuery (ResponseQueryRequest body = null)
+        public ResponseQueryResults PostResponsesQuery (ResponseQueryRequest body)
         {
              ApiResponse<ResponseQueryResults> localVarResponse = PostResponsesQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1852,10 +1864,13 @@ namespace ININ.PureCloudApi.Api
         /// Query responses 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>ApiResponse of ResponseQueryResults</returns>
-        public ApiResponse< ResponseQueryResults > PostResponsesQueryWithHttpInfo (ResponseQueryRequest body = null)
+        public ApiResponse< ResponseQueryResults > PostResponsesQueryWithHttpInfo (ResponseQueryRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsesQuery");
 
             var localVarPath = "/api/v2/responsemanagement/responses/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1920,9 +1935,9 @@ namespace ININ.PureCloudApi.Api
         /// Query responses 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of ResponseQueryResults</returns>
-        public async System.Threading.Tasks.Task<ResponseQueryResults> PostResponsesQueryAsync (ResponseQueryRequest body = null)
+        public async System.Threading.Tasks.Task<ResponseQueryResults> PostResponsesQueryAsync (ResponseQueryRequest body)
         {
              ApiResponse<ResponseQueryResults> localVarResponse = await PostResponsesQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1933,10 +1948,13 @@ namespace ININ.PureCloudApi.Api
         /// Query responses 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of ApiResponse (ResponseQueryResults)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseQueryResults>> PostResponsesQueryAsyncWithHttpInfo (ResponseQueryRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseQueryResults>> PostResponsesQueryAsyncWithHttpInfo (ResponseQueryRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsesQuery");
 
             var localVarPath = "/api/v2/responsemanagement/responses/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2002,9 +2020,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Library</returns>
-        public Library PutLibrariesLibraryId (string libraryId, Library body = null)
+        public Library PutLibrariesLibraryId (string libraryId, Library body)
         {
              ApiResponse<Library> localVarResponse = PutLibrariesLibraryIdWithHttpInfo(libraryId, body);
              return localVarResponse.Data;
@@ -2015,13 +2033,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>ApiResponse of Library</returns>
-        public ApiResponse< Library > PutLibrariesLibraryIdWithHttpInfo (string libraryId, Library body = null)
+        public ApiResponse< Library > PutLibrariesLibraryIdWithHttpInfo (string libraryId, Library body)
         {
             // verify the required parameter 'libraryId' is set
             if (libraryId == null)
                 throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->PutLibrariesLibraryId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutLibrariesLibraryId");
 
             var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2088,9 +2109,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Task of Library</returns>
-        public async System.Threading.Tasks.Task<Library> PutLibrariesLibraryIdAsync (string libraryId, Library body = null)
+        public async System.Threading.Tasks.Task<Library> PutLibrariesLibraryIdAsync (string libraryId, Library body)
         {
              ApiResponse<Library> localVarResponse = await PutLibrariesLibraryIdAsyncWithHttpInfo(libraryId, body);
              return localVarResponse.Data;
@@ -2102,13 +2123,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
-        /// <param name="body">Library (optional)</param>
+        /// <param name="body">Library</param>
         /// <returns>Task of ApiResponse (Library)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Library>> PutLibrariesLibraryIdAsyncWithHttpInfo (string libraryId, Library body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Library>> PutLibrariesLibraryIdAsyncWithHttpInfo (string libraryId, Library body)
         {
             // verify the required parameter 'libraryId' is set
             if (libraryId == null)
                 throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->PutLibrariesLibraryId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutLibrariesLibraryId");
 
             var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2175,9 +2199,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Response</returns>
-        public Response PutResponsesResponseId (string responseId, Response body = null)
+        public Response PutResponsesResponseId (string responseId, Response body)
         {
              ApiResponse<Response> localVarResponse = PutResponsesResponseIdWithHttpInfo(responseId, body);
              return localVarResponse.Data;
@@ -2188,13 +2212,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>ApiResponse of Response</returns>
-        public ApiResponse< Response > PutResponsesResponseIdWithHttpInfo (string responseId, Response body = null)
+        public ApiResponse< Response > PutResponsesResponseIdWithHttpInfo (string responseId, Response body)
         {
             // verify the required parameter 'responseId' is set
             if (responseId == null)
                 throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->PutResponsesResponseId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutResponsesResponseId");
 
             var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2261,9 +2288,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of Response</returns>
-        public async System.Threading.Tasks.Task<Response> PutResponsesResponseIdAsync (string responseId, Response body = null)
+        public async System.Threading.Tasks.Task<Response> PutResponsesResponseIdAsync (string responseId, Response body)
         {
              ApiResponse<Response> localVarResponse = await PutResponsesResponseIdAsyncWithHttpInfo(responseId, body);
              return localVarResponse.Data;
@@ -2275,13 +2302,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
-        /// <param name="body">Response (optional)</param>
+        /// <param name="body">Response</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsesResponseIdAsyncWithHttpInfo (string responseId, Response body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsesResponseIdAsyncWithHttpInfo (string responseId, Response body)
         {
             // verify the required parameter 'responseId' is set
             if (responseId == null)
                 throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->PutResponsesResponseId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutResponsesResponseId");
 
             var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
             var localVarPathParams = new Dictionary<String, String>();

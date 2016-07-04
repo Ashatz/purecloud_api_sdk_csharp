@@ -1256,7 +1256,7 @@ namespace Example
 
 <a name="postcalibrations"></a>
 
-## [**Calibration**](Calibration.html) PostCalibrations (Calibration body = null, string expand = null)
+## [**Calibration**](Calibration.html) PostCalibrations (Calibration body, string expand = null)
 
 Create a calibration
 
@@ -1281,7 +1281,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var body = new Calibration(); // Calibration | calibration (optional) 
+            var body = new Calibration(); // Calibration | calibration
             var expand = expand_example;  // string | calibratorId (optional) 
 
             try
@@ -1304,7 +1304,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Calibration**](Calibration.html)| calibration | [optional]  |
+| **body** | [**Calibration**](Calibration.html)| calibration |  |
 | **expand** | **string**| calibratorId | [optional]  |
 {: class="table table-striped"}
 
@@ -1314,7 +1314,7 @@ namespace Example
 
 <a name="postconversationsconversationidevaluations"></a>
 
-## [**Evaluation**](Evaluation.html) PostConversationsConversationIdEvaluations (string conversationId, Evaluation body = null, string expand = null)
+## [**Evaluation**](Evaluation.html) PostConversationsConversationIdEvaluations (string conversationId, Evaluation body, string expand = null)
 
 Create an evaluation
 
@@ -1340,7 +1340,7 @@ namespace Example
 
             var apiInstance = new QualityApi();
             var conversationId = conversationId_example;  // string | 
-            var body = new Evaluation(); // Evaluation | evaluation (optional) 
+            var body = new Evaluation(); // Evaluation | evaluation
             var expand = expand_example;  // string | evaluatorId (optional) 
 
             try
@@ -1364,7 +1364,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**|  |  |
-| **body** | [**Evaluation**](Evaluation.html)| evaluation | [optional]  |
+| **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
 | **expand** | **string**| evaluatorId | [optional]  |
 {: class="table table-striped"}
 
@@ -1374,7 +1374,7 @@ namespace Example
 
 <a name="postevaluationsaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostEvaluationsAggregatesQuery (AggregationQuery body = null)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostEvaluationsAggregatesQuery (AggregationQuery body)
 
 Query for evaluation aggregates
 
@@ -1399,7 +1399,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var body = new AggregationQuery(); // AggregationQuery | query (optional) 
+            var body = new AggregationQuery(); // AggregationQuery | query
 
             try
             {
@@ -1421,7 +1421,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1430,7 +1430,7 @@ namespace Example
 
 <a name="postevaluationsscoring"></a>
 
-## [**EvaluationScoringSet**](EvaluationScoringSet.html) PostEvaluationsScoring (EvaluationFormAndScoringSet body = null)
+## [**EvaluationScoringSet**](EvaluationScoringSet.html) PostEvaluationsScoring (EvaluationFormAndScoringSet body)
 
 Score evaluation
 
@@ -1455,7 +1455,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var body = new EvaluationFormAndScoringSet(); // EvaluationFormAndScoringSet | evaluationAndScoringSet (optional) 
+            var body = new EvaluationFormAndScoringSet(); // EvaluationFormAndScoringSet | evaluationAndScoringSet
 
             try
             {
@@ -1477,7 +1477,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationFormAndScoringSet**](EvaluationFormAndScoringSet.html)| evaluationAndScoringSet | [optional]  |
+| **body** | [**EvaluationFormAndScoringSet**](EvaluationFormAndScoringSet.html)| evaluationAndScoringSet |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1486,7 +1486,7 @@ namespace Example
 
 <a name="postforms"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PostForms (EvaluationForm body = null)
+## [**EvaluationForm**](EvaluationForm.html) PostForms (EvaluationForm body)
 
 Create an evaluation form.
 
@@ -1511,7 +1511,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var body = new EvaluationForm(); // EvaluationForm |  (optional) 
+            var body = new EvaluationForm(); // EvaluationForm | Evaluation form
 
             try
             {
@@ -1533,7 +1533,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationForm**](EvaluationForm.html)|  | [optional]  |
+| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1542,7 +1542,7 @@ namespace Example
 
 <a name="postkeywordsets"></a>
 
-## [**KeywordSet**](KeywordSet.html) PostKeywordsets (KeywordSet body = null, string expand = null)
+## [**KeywordSet**](KeywordSet.html) PostKeywordsets (KeywordSet body, string expand = null)
 
 Create a Keyword Set
 
@@ -1567,7 +1567,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var body = new KeywordSet(); // KeywordSet | keywordSet (optional) 
+            var body = new KeywordSet(); // KeywordSet | keywordSet
             var expand = expand_example;  // string | queueId (optional) 
 
             try
@@ -1590,7 +1590,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**KeywordSet**](KeywordSet.html)| keywordSet | [optional]  |
+| **body** | [**KeywordSet**](KeywordSet.html)| keywordSet |  |
 | **expand** | **string**| queueId | [optional]  |
 {: class="table table-striped"}
 
@@ -1600,7 +1600,7 @@ namespace Example
 
 <a name="postpublishedforms"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PostPublishedforms (EvaluationForm body = null)
+## [**EvaluationForm**](EvaluationForm.html) PostPublishedforms (EvaluationForm body)
 
 Publish an evaluation form.
 
@@ -1625,7 +1625,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var body = new EvaluationForm(); // EvaluationForm |  (optional) 
+            var body = new EvaluationForm(); // EvaluationForm | Evaluation form
 
             try
             {
@@ -1647,7 +1647,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationForm**](EvaluationForm.html)|  | [optional]  |
+| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1656,7 +1656,7 @@ namespace Example
 
 <a name="putcalibrationscalibrationid"></a>
 
-## [**Calibration**](Calibration.html) PutCalibrationsCalibrationId (string calibrationId, Calibration body = null)
+## [**Calibration**](Calibration.html) PutCalibrationsCalibrationId (string calibrationId, Calibration body)
 
 Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
 
@@ -1682,7 +1682,7 @@ namespace Example
 
             var apiInstance = new QualityApi();
             var calibrationId = calibrationId_example;  // string | Calibration ID
-            var body = new Calibration(); // Calibration | Calibration (optional) 
+            var body = new Calibration(); // Calibration | Calibration
 
             try
             {
@@ -1705,7 +1705,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **calibrationId** | **string**| Calibration ID |  |
-| **body** | [**Calibration**](Calibration.html)| Calibration | [optional]  |
+| **body** | [**Calibration**](Calibration.html)| Calibration |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1714,7 +1714,7 @@ namespace Example
 
 <a name="putconversationsconversationidevaluationsevaluationid"></a>
 
-## [**Evaluation**](Evaluation.html) PutConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+## [**Evaluation**](Evaluation.html) PutConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, Evaluation body, string expand = null)
 
 Update an evaluation
 
@@ -1741,7 +1741,7 @@ namespace Example
             var apiInstance = new QualityApi();
             var conversationId = conversationId_example;  // string | 
             var evaluationId = evaluationId_example;  // string | 
-            var body = new Evaluation(); // Evaluation | evaluation (optional) 
+            var body = new Evaluation(); // Evaluation | evaluation
             var expand = expand_example;  // string | evaluatorId (optional) 
 
             try
@@ -1766,7 +1766,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**|  |  |
 | **evaluationId** | **string**|  |  |
-| **body** | [**Evaluation**](Evaluation.html)| evaluation | [optional]  |
+| **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
 | **expand** | **string**| evaluatorId | [optional]  |
 {: class="table table-striped"}
 
@@ -1776,7 +1776,7 @@ namespace Example
 
 <a name="putformsformid"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PutFormsFormId (string formId, EvaluationForm body = null)
+## [**EvaluationForm**](EvaluationForm.html) PutFormsFormId (string formId, EvaluationForm body)
 
 Update an evaluation form.
 
@@ -1802,7 +1802,7 @@ namespace Example
 
             var apiInstance = new QualityApi();
             var formId = formId_example;  // string | Form ID
-            var body = new EvaluationForm(); // EvaluationForm |  (optional) 
+            var body = new EvaluationForm(); // EvaluationForm | Evaluation form
 
             try
             {
@@ -1825,7 +1825,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-| **body** | [**EvaluationForm**](EvaluationForm.html)|  | [optional]  |
+| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1834,7 +1834,7 @@ namespace Example
 
 <a name="putkeywordsetskeywordsetid"></a>
 
-## [**KeywordSet**](KeywordSet.html) PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body = null)
+## [**KeywordSet**](KeywordSet.html) PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body)
 
 Update a keywordSet to the specified keywordSet via PUT.
 
@@ -1860,7 +1860,7 @@ namespace Example
 
             var apiInstance = new QualityApi();
             var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
-            var body = new KeywordSet(); // KeywordSet | keywordSet (optional) 
+            var body = new KeywordSet(); // KeywordSet | keywordSet
 
             try
             {
@@ -1883,7 +1883,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **keywordSetId** | **string**| KeywordSet ID |  |
-| **body** | [**KeywordSet**](KeywordSet.html)| keywordSet | [optional]  |
+| **body** | [**KeywordSet**](KeywordSet.html)| keywordSet |  |
 {: class="table table-striped"}
 
 ### Return type

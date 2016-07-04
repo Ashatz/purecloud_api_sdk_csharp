@@ -306,9 +306,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        void PutAdfs (ADFS body = null);
+        void PutAdfs (ADFS body);
 
         /// <summary>
         /// Update/Create ADFS Identity Provider
@@ -317,9 +317,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutAdfsWithHttpInfo (ADFS body = null);
+        ApiResponse<Object> PutAdfsWithHttpInfo (ADFS body);
         /// <summary>
         /// Update/Create Customer Interaction Center (CIC) Identity Provider
         /// </summary>
@@ -327,9 +327,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        void PutCic (CustomerInteractionCenter body = null);
+        void PutCic (CustomerInteractionCenter body);
 
         /// <summary>
         /// Update/Create Customer Interaction Center (CIC) Identity Provider
@@ -338,9 +338,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutCicWithHttpInfo (CustomerInteractionCenter body = null);
+        ApiResponse<Object> PutCicWithHttpInfo (CustomerInteractionCenter body);
         /// <summary>
         /// Update/Create Okta Identity Provider
         /// </summary>
@@ -348,9 +348,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        void PutOkta (Okta body = null);
+        void PutOkta (Okta body);
 
         /// <summary>
         /// Update/Create Okta Identity Provider
@@ -359,9 +359,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutOktaWithHttpInfo (Okta body = null);
+        ApiResponse<Object> PutOktaWithHttpInfo (Okta body);
         /// <summary>
         /// Update/Create OneLogin Identity Provider
         /// </summary>
@@ -369,9 +369,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        void PutOnelogin (OneLogin body = null);
+        void PutOnelogin (OneLogin body);
 
         /// <summary>
         /// Update/Create OneLogin Identity Provider
@@ -380,9 +380,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutOneloginWithHttpInfo (OneLogin body = null);
+        ApiResponse<Object> PutOneloginWithHttpInfo (OneLogin body);
         /// <summary>
         /// Update an identity provider
         /// </summary>
@@ -390,9 +390,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        void PutProviderId (OAuthProvider body = null);
+        void PutProviderId (OAuthProvider body);
 
         /// <summary>
         /// Update an identity provider
@@ -401,9 +401,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutProviderIdWithHttpInfo (OAuthProvider body = null);
+        ApiResponse<Object> PutProviderIdWithHttpInfo (OAuthProvider body);
         /// <summary>
         /// Update/Create PureCloud Identity Provider
         /// </summary>
@@ -411,9 +411,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        void PutPurecloud (PureCloud body = null);
+        void PutPurecloud (PureCloud body);
 
         /// <summary>
         /// Update/Create PureCloud Identity Provider
@@ -422,9 +422,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutPurecloudWithHttpInfo (PureCloud body = null);
+        ApiResponse<Object> PutPurecloudWithHttpInfo (PureCloud body);
         /// <summary>
         /// Update/Create Salesforce Identity Provider
         /// </summary>
@@ -432,9 +432,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        void PutSalesforce (Salesforce body = null);
+        void PutSalesforce (Salesforce body);
 
         /// <summary>
         /// Update/Create Salesforce Identity Provider
@@ -443,9 +443,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutSalesforceWithHttpInfo (Salesforce body = null);
+        ApiResponse<Object> PutSalesforceWithHttpInfo (Salesforce body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -740,9 +740,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutAdfsAsync (ADFS body = null);
+        System.Threading.Tasks.Task PutAdfsAsync (ADFS body);
 
         /// <summary>
         /// Update/Create ADFS Identity Provider
@@ -751,9 +751,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutAdfsAsyncWithHttpInfo (ADFS body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutAdfsAsyncWithHttpInfo (ADFS body);
         /// <summary>
         /// Update/Create Customer Interaction Center (CIC) Identity Provider
         /// </summary>
@@ -761,9 +761,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutCicAsync (CustomerInteractionCenter body = null);
+        System.Threading.Tasks.Task PutCicAsync (CustomerInteractionCenter body);
 
         /// <summary>
         /// Update/Create Customer Interaction Center (CIC) Identity Provider
@@ -772,9 +772,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutCicAsyncWithHttpInfo (CustomerInteractionCenter body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutCicAsyncWithHttpInfo (CustomerInteractionCenter body);
         /// <summary>
         /// Update/Create Okta Identity Provider
         /// </summary>
@@ -782,9 +782,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutOktaAsync (Okta body = null);
+        System.Threading.Tasks.Task PutOktaAsync (Okta body);
 
         /// <summary>
         /// Update/Create Okta Identity Provider
@@ -793,9 +793,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutOktaAsyncWithHttpInfo (Okta body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutOktaAsyncWithHttpInfo (Okta body);
         /// <summary>
         /// Update/Create OneLogin Identity Provider
         /// </summary>
@@ -803,9 +803,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutOneloginAsync (OneLogin body = null);
+        System.Threading.Tasks.Task PutOneloginAsync (OneLogin body);
 
         /// <summary>
         /// Update/Create OneLogin Identity Provider
@@ -814,9 +814,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutOneloginAsyncWithHttpInfo (OneLogin body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutOneloginAsyncWithHttpInfo (OneLogin body);
         /// <summary>
         /// Update an identity provider
         /// </summary>
@@ -824,9 +824,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutProviderIdAsync (OAuthProvider body = null);
+        System.Threading.Tasks.Task PutProviderIdAsync (OAuthProvider body);
 
         /// <summary>
         /// Update an identity provider
@@ -835,9 +835,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutProviderIdAsyncWithHttpInfo (OAuthProvider body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutProviderIdAsyncWithHttpInfo (OAuthProvider body);
         /// <summary>
         /// Update/Create PureCloud Identity Provider
         /// </summary>
@@ -845,9 +845,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutPurecloudAsync (PureCloud body = null);
+        System.Threading.Tasks.Task PutPurecloudAsync (PureCloud body);
 
         /// <summary>
         /// Update/Create PureCloud Identity Provider
@@ -856,9 +856,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutPurecloudAsyncWithHttpInfo (PureCloud body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutPurecloudAsyncWithHttpInfo (PureCloud body);
         /// <summary>
         /// Update/Create Salesforce Identity Provider
         /// </summary>
@@ -866,9 +866,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutSalesforceAsync (Salesforce body = null);
+        System.Threading.Tasks.Task PutSalesforceAsync (Salesforce body);
 
         /// <summary>
         /// Update/Create Salesforce Identity Provider
@@ -877,9 +877,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutSalesforceAsyncWithHttpInfo (Salesforce body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutSalesforceAsyncWithHttpInfo (Salesforce body);
         #endregion Asynchronous Operations
     }
 
@@ -3075,9 +3075,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create ADFS Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        public void PutAdfs (ADFS body = null)
+        public void PutAdfs (ADFS body)
         {
              PutAdfsWithHttpInfo(body);
         }
@@ -3086,10 +3086,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create ADFS Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutAdfsWithHttpInfo (ADFS body = null)
+        public ApiResponse<Object> PutAdfsWithHttpInfo (ADFS body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutAdfs");
 
             var localVarPath = "/api/v2/identityproviders/adfs";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3154,9 +3157,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create ADFS Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutAdfsAsync (ADFS body = null)
+        public async System.Threading.Tasks.Task PutAdfsAsync (ADFS body)
         {
              await PutAdfsAsyncWithHttpInfo(body);
 
@@ -3166,10 +3169,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create ADFS Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutAdfsAsyncWithHttpInfo (ADFS body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutAdfsAsyncWithHttpInfo (ADFS body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutAdfs");
 
             var localVarPath = "/api/v2/identityproviders/adfs";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3234,9 +3240,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Customer Interaction Center (CIC) Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        public void PutCic (CustomerInteractionCenter body = null)
+        public void PutCic (CustomerInteractionCenter body)
         {
              PutCicWithHttpInfo(body);
         }
@@ -3245,10 +3251,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Customer Interaction Center (CIC) Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutCicWithHttpInfo (CustomerInteractionCenter body = null)
+        public ApiResponse<Object> PutCicWithHttpInfo (CustomerInteractionCenter body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutCic");
 
             var localVarPath = "/api/v2/identityproviders/cic";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3313,9 +3322,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Customer Interaction Center (CIC) Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutCicAsync (CustomerInteractionCenter body = null)
+        public async System.Threading.Tasks.Task PutCicAsync (CustomerInteractionCenter body)
         {
              await PutCicAsyncWithHttpInfo(body);
 
@@ -3325,10 +3334,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Customer Interaction Center (CIC) Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutCicAsyncWithHttpInfo (CustomerInteractionCenter body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutCicAsyncWithHttpInfo (CustomerInteractionCenter body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutCic");
 
             var localVarPath = "/api/v2/identityproviders/cic";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3393,9 +3405,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Okta Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        public void PutOkta (Okta body = null)
+        public void PutOkta (Okta body)
         {
              PutOktaWithHttpInfo(body);
         }
@@ -3404,10 +3416,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Okta Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutOktaWithHttpInfo (Okta body = null)
+        public ApiResponse<Object> PutOktaWithHttpInfo (Okta body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutOkta");
 
             var localVarPath = "/api/v2/identityproviders/okta";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3472,9 +3487,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Okta Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutOktaAsync (Okta body = null)
+        public async System.Threading.Tasks.Task PutOktaAsync (Okta body)
         {
              await PutOktaAsyncWithHttpInfo(body);
 
@@ -3484,10 +3499,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Okta Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutOktaAsyncWithHttpInfo (Okta body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutOktaAsyncWithHttpInfo (Okta body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutOkta");
 
             var localVarPath = "/api/v2/identityproviders/okta";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3552,9 +3570,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create OneLogin Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        public void PutOnelogin (OneLogin body = null)
+        public void PutOnelogin (OneLogin body)
         {
              PutOneloginWithHttpInfo(body);
         }
@@ -3563,10 +3581,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create OneLogin Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutOneloginWithHttpInfo (OneLogin body = null)
+        public ApiResponse<Object> PutOneloginWithHttpInfo (OneLogin body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutOnelogin");
 
             var localVarPath = "/api/v2/identityproviders/onelogin";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3631,9 +3652,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create OneLogin Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutOneloginAsync (OneLogin body = null)
+        public async System.Threading.Tasks.Task PutOneloginAsync (OneLogin body)
         {
              await PutOneloginAsyncWithHttpInfo(body);
 
@@ -3643,10 +3664,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create OneLogin Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutOneloginAsyncWithHttpInfo (OneLogin body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutOneloginAsyncWithHttpInfo (OneLogin body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutOnelogin");
 
             var localVarPath = "/api/v2/identityproviders/onelogin";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3711,9 +3735,9 @@ namespace ININ.PureCloudApi.Api
         /// Update an identity provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        public void PutProviderId (OAuthProvider body = null)
+        public void PutProviderId (OAuthProvider body)
         {
              PutProviderIdWithHttpInfo(body);
         }
@@ -3722,10 +3746,13 @@ namespace ININ.PureCloudApi.Api
         /// Update an identity provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutProviderIdWithHttpInfo (OAuthProvider body = null)
+        public ApiResponse<Object> PutProviderIdWithHttpInfo (OAuthProvider body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutProviderId");
 
             var localVarPath = "/api/v2/identityproviders/{providerId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3790,9 +3817,9 @@ namespace ININ.PureCloudApi.Api
         /// Update an identity provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutProviderIdAsync (OAuthProvider body = null)
+        public async System.Threading.Tasks.Task PutProviderIdAsync (OAuthProvider body)
         {
              await PutProviderIdAsyncWithHttpInfo(body);
 
@@ -3802,10 +3829,13 @@ namespace ININ.PureCloudApi.Api
         /// Update an identity provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutProviderIdAsyncWithHttpInfo (OAuthProvider body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutProviderIdAsyncWithHttpInfo (OAuthProvider body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutProviderId");
 
             var localVarPath = "/api/v2/identityproviders/{providerId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3870,9 +3900,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create PureCloud Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        public void PutPurecloud (PureCloud body = null)
+        public void PutPurecloud (PureCloud body)
         {
              PutPurecloudWithHttpInfo(body);
         }
@@ -3881,10 +3911,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create PureCloud Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutPurecloudWithHttpInfo (PureCloud body = null)
+        public ApiResponse<Object> PutPurecloudWithHttpInfo (PureCloud body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutPurecloud");
 
             var localVarPath = "/api/v2/identityproviders/purecloud";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3949,9 +3982,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create PureCloud Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutPurecloudAsync (PureCloud body = null)
+        public async System.Threading.Tasks.Task PutPurecloudAsync (PureCloud body)
         {
              await PutPurecloudAsyncWithHttpInfo(body);
 
@@ -3961,10 +3994,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create PureCloud Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutPurecloudAsyncWithHttpInfo (PureCloud body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutPurecloudAsyncWithHttpInfo (PureCloud body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutPurecloud");
 
             var localVarPath = "/api/v2/identityproviders/purecloud";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4029,9 +4065,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Salesforce Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns></returns>
-        public void PutSalesforce (Salesforce body = null)
+        public void PutSalesforce (Salesforce body)
         {
              PutSalesforceWithHttpInfo(body);
         }
@@ -4040,10 +4076,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Salesforce Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutSalesforceWithHttpInfo (Salesforce body = null)
+        public ApiResponse<Object> PutSalesforceWithHttpInfo (Salesforce body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutSalesforce");
 
             var localVarPath = "/api/v2/identityproviders/salesforce";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4108,9 +4147,9 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Salesforce Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutSalesforceAsync (Salesforce body = null)
+        public async System.Threading.Tasks.Task PutSalesforceAsync (Salesforce body)
         {
              await PutSalesforceAsyncWithHttpInfo(body);
 
@@ -4120,10 +4159,13 @@ namespace ININ.PureCloudApi.Api
         /// Update/Create Salesforce Identity Provider 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider (optional)</param>
+        /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutSalesforceAsyncWithHttpInfo (Salesforce body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutSalesforceAsyncWithHttpInfo (Salesforce body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutSalesforce");
 
             var localVarPath = "/api/v2/identityproviders/salesforce";
             var localVarPathParams = new Dictionary<String, String>();

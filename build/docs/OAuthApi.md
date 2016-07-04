@@ -179,7 +179,7 @@ namespace Example
 
 <a name="postclients"></a>
 
-## [**OAuthClient**](OAuthClient.html) PostClients (OAuthClient body = null)
+## [**OAuthClient**](OAuthClient.html) PostClients (OAuthClient body)
 
 Create OAuth client
 
@@ -204,7 +204,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new OAuthApi();
-            var body = new OAuthClient(); // OAuthClient | Client (optional) 
+            var body = new OAuthClient(); // OAuthClient | Client
 
             try
             {
@@ -226,7 +226,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OAuthClient**](OAuthClient.html)| Client | [optional]  |
+| **body** | [**OAuthClient**](OAuthClient.html)| Client |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -290,7 +290,7 @@ void (empty response body)
 
 <a name="putclientsclientid"></a>
 
-## [**OAuthClient**](OAuthClient.html) PutClientsClientId (string clientId, OAuthClient body = null)
+## [**OAuthClient**](OAuthClient.html) PutClientsClientId (string clientId, OAuthClient body)
 
 Update OAuth Client
 
@@ -316,7 +316,7 @@ namespace Example
 
             var apiInstance = new OAuthApi();
             var clientId = clientId_example;  // string | Client ID
-            var body = new OAuthClient(); // OAuthClient | Client (optional) 
+            var body = new OAuthClient(); // OAuthClient | Client
 
             try
             {
@@ -339,7 +339,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-| **body** | [**OAuthClient**](OAuthClient.html)| Client | [optional]  |
+| **body** | [**OAuthClient**](OAuthClient.html)| Client |  |
 {: class="table table-striped"}
 
 ### Return type

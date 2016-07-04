@@ -138,9 +138,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>GroupsSearchResponse</returns>
-        GroupsSearchResponse PostSearch (GroupSearchRequest body = null);
+        GroupsSearchResponse PostSearch (GroupSearchRequest body);
 
         /// <summary>
         /// Search
@@ -149,9 +149,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
-        ApiResponse<GroupsSearchResponse> PostSearchWithHttpInfo (GroupSearchRequest body = null);
+        ApiResponse<GroupsSearchResponse> PostSearchWithHttpInfo (GroupSearchRequest body);
         /// <summary>
         /// Search
         /// </summary>
@@ -159,9 +159,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>LocationsSearchResponse</returns>
-        LocationsSearchResponse PostSearch_0 (LocationSearchRequest body = null);
+        LocationsSearchResponse PostSearch_0 (LocationSearchRequest body);
 
         /// <summary>
         /// Search
@@ -170,9 +170,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
-        ApiResponse<LocationsSearchResponse> PostSearch_0WithHttpInfo (LocationSearchRequest body = null);
+        ApiResponse<LocationsSearchResponse> PostSearch_0WithHttpInfo (LocationSearchRequest body);
         /// <summary>
         /// Search
         /// </summary>
@@ -180,10 +180,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        JsonNodeSearchResponse PostSearch_1 (SearchRequest body = null, bool? profile = null);
+        JsonNodeSearchResponse PostSearch_1 (SearchRequest body, bool? profile = null);
 
         /// <summary>
         /// Search
@@ -192,10 +192,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        ApiResponse<JsonNodeSearchResponse> PostSearch_1WithHttpInfo (SearchRequest body = null, bool? profile = null);
+        ApiResponse<JsonNodeSearchResponse> PostSearch_1WithHttpInfo (SearchRequest body, bool? profile = null);
         /// <summary>
         /// Search
         /// </summary>
@@ -203,9 +203,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
-        UsersSearchResponse PostSearch_2 (UserSearchRequest body = null);
+        UsersSearchResponse PostSearch_2 (UserSearchRequest body);
 
         /// <summary>
         /// Search
@@ -214,9 +214,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
-        ApiResponse<UsersSearchResponse> PostSearch_2WithHttpInfo (UserSearchRequest body = null);
+        ApiResponse<UsersSearchResponse> PostSearch_2WithHttpInfo (UserSearchRequest body);
         /// <summary>
         /// Suggest
         /// </summary>
@@ -224,10 +224,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        JsonNodeSearchResponse PostSuggest (SuggestSearchRequest body = null, bool? profile = null);
+        JsonNodeSearchResponse PostSuggest (SuggestSearchRequest body, bool? profile = null);
 
         /// <summary>
         /// Suggest
@@ -236,10 +236,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        ApiResponse<JsonNodeSearchResponse> PostSuggestWithHttpInfo (SuggestSearchRequest body = null, bool? profile = null);
+        ApiResponse<JsonNodeSearchResponse> PostSuggestWithHttpInfo (SuggestSearchRequest body, bool? profile = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -366,9 +366,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of GroupsSearchResponse</returns>
-        System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (GroupSearchRequest body = null);
+        System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (GroupSearchRequest body);
 
         /// <summary>
         /// Search
@@ -377,9 +377,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostSearchAsyncWithHttpInfo (GroupSearchRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostSearchAsyncWithHttpInfo (GroupSearchRequest body);
         /// <summary>
         /// Search
         /// </summary>
@@ -387,9 +387,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of LocationsSearchResponse</returns>
-        System.Threading.Tasks.Task<LocationsSearchResponse> PostSearch_0Async (LocationSearchRequest body = null);
+        System.Threading.Tasks.Task<LocationsSearchResponse> PostSearch_0Async (LocationSearchRequest body);
 
         /// <summary>
         /// Search
@@ -398,9 +398,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostSearch_0AsyncWithHttpInfo (LocationSearchRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostSearch_0AsyncWithHttpInfo (LocationSearchRequest body);
         /// <summary>
         /// Search
         /// </summary>
@@ -408,10 +408,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearch_1Async (SearchRequest body = null, bool? profile = null);
+        System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearch_1Async (SearchRequest body, bool? profile = null);
 
         /// <summary>
         /// Search
@@ -420,10 +420,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearch_1AsyncWithHttpInfo (SearchRequest body = null, bool? profile = null);
+        System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearch_1AsyncWithHttpInfo (SearchRequest body, bool? profile = null);
         /// <summary>
         /// Search
         /// </summary>
@@ -431,9 +431,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
-        System.Threading.Tasks.Task<UsersSearchResponse> PostSearch_2Async (UserSearchRequest body = null);
+        System.Threading.Tasks.Task<UsersSearchResponse> PostSearch_2Async (UserSearchRequest body);
 
         /// <summary>
         /// Search
@@ -442,9 +442,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostSearch_2AsyncWithHttpInfo (UserSearchRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostSearch_2AsyncWithHttpInfo (UserSearchRequest body);
         /// <summary>
         /// Suggest
         /// </summary>
@@ -452,10 +452,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSuggestAsync (SuggestSearchRequest body = null, bool? profile = null);
+        System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSuggestAsync (SuggestSearchRequest body, bool? profile = null);
 
         /// <summary>
         /// Suggest
@@ -464,10 +464,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSuggestAsyncWithHttpInfo (SuggestSearchRequest body = null, bool? profile = null);
+        System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSuggestAsyncWithHttpInfo (SuggestSearchRequest body, bool? profile = null);
         #endregion Asynchronous Operations
     }
 
@@ -1363,9 +1363,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>GroupsSearchResponse</returns>
-        public GroupsSearchResponse PostSearch (GroupSearchRequest body = null)
+        public GroupsSearchResponse PostSearch (GroupSearchRequest body)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = PostSearchWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1375,10 +1375,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
-        public ApiResponse< GroupsSearchResponse > PostSearchWithHttpInfo (GroupSearchRequest body = null)
+        public ApiResponse< GroupsSearchResponse > PostSearchWithHttpInfo (GroupSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSearch");
 
             var localVarPath = "/api/v2/groups/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1443,9 +1446,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of GroupsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (GroupSearchRequest body = null)
+        public async System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (GroupSearchRequest body)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = await PostSearchAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1456,10 +1459,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostSearchAsyncWithHttpInfo (GroupSearchRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostSearchAsyncWithHttpInfo (GroupSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSearch");
 
             var localVarPath = "/api/v2/groups/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1524,9 +1530,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>LocationsSearchResponse</returns>
-        public LocationsSearchResponse PostSearch_0 (LocationSearchRequest body = null)
+        public LocationsSearchResponse PostSearch_0 (LocationSearchRequest body)
         {
              ApiResponse<LocationsSearchResponse> localVarResponse = PostSearch_0WithHttpInfo(body);
              return localVarResponse.Data;
@@ -1536,10 +1542,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
-        public ApiResponse< LocationsSearchResponse > PostSearch_0WithHttpInfo (LocationSearchRequest body = null)
+        public ApiResponse< LocationsSearchResponse > PostSearch_0WithHttpInfo (LocationSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSearch_0");
 
             var localVarPath = "/api/v2/locations/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1604,9 +1613,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of LocationsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<LocationsSearchResponse> PostSearch_0Async (LocationSearchRequest body = null)
+        public async System.Threading.Tasks.Task<LocationsSearchResponse> PostSearch_0Async (LocationSearchRequest body)
         {
              ApiResponse<LocationsSearchResponse> localVarResponse = await PostSearch_0AsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1617,10 +1626,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostSearch_0AsyncWithHttpInfo (LocationSearchRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostSearch_0AsyncWithHttpInfo (LocationSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSearch_0");
 
             var localVarPath = "/api/v2/locations/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1685,10 +1697,10 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        public JsonNodeSearchResponse PostSearch_1 (SearchRequest body = null, bool? profile = null)
+        public JsonNodeSearchResponse PostSearch_1 (SearchRequest body, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = PostSearch_1WithHttpInfo(body, profile);
              return localVarResponse.Data;
@@ -1698,11 +1710,14 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        public ApiResponse< JsonNodeSearchResponse > PostSearch_1WithHttpInfo (SearchRequest body = null, bool? profile = null)
+        public ApiResponse< JsonNodeSearchResponse > PostSearch_1WithHttpInfo (SearchRequest body, bool? profile = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSearch_1");
 
             var localVarPath = "/api/v2/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1768,10 +1783,10 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        public async System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearch_1Async (SearchRequest body = null, bool? profile = null)
+        public async System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearch_1Async (SearchRequest body, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = await PostSearch_1AsyncWithHttpInfo(body, profile);
              return localVarResponse.Data;
@@ -1782,11 +1797,14 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearch_1AsyncWithHttpInfo (SearchRequest body = null, bool? profile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearch_1AsyncWithHttpInfo (SearchRequest body, bool? profile = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSearch_1");
 
             var localVarPath = "/api/v2/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1852,9 +1870,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
-        public UsersSearchResponse PostSearch_2 (UserSearchRequest body = null)
+        public UsersSearchResponse PostSearch_2 (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = PostSearch_2WithHttpInfo(body);
              return localVarResponse.Data;
@@ -1864,10 +1882,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
-        public ApiResponse< UsersSearchResponse > PostSearch_2WithHttpInfo (UserSearchRequest body = null)
+        public ApiResponse< UsersSearchResponse > PostSearch_2WithHttpInfo (UserSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSearch_2");
 
             var localVarPath = "/api/v2/users/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1932,9 +1953,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
-        public async System.Threading.Tasks.Task<UsersSearchResponse> PostSearch_2Async (UserSearchRequest body = null)
+        public async System.Threading.Tasks.Task<UsersSearchResponse> PostSearch_2Async (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = await PostSearch_2AsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1945,10 +1966,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostSearch_2AsyncWithHttpInfo (UserSearchRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostSearch_2AsyncWithHttpInfo (UserSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSearch_2");
 
             var localVarPath = "/api/v2/users/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2013,10 +2037,10 @@ namespace ININ.PureCloudApi.Api
         /// Suggest 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        public JsonNodeSearchResponse PostSuggest (SuggestSearchRequest body = null, bool? profile = null)
+        public JsonNodeSearchResponse PostSuggest (SuggestSearchRequest body, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = PostSuggestWithHttpInfo(body, profile);
              return localVarResponse.Data;
@@ -2026,11 +2050,14 @@ namespace ININ.PureCloudApi.Api
         /// Suggest 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        public ApiResponse< JsonNodeSearchResponse > PostSuggestWithHttpInfo (SuggestSearchRequest body = null, bool? profile = null)
+        public ApiResponse< JsonNodeSearchResponse > PostSuggestWithHttpInfo (SuggestSearchRequest body, bool? profile = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSuggest");
 
             var localVarPath = "/api/v2/search/suggest";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2096,10 +2123,10 @@ namespace ININ.PureCloudApi.Api
         /// Suggest 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        public async System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSuggestAsync (SuggestSearchRequest body = null, bool? profile = null)
+        public async System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSuggestAsync (SuggestSearchRequest body, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = await PostSuggestAsyncWithHttpInfo(body, profile);
              return localVarResponse.Data;
@@ -2110,11 +2137,14 @@ namespace ININ.PureCloudApi.Api
         /// Suggest 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <param name="profile"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSuggestAsyncWithHttpInfo (SuggestSearchRequest body = null, bool? profile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSuggestAsyncWithHttpInfo (SuggestSearchRequest body, bool? profile = null)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSuggest");
 
             var localVarPath = "/api/v2/search/suggest";
             var localVarPathParams = new Dictionary<String, String>();

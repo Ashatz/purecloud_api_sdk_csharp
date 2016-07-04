@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class PaymentMethod :  IEquatable<PaymentMethod>
     {
         /// <summary>
-        /// Gets or Sets Type
+        /// Method type
         /// </summary>
+        /// <value>Method type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
@@ -65,8 +66,9 @@ namespace ININ.PureCloudApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Method type
         /// </summary>
+        /// <value>Method type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
@@ -78,19 +80,48 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymentMethod" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected PaymentMethod() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaymentMethod" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="ProviderName">ProviderName.</param>
-        /// <param name="Token">Token.</param>
+        /// <param name="Type">Method type (required).</param>
+        /// <param name="ProviderName">Provider name (required).</param>
+        /// <param name="Token">Payment token (required).</param>
         /// <param name="CardExpirationDate">for payment methods of type CARD_TOKEN, the card&#39;s expiration date in the format YYYY-MM..</param>
         /// <param name="CardLastFourDigits">CardLastFourDigits.</param>
         /// <param name="CardType">for payment methods of type CARD_TOKEN, the type of credit or debit card.</param>
         public PaymentMethod(string Name = null, TypeEnum? Type = null, string ProviderName = null, string Token = null, string CardExpirationDate = null, string CardLastFourDigits = null, CardTypeEnum? CardType = null)
         {
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for PaymentMethod and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
+            // to ensure "ProviderName" is required (not null)
+            if (ProviderName == null)
+            {
+                throw new InvalidDataException("ProviderName is a required property for PaymentMethod and cannot be null");
+            }
+            else
+            {
+                this.ProviderName = ProviderName;
+            }
+            // to ensure "Token" is required (not null)
+            if (Token == null)
+            {
+                throw new InvalidDataException("Token is a required property for PaymentMethod and cannot be null");
+            }
+            else
+            {
+                this.Token = Token;
+            }
             this.Name = Name;
-            this.Type = Type;
-            this.ProviderName = ProviderName;
-            this.Token = Token;
             this.CardExpirationDate = CardExpirationDate;
             this.CardLastFourDigits = CardLastFourDigits;
             this.CardType = CardType;
@@ -108,13 +139,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets ProviderName
+        /// Provider name
         /// </summary>
+        /// <value>Provider name</value>
         [DataMember(Name="providerName", EmitDefaultValue=false)]
         public string ProviderName { get; set; }
         /// <summary>
-        /// Gets or Sets Token
+        /// Payment token
         /// </summary>
+        /// <value>Payment token</value>
         [DataMember(Name="token", EmitDefaultValue=false)]
         public string Token { get; set; }
         /// <summary>

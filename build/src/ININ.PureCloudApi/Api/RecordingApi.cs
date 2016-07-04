@@ -345,9 +345,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PatchMediaretentionpoliciesPolicyId (string policyId, Policy body = null);
+        Policy PatchMediaretentionpoliciesPolicyId (string policyId, Policy body);
 
         /// <summary>
         /// Patch a media retention policy
@@ -357,9 +357,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PatchMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null);
+        ApiResponse<Policy> PatchMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body);
         /// <summary>
         /// Create annotation
         /// </summary>
@@ -369,9 +369,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        Annotation PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body = null);
+        Annotation PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body);
 
         /// <summary>
         /// Create annotation
@@ -382,9 +382,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> PostConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body = null);
+        ApiResponse<Annotation> PostConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body);
         /// <summary>
         /// Create media retention policy
         /// </summary>
@@ -392,9 +392,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PostMediaretentionpolicies (Policy body = null);
+        Policy PostMediaretentionpolicies (Policy body);
 
         /// <summary>
         /// Create media retention policy
@@ -403,9 +403,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PostMediaretentionpoliciesWithHttpInfo (Policy body = null);
+        ApiResponse<Policy> PostMediaretentionpoliciesWithHttpInfo (Policy body);
         /// <summary>
         /// Updates the retention records on a recording.
         /// </summary>
@@ -441,9 +441,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        Annotation PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        Annotation PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body);
 
         /// <summary>
         /// Update annotation
@@ -455,9 +455,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        ApiResponse<Annotation> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
         /// <summary>
         /// Update a media retention policy
         /// </summary>
@@ -466,9 +466,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PutMediaretentionpoliciesPolicyId (string policyId, Policy body = null);
+        Policy PutMediaretentionpoliciesPolicyId (string policyId, Policy body);
 
         /// <summary>
         /// Update a media retention policy
@@ -478,9 +478,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PutMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null);
+        ApiResponse<Policy> PutMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body);
         /// <summary>
         /// Update the Recording Settings for the Organization
         /// </summary>
@@ -488,9 +488,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Recording settings</param>
         /// <returns>RecordingSettings</returns>
-        RecordingSettings PutSettings (RecordingSettings body = null);
+        RecordingSettings PutSettings (RecordingSettings body);
 
         /// <summary>
         /// Update the Recording Settings for the Organization
@@ -499,9 +499,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Recording settings</param>
         /// <returns>ApiResponse of RecordingSettings</returns>
-        ApiResponse<RecordingSettings> PutSettingsWithHttpInfo (RecordingSettings body = null);
+        ApiResponse<RecordingSettings> PutSettingsWithHttpInfo (RecordingSettings body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -835,9 +835,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PatchMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<Policy> PatchMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body);
 
         /// <summary>
         /// Patch a media retention policy
@@ -847,9 +847,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body);
         /// <summary>
         /// Create annotation
         /// </summary>
@@ -859,9 +859,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> PostConversationIdRecordingsRecordingIdAnnotationsAsync (string conversationId, string recordingId, Annotation body = null);
+        System.Threading.Tasks.Task<Annotation> PostConversationIdRecordingsRecordingIdAnnotationsAsync (string conversationId, string recordingId, Annotation body);
 
         /// <summary>
         /// Create annotation
@@ -872,9 +872,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body);
         /// <summary>
         /// Create media retention policy
         /// </summary>
@@ -882,9 +882,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PostMediaretentionpoliciesAsync (Policy body = null);
+        System.Threading.Tasks.Task<Policy> PostMediaretentionpoliciesAsync (Policy body);
 
         /// <summary>
         /// Create media retention policy
@@ -893,9 +893,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (Policy body = null);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (Policy body);
         /// <summary>
         /// Updates the retention records on a recording.
         /// </summary>
@@ -931,9 +931,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsync (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        System.Threading.Tasks.Task<Annotation> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsync (string conversationId, string recordingId, string annotationId, Annotation body);
 
         /// <summary>
         /// Update annotation
@@ -945,9 +945,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
         /// <summary>
         /// Update a media retention policy
         /// </summary>
@@ -956,9 +956,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PutMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<Policy> PutMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body);
 
         /// <summary>
         /// Update a media retention policy
@@ -968,9 +968,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body);
         /// <summary>
         /// Update the Recording Settings for the Organization
         /// </summary>
@@ -978,9 +978,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Recording settings</param>
         /// <returns>Task of RecordingSettings</returns>
-        System.Threading.Tasks.Task<RecordingSettings> PutSettingsAsync (RecordingSettings body = null);
+        System.Threading.Tasks.Task<RecordingSettings> PutSettingsAsync (RecordingSettings body);
 
         /// <summary>
         /// Update the Recording Settings for the Organization
@@ -989,9 +989,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Recording settings</param>
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> PutSettingsAsyncWithHttpInfo (RecordingSettings body = null);
+        System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> PutSettingsAsyncWithHttpInfo (RecordingSettings body);
         #endregion Asynchronous Operations
     }
 
@@ -3240,9 +3240,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        public Policy PatchMediaretentionpoliciesPolicyId (string policyId, Policy body = null)
+        public Policy PatchMediaretentionpoliciesPolicyId (string policyId, Policy body)
         {
              ApiResponse<Policy> localVarResponse = PatchMediaretentionpoliciesPolicyIdWithHttpInfo(policyId, body);
              return localVarResponse.Data;
@@ -3253,13 +3253,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PatchMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null)
+        public ApiResponse< Policy > PatchMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchMediaretentionpoliciesPolicyId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PatchMediaretentionpoliciesPolicyId");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3326,9 +3329,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PatchMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<Policy> PatchMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body)
         {
              ApiResponse<Policy> localVarResponse = await PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo(policyId, body);
              return localVarResponse.Data;
@@ -3340,13 +3343,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchMediaretentionpoliciesPolicyId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PatchMediaretentionpoliciesPolicyId");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3414,9 +3420,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        public Annotation PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body = null)
+        public Annotation PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body)
         {
              ApiResponse<Annotation> localVarResponse = PostConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo(conversationId, recordingId, body);
              return localVarResponse.Data;
@@ -3428,9 +3434,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > PostConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body = null)
+        public ApiResponse< Annotation > PostConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -3438,6 +3444,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3506,9 +3515,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> PostConversationIdRecordingsRecordingIdAnnotationsAsync (string conversationId, string recordingId, Annotation body = null)
+        public async System.Threading.Tasks.Task<Annotation> PostConversationIdRecordingsRecordingIdAnnotationsAsync (string conversationId, string recordingId, Annotation body)
         {
              ApiResponse<Annotation> localVarResponse = await PostConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo(conversationId, recordingId, body);
              return localVarResponse.Data;
@@ -3521,9 +3530,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -3531,6 +3540,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3597,9 +3609,9 @@ namespace ININ.PureCloudApi.Api
         /// Create media retention policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        public Policy PostMediaretentionpolicies (Policy body = null)
+        public Policy PostMediaretentionpolicies (Policy body)
         {
              ApiResponse<Policy> localVarResponse = PostMediaretentionpoliciesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3609,10 +3621,13 @@ namespace ININ.PureCloudApi.Api
         /// Create media retention policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PostMediaretentionpoliciesWithHttpInfo (Policy body = null)
+        public ApiResponse< Policy > PostMediaretentionpoliciesWithHttpInfo (Policy body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostMediaretentionpolicies");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3677,9 +3692,9 @@ namespace ININ.PureCloudApi.Api
         /// Create media retention policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PostMediaretentionpoliciesAsync (Policy body = null)
+        public async System.Threading.Tasks.Task<Policy> PostMediaretentionpoliciesAsync (Policy body)
         {
              ApiResponse<Policy> localVarResponse = await PostMediaretentionpoliciesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3690,10 +3705,13 @@ namespace ININ.PureCloudApi.Api
         /// Create media retention policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (Policy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (Policy body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostMediaretentionpolicies");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3950,9 +3968,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        public Annotation PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public Annotation PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body)
         {
              ApiResponse<Annotation> localVarResponse = PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo(conversationId, recordingId, annotationId, body);
              return localVarResponse.Data;
@@ -3965,9 +3983,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public ApiResponse< Annotation > PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -3978,6 +3996,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4048,9 +4069,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsync (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public async System.Threading.Tasks.Task<Annotation> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsync (string conversationId, string recordingId, string annotationId, Annotation body)
         {
              ApiResponse<Annotation> localVarResponse = await PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo(conversationId, recordingId, annotationId, body);
              return localVarResponse.Data;
@@ -4064,9 +4085,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
-        /// <param name="body">annotation (optional)</param>
+        /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -4077,6 +4098,9 @@ namespace ININ.PureCloudApi.Api
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4145,9 +4169,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        public Policy PutMediaretentionpoliciesPolicyId (string policyId, Policy body = null)
+        public Policy PutMediaretentionpoliciesPolicyId (string policyId, Policy body)
         {
              ApiResponse<Policy> localVarResponse = PutMediaretentionpoliciesPolicyIdWithHttpInfo(policyId, body);
              return localVarResponse.Data;
@@ -4158,13 +4182,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PutMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null)
+        public ApiResponse< Policy > PutMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutMediaretentionpoliciesPolicyId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutMediaretentionpoliciesPolicyId");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4231,9 +4258,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PutMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<Policy> PutMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body)
         {
              ApiResponse<Policy> localVarResponse = await PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo(policyId, body);
              return localVarResponse.Data;
@@ -4245,13 +4272,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <param name="body">Policy (optional)</param>
+        /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutMediaretentionpoliciesPolicyId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutMediaretentionpoliciesPolicyId");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4317,9 +4347,9 @@ namespace ININ.PureCloudApi.Api
         /// Update the Recording Settings for the Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Recording settings</param>
         /// <returns>RecordingSettings</returns>
-        public RecordingSettings PutSettings (RecordingSettings body = null)
+        public RecordingSettings PutSettings (RecordingSettings body)
         {
              ApiResponse<RecordingSettings> localVarResponse = PutSettingsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -4329,10 +4359,13 @@ namespace ININ.PureCloudApi.Api
         /// Update the Recording Settings for the Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Recording settings</param>
         /// <returns>ApiResponse of RecordingSettings</returns>
-        public ApiResponse< RecordingSettings > PutSettingsWithHttpInfo (RecordingSettings body = null)
+        public ApiResponse< RecordingSettings > PutSettingsWithHttpInfo (RecordingSettings body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutSettings");
 
             var localVarPath = "/api/v2/recording/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4397,9 +4430,9 @@ namespace ININ.PureCloudApi.Api
         /// Update the Recording Settings for the Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Recording settings</param>
         /// <returns>Task of RecordingSettings</returns>
-        public async System.Threading.Tasks.Task<RecordingSettings> PutSettingsAsync (RecordingSettings body = null)
+        public async System.Threading.Tasks.Task<RecordingSettings> PutSettingsAsync (RecordingSettings body)
         {
              ApiResponse<RecordingSettings> localVarResponse = await PutSettingsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -4410,10 +4443,13 @@ namespace ININ.PureCloudApi.Api
         /// Update the Recording Settings for the Organization 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Recording settings</param>
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> PutSettingsAsyncWithHttpInfo (RecordingSettings body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> PutSettingsAsyncWithHttpInfo (RecordingSettings body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutSettings");
 
             var localVarPath = "/api/v2/recording/settings";
             var localVarPathParams = new Dictionary<String, String>();

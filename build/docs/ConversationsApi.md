@@ -1712,7 +1712,7 @@ namespace Example
 
 <a name="patchcallbackscallbackidparticipantsparticipantid"></a>
 
-## void PatchCallbacksCallbackIdParticipantsParticipantId (string callbackId, string participantId, MediaParticipantRequest body = null)
+## void PatchCallbacksCallbackIdParticipantsParticipantId (string callbackId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -1739,7 +1739,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var callbackId = callbackId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
 
             try
             {
@@ -1762,7 +1762,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callbackId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1771,7 +1771,7 @@ void (empty response body)
 
 <a name="patchcallbackscallbackidparticipantsparticipantidattributes"></a>
 
-## void PatchCallbacksCallbackIdParticipantsParticipantIdAttributes (string callbackId, string participantId, ParticipantAttributes body = null)
+## void PatchCallbacksCallbackIdParticipantsParticipantIdAttributes (string callbackId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -1798,7 +1798,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var callbackId = callbackId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
+            var body = new ParticipantAttributes(); // ParticipantAttributes | Attributes
 
             try
             {
@@ -1821,7 +1821,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callbackId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Attributes |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1830,7 +1830,7 @@ void (empty response body)
 
 <a name="patchcallscallid"></a>
 
-## [**Conversation**](Conversation.html) PatchCallsCallId (string callId, Conversation body = null)
+## [**Conversation**](Conversation.html) PatchCallsCallId (string callId, Conversation body)
 
 Update conversation
 
@@ -1856,7 +1856,7 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var callId = callId_example;  // string | 
-            var body = new Conversation(); // Conversation | Conversation (optional) 
+            var body = new Conversation(); // Conversation | Conversation
 
             try
             {
@@ -1879,7 +1879,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation | [optional]  |
+| **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1888,7 +1888,7 @@ namespace Example
 
 <a name="patchcallscallidparticipantsparticipantid"></a>
 
-## void PatchCallsCallIdParticipantsParticipantId (string callId, string participantId, MediaParticipantRequest body = null)
+## void PatchCallsCallIdParticipantsParticipantId (string callId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -1915,7 +1915,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var callId = callId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant request
 
             try
             {
@@ -1938,7 +1938,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1947,7 +1947,7 @@ void (empty response body)
 
 <a name="patchcallscallidparticipantsparticipantidattributes"></a>
 
-## void PatchCallsCallIdParticipantsParticipantIdAttributes (string callId, string participantId, ParticipantAttributes body = null)
+## void PatchCallsCallIdParticipantsParticipantIdAttributes (string callId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -1974,7 +1974,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var callId = callId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
+            var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
 
             try
             {
@@ -1997,7 +1997,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2006,7 +2006,7 @@ void (empty response body)
 
 <a name="patchcallscallidparticipantsparticipantidconsult"></a>
 
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PatchCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransferUpdate body = null)
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) PatchCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransferUpdate body)
 
 Change who can speak
 
@@ -2033,7 +2033,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var callId = callId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new ConsultTransferUpdate(); // ConsultTransferUpdate | new speak to (optional) 
+            var body = new ConsultTransferUpdate(); // ConsultTransferUpdate | new speak to
 
             try
             {
@@ -2057,7 +2057,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate.html)| new speak to | [optional]  |
+| **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate.html)| new speak to |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2066,7 +2066,7 @@ namespace Example
 
 <a name="patchchatschatidparticipantsparticipantid"></a>
 
-## void PatchChatsChatIdParticipantsParticipantId (string chatId, string participantId, MediaParticipantRequest body = null)
+## void PatchChatsChatIdParticipantsParticipantId (string chatId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -2093,7 +2093,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var chatId = chatId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Update request
 
             try
             {
@@ -2116,7 +2116,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **chatId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2125,7 +2125,7 @@ void (empty response body)
 
 <a name="patchchatschatidparticipantsparticipantidattributes"></a>
 
-## void PatchChatsChatIdParticipantsParticipantIdAttributes (string chatId, string participantId, ParticipantAttributes body = null)
+## void PatchChatsChatIdParticipantsParticipantIdAttributes (string chatId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -2152,7 +2152,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var chatId = chatId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
+            var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
 
             try
             {
@@ -2175,7 +2175,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **chatId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2184,7 +2184,7 @@ void (empty response body)
 
 <a name="patchconversationidparticipantsparticipantid"></a>
 
-## void PatchConversationIdParticipantsParticipantId (string conversationId, string participantId, MediaParticipantRequest body = null)
+## void PatchConversationIdParticipantsParticipantId (string conversationId, string participantId, MediaParticipantRequest body)
 
 Update a participant.
 
@@ -2211,7 +2211,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var conversationId = conversationId_example;  // string | conversation ID
             var participantId = participantId_example;  // string | participant ID
-            var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Update request
 
             try
             {
@@ -2234,7 +2234,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2243,7 +2243,7 @@ void (empty response body)
 
 <a name="patchconversationidparticipantsparticipantidattributes"></a>
 
-## void PatchConversationIdParticipantsParticipantIdAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
+## void PatchConversationIdParticipantsParticipantIdAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -2270,7 +2270,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var conversationId = conversationId_example;  // string | conversation ID
             var participantId = participantId_example;  // string | participant ID
-            var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
+            var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
 
             try
             {
@@ -2293,7 +2293,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2302,7 +2302,7 @@ void (empty response body)
 
 <a name="patchemailsemailidparticipantsparticipantid"></a>
 
-## void PatchEmailsEmailIdParticipantsParticipantId (string emailId, string participantId, MediaParticipantRequest body = null)
+## void PatchEmailsEmailIdParticipantsParticipantId (string emailId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -2329,7 +2329,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var emailId = emailId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Update request
 
             try
             {
@@ -2352,7 +2352,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **emailId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2361,7 +2361,7 @@ void (empty response body)
 
 <a name="patchemailsemailidparticipantsparticipantidattributes"></a>
 
-## void PatchEmailsEmailIdParticipantsParticipantIdAttributes (string emailId, string participantId, ParticipantAttributes body = null)
+## void PatchEmailsEmailIdParticipantsParticipantIdAttributes (string emailId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -2388,7 +2388,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var emailId = emailId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
+            var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
 
             try
             {
@@ -2411,7 +2411,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **emailId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2420,7 +2420,7 @@ void (empty response body)
 
 <a name="postcallbacks"></a>
 
-## [**CreateCallbackResponse**](CreateCallbackResponse.html) PostCallbacks (CreateCallbackCommand body = null)
+## [**CreateCallbackResponse**](CreateCallbackResponse.html) PostCallbacks (CreateCallbackCommand body)
 
 Create a Callback
 
@@ -2445,7 +2445,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var body = new CreateCallbackCommand(); // CreateCallbackCommand |  (optional) 
+            var body = new CreateCallbackCommand(); // CreateCallbackCommand | Callback
 
             try
             {
@@ -2467,7 +2467,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateCallbackCommand**](CreateCallbackCommand.html)|  | [optional]  |
+| **body** | [**CreateCallbackCommand**](CreateCallbackCommand.html)| Callback |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2476,7 +2476,7 @@ namespace Example
 
 <a name="postcallbackscallbackidparticipantsparticipantidreplace"></a>
 
-## void PostCallbacksCallbackIdParticipantsParticipantIdReplace (string callbackId, string participantId, TransferRequest body = null)
+## void PostCallbacksCallbackIdParticipantsParticipantIdReplace (string callbackId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -2503,7 +2503,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var callbackId = callbackId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new TransferRequest(); // TransferRequest |  (optional) 
+            var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
             {
@@ -2526,7 +2526,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callbackId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
+| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2535,7 +2535,7 @@ void (empty response body)
 
 <a name="postcalls"></a>
 
-## [**CreateCallResponse**](CreateCallResponse.html) PostCalls (CreateCallRequest body = null)
+## [**CreateCallResponse**](CreateCallResponse.html) PostCalls (CreateCallRequest body)
 
 Create a call conversation
 
@@ -2560,7 +2560,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var body = new CreateCallRequest(); // CreateCallRequest |  (optional) 
+            var body = new CreateCallRequest(); // CreateCallRequest | Call request
 
             try
             {
@@ -2582,7 +2582,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateCallRequest**](CreateCallRequest.html)|  | [optional]  |
+| **body** | [**CreateCallRequest**](CreateCallRequest.html)| Call request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2591,7 +2591,7 @@ namespace Example
 
 <a name="postcallscallid"></a>
 
-## [**Conversation**](Conversation.html) PostCallsCallId (string callId, CallCommand body = null)
+## [**Conversation**](Conversation.html) PostCallsCallId (string callId, CallCommand body)
 
 Add a new call to a conversation
 
@@ -2617,7 +2617,7 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var callId = callId_example;  // string | 
-            var body = new CallCommand(); // CallCommand | Conversation (optional) 
+            var body = new CallCommand(); // CallCommand | Conversation
 
             try
             {
@@ -2640,7 +2640,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
-| **body** | [**CallCommand**](CallCommand.html)| Conversation | [optional]  |
+| **body** | [**CallCommand**](CallCommand.html)| Conversation |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2649,7 +2649,7 @@ namespace Example
 
 <a name="postcallscallidparticipants"></a>
 
-## [**Conversation**](Conversation.html) PostCallsCallIdParticipants (string callId, Conversation body = null)
+## [**Conversation**](Conversation.html) PostCallsCallIdParticipants (string callId, Conversation body)
 
 Add participants to a conversation
 
@@ -2675,7 +2675,7 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var callId = callId_example;  // string | 
-            var body = new Conversation(); // Conversation | Conversation (optional) 
+            var body = new Conversation(); // Conversation | Conversation
 
             try
             {
@@ -2698,7 +2698,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation | [optional]  |
+| **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2707,7 +2707,7 @@ namespace Example
 
 <a name="postcallscallidparticipantsparticipantidconsult"></a>
 
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransfer body = null)
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransfer body)
 
 Initiate and update consult transfer
 
@@ -2734,7 +2734,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var callId = callId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new ConsultTransfer(); // ConsultTransfer | Destination address & initial speak to (optional) 
+            var body = new ConsultTransfer(); // ConsultTransfer | Destination address & initial speak to
 
             try
             {
@@ -2758,7 +2758,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address &amp; initial speak to | [optional]  |
+| **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address &amp; initial speak to |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2824,7 +2824,7 @@ void (empty response body)
 
 <a name="postcallscallidparticipantsparticipantidreplace"></a>
 
-## void PostCallsCallIdParticipantsParticipantIdReplace (string callId, string participantId, TransferRequest body = null)
+## void PostCallsCallIdParticipantsParticipantIdReplace (string callId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -2851,7 +2851,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var callId = callId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new TransferRequest(); // TransferRequest |  (optional) 
+            var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
             {
@@ -2874,7 +2874,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
+| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2883,7 +2883,7 @@ void (empty response body)
 
 <a name="postchatschatidparticipantsparticipantidreplace"></a>
 
-## void PostChatsChatIdParticipantsParticipantIdReplace (string chatId, string participantId, TransferRequest body = null)
+## void PostChatsChatIdParticipantsParticipantIdReplace (string chatId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -2910,7 +2910,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var chatId = chatId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new TransferRequest(); // TransferRequest |  (optional) 
+            var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
             {
@@ -2933,7 +2933,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **chatId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
+| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3001,7 +3001,7 @@ void (empty response body)
 
 <a name="postconversationidparticipantsparticipantidreplace"></a>
 
-## void PostConversationIdParticipantsParticipantIdReplace (string conversationId, string participantId, TransferRequest body = null)
+## void PostConversationIdParticipantsParticipantIdReplace (string conversationId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -3028,7 +3028,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var conversationId = conversationId_example;  // string | conversation ID
             var participantId = participantId_example;  // string | participant ID
-            var body = new TransferRequest(); // TransferRequest |  (optional) 
+            var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
             {
@@ -3051,7 +3051,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
+| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3060,7 +3060,7 @@ void (empty response body)
 
 <a name="postconversationsaggregatesquery"></a>
 
-## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostConversationsAggregatesQuery (AggregationQuery body = null)
+## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostConversationsAggregatesQuery (AggregationQuery body)
 
 Query for conversation aggregates
 
@@ -3085,7 +3085,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var body = new AggregationQuery(); // AggregationQuery | query (optional) 
+            var body = new AggregationQuery(); // AggregationQuery | query
 
             try
             {
@@ -3107,7 +3107,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | [optional]  |
+| **body** | [**AggregationQuery**](AggregationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3116,7 +3116,7 @@ namespace Example
 
 <a name="postconversationsconversationiddetailsproperties"></a>
 
-## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body = null)
+## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body)
 
 Index conversation properties
 
@@ -3142,7 +3142,7 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var conversationId = conversationId_example;  // string | conversationId
-            var body = new PropertyIndexRequest(); // PropertyIndexRequest | request (optional) 
+            var body = new PropertyIndexRequest(); // PropertyIndexRequest | request
 
             try
             {
@@ -3165,7 +3165,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request | [optional]  |
+| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3174,7 +3174,7 @@ namespace Example
 
 <a name="postconversationsdetailsquery"></a>
 
-## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) PostConversationsDetailsQuery (ConversationQuery body = null)
+## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) PostConversationsDetailsQuery (ConversationQuery body)
 
 Query for conversation details
 
@@ -3199,7 +3199,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var body = new ConversationQuery(); // ConversationQuery | query (optional) 
+            var body = new ConversationQuery(); // ConversationQuery | query
 
             try
             {
@@ -3221,7 +3221,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ConversationQuery**](ConversationQuery.html)| query | [optional]  |
+| **body** | [**ConversationQuery**](ConversationQuery.html)| query |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3230,7 +3230,7 @@ namespace Example
 
 <a name="postemailsemailidmessages"></a>
 
-## [**EmailMessage**](EmailMessage.html) PostEmailsEmailIdMessages (string emailId, EmailMessage body = null)
+## [**EmailMessage**](EmailMessage.html) PostEmailsEmailIdMessages (string emailId, EmailMessage body)
 
 Send an email reply
 
@@ -3256,7 +3256,7 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var emailId = emailId_example;  // string | 
-            var body = new EmailMessage(); // EmailMessage | Reply (optional) 
+            var body = new EmailMessage(); // EmailMessage | Reply
 
             try
             {
@@ -3279,7 +3279,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **emailId** | **string**|  |  |
-| **body** | [**EmailMessage**](EmailMessage.html)| Reply | [optional]  |
+| **body** | [**EmailMessage**](EmailMessage.html)| Reply |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3288,7 +3288,7 @@ namespace Example
 
 <a name="postemailsemailidparticipantsparticipantidreplace"></a>
 
-## void PostEmailsEmailIdParticipantsParticipantIdReplace (string emailId, string participantId, TransferRequest body = null)
+## void PostEmailsEmailIdParticipantsParticipantIdReplace (string emailId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -3315,7 +3315,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var emailId = emailId_example;  // string | 
             var participantId = participantId_example;  // string | 
-            var body = new TransferRequest(); // TransferRequest |  (optional) 
+            var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
             {
@@ -3338,7 +3338,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **emailId** | **string**|  |  |
 | **participantId** | **string**|  |  |
-| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
+| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3347,7 +3347,7 @@ void (empty response body)
 
 <a name="postfaxes"></a>
 
-## [**FaxSendResponse**](FaxSendResponse.html) PostFaxes (FaxSendRequest body = null)
+## [**FaxSendResponse**](FaxSendResponse.html) PostFaxes (FaxSendRequest body)
 
 Create Fax Conversation
 
@@ -3372,7 +3372,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var body = new FaxSendRequest(); // FaxSendRequest | Fax (optional) 
+            var body = new FaxSendRequest(); // FaxSendRequest | Fax
 
             try
             {
@@ -3394,7 +3394,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**FaxSendRequest**](FaxSendRequest.html)| Fax | [optional]  |
+| **body** | [**FaxSendRequest**](FaxSendRequest.html)| Fax |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3403,7 +3403,7 @@ namespace Example
 
 <a name="putemailsemailidmessagesdraft"></a>
 
-## [**EmailMessage**](EmailMessage.html) PutEmailsEmailIdMessagesDraft (string emailId, EmailMessage body = null)
+## [**EmailMessage**](EmailMessage.html) PutEmailsEmailIdMessagesDraft (string emailId, EmailMessage body)
 
 Update conversation draft reply
 
@@ -3429,7 +3429,7 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var emailId = emailId_example;  // string | 
-            var body = new EmailMessage(); // EmailMessage | Draft (optional) 
+            var body = new EmailMessage(); // EmailMessage | Draft
 
             try
             {
@@ -3452,7 +3452,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **emailId** | **string**|  |  |
-| **body** | [**EmailMessage**](EmailMessage.html)| Draft | [optional]  |
+| **body** | [**EmailMessage**](EmailMessage.html)| Draft |  |
 {: class="table table-striped"}
 
 ### Return type

@@ -20,14 +20,35 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Order" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Order() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Order" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Quote">Quote.</param>
-        /// <param name="EnvelopeId">EnvelopeId.</param>
+        /// <param name="Quote">Quote (required).</param>
+        /// <param name="EnvelopeId">Envelope Id (required).</param>
         public Order(string Name = null, Quote Quote = null, string EnvelopeId = null)
         {
+            // to ensure "Quote" is required (not null)
+            if (Quote == null)
+            {
+                throw new InvalidDataException("Quote is a required property for Order and cannot be null");
+            }
+            else
+            {
+                this.Quote = Quote;
+            }
+            // to ensure "EnvelopeId" is required (not null)
+            if (EnvelopeId == null)
+            {
+                throw new InvalidDataException("EnvelopeId is a required property for Order and cannot be null");
+            }
+            else
+            {
+                this.EnvelopeId = EnvelopeId;
+            }
             this.Name = Name;
-            this.Quote = Quote;
-            this.EnvelopeId = EnvelopeId;
         }
         
         /// <summary>
@@ -42,13 +63,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets Quote
+        /// Quote
         /// </summary>
+        /// <value>Quote</value>
         [DataMember(Name="quote", EmitDefaultValue=false)]
         public Quote Quote { get; set; }
         /// <summary>
-        /// Gets or Sets EnvelopeId
+        /// Envelope Id
         /// </summary>
+        /// <value>Envelope Id</value>
         [DataMember(Name="envelopeId", EmitDefaultValue=false)]
         public string EnvelopeId { get; set; }
         /// <summary>

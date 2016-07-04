@@ -1582,7 +1582,7 @@ namespace Example
 
 <a name="postdocuments"></a>
 
-## [**Document**](Document.html) PostDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+## [**Document**](Document.html) PostDocuments (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
 
 Add a document.
 
@@ -1607,7 +1607,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ContentManagementApi();
-            var body = new DocumentUpload(); // DocumentUpload | Document (optional) 
+            var body = new DocumentUpload(); // DocumentUpload | Document
             var copySource = copySource_example;  // string | Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional) 
             var moveSource = moveSource_example;  // string | Move a document to a new workspace. Provide a document ID as the move source. (optional) 
             var _override = true;  // bool? | Override any lock on the source document (optional) 
@@ -1632,7 +1632,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DocumentUpload**](DocumentUpload.html)| Document | [optional]  |
+| **body** | [**DocumentUpload**](DocumentUpload.html)| Document |  |
 | **copySource** | **string**| Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. | [optional]  |
 | **moveSource** | **string**| Move a document to a new workspace. Provide a document ID as the move source. | [optional]  |
 | **_override** | **bool?**| Override any lock on the source document | [optional]  |
@@ -1644,7 +1644,7 @@ namespace Example
 
 <a name="postdocumentsdocumentid"></a>
 
-## [**Document**](Document.html) PostDocumentsDocumentId (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+## [**Document**](Document.html) PostDocumentsDocumentId (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
 
 Update a document.
 
@@ -1670,7 +1670,7 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var documentId = documentId_example;  // string | Document ID
-            var body = new DocumentUpdate(); // DocumentUpdate | Document (optional) 
+            var body = new DocumentUpdate(); // DocumentUpdate | Document
             var expand = expand_example;  // string | Expand some document fields (optional) 
             var _override = true;  // bool? | Override any lock on the document (optional) 
 
@@ -1695,7 +1695,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-| **body** | [**DocumentUpdate**](DocumentUpdate.html)| Document | [optional]  |
+| **body** | [**DocumentUpdate**](DocumentUpdate.html)| Document |  |
 | **expand** | **string**| Expand some document fields | [optional]  |
 | **_override** | **bool?**| Override any lock on the document | [optional]  |
 {: class="table table-striped"}
@@ -1706,7 +1706,7 @@ namespace Example
 
 <a name="postdocumentsdocumentidcontent"></a>
 
-## [**ReplaceResponse**](ReplaceResponse.html) PostDocumentsDocumentIdContent (string documentId, ReplaceRequest body = null, bool? _override = null)
+## [**ReplaceResponse**](ReplaceResponse.html) PostDocumentsDocumentIdContent (string documentId, ReplaceRequest body, bool? _override = null)
 
 Replace the contents of a document.
 
@@ -1732,7 +1732,7 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var documentId = documentId_example;  // string | Document ID
-            var body = new ReplaceRequest(); // ReplaceRequest | Replace Request (optional) 
+            var body = new ReplaceRequest(); // ReplaceRequest | Replace Request
             var _override = true;  // bool? | Override any lock on the document (optional) 
 
             try
@@ -1756,7 +1756,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-| **body** | [**ReplaceRequest**](ReplaceRequest.html)| Replace Request | [optional]  |
+| **body** | [**ReplaceRequest**](ReplaceRequest.html)| Replace Request |  |
 | **_override** | **bool?**| Override any lock on the document | [optional]  |
 {: class="table table-striped"}
 
@@ -1824,7 +1824,7 @@ namespace Example
 
 <a name="postshares"></a>
 
-## [**CreateShareResponse**](CreateShareResponse.html) PostShares (CreateShareRequest body = null)
+## [**CreateShareResponse**](CreateShareResponse.html) PostShares (CreateShareRequest body)
 
 Creates a new share or updates an existing share if the entity has already been shared
 
@@ -1849,7 +1849,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ContentManagementApi();
-            var body = new CreateShareRequest(); // CreateShareRequest | CreateShareRequest - entity id and type and a single member or list of members are required (optional) 
+            var body = new CreateShareRequest(); // CreateShareRequest | CreateShareRequest - entity id and type and a single member or list of members are required
 
             try
             {
@@ -1871,7 +1871,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateShareRequest**](CreateShareRequest.html)| CreateShareRequest - entity id and type and a single member or list of members are required | [optional]  |
+| **body** | [**CreateShareRequest**](CreateShareRequest.html)| CreateShareRequest - entity id and type and a single member or list of members are required |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1880,7 +1880,7 @@ namespace Example
 
 <a name="postworkspaces"></a>
 
-## [**Workspace**](Workspace.html) PostWorkspaces (WorkspaceCreate body = null)
+## [**Workspace**](Workspace.html) PostWorkspaces (WorkspaceCreate body)
 
 Create a group workspace
 
@@ -1905,7 +1905,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ContentManagementApi();
-            var body = new WorkspaceCreate(); // WorkspaceCreate | Workspace (optional) 
+            var body = new WorkspaceCreate(); // WorkspaceCreate | Workspace
 
             try
             {
@@ -1927,7 +1927,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WorkspaceCreate**](WorkspaceCreate.html)| Workspace | [optional]  |
+| **body** | [**WorkspaceCreate**](WorkspaceCreate.html)| Workspace |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1936,7 +1936,7 @@ namespace Example
 
 <a name="postworkspacesworkspaceidtagvalues"></a>
 
-## [**TagValue**](TagValue.html) PostWorkspacesWorkspaceIdTagvalues (string workspaceId, TagValue body = null)
+## [**TagValue**](TagValue.html) PostWorkspacesWorkspaceIdTagvalues (string workspaceId, TagValue body)
 
 Create a workspace tag
 
@@ -1962,7 +1962,7 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            var body = new TagValue(); // TagValue | tag (optional) 
+            var body = new TagValue(); // TagValue | tag
 
             try
             {
@@ -1985,7 +1985,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
-| **body** | [**TagValue**](TagValue.html)| tag | [optional]  |
+| **body** | [**TagValue**](TagValue.html)| tag |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1994,7 +1994,7 @@ namespace Example
 
 <a name="postworkspacesworkspaceidtagvaluesquery"></a>
 
-## [**TagValueEntityListing**](TagValueEntityListing.html) PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null)
+## [**TagValueEntityListing**](TagValueEntityListing.html) PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body, string expand = null)
 
 Perform a prefix query on tags in the workspace
 
@@ -2020,7 +2020,7 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            var body = new TagQueryRequest(); // TagQueryRequest | query (optional) 
+            var body = new TagQueryRequest(); // TagQueryRequest | query
             var expand = expand_example;  // string | Expand some document fields (optional) 
 
             try
@@ -2044,7 +2044,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
-| **body** | [**TagQueryRequest**](TagQueryRequest.html)| query | [optional]  |
+| **body** | [**TagQueryRequest**](TagQueryRequest.html)| query |  |
 | **expand** | **string**| Expand some document fields | [optional]  |
 {: class="table table-striped"}
 
@@ -2054,7 +2054,7 @@ namespace Example
 
 <a name="putworkspacesworkspaceid"></a>
 
-## [**Workspace**](Workspace.html) PutWorkspacesWorkspaceId (string workspaceId, Workspace body = null)
+## [**Workspace**](Workspace.html) PutWorkspacesWorkspaceId (string workspaceId, Workspace body)
 
 Update a workspace
 
@@ -2080,7 +2080,7 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            var body = new Workspace(); // Workspace | Workspace (optional) 
+            var body = new Workspace(); // Workspace | Workspace
 
             try
             {
@@ -2103,7 +2103,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
-| **body** | [**Workspace**](Workspace.html)| Workspace | [optional]  |
+| **body** | [**Workspace**](Workspace.html)| Workspace |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2112,7 +2112,7 @@ namespace Example
 
 <a name="putworkspacesworkspaceidmembersmemberid"></a>
 
-## [**WorkspaceMember**](WorkspaceMember.html) PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body = null)
+## [**WorkspaceMember**](WorkspaceMember.html) PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body)
 
 Add a member to a workspace
 
@@ -2139,7 +2139,7 @@ namespace Example
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
             var memberId = memberId_example;  // string | Member ID
-            var body = new WorkspaceMember(); // WorkspaceMember | Workspace (optional) 
+            var body = new WorkspaceMember(); // WorkspaceMember | Workspace
 
             try
             {
@@ -2163,7 +2163,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **memberId** | **string**| Member ID |  |
-| **body** | [**WorkspaceMember**](WorkspaceMember.html)| Workspace | [optional]  |
+| **body** | [**WorkspaceMember**](WorkspaceMember.html)| Workspace |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2172,7 +2172,7 @@ namespace Example
 
 <a name="putworkspacesworkspaceidtagvaluestagid"></a>
 
-## [**TagValue**](TagValue.html) PutWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, TagValue body = null)
+## [**TagValue**](TagValue.html) PutWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, TagValue body)
 
 Update a workspace tag. Will update all documents with the new tag value.
 
@@ -2199,7 +2199,7 @@ namespace Example
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
             var tagId = tagId_example;  // string | Tag ID
-            var body = new TagValue(); // TagValue | Workspace (optional) 
+            var body = new TagValue(); // TagValue | Workspace
 
             try
             {
@@ -2223,7 +2223,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **tagId** | **string**| Tag ID |  |
-| **body** | [**TagValue**](TagValue.html)| Workspace | [optional]  |
+| **body** | [**TagValue**](TagValue.html)| Workspace |  |
 {: class="table table-striped"}
 
 ### Return type

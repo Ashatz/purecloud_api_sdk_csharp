@@ -90,9 +90,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>LocationsSearchResponse</returns>
-        LocationsSearchResponse PostSearch (LocationSearchRequest body = null);
+        LocationsSearchResponse PostSearch (LocationSearchRequest body);
 
         /// <summary>
         /// Search
@@ -101,9 +101,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
-        ApiResponse<LocationsSearchResponse> PostSearchWithHttpInfo (LocationSearchRequest body = null);
+        ApiResponse<LocationsSearchResponse> PostSearchWithHttpInfo (LocationSearchRequest body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -182,9 +182,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of LocationsSearchResponse</returns>
-        System.Threading.Tasks.Task<LocationsSearchResponse> PostSearchAsync (LocationSearchRequest body = null);
+        System.Threading.Tasks.Task<LocationsSearchResponse> PostSearchAsync (LocationSearchRequest body);
 
         /// <summary>
         /// Search
@@ -193,9 +193,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostSearchAsyncWithHttpInfo (LocationSearchRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostSearchAsyncWithHttpInfo (LocationSearchRequest body);
         #endregion Asynchronous Operations
     }
 
@@ -761,9 +761,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>LocationsSearchResponse</returns>
-        public LocationsSearchResponse PostSearch (LocationSearchRequest body = null)
+        public LocationsSearchResponse PostSearch (LocationSearchRequest body)
         {
              ApiResponse<LocationsSearchResponse> localVarResponse = PostSearchWithHttpInfo(body);
              return localVarResponse.Data;
@@ -773,10 +773,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
-        public ApiResponse< LocationsSearchResponse > PostSearchWithHttpInfo (LocationSearchRequest body = null)
+        public ApiResponse< LocationsSearchResponse > PostSearchWithHttpInfo (LocationSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LocationsApi->PostSearch");
 
             var localVarPath = "/api/v2/locations/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -841,9 +844,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of LocationsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<LocationsSearchResponse> PostSearchAsync (LocationSearchRequest body = null)
+        public async System.Threading.Tasks.Task<LocationsSearchResponse> PostSearchAsync (LocationSearchRequest body)
         {
              ApiResponse<LocationsSearchResponse> localVarResponse = await PostSearchAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -854,10 +857,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostSearchAsyncWithHttpInfo (LocationSearchRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostSearchAsyncWithHttpInfo (LocationSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LocationsApi->PostSearch");
 
             var localVarPath = "/api/v2/locations/search";
             var localVarPathParams = new Dictionary<String, String>();

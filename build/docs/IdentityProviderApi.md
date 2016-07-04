@@ -791,7 +791,7 @@ This endpoint does require any parameters.
 
 <a name="putadfs"></a>
 
-## void PutAdfs (ADFS body = null)
+## void PutAdfs (ADFS body)
 
 Update/Create ADFS Identity Provider
 
@@ -816,7 +816,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new IdentityProviderApi();
-            var body = new ADFS(); // ADFS | Provider (optional) 
+            var body = new ADFS(); // ADFS | Provider
 
             try
             {
@@ -837,7 +837,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ADFS**](ADFS.html)| Provider | [optional]  |
+| **body** | [**ADFS**](ADFS.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -846,7 +846,7 @@ void (empty response body)
 
 <a name="putcic"></a>
 
-## void PutCic (CustomerInteractionCenter body = null)
+## void PutCic (CustomerInteractionCenter body)
 
 Update/Create Customer Interaction Center (CIC) Identity Provider
 
@@ -871,7 +871,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new IdentityProviderApi();
-            var body = new CustomerInteractionCenter(); // CustomerInteractionCenter | Provider (optional) 
+            var body = new CustomerInteractionCenter(); // CustomerInteractionCenter | Provider
 
             try
             {
@@ -892,7 +892,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CustomerInteractionCenter**](CustomerInteractionCenter.html)| Provider | [optional]  |
+| **body** | [**CustomerInteractionCenter**](CustomerInteractionCenter.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -901,7 +901,7 @@ void (empty response body)
 
 <a name="putokta"></a>
 
-## void PutOkta (Okta body = null)
+## void PutOkta (Okta body)
 
 Update/Create Okta Identity Provider
 
@@ -926,7 +926,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new IdentityProviderApi();
-            var body = new Okta(); // Okta | Provider (optional) 
+            var body = new Okta(); // Okta | Provider
 
             try
             {
@@ -947,7 +947,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Okta**](Okta.html)| Provider | [optional]  |
+| **body** | [**Okta**](Okta.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -956,7 +956,7 @@ void (empty response body)
 
 <a name="putonelogin"></a>
 
-## void PutOnelogin (OneLogin body = null)
+## void PutOnelogin (OneLogin body)
 
 Update/Create OneLogin Identity Provider
 
@@ -981,7 +981,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new IdentityProviderApi();
-            var body = new OneLogin(); // OneLogin | Provider (optional) 
+            var body = new OneLogin(); // OneLogin | Provider
 
             try
             {
@@ -1002,7 +1002,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OneLogin**](OneLogin.html)| Provider | [optional]  |
+| **body** | [**OneLogin**](OneLogin.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1011,7 +1011,7 @@ void (empty response body)
 
 <a name="putproviderid"></a>
 
-## void PutProviderId (OAuthProvider body = null)
+## void PutProviderId (OAuthProvider body)
 
 Update an identity provider
 
@@ -1036,7 +1036,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new IdentityProviderApi();
-            var body = new OAuthProvider(); // OAuthProvider | Provider (optional) 
+            var body = new OAuthProvider(); // OAuthProvider | Provider
 
             try
             {
@@ -1057,7 +1057,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OAuthProvider**](OAuthProvider.html)| Provider | [optional]  |
+| **body** | [**OAuthProvider**](OAuthProvider.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1066,7 +1066,7 @@ void (empty response body)
 
 <a name="putpurecloud"></a>
 
-## void PutPurecloud (PureCloud body = null)
+## void PutPurecloud (PureCloud body)
 
 Update/Create PureCloud Identity Provider
 
@@ -1091,7 +1091,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new IdentityProviderApi();
-            var body = new PureCloud(); // PureCloud | Provider (optional) 
+            var body = new PureCloud(); // PureCloud | Provider
 
             try
             {
@@ -1112,7 +1112,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PureCloud**](PureCloud.html)| Provider | [optional]  |
+| **body** | [**PureCloud**](PureCloud.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1121,7 +1121,7 @@ void (empty response body)
 
 <a name="putsalesforce"></a>
 
-## void PutSalesforce (Salesforce body = null)
+## void PutSalesforce (Salesforce body)
 
 Update/Create Salesforce Identity Provider
 
@@ -1146,7 +1146,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new IdentityProviderApi();
-            var body = new Salesforce(); // Salesforce | Provider (optional) 
+            var body = new Salesforce(); // Salesforce | Provider
 
             try
             {
@@ -1167,7 +1167,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Salesforce**](Salesforce.html)| Provider | [optional]  |
+| **body** | [**Salesforce**](Salesforce.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type

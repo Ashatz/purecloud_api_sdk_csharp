@@ -124,7 +124,7 @@ namespace Example
 
 <a name="patchsettings"></a>
 
-## [**GeolocationSettings**](GeolocationSettings.html) PatchSettings (GeolocationSettings body = null)
+## [**GeolocationSettings**](GeolocationSettings.html) PatchSettings (GeolocationSettings body)
 
 Patch a organization's GeolocationSettings
 
@@ -149,7 +149,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new GeolocationApi();
-            var body = new GeolocationSettings(); // GeolocationSettings |  (optional) 
+            var body = new GeolocationSettings(); // GeolocationSettings | Geolocation settings
 
             try
             {
@@ -171,7 +171,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**GeolocationSettings**](GeolocationSettings.html)|  | [optional]  |
+| **body** | [**GeolocationSettings**](GeolocationSettings.html)| Geolocation settings |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -180,7 +180,7 @@ namespace Example
 
 <a name="patchuseridgeolocationsclientid"></a>
 
-## [**Geolocation**](Geolocation.html) PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body = null)
+## [**Geolocation**](Geolocation.html) PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body)
 
 Patch a user's Geolocation
 
@@ -207,7 +207,7 @@ namespace Example
             var apiInstance = new GeolocationApi();
             var userId = userId_example;  // string | user Id
             var clientId = clientId_example;  // string | client Id
-            var body = new Geolocation(); // Geolocation |  (optional) 
+            var body = new Geolocation(); // Geolocation | Geolocation
 
             try
             {
@@ -231,7 +231,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **clientId** | **string**| client Id |  |
-| **body** | [**Geolocation**](Geolocation.html)|  | [optional]  |
+| **body** | [**Geolocation**](Geolocation.html)| Geolocation |  |
 {: class="table table-striped"}
 
 ### Return type

@@ -175,7 +175,7 @@ This endpoint does require any parameters.
 
 <a name="putrecordingkeysrotationschedule"></a>
 
-## [**KeyRotationSchedule**](KeyRotationSchedule.html) PutRecordingkeysRotationschedule (KeyRotationSchedule body = null)
+## [**KeyRotationSchedule**](KeyRotationSchedule.html) PutRecordingkeysRotationschedule (KeyRotationSchedule body)
 
 Update key rotation schedule
 
@@ -200,7 +200,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConfigurationApi();
-            var body = new KeyRotationSchedule(); // KeyRotationSchedule | KeyRotationSchedule (optional) 
+            var body = new KeyRotationSchedule(); // KeyRotationSchedule | KeyRotationSchedule
 
             try
             {
@@ -222,7 +222,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**KeyRotationSchedule**](KeyRotationSchedule.html)| KeyRotationSchedule | [optional]  |
+| **body** | [**KeyRotationSchedule**](KeyRotationSchedule.html)| KeyRotationSchedule |  |
 {: class="table table-striped"}
 
 ### Return type

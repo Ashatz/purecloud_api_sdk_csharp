@@ -141,9 +141,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="body">Add members (optional)</param>
+        /// <param name="body">Add members</param>
         /// <returns></returns>
-        void PostGroupIdMembers (string groupId, GroupMembersUpdate body = null);
+        void PostGroupIdMembers (string groupId, GroupMembersUpdate body);
 
         /// <summary>
         /// Add members
@@ -153,9 +153,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="body">Add members (optional)</param>
+        /// <param name="body">Add members</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostGroupIdMembersWithHttpInfo (string groupId, GroupMembersUpdate body = null);
+        ApiResponse<Object> PostGroupIdMembersWithHttpInfo (string groupId, GroupMembersUpdate body);
         /// <summary>
         /// Create a group
         /// </summary>
@@ -163,9 +163,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Group</param>
         /// <returns>Group</returns>
-        Group PostGroups (Group body = null);
+        Group PostGroups (Group body);
 
         /// <summary>
         /// Create a group
@@ -174,9 +174,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Group</param>
         /// <returns>ApiResponse of Group</returns>
-        ApiResponse<Group> PostGroupsWithHttpInfo (Group body = null);
+        ApiResponse<Group> PostGroupsWithHttpInfo (Group body);
         /// <summary>
         /// Search
         /// </summary>
@@ -184,9 +184,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>GroupsSearchResponse</returns>
-        GroupsSearchResponse PostSearch (GroupSearchRequest body = null);
+        GroupsSearchResponse PostSearch (GroupSearchRequest body);
 
         /// <summary>
         /// Search
@@ -195,9 +195,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
-        ApiResponse<GroupsSearchResponse> PostSearchWithHttpInfo (GroupSearchRequest body = null);
+        ApiResponse<GroupsSearchResponse> PostSearchWithHttpInfo (GroupSearchRequest body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -327,9 +327,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="body">Add members (optional)</param>
+        /// <param name="body">Add members</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostGroupIdMembersAsync (string groupId, GroupMembersUpdate body = null);
+        System.Threading.Tasks.Task PostGroupIdMembersAsync (string groupId, GroupMembersUpdate body);
 
         /// <summary>
         /// Add members
@@ -339,9 +339,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="body">Add members (optional)</param>
+        /// <param name="body">Add members</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupIdMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupIdMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body);
         /// <summary>
         /// Create a group
         /// </summary>
@@ -349,9 +349,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Group</param>
         /// <returns>Task of Group</returns>
-        System.Threading.Tasks.Task<Group> PostGroupsAsync (Group body = null);
+        System.Threading.Tasks.Task<Group> PostGroupsAsync (Group body);
 
         /// <summary>
         /// Create a group
@@ -360,9 +360,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Group</param>
         /// <returns>Task of ApiResponse (Group)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (Group body = null);
+        System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (Group body);
         /// <summary>
         /// Search
         /// </summary>
@@ -370,9 +370,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of GroupsSearchResponse</returns>
-        System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (GroupSearchRequest body = null);
+        System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (GroupSearchRequest body);
 
         /// <summary>
         /// Search
@@ -381,9 +381,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostSearchAsyncWithHttpInfo (GroupSearchRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostSearchAsyncWithHttpInfo (GroupSearchRequest body);
         #endregion Asynchronous Operations
     }
 
@@ -1284,9 +1284,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="body">Add members (optional)</param>
+        /// <param name="body">Add members</param>
         /// <returns></returns>
-        public void PostGroupIdMembers (string groupId, GroupMembersUpdate body = null)
+        public void PostGroupIdMembers (string groupId, GroupMembersUpdate body)
         {
              PostGroupIdMembersWithHttpInfo(groupId, body);
         }
@@ -1296,13 +1296,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="body">Add members (optional)</param>
+        /// <param name="body">Add members</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostGroupIdMembersWithHttpInfo (string groupId, GroupMembersUpdate body = null)
+        public ApiResponse<Object> PostGroupIdMembersWithHttpInfo (string groupId, GroupMembersUpdate body)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PostGroupIdMembers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupIdMembers");
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1369,9 +1372,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="body">Add members (optional)</param>
+        /// <param name="body">Add members</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostGroupIdMembersAsync (string groupId, GroupMembersUpdate body = null)
+        public async System.Threading.Tasks.Task PostGroupIdMembersAsync (string groupId, GroupMembersUpdate body)
         {
              await PostGroupIdMembersAsyncWithHttpInfo(groupId, body);
 
@@ -1382,13 +1385,16 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <param name="body">Add members (optional)</param>
+        /// <param name="body">Add members</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupIdMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupIdMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PostGroupIdMembers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupIdMembers");
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1454,9 +1460,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a group 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Group</param>
         /// <returns>Group</returns>
-        public Group PostGroups (Group body = null)
+        public Group PostGroups (Group body)
         {
              ApiResponse<Group> localVarResponse = PostGroupsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1466,10 +1472,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a group 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Group</param>
         /// <returns>ApiResponse of Group</returns>
-        public ApiResponse< Group > PostGroupsWithHttpInfo (Group body = null)
+        public ApiResponse< Group > PostGroupsWithHttpInfo (Group body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroups");
 
             var localVarPath = "/api/v2/groups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1534,9 +1543,9 @@ namespace ININ.PureCloudApi.Api
         /// Create a group 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Group</param>
         /// <returns>Task of Group</returns>
-        public async System.Threading.Tasks.Task<Group> PostGroupsAsync (Group body = null)
+        public async System.Threading.Tasks.Task<Group> PostGroupsAsync (Group body)
         {
              ApiResponse<Group> localVarResponse = await PostGroupsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1547,10 +1556,13 @@ namespace ININ.PureCloudApi.Api
         /// Create a group 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Group</param>
         /// <returns>Task of ApiResponse (Group)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (Group body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (Group body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroups");
 
             var localVarPath = "/api/v2/groups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1615,9 +1627,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>GroupsSearchResponse</returns>
-        public GroupsSearchResponse PostSearch (GroupSearchRequest body = null)
+        public GroupsSearchResponse PostSearch (GroupSearchRequest body)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = PostSearchWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1627,10 +1639,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
-        public ApiResponse< GroupsSearchResponse > PostSearchWithHttpInfo (GroupSearchRequest body = null)
+        public ApiResponse< GroupsSearchResponse > PostSearchWithHttpInfo (GroupSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostSearch");
 
             var localVarPath = "/api/v2/groups/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1695,9 +1710,9 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of GroupsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (GroupSearchRequest body = null)
+        public async System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (GroupSearchRequest body)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = await PostSearchAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1708,10 +1723,13 @@ namespace ININ.PureCloudApi.Api
         /// Search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Search request options (optional)</param>
+        /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostSearchAsyncWithHttpInfo (GroupSearchRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostSearchAsyncWithHttpInfo (GroupSearchRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostSearch");
 
             var localVarPath = "/api/v2/groups/search";
             var localVarPathParams = new Dictionary<String, String>();

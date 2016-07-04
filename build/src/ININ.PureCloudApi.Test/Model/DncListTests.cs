@@ -115,6 +115,38 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Size'
         }
         /// <summary>
+        /// Test the property 'DncSourceType'
+        /// </summary>
+        [Test]
+        public void DncSourceTypeTest()
+        {
+            // TODO: unit test for the property 'DncSourceType'
+        }
+        /// <summary>
+        /// Test the property 'LoginId'
+        /// </summary>
+        [Test]
+        public void LoginIdTest()
+        {
+            // TODO: unit test for the property 'LoginId'
+        }
+        /// <summary>
+        /// Test the property 'DncCodes'
+        /// </summary>
+        [Test]
+        public void DncCodesTest()
+        {
+            // TODO: unit test for the property 'DncCodes'
+        }
+        /// <summary>
+        /// Test the property 'LicenseId'
+        /// </summary>
+        [Test]
+        public void LicenseIdTest()
+        {
+            // TODO: unit test for the property 'LicenseId'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]
