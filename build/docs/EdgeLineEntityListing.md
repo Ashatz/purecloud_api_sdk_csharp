@@ -12,10 +12,10 @@ title: EdgeLineEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;EdgeLine&gt;**](EdgeLine.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
