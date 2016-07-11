@@ -53,16 +53,16 @@ namespace ININ.PureCloudApi.Model
         {
             
             /// <summary>
-            /// Enum Social for "social"
-            /// </summary>
-            [EnumMember(Value = "social")]
-            Social,
-            
-            /// <summary>
             /// Enum Official for "official"
             /// </summary>
             [EnumMember(Value = "official")]
-            Official
+            Official,
+            
+            /// <summary>
+            /// Enum Social for "social"
+            /// </summary>
+            [EnumMember(Value = "social")]
+            Social
         }
 
         /// <summary>

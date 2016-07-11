@@ -83,6 +83,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Queue'
         }
         /// <summary>
+        /// Test the property 'Queues'
+        /// </summary>
+        [Test]
+        public void QueuesTest()
+        {
+            // TODO: unit test for the property 'Queues'
+        }
+        /// <summary>
         /// Test the property 'Language'
         /// </summary>
         [Test]

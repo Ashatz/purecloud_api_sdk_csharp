@@ -107,6 +107,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CoverSheet'
         }
         /// <summary>
+        /// Test the property 'TimeZoneOffsetMinutes'
+        /// </summary>
+        [Test]
+        public void TimeZoneOffsetMinutesTest()
+        {
+            // TODO: unit test for the property 'TimeZoneOffsetMinutes'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

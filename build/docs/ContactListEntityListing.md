@@ -11,11 +11,11 @@ title: ContactListEntityListing
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;ContactList&gt;**](ContactList.html) |  | [optional] |
-| **SelfUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

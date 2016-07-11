@@ -677,8 +677,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ObservationQueryResponse</returns>
-        ObservationQueryResponse PostQueuesObservationsQuery (ObservationQuery body);
+        /// <returns>QualifierMappingObservationQueryResponse</returns>
+        QualifierMappingObservationQueryResponse PostQueuesObservationsQuery (ObservationQuery body);
 
         /// <summary>
         /// Query for queue observations
@@ -688,8 +688,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of ObservationQueryResponse</returns>
-        ApiResponse<ObservationQueryResponse> PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body);
+        /// <returns>ApiResponse of QualifierMappingObservationQueryResponse</returns>
+        ApiResponse<QualifierMappingObservationQueryResponse> PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body);
         /// <summary>
         /// Bulk add or delete up to 100 queue members
         /// </summary>
@@ -1587,8 +1587,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ObservationQueryResponse</returns>
-        System.Threading.Tasks.Task<ObservationQueryResponse> PostQueuesObservationsQueryAsync (ObservationQuery body);
+        /// <returns>Task of QualifierMappingObservationQueryResponse</returns>
+        System.Threading.Tasks.Task<QualifierMappingObservationQueryResponse> PostQueuesObservationsQueryAsync (ObservationQuery body);
 
         /// <summary>
         /// Query for queue observations
@@ -1598,8 +1598,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
+        /// <returns>Task of ApiResponse (QualifierMappingObservationQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QualifierMappingObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
         /// <summary>
         /// Bulk add or delete up to 100 queue members
         /// </summary>
@@ -6590,10 +6590,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ObservationQueryResponse</returns>
-        public ObservationQueryResponse PostQueuesObservationsQuery (ObservationQuery body)
+        /// <returns>QualifierMappingObservationQueryResponse</returns>
+        public QualifierMappingObservationQueryResponse PostQueuesObservationsQuery (ObservationQuery body)
         {
-             ApiResponse<ObservationQueryResponse> localVarResponse = PostQueuesObservationsQueryWithHttpInfo(body);
+             ApiResponse<QualifierMappingObservationQueryResponse> localVarResponse = PostQueuesObservationsQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -6602,8 +6602,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>ApiResponse of ObservationQueryResponse</returns>
-        public ApiResponse< ObservationQueryResponse > PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body)
+        /// <returns>ApiResponse of QualifierMappingObservationQueryResponse</returns>
+        public ApiResponse< QualifierMappingObservationQueryResponse > PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6662,9 +6662,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ObservationQueryResponse>(localVarStatusCode,
+            return new ApiResponse<QualifierMappingObservationQueryResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ObservationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ObservationQueryResponse)));
+                (QualifierMappingObservationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualifierMappingObservationQueryResponse)));
             
         }
 
@@ -6673,10 +6673,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ObservationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<ObservationQueryResponse> PostQueuesObservationsQueryAsync (ObservationQuery body)
+        /// <returns>Task of QualifierMappingObservationQueryResponse</returns>
+        public async System.Threading.Tasks.Task<QualifierMappingObservationQueryResponse> PostQueuesObservationsQueryAsync (ObservationQuery body)
         {
-             ApiResponse<ObservationQueryResponse> localVarResponse = await PostQueuesObservationsQueryAsyncWithHttpInfo(body);
+             ApiResponse<QualifierMappingObservationQueryResponse> localVarResponse = await PostQueuesObservationsQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -6686,8 +6686,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
-        /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body)
+        /// <returns>Task of ApiResponse (QualifierMappingObservationQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QualifierMappingObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6746,9 +6746,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ObservationQueryResponse>(localVarStatusCode,
+            return new ApiResponse<QualifierMappingObservationQueryResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ObservationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ObservationQueryResponse)));
+                (QualifierMappingObservationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualifierMappingObservationQueryResponse)));
             
         }
 

@@ -1709,7 +1709,7 @@ namespace Example
 
 <a name="postqueuesobservationsquery"></a>
 
-## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostQueuesObservationsQuery (ObservationQuery body)
+## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) PostQueuesObservationsQuery (ObservationQuery body)
 
 Query for queue observations
 
@@ -1739,7 +1739,7 @@ namespace Example
             try
             {
                 // Query for queue observations
-                ObservationQueryResponse result = apiInstance.PostQueuesObservationsQuery(body);
+                QualifierMappingObservationQueryResponse result = apiInstance.PostQueuesObservationsQuery(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1761,7 +1761,7 @@ namespace Example
 
 ### Return type
 
-[**ObservationQueryResponse**](ObservationQueryResponse.html)
+[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
 
 <a name="postqueuesqueueidusers"></a>
 

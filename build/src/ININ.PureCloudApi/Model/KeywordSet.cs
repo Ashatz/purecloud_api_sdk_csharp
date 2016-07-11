@@ -43,15 +43,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Queue">Queue.</param>
+        /// <param name="Queues">Queues.</param>
         /// <param name="Language">Language.</param>
         /// <param name="Agents">Agents.</param>
         /// <param name="Keywords">Keywords.</param>
         /// <param name="ParticipantPurposes">ParticipantPurposes.</param>
-        public KeywordSet(string Name = null, string Description = null, Queue Queue = null, string Language = null, List<User> Agents = null, List<Keyword> Keywords = null, List<ParticipantPurposesEnum> ParticipantPurposes = null)
+        public KeywordSet(string Name = null, string Description = null, Queue Queue = null, List<Queue> Queues = null, string Language = null, List<User> Agents = null, List<Keyword> Keywords = null, List<ParticipantPurposesEnum> ParticipantPurposes = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Queue = Queue;
+            this.Queues = Queues;
             this.Language = Language;
             this.Agents = Agents;
             this.Keywords = Keywords;
@@ -79,6 +81,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public Queue Queue { get; set; }
+        /// <summary>
+        /// Gets or Sets Queues
+        /// </summary>
+        [DataMember(Name="queues", EmitDefaultValue=false)]
+        public List<Queue> Queues { get; set; }
         /// <summary>
         /// Gets or Sets Language
         /// </summary>
@@ -117,6 +124,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  Queues: ").Append(Queues).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Agents: ").Append(Agents).Append("\n");
             sb.Append("  Keywords: ").Append(Keywords).Append("\n");
@@ -179,6 +187,11 @@ namespace ININ.PureCloudApi.Model
                     this.Queue.Equals(other.Queue)
                 ) &&
                 (
+                    this.Queues == other.Queues ||
+                    this.Queues != null &&
+                    this.Queues.SequenceEqual(other.Queues)
+                ) &&
+                (
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
@@ -224,6 +237,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+                if (this.Queues != null)
+                    hash = hash * 59 + this.Queues.GetHashCode();
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
                 if (this.Agents != null)

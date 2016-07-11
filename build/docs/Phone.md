@@ -18,7 +18,6 @@ title: Phone
 | **State** | **string** |  | [optional] |
 | **ModifiedByApp** | **string** |  | [optional] |
 | **CreatedByApp** | **string** |  | [optional] |
-| **EdgeGroup** | [**UriReference**](UriReference.html) |  | [optional] |
 | **Site** | [**UriReference**](UriReference.html) | Site | |
 | **PhoneBaseSettings** | [**UriReference**](UriReference.html) | Phone Base Settings | |
 | **LineBaseSettings** | [**UriReference**](UriReference.html) |  | [optional] |

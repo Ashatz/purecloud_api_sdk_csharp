@@ -433,7 +433,7 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostQueuesObservationsQuery'
             ObservationQuery body = null; // TODO: replace null with proper value
             var response = instance.PostQueuesObservationsQuery(body);
-            Assert.IsInstanceOf<ObservationQueryResponse> (response, "response is ObservationQueryResponse");
+            Assert.IsInstanceOf<QualifierMappingObservationQueryResponse> (response, "response is QualifierMappingObservationQueryResponse");
         }
         
         /// <summary>

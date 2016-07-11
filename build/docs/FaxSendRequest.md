@@ -14,6 +14,7 @@ title: FaxSendRequest
 | **ContentType** | **string** | The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored | [optional] |
 | **Workspace** | [**Workspace**](Workspace.html) | Workspace in which the document should be stored. If Content Management document is used for faxing, workspace will be ignored | [optional] |
 | **CoverSheet** | [**CoverSheet**](CoverSheet.html) | Data for coversheet generation. | [optional] |
+| **TimeZoneOffsetMinutes** | **int?** | Time zone offset minutes from GMT | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

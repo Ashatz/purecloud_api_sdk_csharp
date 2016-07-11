@@ -11,6 +11,7 @@ title: KeywordSet
 | **Name** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Queue** | [**Queue**](Queue.html) |  | [optional] |
+| **Queues** | [**List&lt;Queue&gt;**](Queue.html) |  | [optional] |
 | **Language** | **string** |  | [optional] |
 | **Agents** | [**List&lt;User&gt;**](User.html) |  | [optional] |
 | **Keywords** | [**List&lt;Keyword&gt;**](Keyword.html) |  | [optional] |

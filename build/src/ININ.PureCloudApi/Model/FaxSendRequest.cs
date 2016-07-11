@@ -76,7 +76,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ContentType">The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored.</param>
         /// <param name="Workspace">Workspace in which the document should be stored. If Content Management document is used for faxing, workspace will be ignored.</param>
         /// <param name="CoverSheet">Data for coversheet generation..</param>
-        public FaxSendRequest(string Name = null, List<string> Addresses = null, string DocumentId = null, ContentTypeEnum? ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null)
+        /// <param name="TimeZoneOffsetMinutes">Time zone offset minutes from GMT.</param>
+        public FaxSendRequest(string Name = null, List<string> Addresses = null, string DocumentId = null, ContentTypeEnum? ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null, int? TimeZoneOffsetMinutes = null)
         {
             // to ensure "Addresses" is required (not null)
             if (Addresses == null)
@@ -92,6 +93,7 @@ namespace ININ.PureCloudApi.Model
             this.ContentType = ContentType;
             this.Workspace = Workspace;
             this.CoverSheet = CoverSheet;
+            this.TimeZoneOffsetMinutes = TimeZoneOffsetMinutes;
         }
         
         /// <summary>
@@ -130,6 +132,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="coverSheet", EmitDefaultValue=false)]
         public CoverSheet CoverSheet { get; set; }
         /// <summary>
+        /// Time zone offset minutes from GMT
+        /// </summary>
+        /// <value>Time zone offset minutes from GMT</value>
+        [DataMember(Name="timeZoneOffsetMinutes", EmitDefaultValue=false)]
+        public int? TimeZoneOffsetMinutes { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -150,6 +158,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  CoverSheet: ").Append(CoverSheet).Append("\n");
+            sb.Append("  TimeZoneOffsetMinutes: ").Append(TimeZoneOffsetMinutes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -223,6 +232,11 @@ namespace ININ.PureCloudApi.Model
                     this.CoverSheet.Equals(other.CoverSheet)
                 ) &&
                 (
+                    this.TimeZoneOffsetMinutes == other.TimeZoneOffsetMinutes ||
+                    this.TimeZoneOffsetMinutes != null &&
+                    this.TimeZoneOffsetMinutes.Equals(other.TimeZoneOffsetMinutes)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -254,6 +268,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Workspace.GetHashCode();
                 if (this.CoverSheet != null)
                     hash = hash * 59 + this.CoverSheet.GetHashCode();
+                if (this.TimeZoneOffsetMinutes != null)
+                    hash = hash * 59 + this.TimeZoneOffsetMinutes.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

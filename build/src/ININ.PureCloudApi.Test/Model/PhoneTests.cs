@@ -139,14 +139,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CreatedByApp'
         }
         /// <summary>
-        /// Test the property 'EdgeGroup'
-        /// </summary>
-        [Test]
-        public void EdgeGroupTest()
-        {
-            // TODO: unit test for the property 'EdgeGroup'
-        }
-        /// <summary>
         /// Test the property 'Site'
         /// </summary>
         [Test]

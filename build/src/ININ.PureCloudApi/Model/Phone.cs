@@ -66,7 +66,6 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="EdgeGroup">EdgeGroup.</param>
         /// <param name="Site">Site (required).</param>
         /// <param name="PhoneBaseSettings">Phone Base Settings (required).</param>
         /// <param name="LineBaseSettings">LineBaseSettings.</param>
@@ -77,7 +76,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Properties">Properties.</param>
         /// <param name="Capabilities">Capabilities.</param>
         /// <param name="WebRtcUser">This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones..</param>
-        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference EdgeGroup = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null)
+        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null)
         {
             // to ensure "Site" is required (not null)
             if (Site == null)
@@ -116,7 +115,6 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
-            this.EdgeGroup = EdgeGroup;
             this.LineBaseSettings = LineBaseSettings;
             this.PhoneMetaBase = PhoneMetaBase;
             this.Status = Status;
@@ -179,11 +177,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
-        /// <summary>
-        /// Gets or Sets EdgeGroup
-        /// </summary>
-        [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
-        public UriReference EdgeGroup { get; set; }
         /// <summary>
         /// Site
         /// </summary>
@@ -265,7 +258,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
-            sb.Append("  EdgeGroup: ").Append(EdgeGroup).Append("\n");
             sb.Append("  Site: ").Append(Site).Append("\n");
             sb.Append("  PhoneBaseSettings: ").Append(PhoneBaseSettings).Append("\n");
             sb.Append("  LineBaseSettings: ").Append(LineBaseSettings).Append("\n");
@@ -369,11 +361,6 @@ namespace ININ.PureCloudApi.Model
                     this.CreatedByApp.Equals(other.CreatedByApp)
                 ) &&
                 (
-                    this.EdgeGroup == other.EdgeGroup ||
-                    this.EdgeGroup != null &&
-                    this.EdgeGroup.Equals(other.EdgeGroup)
-                ) &&
-                (
                     this.Site == other.Site ||
                     this.Site != null &&
                     this.Site.Equals(other.Site)
@@ -463,8 +450,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
-                if (this.EdgeGroup != null)
-                    hash = hash * 59 + this.EdgeGroup.GetHashCode();
                 if (this.Site != null)
                     hash = hash * 59 + this.Site.GetHashCode();
                 if (this.PhoneBaseSettings != null)

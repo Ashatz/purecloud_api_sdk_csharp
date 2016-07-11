@@ -52,9 +52,9 @@ namespace ININ.PureCloudApi.Model
         {
             
             /// <summary>
-            /// Enum Email for "Email"
+            /// Enum Email for "EMAIL"
             /// </summary>
-            [EnumMember(Value = "Email")]
+            [EnumMember(Value = "EMAIL")]
             Email
         }
 
