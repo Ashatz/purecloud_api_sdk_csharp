@@ -659,7 +659,7 @@ namespace ININ.PureCloudApi.Test
             List<DialerContact> body = null; // TODO: replace null with proper value
             bool? priority = null; // TODO: replace null with proper value
             var response = instance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
-            Assert.IsInstanceOf<DialerContact> (response, "response is DialerContact");
+            Assert.IsInstanceOf<DialerContactEntityListing> (response, "response is DialerContactEntityListing");
         }
         
         /// <summary>

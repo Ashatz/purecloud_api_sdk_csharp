@@ -74,6 +74,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'Schema'
         }
+        /// <summary>
+        /// Test the property 'RequiresPermissions'
+        /// </summary>
+        [Test]
+        public void RequiresPermissionsTest()
+        {
+            // TODO: unit test for the property 'RequiresPermissions'
+        }
 
     }
 

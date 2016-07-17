@@ -12,13 +12,13 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// Address
+    /// StreetAddress
     /// </summary>
     [DataContract]
-    public partial class Address :  IEquatable<Address>
+    public partial class StreetAddress :  IEquatable<StreetAddress>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Address" /> class.
+        /// Initializes a new instance of the <see cref="StreetAddress" /> class.
         /// </summary>
         /// <param name="Country">Country.</param>
         /// <param name="A1">A1.</param>
@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LOC">LOC.</param>
         /// <param name="NAM">NAM.</param>
         /// <param name="PC">PC.</param>
-        public Address(string Country = null, string A1 = null, string A3 = null, string RD = null, string HNO = null, string LOC = null, string NAM = null, string PC = null)
+        public StreetAddress(string Country = null, string A1 = null, string A3 = null, string RD = null, string HNO = null, string LOC = null, string NAM = null, string PC = null)
         {
             this.Country = Country;
             this.A1 = A1;
@@ -87,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Address {\n");
+            sb.Append("class StreetAddress {\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
             sb.Append("  A1: ").Append(A1).Append("\n");
             sb.Append("  A3: ").Append(A3).Append("\n");
@@ -117,15 +117,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Address);
+            return this.Equals(obj as StreetAddress);
         }
 
         /// <summary>
-        /// Returns true if Address instances are equal
+        /// Returns true if StreetAddress instances are equal
         /// </summary>
-        /// <param name="other">Instance of Address to be compared</param>
+        /// <param name="other">Instance of StreetAddress to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Address other)
+        public bool Equals(StreetAddress other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

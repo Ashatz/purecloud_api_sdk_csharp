@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="ValidateAddressRequest" /> class.
         /// </summary>
         /// <param name="Address">Address.</param>
-        public ValidateAddressRequest(Address Address = null)
+        public ValidateAddressRequest(StreetAddress Address = null)
         {
             this.Address = Address;
         }
@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
-        public Address Address { get; set; }
+        public StreetAddress Address { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -10,6 +10,7 @@ title: AvailableTopic
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Schema** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
+| **RequiresPermissions** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

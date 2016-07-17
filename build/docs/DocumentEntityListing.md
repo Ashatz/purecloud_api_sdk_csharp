@@ -11,11 +11,11 @@ title: DocumentEntityListing
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;Document&gt;**](Document.html) |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
-| **SelfUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

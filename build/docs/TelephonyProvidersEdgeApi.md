@@ -4370,7 +4370,7 @@ namespace Example
 
 <a name="postprovidersedgesaddressvalidation"></a>
 
-## [**ValidateAddressResponse**](ValidateAddressResponse.html) PostProvidersEdgesAddressvalidation (ValidateAddressRequest body = null)
+## [**ValidateAddressResponse**](ValidateAddressResponse.html) PostProvidersEdgesAddressvalidation (ValidateAddressRequest body)
 
 Validates a street address
 
@@ -4395,7 +4395,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new ValidateAddressRequest(); // ValidateAddressRequest |  (optional) 
+            var body = new ValidateAddressRequest(); // ValidateAddressRequest | Address
 
             try
             {
@@ -4417,7 +4417,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ValidateAddressRequest**](ValidateAddressRequest.html)|  | [optional]  |
+| **body** | [**ValidateAddressRequest**](ValidateAddressRequest.html)| Address |  |
 {: class="table table-striped"}
 
 ### Return type

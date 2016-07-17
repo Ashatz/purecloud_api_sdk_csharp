@@ -22,10 +22,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Description">Description.</param>
         /// <param name="Schema">Schema.</param>
-        public AvailableTopic(string Description = null, Dictionary<string, Object> Schema = null)
+        /// <param name="RequiresPermissions">RequiresPermissions.</param>
+        public AvailableTopic(string Description = null, Dictionary<string, Object> Schema = null, List<string> RequiresPermissions = null)
         {
             this.Description = Description;
             this.Schema = Schema;
+            this.RequiresPermissions = RequiresPermissions;
         }
         
         /// <summary>
@@ -45,6 +47,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public Dictionary<string, Object> Schema { get; set; }
         /// <summary>
+        /// Gets or Sets RequiresPermissions
+        /// </summary>
+        [DataMember(Name="requiresPermissions", EmitDefaultValue=false)]
+        public List<string> RequiresPermissions { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -55,6 +62,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
+            sb.Append("  RequiresPermissions: ").Append(RequiresPermissions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,6 +113,11 @@ namespace ININ.PureCloudApi.Model
                     this.Schema == other.Schema ||
                     this.Schema != null &&
                     this.Schema.SequenceEqual(other.Schema)
+                ) &&
+                (
+                    this.RequiresPermissions == other.RequiresPermissions ||
+                    this.RequiresPermissions != null &&
+                    this.RequiresPermissions.SequenceEqual(other.RequiresPermissions)
                 );
         }
 
@@ -125,6 +138,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
+                if (this.RequiresPermissions != null)
+                    hash = hash * 59 + this.RequiresPermissions.GetHashCode();
                 return hash;
             }
         }

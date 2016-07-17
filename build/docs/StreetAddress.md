@@ -1,7 +1,7 @@
 ---
-title: Address
+title: StreetAddress
 ---
-## ININ.PureCloudApi.Model.Address
+## ININ.PureCloudApi.Model.StreetAddress
 
 ## Properties
 

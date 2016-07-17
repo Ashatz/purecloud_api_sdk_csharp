@@ -2697,7 +2697,7 @@ namespace Example
 
 <a name="postcontactlistscontactlistidcontacts"></a>
 
-## [**DialerContact**](DialerContact.html) PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null)
+## [**DialerContactEntityListing**](DialerContactEntityListing.html) PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null)
 
 Add contacts to a contact list.
 
@@ -2729,7 +2729,7 @@ namespace Example
             try
             {
                 // Add contacts to a contact list.
-                DialerContact result = apiInstance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
+                DialerContactEntityListing result = apiInstance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2753,7 +2753,7 @@ namespace Example
 
 ### Return type
 
-[**DialerContact**](DialerContact.html)
+[**DialerContactEntityListing**](DialerContactEntityListing.html)
 
 <a name="postcontactlistscontactlistidexport"></a>
 
@@ -2984,7 +2984,7 @@ namespace Example
 
 Add phone numbers to a Dialer DNC list.
 
-
+Only Internal DNC lists may be appended to
 
 ### Example
 ~~~csharp

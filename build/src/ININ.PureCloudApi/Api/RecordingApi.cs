@@ -338,6 +338,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of RecordingSettings</returns>
         ApiResponse<RecordingSettings> GetSettingsWithHttpInfo (bool? createDefault = null);
         /// <summary>
+        /// Retrieves a paged listing of screen recording sessions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ScreenRecordingSessionListing</returns>
+        ScreenRecordingSessionListing GetsScreensessions (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Retrieves a paged listing of screen recording sessions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of ScreenRecordingSessionListing</returns>
+        ApiResponse<ScreenRecordingSessionListing> GetsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        /// <summary>
         /// Patch a media retention policy
         /// </summary>
         /// <remarks>
@@ -827,6 +850,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
         System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> GetSettingsAsyncWithHttpInfo (bool? createDefault = null);
+        /// <summary>
+        /// Retrieves a paged listing of screen recording sessions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ScreenRecordingSessionListing</returns>
+        System.Threading.Tasks.Task<ScreenRecordingSessionListing> GetsScreensessionsAsync (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Retrieves a paged listing of screen recording sessions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         /// <summary>
         /// Patch a media retention policy
         /// </summary>
@@ -3232,6 +3278,159 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<RecordingSettings>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RecordingSettings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingSettings)));
+            
+        }
+
+        /// <summary>
+        /// Retrieves a paged listing of screen recording sessions 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ScreenRecordingSessionListing</returns>
+        public ScreenRecordingSessionListing GetsScreensessions (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<ScreenRecordingSessionListing> localVarResponse = GetsScreensessionsWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves a paged listing of screen recording sessions 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of ScreenRecordingSessionListing</returns>
+        public ApiResponse< ScreenRecordingSessionListing > GetsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        {
+
+            var localVarPath = "/api/v2/recordings/screensessions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetsScreensessions: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetsScreensessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScreenRecordingSessionListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ScreenRecordingSessionListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenRecordingSessionListing)));
+            
+        }
+
+        /// <summary>
+        /// Retrieves a paged listing of screen recording sessions 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ScreenRecordingSessionListing</returns>
+        public async System.Threading.Tasks.Task<ScreenRecordingSessionListing> GetsScreensessionsAsync (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<ScreenRecordingSessionListing> localVarResponse = await GetsScreensessionsAsyncWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves a paged listing of screen recording sessions 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        {
+
+            var localVarPath = "/api/v2/recordings/screensessions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetsScreensessions: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetsScreensessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScreenRecordingSessionListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ScreenRecordingSessionListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenRecordingSessionListing)));
             
         }
 

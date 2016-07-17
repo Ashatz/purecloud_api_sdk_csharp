@@ -235,6 +235,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetsScreensessions
+        /// </summary>
+        [Test]
+        public void GetsScreensessionsTest()
+        {
+            // TODO: add unit test for the method 'GetsScreensessions'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.GetsScreensessions(pageSize, pageNumber);
+            Assert.IsInstanceOf<ScreenRecordingSessionListing> (response, "response is ScreenRecordingSessionListing");
+        }
+        
+        /// <summary>
         /// Test PatchMediaretentionpoliciesPolicyId
         /// </summary>
         [Test]

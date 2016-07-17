@@ -11,11 +11,11 @@ title: PhysicalInterfaceEntityListing
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;DomainPhysicalInterface&gt;**](DomainPhysicalInterface.html) |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
-| **SelfUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

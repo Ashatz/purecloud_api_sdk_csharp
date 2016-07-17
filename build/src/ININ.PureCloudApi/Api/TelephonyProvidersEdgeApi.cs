@@ -1726,9 +1726,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Address</param>
         /// <returns>ValidateAddressResponse</returns>
-        ValidateAddressResponse PostProvidersEdgesAddressvalidation (ValidateAddressRequest body = null);
+        ValidateAddressResponse PostProvidersEdgesAddressvalidation (ValidateAddressRequest body);
 
         /// <summary>
         /// Validates a street address
@@ -1737,9 +1737,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Address</param>
         /// <returns>ApiResponse of ValidateAddressResponse</returns>
-        ApiResponse<ValidateAddressResponse> PostProvidersEdgesAddressvalidationWithHttpInfo (ValidateAddressRequest body = null);
+        ApiResponse<ValidateAddressResponse> PostProvidersEdgesAddressvalidationWithHttpInfo (ValidateAddressRequest body);
         /// <summary>
         /// Create a certificate authority.
         /// </summary>
@@ -4235,9 +4235,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Address</param>
         /// <returns>Task of ValidateAddressResponse</returns>
-        System.Threading.Tasks.Task<ValidateAddressResponse> PostProvidersEdgesAddressvalidationAsync (ValidateAddressRequest body = null);
+        System.Threading.Tasks.Task<ValidateAddressResponse> PostProvidersEdgesAddressvalidationAsync (ValidateAddressRequest body);
 
         /// <summary>
         /// Validates a street address
@@ -4246,9 +4246,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Address</param>
         /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> PostProvidersEdgesAddressvalidationAsyncWithHttpInfo (ValidateAddressRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> PostProvidersEdgesAddressvalidationAsyncWithHttpInfo (ValidateAddressRequest body);
         /// <summary>
         /// Create a certificate authority.
         /// </summary>
@@ -16761,9 +16761,9 @@ namespace ININ.PureCloudApi.Api
         /// Validates a street address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Address</param>
         /// <returns>ValidateAddressResponse</returns>
-        public ValidateAddressResponse PostProvidersEdgesAddressvalidation (ValidateAddressRequest body = null)
+        public ValidateAddressResponse PostProvidersEdgesAddressvalidation (ValidateAddressRequest body)
         {
              ApiResponse<ValidateAddressResponse> localVarResponse = PostProvidersEdgesAddressvalidationWithHttpInfo(body);
              return localVarResponse.Data;
@@ -16773,10 +16773,13 @@ namespace ININ.PureCloudApi.Api
         /// Validates a street address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Address</param>
         /// <returns>ApiResponse of ValidateAddressResponse</returns>
-        public ApiResponse< ValidateAddressResponse > PostProvidersEdgesAddressvalidationWithHttpInfo (ValidateAddressRequest body = null)
+        public ApiResponse< ValidateAddressResponse > PostProvidersEdgesAddressvalidationWithHttpInfo (ValidateAddressRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesAddressvalidation");
 
             var localVarPath = "/api/v2/telephony/providers/edges/addressvalidation";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16841,9 +16844,9 @@ namespace ININ.PureCloudApi.Api
         /// Validates a street address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Address</param>
         /// <returns>Task of ValidateAddressResponse</returns>
-        public async System.Threading.Tasks.Task<ValidateAddressResponse> PostProvidersEdgesAddressvalidationAsync (ValidateAddressRequest body = null)
+        public async System.Threading.Tasks.Task<ValidateAddressResponse> PostProvidersEdgesAddressvalidationAsync (ValidateAddressRequest body)
         {
              ApiResponse<ValidateAddressResponse> localVarResponse = await PostProvidersEdgesAddressvalidationAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -16854,10 +16857,13 @@ namespace ININ.PureCloudApi.Api
         /// Validates a street address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body">Address</param>
         /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> PostProvidersEdgesAddressvalidationAsyncWithHttpInfo (ValidateAddressRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> PostProvidersEdgesAddressvalidationAsyncWithHttpInfo (ValidateAddressRequest body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesAddressvalidation");
 
             var localVarPath = "/api/v2/telephony/providers/edges/addressvalidation";
             var localVarPathParams = new Dictionary<String, String>();

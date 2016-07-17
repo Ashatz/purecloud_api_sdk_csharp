@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOrphanId**](RecordingApi.html#getorphanid) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
 | [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **GET** /api/v2/orphanrecordings | Gets all orphan recordings |
 | [**GetSettings**](RecordingApi.html#getsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
+| [**GetsScreensessions**](RecordingApi.html#getsscreensessions) | **GET** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
 | [**PatchMediaretentionpoliciesPolicyId**](RecordingApi.html#patchmediaretentionpoliciespolicyid) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PostConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#postconversationidrecordingsrecordingidannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
 | [**PostMediaretentionpolicies**](RecordingApi.html#postmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
@@ -804,6 +805,64 @@ namespace Example
 ### Return type
 
 [**RecordingSettings**](RecordingSettings.html)
+
+<a name="getsscreensessions"></a>
+
+## [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html) GetsScreensessions (int? pageSize = null, int? pageNumber = null)
+
+Retrieves a paged listing of screen recording sessions
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetsScreensessionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Retrieves a paged listing of screen recording sessions
+                ScreenRecordingSessionListing result = apiInstance.GetsScreensessions(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetsScreensessions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html)
 
 <a name="patchmediaretentionpoliciespolicyid"></a>
 

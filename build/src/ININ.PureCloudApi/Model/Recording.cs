@@ -97,7 +97,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Path">Path.</param>
         /// <param name="StartTime">StartTime.</param>
         /// <param name="EndTime">EndTime.</param>
-        /// <param name="Media">The type of media that the recording is..</param>
+        /// <param name="Media">The type of media that the recording is. At the moment that could be audio, chat, or email..</param>
         /// <param name="Annotations">Annotations that belong to the recording..</param>
         /// <param name="Transcript">Represents a chat transcript.</param>
         /// <param name="EmailTranscript">Represents an email transcript.</param>
@@ -168,9 +168,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public string EndTime { get; set; }
         /// <summary>
-        /// The type of media that the recording is.
+        /// The type of media that the recording is. At the moment that could be audio, chat, or email.
         /// </summary>
-        /// <value>The type of media that the recording is.</value>
+        /// <value>The type of media that the recording is. At the moment that could be audio, chat, or email.</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public string Media { get; set; }
         /// <summary>
