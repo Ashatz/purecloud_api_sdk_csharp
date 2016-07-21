@@ -36,16 +36,22 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetEmailsEmailIdMessagesMessageId**](ConversationsApi.html#getemailsemailidmessagesmessageid) | **GET** /api/v2/conversations/emails/{emailId}/messages/{messageId} | Get conversation message |
 | [**GetEmailsEmailIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getemailsemailidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetEmailsEmailIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getemailsemailidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**PatchCallbacksCallbackId**](ConversationsApi.html#patchcallbackscallbackid) | **PATCH** /api/v2/conversations/callbacks/{callbackId} | Update a conversation by disconnecting all of the participants |
 | [**PatchCallbacksCallbackIdParticipantsParticipantId**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantid) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId} | Update conversation participant |
 | [**PatchCallbacksCallbackIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchCallsCallId**](ConversationsApi.html#patchcallscallid) | **PATCH** /api/v2/conversations/calls/{callId} | Update conversation |
+| [**PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchCallsCallId**](ConversationsApi.html#patchcallscallid) | **PATCH** /api/v2/conversations/calls/{callId} | Update a conversation by setting it&#39;s recording state or disconnecting all of the participants |
 | [**PatchCallsCallIdParticipantsParticipantId**](ConversationsApi.html#patchcallscallidparticipantsparticipantid) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId} | Update conversation participant |
 | [**PatchCallsCallIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchcallscallidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchcallscallidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
 | [**PatchCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.html#patchcallscallidparticipantsparticipantidconsult) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Change who can speak |
+| [**PatchChatsChatId**](ConversationsApi.html#patchchatschatid) | **PATCH** /api/v2/conversations/chats/{chatId} | Update a conversation by disconnecting all of the participants |
 | [**PatchChatsChatIdParticipantsParticipantId**](ConversationsApi.html#patchchatschatidparticipantsparticipantid) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId} | Update conversation participant |
 | [**PatchChatsChatIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchchatschatidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchchatschatidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
 | [**PatchConversationIdParticipantsParticipantId**](ConversationsApi.html#patchconversationidparticipantsparticipantid) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchconversationidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchEmailsEmailId**](ConversationsApi.html#patchemailsemailid) | **PATCH** /api/v2/conversations/emails/{emailId} | Update a conversation by disconnecting all of the participants |
 | [**PatchEmailsEmailIdParticipantsParticipantId**](ConversationsApi.html#patchemailsemailidparticipantsparticipantid) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId} | Update conversation participant |
 | [**PatchEmailsEmailIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchemailsemailidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PostCallbacks**](ConversationsApi.html#postcallbacks) | **POST** /api/v2/conversations/callbacks | Create a Callback |
@@ -1710,6 +1716,64 @@ namespace Example
 
 [**WrapupCode**](WrapupCode.html)
 
+<a name="patchcallbackscallbackid"></a>
+
+## [**Conversation**](Conversation.html) PatchCallbacksCallbackId (string callbackId, Conversation body)
+
+Update a conversation by disconnecting all of the participants
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCallbacksCallbackIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callbackId = callbackId_example;  // string | 
+            var body = new Conversation(); // Conversation | Conversation
+
+            try
+            {
+                // Update a conversation by disconnecting all of the participants
+                Conversation result = apiInstance.PatchCallbacksCallbackId(callbackId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCallbacksCallbackId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callbackId** | **string**|  |  |
+| **body** | [**Conversation**](Conversation.html)| Conversation |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Conversation**](Conversation.html)
+
 <a name="patchcallbackscallbackidparticipantsparticipantid"></a>
 
 ## void PatchCallbacksCallbackIdParticipantsParticipantId (string callbackId, string participantId, MediaParticipantRequest body)
@@ -1828,11 +1892,72 @@ namespace Example
 
 void (empty response body)
 
+<a name="patchcallbackscallbackidparticipantsparticipantidcommunicationscommunicationid"></a>
+
+## void PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
+
+Update conversation participant's communication by disconnecting it.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callbackId = callbackId_example;  // string | 
+            var participantId = participantId_example;  // string | 
+            var communicationId = communicationId_example;  // string | 
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+
+            try
+            {
+                // Update conversation participant's communication by disconnecting it.
+                apiInstance.PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId(callbackId, participantId, communicationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callbackId** | **string**|  |  |
+| **participantId** | **string**|  |  |
+| **communicationId** | **string**|  |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="patchcallscallid"></a>
 
 ## [**Conversation**](Conversation.html) PatchCallsCallId (string callId, Conversation body)
 
-Update conversation
+Update a conversation by setting it's recording state or disconnecting all of the participants
 
 
 
@@ -1860,7 +1985,7 @@ namespace Example
 
             try
             {
-                // Update conversation
+                // Update a conversation by setting it's recording state or disconnecting all of the participants
                 Conversation result = apiInstance.PatchCallsCallId(callId, body);
                 Debug.WriteLine(result);
             }
@@ -2004,6 +2129,67 @@ namespace Example
 
 void (empty response body)
 
+<a name="patchcallscallidparticipantsparticipantidcommunicationscommunicationid"></a>
+
+## void PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId (string callId, string participantId, string communicationId, MediaParticipantRequest body)
+
+Update conversation participant's communication by disconnecting it.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | 
+            var participantId = participantId_example;  // string | 
+            var communicationId = communicationId_example;  // string | 
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+
+            try
+            {
+                // Update conversation participant's communication by disconnecting it.
+                apiInstance.PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId(callId, participantId, communicationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**|  |  |
+| **participantId** | **string**|  |  |
+| **communicationId** | **string**|  |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="patchcallscallidparticipantsparticipantidconsult"></a>
 
 ## [**ConsultTransferResponse**](ConsultTransferResponse.html) PatchCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransferUpdate body)
@@ -2063,6 +2249,64 @@ namespace Example
 ### Return type
 
 [**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="patchchatschatid"></a>
+
+## [**Conversation**](Conversation.html) PatchChatsChatId (string chatId, Conversation body)
+
+Update a conversation by disconnecting all of the participants
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchChatsChatIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var chatId = chatId_example;  // string | 
+            var body = new Conversation(); // Conversation | Conversation
+
+            try
+            {
+                // Update a conversation by disconnecting all of the participants
+                Conversation result = apiInstance.PatchChatsChatId(chatId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchChatsChatId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **chatId** | **string**|  |  |
+| **body** | [**Conversation**](Conversation.html)| Conversation |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Conversation**](Conversation.html)
 
 <a name="patchchatschatidparticipantsparticipantid"></a>
 
@@ -2176,6 +2420,67 @@ namespace Example
 | **chatId** | **string**|  |  |
 | **participantId** | **string**|  |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchchatschatidparticipantsparticipantidcommunicationscommunicationid"></a>
+
+## void PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
+
+Update conversation participant's communication by disconnecting it.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var chatId = chatId_example;  // string | 
+            var participantId = participantId_example;  // string | 
+            var communicationId = communicationId_example;  // string | 
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+
+            try
+            {
+                // Update conversation participant's communication by disconnecting it.
+                apiInstance.PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId(chatId, participantId, communicationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **chatId** | **string**|  |  |
+| **participantId** | **string**|  |  |
+| **communicationId** | **string**|  |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2299,6 +2604,64 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="patchemailsemailid"></a>
+
+## [**Conversation**](Conversation.html) PatchEmailsEmailId (string emailId, Conversation body)
+
+Update a conversation by disconnecting all of the participants
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchEmailsEmailIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var emailId = emailId_example;  // string | 
+            var body = new Conversation(); // Conversation | Conversation
+
+            try
+            {
+                // Update a conversation by disconnecting all of the participants
+                Conversation result = apiInstance.PatchEmailsEmailId(emailId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchEmailsEmailId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailId** | **string**|  |  |
+| **body** | [**Conversation**](Conversation.html)| Conversation |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Conversation**](Conversation.html)
 
 <a name="patchemailsemailidparticipantsparticipantid"></a>
 

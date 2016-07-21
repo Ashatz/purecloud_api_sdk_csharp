@@ -45,11 +45,92 @@ namespace ININ.PureCloudApi.Model
         }
 
         /// <summary>
+        /// The conversation's state.  Values can be: 'disconnected'
+        /// </summary>
+        /// <value>The conversation's state.  Values can be: 'disconnected'</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum
+        {
+            
+            /// <summary>
+            /// Enum Alerting for "ALERTING"
+            /// </summary>
+            [EnumMember(Value = "ALERTING")]
+            Alerting,
+            
+            /// <summary>
+            /// Enum Dialing for "DIALING"
+            /// </summary>
+            [EnumMember(Value = "DIALING")]
+            Dialing,
+            
+            /// <summary>
+            /// Enum Contacting for "CONTACTING"
+            /// </summary>
+            [EnumMember(Value = "CONTACTING")]
+            Contacting,
+            
+            /// <summary>
+            /// Enum Offering for "OFFERING"
+            /// </summary>
+            [EnumMember(Value = "OFFERING")]
+            Offering,
+            
+            /// <summary>
+            /// Enum Connected for "CONNECTED"
+            /// </summary>
+            [EnumMember(Value = "CONNECTED")]
+            Connected,
+            
+            /// <summary>
+            /// Enum Disconnected for "DISCONNECTED"
+            /// </summary>
+            [EnumMember(Value = "DISCONNECTED")]
+            Disconnected,
+            
+            /// <summary>
+            /// Enum Terminated for "TERMINATED"
+            /// </summary>
+            [EnumMember(Value = "TERMINATED")]
+            Terminated,
+            
+            /// <summary>
+            /// Enum Converting for "CONVERTING"
+            /// </summary>
+            [EnumMember(Value = "CONVERTING")]
+            Converting,
+            
+            /// <summary>
+            /// Enum Uploading for "UPLOADING"
+            /// </summary>
+            [EnumMember(Value = "UPLOADING")]
+            Uploading,
+            
+            /// <summary>
+            /// Enum Transmitting for "TRANSMITTING"
+            /// </summary>
+            [EnumMember(Value = "TRANSMITTING")]
+            Transmitting,
+            
+            /// <summary>
+            /// Enum None for "NONE"
+            /// </summary>
+            [EnumMember(Value = "NONE")]
+            None
+        }
+
+        /// <summary>
         /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
         /// </summary>
         /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.</value>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
+        /// <summary>
+        /// The conversation's state.  Values can be: 'disconnected'
+        /// </summary>
+        /// <value>The conversation's state.  Values can be: 'disconnected'</value>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Conversation" /> class.
         /// </summary>
@@ -66,7 +147,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConversationIds">A list of conversations to merge into this conversation to create a conference. This field is null except when being used to create a conference..</param>
         /// <param name="MaxParticipants">If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference..</param>
         /// <param name="RecordingState">On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording..</param>
-        public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null)
+        /// <param name="State">The conversation&#39;s state.  Values can be: &#39;disconnected&#39;.</param>
+        public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null)
         {
             // to ensure "StartTime" is required (not null)
             if (StartTime == null)
@@ -92,6 +174,7 @@ namespace ININ.PureCloudApi.Model
             this.ConversationIds = ConversationIds;
             this.MaxParticipants = MaxParticipants;
             this.RecordingState = RecordingState;
+            this.State = State;
         }
         
         /// <summary>
@@ -164,6 +247,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -247,6 +331,11 @@ namespace ININ.PureCloudApi.Model
                     this.RecordingState.Equals(other.RecordingState)
                 ) &&
                 (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -282,6 +371,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.MaxParticipants.GetHashCode();
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

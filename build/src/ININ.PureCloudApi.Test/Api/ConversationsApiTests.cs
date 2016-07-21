@@ -419,6 +419,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PatchCallbacksCallbackId
+        /// </summary>
+        [Test]
+        public void PatchCallbacksCallbackIdTest()
+        {
+            // TODO: add unit test for the method 'PatchCallbacksCallbackId'
+            string callbackId = null; // TODO: replace null with proper value
+            Conversation body = null; // TODO: replace null with proper value
+            var response = instance.PatchCallbacksCallbackId(callbackId, body);
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
+        }
+        
+        /// <summary>
         /// Test PatchCallbacksCallbackIdParticipantsParticipantId
         /// </summary>
         [Test]
@@ -443,6 +456,21 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             ParticipantAttributes body = null; // TODO: replace null with proper value
             instance.PatchCallbacksCallbackIdParticipantsParticipantIdAttributes(callbackId, participantId, body);
+            
+        }
+        
+        /// <summary>
+        /// Test PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId
+        /// </summary>
+        [Test]
+        public void PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdTest()
+        {
+            // TODO: add unit test for the method 'PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId'
+            string callbackId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            string communicationId = null; // TODO: replace null with proper value
+            MediaParticipantRequest body = null; // TODO: replace null with proper value
+            instance.PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId(callbackId, participantId, communicationId, body);
             
         }
         
@@ -488,6 +516,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId
+        /// </summary>
+        [Test]
+        public void PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdTest()
+        {
+            // TODO: add unit test for the method 'PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId'
+            string callId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            string communicationId = null; // TODO: replace null with proper value
+            MediaParticipantRequest body = null; // TODO: replace null with proper value
+            instance.PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId(callId, participantId, communicationId, body);
+            
+        }
+        
+        /// <summary>
         /// Test PatchCallsCallIdParticipantsParticipantIdConsult
         /// </summary>
         [Test]
@@ -499,6 +542,19 @@ namespace ININ.PureCloudApi.Test
             ConsultTransferUpdate body = null; // TODO: replace null with proper value
             var response = instance.PatchCallsCallIdParticipantsParticipantIdConsult(callId, participantId, body);
             Assert.IsInstanceOf<ConsultTransferResponse> (response, "response is ConsultTransferResponse");
+        }
+        
+        /// <summary>
+        /// Test PatchChatsChatId
+        /// </summary>
+        [Test]
+        public void PatchChatsChatIdTest()
+        {
+            // TODO: add unit test for the method 'PatchChatsChatId'
+            string chatId = null; // TODO: replace null with proper value
+            Conversation body = null; // TODO: replace null with proper value
+            var response = instance.PatchChatsChatId(chatId, body);
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
         }
         
         /// <summary>
@@ -530,6 +586,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId
+        /// </summary>
+        [Test]
+        public void PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdTest()
+        {
+            // TODO: add unit test for the method 'PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId'
+            string chatId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            string communicationId = null; // TODO: replace null with proper value
+            MediaParticipantRequest body = null; // TODO: replace null with proper value
+            instance.PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId(chatId, participantId, communicationId, body);
+            
+        }
+        
+        /// <summary>
         /// Test PatchConversationIdParticipantsParticipantId
         /// </summary>
         [Test]
@@ -555,6 +626,19 @@ namespace ININ.PureCloudApi.Test
             ParticipantAttributes body = null; // TODO: replace null with proper value
             instance.PatchConversationIdParticipantsParticipantIdAttributes(conversationId, participantId, body);
             
+        }
+        
+        /// <summary>
+        /// Test PatchEmailsEmailId
+        /// </summary>
+        [Test]
+        public void PatchEmailsEmailIdTest()
+        {
+            // TODO: add unit test for the method 'PatchEmailsEmailId'
+            string emailId = null; // TODO: replace null with proper value
+            Conversation body = null; // TODO: replace null with proper value
+            var response = instance.PatchEmailsEmailId(emailId, body);
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
         }
         
         /// <summary>

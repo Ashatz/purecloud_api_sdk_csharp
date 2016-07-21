@@ -99,6 +99,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'ValueNode'
         }
         /// <summary>
+        /// Test the property 'FloatingPointNumber'
+        /// </summary>
+        [Test]
+        public void FloatingPointNumberTest()
+        {
+            // TODO: unit test for the property 'FloatingPointNumber'
+        }
+        /// <summary>
         /// Test the property 'ContainerNode'
         /// </summary>
         [Test]
@@ -129,14 +137,6 @@ namespace ININ.PureCloudApi.Test
         public void IntegralNumberTest()
         {
             // TODO: unit test for the property 'IntegralNumber'
-        }
-        /// <summary>
-        /// Test the property 'FloatingPointNumber'
-        /// </summary>
-        [Test]
-        public void FloatingPointNumberTest()
-        {
-            // TODO: unit test for the property 'FloatingPointNumber'
         }
         /// <summary>
         /// Test the property '_Short'

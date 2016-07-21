@@ -53,6 +53,11 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserMe" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected UserMe() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserMe" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Chat">Chat.</param>
         /// <param name="Department">Department.</param>
@@ -62,6 +67,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Title">Title.</param>
         /// <param name="Username">Username.</param>
         /// <param name="Images">Images.</param>
+        /// <param name="Version">Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH. (required).</param>
         /// <param name="RoutingStatus">ACD routing status.</param>
         /// <param name="Presence">Active presence.</param>
         /// <param name="ConversationSummary">Summary of conversion statistics for conversation types..</param>
@@ -74,8 +80,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Organization">Organization details for this user..</param>
         /// <param name="PresenceDefinitions">The first 100 presence definitions for user&#39;s organization..</param>
         /// <param name="Locations">The first 100 locations for user&#39;s organization.</param>
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<Location> Locations = null)
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<Location> Locations = null)
         {
+            // to ensure "Version" is required (not null)
+            if (Version == null)
+            {
+                throw new InvalidDataException("Version is a required property for UserMe and cannot be null");
+            }
+            else
+            {
+                this.Version = Version;
+            }
             this.Name = Name;
             this.Chat = Chat;
             this.Department = Department;
@@ -153,11 +168,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="images", EmitDefaultValue=false)]
         public List<UserImage> Images { get; set; }
         /// <summary>
-        /// Required when updating. Version must be the current version. Only the system can assign version.
+        /// Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH.
         /// </summary>
-        /// <value>Required when updating. Version must be the current version. Only the system can assign version.</value>
+        /// <value>Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; private set; }
+        public int? Version { get; set; }
         /// <summary>
         /// ACD routing status
         /// </summary>
