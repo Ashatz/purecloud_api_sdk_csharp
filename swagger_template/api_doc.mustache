@@ -15,7 +15,7 @@ All URIs are relative to *{{basePath}}*
 {{#operation}}
 <a name="{{operationIdLowerCase}}"></a>
 
-## {{#returnType}}{{#returnTypeIsPrimitive}}{{returnType}}**{{/returnTypeIsPrimitive}}{{^returnTypeIsPrimitive}}[**{{returnType}}**]({{returnBaseType}}.html){{/returnTypeIsPrimitive}}{{/returnType}}{{^returnType}}void{{/returnType}} {{operationId}} ({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = null{{/optionalMethodArgument}}{{/required}}{{#hasMore}}, {{/hasMore}}{{/allParams}})
+## {{#returnType}}{{#returnTypeIsPrimitive}}**{{returnType}}**{{/returnTypeIsPrimitive}}{{^returnTypeIsPrimitive}}[**{{returnType}}**]({{returnBaseType}}.html){{/returnTypeIsPrimitive}}{{/returnType}}{{^returnType}}void{{/returnType}} {{operationId}} ({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = null{{/optionalMethodArgument}}{{/required}}{{#hasMore}}, {{/hasMore}}{{/allParams}})
 
 {{{summary}}}{{#notes}}
 
