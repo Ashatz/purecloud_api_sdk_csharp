@@ -243,6 +243,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'ContactSort'
         }
         /// <summary>
+        /// Test the property 'NoAnswerTimeout'
+        /// </summary>
+        [Test]
+        public void NoAnswerTimeoutTest()
+        {
+            // TODO: unit test for the property 'NoAnswerTimeout'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

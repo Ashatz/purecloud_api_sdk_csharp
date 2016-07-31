@@ -283,6 +283,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'DocumentId'
         }
         /// <summary>
+        /// Test the property 'FaxStatus'
+        /// </summary>
+        [Test]
+        public void FaxStatusTest()
+        {
+            // TODO: unit test for the property 'FaxStatus'
+        }
+        /// <summary>
         /// Test the property 'MonitoredParticipantId'
         /// </summary>
         [Test]

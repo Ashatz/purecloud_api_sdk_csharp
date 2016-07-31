@@ -75,7 +75,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Geolocation">Current geolocation position.</param>
         /// <param name="Station">Effective, default, and last station information.</param>
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
-        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null)
+        /// <param name="ProfileSkills">Skills possessed by the user.</param>
+        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -102,6 +103,7 @@ namespace ININ.PureCloudApi.Model
             this.Geolocation = Geolocation;
             this.Station = Station;
             this.Authorization = Authorization;
+            this.ProfileSkills = ProfileSkills;
         }
         
         /// <summary>
@@ -206,6 +208,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="authorization", EmitDefaultValue=false)]
         public UserAuthorization Authorization { get; set; }
         /// <summary>
+        /// Skills possessed by the user
+        /// </summary>
+        /// <value>Skills possessed by the user</value>
+        [DataMember(Name="profileSkills", EmitDefaultValue=false)]
+        public List<string> ProfileSkills { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -238,6 +246,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
             sb.Append("  Station: ").Append(Station).Append("\n");
             sb.Append("  Authorization: ").Append(Authorization).Append("\n");
+            sb.Append("  ProfileSkills: ").Append(ProfileSkills).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -371,6 +380,11 @@ namespace ININ.PureCloudApi.Model
                     this.Authorization.Equals(other.Authorization)
                 ) &&
                 (
+                    this.ProfileSkills == other.ProfileSkills ||
+                    this.ProfileSkills != null &&
+                    this.ProfileSkills.SequenceEqual(other.ProfileSkills)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -426,6 +440,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Station.GetHashCode();
                 if (this.Authorization != null)
                     hash = hash * 59 + this.Authorization.GetHashCode();
+                if (this.ProfileSkills != null)
+                    hash = hash * 59 + this.ProfileSkills.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

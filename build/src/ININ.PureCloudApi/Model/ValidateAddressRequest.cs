@@ -20,15 +20,29 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAddressRequest" /> class.
         /// </summary>
-        /// <param name="Address">Address.</param>
+        [JsonConstructorAttribute]
+        protected ValidateAddressRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ValidateAddressRequest" /> class.
+        /// </summary>
+        /// <param name="Address">The address that is to be validated. (required).</param>
         public ValidateAddressRequest(StreetAddress Address = null)
         {
-            this.Address = Address;
+            // to ensure "Address" is required (not null)
+            if (Address == null)
+            {
+                throw new InvalidDataException("Address is a required property for ValidateAddressRequest and cannot be null");
+            }
+            else
+            {
+                this.Address = Address;
+            }
         }
         
         /// <summary>
-        /// Gets or Sets Address
+        /// The address that is to be validated.
         /// </summary>
+        /// <value>The address that is to be validated.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public StreetAddress Address { get; set; }
         /// <summary>

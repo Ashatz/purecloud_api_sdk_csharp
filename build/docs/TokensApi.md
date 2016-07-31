@@ -12,7 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteme"></a>
 
-## string** DeleteMe ()
+## **string** DeleteMe ()
 
 Delete  auth token used to make the request.
 

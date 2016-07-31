@@ -107,6 +107,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Version'
         }
         /// <summary>
+        /// Test the property 'Path'
+        /// </summary>
+        [Test]
+        public void PathTest()
+        {
+            // TODO: unit test for the property 'Path'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

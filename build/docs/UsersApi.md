@@ -45,7 +45,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteuserid"></a>
 
-## string** DeleteUserId (string userId)
+## **string** DeleteUserId (string userId)
 
 Delete user
 
@@ -156,7 +156,7 @@ void (empty response body)
 
 <a name="deleteuseridroutingskillsskillid"></a>
 
-## string** DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
+## **string** DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
 
 Remove routing skill from user
 

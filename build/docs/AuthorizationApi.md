@@ -831,7 +831,7 @@ namespace Example
 
 <a name="putrolesroleidusersadd"></a>
 
-## List&lt;string&gt;** PutRolesRoleIdUsersAdd (string roleId, List<string> body)
+## **List&lt;string&gt;** PutRolesRoleIdUsersAdd (string roleId, List<string> body)
 
 Sets the users for the role
 
@@ -889,7 +889,7 @@ namespace Example
 
 <a name="putrolesroleidusersremove"></a>
 
-## List&lt;string&gt;** PutRolesRoleIdUsersRemove (string roleId, List<string> body)
+## **List&lt;string&gt;** PutRolesRoleIdUsersRemove (string roleId, List<string> body)
 
 Removes the users from the role
 

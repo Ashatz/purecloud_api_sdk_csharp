@@ -419,7 +419,7 @@ namespace ININ.PureCloudApi.Test
         public void PostQueuesTest()
         {
             // TODO: add unit test for the method 'PostQueues'
-            Queue body = null; // TODO: replace null with proper value
+            CreateQueueRequest body = null; // TODO: replace null with proper value
             var response = instance.PostQueues(body);
             Assert.IsInstanceOf<Queue> (response, "response is Queue");
         }

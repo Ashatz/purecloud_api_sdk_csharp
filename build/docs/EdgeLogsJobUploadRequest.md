@@ -7,7 +7,7 @@ title: EdgeLogsJobUploadRequest
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **FileIds** | **List&lt;string&gt;** |  | [optional] |
+| **FileIds** | **List&lt;string&gt;** | The list of file id&#39;s being requested for download. | |
 {: class="table table-striped"}
 
 

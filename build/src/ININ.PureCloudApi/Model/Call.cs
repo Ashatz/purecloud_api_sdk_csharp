@@ -193,6 +193,12 @@ namespace ININ.PureCloudApi.Model
             TransferForward,
             
             /// <summary>
+            /// Enum TransportFailure for "TRANSPORT_FAILURE"
+            /// </summary>
+            [EnumMember(Value = "TRANSPORT_FAILURE")]
+            TransportFailure,
+            
+            /// <summary>
             /// Enum Error for "ERROR"
             /// </summary>
             [EnumMember(Value = "ERROR")]
@@ -208,7 +214,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Other for "OTHER"
             /// </summary>
             [EnumMember(Value = "OTHER")]
-            Other
+            Other,
+            
+            /// <summary>
+            /// Enum Spam for "SPAM"
+            /// </summary>
+            [EnumMember(Value = "SPAM")]
+            Spam
         }
 
         /// <summary>
@@ -251,7 +263,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectReasons">DisconnectReasons.</param>
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null)
+        /// <param name="FaxStatus">FaxStatus.</param>
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null)
         {
             this.State = State;
             this.Id = Id;
@@ -302,6 +315,7 @@ namespace ININ.PureCloudApi.Model
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.DisconnectReasons = DisconnectReasons;
+            this.FaxStatus = FaxStatus;
         }
         
         /// <summary>
@@ -373,6 +387,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="disconnectReasons", EmitDefaultValue=false)]
         public List<DisconnectReason> DisconnectReasons { get; set; }
         /// <summary>
+        /// Gets or Sets FaxStatus
+        /// </summary>
+        [DataMember(Name="faxStatus", EmitDefaultValue=false)]
+        public FaxStatus FaxStatus { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -397,6 +416,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
+            sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -517,6 +537,11 @@ namespace ININ.PureCloudApi.Model
                     this.DisconnectReasons == other.DisconnectReasons ||
                     this.DisconnectReasons != null &&
                     this.DisconnectReasons.SequenceEqual(other.DisconnectReasons)
+                ) &&
+                (
+                    this.FaxStatus == other.FaxStatus ||
+                    this.FaxStatus != null &&
+                    this.FaxStatus.Equals(other.FaxStatus)
                 );
         }
 
@@ -565,6 +590,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
                 if (this.DisconnectReasons != null)
                     hash = hash * 59 + this.DisconnectReasons.GetHashCode();
+                if (this.FaxStatus != null)
+                    hash = hash * 59 + this.FaxStatus.GetHashCode();
                 return hash;
             }
         }

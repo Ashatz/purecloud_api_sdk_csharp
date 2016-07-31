@@ -158,6 +158,18 @@ namespace ININ.PureCloudApi.Model
             TransferConsult,
             
             /// <summary>
+            /// Enum TransferForward for "TRANSFER_FORWARD"
+            /// </summary>
+            [EnumMember(Value = "TRANSFER_FORWARD")]
+            TransferForward,
+            
+            /// <summary>
+            /// Enum TransportFailure for "TRANSPORT_FAILURE"
+            /// </summary>
+            [EnumMember(Value = "TRANSPORT_FAILURE")]
+            TransportFailure,
+            
+            /// <summary>
             /// Enum Error for "ERROR"
             /// </summary>
             [EnumMember(Value = "ERROR")]
@@ -173,7 +185,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Other for "OTHER"
             /// </summary>
             [EnumMember(Value = "OTHER")]
-            Other
+            Other,
+            
+            /// <summary>
+            /// Enum Spam for "SPAM"
+            /// </summary>
+            [EnumMember(Value = "SPAM")]
+            Spam
         }
 
         /// <summary>

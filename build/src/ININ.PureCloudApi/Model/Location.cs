@@ -53,7 +53,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EmergencyNumber">EmergencyNumber.</param>
         /// <param name="State">Current activity status of the location..</param>
         /// <param name="Version">Version.</param>
-        public Location(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null)
+        /// <param name="Path">Path.</param>
+        public Location(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null, List<string> Path = null)
         {
             this.Name = Name;
             this.Address = Address;
@@ -69,6 +70,7 @@ namespace ININ.PureCloudApi.Model
             this.EmergencyNumber = EmergencyNumber;
             this.State = State;
             this.Version = Version;
+            this.Path = Path;
         }
         
         /// <summary>
@@ -103,6 +105,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         /// <summary>
+        /// Gets or Sets Path
+        /// </summary>
+        [DataMember(Name="path", EmitDefaultValue=false)]
+        public List<string> Path { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -123,6 +130,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  EmergencyNumber: ").Append(EmergencyNumber).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -196,6 +204,11 @@ namespace ININ.PureCloudApi.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
+                    this.Path == other.Path ||
+                    this.Path != null &&
+                    this.Path.SequenceEqual(other.Path)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -227,6 +240,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.State.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                if (this.Path != null)
+                    hash = hash * 59 + this.Path.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

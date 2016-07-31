@@ -9,6 +9,8 @@ title: DocumentThumbnail
 |------------ | ------------- | ------------- | -------------|
 | **Resolution** | **string** |  | [optional] |
 | **ImageUri** | **string** |  | [optional] |
+| **Height** | **int?** |  | [optional] |
+| **Width** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
 

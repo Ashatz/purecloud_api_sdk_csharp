@@ -66,6 +66,22 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'ImageUri'
         }
+        /// <summary>
+        /// Test the property 'Height'
+        /// </summary>
+        [Test]
+        public void HeightTest()
+        {
+            // TODO: unit test for the property 'Height'
+        }
+        /// <summary>
+        /// Test the property 'Width'
+        /// </summary>
+        [Test]
+        public void WidthTest()
+        {
+            // TODO: unit test for the property 'Width'
+        }
 
     }
 

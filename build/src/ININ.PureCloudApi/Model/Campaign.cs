@@ -91,7 +91,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SkipPreviewDisabled">for preview campaigns, indicator of whether the agent can skip a preview without placing a call (default to false).</param>
         /// <param name="PreviewTimeOutSeconds">for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls.</param>
         /// <param name="ContactSort">information determining the order in which the contacts will be dialed.</param>
-        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null)
+        /// <param name="NoAnswerTimeout">for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds.</param>
+        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null, int? NoAnswerTimeout = null)
         {
             // to ensure "ContactList" is required (not null)
             if (ContactList == null)
@@ -186,6 +187,7 @@ namespace ININ.PureCloudApi.Model
             }
             this.PreviewTimeOutSeconds = PreviewTimeOutSeconds;
             this.ContactSort = ContactSort;
+            this.NoAnswerTimeout = NoAnswerTimeout;
         }
         
         /// <summary>
@@ -326,6 +328,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="contactSort", EmitDefaultValue=false)]
         public ContactSort ContactSort { get; set; }
         /// <summary>
+        /// for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds
+        /// </summary>
+        /// <value>for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds</value>
+        [DataMember(Name="noAnswerTimeout", EmitDefaultValue=false)]
+        public int? NoAnswerTimeout { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -363,6 +371,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SkipPreviewDisabled: ").Append(SkipPreviewDisabled).Append("\n");
             sb.Append("  PreviewTimeOutSeconds: ").Append(PreviewTimeOutSeconds).Append("\n");
             sb.Append("  ContactSort: ").Append(ContactSort).Append("\n");
+            sb.Append("  NoAnswerTimeout: ").Append(NoAnswerTimeout).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -521,6 +530,11 @@ namespace ININ.PureCloudApi.Model
                     this.ContactSort.Equals(other.ContactSort)
                 ) &&
                 (
+                    this.NoAnswerTimeout == other.NoAnswerTimeout ||
+                    this.NoAnswerTimeout != null &&
+                    this.NoAnswerTimeout.Equals(other.NoAnswerTimeout)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -586,6 +600,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PreviewTimeOutSeconds.GetHashCode();
                 if (this.ContactSort != null)
                     hash = hash * 59 + this.ContactSort.GetHashCode();
+                if (this.NoAnswerTimeout != null)
+                    hash = hash * 59 + this.NoAnswerTimeout.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

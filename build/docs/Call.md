@@ -24,6 +24,7 @@ title: Call
 | **ConnectedTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DisconnectedTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DisconnectReasons** | [**List&lt;DisconnectReason&gt;**](DisconnectReason.html) |  | [optional] |
+| **FaxStatus** | [**FaxStatus**](FaxStatus.html) |  | [optional] |
 {: class="table table-striped"}
 
 

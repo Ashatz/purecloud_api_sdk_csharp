@@ -18,7 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletechannelschannelidsubscriptions"></a>
 
-## string** DeleteChannelsChannelIdSubscriptions (string channelId)
+## **string** DeleteChannelsChannelIdSubscriptions (string channelId)
 
 Remove all subscriptions
 

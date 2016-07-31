@@ -91,7 +91,7 @@ void (empty response body)
 
 <a name="deletemediaretentionpolicies"></a>
 
-## string** DeleteMediaretentionpolicies (string ids)
+## **string** DeleteMediaretentionpolicies (string ids)
 
 Delete media retention policies
 
@@ -147,7 +147,7 @@ namespace Example
 
 <a name="deletemediaretentionpoliciespolicyid"></a>
 
-## string** DeleteMediaretentionpoliciesPolicyId (string policyId)
+## **string** DeleteMediaretentionpoliciesPolicyId (string policyId)
 
 Delete a media retention policy
 

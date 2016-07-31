@@ -14,7 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletestationidassociateduser"></a>
 
-## string** DeleteStationIdAssociateduser (string stationId)
+## **string** DeleteStationIdAssociateduser (string stationId)
 
 Unassigns the user assigned to this station
 

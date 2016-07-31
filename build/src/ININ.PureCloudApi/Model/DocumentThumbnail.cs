@@ -22,10 +22,14 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Resolution">Resolution.</param>
         /// <param name="ImageUri">ImageUri.</param>
-        public DocumentThumbnail(string Resolution = null, string ImageUri = null)
+        /// <param name="Height">Height.</param>
+        /// <param name="Width">Width.</param>
+        public DocumentThumbnail(string Resolution = null, string ImageUri = null, int? Height = null, int? Width = null)
         {
             this.Resolution = Resolution;
             this.ImageUri = ImageUri;
+            this.Height = Height;
+            this.Width = Width;
         }
         
         /// <summary>
@@ -39,6 +43,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="imageUri", EmitDefaultValue=false)]
         public string ImageUri { get; set; }
         /// <summary>
+        /// Gets or Sets Height
+        /// </summary>
+        [DataMember(Name="height", EmitDefaultValue=false)]
+        public int? Height { get; set; }
+        /// <summary>
+        /// Gets or Sets Width
+        /// </summary>
+        [DataMember(Name="width", EmitDefaultValue=false)]
+        public int? Width { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -48,6 +62,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class DocumentThumbnail {\n");
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
+            sb.Append("  Height: ").Append(Height).Append("\n");
+            sb.Append("  Width: ").Append(Width).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,6 +109,16 @@ namespace ININ.PureCloudApi.Model
                     this.ImageUri == other.ImageUri ||
                     this.ImageUri != null &&
                     this.ImageUri.Equals(other.ImageUri)
+                ) &&
+                (
+                    this.Height == other.Height ||
+                    this.Height != null &&
+                    this.Height.Equals(other.Height)
+                ) &&
+                (
+                    this.Width == other.Width ||
+                    this.Width != null &&
+                    this.Width.Equals(other.Width)
                 );
         }
 
@@ -111,6 +137,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Resolution.GetHashCode();
                 if (this.ImageUri != null)
                     hash = hash * 59 + this.ImageUri.GetHashCode();
+                if (this.Height != null)
+                    hash = hash * 59 + this.Height.GetHashCode();
+                if (this.Width != null)
+                    hash = hash * 59 + this.Width.GetHashCode();
                 return hash;
             }
         }

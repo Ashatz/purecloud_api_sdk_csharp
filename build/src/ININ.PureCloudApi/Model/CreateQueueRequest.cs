@@ -12,10 +12,10 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// LineBase
+    /// CreateQueueRequest
     /// </summary>
     [DataContract]
-    public partial class LineBase :  IEquatable<LineBase>
+    public partial class CreateQueueRequest :  IEquatable<CreateQueueRequest>
     {
         /// <summary>
         /// Gets or Sets State
@@ -44,19 +44,52 @@ namespace ININ.PureCloudApi.Model
         }
 
         /// <summary>
+        /// The skill evaluation method to use when routing conversations.
+        /// </summary>
+        /// <value>The skill evaluation method to use when routing conversations.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SkillEvaluationMethodEnum
+        {
+            
+            /// <summary>
+            /// Enum None for "NONE"
+            /// </summary>
+            [EnumMember(Value = "NONE")]
+            None,
+            
+            /// <summary>
+            /// Enum Best for "BEST"
+            /// </summary>
+            [EnumMember(Value = "BEST")]
+            Best,
+            
+            /// <summary>
+            /// Enum All for "ALL"
+            /// </summary>
+            [EnumMember(Value = "ALL")]
+            All
+        }
+
+        /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="LineBase" /> class.
+        /// The skill evaluation method to use when routing conversations.
+        /// </summary>
+        /// <value>The skill evaluation method to use when routing conversations.</value>
+        [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
+        public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateQueueRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected LineBase() { }
+        protected CreateQueueRequest() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="LineBase" /> class.
+        /// Initializes a new instance of the <see cref="CreateQueueRequest" /> class.
         /// </summary>
-        /// <param name="Name">The name of the entity. (required).</param>
+        /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -66,19 +99,45 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="LineMetaBase">LineMetaBase.</param>
-        /// <param name="Properties">Properties.</param>
-        public LineBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference LineMetaBase = null, Dictionary<string, Object> Properties = null)
+        /// <param name="MediaSettings">The media settings for the queue. (required).</param>
+        /// <param name="Bullseye">The bulls-eye settings for the queue..</param>
+        /// <param name="AcwSettings">The ACW settings for the queue. (required).</param>
+        /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations. (required).</param>
+        /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
+        /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
+        /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
+        /// <param name="SourceQueueId">The id of an existing queue to copy the settings from when creating a new queue..</param>
+        /// <param name="MemberCount">MemberCount.</param>
+        public CreateQueueRequest(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, string SourceQueueId = null, int? MemberCount = null)
         {
-            // to ensure "Name" is required (not null)
-            if (Name == null)
+            // to ensure "MediaSettings" is required (not null)
+            if (MediaSettings == null)
             {
-                throw new InvalidDataException("Name is a required property for LineBase and cannot be null");
+                throw new InvalidDataException("MediaSettings is a required property for CreateQueueRequest and cannot be null");
             }
             else
             {
-                this.Name = Name;
+                this.MediaSettings = MediaSettings;
             }
+            // to ensure "AcwSettings" is required (not null)
+            if (AcwSettings == null)
+            {
+                throw new InvalidDataException("AcwSettings is a required property for CreateQueueRequest and cannot be null");
+            }
+            else
+            {
+                this.AcwSettings = AcwSettings;
+            }
+            // to ensure "SkillEvaluationMethod" is required (not null)
+            if (SkillEvaluationMethod == null)
+            {
+                throw new InvalidDataException("SkillEvaluationMethod is a required property for CreateQueueRequest and cannot be null");
+            }
+            else
+            {
+                this.SkillEvaluationMethod = SkillEvaluationMethod;
+            }
+            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -88,8 +147,12 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
-            this.LineMetaBase = LineMetaBase;
-            this.Properties = Properties;
+            this.Bullseye = Bullseye;
+            this.QueueFlow = QueueFlow;
+            this.CallingPartyName = CallingPartyName;
+            this.CallingPartyNumber = CallingPartyNumber;
+            this.SourceQueueId = SourceQueueId;
+            this.MemberCount = MemberCount;
         }
         
         /// <summary>
@@ -99,9 +162,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// The name of the entity.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The name of the entity.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
@@ -147,15 +209,52 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
         /// <summary>
-        /// Gets or Sets LineMetaBase
+        /// The media settings for the queue.
         /// </summary>
-        [DataMember(Name="lineMetaBase", EmitDefaultValue=false)]
-        public UriReference LineMetaBase { get; set; }
+        /// <value>The media settings for the queue.</value>
+        [DataMember(Name="mediaSettings", EmitDefaultValue=false)]
+        public Dictionary<string, MediaSetting> MediaSettings { get; set; }
         /// <summary>
-        /// Gets or Sets Properties
+        /// The bulls-eye settings for the queue.
         /// </summary>
-        [DataMember(Name="properties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> Properties { get; set; }
+        /// <value>The bulls-eye settings for the queue.</value>
+        [DataMember(Name="bullseye", EmitDefaultValue=false)]
+        public Bullseye Bullseye { get; set; }
+        /// <summary>
+        /// The ACW settings for the queue.
+        /// </summary>
+        /// <value>The ACW settings for the queue.</value>
+        [DataMember(Name="acwSettings", EmitDefaultValue=false)]
+        public AcwSettings AcwSettings { get; set; }
+        /// <summary>
+        /// The in-queue flow to use for conversations waiting in queue.
+        /// </summary>
+        /// <value>The in-queue flow to use for conversations waiting in queue.</value>
+        [DataMember(Name="queueFlow", EmitDefaultValue=false)]
+        public UriReference QueueFlow { get; set; }
+        /// <summary>
+        /// The name to use for caller identification for outbound calls from this queue.
+        /// </summary>
+        /// <value>The name to use for caller identification for outbound calls from this queue.</value>
+        [DataMember(Name="callingPartyName", EmitDefaultValue=false)]
+        public string CallingPartyName { get; set; }
+        /// <summary>
+        /// The phone number to use for caller identification for outbound calls from this queue.
+        /// </summary>
+        /// <value>The phone number to use for caller identification for outbound calls from this queue.</value>
+        [DataMember(Name="callingPartyNumber", EmitDefaultValue=false)]
+        public string CallingPartyNumber { get; set; }
+        /// <summary>
+        /// The id of an existing queue to copy the settings from when creating a new queue.
+        /// </summary>
+        /// <value>The id of an existing queue to copy the settings from when creating a new queue.</value>
+        [DataMember(Name="sourceQueueId", EmitDefaultValue=false)]
+        public string SourceQueueId { get; set; }
+        /// <summary>
+        /// Gets or Sets MemberCount
+        /// </summary>
+        [DataMember(Name="memberCount", EmitDefaultValue=false)]
+        public int? MemberCount { get; set; }
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -169,7 +268,7 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class LineBase {\n");
+            sb.Append("class CreateQueueRequest {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -181,8 +280,15 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
-            sb.Append("  LineMetaBase: ").Append(LineMetaBase).Append("\n");
-            sb.Append("  Properties: ").Append(Properties).Append("\n");
+            sb.Append("  MediaSettings: ").Append(MediaSettings).Append("\n");
+            sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
+            sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
+            sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
+            sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
+            sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
+            sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
+            sb.Append("  SourceQueueId: ").Append(SourceQueueId).Append("\n");
+            sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -205,15 +311,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LineBase);
+            return this.Equals(obj as CreateQueueRequest);
         }
 
         /// <summary>
-        /// Returns true if LineBase instances are equal
+        /// Returns true if CreateQueueRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of LineBase to be compared</param>
+        /// <param name="other">Instance of CreateQueueRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LineBase other)
+        public bool Equals(CreateQueueRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -276,14 +382,49 @@ namespace ININ.PureCloudApi.Model
                     this.CreatedByApp.Equals(other.CreatedByApp)
                 ) &&
                 (
-                    this.LineMetaBase == other.LineMetaBase ||
-                    this.LineMetaBase != null &&
-                    this.LineMetaBase.Equals(other.LineMetaBase)
+                    this.MediaSettings == other.MediaSettings ||
+                    this.MediaSettings != null &&
+                    this.MediaSettings.SequenceEqual(other.MediaSettings)
                 ) &&
                 (
-                    this.Properties == other.Properties ||
-                    this.Properties != null &&
-                    this.Properties.SequenceEqual(other.Properties)
+                    this.Bullseye == other.Bullseye ||
+                    this.Bullseye != null &&
+                    this.Bullseye.Equals(other.Bullseye)
+                ) &&
+                (
+                    this.AcwSettings == other.AcwSettings ||
+                    this.AcwSettings != null &&
+                    this.AcwSettings.Equals(other.AcwSettings)
+                ) &&
+                (
+                    this.SkillEvaluationMethod == other.SkillEvaluationMethod ||
+                    this.SkillEvaluationMethod != null &&
+                    this.SkillEvaluationMethod.Equals(other.SkillEvaluationMethod)
+                ) &&
+                (
+                    this.QueueFlow == other.QueueFlow ||
+                    this.QueueFlow != null &&
+                    this.QueueFlow.Equals(other.QueueFlow)
+                ) &&
+                (
+                    this.CallingPartyName == other.CallingPartyName ||
+                    this.CallingPartyName != null &&
+                    this.CallingPartyName.Equals(other.CallingPartyName)
+                ) &&
+                (
+                    this.CallingPartyNumber == other.CallingPartyNumber ||
+                    this.CallingPartyNumber != null &&
+                    this.CallingPartyNumber.Equals(other.CallingPartyNumber)
+                ) &&
+                (
+                    this.SourceQueueId == other.SourceQueueId ||
+                    this.SourceQueueId != null &&
+                    this.SourceQueueId.Equals(other.SourceQueueId)
+                ) &&
+                (
+                    this.MemberCount == other.MemberCount ||
+                    this.MemberCount != null &&
+                    this.MemberCount.Equals(other.MemberCount)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -325,10 +466,24 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
-                if (this.LineMetaBase != null)
-                    hash = hash * 59 + this.LineMetaBase.GetHashCode();
-                if (this.Properties != null)
-                    hash = hash * 59 + this.Properties.GetHashCode();
+                if (this.MediaSettings != null)
+                    hash = hash * 59 + this.MediaSettings.GetHashCode();
+                if (this.Bullseye != null)
+                    hash = hash * 59 + this.Bullseye.GetHashCode();
+                if (this.AcwSettings != null)
+                    hash = hash * 59 + this.AcwSettings.GetHashCode();
+                if (this.SkillEvaluationMethod != null)
+                    hash = hash * 59 + this.SkillEvaluationMethod.GetHashCode();
+                if (this.QueueFlow != null)
+                    hash = hash * 59 + this.QueueFlow.GetHashCode();
+                if (this.CallingPartyName != null)
+                    hash = hash * 59 + this.CallingPartyName.GetHashCode();
+                if (this.CallingPartyNumber != null)
+                    hash = hash * 59 + this.CallingPartyNumber.GetHashCode();
+                if (this.SourceQueueId != null)
+                    hash = hash * 59 + this.SourceQueueId.GetHashCode();
+                if (this.MemberCount != null)
+                    hash = hash * 59 + this.MemberCount.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

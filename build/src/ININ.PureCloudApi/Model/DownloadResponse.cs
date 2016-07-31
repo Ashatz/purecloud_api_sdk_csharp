@@ -22,10 +22,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="ContentLocationUri">ContentLocationUri.</param>
         /// <param name="ImageUri">ImageUri.</param>
-        public DownloadResponse(string ContentLocationUri = null, string ImageUri = null)
+        /// <param name="Thumbnails">Thumbnails.</param>
+        public DownloadResponse(string ContentLocationUri = null, string ImageUri = null, List<DocumentThumbnail> Thumbnails = null)
         {
             this.ContentLocationUri = ContentLocationUri;
             this.ImageUri = ImageUri;
+            this.Thumbnails = Thumbnails;
         }
         
         /// <summary>
@@ -39,6 +41,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="imageUri", EmitDefaultValue=false)]
         public string ImageUri { get; set; }
         /// <summary>
+        /// Gets or Sets Thumbnails
+        /// </summary>
+        [DataMember(Name="thumbnails", EmitDefaultValue=false)]
+        public List<DocumentThumbnail> Thumbnails { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -48,6 +55,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class DownloadResponse {\n");
             sb.Append("  ContentLocationUri: ").Append(ContentLocationUri).Append("\n");
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
+            sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,6 +101,11 @@ namespace ININ.PureCloudApi.Model
                     this.ImageUri == other.ImageUri ||
                     this.ImageUri != null &&
                     this.ImageUri.Equals(other.ImageUri)
+                ) &&
+                (
+                    this.Thumbnails == other.Thumbnails ||
+                    this.Thumbnails != null &&
+                    this.Thumbnails.SequenceEqual(other.Thumbnails)
                 );
         }
 
@@ -111,6 +124,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ContentLocationUri.GetHashCode();
                 if (this.ImageUri != null)
                     hash = hash * 59 + this.ImageUri.GetHashCode();
+                if (this.Thumbnails != null)
+                    hash = hash * 59 + this.Thumbnails.GetHashCode();
                 return hash;
             }
         }

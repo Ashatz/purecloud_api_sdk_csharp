@@ -158,6 +158,18 @@ namespace ININ.PureCloudApi.Model
             TransferConsult,
             
             /// <summary>
+            /// Enum TransferForward for "TRANSFER_FORWARD"
+            /// </summary>
+            [EnumMember(Value = "TRANSFER_FORWARD")]
+            TransferForward,
+            
+            /// <summary>
+            /// Enum TransportFailure for "TRANSPORT_FAILURE"
+            /// </summary>
+            [EnumMember(Value = "TRANSPORT_FAILURE")]
+            TransportFailure,
+            
+            /// <summary>
             /// Enum Error for "ERROR"
             /// </summary>
             [EnumMember(Value = "ERROR")]
@@ -173,7 +185,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Other for "OTHER"
             /// </summary>
             [EnumMember(Value = "OTHER")]
-            Other
+            Other,
+            
+            /// <summary>
+            /// Enum Spam for "SPAM"
+            /// </summary>
+            [EnumMember(Value = "SPAM")]
+            Spam
         }
 
         /// <summary>
@@ -259,9 +277,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Ani">The call ANI..</param>
         /// <param name="Dnis">The call DNIS..</param>
         /// <param name="DocumentId">The ID of the Content Management document if the call is a fax..</param>
+        /// <param name="FaxStatus">Extra fax information if the call is a fax..</param>
         /// <param name="MonitoredParticipantId">The ID of the participant being monitored when performing a call monitor..</param>
         /// <param name="ConsultParticipantId">The ID of the consult transfer target participant when performing a consult transfer..</param>
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, UriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null)
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, UriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -340,6 +359,7 @@ namespace ININ.PureCloudApi.Model
             this.Ani = Ani;
             this.Dnis = Dnis;
             this.DocumentId = DocumentId;
+            this.FaxStatus = FaxStatus;
             this.MonitoredParticipantId = MonitoredParticipantId;
             this.ConsultParticipantId = ConsultParticipantId;
         }
@@ -495,6 +515,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="documentId", EmitDefaultValue=false)]
         public string DocumentId { get; set; }
         /// <summary>
+        /// Extra fax information if the call is a fax.
+        /// </summary>
+        /// <value>Extra fax information if the call is a fax.</value>
+        [DataMember(Name="faxStatus", EmitDefaultValue=false)]
+        public FaxStatus FaxStatus { get; set; }
+        /// <summary>
         /// The ID of the participant being monitored when performing a call monitor.
         /// </summary>
         /// <value>The ID of the participant being monitored when performing a call monitor.</value>
@@ -543,6 +569,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Ani: ").Append(Ani).Append("\n");
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
+            sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
             sb.Append("}\n");
@@ -727,6 +754,11 @@ namespace ININ.PureCloudApi.Model
                     this.DocumentId.Equals(other.DocumentId)
                 ) &&
                 (
+                    this.FaxStatus == other.FaxStatus ||
+                    this.FaxStatus != null &&
+                    this.FaxStatus.Equals(other.FaxStatus)
+                ) &&
+                (
                     this.MonitoredParticipantId == other.MonitoredParticipantId ||
                     this.MonitoredParticipantId != null &&
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
@@ -807,6 +839,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Dnis.GetHashCode();
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
+                if (this.FaxStatus != null)
+                    hash = hash * 59 + this.FaxStatus.GetHashCode();
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
                 if (this.ConsultParticipantId != null)

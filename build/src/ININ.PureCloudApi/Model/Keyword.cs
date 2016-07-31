@@ -27,7 +27,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AgentScoreModifier">AgentScoreModifier.</param>
         /// <param name="CustomerScoreModifier">CustomerScoreModifier.</param>
         /// <param name="AlternateSpellings">AlternateSpellings.</param>
-        public Keyword(string Id = null, string Name = null, string Phrase = null, int? Confidence = null, int? AgentScoreModifier = null, int? CustomerScoreModifier = null, List<string> AlternateSpellings = null)
+        /// <param name="SpotabilityIndex">SpotabilityIndex.</param>
+        /// <param name="MarginOfError">MarginOfError.</param>
+        /// <param name="Pronunciation">Pronunciation.</param>
+        public Keyword(string Id = null, string Name = null, string Phrase = null, int? Confidence = null, int? AgentScoreModifier = null, int? CustomerScoreModifier = null, List<string> AlternateSpellings = null, double? SpotabilityIndex = null, double? MarginOfError = null, string Pronunciation = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -36,6 +39,9 @@ namespace ININ.PureCloudApi.Model
             this.AgentScoreModifier = AgentScoreModifier;
             this.CustomerScoreModifier = CustomerScoreModifier;
             this.AlternateSpellings = AlternateSpellings;
+            this.SpotabilityIndex = SpotabilityIndex;
+            this.MarginOfError = MarginOfError;
+            this.Pronunciation = Pronunciation;
         }
         
         /// <summary>
@@ -74,6 +80,21 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="alternateSpellings", EmitDefaultValue=false)]
         public List<string> AlternateSpellings { get; set; }
         /// <summary>
+        /// Gets or Sets SpotabilityIndex
+        /// </summary>
+        [DataMember(Name="spotabilityIndex", EmitDefaultValue=false)]
+        public double? SpotabilityIndex { get; set; }
+        /// <summary>
+        /// Gets or Sets MarginOfError
+        /// </summary>
+        [DataMember(Name="marginOfError", EmitDefaultValue=false)]
+        public double? MarginOfError { get; set; }
+        /// <summary>
+        /// Gets or Sets Pronunciation
+        /// </summary>
+        [DataMember(Name="pronunciation", EmitDefaultValue=false)]
+        public string Pronunciation { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -88,6 +109,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AgentScoreModifier: ").Append(AgentScoreModifier).Append("\n");
             sb.Append("  CustomerScoreModifier: ").Append(CustomerScoreModifier).Append("\n");
             sb.Append("  AlternateSpellings: ").Append(AlternateSpellings).Append("\n");
+            sb.Append("  SpotabilityIndex: ").Append(SpotabilityIndex).Append("\n");
+            sb.Append("  MarginOfError: ").Append(MarginOfError).Append("\n");
+            sb.Append("  Pronunciation: ").Append(Pronunciation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,6 +182,21 @@ namespace ININ.PureCloudApi.Model
                     this.AlternateSpellings == other.AlternateSpellings ||
                     this.AlternateSpellings != null &&
                     this.AlternateSpellings.SequenceEqual(other.AlternateSpellings)
+                ) &&
+                (
+                    this.SpotabilityIndex == other.SpotabilityIndex ||
+                    this.SpotabilityIndex != null &&
+                    this.SpotabilityIndex.Equals(other.SpotabilityIndex)
+                ) &&
+                (
+                    this.MarginOfError == other.MarginOfError ||
+                    this.MarginOfError != null &&
+                    this.MarginOfError.Equals(other.MarginOfError)
+                ) &&
+                (
+                    this.Pronunciation == other.Pronunciation ||
+                    this.Pronunciation != null &&
+                    this.Pronunciation.Equals(other.Pronunciation)
                 );
         }
 
@@ -186,6 +225,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CustomerScoreModifier.GetHashCode();
                 if (this.AlternateSpellings != null)
                     hash = hash * 59 + this.AlternateSpellings.GetHashCode();
+                if (this.SpotabilityIndex != null)
+                    hash = hash * 59 + this.SpotabilityIndex.GetHashCode();
+                if (this.MarginOfError != null)
+                    hash = hash * 59 + this.MarginOfError.GetHashCode();
+                if (this.Pronunciation != null)
+                    hash = hash * 59 + this.Pronunciation.GetHashCode();
                 return hash;
             }
         }

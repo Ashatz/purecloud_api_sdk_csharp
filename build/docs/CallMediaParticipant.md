@@ -36,6 +36,7 @@ title: CallMediaParticipant
 | **Ani** | **string** | The call ANI. | [optional] |
 | **Dnis** | **string** | The call DNIS. | [optional] |
 | **DocumentId** | **string** | The ID of the Content Management document if the call is a fax. | [optional] |
+| **FaxStatus** | [**FaxStatus**](FaxStatus.html) | Extra fax information if the call is a fax. | [optional] |
 | **MonitoredParticipantId** | **string** | The ID of the participant being monitored when performing a call monitor. | [optional] |
 | **ConsultParticipantId** | **string** | The ID of the consult transfer target participant when performing a consult transfer. | [optional] |
 {: class="table table-striped"}

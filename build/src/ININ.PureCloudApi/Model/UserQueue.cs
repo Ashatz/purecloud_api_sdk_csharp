@@ -44,8 +44,9 @@ namespace ININ.PureCloudApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets SkillEvaluationMethod
+        /// The skill evaluation method to use when routing conversations.
         /// </summary>
+        /// <value>The skill evaluation method to use when routing conversations.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SkillEvaluationMethodEnum
         {
@@ -75,10 +76,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
-        /// Gets or Sets SkillEvaluationMethod
+        /// The skill evaluation method to use when routing conversations.
         /// </summary>
+        /// <value>The skill evaluation method to use when routing conversations.</value>
         [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
         public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserQueue" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserQueue() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="UserQueue" /> class.
         /// </summary>
@@ -92,17 +99,44 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="MediaSettings">MediaSettings.</param>
-        /// <param name="Bullseye">Bullseye.</param>
-        /// <param name="AcwSettings">AcwSettings.</param>
-        /// <param name="SkillEvaluationMethod">SkillEvaluationMethod.</param>
-        /// <param name="QueueFlow">QueueFlow.</param>
-        /// <param name="CallingPartyName">CallingPartyName.</param>
-        /// <param name="CallingPartyNumber">CallingPartyNumber.</param>
+        /// <param name="MediaSettings">The media settings for the queue. (required).</param>
+        /// <param name="Bullseye">The bulls-eye settings for the queue..</param>
+        /// <param name="AcwSettings">The ACW settings for the queue. (required).</param>
+        /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations. (required).</param>
+        /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
+        /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
+        /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
         /// <param name="Joined">Joined (default to false).</param>
         /// <param name="MemberCount">MemberCount.</param>
         public UserQueue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, bool? Joined = null, int? MemberCount = null)
         {
+            // to ensure "MediaSettings" is required (not null)
+            if (MediaSettings == null)
+            {
+                throw new InvalidDataException("MediaSettings is a required property for UserQueue and cannot be null");
+            }
+            else
+            {
+                this.MediaSettings = MediaSettings;
+            }
+            // to ensure "AcwSettings" is required (not null)
+            if (AcwSettings == null)
+            {
+                throw new InvalidDataException("AcwSettings is a required property for UserQueue and cannot be null");
+            }
+            else
+            {
+                this.AcwSettings = AcwSettings;
+            }
+            // to ensure "SkillEvaluationMethod" is required (not null)
+            if (SkillEvaluationMethod == null)
+            {
+                throw new InvalidDataException("SkillEvaluationMethod is a required property for UserQueue and cannot be null");
+            }
+            else
+            {
+                this.SkillEvaluationMethod = SkillEvaluationMethod;
+            }
             this.Name = Name;
             this.Description = Description;
             this.Version = Version;
@@ -113,10 +147,7 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
-            this.MediaSettings = MediaSettings;
             this.Bullseye = Bullseye;
-            this.AcwSettings = AcwSettings;
-            this.SkillEvaluationMethod = SkillEvaluationMethod;
             this.QueueFlow = QueueFlow;
             this.CallingPartyName = CallingPartyName;
             this.CallingPartyNumber = CallingPartyNumber;
@@ -186,33 +217,39 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
         /// <summary>
-        /// Gets or Sets MediaSettings
+        /// The media settings for the queue.
         /// </summary>
+        /// <value>The media settings for the queue.</value>
         [DataMember(Name="mediaSettings", EmitDefaultValue=false)]
         public Dictionary<string, MediaSetting> MediaSettings { get; set; }
         /// <summary>
-        /// Gets or Sets Bullseye
+        /// The bulls-eye settings for the queue.
         /// </summary>
+        /// <value>The bulls-eye settings for the queue.</value>
         [DataMember(Name="bullseye", EmitDefaultValue=false)]
         public Bullseye Bullseye { get; set; }
         /// <summary>
-        /// Gets or Sets AcwSettings
+        /// The ACW settings for the queue.
         /// </summary>
+        /// <value>The ACW settings for the queue.</value>
         [DataMember(Name="acwSettings", EmitDefaultValue=false)]
         public AcwSettings AcwSettings { get; set; }
         /// <summary>
-        /// Gets or Sets QueueFlow
+        /// The in-queue flow to use for conversations waiting in queue.
         /// </summary>
+        /// <value>The in-queue flow to use for conversations waiting in queue.</value>
         [DataMember(Name="queueFlow", EmitDefaultValue=false)]
         public UriReference QueueFlow { get; set; }
         /// <summary>
-        /// Gets or Sets CallingPartyName
+        /// The name to use for caller identification for outbound calls from this queue.
         /// </summary>
+        /// <value>The name to use for caller identification for outbound calls from this queue.</value>
         [DataMember(Name="callingPartyName", EmitDefaultValue=false)]
         public string CallingPartyName { get; set; }
         /// <summary>
-        /// Gets or Sets CallingPartyNumber
+        /// The phone number to use for caller identification for outbound calls from this queue.
         /// </summary>
+        /// <value>The phone number to use for caller identification for outbound calls from this queue.</value>
         [DataMember(Name="callingPartyNumber", EmitDefaultValue=false)]
         public string CallingPartyNumber { get; set; }
         /// <summary>

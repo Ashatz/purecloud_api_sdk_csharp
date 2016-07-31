@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Phone" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -66,7 +66,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="Site">Site (required).</param>
+        /// <param name="Site">The site associated to the phone. (required).</param>
         /// <param name="PhoneBaseSettings">Phone Base Settings (required).</param>
         /// <param name="LineBaseSettings">LineBaseSettings.</param>
         /// <param name="PhoneMetaBase">PhoneMetaBase.</param>
@@ -78,6 +78,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="WebRtcUser">This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones..</param>
         public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null)
         {
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for Phone and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             // to ensure "Site" is required (not null)
             if (Site == null)
             {
@@ -105,7 +114,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Lines = Lines;
             }
-            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -131,8 +139,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the entity.
         /// </summary>
+        /// <value>The name of the entity.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
@@ -178,9 +187,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
         /// <summary>
-        /// Site
+        /// The site associated to the phone.
         /// </summary>
-        /// <value>Site</value>
+        /// <value>The site associated to the phone.</value>
         [DataMember(Name="site", EmitDefaultValue=false)]
         public UriReference Site { get; set; }
         /// <summary>

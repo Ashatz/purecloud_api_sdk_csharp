@@ -32,7 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletereportingschedulesscheduleid"></a>
 
-## string** DeleteReportingSchedulesScheduleId (string scheduleId)
+## **string** DeleteReportingSchedulesScheduleId (string scheduleId)
 
 Delete a scheduled report job.
 
@@ -262,7 +262,7 @@ namespace Example
 
 <a name="getreportingreportformats"></a>
 
-## List&lt;string&gt;** GetReportingReportformats ()
+## **List&lt;string&gt;** GetReportingReportformats ()
 
 Get a list of report formats
 
@@ -601,7 +601,7 @@ namespace Example
 
 <a name="getreportingtimeperiods"></a>
 
-## List&lt;string&gt;** GetReportingTimeperiods ()
+## **List&lt;string&gt;** GetReportingTimeperiods ()
 
 Get a list of report time periods.
 

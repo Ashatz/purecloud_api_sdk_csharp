@@ -76,7 +76,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletecallscallidparticipantsparticipantidconsult"></a>
 
-## string** DeleteCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId)
+## **string** DeleteCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId)
 
 Cancel the transfer
 
@@ -193,7 +193,7 @@ void (empty response body)
 
 <a name="deleteemailsemailidmessagesdraftattachmentsattachmentid"></a>
 
-## string** DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId (string emailId, string attachmentId)
+## **string** DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId (string emailId, string attachmentId)
 
 Delete attachment from draft
 

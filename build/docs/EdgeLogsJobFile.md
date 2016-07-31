@@ -8,7 +8,16 @@ title: EdgeLogsJobFile
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** |  | [optional] |
+| **Name** | **string** | The name of the entity. | |
+| **Description** | **string** |  | [optional] |
+| **Version** | **int?** |  | [optional] |
+| **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ModifiedBy** | **string** |  | [optional] |
+| **CreatedBy** | **string** |  | [optional] |
+| **State** | **string** |  | [optional] |
+| **ModifiedByApp** | **string** |  | [optional] |
+| **CreatedByApp** | **string** |  | [optional] |
 | **TimeCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **TimeModified** | **DateTime?** | The time this log file was last modified on the Edge. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **SizeBytes** | **double?** | The size of this file in bytes. | [optional] |

@@ -67,6 +67,78 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Name'
         }
         /// <summary>
+        /// Test the property 'Description'
+        /// </summary>
+        [Test]
+        public void DescriptionTest()
+        {
+            // TODO: unit test for the property 'Description'
+        }
+        /// <summary>
+        /// Test the property 'Version'
+        /// </summary>
+        [Test]
+        public void VersionTest()
+        {
+            // TODO: unit test for the property 'Version'
+        }
+        /// <summary>
+        /// Test the property 'DateCreated'
+        /// </summary>
+        [Test]
+        public void DateCreatedTest()
+        {
+            // TODO: unit test for the property 'DateCreated'
+        }
+        /// <summary>
+        /// Test the property 'DateModified'
+        /// </summary>
+        [Test]
+        public void DateModifiedTest()
+        {
+            // TODO: unit test for the property 'DateModified'
+        }
+        /// <summary>
+        /// Test the property 'ModifiedBy'
+        /// </summary>
+        [Test]
+        public void ModifiedByTest()
+        {
+            // TODO: unit test for the property 'ModifiedBy'
+        }
+        /// <summary>
+        /// Test the property 'CreatedBy'
+        /// </summary>
+        [Test]
+        public void CreatedByTest()
+        {
+            // TODO: unit test for the property 'CreatedBy'
+        }
+        /// <summary>
+        /// Test the property 'State'
+        /// </summary>
+        [Test]
+        public void StateTest()
+        {
+            // TODO: unit test for the property 'State'
+        }
+        /// <summary>
+        /// Test the property 'ModifiedByApp'
+        /// </summary>
+        [Test]
+        public void ModifiedByAppTest()
+        {
+            // TODO: unit test for the property 'ModifiedByApp'
+        }
+        /// <summary>
+        /// Test the property 'CreatedByApp'
+        /// </summary>
+        [Test]
+        public void CreatedByAppTest()
+        {
+            // TODO: unit test for the property 'CreatedByApp'
+        }
+        /// <summary>
         /// Test the property 'LineMetaBase'
         /// </summary>
         [Test]

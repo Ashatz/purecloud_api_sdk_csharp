@@ -66,6 +66,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'ImageUri'
         }
+        /// <summary>
+        /// Test the property 'Thumbnails'
+        /// </summary>
+        [Test]
+        public void ThumbnailsTest()
+        {
+            // TODO: unit test for the property 'Thumbnails'
+        }
 
     }
 

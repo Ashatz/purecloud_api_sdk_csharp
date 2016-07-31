@@ -446,6 +446,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostSpotability
+        /// </summary>
+        [Test]
+        public void PostSpotabilityTest()
+        {
+            // TODO: add unit test for the method 'PostSpotability'
+            KeywordSet body = null; // TODO: replace null with proper value
+            var response = instance.PostSpotability(body);
+            Assert.IsInstanceOf<KeywordSet> (response, "response is KeywordSet");
+        }
+        
+        /// <summary>
         /// Test PutCalibrationsCalibrationId
         /// </summary>
         [Test]

@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeGroup" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -72,6 +72,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PhoneTrunkBases">Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication..</param>
         public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, List<UriReference> PhoneTrunkBases = null)
         {
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for EdgeGroup and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             // to ensure "EdgeTrunkBaseAssignment" is required (not null)
             if (EdgeTrunkBaseAssignment == null)
             {
@@ -81,7 +90,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.EdgeTrunkBaseAssignment = EdgeTrunkBaseAssignment;
             }
-            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -111,8 +119,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the entity.
         /// </summary>
+        /// <value>The name of the entity.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

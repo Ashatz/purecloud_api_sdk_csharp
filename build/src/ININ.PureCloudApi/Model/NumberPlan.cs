@@ -44,61 +44,10 @@ namespace ININ.PureCloudApi.Model
         }
 
         /// <summary>
-        /// The type of matching technique the number plan uses.
-        /// </summary>
-        /// <value>The type of matching technique the number plan uses.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum MatchTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum E164numberlist for "e164NumberList"
-            /// </summary>
-            [EnumMember(Value = "e164NumberList")]
-            E164numberlist,
-            
-            /// <summary>
-            /// Enum Numberlist for "numberList"
-            /// </summary>
-            [EnumMember(Value = "numberList")]
-            Numberlist,
-            
-            /// <summary>
-            /// Enum Digitlength for "digitLength"
-            /// </summary>
-            [EnumMember(Value = "digitLength")]
-            Digitlength,
-            
-            /// <summary>
-            /// Enum Regex for "regex"
-            /// </summary>
-            [EnumMember(Value = "regex")]
-            Regex,
-            
-            /// <summary>
-            /// Enum Intracountrycode for "intraCountryCode"
-            /// </summary>
-            [EnumMember(Value = "intraCountryCode")]
-            Intracountrycode,
-            
-            /// <summary>
-            /// Enum Intercountrycode for "interCountryCode"
-            /// </summary>
-            [EnumMember(Value = "interCountryCode")]
-            Intercountrycode
-        }
-
-        /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
-        /// <summary>
-        /// The type of matching technique the number plan uses.
-        /// </summary>
-        /// <value>The type of matching technique the number plan uses.</value>
-        [DataMember(Name="matchType", EmitDefaultValue=false)]
-        public MatchTypeEnum? MatchType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="NumberPlan" /> class.
         /// </summary>
@@ -107,7 +56,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NumberPlan" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -123,19 +72,18 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Numbers">Numbers.</param>
         /// <param name="DigitLength">DigitLength.</param>
         /// <param name="Classification">Classification.</param>
-        /// <param name="MatchType">The type of matching technique the number plan uses. (required).</param>
-        public NumberPlan(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Match = null, string NormalizedFormat = null, int? Priority = null, List<double?> Numbers = null, DigitLength DigitLength = null, string Classification = null, MatchTypeEnum? MatchType = null)
+        /// <param name="MatchType">MatchType.</param>
+        public NumberPlan(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Match = null, string NormalizedFormat = null, int? Priority = null, List<double?> Numbers = null, DigitLength DigitLength = null, string Classification = null, string MatchType = null)
         {
-            // to ensure "MatchType" is required (not null)
-            if (MatchType == null)
+            // to ensure "Name" is required (not null)
+            if (Name == null)
             {
-                throw new InvalidDataException("MatchType is a required property for NumberPlan and cannot be null");
+                throw new InvalidDataException("Name is a required property for NumberPlan and cannot be null");
             }
             else
             {
-                this.MatchType = MatchType;
+                this.Name = Name;
             }
-            this.Name = Name;
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -151,6 +99,7 @@ namespace ININ.PureCloudApi.Model
             this.Numbers = Numbers;
             this.DigitLength = DigitLength;
             this.Classification = Classification;
+            this.MatchType = MatchType;
         }
         
         /// <summary>
@@ -160,8 +109,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the entity.
         /// </summary>
+        /// <value>The name of the entity.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
@@ -236,6 +186,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="classification", EmitDefaultValue=false)]
         public string Classification { get; set; }
+        /// <summary>
+        /// Gets or Sets MatchType
+        /// </summary>
+        [DataMember(Name="matchType", EmitDefaultValue=false)]
+        public string MatchType { get; set; }
         /// <summary>
         /// The URI for this object
         /// </summary>

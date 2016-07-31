@@ -120,7 +120,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteprovidersedgescertificateauthoritiescertificateid"></a>
 
-## string** DeleteProvidersEdgesCertificateauthoritiesCertificateId (string certificateId)
+## **string** DeleteProvidersEdgesCertificateauthoritiesCertificateId (string certificateId)
 
 Delete a certificate authority.
 
@@ -176,7 +176,7 @@ namespace Example
 
 <a name="deleteprovidersedgesdidpoolsdidpoolid"></a>
 
-## string** DeleteProvidersEdgesDidpoolsDidpoolId (string didPoolId)
+## **string** DeleteProvidersEdgesDidpoolsDidpoolId (string didPoolId)
 
 Delete a DID Pool by ID.
 
@@ -232,7 +232,7 @@ namespace Example
 
 <a name="deleteprovidersedgesedgeid"></a>
 
-## string** DeleteProvidersEdgesEdgeId (string edgeId)
+## **string** DeleteProvidersEdgesEdgeId (string edgeId)
 
 Delete a edge.
 
@@ -345,7 +345,7 @@ void (empty response body)
 
 <a name="deleteprovidersedgesedgeidsoftwareupdate"></a>
 
-## string** DeleteProvidersEdgesEdgeIdSoftwareupdate (string edgeId)
+## **string** DeleteProvidersEdgesEdgeIdSoftwareupdate (string edgeId)
 
 Cancels any in-progress update for this edge.
 
@@ -401,7 +401,7 @@ namespace Example
 
 <a name="deleteprovidersedgesedgegroupsedgegroupid"></a>
 
-## string** DeleteProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId)
+## **string** DeleteProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId)
 
 Delete an edge group.
 
@@ -457,7 +457,7 @@ namespace Example
 
 <a name="deleteprovidersedgesendpointsendpointid"></a>
 
-## string** DeleteProvidersEdgesEndpointsEndpointId (string endpointId)
+## **string** DeleteProvidersEdgesEndpointsEndpointId (string endpointId)
 
 Delete endpoint
 
@@ -513,7 +513,7 @@ namespace Example
 
 <a name="deleteprovidersedgesextensionpoolsextensionpoolid"></a>
 
-## string** DeleteProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId)
+## **string** DeleteProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId)
 
 Delete an extension pool by ID
 
@@ -569,7 +569,7 @@ namespace Example
 
 <a name="deleteprovidersedgesoutboundroutesoutboundrouteid"></a>
 
-## string** DeleteProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId)
+## **string** DeleteProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId)
 
 Delete Outbound Route
 
@@ -625,7 +625,7 @@ namespace Example
 
 <a name="deleteprovidersedgesphonebasesettingsphonebaseid"></a>
 
-## string** DeleteProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId)
+## **string** DeleteProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId)
 
 Delete a Phone Base Settings by ID
 
@@ -681,7 +681,7 @@ namespace Example
 
 <a name="deleteprovidersedgesphonesphoneid"></a>
 
-## string** DeleteProvidersEdgesPhonesPhoneId (string phoneId)
+## **string** DeleteProvidersEdgesPhonesPhoneId (string phoneId)
 
 Delete a Phone by ID
 
@@ -737,7 +737,7 @@ namespace Example
 
 <a name="deleteprovidersedgessitessiteid"></a>
 
-## string** DeleteProvidersEdgesSitesSiteId (string siteId)
+## **string** DeleteProvidersEdgesSitesSiteId (string siteId)
 
 Delete a Site by ID
 
@@ -793,7 +793,7 @@ namespace Example
 
 <a name="deleteprovidersedgestrunkbasesettingstrunkbasesettingsid"></a>
 
-## string** DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId)
+## **string** DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId)
 
 Delete a Trunk Base Settings object by ID
 
@@ -3052,7 +3052,7 @@ namespace Example
 
 <a name="getprovidersedgesphones"></a>
 
-## [**PhoneEntityListing**](PhoneEntityListing.html) GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
+## [**PhoneEntityListing**](PhoneEntityListing.html) GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
 
 Get a list of Phone Instances
 
@@ -3086,13 +3086,15 @@ namespace Example
             var phoneBaseSettingsId = phoneBaseSettingsId_example;  // string | Filter by phoneBaseSettings.id (optional) 
             var linesLoggedInUserId = linesLoggedInUserId_example;  // string | Filter by lines.loggedInUser.id (optional) 
             var phoneHardwareId = phoneHardwareId_example;  // string | Filter by phone_hardwareId (optional) 
+            var linesId = linesId_example;  // string | Filter by lines.id (optional) 
+            var linesName = linesName_example;  // string | Filter by lines.name (optional) 
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
             var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) 
 
             try
             {
                 // Get a list of Phone Instances
-                PhoneEntityListing result = apiInstance.GetProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, phoneHardwareId, expand, fields);
+                PhoneEntityListing result = apiInstance.GetProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, phoneHardwareId, linesId, linesName, expand, fields);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3118,6 +3120,8 @@ namespace Example
 | **phoneBaseSettingsId** | **string**| Filter by phoneBaseSettings.id | [optional]  |
 | **linesLoggedInUserId** | **string**| Filter by lines.loggedInUser.id | [optional]  |
 | **phoneHardwareId** | **string**| Filter by phone_hardwareId | [optional]  |
+| **linesId** | **string**| Filter by lines.id | [optional]  |
+| **linesName** | **string**| Filter by lines.name | [optional]  |
 | **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
 | **fields** | [**List<string>**](string.html)| Fields and properties to get, comma-separated | [optional]  |
 {: class="table table-striped"}
@@ -3418,7 +3422,7 @@ namespace Example
 
 <a name="getprovidersedgessitessiteidnumberplansclassifications"></a>
 
-## List&lt;string&gt;** GetProvidersEdgesSitesSiteIdNumberplansClassifications (string siteId, string classification = null)
+## **List&lt;string&gt;** GetProvidersEdgesSitesSiteIdNumberplansClassifications (string siteId, string classification = null)
 
 Get a list of Classifications for this Site
 
@@ -4713,7 +4717,7 @@ void (empty response body)
 
 <a name="postprovidersedgesedgeidreboot"></a>
 
-## string** PostProvidersEdgesEdgeIdReboot (string edgeId)
+## **string** PostProvidersEdgesEdgeIdReboot (string edgeId)
 
 Reboot an Edge
 
@@ -4827,7 +4831,7 @@ namespace Example
 
 <a name="postprovidersedgesedgeidunpair"></a>
 
-## string** PostProvidersEdgesEdgeIdUnpair (string edgeId)
+## **string** PostProvidersEdgesEdgeIdUnpair (string edgeId)
 
 Unpair an Edge
 

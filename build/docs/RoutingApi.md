@@ -51,7 +51,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteemaildomainsdomainid"></a>
 
-## string** DeleteEmailDomainsDomainId (string domainId)
+## **string** DeleteEmailDomainsDomainId (string domainId)
 
 Delete a domain
 
@@ -107,7 +107,7 @@ namespace Example
 
 <a name="deleteemaildomainsdomainnameroutesrouteid"></a>
 
-## string** DeleteEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
+## **string** DeleteEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
 
 Delete a route
 
@@ -165,7 +165,7 @@ namespace Example
 
 <a name="deletequeuesqueueid"></a>
 
-## string** DeleteQueuesQueueId (string queueId, bool? forceDelete = null)
+## **string** DeleteQueuesQueueId (string queueId, bool? forceDelete = null)
 
 Delete a queue
 
@@ -223,7 +223,7 @@ namespace Example
 
 <a name="deletequeuesqueueidusersmemberid"></a>
 
-## string** DeleteQueuesQueueIdUsersMemberId (string queueId, string memberId)
+## **string** DeleteQueuesQueueIdUsersMemberId (string queueId, string memberId)
 
 Delete queue member
 
@@ -281,7 +281,7 @@ namespace Example
 
 <a name="deletequeuesqueueidwrapupcodescodeid"></a>
 
-## string** DeleteQueuesQueueIdWrapupcodesCodeId (string queueId, string codeId)
+## **string** DeleteQueuesQueueIdWrapupcodesCodeId (string queueId, string codeId)
 
 Delete a wrap-up code from a queue
 
@@ -339,7 +339,7 @@ namespace Example
 
 <a name="deleteskillsskillid"></a>
 
-## string** DeleteSkillsSkillId (string skillId)
+## **string** DeleteSkillsSkillId (string skillId)
 
 Delete Routing Skill
 
@@ -395,7 +395,7 @@ namespace Example
 
 <a name="deleteuseridroutingskillsskillid"></a>
 
-## string** DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
+## **string** DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
 
 Remove routing skill from user
 
@@ -453,7 +453,7 @@ namespace Example
 
 <a name="deleteutilization"></a>
 
-## string** DeleteUtilization ()
+## **string** DeleteUtilization ()
 
 Delete utilization settings and revert to system defaults.
 
@@ -504,7 +504,7 @@ This endpoint does require any parameters.
 
 <a name="deletewrapupcodescodeid"></a>
 
-## string** DeleteWrapupcodesCodeId (string codeId)
+## **string** DeleteWrapupcodesCodeId (string codeId)
 
 Delete wrap-up code
 
@@ -1653,7 +1653,7 @@ namespace Example
 
 <a name="postqueues"></a>
 
-## [**Queue**](Queue.html) PostQueues (Queue body)
+## [**Queue**](Queue.html) PostQueues (CreateQueueRequest body)
 
 Create queue
 
@@ -1678,7 +1678,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var body = new Queue(); // Queue | Queue
+            var body = new CreateQueueRequest(); // CreateQueueRequest | Queue
 
             try
             {
@@ -1700,7 +1700,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Queue**](Queue.html)| Queue |  |
+| **body** | [**CreateQueueRequest**](CreateQueueRequest.html)| Queue |  |
 {: class="table table-striped"}
 
 ### Return type

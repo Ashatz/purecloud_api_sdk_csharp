@@ -78,7 +78,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DIDPool" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected DIDPool() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DIDPool" /> class.
+        /// </summary>
+        /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -88,13 +93,39 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="StartPhoneNumber">The starting phone number for the range of this DID pool. Must be in E.164 format.</param>
-        /// <param name="EndPhoneNumber">The ending phone number for the range of this DID pool. Must be in E.164 format.</param>
+        /// <param name="StartPhoneNumber">The starting phone number for the range of this DID pool. Must be in E.164 format (required).</param>
+        /// <param name="EndPhoneNumber">The ending phone number for the range of this DID pool. Must be in E.164 format (required).</param>
         /// <param name="Comments">Comments.</param>
         /// <param name="Provider">The provider for this DID pool.</param>
         public DIDPool(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string StartPhoneNumber = null, string EndPhoneNumber = null, string Comments = null, ProviderEnum? Provider = null)
         {
-            this.Name = Name;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for DIDPool and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+            // to ensure "StartPhoneNumber" is required (not null)
+            if (StartPhoneNumber == null)
+            {
+                throw new InvalidDataException("StartPhoneNumber is a required property for DIDPool and cannot be null");
+            }
+            else
+            {
+                this.StartPhoneNumber = StartPhoneNumber;
+            }
+            // to ensure "EndPhoneNumber" is required (not null)
+            if (EndPhoneNumber == null)
+            {
+                throw new InvalidDataException("EndPhoneNumber is a required property for DIDPool and cannot be null");
+            }
+            else
+            {
+                this.EndPhoneNumber = EndPhoneNumber;
+            }
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -104,8 +135,6 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
-            this.StartPhoneNumber = StartPhoneNumber;
-            this.EndPhoneNumber = EndPhoneNumber;
             this.Comments = Comments;
             this.Provider = Provider;
         }
@@ -117,8 +146,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the entity.
         /// </summary>
+        /// <value>The name of the entity.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

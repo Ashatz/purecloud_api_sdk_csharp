@@ -26,6 +26,7 @@ title: User
 | **Geolocation** | [**Geolocation**](Geolocation.html) | Current geolocation position | [optional] |
 | **Station** | [**UserStations**](UserStations.html) | Effective, default, and last station information | [optional] |
 | **Authorization** | [**UserAuthorization**](UserAuthorization.html) | Roles and permissions assigned to the user | [optional] |
+| **ProfileSkills** | **List&lt;string&gt;** | Skills possessed by the user | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

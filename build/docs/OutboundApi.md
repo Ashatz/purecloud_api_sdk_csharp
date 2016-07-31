@@ -76,7 +76,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletecallabletimesetscallabletimesetid"></a>
 
-## string** DeleteCallabletimesetsCallabletimesetId (string callableTimeSetId)
+## **string** DeleteCallabletimesetsCallabletimesetId (string callableTimeSetId)
 
 Delete callable time set
 
@@ -132,7 +132,7 @@ namespace Example
 
 <a name="deletecallanalysisresponsesetscallanalysissetid"></a>
 
-## string** DeleteCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId)
+## **string** DeleteCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId)
 
 Delete a dialer call analysis response set.
 
@@ -188,7 +188,7 @@ namespace Example
 
 <a name="deletecampaignscampaignid"></a>
 
-## string** DeleteCampaignsCampaignId (string campaignId)
+## **string** DeleteCampaignsCampaignId (string campaignId)
 
 Delete a campaign.
 
@@ -244,7 +244,7 @@ namespace Example
 
 <a name="deletecampaignscampaignidprogress"></a>
 
-## string** DeleteCampaignsCampaignIdProgress (string campaignId)
+## **string** DeleteCampaignsCampaignIdProgress (string campaignId)
 
 Reset campaign progress and recycle the campaign
 
@@ -300,7 +300,7 @@ namespace Example
 
 <a name="deletecontactlistscontactlistid"></a>
 
-## string** DeleteContactlistsContactlistId (string contactListId)
+## **string** DeleteContactlistsContactlistId (string contactListId)
 
 Delete a contact list.
 
@@ -356,7 +356,7 @@ namespace Example
 
 <a name="deletecontactlistscontactlistidcontactscontactid"></a>
 
-## string** DeleteContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
+## **string** DeleteContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
 
 Delete a contact.
 
@@ -414,7 +414,7 @@ namespace Example
 
 <a name="deletednclistsdnclistid"></a>
 
-## string** DeleteDnclistsDnclistId (string dncListId)
+## **string** DeleteDnclistsDnclistId (string dncListId)
 
 Delete dialer DNC list
 
@@ -470,7 +470,7 @@ namespace Example
 
 <a name="deleterulesetsrulesetid"></a>
 
-## string** DeleteRulesetsRulesetId (string ruleSetId)
+## **string** DeleteRulesetsRulesetId (string ruleSetId)
 
 Delete a Rule set.
 
@@ -526,7 +526,7 @@ namespace Example
 
 <a name="deleteschedulescampaignscampaignid"></a>
 
-## string** DeleteSchedulesCampaignsCampaignId (string campaignId)
+## **string** DeleteSchedulesCampaignsCampaignId (string campaignId)
 
 Delete a dialer campaign schedule.
 
@@ -582,7 +582,7 @@ namespace Example
 
 <a name="deleteschedulessequencessequenceid"></a>
 
-## string** DeleteSchedulesSequencesSequenceId (string sequenceId)
+## **string** DeleteSchedulesSequencesSequenceId (string sequenceId)
 
 Delete a dialer sequence schedule.
 
@@ -638,7 +638,7 @@ namespace Example
 
 <a name="deletesequencessequenceid"></a>
 
-## string** DeleteSequencesSequenceId (string sequenceId)
+## **string** DeleteSequencesSequenceId (string sequenceId)
 
 Delete a dialer campaign sequence.
 
@@ -2757,7 +2757,7 @@ namespace Example
 
 <a name="postcontactlistscontactlistidexport"></a>
 
-## string** PostContactlistsContactlistIdExport (string contactListId)
+## **string** PostContactlistsContactlistIdExport (string contactListId)
 
 Initiate the export of a contact list.
 
@@ -2924,7 +2924,7 @@ namespace Example
 
 <a name="postdnclistsdnclistidexport"></a>
 
-## string** PostDnclistsDnclistIdExport (string dncListId)
+## **string** PostDnclistsDnclistIdExport (string dncListId)
 
 Initiate the export of a dnc list.
 
@@ -3323,7 +3323,7 @@ namespace Example
 
 <a name="putcampaignscampaignidagentsuserid"></a>
 
-## string** PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body)
+## **string** PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body)
 
 Send notification that an agent's state changed 
 

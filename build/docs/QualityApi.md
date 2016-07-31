@@ -33,6 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostForms**](QualityApi.html#postforms) | **POST** /api/v2/quality/forms | Create an evaluation form. |
 | [**PostKeywordsets**](QualityApi.html#postkeywordsets) | **POST** /api/v2/quality/keywordsets | Create a Keyword Set |
 | [**PostPublishedforms**](QualityApi.html#postpublishedforms) | **POST** /api/v2/quality/publishedforms | Publish an evaluation form. |
+| [**PostSpotability**](QualityApi.html#postspotability) | **POST** /api/v2/quality/spotability | Retrieve the spotability statistic |
 | [**PutCalibrationsCalibrationId**](QualityApi.html#putcalibrationscalibrationid) | **PUT** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
 | [**PutConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#putconversationsconversationidevaluationsevaluationid) | **PUT** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
 | [**PutFormsFormId**](QualityApi.html#putformsformid) | **PUT** /api/v2/quality/forms/{formId} | Update an evaluation form. |
@@ -159,7 +160,7 @@ namespace Example
 
 <a name="deleteformsformid"></a>
 
-## string** DeleteFormsFormId (string formId)
+## **string** DeleteFormsFormId (string formId)
 
 Delete an evaluation form.
 
@@ -215,7 +216,7 @@ namespace Example
 
 <a name="deletekeywordsets"></a>
 
-## string** DeleteKeywordsets (string ids)
+## **string** DeleteKeywordsets (string ids)
 
 Delete keyword sets
 
@@ -1653,6 +1654,62 @@ namespace Example
 ### Return type
 
 [**EvaluationForm**](EvaluationForm.html)
+
+<a name="postspotability"></a>
+
+## [**KeywordSet**](KeywordSet.html) PostSpotability (KeywordSet body = null)
+
+Retrieve the spotability statistic
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostSpotabilityExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new QualityApi();
+            var body = new KeywordSet(); // KeywordSet | Keyword Set (optional) 
+
+            try
+            {
+                // Retrieve the spotability statistic
+                KeywordSet result = apiInstance.PostSpotability(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostSpotability: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**KeywordSet**](KeywordSet.html)| Keyword Set | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KeywordSet**](KeywordSet.html)
 
 <a name="putcalibrationscalibrationid"></a>
 

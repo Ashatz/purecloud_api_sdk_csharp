@@ -84,7 +84,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Trunk" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected Trunk() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Trunk" /> class.
+        /// </summary>
+        /// <param name="Name">The name of the entity. (required).</param>
         /// <param name="Description">Description.</param>
         /// <param name="Version">Version.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -102,7 +107,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Enabled">True if this trunk is in-service.  This comes from the trunk_enabled property of the referenced trunk base. (default to false).</param>
         public Trunk(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, TrunkTypeEnum? TrunkType = null, UriReference Edge = null, UriReference TrunkBase = null, UriReference TrunkMetabase = null, UriReference EdgeGroup = null, bool? Enabled = null)
         {
-            this.Name = Name;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for Trunk and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             this.Description = Description;
             this.Version = Version;
             this.DateCreated = DateCreated;
@@ -135,8 +148,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the entity.
         /// </summary>
+        /// <value>The name of the entity.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

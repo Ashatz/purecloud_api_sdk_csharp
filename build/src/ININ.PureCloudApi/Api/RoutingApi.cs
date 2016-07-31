@@ -657,7 +657,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
-        Queue PostQueues (Queue body);
+        Queue PostQueues (CreateQueueRequest body);
 
         /// <summary>
         /// Create queue
@@ -668,7 +668,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
-        ApiResponse<Queue> PostQueuesWithHttpInfo (Queue body);
+        ApiResponse<Queue> PostQueuesWithHttpInfo (CreateQueueRequest body);
         /// <summary>
         /// Query for queue observations
         /// </summary>
@@ -1567,7 +1567,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        System.Threading.Tasks.Task<Queue> PostQueuesAsync (Queue body);
+        System.Threading.Tasks.Task<Queue> PostQueuesAsync (CreateQueueRequest body);
 
         /// <summary>
         /// Create queue
@@ -1578,7 +1578,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Queue>> PostQueuesAsyncWithHttpInfo (Queue body);
+        System.Threading.Tasks.Task<ApiResponse<Queue>> PostQueuesAsyncWithHttpInfo (CreateQueueRequest body);
         /// <summary>
         /// Query for queue observations
         /// </summary>
@@ -6424,7 +6424,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
-        public Queue PostQueues (Queue body)
+        public Queue PostQueues (CreateQueueRequest body)
         {
              ApiResponse<Queue> localVarResponse = PostQueuesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6436,7 +6436,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
-        public ApiResponse< Queue > PostQueuesWithHttpInfo (Queue body)
+        public ApiResponse< Queue > PostQueuesWithHttpInfo (CreateQueueRequest body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6507,7 +6507,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        public async System.Threading.Tasks.Task<Queue> PostQueuesAsync (Queue body)
+        public async System.Threading.Tasks.Task<Queue> PostQueuesAsync (CreateQueueRequest body)
         {
              ApiResponse<Queue> localVarResponse = await PostQueuesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6520,7 +6520,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Queue>> PostQueuesAsyncWithHttpInfo (Queue body)
+        public async System.Threading.Tasks.Task<ApiResponse<Queue>> PostQueuesAsyncWithHttpInfo (CreateQueueRequest body)
         {
             // verify the required parameter 'body' is set
             if (body == null)

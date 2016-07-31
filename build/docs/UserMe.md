@@ -26,6 +26,7 @@ title: UserMe
 | **Geolocation** | [**Geolocation**](Geolocation.html) | Current geolocation position | [optional] |
 | **Station** | [**UserStations**](UserStations.html) | Effective, default, and last station information | [optional] |
 | **Authorization** | [**UserAuthorization**](UserAuthorization.html) | Roles and permissions assigned to the user | [optional] |
+| **ProfileSkills** | **List&lt;string&gt;** | Skills possessed by the user | [optional] |
 | **Date** | [**ServerDate**](ServerDate.html) | The PureCloud system date time. | [optional] |
 | **GeolocationSettings** | [**GeolocationSettings**](GeolocationSettings.html) | Geolocation settings for user&#39;s organization. | [optional] |
 | **Organization** | [**Organization**](Organization.html) | Organization details for this user. | [optional] |

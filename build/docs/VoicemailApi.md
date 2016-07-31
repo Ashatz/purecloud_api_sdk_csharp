@@ -22,7 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletemessages"></a>
 
-## string** DeleteMessages ()
+## **string** DeleteMessages ()
 
 Delete all voicemail messages
 
@@ -73,7 +73,7 @@ This endpoint does require any parameters.
 
 <a name="deletemessagesmessageid"></a>
 
-## string** DeleteMessagesMessageId (string messageId)
+## **string** DeleteMessagesMessageId (string messageId)
 
 Delete a message.
 
