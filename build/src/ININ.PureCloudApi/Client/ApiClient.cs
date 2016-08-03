@@ -31,6 +31,7 @@ namespace ININ.PureCloudApi.Client
         {
             Configuration = Configuration.Default;
             RestClient = new RestClient("https://api.mypurecloud.com");
+            serializerSettings.Converters.Add(new Iso8601DateTimeConverter());
         }
 
         /// <summary>
@@ -311,7 +312,7 @@ namespace ININ.PureCloudApi.Client
         {
             try
             {
-                return obj != null ? JsonConvert.SerializeObject(obj) : null;
+                return obj != null ? JsonConvert.SerializeObject(obj, serializerSettings) : null;
             }
             catch (Exception e)
             {
