@@ -33,7 +33,7 @@ namespace {{packageName}}.Client
         {
             Configuration = Configuration.Default;
             RestClient = new RestClient("{{basePath}}");
-            serializerSettings.Converters.Add(new Iso8601DateTimeConverter());
+            AddSerializerSettings();
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace {{packageName}}.Client
                 Configuration = config;
 
             RestClient = new RestClient("{{basePath}}");
-            serializerSettings.Converters.Add(new Iso8601DateTimeConverter());
+            AddSerializerSettings();
         }
 
         /// <summary>
@@ -64,7 +64,13 @@ namespace {{packageName}}.Client
 
             RestClient = new RestClient(basePath);
             Configuration = Configuration.Default;
+            AddSerializerSettings();
+        }
+
+        private void AddSerializerSettings()
+        {
             serializerSettings.Converters.Add(new Iso8601DateTimeConverter());
+            serializerSettings.Converters.Add(new UpgradeSdkEnumConverter());
         }
 
         /// <summary>
