@@ -49,6 +49,7 @@ namespace {{packageName}}.Client
                 Configuration = config;
 
             RestClient = new RestClient("{{basePath}}");
+            serializerSettings.Converters.Add(new Iso8601DateTimeConverter());
         }
 
         /// <summary>
@@ -63,6 +64,7 @@ namespace {{packageName}}.Client
 
             RestClient = new RestClient(basePath);
             Configuration = Configuration.Default;
+            serializerSettings.Converters.Add(new Iso8601DateTimeConverter());
         }
 
         /// <summary>
