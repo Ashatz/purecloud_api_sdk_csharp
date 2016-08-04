@@ -47,7 +47,6 @@ namespace ININ.PureCloudApi.Client
                 Configuration = config;
 
             RestClient = new RestClient("https://api.mypurecloud.com");
-            serializerSettings.Converters.Add(new Iso8601DateTimeConverter());
         }
 
         /// <summary>
@@ -62,7 +61,6 @@ namespace ININ.PureCloudApi.Client
 
             RestClient = new RestClient(basePath);
             Configuration = Configuration.Default;
-            serializerSettings.Converters.Add(new Iso8601DateTimeConverter());
         }
 
         /// <summary>
