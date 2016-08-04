@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SharedEntityTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Document for "DOCUMENT"
@@ -30,13 +37,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DOCUMENT")]
             Document
         }
-
         /// <summary>
         /// Gets or Sets MemberType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MemberTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum User for "USER"
@@ -56,7 +69,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
-
         /// <summary>
         /// Gets or Sets SharedEntityType
         /// </summary>

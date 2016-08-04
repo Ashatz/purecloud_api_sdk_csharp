@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Action for "Action"
@@ -37,7 +44,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "modifyContactAttribute")]
             Modifycontactattribute
         }
-
         /// <summary>
         /// Identifier of the action
         /// </summary>
@@ -45,6 +51,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ActionTypeNameEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum DoNotDial for "DO_NOT_DIAL"
@@ -76,7 +89,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SCHEDULE_CALLBACK")]
             ScheduleCallback
         }
-
         /// <summary>
         /// Indicator of the type of update action (applicable only to certain types of actions)
         /// </summary>
@@ -84,6 +96,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum UpdateOptionEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Set for "SET"
@@ -109,7 +128,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CURRENT_TIME")]
             CurrentTime
         }
-
         /// <summary>
         /// Type of the action
         /// </summary>

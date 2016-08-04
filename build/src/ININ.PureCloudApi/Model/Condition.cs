@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Wrapupcondition for "wrapupCondition"
@@ -55,7 +62,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "callAnalysisCondition")]
             Callanalysiscondition
         }
-
         /// <summary>
         /// Determines the type of the value associated with the condition
         /// </summary>
@@ -63,6 +69,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ValueTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum String for "STRING"
@@ -88,7 +101,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PERIOD")]
             Period
         }
-
         /// <summary>
         /// An operation type for condition evaluation
         /// </summary>
@@ -96,6 +108,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OperatorEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Equals for "EQUALS"
@@ -157,7 +176,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "AFTER")]
             After
         }
-
         /// <summary>
         /// The type of the condition
         /// </summary>

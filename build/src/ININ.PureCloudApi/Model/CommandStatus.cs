@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusCodeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Inprogress for "INPROGRESS"
@@ -54,13 +61,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CANCELED")]
             Canceled
         }
-
         /// <summary>
         /// Gets or Sets CommandType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CommandTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Upload for "UPLOAD"
@@ -122,7 +135,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "REPLACEDOCUMENT")]
             Replacedocument
         }
-
         /// <summary>
         /// Gets or Sets StatusCode
         /// </summary>

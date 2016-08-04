@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OperatorEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum And for "AND"
@@ -42,13 +49,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NOT")]
             Not
         }
-
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Exact for "EXACT"
@@ -134,7 +147,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "QUERY_STRING")]
             QueryString
         }
-
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>

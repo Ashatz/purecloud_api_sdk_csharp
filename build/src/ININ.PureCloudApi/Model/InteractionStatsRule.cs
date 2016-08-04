@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DimensionEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Queueid for "queueId"
@@ -37,7 +44,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "userId")]
             Userid
         }
-
         /// <summary>
         /// The metric to be assessed.
         /// </summary>
@@ -45,6 +51,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MetricEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Tabandon for "tAbandon"
@@ -106,7 +119,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "tAcw")]
             Tacw
         }
-
         /// <summary>
         /// The media type.
         /// </summary>
@@ -114,6 +126,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MediaTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Voice for "voice"
@@ -133,7 +152,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "email")]
             Email
         }
-
         /// <summary>
         /// The comparison descriptor used against the metric's value.
         /// </summary>
@@ -141,6 +159,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum NumericRangeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Gt for "gt"
@@ -178,7 +203,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ne")]
             Ne
         }
-
         /// <summary>
         /// The statistic of concern for the metric.
         /// </summary>
@@ -186,6 +210,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatisticEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Count for "count"
@@ -211,13 +242,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "max")]
             Max
         }
-
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AlertTypesEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Sms for "SMS"
@@ -237,7 +274,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
-
         /// <summary>
         /// The dimension of concern.
         /// </summary>

@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TermTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Term for "TERM"
@@ -60,7 +67,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ID")]
             Id
         }
-
         /// <summary>
         /// Gets or Sets TermType
         /// </summary>

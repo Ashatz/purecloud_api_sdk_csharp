@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Pending for "PENDING"
@@ -42,7 +49,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "FINISHED")]
             Finished
         }
-
         /// <summary>
         /// The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.
         /// </summary>
@@ -50,6 +56,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ResourceTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Email for "EMAIL"
@@ -57,7 +70,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
-
         /// <summary>
         /// Gets or Sets Status
         /// </summary>

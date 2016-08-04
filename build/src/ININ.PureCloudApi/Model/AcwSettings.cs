@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum WrapupPromptEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Mandatory for "MANDATORY"
@@ -48,7 +55,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "MANDATORY_FORCED_TIMEOUT")]
             MandatoryForcedTimeout
         }
-
         /// <summary>
         /// Gets or Sets WrapupPrompt
         /// </summary>

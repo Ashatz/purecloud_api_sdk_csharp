@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DncSourceTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Rds for "RDS"
@@ -43,7 +50,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "GRYPHON")]
             Gryphon
         }
-
         /// <summary>
         /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
         /// </summary>

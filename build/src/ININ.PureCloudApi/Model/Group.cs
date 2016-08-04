@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StateEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Active for "active"
@@ -43,7 +50,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-
         /// <summary>
         /// Type of group.
         /// </summary>
@@ -51,6 +57,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Official for "official"
@@ -64,7 +77,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "social")]
             Social
         }
-
         /// <summary>
         /// Who can view this group
         /// </summary>
@@ -72,6 +84,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum VisibilityEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Public for "public"
@@ -91,7 +110,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "members")]
             Members
         }
-
         /// <summary>
         /// Active, inactive, or deleted state.
         /// </summary>

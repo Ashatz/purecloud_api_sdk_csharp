@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SystemTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Document for "DOCUMENT"
@@ -42,13 +49,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "RECORDING")]
             Recording
         }
-
         /// <summary>
         /// Gets or Sets UploadMethod
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum UploadMethodEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum SinglePut for "SINGLE_PUT"
@@ -62,13 +75,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "MULTIPART_POST")]
             MultipartPost
         }
-
         /// <summary>
         /// Gets or Sets SharingStatus
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SharingStatusEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum None for "NONE"
@@ -88,7 +107,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
-
         /// <summary>
         /// Gets or Sets SystemType
         /// </summary>

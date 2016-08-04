@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ReactionTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Hangup for "HANGUP"
@@ -48,7 +55,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PLAY_FILE")]
             PlayFile
         }
-
         /// <summary>
         /// Gets or Sets ReactionType
         /// </summary>

@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StateEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Active for "active"
@@ -42,7 +49,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
@@ -50,6 +56,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SkillEvaluationMethodEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum None for "NONE"
@@ -69,7 +82,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ALL")]
             All
         }
-
         /// <summary>
         /// Gets or Sets State
         /// </summary>

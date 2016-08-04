@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OrderEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Asc for "asc"
@@ -37,7 +44,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "desc")]
             Desc
         }
-
         /// <summary>
         /// Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart
         /// </summary>
@@ -45,6 +51,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OrderByEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Conversationstart for "conversationStart"
@@ -64,7 +77,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "segmentEnd")]
             Segmentend
         }
-
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending
         /// </summary>

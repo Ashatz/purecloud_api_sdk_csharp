@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Dimension for "dimension"
@@ -43,7 +50,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "metric")]
             Metric
         }
-
         /// <summary>
         /// Left hand side for dimension predicates
         /// </summary>
@@ -51,6 +57,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DimensionEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Conversationid for "conversationId"
@@ -328,7 +341,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "eventTime")]
             Eventtime
         }
-
         /// <summary>
         /// Left hand side for property predicates
         /// </summary>
@@ -336,6 +348,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PropertyTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Bool for "bool"
@@ -373,7 +392,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "uuid")]
             Uuid
         }
-
         /// <summary>
         /// Left hand side for metric predicates
         /// </summary>
@@ -381,6 +399,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MetricEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Tsegmentduration for "tSegmentDuration"
@@ -616,7 +641,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "oOffQueueUsers")]
             Ooffqueueusers
         }
-
         /// <summary>
         /// Optional operator, default is matches
         /// </summary>
@@ -624,6 +648,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OperatorEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Matches for "matches"
@@ -643,7 +674,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "notExists")]
             Notexists
         }
-
         /// <summary>
         /// Optional type, can usually be inferred
         /// </summary>

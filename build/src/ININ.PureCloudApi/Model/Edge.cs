@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StateEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Active for "active"
@@ -42,13 +49,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-
         /// <summary>
         /// Gets or Sets StatusCode
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusCodeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum New for "NEW"
@@ -116,13 +129,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "UNPAIRED")]
             Unpaired
         }
-
         /// <summary>
         /// Gets or Sets OnlineStatus
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OnlineStatusEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Online for "ONLINE"
@@ -136,7 +155,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
-
         /// <summary>
         /// Gets or Sets State
         /// </summary>

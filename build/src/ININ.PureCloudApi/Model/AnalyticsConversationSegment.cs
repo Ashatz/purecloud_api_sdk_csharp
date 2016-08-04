@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DisconnectTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Endpoint for "endpoint"
@@ -96,13 +103,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "forwardTransfer")]
             Forwardtransfer
         }
-
         /// <summary>
         /// Gets or Sets SegmentType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SegmentTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Unknown for "unknown"
@@ -170,7 +183,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "scheduled")]
             Scheduled
         }
-
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>

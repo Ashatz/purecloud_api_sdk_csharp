@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MediaTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Voice for "voice"
@@ -48,13 +55,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "callback")]
             Callback
         }
-
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DirectionEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Inbound for "inbound"
@@ -68,7 +81,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
-
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>

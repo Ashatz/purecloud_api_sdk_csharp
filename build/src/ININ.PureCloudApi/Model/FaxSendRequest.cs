@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ContentTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Applicationpdf for "application/pdf"
@@ -55,7 +62,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")]
             Applicationvndopenxmlformatsofficedocumentwordprocessingmldocument
         }
-
         /// <summary>
         /// The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored
         /// </summary>

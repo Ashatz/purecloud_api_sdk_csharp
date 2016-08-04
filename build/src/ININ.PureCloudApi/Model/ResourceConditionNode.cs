@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ConjunctionEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum And for "AND"
@@ -36,13 +43,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OR")]
             Or
         }
-
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OperatorEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Eq for "EQ"
@@ -80,7 +93,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "LT")]
             Lt
         }
-
         /// <summary>
         /// Gets or Sets Conjunction
         /// </summary>

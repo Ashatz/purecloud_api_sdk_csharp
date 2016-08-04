@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StateEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Alerting for "ALERTING"
@@ -72,13 +79,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NONE")]
             None
         }
-
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DisconnectTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Endpoint for "ENDPOINT"
@@ -158,7 +171,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SPAM")]
             Spam
         }
-
         /// <summary>
         /// Gets or Sets State
         /// </summary>

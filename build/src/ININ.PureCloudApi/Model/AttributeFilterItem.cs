@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OperatorEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum In for "IN"
@@ -78,7 +85,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CONTAINS")]
             Contains
         }
-
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>

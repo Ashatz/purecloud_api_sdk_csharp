@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StateEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Active for "active"
@@ -42,7 +49,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
-
         /// <summary>
         /// The certificate authorities type.  Managed certificate authorities are generated and maintained by Interactive Intelligence.  These are read-only and not modifiable by clients.  Remote authorities are customer managed.
         /// </summary>
@@ -50,6 +56,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Managed for "MANAGED"
@@ -63,13 +76,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "REMOTE")]
             Remote
         }
-
         /// <summary>
         /// Gets or Sets Services
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ServicesEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Sip for "SIP"
@@ -89,7 +108,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PROVISION_PHONE")]
             ProvisionPhone
         }
-
         /// <summary>
         /// Gets or Sets State
         /// </summary>

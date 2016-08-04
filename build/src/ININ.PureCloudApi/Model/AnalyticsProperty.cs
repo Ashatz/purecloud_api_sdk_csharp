@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PropertyTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Bool for "bool"
@@ -61,7 +68,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "uuid")]
             Uuid
         }
-
         /// <summary>
         /// Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match
         /// </summary>

@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum GroupByEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Conversationid for "conversationId"
@@ -300,13 +307,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "eventTime")]
             Eventtime
         }
-
         /// <summary>
         /// Gets or Sets Metrics
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MetricsEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Tsegmentduration for "tSegmentDuration"
@@ -542,7 +555,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "oOffQueueUsers")]
             Ooffqueueusers
         }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregationQuery" /> class.
         /// </summary>

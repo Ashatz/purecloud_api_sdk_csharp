@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SpeakToEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Destination for "DESTINATION"
@@ -43,7 +50,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "BOTH")]
             Both
         }
-
         /// <summary>
         /// Determines to whom the initiating participant is speaking.
         /// </summary>

@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ProviderTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Edge for "EDGE"
@@ -42,13 +49,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
-
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MediaTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Call for "CALL"
@@ -68,13 +81,19 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
-
         /// <summary>
         /// Gets or Sets FileState
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FileStateEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Archived for "ARCHIVED"
@@ -112,7 +131,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "UPLOADING")]
             Uploading
         }
-
         /// <summary>
         /// Gets or Sets ProviderType
         /// </summary>

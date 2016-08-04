@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FileStateEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Archived for "ARCHIVED"
@@ -61,7 +68,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "UPLOADING")]
             Uploading
         }
-
         /// <summary>
         /// The type of archive medium used. Example: CloudArchive
         /// </summary>
@@ -69,6 +75,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ArchiveMediumEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Cloudarchive for "CLOUDARCHIVE"
@@ -76,7 +89,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CLOUDARCHIVE")]
             Cloudarchive
         }
-
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>

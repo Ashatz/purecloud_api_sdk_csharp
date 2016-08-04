@@ -24,6 +24,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OperationalStatusEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Operational for "OPERATIONAL"
@@ -43,7 +50,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
-
         /// <summary>
         /// The status of the primary or secondary Edges assigned to the phone lines.
         /// </summary>
@@ -51,6 +57,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum EdgesStatusEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum InService for "IN_SERVICE"
@@ -76,7 +89,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NO_EDGES")]
             NoEdges
         }
-
         /// <summary>
         /// The phone status's edge assignment type.
         /// </summary>
@@ -84,6 +96,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PhoneAssignmentToEdgeTypeEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Primary for "PRIMARY"
@@ -97,7 +116,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SECONDARY")]
             Secondary
         }
-
         /// <summary>
         /// The Operational Status of this phone
         /// </summary>

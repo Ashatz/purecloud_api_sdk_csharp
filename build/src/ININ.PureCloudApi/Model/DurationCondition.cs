@@ -23,6 +23,13 @@ namespace ININ.PureCloudApi.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DurationTargetEnum
         {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
             
             /// <summary>
             /// Enum Duration for "DURATION"
@@ -36,7 +43,6 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DURATION_RANGE")]
             DurationRange
         }
-
         /// <summary>
         /// Gets or Sets DurationTarget
         /// </summary>
