@@ -199,7 +199,8 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            var response = instance.GetUserIdQueues(userId, pageSize, pageNumber);
+            bool? joined = null; // TODO: replace null with proper value
+            var response = instance.GetUserIdQueues(userId, pageSize, pageNumber, joined);
             Assert.IsInstanceOf<UserQueueEntityListing> (response, "response is UserQueueEntityListing");
         }
         

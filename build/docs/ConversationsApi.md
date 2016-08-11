@@ -358,7 +358,7 @@ namespace Example
 
 <a name="getcallbackscallbackidparticipantsparticipantidwrapup"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetCallbacksCallbackIdParticipantsParticipantIdWrapup (string callbackId, string participantId, bool? provisional = null)
+## [**Wrapup**](Wrapup.html) GetCallbacksCallbackIdParticipantsParticipantIdWrapup (string callbackId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
 
@@ -390,7 +390,7 @@ namespace Example
             try
             {
                 // Get the wrap-up for this conversation participant. 
-                WrapupCode result = apiInstance.GetCallbacksCallbackIdParticipantsParticipantIdWrapup(callbackId, participantId, provisional);
+                Wrapup result = apiInstance.GetCallbacksCallbackIdParticipantsParticipantIdWrapup(callbackId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -414,7 +414,7 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**Wrapup**](Wrapup.html)
 
 <a name="getcallbackscallbackidparticipantsparticipantidwrapupcodes"></a>
 
@@ -583,7 +583,7 @@ namespace Example
 
 <a name="getcallscallidparticipantsparticipantidwrapup"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetCallsCallIdParticipantsParticipantIdWrapup (string callId, string participantId, bool? provisional = null)
+## [**Wrapup**](Wrapup.html) GetCallsCallIdParticipantsParticipantIdWrapup (string callId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
 
@@ -615,7 +615,7 @@ namespace Example
             try
             {
                 // Get the wrap-up for this conversation participant. 
-                WrapupCode result = apiInstance.GetCallsCallIdParticipantsParticipantIdWrapup(callId, participantId, provisional);
+                Wrapup result = apiInstance.GetCallsCallIdParticipantsParticipantIdWrapup(callId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -639,7 +639,7 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**Wrapup**](Wrapup.html)
 
 <a name="getcallscallidparticipantsparticipantidwrapupcodes"></a>
 
@@ -919,7 +919,7 @@ namespace Example
 
 <a name="getchatschatidparticipantsparticipantidwrapup"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetChatsChatIdParticipantsParticipantIdWrapup (string chatId, string participantId, bool? provisional = null)
+## [**Wrapup**](Wrapup.html) GetChatsChatIdParticipantsParticipantIdWrapup (string chatId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
 
@@ -951,7 +951,7 @@ namespace Example
             try
             {
                 // Get the wrap-up for this conversation participant. 
-                WrapupCode result = apiInstance.GetChatsChatIdParticipantsParticipantIdWrapup(chatId, participantId, provisional);
+                Wrapup result = apiInstance.GetChatsChatIdParticipantsParticipantIdWrapup(chatId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -975,7 +975,7 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**Wrapup**](Wrapup.html)
 
 <a name="getchatschatidparticipantsparticipantidwrapupcodes"></a>
 
@@ -1153,7 +1153,7 @@ namespace Example
 
 <a name="getconversationidparticipantsparticipantidwrapupcodes"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetConversationIdParticipantsParticipantIdWrapupcodes (string conversationId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationIdParticipantsParticipantIdWrapupcodes (string conversationId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -1184,7 +1184,7 @@ namespace Example
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                WrapupCode result = apiInstance.GetConversationIdParticipantsParticipantIdWrapupcodes(conversationId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetConversationIdParticipantsParticipantIdWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1207,7 +1207,7 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode.html)
 
 <a name="getconversations"></a>
 
@@ -1600,7 +1600,7 @@ namespace Example
 
 <a name="getemailsemailidparticipantsparticipantidwrapup"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetEmailsEmailIdParticipantsParticipantIdWrapup (string emailId, string participantId, bool? provisional = null)
+## [**Wrapup**](Wrapup.html) GetEmailsEmailIdParticipantsParticipantIdWrapup (string emailId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
 
@@ -1632,7 +1632,7 @@ namespace Example
             try
             {
                 // Get the wrap-up for this conversation participant. 
-                WrapupCode result = apiInstance.GetEmailsEmailIdParticipantsParticipantIdWrapup(emailId, participantId, provisional);
+                Wrapup result = apiInstance.GetEmailsEmailIdParticipantsParticipantIdWrapup(emailId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1656,7 +1656,7 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**Wrapup**](Wrapup.html)
 
 <a name="getemailsemailidparticipantsparticipantidwrapupcodes"></a>
 

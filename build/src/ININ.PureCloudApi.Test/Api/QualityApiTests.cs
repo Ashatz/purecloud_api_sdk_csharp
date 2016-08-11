@@ -126,12 +126,12 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
+            List<Object> expand = null; // TODO: replace null with proper value
             string nextPage = null; // TODO: replace null with proper value
             string previousPage = null; // TODO: replace null with proper value
             DateTime? startTime = null; // TODO: replace null with proper value
             DateTime? endTime = null; // TODO: replace null with proper value
-            List<string> agentUserId = null; // TODO: replace null with proper value
+            List<Object> agentUserId = null; // TODO: replace null with proper value
             string evaluatorUserId = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
             string group = null; // TODO: replace null with proper value
@@ -150,7 +150,7 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
+            List<Object> expand = null; // TODO: replace null with proper value
             string nextPage = null; // TODO: replace null with proper value
             string previousPage = null; // TODO: replace null with proper value
             string conversationId = null; // TODO: replace null with proper value
@@ -184,7 +184,7 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
+            List<Object> expand = null; // TODO: replace null with proper value
             string nextPage = null; // TODO: replace null with proper value
             string previousPage = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
@@ -217,7 +217,7 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
+            List<Object> expand = null; // TODO: replace null with proper value
             string nextPage = null; // TODO: replace null with proper value
             string previousPage = null; // TODO: replace null with proper value
             string conversationId = null; // TODO: replace null with proper value
@@ -226,7 +226,7 @@ namespace ININ.PureCloudApi.Test
             string queueId = null; // TODO: replace null with proper value
             string startTime = null; // TODO: replace null with proper value
             string endTime = null; // TODO: replace null with proper value
-            List<string> evaluationState = null; // TODO: replace null with proper value
+            List<Object> evaluationState = null; // TODO: replace null with proper value
             bool? isReleased = null; // TODO: replace null with proper value
             bool? agentHasRead = null; // TODO: replace null with proper value
             bool? expandAnswerTotalScores = null; // TODO: replace null with proper value
@@ -245,13 +245,13 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
+            List<Object> expand = null; // TODO: replace null with proper value
             string nextPage = null; // TODO: replace null with proper value
             string previousPage = null; // TODO: replace null with proper value
             DateTime? startTime = null; // TODO: replace null with proper value
             DateTime? endTime = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
-            List<string> permission = null; // TODO: replace null with proper value
+            List<Object> permission = null; // TODO: replace null with proper value
             string group = null; // TODO: replace null with proper value
             var response = instance.GetEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group);
             Assert.IsInstanceOf<EvaluatorActivityEntityListing> (response, "response is EvaluatorActivityEntityListing");
@@ -311,7 +311,7 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
+            List<Object> expand = null; // TODO: replace null with proper value
             string nextPage = null; // TODO: replace null with proper value
             string previousPage = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value

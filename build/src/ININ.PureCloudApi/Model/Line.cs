@@ -80,7 +80,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
         /// <param name="LoggedInUser">LoggedInUser.</param>
-        public Line(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, Object> Properties = null, UriReference EdgeGroup = null, UriReference Template = null, UriReference Site = null, UriReference LineBaseSettings = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null, UriReference LoggedInUser = null)
+        /// <param name="DefaultForUser">DefaultForUser.</param>
+        public Line(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, Object> Properties = null, UriReference EdgeGroup = null, UriReference Template = null, UriReference Site = null, UriReference LineBaseSettings = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null, UriReference LoggedInUser = null, UriReference DefaultForUser = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -108,6 +109,7 @@ namespace ININ.PureCloudApi.Model
             this.PrimaryEdge = PrimaryEdge;
             this.SecondaryEdge = SecondaryEdge;
             this.LoggedInUser = LoggedInUser;
+            this.DefaultForUser = DefaultForUser;
         }
         
         /// <summary>
@@ -205,6 +207,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="loggedInUser", EmitDefaultValue=false)]
         public UriReference LoggedInUser { get; set; }
         /// <summary>
+        /// Gets or Sets DefaultForUser
+        /// </summary>
+        [DataMember(Name="defaultForUser", EmitDefaultValue=false)]
+        public UriReference DefaultForUser { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -237,6 +244,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PrimaryEdge: ").Append(PrimaryEdge).Append("\n");
             sb.Append("  SecondaryEdge: ").Append(SecondaryEdge).Append("\n");
             sb.Append("  LoggedInUser: ").Append(LoggedInUser).Append("\n");
+            sb.Append("  DefaultForUser: ").Append(DefaultForUser).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -370,6 +378,11 @@ namespace ININ.PureCloudApi.Model
                     this.LoggedInUser.Equals(other.LoggedInUser)
                 ) &&
                 (
+                    this.DefaultForUser == other.DefaultForUser ||
+                    this.DefaultForUser != null &&
+                    this.DefaultForUser.Equals(other.DefaultForUser)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -425,6 +438,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.SecondaryEdge.GetHashCode();
                 if (this.LoggedInUser != null)
                     hash = hash * 59 + this.LoggedInUser.GetHashCode();
+                if (this.DefaultForUser != null)
+                    hash = hash * 59 + this.DefaultForUser.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

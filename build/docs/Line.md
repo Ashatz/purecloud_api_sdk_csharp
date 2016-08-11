@@ -26,6 +26,7 @@ title: Line
 | **PrimaryEdge** | [**Edge**](Edge.html) |  | [optional] |
 | **SecondaryEdge** | [**Edge**](Edge.html) |  | [optional] |
 | **LoggedInUser** | [**UriReference**](UriReference.html) |  | [optional] |
+| **DefaultForUser** | [**UriReference**](UriReference.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

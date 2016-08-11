@@ -291,14 +291,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CommandResponses'
         }
         /// <summary>
-        /// Test the property 'InheritPhoneTrunkBases'
-        /// </summary>
-        [Test]
-        public void InheritPhoneTrunkBasesTest()
-        {
-            // TODO: unit test for the property 'InheritPhoneTrunkBases'
-        }
-        /// <summary>
         /// Test the property 'InheritPhoneTrunkBasesIPv4'
         /// </summary>
         [Test]

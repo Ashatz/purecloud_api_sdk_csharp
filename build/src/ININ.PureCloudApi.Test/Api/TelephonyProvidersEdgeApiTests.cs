@@ -362,7 +362,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdLogicalinterfaces'
             string edgeId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdLogicalinterfaces(edgeId);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesEdgeIdLogicalinterfaces(edgeId, expand);
             Assert.IsInstanceOf<LogicalInterfaceEntityListing> (response, "response is LogicalInterfaceEntityListing");
         }
         
@@ -375,7 +376,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId'
             string edgeId = null; // TODO: replace null with proper value
             string interfaceId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId(edgeId, interfaceId);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId(edgeId, interfaceId, expand);
             Assert.IsInstanceOf<DomainLogicalInterface> (response, "response is DomainLogicalInterface");
         }
         
@@ -464,7 +466,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetProvidersEdgesEdgegroupsEdgegroupId'
             string edgeGroupId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgegroupsEdgegroupId(edgeGroupId);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesEdgegroupsEdgegroupId(edgeGroupId, expand);
             Assert.IsInstanceOf<EdgeGroup> (response, "response is EdgeGroup");
         }
         
@@ -723,12 +726,13 @@ namespace ININ.PureCloudApi.Test
             string webRtcUserId = null; // TODO: replace null with proper value
             string phoneBaseSettingsId = null; // TODO: replace null with proper value
             string linesLoggedInUserId = null; // TODO: replace null with proper value
+            string linesDefaultForUserId = null; // TODO: replace null with proper value
             string phoneHardwareId = null; // TODO: replace null with proper value
             string linesId = null; // TODO: replace null with proper value
             string linesName = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
             List<string> fields = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, phoneHardwareId, linesId, linesName, expand, fields);
+            var response = instance.GetProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, expand, fields);
             Assert.IsInstanceOf<PhoneEntityListing> (response, "response is PhoneEntityListing");
         }
         

@@ -552,8 +552,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>LogicalInterfaceEntityListing</returns>
-        LogicalInterfaceEntityListing GetProvidersEdgesEdgeIdLogicalinterfaces (string edgeId);
+        LogicalInterfaceEntityListing GetProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, List<string> expand = null);
 
         /// <summary>
         /// Get edge logical interfaces.
@@ -563,8 +564,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>ApiResponse of LogicalInterfaceEntityListing</returns>
-        ApiResponse<LogicalInterfaceEntityListing> GetProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId);
+        ApiResponse<LogicalInterfaceEntityListing> GetProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId, List<string> expand = null);
         /// <summary>
         /// Get an edge logical interface
         /// </summary>
@@ -574,8 +576,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>DomainLogicalInterface</returns>
-        DomainLogicalInterface GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId);
+        DomainLogicalInterface GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, List<string> expand = null);
 
         /// <summary>
         /// Get an edge logical interface
@@ -586,8 +589,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        ApiResponse<DomainLogicalInterface> GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId);
+        ApiResponse<DomainLogicalInterface> GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId, List<string> expand = null);
         /// <summary>
         /// Get an Edge logs job.
         /// </summary>
@@ -732,8 +736,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>EdgeGroup</returns>
-        EdgeGroup GetProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId);
+        EdgeGroup GetProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, List<string> expand = null);
 
         /// <summary>
         /// Get edge group.
@@ -743,8 +748,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
-        ApiResponse<EdgeGroup> GetProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId);
+        ApiResponse<EdgeGroup> GetProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId, List<string> expand = null);
         /// <summary>
         /// Get the edge version report.
         /// </summary>
@@ -1186,13 +1192,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
         /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
+        /// <param name="linesDefaultForUserId">Filter by lines.defaultForUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="linesId">Filter by lines.id (optional)</param>
         /// <param name="linesName">Filter by lines.name (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>PhoneEntityListing</returns>
-        PhoneEntityListing GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null);
+        PhoneEntityListing GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null);
 
         /// <summary>
         /// Get a list of Phone Instances
@@ -1209,13 +1216,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
         /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
+        /// <param name="linesDefaultForUserId">Filter by lines.defaultForUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="linesId">Filter by lines.id (optional)</param>
         /// <param name="linesName">Filter by lines.name (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of PhoneEntityListing</returns>
-        ApiResponse<PhoneEntityListing> GetProvidersEdgesPhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null);
+        ApiResponse<PhoneEntityListing> GetProvidersEdgesPhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null);
         /// <summary>
         /// Get a Phone by ID
         /// </summary>
@@ -3065,8 +3073,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of LogicalInterfaceEntityListing</returns>
-        System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetProvidersEdgesEdgeIdLogicalinterfacesAsync (string edgeId);
+        System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetProvidersEdgesEdgeIdLogicalinterfacesAsync (string edgeId, List<string> expand = null);
 
         /// <summary>
         /// Get edge logical interfaces.
@@ -3076,8 +3085,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (LogicalInterfaceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId, List<string> expand = null);
         /// <summary>
         /// Get an edge logical interface
         /// </summary>
@@ -3087,8 +3097,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        System.Threading.Tasks.Task<DomainLogicalInterface> GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId);
+        System.Threading.Tasks.Task<DomainLogicalInterface> GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId, List<string> expand = null);
 
         /// <summary>
         /// Get an edge logical interface
@@ -3099,8 +3110,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId);
+        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId, List<string> expand = null);
         /// <summary>
         /// Get an Edge logs job.
         /// </summary>
@@ -3245,8 +3257,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>Task of EdgeGroup</returns>
-        System.Threading.Tasks.Task<EdgeGroup> GetProvidersEdgesEdgegroupsEdgegroupIdAsync (string edgeGroupId);
+        System.Threading.Tasks.Task<EdgeGroup> GetProvidersEdgesEdgegroupsEdgegroupIdAsync (string edgeGroupId, List<string> expand = null);
 
         /// <summary>
         /// Get edge group.
@@ -3256,8 +3269,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> GetProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId);
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> GetProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId, List<string> expand = null);
         /// <summary>
         /// Get the edge version report.
         /// </summary>
@@ -3699,13 +3713,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
         /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
+        /// <param name="linesDefaultForUserId">Filter by lines.defaultForUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="linesId">Filter by lines.id (optional)</param>
         /// <param name="linesName">Filter by lines.name (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of PhoneEntityListing</returns>
-        System.Threading.Tasks.Task<PhoneEntityListing> GetProvidersEdgesPhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null);
+        System.Threading.Tasks.Task<PhoneEntityListing> GetProvidersEdgesPhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null);
 
         /// <summary>
         /// Get a list of Phone Instances
@@ -3722,13 +3737,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
         /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
+        /// <param name="linesDefaultForUserId">Filter by lines.defaultForUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="linesId">Filter by lines.id (optional)</param>
         /// <param name="linesName">Filter by lines.name (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (PhoneEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetProvidersEdgesPhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null);
+        System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetProvidersEdgesPhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null);
         /// <summary>
         /// Get a Phone by ID
         /// </summary>
@@ -8863,10 +8879,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>LogicalInterfaceEntityListing</returns>
-        public LogicalInterfaceEntityListing GetProvidersEdgesEdgeIdLogicalinterfaces (string edgeId)
+        public LogicalInterfaceEntityListing GetProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, List<string> expand = null)
         {
-             ApiResponse<LogicalInterfaceEntityListing> localVarResponse = GetProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo(edgeId);
+             ApiResponse<LogicalInterfaceEntityListing> localVarResponse = GetProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo(edgeId, expand);
              return localVarResponse.Data;
         }
 
@@ -8875,8 +8892,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>ApiResponse of LogicalInterfaceEntityListing</returns>
-        public ApiResponse< LogicalInterfaceEntityListing > GetProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId)
+        public ApiResponse< LogicalInterfaceEntityListing > GetProvidersEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId, List<string> expand = null)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -8908,6 +8926,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8939,10 +8958,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of LogicalInterfaceEntityListing</returns>
-        public async System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetProvidersEdgesEdgeIdLogicalinterfacesAsync (string edgeId)
+        public async System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetProvidersEdgesEdgeIdLogicalinterfacesAsync (string edgeId, List<string> expand = null)
         {
-             ApiResponse<LogicalInterfaceEntityListing> localVarResponse = await GetProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo(edgeId);
+             ApiResponse<LogicalInterfaceEntityListing> localVarResponse = await GetProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo(edgeId, expand);
              return localVarResponse.Data;
 
         }
@@ -8952,8 +8972,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (LogicalInterfaceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetProvidersEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId, List<string> expand = null)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -8985,6 +9006,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -9017,10 +9039,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>DomainLogicalInterface</returns>
-        public DomainLogicalInterface GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId)
+        public DomainLogicalInterface GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, List<string> expand = null)
         {
-             ApiResponse<DomainLogicalInterface> localVarResponse = GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo(edgeId, interfaceId);
+             ApiResponse<DomainLogicalInterface> localVarResponse = GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo(edgeId, interfaceId, expand);
              return localVarResponse.Data;
         }
 
@@ -9030,8 +9053,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        public ApiResponse< DomainLogicalInterface > GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId)
+        public ApiResponse< DomainLogicalInterface > GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId, List<string> expand = null)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -9067,6 +9091,7 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
             if (interfaceId != null) localVarPathParams.Add("interfaceId", Configuration.ApiClient.ParameterToString(interfaceId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -9099,10 +9124,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        public async System.Threading.Tasks.Task<DomainLogicalInterface> GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId)
+        public async System.Threading.Tasks.Task<DomainLogicalInterface> GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId, List<string> expand = null)
         {
-             ApiResponse<DomainLogicalInterface> localVarResponse = await GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo(edgeId, interfaceId);
+             ApiResponse<DomainLogicalInterface> localVarResponse = await GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo(edgeId, interfaceId, expand);
              return localVarResponse.Data;
 
         }
@@ -9113,8 +9139,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
+        /// <param name="expand">Field to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId, List<string> expand = null)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -9150,6 +9177,7 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
             if (interfaceId != null) localVarPathParams.Add("interfaceId", Configuration.ApiClient.ParameterToString(interfaceId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10135,10 +10163,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>EdgeGroup</returns>
-        public EdgeGroup GetProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId)
+        public EdgeGroup GetProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, List<string> expand = null)
         {
-             ApiResponse<EdgeGroup> localVarResponse = GetProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo(edgeGroupId);
+             ApiResponse<EdgeGroup> localVarResponse = GetProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo(edgeGroupId, expand);
              return localVarResponse.Data;
         }
 
@@ -10147,8 +10176,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
-        public ApiResponse< EdgeGroup > GetProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId)
+        public ApiResponse< EdgeGroup > GetProvidersEdgesEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId, List<string> expand = null)
         {
             // verify the required parameter 'edgeGroupId' is set
             if (edgeGroupId == null)
@@ -10180,6 +10210,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (edgeGroupId != null) localVarPathParams.Add("edgeGroupId", Configuration.ApiClient.ParameterToString(edgeGroupId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10211,10 +10242,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>Task of EdgeGroup</returns>
-        public async System.Threading.Tasks.Task<EdgeGroup> GetProvidersEdgesEdgegroupsEdgegroupIdAsync (string edgeGroupId)
+        public async System.Threading.Tasks.Task<EdgeGroup> GetProvidersEdgesEdgegroupsEdgegroupIdAsync (string edgeGroupId, List<string> expand = null)
         {
-             ApiResponse<EdgeGroup> localVarResponse = await GetProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo(edgeGroupId);
+             ApiResponse<EdgeGroup> localVarResponse = await GetProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo(edgeGroupId, expand);
              return localVarResponse.Data;
 
         }
@@ -10224,8 +10256,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="expand">Fields to expand in the response (optional)</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> GetProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> GetProvidersEdgesEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId, List<string> expand = null)
         {
             // verify the required parameter 'edgeGroupId' is set
             if (edgeGroupId == null)
@@ -10257,6 +10290,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (edgeGroupId != null) localVarPathParams.Add("edgeGroupId", Configuration.ApiClient.ParameterToString(edgeGroupId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -13139,15 +13173,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
         /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
+        /// <param name="linesDefaultForUserId">Filter by lines.defaultForUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="linesId">Filter by lines.id (optional)</param>
         /// <param name="linesName">Filter by lines.name (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>PhoneEntityListing</returns>
-        public PhoneEntityListing GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
+        public PhoneEntityListing GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
         {
-             ApiResponse<PhoneEntityListing> localVarResponse = GetProvidersEdgesPhonesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, phoneHardwareId, linesId, linesName, expand, fields);
+             ApiResponse<PhoneEntityListing> localVarResponse = GetProvidersEdgesPhonesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, expand, fields);
              return localVarResponse.Data;
         }
 
@@ -13163,13 +13198,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
         /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
+        /// <param name="linesDefaultForUserId">Filter by lines.defaultForUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="linesId">Filter by lines.id (optional)</param>
         /// <param name="linesName">Filter by lines.name (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>ApiResponse of PhoneEntityListing</returns>
-        public ApiResponse< PhoneEntityListing > GetProvidersEdgesPhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
+        public ApiResponse< PhoneEntityListing > GetProvidersEdgesPhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/phones";
@@ -13205,6 +13241,7 @@ namespace ININ.PureCloudApi.Api
             if (webRtcUserId != null) localVarQueryParams.Add("webRtcUser.id", Configuration.ApiClient.ParameterToString(webRtcUserId)); // query parameter
             if (phoneBaseSettingsId != null) localVarQueryParams.Add("phoneBaseSettings.id", Configuration.ApiClient.ParameterToString(phoneBaseSettingsId)); // query parameter
             if (linesLoggedInUserId != null) localVarQueryParams.Add("lines.loggedInUser.id", Configuration.ApiClient.ParameterToString(linesLoggedInUserId)); // query parameter
+            if (linesDefaultForUserId != null) localVarQueryParams.Add("lines.defaultForUser.id", Configuration.ApiClient.ParameterToString(linesDefaultForUserId)); // query parameter
             if (phoneHardwareId != null) localVarQueryParams.Add("phone_hardwareId", Configuration.ApiClient.ParameterToString(phoneHardwareId)); // query parameter
             if (linesId != null) localVarQueryParams.Add("lines.id", Configuration.ApiClient.ParameterToString(linesId)); // query parameter
             if (linesName != null) localVarQueryParams.Add("lines.name", Configuration.ApiClient.ParameterToString(linesName)); // query parameter
@@ -13248,15 +13285,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
         /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
+        /// <param name="linesDefaultForUserId">Filter by lines.defaultForUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="linesId">Filter by lines.id (optional)</param>
         /// <param name="linesName">Filter by lines.name (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of PhoneEntityListing</returns>
-        public async System.Threading.Tasks.Task<PhoneEntityListing> GetProvidersEdgesPhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
+        public async System.Threading.Tasks.Task<PhoneEntityListing> GetProvidersEdgesPhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
         {
-             ApiResponse<PhoneEntityListing> localVarResponse = await GetProvidersEdgesPhonesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, phoneHardwareId, linesId, linesName, expand, fields);
+             ApiResponse<PhoneEntityListing> localVarResponse = await GetProvidersEdgesPhonesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, expand, fields);
              return localVarResponse.Data;
 
         }
@@ -13273,13 +13311,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="webRtcUserId">Filter by webRtcUser.id (optional)</param>
         /// <param name="phoneBaseSettingsId">Filter by phoneBaseSettings.id (optional)</param>
         /// <param name="linesLoggedInUserId">Filter by lines.loggedInUser.id (optional)</param>
+        /// <param name="linesDefaultForUserId">Filter by lines.defaultForUser.id (optional)</param>
         /// <param name="phoneHardwareId">Filter by phone_hardwareId (optional)</param>
         /// <param name="linesId">Filter by lines.id (optional)</param>
         /// <param name="linesName">Filter by lines.name (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="fields">Fields and properties to get, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (PhoneEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetProvidersEdgesPhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetProvidersEdgesPhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/phones";
@@ -13315,6 +13354,7 @@ namespace ININ.PureCloudApi.Api
             if (webRtcUserId != null) localVarQueryParams.Add("webRtcUser.id", Configuration.ApiClient.ParameterToString(webRtcUserId)); // query parameter
             if (phoneBaseSettingsId != null) localVarQueryParams.Add("phoneBaseSettings.id", Configuration.ApiClient.ParameterToString(phoneBaseSettingsId)); // query parameter
             if (linesLoggedInUserId != null) localVarQueryParams.Add("lines.loggedInUser.id", Configuration.ApiClient.ParameterToString(linesLoggedInUserId)); // query parameter
+            if (linesDefaultForUserId != null) localVarQueryParams.Add("lines.defaultForUser.id", Configuration.ApiClient.ParameterToString(linesDefaultForUserId)); // query parameter
             if (phoneHardwareId != null) localVarQueryParams.Add("phone_hardwareId", Configuration.ApiClient.ParameterToString(phoneHardwareId)); // query parameter
             if (linesId != null) localVarQueryParams.Add("lines.id", Configuration.ApiClient.ParameterToString(linesId)); // query parameter
             if (linesName != null) localVarQueryParams.Add("lines.name", Configuration.ApiClient.ParameterToString(linesName)); // query parameter

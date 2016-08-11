@@ -67,6 +67,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'QueueUtilizationDiagnostic'
         }
         /// <summary>
+        /// Test the property 'RuleSetDiagnostics'
+        /// </summary>
+        [Test]
+        public void RuleSetDiagnosticsTest()
+        {
+            // TODO: unit test for the property 'RuleSetDiagnostics'
+        }
+        /// <summary>
         /// Test the property 'OutstandingInteractionsCount'
         /// </summary>
         [Test]

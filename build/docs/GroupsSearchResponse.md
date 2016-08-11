@@ -16,7 +16,6 @@ title: GroupsSearchResponse
 | **NextPage** | **string** |  | [optional] |
 | **Types** | **List&lt;string&gt;** |  | [optional] |
 | **Results** | [**List&lt;Group&gt;**](Group.html) |  | [optional] |
-| **Aggregations** | [**List&lt;Group&gt;**](Group.html) |  | [optional] |
 {: class="table table-striped"}
 
 

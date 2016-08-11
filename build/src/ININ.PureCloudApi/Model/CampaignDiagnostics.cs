@@ -22,10 +22,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="CallableContacts">Campaign properties that can impact which contacts are callable.</param>
         /// <param name="QueueUtilizationDiagnostic">Information regarding the campaign&#39;s queue.</param>
-        public CampaignDiagnostics(CallableContactsDiagnostic CallableContacts = null, QueueUtilizationDiagnostic QueueUtilizationDiagnostic = null)
+        /// <param name="RuleSetDiagnostics">Information regarding the campaign&#39;s rule sets.</param>
+        public CampaignDiagnostics(CallableContactsDiagnostic CallableContacts = null, QueueUtilizationDiagnostic QueueUtilizationDiagnostic = null, List<RuleSetDiagnostic> RuleSetDiagnostics = null)
         {
             this.CallableContacts = CallableContacts;
             this.QueueUtilizationDiagnostic = QueueUtilizationDiagnostic;
+            this.RuleSetDiagnostics = RuleSetDiagnostics;
         }
         
         /// <summary>
@@ -40,6 +42,12 @@ namespace ININ.PureCloudApi.Model
         /// <value>Information regarding the campaign&#39;s queue</value>
         [DataMember(Name="queueUtilizationDiagnostic", EmitDefaultValue=false)]
         public QueueUtilizationDiagnostic QueueUtilizationDiagnostic { get; set; }
+        /// <summary>
+        /// Information regarding the campaign&#39;s rule sets
+        /// </summary>
+        /// <value>Information regarding the campaign&#39;s rule sets</value>
+        [DataMember(Name="ruleSetDiagnostics", EmitDefaultValue=false)]
+        public List<RuleSetDiagnostic> RuleSetDiagnostics { get; set; }
         /// <summary>
         /// Current number of outstanding interactions on the campaign
         /// </summary>
@@ -56,6 +64,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class CampaignDiagnostics {\n");
             sb.Append("  CallableContacts: ").Append(CallableContacts).Append("\n");
             sb.Append("  QueueUtilizationDiagnostic: ").Append(QueueUtilizationDiagnostic).Append("\n");
+            sb.Append("  RuleSetDiagnostics: ").Append(RuleSetDiagnostics).Append("\n");
             sb.Append("  OutstandingInteractionsCount: ").Append(OutstandingInteractionsCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -104,6 +113,11 @@ namespace ININ.PureCloudApi.Model
                     this.QueueUtilizationDiagnostic.Equals(other.QueueUtilizationDiagnostic)
                 ) &&
                 (
+                    this.RuleSetDiagnostics == other.RuleSetDiagnostics ||
+                    this.RuleSetDiagnostics != null &&
+                    this.RuleSetDiagnostics.SequenceEqual(other.RuleSetDiagnostics)
+                ) &&
+                (
                     this.OutstandingInteractionsCount == other.OutstandingInteractionsCount ||
                     this.OutstandingInteractionsCount != null &&
                     this.OutstandingInteractionsCount.Equals(other.OutstandingInteractionsCount)
@@ -125,6 +139,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CallableContacts.GetHashCode();
                 if (this.QueueUtilizationDiagnostic != null)
                     hash = hash * 59 + this.QueueUtilizationDiagnostic.GetHashCode();
+                if (this.RuleSetDiagnostics != null)
+                    hash = hash * 59 + this.RuleSetDiagnostics.GetHashCode();
                 if (this.OutstandingInteractionsCount != null)
                     hash = hash * 59 + this.OutstandingInteractionsCount.GetHashCode();
                 return hash;

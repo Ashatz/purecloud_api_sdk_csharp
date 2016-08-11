@@ -247,7 +247,7 @@ This endpoint does require any parameters.
 
 <a name="getroles"></a>
 
-## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, bool? userCount = null)
 
 Retrieve a list of all roles defined for the organization
 
@@ -275,10 +275,10 @@ namespace Example
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            var permission = new List<string>(); // List<string> |  (optional) 
+            var permission = new List<Object>(); // List<Object> |  (optional) 
             var userCount = true;  // bool? |  (optional)  (default to true)
 
             try
@@ -304,10 +304,10 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-| **permission** | [**List<string>**](string.html)|  | [optional]  |
+| **permission** | [**List<Object>**](Object.html)|  | [optional]  |
 | **userCount** | **bool?**|  | [optional] [default to true] |
 {: class="table table-striped"}
 

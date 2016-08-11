@@ -99,7 +99,7 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetSystempresences'
             var response = instance.GetSystempresences();
-            Assert.IsInstanceOf<SystemPresence> (response, "response is SystemPresence");
+            Assert.IsInstanceOf<List<SystemPresence>> (response, "response is List<SystemPresence>");
         }
         
         /// <summary>

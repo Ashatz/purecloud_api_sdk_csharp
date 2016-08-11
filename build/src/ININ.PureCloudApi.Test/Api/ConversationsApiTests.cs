@@ -127,7 +127,7 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             bool? provisional = null; // TODO: replace null with proper value
             var response = instance.GetCallbacksCallbackIdParticipantsParticipantIdWrapup(callbackId, participantId, provisional);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
         }
         
         /// <summary>
@@ -177,7 +177,7 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             bool? provisional = null; // TODO: replace null with proper value
             var response = instance.GetCallsCallIdParticipantsParticipantIdWrapup(callId, participantId, provisional);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
         }
         
         /// <summary>
@@ -252,7 +252,7 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             bool? provisional = null; // TODO: replace null with proper value
             var response = instance.GetChatsChatIdParticipantsParticipantIdWrapup(chatId, participantId, provisional);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
         }
         
         /// <summary>
@@ -304,7 +304,7 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             var response = instance.GetConversationIdParticipantsParticipantIdWrapupcodes(conversationId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
         /// <summary>
@@ -402,7 +402,7 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             bool? provisional = null; // TODO: replace null with proper value
             var response = instance.GetEmailsEmailIdParticipantsParticipantIdWrapup(emailId, participantId, provisional);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
         }
         
         /// <summary>

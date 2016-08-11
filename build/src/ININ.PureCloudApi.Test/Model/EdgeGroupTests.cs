@@ -155,14 +155,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'EdgeTrunkBaseAssignment'
         }
         /// <summary>
-        /// Test the property 'PhoneTrunkBaseAssignments'
-        /// </summary>
-        [Test]
-        public void PhoneTrunkBaseAssignmentsTest()
-        {
-            // TODO: unit test for the property 'PhoneTrunkBaseAssignments'
-        }
-        /// <summary>
         /// Test the property 'PhoneTrunkBases'
         /// </summary>
         [Test]

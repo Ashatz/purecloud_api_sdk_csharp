@@ -122,14 +122,6 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'Results'
         }
-        /// <summary>
-        /// Test the property 'Aggregations'
-        /// </summary>
-        [Test]
-        public void AggregationsTest()
-        {
-            // TODO: unit test for the property 'Aggregations'
-        }
 
     }
 

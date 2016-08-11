@@ -191,7 +191,7 @@ namespace Example
 
 <a name="getsystempresences"></a>
 
-## [**SystemPresence**](SystemPresence.html) GetSystempresences ()
+## [**List&lt;SystemPresence&gt;**](SystemPresence.html) GetSystempresences ()
 
 Get the list of SystemPresences
 
@@ -220,7 +220,7 @@ namespace Example
             try
             {
                 // Get the list of SystemPresences
-                SystemPresence result = apiInstance.GetSystempresences();
+                List&lt;SystemPresence&gt; result = apiInstance.GetSystempresences();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -238,7 +238,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**SystemPresence**](SystemPresence.html)
+[**List<SystemPresence>**](SystemPresence.html)
 
 <a name="getuseridpresencessourceid"></a>
 

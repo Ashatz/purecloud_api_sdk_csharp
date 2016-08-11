@@ -12,10 +12,10 @@ title: KeywordSet
 | **Description** | **string** |  | [optional] |
 | **Queue** | [**Queue**](Queue.html) |  | [optional] |
 | **Queues** | [**List&lt;Queue&gt;**](Queue.html) |  | [optional] |
-| **Language** | **string** |  | [optional] |
+| **Language** | **string** | Language code, such as &#39;en-US&#39; | |
 | **Agents** | [**List&lt;User&gt;**](User.html) |  | [optional] |
-| **Keywords** | [**List&lt;Keyword&gt;**](Keyword.html) |  | [optional] |
-| **ParticipantPurposes** | **List&lt;string&gt;** |  | [optional] |
+| **Keywords** | [**List&lt;Keyword&gt;**](Keyword.html) | The list of keywords to be used for keyword spotting. | |
+| **ParticipantPurposes** | **List&lt;string&gt;** |  | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

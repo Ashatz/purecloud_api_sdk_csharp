@@ -145,7 +145,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>AgentActivityEntityListing</returns>
-        AgentActivityEntityListing GetAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        AgentActivityEntityListing GetAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -167,7 +167,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
-        ApiResponse<AgentActivityEntityListing> GetAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        ApiResponse<AgentActivityEntityListing> GetAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
         /// <summary>
         /// Get the list of calibrations
         /// </summary>
@@ -186,7 +186,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>CalibrationEntityListing</returns>
-        CalibrationEntityListing GetCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
+        CalibrationEntityListing GetCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
 
         /// <summary>
         /// Get the list of calibrations
@@ -206,7 +206,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>ApiResponse of CalibrationEntityListing</returns>
-        ApiResponse<CalibrationEntityListing> GetCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
+        ApiResponse<CalibrationEntityListing> GetCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
         /// <summary>
         /// Get a calibration by id.
         /// </summary>
@@ -247,7 +247,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>QualityAuditPage</returns>
-        QualityAuditPage GetConversationsConversationIdAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        QualityAuditPage GetConversationsConversationIdAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
 
         /// <summary>
         /// Get audits for conversation or recording
@@ -266,7 +266,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>ApiResponse of QualityAuditPage</returns>
-        ApiResponse<QualityAuditPage> GetConversationsConversationIdAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        ApiResponse<QualityAuditPage> GetConversationsConversationIdAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
         /// <summary>
         /// Get an evaluation
         /// </summary>
@@ -317,7 +317,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
         /// <param name="maximum">maximum (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
-        EvaluationEntityListing GetEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
+        EvaluationEntityListing GetEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -344,7 +344,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
         /// <param name="maximum">maximum (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        ApiResponse<EvaluationEntityListing> GetEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
+        ApiResponse<EvaluationEntityListing> GetEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
         /// <summary>
         /// Get an evaluator activity
         /// </summary>
@@ -364,7 +364,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>EvaluatorActivityEntityListing</returns>
-        EvaluatorActivityEntityListing GetEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        EvaluatorActivityEntityListing GetEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -385,7 +385,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
-        ApiResponse<EvaluatorActivityEntityListing> GetEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        ApiResponse<EvaluatorActivityEntityListing> GetEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null);
         /// <summary>
         /// Get the list of evaluation forms
         /// </summary>
@@ -480,7 +480,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <returns>KeywordSetEntityListing</returns>
-        KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null);
+        KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null);
 
         /// <summary>
         /// Get the list of keyword sets
@@ -497,7 +497,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <returns>ApiResponse of KeywordSetEntityListing</returns>
-        ApiResponse<KeywordSetEntityListing> GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null);
+        ApiResponse<KeywordSetEntityListing> GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null);
         /// <summary>
         /// Get a keywordSet by id.
         /// </summary>
@@ -970,7 +970,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
-        System.Threading.Tasks.Task<AgentActivityEntityListing> GetAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        System.Threading.Tasks.Task<AgentActivityEntityListing> GetAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -992,7 +992,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
         /// <summary>
         /// Get the list of calibrations
         /// </summary>
@@ -1011,7 +1011,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>Task of CalibrationEntityListing</returns>
-        System.Threading.Tasks.Task<CalibrationEntityListing> GetCalibrationsAsync (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
+        System.Threading.Tasks.Task<CalibrationEntityListing> GetCalibrationsAsync (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
 
         /// <summary>
         /// Get the list of calibrations
@@ -1031,7 +1031,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>Task of ApiResponse (CalibrationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
+        System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
         /// <summary>
         /// Get a calibration by id.
         /// </summary>
@@ -1072,7 +1072,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>Task of QualityAuditPage</returns>
-        System.Threading.Tasks.Task<QualityAuditPage> GetConversationsConversationIdAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        System.Threading.Tasks.Task<QualityAuditPage> GetConversationsConversationIdAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
 
         /// <summary>
         /// Get audits for conversation or recording
@@ -1091,7 +1091,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>Task of ApiResponse (QualityAuditPage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetConversationsConversationIdAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetConversationsConversationIdAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
         /// <summary>
         /// Get an evaluation
         /// </summary>
@@ -1142,7 +1142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
         /// <param name="maximum">maximum (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationEntityListing> GetEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
+        System.Threading.Tasks.Task<EvaluationEntityListing> GetEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -1169,7 +1169,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
         /// <param name="maximum">maximum (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
         /// <summary>
         /// Get an evaluator activity
         /// </summary>
@@ -1189,7 +1189,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of EvaluatorActivityEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluatorActivityEntityListing> GetEvaluatorsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        System.Threading.Tasks.Task<EvaluatorActivityEntityListing> GetEvaluatorsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -1210,7 +1210,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null);
         /// <summary>
         /// Get the list of evaluation forms
         /// </summary>
@@ -1305,7 +1305,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <returns>Task of KeywordSetEntityListing</returns>
-        System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null);
+        System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null);
 
         /// <summary>
         /// Get the list of keyword sets
@@ -1322,7 +1322,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null);
         /// <summary>
         /// Get a keywordSet by id.
         /// </summary>
@@ -2562,7 +2562,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>AgentActivityEntityListing</returns>
-        public AgentActivityEntityListing GetAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public AgentActivityEntityListing GetAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
              ApiResponse<AgentActivityEntityListing> localVarResponse = GetAgentsActivityWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
              return localVarResponse.Data;
@@ -2585,7 +2585,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
-        public ApiResponse< AgentActivityEntityListing > GetAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public ApiResponse< AgentActivityEntityListing > GetAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
 
             var localVarPath = "/api/v2/quality/agents/activity";
@@ -2668,7 +2668,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
-        public async System.Threading.Tasks.Task<AgentActivityEntityListing> GetAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public async System.Threading.Tasks.Task<AgentActivityEntityListing> GetAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
              ApiResponse<AgentActivityEntityListing> localVarResponse = await GetAgentsActivityAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
              return localVarResponse.Data;
@@ -2692,7 +2692,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
 
             var localVarPath = "/api/v2/quality/agents/activity";
@@ -2773,7 +2773,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>CalibrationEntityListing</returns>
-        public CalibrationEntityListing GetCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
+        public CalibrationEntityListing GetCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         {
              ApiResponse<CalibrationEntityListing> localVarResponse = GetCalibrationsWithHttpInfo(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime);
              return localVarResponse.Data;
@@ -2794,7 +2794,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>ApiResponse of CalibrationEntityListing</returns>
-        public ApiResponse< CalibrationEntityListing > GetCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
+        public ApiResponse< CalibrationEntityListing > GetCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         {
             // verify the required parameter 'calibratorId' is set
             if (calibratorId == null)
@@ -2876,7 +2876,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>Task of CalibrationEntityListing</returns>
-        public async System.Threading.Tasks.Task<CalibrationEntityListing> GetCalibrationsAsync (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
+        public async System.Threading.Tasks.Task<CalibrationEntityListing> GetCalibrationsAsync (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         {
              ApiResponse<CalibrationEntityListing> localVarResponse = await GetCalibrationsAsyncWithHttpInfo(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime);
              return localVarResponse.Data;
@@ -2898,7 +2898,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>Task of ApiResponse (CalibrationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         {
             // verify the required parameter 'calibratorId' is set
             if (calibratorId == null)
@@ -3144,7 +3144,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>QualityAuditPage</returns>
-        public QualityAuditPage GetConversationsConversationIdAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public QualityAuditPage GetConversationsConversationIdAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
              ApiResponse<QualityAuditPage> localVarResponse = GetConversationsConversationIdAuditsWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
              return localVarResponse.Data;
@@ -3164,7 +3164,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>ApiResponse of QualityAuditPage</returns>
-        public ApiResponse< QualityAuditPage > GetConversationsConversationIdAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public ApiResponse< QualityAuditPage > GetConversationsConversationIdAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -3244,7 +3244,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>Task of QualityAuditPage</returns>
-        public async System.Threading.Tasks.Task<QualityAuditPage> GetConversationsConversationIdAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public async System.Threading.Tasks.Task<QualityAuditPage> GetConversationsConversationIdAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
              ApiResponse<QualityAuditPage> localVarResponse = await GetConversationsConversationIdAuditsAsyncWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
              return localVarResponse.Data;
@@ -3265,7 +3265,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>Task of ApiResponse (QualityAuditPage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetConversationsConversationIdAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetConversationsConversationIdAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -3524,7 +3524,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
         /// <param name="maximum">maximum (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
-        public EvaluationEntityListing GetEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
+        public EvaluationEntityListing GetEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
         {
              ApiResponse<EvaluationEntityListing> localVarResponse = GetEvaluationsQueryWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum);
              return localVarResponse.Data;
@@ -3552,7 +3552,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
         /// <param name="maximum">maximum (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        public ApiResponse< EvaluationEntityListing > GetEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
+        public ApiResponse< EvaluationEntityListing > GetEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
         {
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -3645,7 +3645,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
         /// <param name="maximum">maximum (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
+        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
         {
              ApiResponse<EvaluationEntityListing> localVarResponse = await GetEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum);
              return localVarResponse.Data;
@@ -3674,7 +3674,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
         /// <param name="maximum">maximum (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
         {
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -3761,7 +3761,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>EvaluatorActivityEntityListing</returns>
-        public EvaluatorActivityEntityListing GetEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public EvaluatorActivityEntityListing GetEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null)
         {
              ApiResponse<EvaluatorActivityEntityListing> localVarResponse = GetEvaluatorsActivityWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group);
              return localVarResponse.Data;
@@ -3783,7 +3783,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
-        public ApiResponse< EvaluatorActivityEntityListing > GetEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public ApiResponse< EvaluatorActivityEntityListing > GetEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null)
         {
 
             var localVarPath = "/api/v2/quality/evaluators/activity";
@@ -3864,7 +3864,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of EvaluatorActivityEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluatorActivityEntityListing> GetEvaluatorsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public async System.Threading.Tasks.Task<EvaluatorActivityEntityListing> GetEvaluatorsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null)
         {
              ApiResponse<EvaluatorActivityEntityListing> localVarResponse = await GetEvaluatorsActivityAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group);
              return localVarResponse.Data;
@@ -3887,7 +3887,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null)
         {
 
             var localVarPath = "/api/v2/quality/evaluators/activity";
@@ -4465,7 +4465,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <returns>KeywordSetEntityListing</returns>
-        public KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        public KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null)
         {
              ApiResponse<KeywordSetEntityListing> localVarResponse = GetKeywordsetsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name);
              return localVarResponse.Data;
@@ -4483,7 +4483,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <returns>ApiResponse of KeywordSetEntityListing</returns>
-        public ApiResponse< KeywordSetEntityListing > GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        public ApiResponse< KeywordSetEntityListing > GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null)
         {
 
             var localVarPath = "/api/v2/quality/keywordsets";
@@ -4556,7 +4556,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <returns>Task of KeywordSetEntityListing</returns>
-        public async System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        public async System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null)
         {
              ApiResponse<KeywordSetEntityListing> localVarResponse = await GetKeywordsetsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name);
              return localVarResponse.Data;
@@ -4575,7 +4575,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null)
         {
 
             var localVarPath = "/api/v2/quality/keywordsets";

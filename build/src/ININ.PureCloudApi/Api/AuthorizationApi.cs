@@ -114,7 +114,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"> (optional)</param>
         /// <param name="userCount"> (optional, default to true)</param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        OrganizationRoleEntityListing GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null);
+        OrganizationRoleEntityListing GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, bool? userCount = null);
 
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -132,7 +132,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"> (optional)</param>
         /// <param name="userCount"> (optional, default to true)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        ApiResponse<OrganizationRoleEntityListing> GetRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null);
+        ApiResponse<OrganizationRoleEntityListing> GetRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, bool? userCount = null);
         /// <summary>
         /// Get an org role to default role comparison comparison
         /// </summary>
@@ -503,7 +503,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"> (optional)</param>
         /// <param name="userCount"> (optional, default to true)</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null);
+        System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, bool? userCount = null);
 
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -521,7 +521,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"> (optional)</param>
         /// <param name="userCount"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, bool? userCount = null);
         /// <summary>
         /// Get an org role to default role comparison comparison
         /// </summary>
@@ -1489,7 +1489,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"> (optional)</param>
         /// <param name="userCount"> (optional, default to true)</param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        public OrganizationRoleEntityListing GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
+        public OrganizationRoleEntityListing GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, bool? userCount = null)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = GetRolesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, userCount);
              return localVarResponse.Data;
@@ -1508,7 +1508,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"> (optional)</param>
         /// <param name="userCount"> (optional, default to true)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        public ApiResponse< OrganizationRoleEntityListing > GetRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
+        public ApiResponse< OrganizationRoleEntityListing > GetRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, bool? userCount = null)
         {
 
             var localVarPath = "/api/v2/authorization/roles";
@@ -1583,7 +1583,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"> (optional)</param>
         /// <param name="userCount"> (optional, default to true)</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
+        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, bool? userCount = null)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = await GetRolesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, userCount);
              return localVarResponse.Data;
@@ -1603,7 +1603,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"> (optional)</param>
         /// <param name="userCount"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, bool? userCount = null)
         {
 
             var localVarPath = "/api/v2/authorization/roles";

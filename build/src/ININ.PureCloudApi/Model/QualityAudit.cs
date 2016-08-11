@@ -23,19 +23,19 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
         /// <param name="Timestamp">Timestamp.</param>
-        /// <param name="Entity">Entity.</param>
         /// <param name="Level">Level.</param>
+        /// <param name="Entity">Entity.</param>
         /// <param name="Action">Action.</param>
         /// <param name="Status">Status.</param>
         /// <param name="Changes">Changes.</param>
         /// <param name="EntityType">EntityType.</param>
-        public QualityAudit(string Name = null, User User = null, string Timestamp = null, AuditEntity Entity = null, string Level = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
+        public QualityAudit(string Name = null, User User = null, string Timestamp = null, string Level = null, AuditEntity Entity = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
         {
             this.Name = Name;
             this.User = User;
             this.Timestamp = Timestamp;
-            this.Entity = Entity;
             this.Level = Level;
+            this.Entity = Entity;
             this.Action = Action;
             this.Status = Status;
             this.Changes = Changes;
@@ -64,15 +64,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public string Timestamp { get; set; }
         /// <summary>
-        /// Gets or Sets Entity
-        /// </summary>
-        [DataMember(Name="entity", EmitDefaultValue=false)]
-        public AuditEntity Entity { get; set; }
-        /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public string Level { get; set; }
+        /// <summary>
+        /// Gets or Sets Entity
+        /// </summary>
+        [DataMember(Name="entity", EmitDefaultValue=false)]
+        public AuditEntity Entity { get; set; }
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
@@ -111,8 +111,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
-            sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
+            sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Changes: ").Append(Changes).Append("\n");
@@ -175,14 +175,14 @@ namespace ININ.PureCloudApi.Model
                     this.Timestamp.Equals(other.Timestamp)
                 ) &&
                 (
-                    this.Entity == other.Entity ||
-                    this.Entity != null &&
-                    this.Entity.Equals(other.Entity)
-                ) &&
-                (
                     this.Level == other.Level ||
                     this.Level != null &&
                     this.Level.Equals(other.Level)
+                ) &&
+                (
+                    this.Entity == other.Entity ||
+                    this.Entity != null &&
+                    this.Entity.Equals(other.Entity)
                 ) &&
                 (
                     this.Action == other.Action ||
@@ -230,10 +230,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.User.GetHashCode();
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
-                if (this.Entity != null)
-                    hash = hash * 59 + this.Entity.GetHashCode();
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
+                if (this.Entity != null)
+                    hash = hash * 59 + this.Entity.GetHashCode();
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
                 if (this.Status != null)

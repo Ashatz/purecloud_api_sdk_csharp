@@ -16,7 +16,6 @@ title: UsersSearchResponse
 | **NextPage** | **string** |  | [optional] |
 | **Types** | **List&lt;string&gt;** |  | [optional] |
 | **Results** | [**List&lt;User&gt;**](User.html) |  | [optional] |
-| **Aggregations** | [**List&lt;User&gt;**](User.html) |  | [optional] |
 {: class="table table-striped"}
 
 

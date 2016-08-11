@@ -666,7 +666,7 @@ namespace Example
 
 <a name="getuseridqueues"></a>
 
-## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetUserIdQueues (string userId, int? pageSize = null, int? pageNumber = null)
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetUserIdQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
 
 Get queues for user
 
@@ -694,11 +694,12 @@ namespace Example
             var userId = userId_example;  // string | User ID
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var joined = true;  // bool? | Is joined to the queue (optional)  (default to true)
 
             try
             {
                 // Get queues for user
-                UserQueueEntityListing result = apiInstance.GetUserIdQueues(userId, pageSize, pageNumber);
+                UserQueueEntityListing result = apiInstance.GetUserIdQueues(userId, pageSize, pageNumber, joined);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -718,6 +719,7 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **joined** | **bool?**| Is joined to the queue | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type

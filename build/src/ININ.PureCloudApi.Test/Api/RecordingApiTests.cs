@@ -170,7 +170,7 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
+            List<Object> expand = null; // TODO: replace null with proper value
             string nextPage = null; // TODO: replace null with proper value
             string previousPage = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
@@ -215,7 +215,7 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
+            List<Object> expand = null; // TODO: replace null with proper value
             string nextPage = null; // TODO: replace null with proper value
             string previousPage = null; // TODO: replace null with proper value
             var response = instance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);

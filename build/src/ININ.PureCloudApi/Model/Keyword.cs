@@ -20,24 +20,61 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Keyword" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Keyword() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Keyword" /> class.
+        /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
-        /// <param name="Phrase">Phrase.</param>
-        /// <param name="Confidence">Confidence.</param>
-        /// <param name="AgentScoreModifier">AgentScoreModifier.</param>
-        /// <param name="CustomerScoreModifier">CustomerScoreModifier.</param>
+        /// <param name="Phrase">The word or phrase which is being looked for with speech recognition. (required).</param>
+        /// <param name="Confidence">A sensitivity threshold that can be increased to lower false positives or decreased to reduce false negatives. (required).</param>
+        /// <param name="AgentScoreModifier">A modifier to the evaluation score when the phrase is spotted in the agent channel (required).</param>
+        /// <param name="CustomerScoreModifier">A modifier to the evaluation score when the phrase is spotted in the customer channel (required).</param>
         /// <param name="AlternateSpellings">AlternateSpellings.</param>
-        /// <param name="SpotabilityIndex">SpotabilityIndex.</param>
+        /// <param name="SpotabilityIndex">A prediction of how easy it is to unambiguously spot the keyword within its language based on spelling..</param>
         /// <param name="MarginOfError">MarginOfError.</param>
         /// <param name="Pronunciation">Pronunciation.</param>
         public Keyword(string Id = null, string Name = null, string Phrase = null, int? Confidence = null, int? AgentScoreModifier = null, int? CustomerScoreModifier = null, List<string> AlternateSpellings = null, double? SpotabilityIndex = null, double? MarginOfError = null, string Pronunciation = null)
         {
+            // to ensure "Phrase" is required (not null)
+            if (Phrase == null)
+            {
+                throw new InvalidDataException("Phrase is a required property for Keyword and cannot be null");
+            }
+            else
+            {
+                this.Phrase = Phrase;
+            }
+            // to ensure "Confidence" is required (not null)
+            if (Confidence == null)
+            {
+                throw new InvalidDataException("Confidence is a required property for Keyword and cannot be null");
+            }
+            else
+            {
+                this.Confidence = Confidence;
+            }
+            // to ensure "AgentScoreModifier" is required (not null)
+            if (AgentScoreModifier == null)
+            {
+                throw new InvalidDataException("AgentScoreModifier is a required property for Keyword and cannot be null");
+            }
+            else
+            {
+                this.AgentScoreModifier = AgentScoreModifier;
+            }
+            // to ensure "CustomerScoreModifier" is required (not null)
+            if (CustomerScoreModifier == null)
+            {
+                throw new InvalidDataException("CustomerScoreModifier is a required property for Keyword and cannot be null");
+            }
+            else
+            {
+                this.CustomerScoreModifier = CustomerScoreModifier;
+            }
             this.Id = Id;
             this.Name = Name;
-            this.Phrase = Phrase;
-            this.Confidence = Confidence;
-            this.AgentScoreModifier = AgentScoreModifier;
-            this.CustomerScoreModifier = CustomerScoreModifier;
             this.AlternateSpellings = AlternateSpellings;
             this.SpotabilityIndex = SpotabilityIndex;
             this.MarginOfError = MarginOfError;
@@ -55,23 +92,27 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets Phrase
+        /// The word or phrase which is being looked for with speech recognition.
         /// </summary>
+        /// <value>The word or phrase which is being looked for with speech recognition.</value>
         [DataMember(Name="phrase", EmitDefaultValue=false)]
         public string Phrase { get; set; }
         /// <summary>
-        /// Gets or Sets Confidence
+        /// A sensitivity threshold that can be increased to lower false positives or decreased to reduce false negatives.
         /// </summary>
+        /// <value>A sensitivity threshold that can be increased to lower false positives or decreased to reduce false negatives.</value>
         [DataMember(Name="confidence", EmitDefaultValue=false)]
         public int? Confidence { get; set; }
         /// <summary>
-        /// Gets or Sets AgentScoreModifier
+        /// A modifier to the evaluation score when the phrase is spotted in the agent channel
         /// </summary>
+        /// <value>A modifier to the evaluation score when the phrase is spotted in the agent channel</value>
         [DataMember(Name="agentScoreModifier", EmitDefaultValue=false)]
         public int? AgentScoreModifier { get; set; }
         /// <summary>
-        /// Gets or Sets CustomerScoreModifier
+        /// A modifier to the evaluation score when the phrase is spotted in the customer channel
         /// </summary>
+        /// <value>A modifier to the evaluation score when the phrase is spotted in the customer channel</value>
         [DataMember(Name="customerScoreModifier", EmitDefaultValue=false)]
         public int? CustomerScoreModifier { get; set; }
         /// <summary>
@@ -80,8 +121,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="alternateSpellings", EmitDefaultValue=false)]
         public List<string> AlternateSpellings { get; set; }
         /// <summary>
-        /// Gets or Sets SpotabilityIndex
+        /// A prediction of how easy it is to unambiguously spot the keyword within its language based on spelling.
         /// </summary>
+        /// <value>A prediction of how easy it is to unambiguously spot the keyword within its language based on spelling.</value>
         [DataMember(Name="spotabilityIndex", EmitDefaultValue=false)]
         public double? SpotabilityIndex { get; set; }
         /// <summary>

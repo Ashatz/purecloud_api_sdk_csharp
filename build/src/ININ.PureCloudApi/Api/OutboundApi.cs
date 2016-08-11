@@ -1079,8 +1079,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
-        /// <returns>DialerContactEntityListing</returns>
-        DialerContactEntityListing PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null);
+        /// <returns>List&lt;DialerContact&gt;</returns>
+        List<DialerContact> PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null);
 
         /// <summary>
         /// Add contacts to a contact list.
@@ -1092,8 +1092,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
-        /// <returns>ApiResponse of DialerContactEntityListing</returns>
-        ApiResponse<DialerContactEntityListing> PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null);
+        /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
+        ApiResponse<List<DialerContact>> PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null);
         /// <summary>
         /// Initiate the export of a contact list.
         /// </summary>
@@ -2588,8 +2588,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
-        /// <returns>Task of DialerContactEntityListing</returns>
-        System.Threading.Tasks.Task<DialerContactEntityListing> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null);
+        /// <returns>Task of List&lt;DialerContact&gt;</returns>
+        System.Threading.Tasks.Task<List<DialerContact>> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null);
 
         /// <summary>
         /// Add contacts to a contact list.
@@ -2601,8 +2601,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
-        /// <returns>Task of ApiResponse (DialerContactEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DialerContactEntityListing>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null);
+        /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null);
         /// <summary>
         /// Initiate the export of a contact list.
         /// </summary>
@@ -10398,10 +10398,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
-        /// <returns>DialerContactEntityListing</returns>
-        public DialerContactEntityListing PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null)
+        /// <returns>List&lt;DialerContact&gt;</returns>
+        public List<DialerContact> PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null)
         {
-             ApiResponse<DialerContactEntityListing> localVarResponse = PostContactlistsContactlistIdContactsWithHttpInfo(contactListId, body, priority);
+             ApiResponse<List<DialerContact>> localVarResponse = PostContactlistsContactlistIdContactsWithHttpInfo(contactListId, body, priority);
              return localVarResponse.Data;
         }
 
@@ -10412,8 +10412,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
-        /// <returns>ApiResponse of DialerContactEntityListing</returns>
-        public ApiResponse< DialerContactEntityListing > PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null)
+        /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
+        public ApiResponse< List<DialerContact> > PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -10477,9 +10477,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostContactlistsContactlistIdContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DialerContactEntityListing>(localVarStatusCode,
+            return new ApiResponse<List<DialerContact>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DialerContactEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerContactEntityListing)));
+                (List<DialerContact>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DialerContact>)));
             
         }
 
@@ -10490,10 +10490,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
-        /// <returns>Task of DialerContactEntityListing</returns>
-        public async System.Threading.Tasks.Task<DialerContactEntityListing> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null)
+        /// <returns>Task of List&lt;DialerContact&gt;</returns>
+        public async System.Threading.Tasks.Task<List<DialerContact>> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null)
         {
-             ApiResponse<DialerContactEntityListing> localVarResponse = await PostContactlistsContactlistIdContactsAsyncWithHttpInfo(contactListId, body, priority);
+             ApiResponse<List<DialerContact>> localVarResponse = await PostContactlistsContactlistIdContactsAsyncWithHttpInfo(contactListId, body, priority);
              return localVarResponse.Data;
 
         }
@@ -10505,8 +10505,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
-        /// <returns>Task of ApiResponse (DialerContactEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DialerContactEntityListing>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null)
+        /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -10570,9 +10570,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostContactlistsContactlistIdContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DialerContactEntityListing>(localVarStatusCode,
+            return new ApiResponse<List<DialerContact>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DialerContactEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerContactEntityListing)));
+                (List<DialerContact>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DialerContact>)));
             
         }
 

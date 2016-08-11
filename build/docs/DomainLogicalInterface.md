@@ -37,7 +37,6 @@ title: DomainLogicalInterface
 | **LastModifiedUserId** | **string** |  | [optional] |
 | **LastModifiedCorrelationId** | **string** |  | [optional] |
 | **CommandResponses** | [**List&lt;DomainNetworkCommandResponse&gt;**](DomainNetworkCommandResponse.html) |  | [optional] |
-| **InheritPhoneTrunkBases** | **bool?** | Phone trunk base assignment will be inherited from the Edge Group. | [optional] [default to false]|
 | **InheritPhoneTrunkBasesIPv4** | **bool?** | The IPv4 phone trunk base assignment will be inherited from the Edge Group. | [optional] [default to false]|
 | **InheritPhoneTrunkBasesIPv6** | **bool?** | The IPv6 phone trunk base assignment will be inherited from the Edge Group. | [optional] [default to false]|
 | **UseForInternalEdgeCommunication** | **bool?** | This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. | [optional] [default to false]|

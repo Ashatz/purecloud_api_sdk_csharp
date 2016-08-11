@@ -88,8 +88,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>SystemPresence</returns>
-        SystemPresence GetSystempresences ();
+        /// <returns>List&lt;SystemPresence&gt;</returns>
+        List<SystemPresence> GetSystempresences ();
 
         /// <summary>
         /// Get the list of SystemPresences
@@ -98,8 +98,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of SystemPresence</returns>
-        ApiResponse<SystemPresence> GetSystempresencesWithHttpInfo ();
+        /// <returns>ApiResponse of List&lt;SystemPresence&gt;</returns>
+        ApiResponse<List<SystemPresence>> GetSystempresencesWithHttpInfo ();
         /// <summary>
         /// Get a user&#39;s Presence
         /// </summary>
@@ -268,8 +268,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of SystemPresence</returns>
-        System.Threading.Tasks.Task<SystemPresence> GetSystempresencesAsync ();
+        /// <returns>Task of List&lt;SystemPresence&gt;</returns>
+        System.Threading.Tasks.Task<List<SystemPresence>> GetSystempresencesAsync ();
 
         /// <summary>
         /// Get the list of SystemPresences
@@ -278,8 +278,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (SystemPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SystemPresence>> GetSystempresencesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (List&lt;SystemPresence&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<SystemPresence>>> GetSystempresencesAsyncWithHttpInfo ();
         /// <summary>
         /// Get a user&#39;s Presence
         /// </summary>
@@ -931,10 +931,10 @@ namespace ININ.PureCloudApi.Api
         /// Get the list of SystemPresences 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>SystemPresence</returns>
-        public SystemPresence GetSystempresences ()
+        /// <returns>List&lt;SystemPresence&gt;</returns>
+        public List<SystemPresence> GetSystempresences ()
         {
-             ApiResponse<SystemPresence> localVarResponse = GetSystempresencesWithHttpInfo();
+             ApiResponse<List<SystemPresence>> localVarResponse = GetSystempresencesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -942,8 +942,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the list of SystemPresences 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of SystemPresence</returns>
-        public ApiResponse< SystemPresence > GetSystempresencesWithHttpInfo ()
+        /// <returns>ApiResponse of List&lt;SystemPresence&gt;</returns>
+        public ApiResponse< List<SystemPresence> > GetSystempresencesWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/systempresences";
@@ -991,9 +991,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SystemPresence>(localVarStatusCode,
+            return new ApiResponse<List<SystemPresence>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SystemPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPresence)));
+                (List<SystemPresence>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SystemPresence>)));
             
         }
 
@@ -1001,10 +1001,10 @@ namespace ININ.PureCloudApi.Api
         /// Get the list of SystemPresences 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of SystemPresence</returns>
-        public async System.Threading.Tasks.Task<SystemPresence> GetSystempresencesAsync ()
+        /// <returns>Task of List&lt;SystemPresence&gt;</returns>
+        public async System.Threading.Tasks.Task<List<SystemPresence>> GetSystempresencesAsync ()
         {
-             ApiResponse<SystemPresence> localVarResponse = await GetSystempresencesAsyncWithHttpInfo();
+             ApiResponse<List<SystemPresence>> localVarResponse = await GetSystempresencesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1013,8 +1013,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the list of SystemPresences 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (SystemPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SystemPresence>> GetSystempresencesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (List&lt;SystemPresence&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<SystemPresence>>> GetSystempresencesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/systempresences";
@@ -1062,9 +1062,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SystemPresence>(localVarStatusCode,
+            return new ApiResponse<List<SystemPresence>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SystemPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPresence)));
+                (List<SystemPresence>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SystemPresence>)));
             
         }
 

@@ -1483,7 +1483,7 @@ namespace Example
 
 <a name="getprovidersedgesedgeidlogicalinterfaces"></a>
 
-## [**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html) GetProvidersEdgesEdgeIdLogicalinterfaces (string edgeId)
+## [**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html) GetProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, List<string> expand = null)
 
 Get edge logical interfaces.
 
@@ -1509,11 +1509,12 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeId = edgeId_example;  // string | Edge ID
+            var expand = new List<string>(); // List<string> | Field to expand in the response (optional) 
 
             try
             {
                 // Get edge logical interfaces.
-                LogicalInterfaceEntityListing result = apiInstance.GetProvidersEdgesEdgeIdLogicalinterfaces(edgeId);
+                LogicalInterfaceEntityListing result = apiInstance.GetProvidersEdgesEdgeIdLogicalinterfaces(edgeId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1531,6 +1532,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
+| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1539,7 +1541,7 @@ namespace Example
 
 <a name="getprovidersedgesedgeidlogicalinterfacesinterfaceid"></a>
 
-## [**DomainLogicalInterface**](DomainLogicalInterface.html) GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId)
+## [**DomainLogicalInterface**](DomainLogicalInterface.html) GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, List<string> expand = null)
 
 Get an edge logical interface
 
@@ -1566,11 +1568,12 @@ namespace Example
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeId = edgeId_example;  // string | Edge ID
             var interfaceId = interfaceId_example;  // string | Interface ID
+            var expand = new List<string>(); // List<string> | Field to expand in the response (optional) 
 
             try
             {
                 // Get an edge logical interface
-                DomainLogicalInterface result = apiInstance.GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId(edgeId, interfaceId);
+                DomainLogicalInterface result = apiInstance.GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId(edgeId, interfaceId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1589,6 +1592,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
 | **interfaceId** | **string**| Interface ID |  |
+| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1943,7 +1947,7 @@ namespace Example
 
 <a name="getprovidersedgesedgegroupsedgegroupid"></a>
 
-## [**EdgeGroup**](EdgeGroup.html) GetProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId)
+## [**EdgeGroup**](EdgeGroup.html) GetProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, List<string> expand = null)
 
 Get edge group.
 
@@ -1969,11 +1973,12 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeGroupId = edgeGroupId_example;  // string | Edge group ID
+            var expand = new List<string>(); // List<string> | Fields to expand in the response (optional) 
 
             try
             {
                 // Get edge group.
-                EdgeGroup result = apiInstance.GetProvidersEdgesEdgegroupsEdgegroupId(edgeGroupId);
+                EdgeGroup result = apiInstance.GetProvidersEdgesEdgegroupsEdgegroupId(edgeGroupId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1991,6 +1996,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeGroupId** | **string**| Edge group ID |  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3052,7 +3058,7 @@ namespace Example
 
 <a name="getprovidersedgesphones"></a>
 
-## [**PhoneEntityListing**](PhoneEntityListing.html) GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
+## [**PhoneEntityListing**](PhoneEntityListing.html) GetProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
 
 Get a list of Phone Instances
 
@@ -3085,6 +3091,7 @@ namespace Example
             var webRtcUserId = webRtcUserId_example;  // string | Filter by webRtcUser.id (optional) 
             var phoneBaseSettingsId = phoneBaseSettingsId_example;  // string | Filter by phoneBaseSettings.id (optional) 
             var linesLoggedInUserId = linesLoggedInUserId_example;  // string | Filter by lines.loggedInUser.id (optional) 
+            var linesDefaultForUserId = linesDefaultForUserId_example;  // string | Filter by lines.defaultForUser.id (optional) 
             var phoneHardwareId = phoneHardwareId_example;  // string | Filter by phone_hardwareId (optional) 
             var linesId = linesId_example;  // string | Filter by lines.id (optional) 
             var linesName = linesName_example;  // string | Filter by lines.name (optional) 
@@ -3094,7 +3101,7 @@ namespace Example
             try
             {
                 // Get a list of Phone Instances
-                PhoneEntityListing result = apiInstance.GetProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, phoneHardwareId, linesId, linesName, expand, fields);
+                PhoneEntityListing result = apiInstance.GetProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, expand, fields);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3119,6 +3126,7 @@ namespace Example
 | **webRtcUserId** | **string**| Filter by webRtcUser.id | [optional]  |
 | **phoneBaseSettingsId** | **string**| Filter by phoneBaseSettings.id | [optional]  |
 | **linesLoggedInUserId** | **string**| Filter by lines.loggedInUser.id | [optional]  |
+| **linesDefaultForUserId** | **string**| Filter by lines.defaultForUser.id | [optional]  |
 | **phoneHardwareId** | **string**| Filter by phone_hardwareId | [optional]  |
 | **linesId** | **string**| Filter by lines.id | [optional]  |
 | **linesName** | **string**| Filter by lines.name | [optional]  |

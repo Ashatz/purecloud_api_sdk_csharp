@@ -241,6 +241,76 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetQueuesQueueIdConversations
+        /// </summary>
+        [Test]
+        public void GetQueuesQueueIdConversationsTest()
+        {
+            // TODO: add unit test for the method 'GetQueuesQueueIdConversations'
+            string queueId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.GetQueuesQueueIdConversations(queueId, pageSize, pageNumber);
+            Assert.IsInstanceOf<CallConversationEntityListing> (response, "response is CallConversationEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetQueuesQueueIdConversationsCallbacks
+        /// </summary>
+        [Test]
+        public void GetQueuesQueueIdConversationsCallbacksTest()
+        {
+            // TODO: add unit test for the method 'GetQueuesQueueIdConversationsCallbacks'
+            string queueId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.GetQueuesQueueIdConversationsCallbacks(queueId, pageSize, pageNumber);
+            Assert.IsInstanceOf<CallbackConversationEntityListing> (response, "response is CallbackConversationEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetQueuesQueueIdConversationsCalls
+        /// </summary>
+        [Test]
+        public void GetQueuesQueueIdConversationsCallsTest()
+        {
+            // TODO: add unit test for the method 'GetQueuesQueueIdConversationsCalls'
+            string queueId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.GetQueuesQueueIdConversationsCalls(queueId, pageSize, pageNumber);
+            Assert.IsInstanceOf<CallConversationEntityListing> (response, "response is CallConversationEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetQueuesQueueIdConversationsChats
+        /// </summary>
+        [Test]
+        public void GetQueuesQueueIdConversationsChatsTest()
+        {
+            // TODO: add unit test for the method 'GetQueuesQueueIdConversationsChats'
+            string queueId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.GetQueuesQueueIdConversationsChats(queueId, pageSize, pageNumber);
+            Assert.IsInstanceOf<ChatConversationEntityListing> (response, "response is ChatConversationEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetQueuesQueueIdConversationsEmails
+        /// </summary>
+        [Test]
+        public void GetQueuesQueueIdConversationsEmailsTest()
+        {
+            // TODO: add unit test for the method 'GetQueuesQueueIdConversationsEmails'
+            string queueId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.GetQueuesQueueIdConversationsEmails(queueId, pageSize, pageNumber);
+            Assert.IsInstanceOf<EmailConversationEntityListing> (response, "response is EmailConversationEntityListing");
+        }
+        
+        /// <summary>
         /// Test GetQueuesQueueIdEstimatedwaittime
         /// </summary>
         [Test]

@@ -140,6 +140,12 @@ namespace ININ.PureCloudApi.Model
             Errorcode,
             
             /// <summary>
+            /// Enum Conversationend for "conversationEnd"
+            /// </summary>
+            [EnumMember(Value = "conversationEnd")]
+            Conversationend,
+            
+            /// <summary>
             /// Enum Stationid for "stationId"
             /// </summary>
             [EnumMember(Value = "stationId")]

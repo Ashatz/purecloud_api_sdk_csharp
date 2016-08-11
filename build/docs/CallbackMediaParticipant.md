@@ -28,11 +28,11 @@ title: CallbackMediaParticipant
 | **Script** | [**UriReference**](UriReference.html) | The Engage script that should be used by this participant. | [optional] |
 | **WrapupTimeoutMs** | **int?** | The amount of time the participant has to complete wrap-up. | [optional] |
 | **WrapupSkipped** | **bool?** | Value is true when the participant has skipped wrap-up. | [optional] [default to false]|
-| **OutboundPreview** | [**DialerPreview**](DialerPreview.html) |  | [optional] |
-| **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
-| **CallbackUserName** | **string** |  | [optional] |
-| **SkipEnabled** | **bool?** |  | [optional] [default to false]|
-| **TimeoutSeconds** | **int?** |  | [optional] |
+| **OutboundPreview** | [**DialerPreview**](DialerPreview.html) | The outbound preview associated with this callback. | [optional] |
+| **CallbackNumbers** | **List&lt;string&gt;** | The list of phone number to use for this callback. | [optional] |
+| **CallbackUserName** | **string** | The name of the callback target. | [optional] |
+| **SkipEnabled** | **bool?** | If true, the callback can be skipped | [optional] [default to false]|
+| **TimeoutSeconds** | **int?** | Duration in seconds before the callback will be auto-dialed. | [optional] |
 | **CallbackScheduledTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 {: class="table table-striped"}
 

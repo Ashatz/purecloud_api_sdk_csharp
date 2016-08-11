@@ -29,8 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NextPage">NextPage.</param>
         /// <param name="Types">Types.</param>
         /// <param name="Results">Results.</param>
-        /// <param name="Aggregations">Aggregations.</param>
-        public UsersSearchResponse(long? Total = null, int? PageCount = null, int? PageSize = null, int? PageNumber = null, string PreviousPage = null, string CurrentPage = null, string NextPage = null, List<string> Types = null, List<User> Results = null, List<User> Aggregations = null)
+        public UsersSearchResponse(long? Total = null, int? PageCount = null, int? PageSize = null, int? PageNumber = null, string PreviousPage = null, string CurrentPage = null, string NextPage = null, List<string> Types = null, List<User> Results = null)
         {
             this.Total = Total;
             this.PageCount = PageCount;
@@ -41,7 +40,6 @@ namespace ININ.PureCloudApi.Model
             this.NextPage = NextPage;
             this.Types = Types;
             this.Results = Results;
-            this.Aggregations = Aggregations;
         }
         
         /// <summary>
@@ -90,11 +88,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<User> Results { get; set; }
         /// <summary>
-        /// Gets or Sets Aggregations
-        /// </summary>
-        [DataMember(Name="aggregations", EmitDefaultValue=false)]
-        public List<User> Aggregations { get; set; }
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -111,7 +104,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  NextPage: ").Append(NextPage).Append("\n");
             sb.Append("  Types: ").Append(Types).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
-            sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,11 +184,6 @@ namespace ININ.PureCloudApi.Model
                     this.Results == other.Results ||
                     this.Results != null &&
                     this.Results.SequenceEqual(other.Results)
-                ) &&
-                (
-                    this.Aggregations == other.Aggregations ||
-                    this.Aggregations != null &&
-                    this.Aggregations.SequenceEqual(other.Aggregations)
                 );
         }
 
@@ -229,8 +216,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Types.GetHashCode();
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                if (this.Aggregations != null)
-                    hash = hash * 59 + this.Aggregations.GetHashCode();
                 return hash;
             }
         }

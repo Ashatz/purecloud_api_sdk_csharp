@@ -203,6 +203,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'LoggedInUser'
         }
         /// <summary>
+        /// Test the property 'DefaultForUser'
+        /// </summary>
+        [Test]
+        public void DefaultForUserTest()
+        {
+            // TODO: unit test for the property 'DefaultForUser'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

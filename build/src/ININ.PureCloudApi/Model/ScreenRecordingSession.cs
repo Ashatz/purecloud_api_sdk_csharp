@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="ScreenRecordingSession" /> class.
         /// </summary>
         /// <param name="User">User.</param>
-        /// <param name="ParticipantId">ParticipantId.</param>
+        /// <param name="ParticipantId">The id of the participant whose screen is being recorded on the conversation.</param>
         /// <param name="Conversation">Conversation.</param>
         /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public ScreenRecordingSession(User User = null, string ParticipantId = null, Conversation Conversation = null, DateTime? StartTime = null)
@@ -38,8 +38,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
         /// <summary>
-        /// Gets or Sets ParticipantId
+        /// The id of the participant whose screen is being recorded on the conversation
         /// </summary>
+        /// <value>The id of the participant whose screen is being recorded on the conversation</value>
         [DataMember(Name="participantId", EmitDefaultValue=false)]
         public string ParticipantId { get; set; }
         /// <summary>

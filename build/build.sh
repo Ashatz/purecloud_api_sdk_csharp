@@ -7,8 +7,8 @@ mozroots --import --sync
 mono nuget.exe install src/ININ.PureCloudApi/packages.config -o packages;
 mkdir -p bin;
 
-cp packages/Newtonsoft.Json.8.0.2/lib/net45/Newtonsoft.Json.dll bin/Newtonsoft.Json.dll;
-cp packages/RestSharp.105.1.0/lib/net45/RestSharp.dll bin/RestSharp.dll;
+cp packages/Newtonsoft.Json.9.0.1/lib/net45/Newtonsoft.Json.dll bin/Newtonsoft.Json.dll;
+cp packages/RestSharp.105.2.3/lib/net45/RestSharp.dll bin/RestSharp.dll;
 
 mcs -sdk:${netfx} -r:bin/Newtonsoft.Json.dll,\
 bin/RestSharp.dll,\

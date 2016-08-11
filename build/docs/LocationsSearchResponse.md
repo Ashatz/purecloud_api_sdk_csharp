@@ -16,7 +16,6 @@ title: LocationsSearchResponse
 | **NextPage** | **string** |  | [optional] |
 | **Types** | **List&lt;string&gt;** |  | [optional] |
 | **Results** | [**List&lt;Location&gt;**](Location.html) |  | [optional] |
-| **Aggregations** | [**List&lt;Location&gt;**](Location.html) |  | [optional] |
 {: class="table table-striped"}
 
 

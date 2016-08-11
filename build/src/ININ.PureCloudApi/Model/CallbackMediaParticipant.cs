@@ -254,11 +254,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Script">The Engage script that should be used by this participant..</param>
         /// <param name="WrapupTimeoutMs">The amount of time the participant has to complete wrap-up..</param>
         /// <param name="WrapupSkipped">Value is true when the participant has skipped wrap-up. (default to false).</param>
-        /// <param name="OutboundPreview">OutboundPreview.</param>
-        /// <param name="CallbackNumbers">CallbackNumbers.</param>
-        /// <param name="CallbackUserName">CallbackUserName.</param>
-        /// <param name="SkipEnabled">SkipEnabled (default to false).</param>
-        /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
+        /// <param name="OutboundPreview">The outbound preview associated with this callback..</param>
+        /// <param name="CallbackNumbers">The list of phone number to use for this callback..</param>
+        /// <param name="CallbackUserName">The name of the callback target..</param>
+        /// <param name="SkipEnabled">If true, the callback can be skipped (default to false).</param>
+        /// <param name="TimeoutSeconds">Duration in seconds before the callback will be auto-dialed..</param>
         /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, DialerPreview OutboundPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null)
         {
@@ -432,28 +432,33 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
         /// <summary>
-        /// Gets or Sets OutboundPreview
+        /// The outbound preview associated with this callback.
         /// </summary>
+        /// <value>The outbound preview associated with this callback.</value>
         [DataMember(Name="outboundPreview", EmitDefaultValue=false)]
         public DialerPreview OutboundPreview { get; set; }
         /// <summary>
-        /// Gets or Sets CallbackNumbers
+        /// The list of phone number to use for this callback.
         /// </summary>
+        /// <value>The list of phone number to use for this callback.</value>
         [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
         public List<string> CallbackNumbers { get; set; }
         /// <summary>
-        /// Gets or Sets CallbackUserName
+        /// The name of the callback target.
         /// </summary>
+        /// <value>The name of the callback target.</value>
         [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
         public string CallbackUserName { get; set; }
         /// <summary>
-        /// Gets or Sets SkipEnabled
+        /// If true, the callback can be skipped
         /// </summary>
+        /// <value>If true, the callback can be skipped</value>
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
         public bool? SkipEnabled { get; set; }
         /// <summary>
-        /// Gets or Sets TimeoutSeconds
+        /// Duration in seconds before the callback will be auto-dialed.
         /// </summary>
+        /// <value>Duration in seconds before the callback will be auto-dialed.</value>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
         public int? TimeoutSeconds { get; set; }
         /// <summary>

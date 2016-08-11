@@ -22,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Family">The address family to use with the trunk base settings. 2&#x3D;IPv4, 23&#x3D;IPv6.</param>
         /// <param name="TrunkBase">A trunk base settings reference..</param>
-        public TrunkBaseAssignment(int? Family = null, UriReference TrunkBase = null)
+        public TrunkBaseAssignment(int? Family = null, TrunkBase TrunkBase = null)
         {
             this.Family = Family;
             this.TrunkBase = TrunkBase;
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>A trunk base settings reference.</value>
         [DataMember(Name="trunkBase", EmitDefaultValue=false)]
-        public UriReference TrunkBase { get; set; }
+        public TrunkBase TrunkBase { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -46,24 +46,53 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KeywordSet" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected KeywordSet() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="KeywordSet" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Queue">Queue.</param>
         /// <param name="Queues">Queues.</param>
-        /// <param name="Language">Language.</param>
+        /// <param name="Language">Language code, such as &#39;en-US&#39; (required).</param>
         /// <param name="Agents">Agents.</param>
-        /// <param name="Keywords">Keywords.</param>
-        /// <param name="ParticipantPurposes">ParticipantPurposes.</param>
+        /// <param name="Keywords">The list of keywords to be used for keyword spotting. (required).</param>
+        /// <param name="ParticipantPurposes">ParticipantPurposes (required).</param>
         public KeywordSet(string Name = null, string Description = null, Queue Queue = null, List<Queue> Queues = null, string Language = null, List<User> Agents = null, List<Keyword> Keywords = null, List<ParticipantPurposesEnum> ParticipantPurposes = null)
         {
+            // to ensure "Language" is required (not null)
+            if (Language == null)
+            {
+                throw new InvalidDataException("Language is a required property for KeywordSet and cannot be null");
+            }
+            else
+            {
+                this.Language = Language;
+            }
+            // to ensure "Keywords" is required (not null)
+            if (Keywords == null)
+            {
+                throw new InvalidDataException("Keywords is a required property for KeywordSet and cannot be null");
+            }
+            else
+            {
+                this.Keywords = Keywords;
+            }
+            // to ensure "ParticipantPurposes" is required (not null)
+            if (ParticipantPurposes == null)
+            {
+                throw new InvalidDataException("ParticipantPurposes is a required property for KeywordSet and cannot be null");
+            }
+            else
+            {
+                this.ParticipantPurposes = ParticipantPurposes;
+            }
             this.Name = Name;
             this.Description = Description;
             this.Queue = Queue;
             this.Queues = Queues;
-            this.Language = Language;
             this.Agents = Agents;
-            this.Keywords = Keywords;
-            this.ParticipantPurposes = ParticipantPurposes;
         }
         
         /// <summary>
@@ -93,8 +122,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="queues", EmitDefaultValue=false)]
         public List<Queue> Queues { get; set; }
         /// <summary>
-        /// Gets or Sets Language
+        /// Language code, such as &#39;en-US&#39;
         /// </summary>
+        /// <value>Language code, such as &#39;en-US&#39;</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
         /// <summary>
@@ -103,8 +133,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="agents", EmitDefaultValue=false)]
         public List<User> Agents { get; set; }
         /// <summary>
-        /// Gets or Sets Keywords
+        /// The list of keywords to be used for keyword spotting.
         /// </summary>
+        /// <value>The list of keywords to be used for keyword spotting.</value>
         [DataMember(Name="keywords", EmitDefaultValue=false)]
         public List<Keyword> Keywords { get; set; }
         /// <summary>

@@ -111,10 +111,10 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
+            List<Object> expand = null; // TODO: replace null with proper value
             string nextPage = null; // TODO: replace null with proper value
             string previousPage = null; // TODO: replace null with proper value
-            List<string> permission = null; // TODO: replace null with proper value
+            List<Object> permission = null; // TODO: replace null with proper value
             bool? userCount = null; // TODO: replace null with proper value
             var response = instance.GetRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, userCount);
             Assert.IsInstanceOf<OrganizationRoleEntityListing> (response, "response is OrganizationRoleEntityListing");

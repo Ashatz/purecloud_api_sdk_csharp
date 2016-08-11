@@ -2697,7 +2697,7 @@ namespace Example
 
 <a name="postcontactlistscontactlistidcontacts"></a>
 
-## [**DialerContactEntityListing**](DialerContactEntityListing.html) PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null)
+## [**List&lt;DialerContact&gt;**](DialerContact.html) PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null)
 
 Add contacts to a contact list.
 
@@ -2729,7 +2729,7 @@ namespace Example
             try
             {
                 // Add contacts to a contact list.
-                DialerContactEntityListing result = apiInstance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
+                List&lt;DialerContact&gt; result = apiInstance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2753,7 +2753,7 @@ namespace Example
 
 ### Return type
 
-[**DialerContactEntityListing**](DialerContactEntityListing.html)
+[**List<DialerContact>**](DialerContact.html)
 
 <a name="postcontactlistscontactlistidexport"></a>
 

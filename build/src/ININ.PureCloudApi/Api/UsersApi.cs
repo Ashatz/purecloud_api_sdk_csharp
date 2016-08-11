@@ -263,8 +263,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <returns>UserQueueEntityListing</returns>
-        UserQueueEntityListing GetUserIdQueues (string userId, int? pageSize = null, int? pageNumber = null);
+        UserQueueEntityListing GetUserIdQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null);
 
         /// <summary>
         /// Get queues for user
@@ -276,8 +277,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
-        ApiResponse<UserQueueEntityListing> GetUserIdQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<UserQueueEntityListing> GetUserIdQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null);
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
         /// </summary>
@@ -1037,8 +1039,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
-        System.Threading.Tasks.Task<UserQueueEntityListing> GetUserIdQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<UserQueueEntityListing> GetUserIdQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null);
 
         /// <summary>
         /// Get queues for user
@@ -1050,8 +1053,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserIdQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserIdQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null);
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
         /// </summary>
@@ -3364,10 +3368,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <returns>UserQueueEntityListing</returns>
-        public UserQueueEntityListing GetUserIdQueues (string userId, int? pageSize = null, int? pageNumber = null)
+        public UserQueueEntityListing GetUserIdQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
         {
-             ApiResponse<UserQueueEntityListing> localVarResponse = GetUserIdQueuesWithHttpInfo(userId, pageSize, pageNumber);
+             ApiResponse<UserQueueEntityListing> localVarResponse = GetUserIdQueuesWithHttpInfo(userId, pageSize, pageNumber, joined);
              return localVarResponse.Data;
         }
 
@@ -3378,8 +3383,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
-        public ApiResponse< UserQueueEntityListing > GetUserIdQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< UserQueueEntityListing > GetUserIdQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3413,6 +3419,7 @@ namespace ININ.PureCloudApi.Api
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (joined != null) localVarQueryParams.Add("joined", Configuration.ApiClient.ParameterToString(joined)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -3446,10 +3453,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserQueueEntityListing> GetUserIdQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<UserQueueEntityListing> GetUserIdQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
         {
-             ApiResponse<UserQueueEntityListing> localVarResponse = await GetUserIdQueuesAsyncWithHttpInfo(userId, pageSize, pageNumber);
+             ApiResponse<UserQueueEntityListing> localVarResponse = await GetUserIdQueuesAsyncWithHttpInfo(userId, pageSize, pageNumber, joined);
              return localVarResponse.Data;
 
         }
@@ -3461,8 +3469,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="joined">Is joined to the queue (optional, default to true)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserIdQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserIdQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3496,6 +3505,7 @@ namespace ININ.PureCloudApi.Api
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (joined != null) localVarQueryParams.Add("joined", Configuration.ApiClient.ParameterToString(joined)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

@@ -11,8 +11,8 @@ title: QualityAudit
 | **Name** | **string** |  | [optional] |
 | **User** | [**User**](User.html) |  | [optional] |
 | **Timestamp** | **string** |  | [optional] |
-| **Entity** | [**AuditEntity**](AuditEntity.html) |  | [optional] |
 | **Level** | **string** |  | [optional] |
+| **Entity** | [**AuditEntity**](AuditEntity.html) |  | [optional] |
 | **Action** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
 | **Changes** | [**List&lt;Change&gt;**](Change.html) |  | [optional] |

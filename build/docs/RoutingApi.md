@@ -22,6 +22,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetEmailSetup**](RoutingApi.html#getemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
 | [**GetQueues**](RoutingApi.html#getqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
 | [**GetQueuesQueueId**](RoutingApi.html#getqueuesqueueid) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
+| [**GetQueuesQueueIdConversations**](RoutingApi.html#getqueuesqueueidconversations) | **GET** /api/v2/routing/queues/{queueId}/conversations | Get recent conversations that are still active |
+| [**GetQueuesQueueIdConversationsCallbacks**](RoutingApi.html#getqueuesqueueidconversationscallbacks) | **GET** /api/v2/routing/queues/{queueId}/conversations/callbacks | Get recent callback conversations that are still active |
+| [**GetQueuesQueueIdConversationsCalls**](RoutingApi.html#getqueuesqueueidconversationscalls) | **GET** /api/v2/routing/queues/{queueId}/conversations/calls | Get recent call conversations that are still active |
+| [**GetQueuesQueueIdConversationsChats**](RoutingApi.html#getqueuesqueueidconversationschats) | **GET** /api/v2/routing/queues/{queueId}/conversations/chats | Get recent chat conversations that are still active |
+| [**GetQueuesQueueIdConversationsEmails**](RoutingApi.html#getqueuesqueueidconversationsemails) | **GET** /api/v2/routing/queues/{queueId}/conversations/emails | Get recent email conversations that are still active |
 | [**GetQueuesQueueIdEstimatedwaittime**](RoutingApi.html#getqueuesqueueidestimatedwaittime) | **GET** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
 | [**GetQueuesQueueIdUsers**](RoutingApi.html#getqueuesqueueidusers) | **GET** /api/v2/routing/queues/{queueId}/users | Get the members of this queue |
 | [**GetQueuesQueueIdWrapupcodes**](RoutingApi.html#getqueuesqueueidwrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
@@ -893,6 +898,306 @@ namespace Example
 ### Return type
 
 [**Queue**](Queue.html)
+
+<a name="getqueuesqueueidconversations"></a>
+
+## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetQueuesQueueIdConversations (string queueId, int? pageSize = null, int? pageNumber = null)
+
+Get recent conversations that are still active
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdConversationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get recent conversations that are still active
+                CallConversationEntityListing result = apiInstance.GetQueuesQueueIdConversations(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdConversations: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**CallConversationEntityListing**](CallConversationEntityListing.html)
+
+<a name="getqueuesqueueidconversationscallbacks"></a>
+
+## [**CallbackConversationEntityListing**](CallbackConversationEntityListing.html) GetQueuesQueueIdConversationsCallbacks (string queueId, int? pageSize = null, int? pageNumber = null)
+
+Get recent callback conversations that are still active
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdConversationsCallbacksExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get recent callback conversations that are still active
+                CallbackConversationEntityListing result = apiInstance.GetQueuesQueueIdConversationsCallbacks(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdConversationsCallbacks: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**CallbackConversationEntityListing**](CallbackConversationEntityListing.html)
+
+<a name="getqueuesqueueidconversationscalls"></a>
+
+## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetQueuesQueueIdConversationsCalls (string queueId, int? pageSize = null, int? pageNumber = null)
+
+Get recent call conversations that are still active
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdConversationsCallsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get recent call conversations that are still active
+                CallConversationEntityListing result = apiInstance.GetQueuesQueueIdConversationsCalls(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdConversationsCalls: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**CallConversationEntityListing**](CallConversationEntityListing.html)
+
+<a name="getqueuesqueueidconversationschats"></a>
+
+## [**ChatConversationEntityListing**](ChatConversationEntityListing.html) GetQueuesQueueIdConversationsChats (string queueId, int? pageSize = null, int? pageNumber = null)
+
+Get recent chat conversations that are still active
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdConversationsChatsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get recent chat conversations that are still active
+                ChatConversationEntityListing result = apiInstance.GetQueuesQueueIdConversationsChats(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdConversationsChats: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ChatConversationEntityListing**](ChatConversationEntityListing.html)
+
+<a name="getqueuesqueueidconversationsemails"></a>
+
+## [**EmailConversationEntityListing**](EmailConversationEntityListing.html) GetQueuesQueueIdConversationsEmails (string queueId, int? pageSize = null, int? pageNumber = null)
+
+Get recent email conversations that are still active
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdConversationsEmailsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get recent email conversations that are still active
+                EmailConversationEntityListing result = apiInstance.GetQueuesQueueIdConversationsEmails(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdConversationsEmails: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailConversationEntityListing**](EmailConversationEntityListing.html)
 
 <a name="getqueuesqueueidestimatedwaittime"></a>
 

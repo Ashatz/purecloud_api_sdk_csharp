@@ -222,7 +222,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>PolicyEntityListing</returns>
-        PolicyEntityListing GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        PolicyEntityListing GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
 
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -242,7 +242,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
-        ApiResponse<PolicyEntityListing> GetMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        ApiResponse<PolicyEntityListing> GetMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
         /// <summary>
         /// Get a media retention policy
         /// </summary>
@@ -299,7 +299,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>OrphanRecordingListing</returns>
-        OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Gets all orphan recordings
@@ -315,7 +315,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
         /// <summary>
         /// Get the Recording Settings for the Organization
         /// </summary>
@@ -735,7 +735,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
-        System.Threading.Tasks.Task<PolicyEntityListing> GetMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        System.Threading.Tasks.Task<PolicyEntityListing> GetMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
 
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -755,7 +755,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
         /// <summary>
         /// Get a media retention policy
         /// </summary>
@@ -812,7 +812,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of OrphanRecordingListing</returns>
-        System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Gets all orphan recordings
@@ -828,7 +828,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
         /// <summary>
         /// Get the Recording Settings for the Organization
         /// </summary>
@@ -2465,7 +2465,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>PolicyEntityListing</returns>
-        public PolicyEntityListing GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public PolicyEntityListing GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
              ApiResponse<PolicyEntityListing> localVarResponse = GetMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
              return localVarResponse.Data;
@@ -2486,7 +2486,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
-        public ApiResponse< PolicyEntityListing > GetMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public ApiResponse< PolicyEntityListing > GetMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
@@ -2565,7 +2565,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
-        public async System.Threading.Tasks.Task<PolicyEntityListing> GetMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public async System.Threading.Tasks.Task<PolicyEntityListing> GetMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
              ApiResponse<PolicyEntityListing> localVarResponse = await GetMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
              return localVarResponse.Data;
@@ -2587,7 +2587,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
@@ -2968,7 +2968,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>OrphanRecordingListing</returns>
-        public OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<OrphanRecordingListing> localVarResponse = GetOrphanrecordingsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -2985,7 +2985,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        public ApiResponse< OrphanRecordingListing > GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< OrphanRecordingListing > GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
         {
 
             var localVarPath = "/api/v2/orphanrecordings";
@@ -3056,7 +3056,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of OrphanRecordingListing</returns>
-        public async System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<OrphanRecordingListing> localVarResponse = await GetOrphanrecordingsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -3074,7 +3074,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
         {
 
             var localVarPath = "/api/v2/orphanrecordings";
