@@ -13,8 +13,12 @@
 [Rr]elease/
 x64/
 build/
-[Bb]in/
 [Oo]bj/
+bin/*
+!bin/ININ.PureCloudApi.dll
+!bin/ININ.PureCloudApi.xml
+!bin/Newtonsoft.Json.dll
+!bin/RestSharp.dll
 
 # NuGet Packages
 *.nupkg
