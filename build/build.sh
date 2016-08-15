@@ -2,7 +2,7 @@
 frameworkVersion=net45
 netfx=${frameworkVersion#net}
 
-#wget -nc "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe";
+wget -nc "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe";
 mozroots --import --sync
 #mono nuget.exe install src/ININ.PureCloudApi/packages.config -o packages -NoCache -Verbosity detailed;
 mkdir -p bin;
