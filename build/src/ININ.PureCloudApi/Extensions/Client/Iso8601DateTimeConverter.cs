@@ -18,7 +18,7 @@ namespace ININ.PureCloudApi.Client
                 writer.WriteNull();
             else
             {
-                var dateString = date.Value.ToUniversalTime().ToString("s", CultureInfo.InvariantCulture);
+                var dateString = date.Value.ToUniversalTime().ToString("yyyy-MM-ddThh:mm:ss.FFFK", CultureInfo.InvariantCulture);
                 writer.WriteValue(dateString);
             }
         }
