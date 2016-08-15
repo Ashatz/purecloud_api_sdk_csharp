@@ -4,7 +4,7 @@ netfx=${frameworkVersion#net}
 
 wget -nc https://nuget.org/nuget.exe;
 mozroots --import --sync
-mono nuget.exe install src/{{packageName}}/packages.config -o packages;
+mono nuget.exe install src/{{packageName}}/packages.config -o packages -source "https://www.nuget.org/api/v2";
 mkdir -p bin;
 
 cp packages/Newtonsoft.Json.9.0.1/lib/{{targetFrameworkNuget}}/Newtonsoft.Json.dll bin/Newtonsoft.Json.dll;
