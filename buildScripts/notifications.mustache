@@ -1,16 +1,18 @@
+using System;
 using System.Collections.Generic;
+using ININ.PureCloudApi.Model;
 
 namespace ININ.PureCloudApi.Client
 {
     public static class NotificationTopics
     {
-        public static Dictionary<string, string> Topics;
+        public static Dictionary<string, Type> Topics;
 
         static NotificationTopics()
         {
-            Topics = new Dictionary<string, string>
+            Topics = new Dictionary<string, Type>
             { {{#notifications}}
-              {"{{topic}}", "{{class}}"},{{/notifications}}
+              {"{{topic}}", typeof({{class}})},{{/notifications}}
             };
         }
     }
