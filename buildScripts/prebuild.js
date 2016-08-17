@@ -2,6 +2,7 @@ var mkdirp = require('mkdirp');
 var fs = require('fs');
 var Q = require('q');
 var pclib = require('purecloud-api-sdk-common');
+var Mustache = require('mustache');
 
 var pclibSwaggerVersion = pclib.swaggerVersioning();
 var progressTracker = 0;
@@ -38,8 +39,22 @@ function updateVersion() {
         }else{
             console.log("no changes, still version " + version)
         }
+        try {
+        	var notificationsRaw = fs.readFileSync('bin/notificationMappings.json', 'UTF-8');
+        	var notifications = JSON.parse(notificationsRaw);
+        	var notificationsTemplate = fs.readFileSync('buildScripts/notifications.mustache', 'UTF-8');
 
-		 deferred.resolve();
+        	var notificationsClass = Mustache.render(notificationsTemplate, notifications);
+        	fs.writeFileSync('Extensions/Client/NotificationTopics.cs', notificationsClass, 'UTF-8');
+		} catch(e) {
+			if (e.code === 'ENOENT') {
+				console.log('File not found!');
+				console.log(e);
+			} else {
+				deferred.reject(e);
+			}
+		}
+		deferred.resolve();
     });
 
 	return deferred.promise;
