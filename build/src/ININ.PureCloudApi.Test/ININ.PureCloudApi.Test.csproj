@@ -65,7 +65,7 @@
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\ININ.PureCloudApi\ININ.PureCloudApi.csproj">
-          <Project>{03C9ECE3-3851-4EFE-A06D-DE99F6476AEF}</Project>
+          <Project>{5CD63EE2-BB8B-4200-A227-04AE8CC66017}</Project>
           <Name>ININ.PureCloudApi</Name>
       </ProjectReference>
   </ItemGroup>
