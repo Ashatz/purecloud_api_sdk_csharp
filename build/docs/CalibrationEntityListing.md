@@ -12,10 +12,10 @@ title: CalibrationEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;Calibration&gt;**](Calibration.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

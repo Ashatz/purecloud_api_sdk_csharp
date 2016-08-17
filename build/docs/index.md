@@ -136,6 +136,77 @@ var me = usersApi.GetMe();
 Console.WriteLine($"Hello, {me.DisplayName}");
 ~~~
 
+## NotificationHandler Helper Class
+
+The .NET SDK includes a helper class `NotificationHandler` to assist in managing PureCloud notifications. The class will create a single notification channel, or use an existing one, and provides methods to add and remove subscriptions and raises an event with a deserialized notification object whenever one is received.
+
+### Using NotificationHandler
+
+Create a new instance:
+
+~~~csharp
+var handler = new NotificationHandler();
+~~~
+
+Add a subscription:
+
+~~~csharp
+handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification));
+~~~
+
+Remove a subscription:
+
+~~~csharp
+handler.RemoveSubscription($"v2.users.{_me.Id}.conversations");
+~~~
+
+Handle incoming notification:
+
+~~~csharp
+handler.NotificationReceived += (data) =>
+{
+    Console.WriteLine(JsonConvert.SerializeObject(data, Formatting.Indented));
+
+    if (data.GetType() == typeof (NotificationData<UserPresenceNotification>))
+    {
+        var presence = (NotificationData<UserPresenceNotification>) data;
+        Console.WriteLine($"New presence: {presence.EventBody.PresenceDefinition.SystemPresence}");
+    }
+};
+~~~
+
+Full example:
+
+~~~csharp
+var handler = new NotificationHandler();
+handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification));
+handler.AddSubscription($"v2.users.{_me.Id}.conversations", typeof(ConversationNotification));
+handler.NotificationReceived += (data) =>
+{
+    Console.WriteLine(JsonConvert.SerializeObject(data, Formatting.Indented));
+
+    if (data.GetType() == typeof (NotificationData<UserPresenceNotification>))
+    {
+        var presence = (NotificationData<UserPresenceNotification>) data;
+        Console.WriteLine($"New presence: {presence.EventBody.PresenceDefinition.SystemPresence}");
+    }
+    else if (data.GetType() == typeof (NotificationData<ConversationNotification>))
+    {
+        var conversation = (NotificationData<ConversationNotification>) data;
+        Console.WriteLine($"Conversation: {conversation.EventBody.Id}");
+    }
+};
+
+Console.WriteLine("Websocket connected, awaiting messages...");
+Console.WriteLine("Press any key to remove conversations subscription.");
+Console.ReadKey(true);
+
+handler.RemoveSubscription($"v2.users.{_me.Id}.conversations");
+
+Console.WriteLine("Conversations subscription removed, awaiting messages...");
+Console.ReadKey(true);
+~~~
+
 ## SDK Information
 
 ### REST Requests
