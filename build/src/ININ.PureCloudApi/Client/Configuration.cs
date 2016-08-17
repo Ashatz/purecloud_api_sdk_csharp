@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Client
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
                              int timeout = 100000,
-                             string userAgent = "PureCloud SDK/0.73.9.356/csharp"
+                             string userAgent = "PureCloud SDK/0.74.9.357/csharp"
                             )
         {
             setApiClientUsingDefault(apiClient);
@@ -71,7 +71,7 @@ namespace ININ.PureCloudApi.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "0.73.9.356";
+        public const string Version = "0.74.9.357";
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -276,7 +276,7 @@ namespace ININ.PureCloudApi.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: v2\n";
-            report += "    SDK Package Version: 0.73.9.356\n";
+            report += "    SDK Package Version: 0.74.9.357\n";
 
             return report;
         }
