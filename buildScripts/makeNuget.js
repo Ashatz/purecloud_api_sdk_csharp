@@ -22,7 +22,6 @@ try {
 	        '<dependencies>' + 
 	            '<dependency id="Newtonsoft.Json" version="9.0.1" />' + 
 	            '<dependency id="RestSharp" version="105.2.3" />' + 
-	            '<dependency id="WebSocketSharp" version="1.0.3-rc11" />' + 
 	        '</dependencies>' + 
 	    '</metadata>' + 
 	    '<files>' + 
