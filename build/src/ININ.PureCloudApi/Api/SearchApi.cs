@@ -21,8 +21,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>GroupsSearchResponse</returns>
         GroupsSearchResponse GetSearch (string q64, List<string> expand = null);
 
@@ -33,8 +33,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
         ApiResponse<GroupsSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -44,8 +44,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>LocationsSearchResponse</returns>
         LocationsSearchResponse GetSearch_0 (string q64, List<string> expand = null);
 
@@ -56,8 +56,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
         ApiResponse<LocationsSearchResponse> GetSearch_0WithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -67,9 +67,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         JsonNodeSearchResponse GetSearch_1 (string q64, List<string> expand = null, bool? profile = null);
 
@@ -80,9 +80,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         ApiResponse<JsonNodeSearchResponse> GetSearch_1WithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
         /// <summary>
@@ -92,8 +92,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>UsersSearchResponse</returns>
         UsersSearchResponse GetSearch_2 (string q64, List<string> expand = null);
 
@@ -104,8 +104,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
         ApiResponse<UsersSearchResponse> GetSearch_2WithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -115,8 +115,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         JsonNodeSearchResponse GetSuggest (string q64, bool? profile = null);
 
@@ -127,8 +127,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         ApiResponse<JsonNodeSearchResponse> GetSuggestWithHttpInfo (string q64, bool? profile = null);
         /// <summary>
@@ -181,7 +181,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         JsonNodeSearchResponse PostSearch_1 (SearchRequest body, bool? profile = null);
 
@@ -193,7 +193,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         ApiResponse<JsonNodeSearchResponse> PostSearch_1WithHttpInfo (SearchRequest body, bool? profile = null);
         /// <summary>
@@ -225,7 +225,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         JsonNodeSearchResponse PostSuggest (SuggestSearchRequest body, bool? profile = null);
 
@@ -237,7 +237,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         ApiResponse<JsonNodeSearchResponse> PostSuggestWithHttpInfo (SuggestSearchRequest body, bool? profile = null);
         #endregion Synchronous Operations
@@ -249,8 +249,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of GroupsSearchResponse</returns>
         System.Threading.Tasks.Task<GroupsSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
 
@@ -261,8 +261,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -272,8 +272,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of LocationsSearchResponse</returns>
         System.Threading.Tasks.Task<LocationsSearchResponse> GetSearch_0Async (string q64, List<string> expand = null);
 
@@ -284,8 +284,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetSearch_0AsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -295,9 +295,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearch_1Async (string q64, List<string> expand = null, bool? profile = null);
 
@@ -308,9 +308,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearch_1AsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
         /// <summary>
@@ -320,8 +320,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
         System.Threading.Tasks.Task<UsersSearchResponse> GetSearch_2Async (string q64, List<string> expand = null);
 
@@ -332,8 +332,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetSearch_2AsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -343,8 +343,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64, bool? profile = null);
 
@@ -355,8 +355,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64, bool? profile = null);
         /// <summary>
@@ -409,7 +409,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearch_1Async (SearchRequest body, bool? profile = null);
 
@@ -421,7 +421,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearch_1AsyncWithHttpInfo (SearchRequest body, bool? profile = null);
         /// <summary>
@@ -453,7 +453,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSuggestAsync (SuggestSearchRequest body, bool? profile = null);
 
@@ -465,7 +465,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSuggestAsyncWithHttpInfo (SuggestSearchRequest body, bool? profile = null);
         #endregion Asynchronous Operations
@@ -562,8 +562,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>GroupsSearchResponse</returns>
         public GroupsSearchResponse GetSearch (string q64, List<string> expand = null)
         {
@@ -575,8 +575,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
         public ApiResponse< GroupsSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null)
         {
@@ -641,8 +641,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of GroupsSearchResponse</returns>
         public async System.Threading.Tasks.Task<GroupsSearchResponse> GetSearchAsync (string q64, List<string> expand = null)
         {
@@ -655,8 +655,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         {
@@ -721,8 +721,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>LocationsSearchResponse</returns>
         public LocationsSearchResponse GetSearch_0 (string q64, List<string> expand = null)
         {
@@ -734,8 +734,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
         public ApiResponse< LocationsSearchResponse > GetSearch_0WithHttpInfo (string q64, List<string> expand = null)
         {
@@ -800,8 +800,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of LocationsSearchResponse</returns>
         public async System.Threading.Tasks.Task<LocationsSearchResponse> GetSearch_0Async (string q64, List<string> expand = null)
         {
@@ -814,8 +814,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetSearch_0AsyncWithHttpInfo (string q64, List<string> expand = null)
         {
@@ -880,9 +880,9 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         public JsonNodeSearchResponse GetSearch_1 (string q64, List<string> expand = null, bool? profile = null)
         {
@@ -894,9 +894,9 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         public ApiResponse< JsonNodeSearchResponse > GetSearch_1WithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         {
@@ -962,9 +962,9 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearch_1Async (string q64, List<string> expand = null, bool? profile = null)
         {
@@ -977,9 +977,9 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearch_1AsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         {
@@ -1045,8 +1045,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>UsersSearchResponse</returns>
         public UsersSearchResponse GetSearch_2 (string q64, List<string> expand = null)
         {
@@ -1058,8 +1058,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
         public ApiResponse< UsersSearchResponse > GetSearch_2WithHttpInfo (string q64, List<string> expand = null)
         {
@@ -1124,8 +1124,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
         public async System.Threading.Tasks.Task<UsersSearchResponse> GetSearch_2Async (string q64, List<string> expand = null)
         {
@@ -1138,8 +1138,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetSearch_2AsyncWithHttpInfo (string q64, List<string> expand = null)
         {
@@ -1204,8 +1204,8 @@ namespace ININ.PureCloudApi.Api
         /// Suggest using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         public JsonNodeSearchResponse GetSuggest (string q64, bool? profile = null)
         {
@@ -1217,8 +1217,8 @@ namespace ININ.PureCloudApi.Api
         /// Suggest using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         public ApiResponse< JsonNodeSearchResponse > GetSuggestWithHttpInfo (string q64, bool? profile = null)
         {
@@ -1283,8 +1283,8 @@ namespace ININ.PureCloudApi.Api
         /// Suggest using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64, bool? profile = null)
         {
@@ -1297,8 +1297,8 @@ namespace ININ.PureCloudApi.Api
         /// Suggest using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64, bool? profile = null)
         {
@@ -1698,7 +1698,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         public JsonNodeSearchResponse PostSearch_1 (SearchRequest body, bool? profile = null)
         {
@@ -1711,7 +1711,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         public ApiResponse< JsonNodeSearchResponse > PostSearch_1WithHttpInfo (SearchRequest body, bool? profile = null)
         {
@@ -1784,7 +1784,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearch_1Async (SearchRequest body, bool? profile = null)
         {
@@ -1798,7 +1798,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearch_1AsyncWithHttpInfo (SearchRequest body, bool? profile = null)
         {
@@ -2038,7 +2038,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         public JsonNodeSearchResponse PostSuggest (SuggestSearchRequest body, bool? profile = null)
         {
@@ -2051,7 +2051,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         public ApiResponse< JsonNodeSearchResponse > PostSuggestWithHttpInfo (SuggestSearchRequest body, bool? profile = null)
         {
@@ -2124,7 +2124,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSuggestAsync (SuggestSearchRequest body, bool? profile = null)
         {
@@ -2138,7 +2138,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
-        /// <param name="profile"> (optional, default to true)</param>
+        /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSuggestAsyncWithHttpInfo (SuggestSearchRequest body, bool? profile = null)
         {

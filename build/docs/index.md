@@ -207,6 +207,12 @@ Console.WriteLine("Conversations subscription removed, awaiting messages...");
 Console.ReadKey(true);
 ~~~
 
+### Notification Topics and Classes for Deserialization
+
+The SDK containst a static class, [NotificationTopics](https://github.com/MyPureCloud/purecloud_api_sdk_csharp/blob/master/build/src/ININ.PureCloudApi/Extensions/Client/NotificationTopics.cs), that contains a dictionary of all of the known topics and the types that should be used for deserialization. This class exists to allow an application to dynamically see the defined topics and programatically specify the defined type for a known topic. This class also serves as a reference to the developer to know which classes go with which topics.
+
+_Note that the deserializer does not use this mapping; it uses the type provided to it when adding a topic subscription._
+
 ## SDK Information
 
 ### REST Requests

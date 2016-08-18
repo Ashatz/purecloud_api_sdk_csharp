@@ -44,8 +44,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
         Evaluation DeleteConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null);
@@ -57,8 +57,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
         ApiResponse<Evaluation> DeleteConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null);
@@ -274,8 +274,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Evaluation</returns>
         Evaluation GetConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null);
@@ -287,8 +287,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
         ApiResponse<Evaluation> GetConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null);
@@ -595,7 +595,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
@@ -608,7 +608,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
@@ -771,8 +771,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
@@ -785,8 +785,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
@@ -869,8 +869,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
         System.Threading.Tasks.Task<Evaluation> DeleteConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, string expand = null);
@@ -882,8 +882,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
@@ -1099,8 +1099,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of Evaluation</returns>
         System.Threading.Tasks.Task<Evaluation> GetConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, string expand = null);
@@ -1112,8 +1112,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
@@ -1420,7 +1420,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
@@ -1433,7 +1433,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
@@ -1596,8 +1596,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
@@ -1610,8 +1610,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
@@ -1921,8 +1921,8 @@ namespace ININ.PureCloudApi.Api
         /// Delete an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
         public Evaluation DeleteConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null)
@@ -1935,8 +1935,8 @@ namespace ININ.PureCloudApi.Api
         /// Delete an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
         public ApiResponse< Evaluation > DeleteConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null)
@@ -2006,8 +2006,8 @@ namespace ININ.PureCloudApi.Api
         /// Delete an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
         public async System.Threading.Tasks.Task<Evaluation> DeleteConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, string expand = null)
@@ -2021,8 +2021,8 @@ namespace ININ.PureCloudApi.Api
         /// Delete an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
@@ -3335,8 +3335,8 @@ namespace ININ.PureCloudApi.Api
         /// Get an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Evaluation</returns>
         public Evaluation GetConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null)
@@ -3349,8 +3349,8 @@ namespace ININ.PureCloudApi.Api
         /// Get an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
         public ApiResponse< Evaluation > GetConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null)
@@ -3420,8 +3420,8 @@ namespace ININ.PureCloudApi.Api
         /// Get an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of Evaluation</returns>
         public async System.Threading.Tasks.Task<Evaluation> GetConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, string expand = null)
@@ -3435,8 +3435,8 @@ namespace ININ.PureCloudApi.Api
         /// Get an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
@@ -5278,7 +5278,7 @@ namespace ININ.PureCloudApi.Api
         /// Create an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
@@ -5292,7 +5292,7 @@ namespace ININ.PureCloudApi.Api
         /// Create an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
@@ -5370,7 +5370,7 @@ namespace ININ.PureCloudApi.Api
         /// Create an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
@@ -5385,7 +5385,7 @@ namespace ININ.PureCloudApi.Api
         /// Create an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
+        /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
@@ -6644,8 +6644,8 @@ namespace ININ.PureCloudApi.Api
         /// Update an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
@@ -6659,8 +6659,8 @@ namespace ININ.PureCloudApi.Api
         /// Update an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
@@ -6742,8 +6742,8 @@ namespace ININ.PureCloudApi.Api
         /// Update an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
@@ -6758,8 +6758,8 @@ namespace ININ.PureCloudApi.Api
         /// Update an evaluation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>

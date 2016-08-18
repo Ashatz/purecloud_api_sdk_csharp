@@ -182,7 +182,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var skillId = skillId_example;  // string | 
+            var skillId = skillId_example;  // string | skillId
 
             try
             {
@@ -205,7 +205,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **skillId** | **string**|  |  |
+| **skillId** | **string**| skillId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -405,8 +405,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new UsersApi();
-            var q64 = q64_example;  // string | 
-            var expand = new List<string>(); // List<string> |  (optional) 
+            var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | expand (optional) 
 
             try
             {
@@ -428,8 +428,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  |  |
-| **expand** | [**List<string>**](string.html)|  | [optional]  |
+| **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1798,7 +1798,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var skillId = skillId_example;  // string | 
+            var skillId = skillId_example;  // string | skillId
             var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
 
             try
@@ -1822,7 +1822,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **skillId** | **string**|  |  |
+| **skillId** | **string**| skillId |  |
 | **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill |  |
 {: class="table table-striped"}
 
@@ -1916,7 +1916,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var stationId = stationId_example;  // string | 
+            var stationId = stationId_example;  // string | stationId
 
             try
             {
@@ -1938,7 +1938,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **stationId** | **string**|  |  |
+| **stationId** | **string**| stationId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1973,7 +1973,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var stationId = stationId_example;  // string | 
+            var stationId = stationId_example;  // string | stationId
 
             try
             {
@@ -1995,7 +1995,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **stationId** | **string**|  |  |
+| **stationId** | **string**| stationId |  |
 {: class="table table-striped"}
 
 ### Return type

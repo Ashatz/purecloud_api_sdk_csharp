@@ -40,7 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchCallbacksCallbackIdParticipantsParticipantId**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantid) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId} | Update conversation participant |
 | [**PatchCallbacksCallbackIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchCallsCallId**](ConversationsApi.html#patchcallscallid) | **PATCH** /api/v2/conversations/calls/{callId} | Update a conversation by setting it&#39;s recording state or disconnecting all of the participants |
+| [**PatchCallsCallId**](ConversationsApi.html#patchcallscallid) | **PATCH** /api/v2/conversations/calls/{callId} | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
 | [**PatchCallsCallIdParticipantsParticipantId**](ConversationsApi.html#patchcallscallidparticipantsparticipantid) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId} | Update conversation participant |
 | [**PatchCallsCallIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchcallscallidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchcallscallidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
@@ -101,8 +101,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
 
             try
             {
@@ -124,8 +124,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -218,8 +218,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
-            var attachmentId = attachmentId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
+            var attachmentId = attachmentId_example;  // string | attachmentId
 
             try
             {
@@ -241,8 +241,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
-| **attachmentId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
+| **attachmentId** | **string**| attachmentId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -327,7 +327,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | 
+            var callbackId = callbackId_example;  // string | callbackId
 
             try
             {
@@ -349,7 +349,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**|  |  |
+| **callbackId** | **string**| callbackId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -383,8 +383,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callbackId = callbackId_example;  // string | callbackId
+            var participantId = participantId_example;  // string | participantId
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
 
             try
@@ -407,8 +407,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callbackId** | **string**| callbackId |  |
+| **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
 {: class="table table-striped"}
 
@@ -418,7 +418,7 @@ namespace Example
 
 <a name="getcallbackscallbackidparticipantsparticipantidwrapupcodes"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes (string callbackId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes (string callbackId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -443,13 +443,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callbackId = callbackId_example;  // string | callbackId
+            var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                WrapupCode result = apiInstance.GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes(callbackId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes(callbackId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -466,13 +466,13 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callbackId** | **string**| callbackId |  |
+| **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode.html)
 
 <a name="getcalls"></a>
 
@@ -552,7 +552,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
+            var callId = callId_example;  // string | callId
 
             try
             {
@@ -574,7 +574,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
+| **callId** | **string**| callId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -608,8 +608,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
 
             try
@@ -632,8 +632,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
 {: class="table table-striped"}
 
@@ -643,7 +643,7 @@ namespace Example
 
 <a name="getcallscallidparticipantsparticipantidwrapupcodes"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetCallsCallIdParticipantsParticipantIdWrapupcodes (string callId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetCallsCallIdParticipantsParticipantIdWrapupcodes (string callId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -668,13 +668,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                WrapupCode result = apiInstance.GetCallsCallIdParticipantsParticipantIdWrapupcodes(callId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetCallsCallIdParticipantsParticipantIdWrapupcodes(callId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -691,13 +691,13 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode.html)
 
 <a name="getcallshistory"></a>
 
@@ -888,7 +888,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | 
+            var chatId = chatId_example;  // string | chatId
 
             try
             {
@@ -910,7 +910,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**|  |  |
+| **chatId** | **string**| chatId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -944,8 +944,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var chatId = chatId_example;  // string | chatId
+            var participantId = participantId_example;  // string | participantId
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
 
             try
@@ -968,8 +968,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **chatId** | **string**| chatId |  |
+| **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
 {: class="table table-striped"}
 
@@ -979,7 +979,7 @@ namespace Example
 
 <a name="getchatschatidparticipantsparticipantidwrapupcodes"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetChatsChatIdParticipantsParticipantIdWrapupcodes (string chatId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetChatsChatIdParticipantsParticipantIdWrapupcodes (string chatId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -1004,13 +1004,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var chatId = chatId_example;  // string | chatId
+            var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                WrapupCode result = apiInstance.GetChatsChatIdParticipantsParticipantIdWrapupcodes(chatId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetChatsChatIdParticipantsParticipantIdWrapupcodes(chatId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1027,13 +1027,13 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **chatId** | **string**| chatId |  |
+| **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode.html)
 
 <a name="getconversationid"></a>
 
@@ -1399,7 +1399,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
 
             try
             {
@@ -1421,7 +1421,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1455,7 +1455,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
 
             try
             {
@@ -1477,7 +1477,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1511,7 +1511,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
 
             try
             {
@@ -1533,7 +1533,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1567,8 +1567,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
-            var messageId = messageId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
+            var messageId = messageId_example;  // string | messageId
 
             try
             {
@@ -1590,8 +1590,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
-| **messageId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
+| **messageId** | **string**| messageId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1625,8 +1625,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
+            var participantId = participantId_example;  // string | participantId
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
 
             try
@@ -1649,8 +1649,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
+| **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
 {: class="table table-striped"}
 
@@ -1660,7 +1660,7 @@ namespace Example
 
 <a name="getemailsemailidparticipantsparticipantidwrapupcodes"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetEmailsEmailIdParticipantsParticipantIdWrapupcodes (string emailId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetEmailsEmailIdParticipantsParticipantIdWrapupcodes (string emailId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -1685,13 +1685,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
+            var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                WrapupCode result = apiInstance.GetEmailsEmailIdParticipantsParticipantIdWrapupcodes(emailId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetEmailsEmailIdParticipantsParticipantIdWrapupcodes(emailId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1708,13 +1708,13 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
+| **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode.html)
 
 <a name="patchcallbackscallbackid"></a>
 
@@ -1743,7 +1743,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | 
+            var callbackId = callbackId_example;  // string | callbackId
             var body = new Conversation(); // Conversation | Conversation
 
             try
@@ -1766,7 +1766,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**|  |  |
+| **callbackId** | **string**| callbackId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -1801,8 +1801,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callbackId = callbackId_example;  // string | callbackId
+            var participantId = participantId_example;  // string | participantId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
 
             try
@@ -1824,8 +1824,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callbackId** | **string**| callbackId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
 {: class="table table-striped"}
 
@@ -1860,8 +1860,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callbackId = callbackId_example;  // string | callbackId
+            var participantId = participantId_example;  // string | participantId
             var body = new ParticipantAttributes(); // ParticipantAttributes | Attributes
 
             try
@@ -1883,8 +1883,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callbackId** | **string**| callbackId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Attributes |  |
 {: class="table table-striped"}
 
@@ -1919,9 +1919,9 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | 
-            var participantId = participantId_example;  // string | 
-            var communicationId = communicationId_example;  // string | 
+            var callbackId = callbackId_example;  // string | callbackId
+            var participantId = participantId_example;  // string | participantId
+            var communicationId = communicationId_example;  // string | communicationId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
 
             try
@@ -1943,9 +1943,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**|  |  |
-| **participantId** | **string**|  |  |
-| **communicationId** | **string**|  |  |
+| **callbackId** | **string**| callbackId |  |
+| **participantId** | **string**| participantId |  |
+| **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
 {: class="table table-striped"}
 
@@ -1957,7 +1957,7 @@ void (empty response body)
 
 ## [**Conversation**](Conversation.html) PatchCallsCallId (string callId, Conversation body)
 
-Update a conversation by setting it's recording state or disconnecting all of the participants
+Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
 
 
 
@@ -1980,12 +1980,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
+            var callId = callId_example;  // string | callId
             var body = new Conversation(); // Conversation | Conversation
 
             try
             {
-                // Update a conversation by setting it's recording state or disconnecting all of the participants
+                // Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
                 Conversation result = apiInstance.PatchCallsCallId(callId, body);
                 Debug.WriteLine(result);
             }
@@ -2003,7 +2003,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
+| **callId** | **string**| callId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -2038,8 +2038,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant request
 
             try
@@ -2061,8 +2061,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant request |  |
 {: class="table table-striped"}
 
@@ -2097,8 +2097,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
             var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
 
             try
@@ -2120,8 +2120,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
 {: class="table table-striped"}
 
@@ -2156,9 +2156,9 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
-            var participantId = participantId_example;  // string | 
-            var communicationId = communicationId_example;  // string | 
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
+            var communicationId = communicationId_example;  // string | communicationId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
 
             try
@@ -2180,9 +2180,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
-| **participantId** | **string**|  |  |
-| **communicationId** | **string**|  |  |
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
+| **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
 {: class="table table-striped"}
 
@@ -2217,8 +2217,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
             var body = new ConsultTransferUpdate(); // ConsultTransferUpdate | new speak to
 
             try
@@ -2241,8 +2241,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate.html)| new speak to |  |
 {: class="table table-striped"}
 
@@ -2277,7 +2277,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | 
+            var chatId = chatId_example;  // string | chatId
             var body = new Conversation(); // Conversation | Conversation
 
             try
@@ -2300,7 +2300,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**|  |  |
+| **chatId** | **string**| chatId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -2335,8 +2335,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var chatId = chatId_example;  // string | chatId
+            var participantId = participantId_example;  // string | participantId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Update request
 
             try
@@ -2358,8 +2358,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **chatId** | **string**| chatId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request |  |
 {: class="table table-striped"}
 
@@ -2394,8 +2394,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var chatId = chatId_example;  // string | chatId
+            var participantId = participantId_example;  // string | participantId
             var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
 
             try
@@ -2417,8 +2417,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **chatId** | **string**| chatId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
 {: class="table table-striped"}
 
@@ -2453,9 +2453,9 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | 
-            var participantId = participantId_example;  // string | 
-            var communicationId = communicationId_example;  // string | 
+            var chatId = chatId_example;  // string | chatId
+            var participantId = participantId_example;  // string | participantId
+            var communicationId = communicationId_example;  // string | communicationId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
 
             try
@@ -2477,9 +2477,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**|  |  |
-| **participantId** | **string**|  |  |
-| **communicationId** | **string**|  |  |
+| **chatId** | **string**| chatId |  |
+| **participantId** | **string**| participantId |  |
+| **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
 {: class="table table-striped"}
 
@@ -2632,7 +2632,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
             var body = new Conversation(); // Conversation | Conversation
 
             try
@@ -2655,7 +2655,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -2690,8 +2690,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
+            var participantId = participantId_example;  // string | participantId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Update request
 
             try
@@ -2713,8 +2713,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request |  |
 {: class="table table-striped"}
 
@@ -2749,8 +2749,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
+            var participantId = participantId_example;  // string | participantId
             var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
 
             try
@@ -2772,8 +2772,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
 {: class="table table-striped"}
 
@@ -2864,8 +2864,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callbackId = callbackId_example;  // string | callbackId
+            var participantId = participantId_example;  // string | participantId
             var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
@@ -2887,8 +2887,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callbackId** | **string**| callbackId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
 
@@ -2979,7 +2979,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
+            var callId = callId_example;  // string | callId
             var body = new CallCommand(); // CallCommand | Conversation
 
             try
@@ -3002,7 +3002,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
+| **callId** | **string**| callId |  |
 | **body** | [**CallCommand**](CallCommand.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -3037,7 +3037,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
+            var callId = callId_example;  // string | callId
             var body = new Conversation(); // Conversation | Conversation
 
             try
@@ -3060,7 +3060,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
+| **callId** | **string**| callId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -3095,8 +3095,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
             var body = new ConsultTransfer(); // ConsultTransfer | Destination address & initial speak to
 
             try
@@ -3119,8 +3119,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address &amp; initial speak to |  |
 {: class="table table-striped"}
 
@@ -3155,8 +3155,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
 
             try
             {
@@ -3177,8 +3177,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3212,8 +3212,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
             var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
@@ -3235,8 +3235,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
 
@@ -3271,8 +3271,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var chatId = chatId_example;  // string | chatId
+            var participantId = participantId_example;  // string | participantId
             var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
@@ -3294,8 +3294,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **chatId** | **string**| chatId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
 
@@ -3618,7 +3618,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
             var body = new EmailMessage(); // EmailMessage | Reply
 
             try
@@ -3641,7 +3641,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
 | **body** | [**EmailMessage**](EmailMessage.html)| Reply |  |
 {: class="table table-striped"}
 
@@ -3676,8 +3676,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
-            var participantId = participantId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
+            var participantId = participantId_example;  // string | participantId
             var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
@@ -3699,8 +3699,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
-| **participantId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
+| **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
 
@@ -3791,7 +3791,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | 
+            var emailId = emailId_example;  // string | emailId
             var body = new EmailMessage(); // EmailMessage | Draft
 
             try
@@ -3814,7 +3814,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**|  |  |
+| **emailId** | **string**| emailId |  |
 | **body** | [**EmailMessage**](EmailMessage.html)| Draft |  |
 {: class="table table-striped"}
 

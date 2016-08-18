@@ -580,7 +580,7 @@ namespace Example
 
 <a name="getdocumentsdocumentidcontent"></a>
 
-## void GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null)
+## [**DownloadResponse**](DownloadResponse.html) GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null)
 
 Download a document.
 
@@ -612,7 +612,8 @@ namespace Example
             try
             {
                 // Download a document.
-                apiInstance.GetDocumentsDocumentIdContent(documentId, disposition, contentType);
+                DownloadResponse result = apiInstance.GetDocumentsDocumentIdContent(documentId, disposition, contentType);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -635,7 +636,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**DownloadResponse**](DownloadResponse.html)
 
 <a name="getquery"></a>
 

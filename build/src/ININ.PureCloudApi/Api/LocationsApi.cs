@@ -67,8 +67,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>LocationsSearchResponse</returns>
         LocationsSearchResponse GetSearch (string q64, List<string> expand = null);
 
@@ -79,8 +79,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
         ApiResponse<LocationsSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -159,8 +159,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of LocationsSearchResponse</returns>
         System.Threading.Tasks.Task<LocationsSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
 
@@ -171,8 +171,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -602,8 +602,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>LocationsSearchResponse</returns>
         public LocationsSearchResponse GetSearch (string q64, List<string> expand = null)
         {
@@ -615,8 +615,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
         public ApiResponse< LocationsSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null)
         {
@@ -681,8 +681,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of LocationsSearchResponse</returns>
         public async System.Threading.Tasks.Task<LocationsSearchResponse> GetSearchAsync (string q64, List<string> expand = null)
         {
@@ -695,8 +695,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         {

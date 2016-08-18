@@ -125,8 +125,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var conversationId = conversationId_example;  // string | 
-            var evaluationId = evaluationId_example;  // string | 
+            var conversationId = conversationId_example;  // string | conversationId
+            var evaluationId = evaluationId_example;  // string | evaluationId
             var expand = expand_example;  // string | evaluatorId (optional) 
 
             try
@@ -149,8 +149,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**|  |  |
-| **evaluationId** | **string**|  |  |
+| **conversationId** | **string**| conversationId |  |
+| **evaluationId** | **string**| evaluationId |  |
 | **expand** | **string**| evaluatorId | [optional]  |
 {: class="table table-striped"}
 
@@ -634,8 +634,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var conversationId = conversationId_example;  // string | 
-            var evaluationId = evaluationId_example;  // string | 
+            var conversationId = conversationId_example;  // string | conversationId
+            var evaluationId = evaluationId_example;  // string | evaluationId
             var expand = expand_example;  // string | agent, evaluator, evaluationForm (optional) 
 
             try
@@ -658,8 +658,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**|  |  |
-| **evaluationId** | **string**|  |  |
+| **conversationId** | **string**| conversationId |  |
+| **evaluationId** | **string**| evaluationId |  |
 | **expand** | **string**| agent, evaluator, evaluationForm | [optional]  |
 {: class="table table-striped"}
 
@@ -1340,7 +1340,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var conversationId = conversationId_example;  // string | 
+            var conversationId = conversationId_example;  // string | conversationId
             var body = new Evaluation(); // Evaluation | evaluation
             var expand = expand_example;  // string | evaluatorId (optional) 
 
@@ -1364,7 +1364,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**|  |  |
+| **conversationId** | **string**| conversationId |  |
 | **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
 | **expand** | **string**| evaluatorId | [optional]  |
 {: class="table table-striped"}
@@ -1796,8 +1796,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var conversationId = conversationId_example;  // string | 
-            var evaluationId = evaluationId_example;  // string | 
+            var conversationId = conversationId_example;  // string | conversationId
+            var evaluationId = evaluationId_example;  // string | evaluationId
             var body = new Evaluation(); // Evaluation | evaluation
             var expand = expand_example;  // string | evaluatorId (optional) 
 
@@ -1821,8 +1821,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**|  |  |
-| **evaluationId** | **string**|  |  |
+| **conversationId** | **string**| conversationId |  |
+| **evaluationId** | **string**| evaluationId |  |
 | **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
 | **expand** | **string**| evaluatorId | [optional]  |
 {: class="table table-striped"}

@@ -279,8 +279,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new GroupsApi();
-            var q64 = q64_example;  // string | 
-            var expand = new List<string>(); // List<string> |  (optional) 
+            var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | expand (optional) 
 
             try
             {
@@ -302,8 +302,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  |  |
-| **expand** | [**List<string>**](string.html)|  | [optional]  |
+| **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

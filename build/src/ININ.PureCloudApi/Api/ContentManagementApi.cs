@@ -247,8 +247,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
-        /// <returns></returns>
-        void GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null);
+        /// <returns>DownloadResponse</returns>
+        DownloadResponse GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null);
 
         /// <summary>
         /// Download a document.
@@ -260,8 +260,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetDocumentsDocumentIdContentWithHttpInfo (string documentId, string disposition = null, string contentType = null);
+        /// <returns>ApiResponse of DownloadResponse</returns>
+        ApiResponse<DownloadResponse> GetDocumentsDocumentIdContentWithHttpInfo (string documentId, string disposition = null, string contentType = null);
         /// <summary>
         /// Query content
         /// </summary>
@@ -1152,8 +1152,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetDocumentsDocumentIdContentAsync (string documentId, string disposition = null, string contentType = null);
+        /// <returns>Task of DownloadResponse</returns>
+        System.Threading.Tasks.Task<DownloadResponse> GetDocumentsDocumentIdContentAsync (string documentId, string disposition = null, string contentType = null);
 
         /// <summary>
         /// Download a document.
@@ -1165,8 +1165,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null);
+        /// <returns>Task of ApiResponse (DownloadResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null);
         /// <summary>
         /// Query content
         /// </summary>
@@ -3398,10 +3398,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
-        /// <returns></returns>
-        public void GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null)
+        /// <returns>DownloadResponse</returns>
+        public DownloadResponse GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null)
         {
-             GetDocumentsDocumentIdContentWithHttpInfo(documentId, disposition, contentType);
+             ApiResponse<DownloadResponse> localVarResponse = GetDocumentsDocumentIdContentWithHttpInfo(documentId, disposition, contentType);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -3411,8 +3412,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetDocumentsDocumentIdContentWithHttpInfo (string documentId, string disposition = null, string contentType = null)
+        /// <returns>ApiResponse of DownloadResponse</returns>
+        public ApiResponse< DownloadResponse > GetDocumentsDocumentIdContentWithHttpInfo (string documentId, string disposition = null, string contentType = null)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
@@ -3466,10 +3467,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdContent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<DownloadResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (DownloadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DownloadResponse)));
+            
         }
 
         /// <summary>
@@ -3479,10 +3480,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetDocumentsDocumentIdContentAsync (string documentId, string disposition = null, string contentType = null)
+        /// <returns>Task of DownloadResponse</returns>
+        public async System.Threading.Tasks.Task<DownloadResponse> GetDocumentsDocumentIdContentAsync (string documentId, string disposition = null, string contentType = null)
         {
-             await GetDocumentsDocumentIdContentAsyncWithHttpInfo(documentId, disposition, contentType);
+             ApiResponse<DownloadResponse> localVarResponse = await GetDocumentsDocumentIdContentAsyncWithHttpInfo(documentId, disposition, contentType);
+             return localVarResponse.Data;
 
         }
 
@@ -3493,8 +3495,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null)
+        /// <returns>Task of ApiResponse (DownloadResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
@@ -3548,10 +3550,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetDocumentsDocumentIdContent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<DownloadResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (DownloadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DownloadResponse)));
+            
         }
 
         /// <summary>

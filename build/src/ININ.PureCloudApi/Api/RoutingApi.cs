@@ -66,7 +66,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="forceDelete"> (optional)</param>
+        /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>string</returns>
         string DeleteQueuesQueueId (string queueId, bool? forceDelete = null);
 
@@ -78,7 +78,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="forceDelete"> (optional)</param>
+        /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteQueuesQueueIdWithHttpInfo (string queueId, bool? forceDelete = null);
         /// <summary>
@@ -156,7 +156,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>string</returns>
         string DeleteUserIdRoutingskillsSkillId (string userId, string skillId);
 
@@ -168,7 +168,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId);
         /// <summary>
@@ -504,8 +504,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">expand (optional)</param>
         /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>QueueMember</returns>
-        QueueMember GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        /// <returns>QueueMemberEntityListing</returns>
+        QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
 
         /// <summary>
         /// Get the members of this queue
@@ -520,8 +520,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">expand (optional)</param>
         /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        ApiResponse<QueueMemberEntityListing> GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
         /// <summary>
         /// Get the wrap-up codes for a queue
         /// </summary>
@@ -531,8 +531,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>WrapupCode</returns>
-        WrapupCode GetQueuesQueueIdWrapupcodes (string queueId, string codeId);
+        /// <returns>WrapupCodeEntityListing</returns>
+        WrapupCodeEntityListing GetQueuesQueueIdWrapupcodes (string queueId, string codeId);
 
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -543,8 +543,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId);
+        /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
+        ApiResponse<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId);
         /// <summary>
         /// Get the list of routing skills.
         /// </summary>
@@ -690,8 +690,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>QueueMember</returns>
-        QueueMember PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body);
+        /// <returns>QueueMemberEntityListing</returns>
+        QueueMemberEntityListing PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body);
 
         /// <summary>
         /// Join or unjoin a set of users for a queue
@@ -702,8 +702,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> PatchQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body);
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        ApiResponse<QueueMemberEntityListing> PatchQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body);
         /// <summary>
         /// Update the ring number of joined status for a User in a Queue
         /// </summary>
@@ -825,8 +825,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>QueueMember</returns>
-        QueueMember PostQueuesQueueIdUsers (string queueId, List<QueueMember> body, bool? delete = null);
+        /// <returns>string</returns>
+        string PostQueuesQueueIdUsers (string queueId, List<QueueMember> body, bool? delete = null);
 
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -838,8 +838,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> PostQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> PostQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null);
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
         /// </summary>
@@ -850,8 +850,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
-        /// <returns>WrapupCode</returns>
-        WrapupCode PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body);
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        List<WrapupCode> PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body);
 
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -863,8 +863,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body);
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        ApiResponse<List<WrapupCode>> PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body);
         /// <summary>
         /// Create Skill
         /// </summary>
@@ -986,7 +986,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body);
@@ -999,7 +999,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
         ApiResponse<UserRoutingSkill> PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
@@ -1101,7 +1101,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="forceDelete"> (optional)</param>
+        /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> DeleteQueuesQueueIdAsync (string queueId, bool? forceDelete = null);
 
@@ -1113,7 +1113,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="forceDelete"> (optional)</param>
+        /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueuesQueueIdAsyncWithHttpInfo (string queueId, bool? forceDelete = null);
         /// <summary>
@@ -1191,7 +1191,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> DeleteUserIdRoutingskillsSkillIdAsync (string userId, string skillId);
 
@@ -1203,7 +1203,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId);
         /// <summary>
@@ -1539,8 +1539,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">expand (optional)</param>
         /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
 
         /// <summary>
         /// Get the members of this queue
@@ -1555,8 +1555,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">expand (optional)</param>
         /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
         /// <summary>
         /// Get the wrap-up codes for a queue
         /// </summary>
@@ -1566,8 +1566,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> GetQueuesQueueIdWrapupcodesAsync (string queueId, string codeId);
+        /// <returns>Task of WrapupCodeEntityListing</returns>
+        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesAsync (string queueId, string codeId);
 
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -1578,8 +1578,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId);
+        /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId);
         /// <summary>
         /// Get the list of routing skills.
         /// </summary>
@@ -1725,8 +1725,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> PatchQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body);
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        System.Threading.Tasks.Task<QueueMemberEntityListing> PatchQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body);
 
         /// <summary>
         /// Join or unjoin a set of users for a queue
@@ -1737,8 +1737,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body);
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body);
         /// <summary>
         /// Update the ring number of joined status for a User in a Queue
         /// </summary>
@@ -1860,8 +1860,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> PostQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body, bool? delete = null);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> PostQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body, bool? delete = null);
 
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -1873,8 +1873,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> PostQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> PostQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null);
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
         /// </summary>
@@ -1885,8 +1885,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
-        /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> PostQueuesQueueIdWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body);
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        System.Threading.Tasks.Task<List<WrapupCode>> PostQueuesQueueIdWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body);
 
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -1898,8 +1898,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body);
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body);
         /// <summary>
         /// Create Skill
         /// </summary>
@@ -2021,7 +2021,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body);
@@ -2034,7 +2034,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
@@ -2495,7 +2495,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="forceDelete"> (optional)</param>
+        /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>string</returns>
         public string DeleteQueuesQueueId (string queueId, bool? forceDelete = null)
         {
@@ -2508,7 +2508,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="forceDelete"> (optional)</param>
+        /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > DeleteQueuesQueueIdWithHttpInfo (string queueId, bool? forceDelete = null)
         {
@@ -2574,7 +2574,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="forceDelete"> (optional)</param>
+        /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> DeleteQueuesQueueIdAsync (string queueId, bool? forceDelete = null)
         {
@@ -2588,7 +2588,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="forceDelete"> (optional)</param>
+        /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueuesQueueIdAsyncWithHttpInfo (string queueId, bool? forceDelete = null)
         {
@@ -3137,7 +3137,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>string</returns>
         public string DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
         {
@@ -3150,7 +3150,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > DeleteUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId)
         {
@@ -3219,7 +3219,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> DeleteUserIdRoutingskillsSkillIdAsync (string userId, string skillId)
         {
@@ -3233,7 +3233,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId)
         {
@@ -5509,10 +5509,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">expand (optional)</param>
         /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>QueueMember</returns>
-        public QueueMember GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        /// <returns>QueueMemberEntityListing</returns>
+        public QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
         {
-             ApiResponse<QueueMember> localVarResponse = GetQueuesQueueIdUsersWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
+             ApiResponse<QueueMemberEntityListing> localVarResponse = GetQueuesQueueIdUsersWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
              return localVarResponse.Data;
         }
 
@@ -5526,8 +5526,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">expand (optional)</param>
         /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        public ApiResponse< QueueMemberEntityListing > GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -5584,9 +5584,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)));
+                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
             
         }
 
@@ -5600,10 +5600,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">expand (optional)</param>
         /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
         {
-             ApiResponse<QueueMember> localVarResponse = await GetQueuesQueueIdUsersAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
+             ApiResponse<QueueMemberEntityListing> localVarResponse = await GetQueuesQueueIdUsersAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
              return localVarResponse.Data;
 
         }
@@ -5618,8 +5618,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="expand">expand (optional)</param>
         /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -5676,9 +5676,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)));
+                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
             
         }
 
@@ -5688,10 +5688,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>WrapupCode</returns>
-        public WrapupCode GetQueuesQueueIdWrapupcodes (string queueId, string codeId)
+        /// <returns>WrapupCodeEntityListing</returns>
+        public WrapupCodeEntityListing GetQueuesQueueIdWrapupcodes (string queueId, string codeId)
         {
-             ApiResponse<WrapupCode> localVarResponse = GetQueuesQueueIdWrapupcodesWithHttpInfo(queueId, codeId);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetQueuesQueueIdWrapupcodesWithHttpInfo(queueId, codeId);
              return localVarResponse.Data;
         }
 
@@ -5701,8 +5701,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId)
+        /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
+        public ApiResponse< WrapupCodeEntityListing > GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -5758,9 +5758,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<WrapupCodeEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (WrapupCodeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCodeEntityListing)));
             
         }
 
@@ -5770,10 +5770,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> GetQueuesQueueIdWrapupcodesAsync (string queueId, string codeId)
+        /// <returns>Task of WrapupCodeEntityListing</returns>
+        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesAsync (string queueId, string codeId)
         {
-             ApiResponse<WrapupCode> localVarResponse = await GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo(queueId, codeId);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo(queueId, codeId);
              return localVarResponse.Data;
 
         }
@@ -5784,8 +5784,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId)
+        /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -5841,9 +5841,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<WrapupCodeEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (WrapupCodeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCodeEntityListing)));
             
         }
 
@@ -6783,10 +6783,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>QueueMember</returns>
-        public QueueMember PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body)
+        /// <returns>QueueMemberEntityListing</returns>
+        public QueueMemberEntityListing PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body)
         {
-             ApiResponse<QueueMember> localVarResponse = PatchQueuesQueueIdUsersWithHttpInfo(queueId, body);
+             ApiResponse<QueueMemberEntityListing> localVarResponse = PatchQueuesQueueIdUsersWithHttpInfo(queueId, body);
              return localVarResponse.Data;
         }
 
@@ -6796,8 +6796,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > PatchQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body)
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        public ApiResponse< QueueMemberEntityListing > PatchQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -6860,9 +6860,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)));
+                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
             
         }
 
@@ -6872,10 +6872,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> PatchQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body)
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        public async System.Threading.Tasks.Task<QueueMemberEntityListing> PatchQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body)
         {
-             ApiResponse<QueueMember> localVarResponse = await PatchQueuesQueueIdUsersAsyncWithHttpInfo(queueId, body);
+             ApiResponse<QueueMemberEntityListing> localVarResponse = await PatchQueuesQueueIdUsersAsyncWithHttpInfo(queueId, body);
              return localVarResponse.Data;
 
         }
@@ -6886,8 +6886,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body)
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -6950,9 +6950,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)));
+                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
             
         }
 
@@ -7834,10 +7834,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>QueueMember</returns>
-        public QueueMember PostQueuesQueueIdUsers (string queueId, List<QueueMember> body, bool? delete = null)
+        /// <returns>string</returns>
+        public string PostQueuesQueueIdUsers (string queueId, List<QueueMember> body, bool? delete = null)
         {
-             ApiResponse<QueueMember> localVarResponse = PostQueuesQueueIdUsersWithHttpInfo(queueId, body, delete);
+             ApiResponse<string> localVarResponse = PostQueuesQueueIdUsersWithHttpInfo(queueId, body, delete);
              return localVarResponse.Data;
         }
 
@@ -7848,8 +7848,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > PostQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > PostQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -7913,9 +7913,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
 
@@ -7926,10 +7926,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> PostQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body, bool? delete = null)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> PostQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body, bool? delete = null)
         {
-             ApiResponse<QueueMember> localVarResponse = await PostQueuesQueueIdUsersAsyncWithHttpInfo(queueId, body, delete);
+             ApiResponse<string> localVarResponse = await PostQueuesQueueIdUsersAsyncWithHttpInfo(queueId, body, delete);
              return localVarResponse.Data;
 
         }
@@ -7941,8 +7941,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> PostQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -8006,9 +8006,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
 
@@ -8019,10 +8019,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
-        /// <returns>WrapupCode</returns>
-        public WrapupCode PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        public List<WrapupCode> PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
         {
-             ApiResponse<WrapupCode> localVarResponse = PostQueuesQueueIdWrapupcodesWithHttpInfo(queueId, codeId, body);
+             ApiResponse<List<WrapupCode>> localVarResponse = PostQueuesQueueIdWrapupcodesWithHttpInfo(queueId, codeId, body);
              return localVarResponse.Data;
         }
 
@@ -8033,8 +8033,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body)
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        public ApiResponse< List<WrapupCode> > PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -8101,9 +8101,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -8114,10 +8114,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
-        /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> PostQueuesQueueIdWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body)
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        public async System.Threading.Tasks.Task<List<WrapupCode>> PostQueuesQueueIdWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body)
         {
-             ApiResponse<WrapupCode> localVarResponse = await PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo(queueId, codeId, body);
+             ApiResponse<List<WrapupCode>> localVarResponse = await PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo(queueId, codeId, body);
              return localVarResponse.Data;
 
         }
@@ -8129,8 +8129,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body)
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -8197,9 +8197,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -9091,7 +9091,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         public UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body)
@@ -9105,7 +9105,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
         public ApiResponse< UserRoutingSkill > PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
@@ -9186,7 +9186,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         public async System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body)
@@ -9201,7 +9201,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body)

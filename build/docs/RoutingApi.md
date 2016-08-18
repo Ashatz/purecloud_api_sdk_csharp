@@ -196,7 +196,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
-            var forceDelete = true;  // bool? |  (optional) 
+            var forceDelete = true;  // bool? | forceDelete (optional) 
 
             try
             {
@@ -219,7 +219,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **forceDelete** | **bool?**|  | [optional]  |
+| **forceDelete** | **bool?**| forceDelete | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -426,7 +426,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var userId = userId_example;  // string | User ID
-            var skillId = skillId_example;  // string | 
+            var skillId = skillId_example;  // string | skillId
 
             try
             {
@@ -449,7 +449,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **skillId** | **string**|  |  |
+| **skillId** | **string**| skillId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1259,7 +1259,7 @@ namespace Example
 
 <a name="getqueuesqueueidusers"></a>
 
-## [**QueueMember**](QueueMember.html) GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
 
 Get the members of this queue
 
@@ -1294,7 +1294,7 @@ namespace Example
             try
             {
                 // Get the members of this queue
-                QueueMember result = apiInstance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
+                QueueMemberEntityListing result = apiInstance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1321,11 +1321,11 @@ namespace Example
 
 ### Return type
 
-[**QueueMember**](QueueMember.html)
+[**QueueMemberEntityListing**](QueueMemberEntityListing.html)
 
 <a name="getqueuesqueueidwrapupcodes"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetQueuesQueueIdWrapupcodes (string queueId, string codeId)
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetQueuesQueueIdWrapupcodes (string queueId, string codeId)
 
 Get the wrap-up codes for a queue
 
@@ -1356,7 +1356,7 @@ namespace Example
             try
             {
                 // Get the wrap-up codes for a queue
-                WrapupCode result = apiInstance.GetQueuesQueueIdWrapupcodes(queueId, codeId);
+                WrapupCodeEntityListing result = apiInstance.GetQueuesQueueIdWrapupcodes(queueId, codeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1379,7 +1379,7 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
 
 <a name="getskills"></a>
 
@@ -1726,7 +1726,7 @@ namespace Example
 
 <a name="patchqueuesqueueidusers"></a>
 
-## [**QueueMember**](QueueMember.html) PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body)
+## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body)
 
 Join or unjoin a set of users for a queue
 
@@ -1757,7 +1757,7 @@ namespace Example
             try
             {
                 // Join or unjoin a set of users for a queue
-                QueueMember result = apiInstance.PatchQueuesQueueIdUsers(queueId, body);
+                QueueMemberEntityListing result = apiInstance.PatchQueuesQueueIdUsers(queueId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1780,7 +1780,7 @@ namespace Example
 
 ### Return type
 
-[**QueueMember**](QueueMember.html)
+[**QueueMemberEntityListing**](QueueMemberEntityListing.html)
 
 <a name="patchqueuesqueueidusersmemberid"></a>
 
@@ -2070,7 +2070,7 @@ namespace Example
 
 <a name="postqueuesqueueidusers"></a>
 
-## [**QueueMember**](QueueMember.html) PostQueuesQueueIdUsers (string queueId, List<QueueMember> body, bool? delete = null)
+## **string** PostQueuesQueueIdUsers (string queueId, List<QueueMember> body, bool? delete = null)
 
 Bulk add or delete up to 100 queue members
 
@@ -2102,7 +2102,7 @@ namespace Example
             try
             {
                 // Bulk add or delete up to 100 queue members
-                QueueMember result = apiInstance.PostQueuesQueueIdUsers(queueId, body, delete);
+                string result = apiInstance.PostQueuesQueueIdUsers(queueId, body, delete);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2126,11 +2126,11 @@ namespace Example
 
 ### Return type
 
-[**QueueMember**](QueueMember.html)
+**string**
 
 <a name="postqueuesqueueidwrapupcodes"></a>
 
-## [**WrapupCode**](WrapupCode.html) PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
 
 Add up to 100 wrap-up codes to a queue
 
@@ -2162,7 +2162,7 @@ namespace Example
             try
             {
                 // Add up to 100 wrap-up codes to a queue
-                WrapupCode result = apiInstance.PostQueuesQueueIdWrapupcodes(queueId, codeId, body);
+                List&lt;WrapupCode&gt; result = apiInstance.PostQueuesQueueIdWrapupcodes(queueId, codeId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2186,7 +2186,7 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**List<WrapupCode>**](WrapupCode.html)
 
 <a name="postskills"></a>
 
@@ -2504,7 +2504,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var userId = userId_example;  // string | User ID
-            var skillId = skillId_example;  // string | 
+            var skillId = skillId_example;  // string | skillId
             var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
 
             try
@@ -2528,7 +2528,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **skillId** | **string**|  |  |
+| **skillId** | **string**| skillId |  |
 | **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill |  |
 {: class="table table-striped"}
 

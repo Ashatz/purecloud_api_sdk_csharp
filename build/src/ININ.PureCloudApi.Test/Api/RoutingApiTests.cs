@@ -337,7 +337,7 @@ namespace ININ.PureCloudApi.Test
             string expand = null; // TODO: replace null with proper value
             bool? directMembers = null; // TODO: replace null with proper value
             var response = instance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
-            Assert.IsInstanceOf<QueueMember> (response, "response is QueueMember");
+            Assert.IsInstanceOf<QueueMemberEntityListing> (response, "response is QueueMemberEntityListing");
         }
         
         /// <summary>
@@ -350,7 +350,7 @@ namespace ININ.PureCloudApi.Test
             string queueId = null; // TODO: replace null with proper value
             string codeId = null; // TODO: replace null with proper value
             var response = instance.GetQueuesQueueIdWrapupcodes(queueId, codeId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<WrapupCodeEntityListing> (response, "response is WrapupCodeEntityListing");
         }
         
         /// <summary>
@@ -440,7 +440,7 @@ namespace ININ.PureCloudApi.Test
             string queueId = null; // TODO: replace null with proper value
             List<QueueMember> body = null; // TODO: replace null with proper value
             var response = instance.PatchQueuesQueueIdUsers(queueId, body);
-            Assert.IsInstanceOf<QueueMember> (response, "response is QueueMember");
+            Assert.IsInstanceOf<QueueMemberEntityListing> (response, "response is QueueMemberEntityListing");
         }
         
         /// <summary>
@@ -517,7 +517,7 @@ namespace ININ.PureCloudApi.Test
             List<QueueMember> body = null; // TODO: replace null with proper value
             bool? delete = null; // TODO: replace null with proper value
             var response = instance.PostQueuesQueueIdUsers(queueId, body, delete);
-            Assert.IsInstanceOf<QueueMember> (response, "response is QueueMember");
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -531,7 +531,7 @@ namespace ININ.PureCloudApi.Test
             string codeId = null; // TODO: replace null with proper value
             List<WrapupCode> body = null; // TODO: replace null with proper value
             var response = instance.PostQueuesQueueIdWrapupcodes(queueId, codeId, body);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
         /// <summary>

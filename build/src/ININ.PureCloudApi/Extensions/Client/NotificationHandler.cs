@@ -84,6 +84,15 @@ namespace ININ.PureCloudApi.Client
             _typeMap.Remove(topic);
         }
 
+        /// <summary>
+        /// Removes all subscriptions from the channel
+        /// </summary>
+        public void RemoveAllSubscriptions()
+        {
+            _notificationsApi.DeleteChannelsChannelIdSubscriptions(Channel.Id);
+            _typeMap.Clear();
+        }
+
         private void ConnectSocket(string uri)
         {
             WebSocket = new WebSocket(uri);
@@ -112,10 +121,14 @@ namespace ININ.PureCloudApi.Client
             WebSocket.Connect();
         }
 
+        /// <summary>
+        /// Removes all subscriptions and closes the websocket
+        /// </summary>
         public void Dispose()
         {
             try
             {
+                RemoveAllSubscriptions();
                 if (WebSocket != null && WebSocket.IsAlive)
                     WebSocket.Close();
             }

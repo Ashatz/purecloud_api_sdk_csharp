@@ -117,8 +117,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>GroupsSearchResponse</returns>
         GroupsSearchResponse GetSearch (string q64, List<string> expand = null);
 
@@ -129,8 +129,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
         ApiResponse<GroupsSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -303,8 +303,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of GroupsSearchResponse</returns>
         System.Threading.Tasks.Task<GroupsSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
 
@@ -315,8 +315,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -1124,8 +1124,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>GroupsSearchResponse</returns>
         public GroupsSearchResponse GetSearch (string q64, List<string> expand = null)
         {
@@ -1137,8 +1137,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
         public ApiResponse< GroupsSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null)
         {
@@ -1203,8 +1203,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of GroupsSearchResponse</returns>
         public async System.Threading.Tasks.Task<GroupsSearchResponse> GetSearchAsync (string q64, List<string> expand = null)
         {
@@ -1217,8 +1217,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         {

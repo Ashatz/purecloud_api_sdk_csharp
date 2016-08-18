@@ -188,8 +188,8 @@ namespace ININ.PureCloudApi.Test
             string documentId = null; // TODO: replace null with proper value
             string disposition = null; // TODO: replace null with proper value
             string contentType = null; // TODO: replace null with proper value
-            instance.GetDocumentsDocumentIdContent(documentId, disposition, contentType);
-            
+            var response = instance.GetDocumentsDocumentIdContent(documentId, disposition, contentType);
+            Assert.IsInstanceOf<DownloadResponse> (response, "response is DownloadResponse");
         }
         
         /// <summary>

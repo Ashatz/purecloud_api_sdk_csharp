@@ -15,6 +15,27 @@ namespace ININ.PureCloudApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <returns>VirtualEdgeSetupPackage</returns>
+        VirtualEdgeSetupPackage GetProvidersEdgesEdgeIdSetuppackage (string edgeId);
+
+        /// <summary>
+        /// Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <returns>ApiResponse of VirtualEdgeSetupPackage</returns>
+        ApiResponse<VirtualEdgeSetupPackage> GetProvidersEdgesEdgeIdSetuppackageWithHttpInfo (string edgeId);
+        /// <summary>
         /// Get encryption key list
         /// </summary>
         /// <remarks>
@@ -98,6 +119,27 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<KeyRotationSchedule> PutRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <returns>Task of VirtualEdgeSetupPackage</returns>
+        System.Threading.Tasks.Task<VirtualEdgeSetupPackage> GetProvidersEdgesEdgeIdSetuppackageAsync (string edgeId);
+
+        /// <summary>
+        /// Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <returns>Task of ApiResponse (VirtualEdgeSetupPackage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VirtualEdgeSetupPackage>> GetProvidersEdgesEdgeIdSetuppackageAsyncWithHttpInfo (string edgeId);
         /// <summary>
         /// Get encryption key list
         /// </summary>
@@ -268,6 +310,159 @@ namespace ININ.PureCloudApi.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <returns>VirtualEdgeSetupPackage</returns>
+        public VirtualEdgeSetupPackage GetProvidersEdgesEdgeIdSetuppackage (string edgeId)
+        {
+             ApiResponse<VirtualEdgeSetupPackage> localVarResponse = GetProvidersEdgesEdgeIdSetuppackageWithHttpInfo(edgeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <returns>ApiResponse of VirtualEdgeSetupPackage</returns>
+        public ApiResponse< VirtualEdgeSetupPackage > GetProvidersEdgesEdgeIdSetuppackageWithHttpInfo (string edgeId)
+        {
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetProvidersEdgesEdgeIdSetuppackage");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/setuppackage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesEdgeIdSetuppackage: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesEdgeIdSetuppackage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VirtualEdgeSetupPackage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VirtualEdgeSetupPackage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VirtualEdgeSetupPackage)));
+            
+        }
+
+        /// <summary>
+        /// Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <returns>Task of VirtualEdgeSetupPackage</returns>
+        public async System.Threading.Tasks.Task<VirtualEdgeSetupPackage> GetProvidersEdgesEdgeIdSetuppackageAsync (string edgeId)
+        {
+             ApiResponse<VirtualEdgeSetupPackage> localVarResponse = await GetProvidersEdgesEdgeIdSetuppackageAsyncWithHttpInfo(edgeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <returns>Task of ApiResponse (VirtualEdgeSetupPackage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VirtualEdgeSetupPackage>> GetProvidersEdgesEdgeIdSetuppackageAsyncWithHttpInfo (string edgeId)
+        {
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetProvidersEdgesEdgeIdSetuppackage");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/setuppackage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesEdgeIdSetuppackage: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesEdgeIdSetuppackage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VirtualEdgeSetupPackage>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VirtualEdgeSetupPackage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VirtualEdgeSetupPackage)));
+            
         }
 
         /// <summary>

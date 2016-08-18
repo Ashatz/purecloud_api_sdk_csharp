@@ -1711,7 +1711,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Organization</returns>
         ApiResponse<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null);
         /// <summary>
-        /// Create a edge.
+        /// Create an edge.
         /// </summary>
         /// <remarks>
         /// 
@@ -1722,7 +1722,7 @@ namespace ININ.PureCloudApi.Api
         Edge PostProvidersEdges (Edge body);
 
         /// <summary>
-        /// Create a edge.
+        /// Create an edge.
         /// </summary>
         /// <remarks>
         /// 
@@ -4232,7 +4232,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Organization)</returns>
         System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdAsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null);
         /// <summary>
-        /// Create a edge.
+        /// Create an edge.
         /// </summary>
         /// <remarks>
         /// 
@@ -4243,7 +4243,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<Edge> PostProvidersEdgesAsync (Edge body);
 
         /// <summary>
-        /// Create a edge.
+        /// Create an edge.
         /// </summary>
         /// <remarks>
         /// 
@@ -16651,7 +16651,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create a edge. 
+        /// Create an edge. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Edge</param>
@@ -16663,7 +16663,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create a edge. 
+        /// Create an edge. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Edge</param>
@@ -16734,7 +16734,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create a edge. 
+        /// Create an edge. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Edge</param>
@@ -16747,7 +16747,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create a edge. 
+        /// Create an edge. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Edge</param>

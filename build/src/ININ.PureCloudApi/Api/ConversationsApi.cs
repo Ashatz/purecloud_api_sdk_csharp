@@ -21,8 +21,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>string</returns>
         string DeleteCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId);
 
@@ -33,8 +33,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId);
         /// <summary>
@@ -69,8 +69,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="attachmentId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="attachmentId">attachmentId</param>
         /// <returns>string</returns>
         string DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId (string emailId, string attachmentId);
 
@@ -81,8 +81,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="attachmentId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="attachmentId">attachmentId</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdWithHttpInfo (string emailId, string attachmentId);
         /// <summary>
@@ -111,7 +111,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <returns>CallbackConversation</returns>
         CallbackConversation GetCallbacksCallbackId (string callbackId);
 
@@ -122,7 +122,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <returns>ApiResponse of CallbackConversation</returns>
         ApiResponse<CallbackConversation> GetCallbacksCallbackIdWithHttpInfo (string callbackId);
         /// <summary>
@@ -132,8 +132,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Wrapup</returns>
         Wrapup GetCallbacksCallbackIdParticipantsParticipantIdWrapup (string callbackId, string participantId, bool? provisional = null);
@@ -145,8 +145,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of Wrapup</returns>
         ApiResponse<Wrapup> GetCallbacksCallbackIdParticipantsParticipantIdWrapupWithHttpInfo (string callbackId, string participantId, bool? provisional = null);
@@ -157,10 +157,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>WrapupCode</returns>
-        WrapupCode GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes (string callbackId, string participantId);
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        List<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes (string callbackId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -169,10 +169,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callbackId, string participantId);
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        ApiResponse<List<WrapupCode>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callbackId, string participantId);
         /// <summary>
         /// Get recent conversations
         /// </summary>
@@ -199,7 +199,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <returns>CallConversation</returns>
         CallConversation GetCallsCallId (string callId);
 
@@ -210,7 +210,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <returns>ApiResponse of CallConversation</returns>
         ApiResponse<CallConversation> GetCallsCallIdWithHttpInfo (string callId);
         /// <summary>
@@ -220,8 +220,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Wrapup</returns>
         Wrapup GetCallsCallIdParticipantsParticipantIdWrapup (string callId, string participantId, bool? provisional = null);
@@ -233,8 +233,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of Wrapup</returns>
         ApiResponse<Wrapup> GetCallsCallIdParticipantsParticipantIdWrapupWithHttpInfo (string callId, string participantId, bool? provisional = null);
@@ -245,10 +245,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>WrapupCode</returns>
-        WrapupCode GetCallsCallIdParticipantsParticipantIdWrapupcodes (string callId, string participantId);
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        List<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupcodes (string callId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -257,10 +257,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callId, string participantId);
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        ApiResponse<List<WrapupCode>> GetCallsCallIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callId, string participantId);
         /// <summary>
         /// Get call history
         /// </summary>
@@ -331,7 +331,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <returns>ChatConversation</returns>
         ChatConversation GetChatsChatId (string chatId);
 
@@ -342,7 +342,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <returns>ApiResponse of ChatConversation</returns>
         ApiResponse<ChatConversation> GetChatsChatIdWithHttpInfo (string chatId);
         /// <summary>
@@ -352,8 +352,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Wrapup</returns>
         Wrapup GetChatsChatIdParticipantsParticipantIdWrapup (string chatId, string participantId, bool? provisional = null);
@@ -365,8 +365,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of Wrapup</returns>
         ApiResponse<Wrapup> GetChatsChatIdParticipantsParticipantIdWrapupWithHttpInfo (string chatId, string participantId, bool? provisional = null);
@@ -377,10 +377,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>WrapupCode</returns>
-        WrapupCode GetChatsChatIdParticipantsParticipantIdWrapupcodes (string chatId, string participantId);
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        List<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupcodes (string chatId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -389,10 +389,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string chatId, string participantId);
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        ApiResponse<List<WrapupCode>> GetChatsChatIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string chatId, string participantId);
         /// <summary>
         /// Get conversation
         /// </summary>
@@ -530,7 +530,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>EmailConversation</returns>
         EmailConversation GetEmailsEmailId (string emailId);
 
@@ -541,7 +541,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>ApiResponse of EmailConversation</returns>
         ApiResponse<EmailConversation> GetEmailsEmailIdWithHttpInfo (string emailId);
         /// <summary>
@@ -551,7 +551,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>EmailMessageListing</returns>
         EmailMessageListing GetEmailsEmailIdMessages (string emailId);
 
@@ -562,7 +562,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>ApiResponse of EmailMessageListing</returns>
         ApiResponse<EmailMessageListing> GetEmailsEmailIdMessagesWithHttpInfo (string emailId);
         /// <summary>
@@ -572,7 +572,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>EmailMessage</returns>
         EmailMessage GetEmailsEmailIdMessagesDraft (string emailId);
 
@@ -583,7 +583,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         ApiResponse<EmailMessage> GetEmailsEmailIdMessagesDraftWithHttpInfo (string emailId);
         /// <summary>
@@ -593,8 +593,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="messageId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="messageId">messageId</param>
         /// <returns>EmailMessage</returns>
         EmailMessage GetEmailsEmailIdMessagesMessageId (string emailId, string messageId);
 
@@ -605,8 +605,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="messageId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="messageId">messageId</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         ApiResponse<EmailMessage> GetEmailsEmailIdMessagesMessageIdWithHttpInfo (string emailId, string messageId);
         /// <summary>
@@ -616,8 +616,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Wrapup</returns>
         Wrapup GetEmailsEmailIdParticipantsParticipantIdWrapup (string emailId, string participantId, bool? provisional = null);
@@ -629,8 +629,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of Wrapup</returns>
         ApiResponse<Wrapup> GetEmailsEmailIdParticipantsParticipantIdWrapupWithHttpInfo (string emailId, string participantId, bool? provisional = null);
@@ -641,10 +641,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>WrapupCode</returns>
-        WrapupCode GetEmailsEmailIdParticipantsParticipantIdWrapupcodes (string emailId, string participantId);
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        List<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupcodes (string emailId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -653,10 +653,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string emailId, string participantId);
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        ApiResponse<List<WrapupCode>> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string emailId, string participantId);
         /// <summary>
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
@@ -664,7 +664,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         Conversation PatchCallbacksCallbackId (string callbackId, Conversation body);
@@ -676,7 +676,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         ApiResponse<Conversation> PatchCallbacksCallbackIdWithHttpInfo (string callbackId, Conversation body);
@@ -687,8 +687,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant</param>
         /// <returns></returns>
         void PatchCallbacksCallbackIdParticipantsParticipantId (string callbackId, string participantId, MediaParticipantRequest body);
@@ -700,8 +700,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdWithHttpInfo (string callbackId, string participantId, MediaParticipantRequest body);
@@ -712,8 +712,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
         /// <returns></returns>
         void PatchCallbacksCallbackIdParticipantsParticipantIdAttributes (string callbackId, string participantId, ParticipantAttributes body);
@@ -725,8 +725,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdAttributesWithHttpInfo (string callbackId, string participantId, ParticipantAttributes body);
@@ -737,9 +737,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns></returns>
         void PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
@@ -751,32 +751,32 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state or disconnecting all of the participants
+        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         Conversation PatchCallsCallId (string callId, Conversation body);
 
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state or disconnecting all of the participants
+        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         ApiResponse<Conversation> PatchCallsCallIdWithHttpInfo (string callId, Conversation body);
@@ -787,8 +787,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant request</param>
         /// <returns></returns>
         void PatchCallsCallIdParticipantsParticipantId (string callId, string participantId, MediaParticipantRequest body);
@@ -800,8 +800,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdWithHttpInfo (string callId, string participantId, MediaParticipantRequest body);
@@ -812,8 +812,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns></returns>
         void PatchCallsCallIdParticipantsParticipantIdAttributes (string callId, string participantId, ParticipantAttributes body);
@@ -825,8 +825,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdAttributesWithHttpInfo (string callId, string participantId, ParticipantAttributes body);
@@ -837,9 +837,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns></returns>
         void PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId (string callId, string participantId, string communicationId, MediaParticipantRequest body);
@@ -851,9 +851,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body);
@@ -864,8 +864,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">new speak to</param>
         /// <returns>ConsultTransferResponse</returns>
         ConsultTransferResponse PatchCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransferUpdate body);
@@ -877,8 +877,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">new speak to</param>
         /// <returns>ApiResponse of ConsultTransferResponse</returns>
         ApiResponse<ConsultTransferResponse> PatchCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId, ConsultTransferUpdate body);
@@ -889,7 +889,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         Conversation PatchChatsChatId (string chatId, Conversation body);
@@ -901,7 +901,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         ApiResponse<Conversation> PatchChatsChatIdWithHttpInfo (string chatId, Conversation body);
@@ -912,8 +912,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns></returns>
         void PatchChatsChatIdParticipantsParticipantId (string chatId, string participantId, MediaParticipantRequest body);
@@ -925,8 +925,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdWithHttpInfo (string chatId, string participantId, MediaParticipantRequest body);
@@ -937,8 +937,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns></returns>
         void PatchChatsChatIdParticipantsParticipantIdAttributes (string chatId, string participantId, ParticipantAttributes body);
@@ -950,8 +950,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdAttributesWithHttpInfo (string chatId, string participantId, ParticipantAttributes body);
@@ -962,9 +962,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns></returns>
         void PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
@@ -976,9 +976,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
@@ -1039,7 +1039,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         Conversation PatchEmailsEmailId (string emailId, Conversation body);
@@ -1051,7 +1051,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         ApiResponse<Conversation> PatchEmailsEmailIdWithHttpInfo (string emailId, Conversation body);
@@ -1062,8 +1062,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns></returns>
         void PatchEmailsEmailIdParticipantsParticipantId (string emailId, string participantId, MediaParticipantRequest body);
@@ -1075,8 +1075,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchEmailsEmailIdParticipantsParticipantIdWithHttpInfo (string emailId, string participantId, MediaParticipantRequest body);
@@ -1087,8 +1087,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns></returns>
         void PatchEmailsEmailIdParticipantsParticipantIdAttributes (string emailId, string participantId, ParticipantAttributes body);
@@ -1100,8 +1100,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchEmailsEmailIdParticipantsParticipantIdAttributesWithHttpInfo (string emailId, string participantId, ParticipantAttributes body);
@@ -1133,8 +1133,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns></returns>
         void PostCallbacksCallbackIdParticipantsParticipantIdReplace (string callbackId, string participantId, TransferRequest body);
@@ -1146,8 +1146,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostCallbacksCallbackIdParticipantsParticipantIdReplaceWithHttpInfo (string callbackId, string participantId, TransferRequest body);
@@ -1179,7 +1179,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         Conversation PostCallsCallId (string callId, CallCommand body);
@@ -1191,7 +1191,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         ApiResponse<Conversation> PostCallsCallIdWithHttpInfo (string callId, CallCommand body);
@@ -1202,7 +1202,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         Conversation PostCallsCallIdParticipants (string callId, Conversation body);
@@ -1214,7 +1214,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         ApiResponse<Conversation> PostCallsCallIdParticipantsWithHttpInfo (string callId, Conversation body);
@@ -1225,8 +1225,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>ConsultTransferResponse</returns>
         ConsultTransferResponse PostCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransfer body);
@@ -1238,8 +1238,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>ApiResponse of ConsultTransferResponse</returns>
         ApiResponse<ConsultTransferResponse> PostCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId, ConsultTransfer body);
@@ -1250,8 +1250,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns></returns>
         void PostCallsCallIdParticipantsParticipantIdMonitor (string callId, string participantId);
 
@@ -1262,8 +1262,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostCallsCallIdParticipantsParticipantIdMonitorWithHttpInfo (string callId, string participantId);
         /// <summary>
@@ -1273,8 +1273,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns></returns>
         void PostCallsCallIdParticipantsParticipantIdReplace (string callId, string participantId, TransferRequest body);
@@ -1286,8 +1286,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostCallsCallIdParticipantsParticipantIdReplaceWithHttpInfo (string callId, string participantId, TransferRequest body);
@@ -1298,8 +1298,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns></returns>
         void PostChatsChatIdParticipantsParticipantIdReplace (string chatId, string participantId, TransferRequest body);
@@ -1311,8 +1311,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostChatsChatIdParticipantsParticipantIdReplaceWithHttpInfo (string chatId, string participantId, TransferRequest body);
@@ -1438,7 +1438,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Reply</param>
         /// <returns>EmailMessage</returns>
         EmailMessage PostEmailsEmailIdMessages (string emailId, EmailMessage body);
@@ -1450,7 +1450,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Reply</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         ApiResponse<EmailMessage> PostEmailsEmailIdMessagesWithHttpInfo (string emailId, EmailMessage body);
@@ -1461,8 +1461,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns></returns>
         void PostEmailsEmailIdParticipantsParticipantIdReplace (string emailId, string participantId, TransferRequest body);
@@ -1474,8 +1474,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostEmailsEmailIdParticipantsParticipantIdReplaceWithHttpInfo (string emailId, string participantId, TransferRequest body);
@@ -1507,7 +1507,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Draft</param>
         /// <returns>EmailMessage</returns>
         EmailMessage PutEmailsEmailIdMessagesDraft (string emailId, EmailMessage body);
@@ -1519,7 +1519,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Draft</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         ApiResponse<EmailMessage> PutEmailsEmailIdMessagesDraftWithHttpInfo (string emailId, EmailMessage body);
@@ -1532,8 +1532,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> DeleteCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId);
 
@@ -1544,8 +1544,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId);
         /// <summary>
@@ -1580,8 +1580,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="attachmentId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="attachmentId">attachmentId</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdAsync (string emailId, string attachmentId);
 
@@ -1592,8 +1592,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="attachmentId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="attachmentId">attachmentId</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdAsyncWithHttpInfo (string emailId, string attachmentId);
         /// <summary>
@@ -1622,7 +1622,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <returns>Task of CallbackConversation</returns>
         System.Threading.Tasks.Task<CallbackConversation> GetCallbacksCallbackIdAsync (string callbackId);
 
@@ -1633,7 +1633,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <returns>Task of ApiResponse (CallbackConversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<CallbackConversation>> GetCallbacksCallbackIdAsyncWithHttpInfo (string callbackId);
         /// <summary>
@@ -1643,8 +1643,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of Wrapup</returns>
         System.Threading.Tasks.Task<Wrapup> GetCallbacksCallbackIdParticipantsParticipantIdWrapupAsync (string callbackId, string participantId, bool? provisional = null);
@@ -1656,8 +1656,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Wrapup)</returns>
         System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string callbackId, string participantId, bool? provisional = null);
@@ -1668,10 +1668,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsync (string callbackId, string participantId);
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        System.Threading.Tasks.Task<List<WrapupCode>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsync (string callbackId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -1680,10 +1680,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callbackId, string participantId);
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callbackId, string participantId);
         /// <summary>
         /// Get recent conversations
         /// </summary>
@@ -1710,7 +1710,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <returns>Task of CallConversation</returns>
         System.Threading.Tasks.Task<CallConversation> GetCallsCallIdAsync (string callId);
 
@@ -1721,7 +1721,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <returns>Task of ApiResponse (CallConversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<CallConversation>> GetCallsCallIdAsyncWithHttpInfo (string callId);
         /// <summary>
@@ -1731,8 +1731,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of Wrapup</returns>
         System.Threading.Tasks.Task<Wrapup> GetCallsCallIdParticipantsParticipantIdWrapupAsync (string callId, string participantId, bool? provisional = null);
@@ -1744,8 +1744,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Wrapup)</returns>
         System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetCallsCallIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string callId, string participantId, bool? provisional = null);
@@ -1756,10 +1756,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsync (string callId, string participantId);
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        System.Threading.Tasks.Task<List<WrapupCode>> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsync (string callId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -1768,10 +1768,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callId, string participantId);
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callId, string participantId);
         /// <summary>
         /// Get call history
         /// </summary>
@@ -1842,7 +1842,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <returns>Task of ChatConversation</returns>
         System.Threading.Tasks.Task<ChatConversation> GetChatsChatIdAsync (string chatId);
 
@@ -1853,7 +1853,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <returns>Task of ApiResponse (ChatConversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChatConversation>> GetChatsChatIdAsyncWithHttpInfo (string chatId);
         /// <summary>
@@ -1863,8 +1863,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of Wrapup</returns>
         System.Threading.Tasks.Task<Wrapup> GetChatsChatIdParticipantsParticipantIdWrapupAsync (string chatId, string participantId, bool? provisional = null);
@@ -1876,8 +1876,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Wrapup)</returns>
         System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetChatsChatIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string chatId, string participantId, bool? provisional = null);
@@ -1888,10 +1888,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsync (string chatId, string participantId);
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        System.Threading.Tasks.Task<List<WrapupCode>> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsync (string chatId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -1900,10 +1900,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string chatId, string participantId);
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string chatId, string participantId);
         /// <summary>
         /// Get conversation
         /// </summary>
@@ -2041,7 +2041,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of EmailConversation</returns>
         System.Threading.Tasks.Task<EmailConversation> GetEmailsEmailIdAsync (string emailId);
 
@@ -2052,7 +2052,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of ApiResponse (EmailConversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailConversation>> GetEmailsEmailIdAsyncWithHttpInfo (string emailId);
         /// <summary>
@@ -2062,7 +2062,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of EmailMessageListing</returns>
         System.Threading.Tasks.Task<EmailMessageListing> GetEmailsEmailIdMessagesAsync (string emailId);
 
@@ -2073,7 +2073,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of ApiResponse (EmailMessageListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> GetEmailsEmailIdMessagesAsyncWithHttpInfo (string emailId);
         /// <summary>
@@ -2083,7 +2083,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of EmailMessage</returns>
         System.Threading.Tasks.Task<EmailMessage> GetEmailsEmailIdMessagesDraftAsync (string emailId);
 
@@ -2094,7 +2094,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetEmailsEmailIdMessagesDraftAsyncWithHttpInfo (string emailId);
         /// <summary>
@@ -2104,8 +2104,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="messageId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="messageId">messageId</param>
         /// <returns>Task of EmailMessage</returns>
         System.Threading.Tasks.Task<EmailMessage> GetEmailsEmailIdMessagesMessageIdAsync (string emailId, string messageId);
 
@@ -2116,8 +2116,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="messageId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="messageId">messageId</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetEmailsEmailIdMessagesMessageIdAsyncWithHttpInfo (string emailId, string messageId);
         /// <summary>
@@ -2127,8 +2127,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of Wrapup</returns>
         System.Threading.Tasks.Task<Wrapup> GetEmailsEmailIdParticipantsParticipantIdWrapupAsync (string emailId, string participantId, bool? provisional = null);
@@ -2140,8 +2140,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Wrapup)</returns>
         System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetEmailsEmailIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string emailId, string participantId, bool? provisional = null);
@@ -2152,10 +2152,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsync (string emailId, string participantId);
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        System.Threading.Tasks.Task<List<WrapupCode>> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsync (string emailId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -2164,10 +2164,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string emailId, string participantId);
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string emailId, string participantId);
         /// <summary>
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
@@ -2175,7 +2175,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         System.Threading.Tasks.Task<Conversation> PatchCallbacksCallbackIdAsync (string callbackId, Conversation body);
@@ -2187,7 +2187,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchCallbacksCallbackIdAsyncWithHttpInfo (string callbackId, Conversation body);
@@ -2198,8 +2198,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdAsync (string callbackId, string participantId, MediaParticipantRequest body);
@@ -2211,8 +2211,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdAsyncWithHttpInfo (string callbackId, string participantId, MediaParticipantRequest body);
@@ -2223,8 +2223,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdAttributesAsync (string callbackId, string participantId, ParticipantAttributes body);
@@ -2236,8 +2236,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string callbackId, string participantId, ParticipantAttributes body);
@@ -2248,9 +2248,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
@@ -2262,32 +2262,32 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state or disconnecting all of the participants
+        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         System.Threading.Tasks.Task<Conversation> PatchCallsCallIdAsync (string callId, Conversation body);
 
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state or disconnecting all of the participants
+        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchCallsCallIdAsyncWithHttpInfo (string callId, Conversation body);
@@ -2298,8 +2298,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant request</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdAsync (string callId, string participantId, MediaParticipantRequest body);
@@ -2311,8 +2311,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant request</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdAsyncWithHttpInfo (string callId, string participantId, MediaParticipantRequest body);
@@ -2323,8 +2323,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdAttributesAsync (string callId, string participantId, ParticipantAttributes body);
@@ -2336,8 +2336,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string callId, string participantId, ParticipantAttributes body);
@@ -2348,9 +2348,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callId, string participantId, string communicationId, MediaParticipantRequest body);
@@ -2362,9 +2362,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body);
@@ -2375,8 +2375,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">new speak to</param>
         /// <returns>Task of ConsultTransferResponse</returns>
         System.Threading.Tasks.Task<ConsultTransferResponse> PatchCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId, ConsultTransferUpdate body);
@@ -2388,8 +2388,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">new speak to</param>
         /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> PatchCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId, ConsultTransferUpdate body);
@@ -2400,7 +2400,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         System.Threading.Tasks.Task<Conversation> PatchChatsChatIdAsync (string chatId, Conversation body);
@@ -2412,7 +2412,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchChatsChatIdAsyncWithHttpInfo (string chatId, Conversation body);
@@ -2423,8 +2423,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdAsync (string chatId, string participantId, MediaParticipantRequest body);
@@ -2436,8 +2436,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdAsyncWithHttpInfo (string chatId, string participantId, MediaParticipantRequest body);
@@ -2448,8 +2448,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdAttributesAsync (string chatId, string participantId, ParticipantAttributes body);
@@ -2461,8 +2461,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string chatId, string participantId, ParticipantAttributes body);
@@ -2473,9 +2473,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
@@ -2487,9 +2487,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
@@ -2550,7 +2550,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         System.Threading.Tasks.Task<Conversation> PatchEmailsEmailIdAsync (string emailId, Conversation body);
@@ -2562,7 +2562,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchEmailsEmailIdAsyncWithHttpInfo (string emailId, Conversation body);
@@ -2573,8 +2573,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchEmailsEmailIdParticipantsParticipantIdAsync (string emailId, string participantId, MediaParticipantRequest body);
@@ -2586,8 +2586,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchEmailsEmailIdParticipantsParticipantIdAsyncWithHttpInfo (string emailId, string participantId, MediaParticipantRequest body);
@@ -2598,8 +2598,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PatchEmailsEmailIdParticipantsParticipantIdAttributesAsync (string emailId, string participantId, ParticipantAttributes body);
@@ -2611,8 +2611,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchEmailsEmailIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string emailId, string participantId, ParticipantAttributes body);
@@ -2644,8 +2644,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PostCallbacksCallbackIdParticipantsParticipantIdReplaceAsync (string callbackId, string participantId, TransferRequest body);
@@ -2657,8 +2657,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostCallbacksCallbackIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string callbackId, string participantId, TransferRequest body);
@@ -2690,7 +2690,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         System.Threading.Tasks.Task<Conversation> PostCallsCallIdAsync (string callId, CallCommand body);
@@ -2702,7 +2702,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Conversation>> PostCallsCallIdAsyncWithHttpInfo (string callId, CallCommand body);
@@ -2713,7 +2713,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         System.Threading.Tasks.Task<Conversation> PostCallsCallIdParticipantsAsync (string callId, Conversation body);
@@ -2725,7 +2725,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Conversation>> PostCallsCallIdParticipantsAsyncWithHttpInfo (string callId, Conversation body);
@@ -2736,8 +2736,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>Task of ConsultTransferResponse</returns>
         System.Threading.Tasks.Task<ConsultTransferResponse> PostCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId, ConsultTransfer body);
@@ -2749,8 +2749,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> PostCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId, ConsultTransfer body);
@@ -2761,8 +2761,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PostCallsCallIdParticipantsParticipantIdMonitorAsync (string callId, string participantId);
 
@@ -2773,8 +2773,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostCallsCallIdParticipantsParticipantIdMonitorAsyncWithHttpInfo (string callId, string participantId);
         /// <summary>
@@ -2784,8 +2784,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PostCallsCallIdParticipantsParticipantIdReplaceAsync (string callId, string participantId, TransferRequest body);
@@ -2797,8 +2797,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostCallsCallIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string callId, string participantId, TransferRequest body);
@@ -2809,8 +2809,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PostChatsChatIdParticipantsParticipantIdReplaceAsync (string chatId, string participantId, TransferRequest body);
@@ -2822,8 +2822,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsChatIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string chatId, string participantId, TransferRequest body);
@@ -2949,7 +2949,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Reply</param>
         /// <returns>Task of EmailMessage</returns>
         System.Threading.Tasks.Task<EmailMessage> PostEmailsEmailIdMessagesAsync (string emailId, EmailMessage body);
@@ -2961,7 +2961,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Reply</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PostEmailsEmailIdMessagesAsyncWithHttpInfo (string emailId, EmailMessage body);
@@ -2972,8 +2972,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PostEmailsEmailIdParticipantsParticipantIdReplaceAsync (string emailId, string participantId, TransferRequest body);
@@ -2985,8 +2985,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostEmailsEmailIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string emailId, string participantId, TransferRequest body);
@@ -3018,7 +3018,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Draft</param>
         /// <returns>Task of EmailMessage</returns>
         System.Threading.Tasks.Task<EmailMessage> PutEmailsEmailIdMessagesDraftAsync (string emailId, EmailMessage body);
@@ -3030,7 +3030,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Draft</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PutEmailsEmailIdMessagesDraftAsyncWithHttpInfo (string emailId, EmailMessage body);
@@ -3128,8 +3128,8 @@ namespace ININ.PureCloudApi.Api
         /// Cancel the transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>string</returns>
         public string DeleteCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId)
         {
@@ -3141,8 +3141,8 @@ namespace ININ.PureCloudApi.Api
         /// Cancel the transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > DeleteCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId)
         {
@@ -3210,8 +3210,8 @@ namespace ININ.PureCloudApi.Api
         /// Cancel the transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> DeleteCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId)
         {
@@ -3224,8 +3224,8 @@ namespace ININ.PureCloudApi.Api
         /// Cancel the transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId)
         {
@@ -3468,8 +3468,8 @@ namespace ININ.PureCloudApi.Api
         /// Delete attachment from draft 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="attachmentId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="attachmentId">attachmentId</param>
         /// <returns>string</returns>
         public string DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId (string emailId, string attachmentId)
         {
@@ -3481,8 +3481,8 @@ namespace ININ.PureCloudApi.Api
         /// Delete attachment from draft 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="attachmentId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="attachmentId">attachmentId</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdWithHttpInfo (string emailId, string attachmentId)
         {
@@ -3550,8 +3550,8 @@ namespace ININ.PureCloudApi.Api
         /// Delete attachment from draft 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="attachmentId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="attachmentId">attachmentId</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdAsync (string emailId, string attachmentId)
         {
@@ -3564,8 +3564,8 @@ namespace ININ.PureCloudApi.Api
         /// Delete attachment from draft 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="attachmentId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="attachmentId">attachmentId</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdAsyncWithHttpInfo (string emailId, string attachmentId)
         {
@@ -3774,7 +3774,7 @@ namespace ININ.PureCloudApi.Api
         /// Get callback conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <returns>CallbackConversation</returns>
         public CallbackConversation GetCallbacksCallbackId (string callbackId)
         {
@@ -3786,7 +3786,7 @@ namespace ININ.PureCloudApi.Api
         /// Get callback conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <returns>ApiResponse of CallbackConversation</returns>
         public ApiResponse< CallbackConversation > GetCallbacksCallbackIdWithHttpInfo (string callbackId)
         {
@@ -3850,7 +3850,7 @@ namespace ININ.PureCloudApi.Api
         /// Get callback conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <returns>Task of CallbackConversation</returns>
         public async System.Threading.Tasks.Task<CallbackConversation> GetCallbacksCallbackIdAsync (string callbackId)
         {
@@ -3863,7 +3863,7 @@ namespace ININ.PureCloudApi.Api
         /// Get callback conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <returns>Task of ApiResponse (CallbackConversation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CallbackConversation>> GetCallbacksCallbackIdAsyncWithHttpInfo (string callbackId)
         {
@@ -3927,8 +3927,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Wrapup</returns>
         public Wrapup GetCallbacksCallbackIdParticipantsParticipantIdWrapup (string callbackId, string participantId, bool? provisional = null)
@@ -3941,8 +3941,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of Wrapup</returns>
         public ApiResponse< Wrapup > GetCallbacksCallbackIdParticipantsParticipantIdWrapupWithHttpInfo (string callbackId, string participantId, bool? provisional = null)
@@ -4012,8 +4012,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of Wrapup</returns>
         public async System.Threading.Tasks.Task<Wrapup> GetCallbacksCallbackIdParticipantsParticipantIdWrapupAsync (string callbackId, string participantId, bool? provisional = null)
@@ -4027,8 +4027,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Wrapup)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string callbackId, string participantId, bool? provisional = null)
@@ -4098,12 +4098,12 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>WrapupCode</returns>
-        public WrapupCode GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes (string callbackId, string participantId)
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        public List<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes (string callbackId, string participantId)
         {
-             ApiResponse<WrapupCode> localVarResponse = GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesWithHttpInfo(callbackId, participantId);
+             ApiResponse<List<WrapupCode>> localVarResponse = GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesWithHttpInfo(callbackId, participantId);
              return localVarResponse.Data;
         }
 
@@ -4111,10 +4111,10 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callbackId, string participantId)
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        public ApiResponse< List<WrapupCode> > GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callbackId, string participantId)
         {
             // verify the required parameter 'callbackId' is set
             if (callbackId == null)
@@ -4170,9 +4170,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -4180,12 +4180,12 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsync (string callbackId, string participantId)
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        public async System.Threading.Tasks.Task<List<WrapupCode>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsync (string callbackId, string participantId)
         {
-             ApiResponse<WrapupCode> localVarResponse = await GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(callbackId, participantId);
+             ApiResponse<List<WrapupCode>> localVarResponse = await GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(callbackId, participantId);
              return localVarResponse.Data;
 
         }
@@ -4194,10 +4194,10 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callbackId, string participantId)
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callbackId, string participantId)
         {
             // verify the required parameter 'callbackId' is set
             if (callbackId == null)
@@ -4253,9 +4253,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -4404,7 +4404,7 @@ namespace ININ.PureCloudApi.Api
         /// Get call conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <returns>CallConversation</returns>
         public CallConversation GetCallsCallId (string callId)
         {
@@ -4416,7 +4416,7 @@ namespace ININ.PureCloudApi.Api
         /// Get call conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <returns>ApiResponse of CallConversation</returns>
         public ApiResponse< CallConversation > GetCallsCallIdWithHttpInfo (string callId)
         {
@@ -4480,7 +4480,7 @@ namespace ININ.PureCloudApi.Api
         /// Get call conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <returns>Task of CallConversation</returns>
         public async System.Threading.Tasks.Task<CallConversation> GetCallsCallIdAsync (string callId)
         {
@@ -4493,7 +4493,7 @@ namespace ININ.PureCloudApi.Api
         /// Get call conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <returns>Task of ApiResponse (CallConversation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CallConversation>> GetCallsCallIdAsyncWithHttpInfo (string callId)
         {
@@ -4557,8 +4557,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Wrapup</returns>
         public Wrapup GetCallsCallIdParticipantsParticipantIdWrapup (string callId, string participantId, bool? provisional = null)
@@ -4571,8 +4571,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of Wrapup</returns>
         public ApiResponse< Wrapup > GetCallsCallIdParticipantsParticipantIdWrapupWithHttpInfo (string callId, string participantId, bool? provisional = null)
@@ -4642,8 +4642,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of Wrapup</returns>
         public async System.Threading.Tasks.Task<Wrapup> GetCallsCallIdParticipantsParticipantIdWrapupAsync (string callId, string participantId, bool? provisional = null)
@@ -4657,8 +4657,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Wrapup)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetCallsCallIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string callId, string participantId, bool? provisional = null)
@@ -4728,12 +4728,12 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>WrapupCode</returns>
-        public WrapupCode GetCallsCallIdParticipantsParticipantIdWrapupcodes (string callId, string participantId)
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        public List<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupcodes (string callId, string participantId)
         {
-             ApiResponse<WrapupCode> localVarResponse = GetCallsCallIdParticipantsParticipantIdWrapupcodesWithHttpInfo(callId, participantId);
+             ApiResponse<List<WrapupCode>> localVarResponse = GetCallsCallIdParticipantsParticipantIdWrapupcodesWithHttpInfo(callId, participantId);
              return localVarResponse.Data;
         }
 
@@ -4741,10 +4741,10 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > GetCallsCallIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callId, string participantId)
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        public ApiResponse< List<WrapupCode> > GetCallsCallIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string callId, string participantId)
         {
             // verify the required parameter 'callId' is set
             if (callId == null)
@@ -4800,9 +4800,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetCallsCallIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -4810,12 +4810,12 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsync (string callId, string participantId)
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        public async System.Threading.Tasks.Task<List<WrapupCode>> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsync (string callId, string participantId)
         {
-             ApiResponse<WrapupCode> localVarResponse = await GetCallsCallIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(callId, participantId);
+             ApiResponse<List<WrapupCode>> localVarResponse = await GetCallsCallIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(callId, participantId);
              return localVarResponse.Data;
 
         }
@@ -4824,10 +4824,10 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callId, string participantId)
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetCallsCallIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string callId, string participantId)
         {
             // verify the required parameter 'callId' is set
             if (callId == null)
@@ -4883,9 +4883,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetCallsCallIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -5334,7 +5334,7 @@ namespace ININ.PureCloudApi.Api
         /// Get chat conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <returns>ChatConversation</returns>
         public ChatConversation GetChatsChatId (string chatId)
         {
@@ -5346,7 +5346,7 @@ namespace ININ.PureCloudApi.Api
         /// Get chat conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <returns>ApiResponse of ChatConversation</returns>
         public ApiResponse< ChatConversation > GetChatsChatIdWithHttpInfo (string chatId)
         {
@@ -5410,7 +5410,7 @@ namespace ININ.PureCloudApi.Api
         /// Get chat conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <returns>Task of ChatConversation</returns>
         public async System.Threading.Tasks.Task<ChatConversation> GetChatsChatIdAsync (string chatId)
         {
@@ -5423,7 +5423,7 @@ namespace ININ.PureCloudApi.Api
         /// Get chat conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <returns>Task of ApiResponse (ChatConversation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ChatConversation>> GetChatsChatIdAsyncWithHttpInfo (string chatId)
         {
@@ -5487,8 +5487,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Wrapup</returns>
         public Wrapup GetChatsChatIdParticipantsParticipantIdWrapup (string chatId, string participantId, bool? provisional = null)
@@ -5501,8 +5501,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of Wrapup</returns>
         public ApiResponse< Wrapup > GetChatsChatIdParticipantsParticipantIdWrapupWithHttpInfo (string chatId, string participantId, bool? provisional = null)
@@ -5572,8 +5572,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of Wrapup</returns>
         public async System.Threading.Tasks.Task<Wrapup> GetChatsChatIdParticipantsParticipantIdWrapupAsync (string chatId, string participantId, bool? provisional = null)
@@ -5587,8 +5587,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Wrapup)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetChatsChatIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string chatId, string participantId, bool? provisional = null)
@@ -5658,12 +5658,12 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>WrapupCode</returns>
-        public WrapupCode GetChatsChatIdParticipantsParticipantIdWrapupcodes (string chatId, string participantId)
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        public List<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupcodes (string chatId, string participantId)
         {
-             ApiResponse<WrapupCode> localVarResponse = GetChatsChatIdParticipantsParticipantIdWrapupcodesWithHttpInfo(chatId, participantId);
+             ApiResponse<List<WrapupCode>> localVarResponse = GetChatsChatIdParticipantsParticipantIdWrapupcodesWithHttpInfo(chatId, participantId);
              return localVarResponse.Data;
         }
 
@@ -5671,10 +5671,10 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > GetChatsChatIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string chatId, string participantId)
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        public ApiResponse< List<WrapupCode> > GetChatsChatIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string chatId, string participantId)
         {
             // verify the required parameter 'chatId' is set
             if (chatId == null)
@@ -5730,9 +5730,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -5740,12 +5740,12 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsync (string chatId, string participantId)
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        public async System.Threading.Tasks.Task<List<WrapupCode>> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsync (string chatId, string participantId)
         {
-             ApiResponse<WrapupCode> localVarResponse = await GetChatsChatIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(chatId, participantId);
+             ApiResponse<List<WrapupCode>> localVarResponse = await GetChatsChatIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(chatId, participantId);
              return localVarResponse.Data;
 
         }
@@ -5754,10 +5754,10 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string chatId, string participantId)
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string chatId, string participantId)
         {
             // verify the required parameter 'chatId' is set
             if (chatId == null)
@@ -5813,9 +5813,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -6753,7 +6753,7 @@ namespace ININ.PureCloudApi.Api
         /// Get email conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>EmailConversation</returns>
         public EmailConversation GetEmailsEmailId (string emailId)
         {
@@ -6765,7 +6765,7 @@ namespace ININ.PureCloudApi.Api
         /// Get email conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>ApiResponse of EmailConversation</returns>
         public ApiResponse< EmailConversation > GetEmailsEmailIdWithHttpInfo (string emailId)
         {
@@ -6829,7 +6829,7 @@ namespace ININ.PureCloudApi.Api
         /// Get email conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of EmailConversation</returns>
         public async System.Threading.Tasks.Task<EmailConversation> GetEmailsEmailIdAsync (string emailId)
         {
@@ -6842,7 +6842,7 @@ namespace ININ.PureCloudApi.Api
         /// Get email conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of ApiResponse (EmailConversation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EmailConversation>> GetEmailsEmailIdAsyncWithHttpInfo (string emailId)
         {
@@ -6906,7 +6906,7 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation messages 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>EmailMessageListing</returns>
         public EmailMessageListing GetEmailsEmailIdMessages (string emailId)
         {
@@ -6918,7 +6918,7 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation messages 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>ApiResponse of EmailMessageListing</returns>
         public ApiResponse< EmailMessageListing > GetEmailsEmailIdMessagesWithHttpInfo (string emailId)
         {
@@ -6982,7 +6982,7 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation messages 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of EmailMessageListing</returns>
         public async System.Threading.Tasks.Task<EmailMessageListing> GetEmailsEmailIdMessagesAsync (string emailId)
         {
@@ -6995,7 +6995,7 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation messages 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of ApiResponse (EmailMessageListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> GetEmailsEmailIdMessagesAsyncWithHttpInfo (string emailId)
         {
@@ -7059,7 +7059,7 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>EmailMessage</returns>
         public EmailMessage GetEmailsEmailIdMessagesDraft (string emailId)
         {
@@ -7071,7 +7071,7 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         public ApiResponse< EmailMessage > GetEmailsEmailIdMessagesDraftWithHttpInfo (string emailId)
         {
@@ -7135,7 +7135,7 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of EmailMessage</returns>
         public async System.Threading.Tasks.Task<EmailMessage> GetEmailsEmailIdMessagesDraftAsync (string emailId)
         {
@@ -7148,7 +7148,7 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetEmailsEmailIdMessagesDraftAsyncWithHttpInfo (string emailId)
         {
@@ -7212,8 +7212,8 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation message 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="messageId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="messageId">messageId</param>
         /// <returns>EmailMessage</returns>
         public EmailMessage GetEmailsEmailIdMessagesMessageId (string emailId, string messageId)
         {
@@ -7225,8 +7225,8 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation message 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="messageId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="messageId">messageId</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         public ApiResponse< EmailMessage > GetEmailsEmailIdMessagesMessageIdWithHttpInfo (string emailId, string messageId)
         {
@@ -7294,8 +7294,8 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation message 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="messageId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="messageId">messageId</param>
         /// <returns>Task of EmailMessage</returns>
         public async System.Threading.Tasks.Task<EmailMessage> GetEmailsEmailIdMessagesMessageIdAsync (string emailId, string messageId)
         {
@@ -7308,8 +7308,8 @@ namespace ININ.PureCloudApi.Api
         /// Get conversation message 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="messageId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="messageId">messageId</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetEmailsEmailIdMessagesMessageIdAsyncWithHttpInfo (string emailId, string messageId)
         {
@@ -7377,8 +7377,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Wrapup</returns>
         public Wrapup GetEmailsEmailIdParticipantsParticipantIdWrapup (string emailId, string participantId, bool? provisional = null)
@@ -7391,8 +7391,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of Wrapup</returns>
         public ApiResponse< Wrapup > GetEmailsEmailIdParticipantsParticipantIdWrapupWithHttpInfo (string emailId, string participantId, bool? provisional = null)
@@ -7462,8 +7462,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of Wrapup</returns>
         public async System.Threading.Tasks.Task<Wrapup> GetEmailsEmailIdParticipantsParticipantIdWrapupAsync (string emailId, string participantId, bool? provisional = null)
@@ -7477,8 +7477,8 @@ namespace ININ.PureCloudApi.Api
         /// Get the wrap-up for this conversation participant.  
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Wrapup)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetEmailsEmailIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string emailId, string participantId, bool? provisional = null)
@@ -7548,12 +7548,12 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>WrapupCode</returns>
-        public WrapupCode GetEmailsEmailIdParticipantsParticipantIdWrapupcodes (string emailId, string participantId)
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        public List<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupcodes (string emailId, string participantId)
         {
-             ApiResponse<WrapupCode> localVarResponse = GetEmailsEmailIdParticipantsParticipantIdWrapupcodesWithHttpInfo(emailId, participantId);
+             ApiResponse<List<WrapupCode>> localVarResponse = GetEmailsEmailIdParticipantsParticipantIdWrapupcodesWithHttpInfo(emailId, participantId);
              return localVarResponse.Data;
         }
 
@@ -7561,10 +7561,10 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > GetEmailsEmailIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string emailId, string participantId)
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        public ApiResponse< List<WrapupCode> > GetEmailsEmailIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string emailId, string participantId)
         {
             // verify the required parameter 'emailId' is set
             if (emailId == null)
@@ -7620,9 +7620,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -7630,12 +7630,12 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsync (string emailId, string participantId)
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        public async System.Threading.Tasks.Task<List<WrapupCode>> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsync (string emailId, string participantId)
         {
-             ApiResponse<WrapupCode> localVarResponse = await GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(emailId, participantId);
+             ApiResponse<List<WrapupCode>> localVarResponse = await GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(emailId, participantId);
              return localVarResponse.Data;
 
         }
@@ -7644,10 +7644,10 @@ namespace ININ.PureCloudApi.Api
         /// Get list of wrapup codes for this conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string emailId, string participantId)
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetEmailsEmailIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string emailId, string participantId)
         {
             // verify the required parameter 'emailId' is set
             if (emailId == null)
@@ -7703,9 +7703,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetEmailsEmailIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -7713,7 +7713,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         public Conversation PatchCallbacksCallbackId (string callbackId, Conversation body)
@@ -7726,7 +7726,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         public ApiResponse< Conversation > PatchCallbacksCallbackIdWithHttpInfo (string callbackId, Conversation body)
@@ -7802,7 +7802,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         public async System.Threading.Tasks.Task<Conversation> PatchCallbacksCallbackIdAsync (string callbackId, Conversation body)
@@ -7816,7 +7816,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
+        /// <param name="callbackId">callbackId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchCallbacksCallbackIdAsyncWithHttpInfo (string callbackId, Conversation body)
@@ -7892,8 +7892,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant</param>
         /// <returns></returns>
         public void PatchCallbacksCallbackIdParticipantsParticipantId (string callbackId, string participantId, MediaParticipantRequest body)
@@ -7905,8 +7905,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdWithHttpInfo (string callbackId, string participantId, MediaParticipantRequest body)
@@ -7986,8 +7986,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdAsync (string callbackId, string participantId, MediaParticipantRequest body)
@@ -8000,8 +8000,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdAsyncWithHttpInfo (string callbackId, string participantId, MediaParticipantRequest body)
@@ -8081,8 +8081,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
         /// <returns></returns>
         public void PatchCallbacksCallbackIdParticipantsParticipantIdAttributes (string callbackId, string participantId, ParticipantAttributes body)
@@ -8094,8 +8094,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdAttributesWithHttpInfo (string callbackId, string participantId, ParticipantAttributes body)
@@ -8175,8 +8175,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdAttributesAsync (string callbackId, string participantId, ParticipantAttributes body)
@@ -8189,8 +8189,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Attributes</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string callbackId, string participantId, ParticipantAttributes body)
@@ -8270,9 +8270,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns></returns>
         public void PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -8284,9 +8284,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -8370,9 +8370,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -8385,9 +8385,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -8468,10 +8468,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state or disconnecting all of the participants 
+        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         public Conversation PatchCallsCallId (string callId, Conversation body)
@@ -8481,10 +8481,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state or disconnecting all of the participants 
+        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         public ApiResponse< Conversation > PatchCallsCallIdWithHttpInfo (string callId, Conversation body)
@@ -8557,10 +8557,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state or disconnecting all of the participants 
+        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         public async System.Threading.Tasks.Task<Conversation> PatchCallsCallIdAsync (string callId, Conversation body)
@@ -8571,10 +8571,10 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Update a conversation by setting it&#39;s recording state or disconnecting all of the participants 
+        /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchCallsCallIdAsyncWithHttpInfo (string callId, Conversation body)
@@ -8650,8 +8650,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant request</param>
         /// <returns></returns>
         public void PatchCallsCallIdParticipantsParticipantId (string callId, string participantId, MediaParticipantRequest body)
@@ -8663,8 +8663,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdWithHttpInfo (string callId, string participantId, MediaParticipantRequest body)
@@ -8744,8 +8744,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant request</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdAsync (string callId, string participantId, MediaParticipantRequest body)
@@ -8758,8 +8758,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant request</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdAsyncWithHttpInfo (string callId, string participantId, MediaParticipantRequest body)
@@ -8839,8 +8839,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns></returns>
         public void PatchCallsCallIdParticipantsParticipantIdAttributes (string callId, string participantId, ParticipantAttributes body)
@@ -8852,8 +8852,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdAttributesWithHttpInfo (string callId, string participantId, ParticipantAttributes body)
@@ -8933,8 +8933,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdAttributesAsync (string callId, string participantId, ParticipantAttributes body)
@@ -8947,8 +8947,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string callId, string participantId, ParticipantAttributes body)
@@ -9028,9 +9028,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns></returns>
         public void PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId (string callId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -9042,9 +9042,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -9128,9 +9128,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -9143,9 +9143,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -9229,8 +9229,8 @@ namespace ININ.PureCloudApi.Api
         /// Change who can speak 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">new speak to</param>
         /// <returns>ConsultTransferResponse</returns>
         public ConsultTransferResponse PatchCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransferUpdate body)
@@ -9243,8 +9243,8 @@ namespace ININ.PureCloudApi.Api
         /// Change who can speak 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">new speak to</param>
         /// <returns>ApiResponse of ConsultTransferResponse</returns>
         public ApiResponse< ConsultTransferResponse > PatchCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId, ConsultTransferUpdate body)
@@ -9324,8 +9324,8 @@ namespace ININ.PureCloudApi.Api
         /// Change who can speak 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">new speak to</param>
         /// <returns>Task of ConsultTransferResponse</returns>
         public async System.Threading.Tasks.Task<ConsultTransferResponse> PatchCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId, ConsultTransferUpdate body)
@@ -9339,8 +9339,8 @@ namespace ININ.PureCloudApi.Api
         /// Change who can speak 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">new speak to</param>
         /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> PatchCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId, ConsultTransferUpdate body)
@@ -9420,7 +9420,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         public Conversation PatchChatsChatId (string chatId, Conversation body)
@@ -9433,7 +9433,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         public ApiResponse< Conversation > PatchChatsChatIdWithHttpInfo (string chatId, Conversation body)
@@ -9509,7 +9509,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         public async System.Threading.Tasks.Task<Conversation> PatchChatsChatIdAsync (string chatId, Conversation body)
@@ -9523,7 +9523,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
+        /// <param name="chatId">chatId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchChatsChatIdAsyncWithHttpInfo (string chatId, Conversation body)
@@ -9599,8 +9599,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns></returns>
         public void PatchChatsChatIdParticipantsParticipantId (string chatId, string participantId, MediaParticipantRequest body)
@@ -9612,8 +9612,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdWithHttpInfo (string chatId, string participantId, MediaParticipantRequest body)
@@ -9693,8 +9693,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdAsync (string chatId, string participantId, MediaParticipantRequest body)
@@ -9707,8 +9707,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdAsyncWithHttpInfo (string chatId, string participantId, MediaParticipantRequest body)
@@ -9788,8 +9788,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns></returns>
         public void PatchChatsChatIdParticipantsParticipantIdAttributes (string chatId, string participantId, ParticipantAttributes body)
@@ -9801,8 +9801,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdAttributesWithHttpInfo (string chatId, string participantId, ParticipantAttributes body)
@@ -9882,8 +9882,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdAttributesAsync (string chatId, string participantId, ParticipantAttributes body)
@@ -9896,8 +9896,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string chatId, string participantId, ParticipantAttributes body)
@@ -9977,9 +9977,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns></returns>
         public void PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -9991,9 +9991,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -10077,9 +10077,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -10092,9 +10092,9 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant&#39;s communication by disconnecting it. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
-        /// <param name="communicationId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
@@ -10556,7 +10556,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         public Conversation PatchEmailsEmailId (string emailId, Conversation body)
@@ -10569,7 +10569,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         public ApiResponse< Conversation > PatchEmailsEmailIdWithHttpInfo (string emailId, Conversation body)
@@ -10645,7 +10645,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         public async System.Threading.Tasks.Task<Conversation> PatchEmailsEmailIdAsync (string emailId, Conversation body)
@@ -10659,7 +10659,7 @@ namespace ININ.PureCloudApi.Api
         /// Update a conversation by disconnecting all of the participants 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchEmailsEmailIdAsyncWithHttpInfo (string emailId, Conversation body)
@@ -10735,8 +10735,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns></returns>
         public void PatchEmailsEmailIdParticipantsParticipantId (string emailId, string participantId, MediaParticipantRequest body)
@@ -10748,8 +10748,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchEmailsEmailIdParticipantsParticipantIdWithHttpInfo (string emailId, string participantId, MediaParticipantRequest body)
@@ -10829,8 +10829,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchEmailsEmailIdParticipantsParticipantIdAsync (string emailId, string participantId, MediaParticipantRequest body)
@@ -10843,8 +10843,8 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation participant 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Update request</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchEmailsEmailIdParticipantsParticipantIdAsyncWithHttpInfo (string emailId, string participantId, MediaParticipantRequest body)
@@ -10924,8 +10924,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns></returns>
         public void PatchEmailsEmailIdParticipantsParticipantIdAttributes (string emailId, string participantId, ParticipantAttributes body)
@@ -10937,8 +10937,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchEmailsEmailIdParticipantsParticipantIdAttributesWithHttpInfo (string emailId, string participantId, ParticipantAttributes body)
@@ -11018,8 +11018,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PatchEmailsEmailIdParticipantsParticipantIdAttributesAsync (string emailId, string participantId, ParticipantAttributes body)
@@ -11032,8 +11032,8 @@ namespace ININ.PureCloudApi.Api
         /// Update the attributes on a conversation participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchEmailsEmailIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string emailId, string participantId, ParticipantAttributes body)
@@ -11280,8 +11280,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns></returns>
         public void PostCallbacksCallbackIdParticipantsParticipantIdReplace (string callbackId, string participantId, TransferRequest body)
@@ -11293,8 +11293,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostCallbacksCallbackIdParticipantsParticipantIdReplaceWithHttpInfo (string callbackId, string participantId, TransferRequest body)
@@ -11374,8 +11374,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PostCallbacksCallbackIdParticipantsParticipantIdReplaceAsync (string callbackId, string participantId, TransferRequest body)
@@ -11388,8 +11388,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callbackId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callbackId">callbackId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostCallbacksCallbackIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string callbackId, string participantId, TransferRequest body)
@@ -11636,7 +11636,7 @@ namespace ININ.PureCloudApi.Api
         /// Add a new call to a conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         public Conversation PostCallsCallId (string callId, CallCommand body)
@@ -11649,7 +11649,7 @@ namespace ININ.PureCloudApi.Api
         /// Add a new call to a conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         public ApiResponse< Conversation > PostCallsCallIdWithHttpInfo (string callId, CallCommand body)
@@ -11725,7 +11725,7 @@ namespace ININ.PureCloudApi.Api
         /// Add a new call to a conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         public async System.Threading.Tasks.Task<Conversation> PostCallsCallIdAsync (string callId, CallCommand body)
@@ -11739,7 +11739,7 @@ namespace ININ.PureCloudApi.Api
         /// Add a new call to a conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PostCallsCallIdAsyncWithHttpInfo (string callId, CallCommand body)
@@ -11815,7 +11815,7 @@ namespace ININ.PureCloudApi.Api
         /// Add participants to a conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
         public Conversation PostCallsCallIdParticipants (string callId, Conversation body)
@@ -11828,7 +11828,7 @@ namespace ININ.PureCloudApi.Api
         /// Add participants to a conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
         public ApiResponse< Conversation > PostCallsCallIdParticipantsWithHttpInfo (string callId, Conversation body)
@@ -11904,7 +11904,7 @@ namespace ININ.PureCloudApi.Api
         /// Add participants to a conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
         public async System.Threading.Tasks.Task<Conversation> PostCallsCallIdParticipantsAsync (string callId, Conversation body)
@@ -11918,7 +11918,7 @@ namespace ININ.PureCloudApi.Api
         /// Add participants to a conversation 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
+        /// <param name="callId">callId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PostCallsCallIdParticipantsAsyncWithHttpInfo (string callId, Conversation body)
@@ -11994,8 +11994,8 @@ namespace ININ.PureCloudApi.Api
         /// Initiate and update consult transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>ConsultTransferResponse</returns>
         public ConsultTransferResponse PostCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransfer body)
@@ -12008,8 +12008,8 @@ namespace ININ.PureCloudApi.Api
         /// Initiate and update consult transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>ApiResponse of ConsultTransferResponse</returns>
         public ApiResponse< ConsultTransferResponse > PostCallsCallIdParticipantsParticipantIdConsultWithHttpInfo (string callId, string participantId, ConsultTransfer body)
@@ -12089,8 +12089,8 @@ namespace ININ.PureCloudApi.Api
         /// Initiate and update consult transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>Task of ConsultTransferResponse</returns>
         public async System.Threading.Tasks.Task<ConsultTransferResponse> PostCallsCallIdParticipantsParticipantIdConsultAsync (string callId, string participantId, ConsultTransfer body)
@@ -12104,8 +12104,8 @@ namespace ININ.PureCloudApi.Api
         /// Initiate and update consult transfer 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> PostCallsCallIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string callId, string participantId, ConsultTransfer body)
@@ -12185,8 +12185,8 @@ namespace ININ.PureCloudApi.Api
         /// Listen in on the conversation from the point of view of a given participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns></returns>
         public void PostCallsCallIdParticipantsParticipantIdMonitor (string callId, string participantId)
         {
@@ -12197,8 +12197,8 @@ namespace ININ.PureCloudApi.Api
         /// Listen in on the conversation from the point of view of a given participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostCallsCallIdParticipantsParticipantIdMonitorWithHttpInfo (string callId, string participantId)
         {
@@ -12266,8 +12266,8 @@ namespace ININ.PureCloudApi.Api
         /// Listen in on the conversation from the point of view of a given participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PostCallsCallIdParticipantsParticipantIdMonitorAsync (string callId, string participantId)
         {
@@ -12279,8 +12279,8 @@ namespace ININ.PureCloudApi.Api
         /// Listen in on the conversation from the point of view of a given participant. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostCallsCallIdParticipantsParticipantIdMonitorAsyncWithHttpInfo (string callId, string participantId)
         {
@@ -12348,8 +12348,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns></returns>
         public void PostCallsCallIdParticipantsParticipantIdReplace (string callId, string participantId, TransferRequest body)
@@ -12361,8 +12361,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostCallsCallIdParticipantsParticipantIdReplaceWithHttpInfo (string callId, string participantId, TransferRequest body)
@@ -12442,8 +12442,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PostCallsCallIdParticipantsParticipantIdReplaceAsync (string callId, string participantId, TransferRequest body)
@@ -12456,8 +12456,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="callId">callId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostCallsCallIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string callId, string participantId, TransferRequest body)
@@ -12537,8 +12537,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns></returns>
         public void PostChatsChatIdParticipantsParticipantIdReplace (string chatId, string participantId, TransferRequest body)
@@ -12550,8 +12550,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostChatsChatIdParticipantsParticipantIdReplaceWithHttpInfo (string chatId, string participantId, TransferRequest body)
@@ -12631,8 +12631,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PostChatsChatIdParticipantsParticipantIdReplaceAsync (string chatId, string participantId, TransferRequest body)
@@ -12645,8 +12645,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="chatId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="chatId">chatId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsChatIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string chatId, string participantId, TransferRequest body)
@@ -13611,7 +13611,7 @@ namespace ININ.PureCloudApi.Api
         /// Send an email reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Reply</param>
         /// <returns>EmailMessage</returns>
         public EmailMessage PostEmailsEmailIdMessages (string emailId, EmailMessage body)
@@ -13624,7 +13624,7 @@ namespace ININ.PureCloudApi.Api
         /// Send an email reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Reply</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         public ApiResponse< EmailMessage > PostEmailsEmailIdMessagesWithHttpInfo (string emailId, EmailMessage body)
@@ -13700,7 +13700,7 @@ namespace ININ.PureCloudApi.Api
         /// Send an email reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Reply</param>
         /// <returns>Task of EmailMessage</returns>
         public async System.Threading.Tasks.Task<EmailMessage> PostEmailsEmailIdMessagesAsync (string emailId, EmailMessage body)
@@ -13714,7 +13714,7 @@ namespace ININ.PureCloudApi.Api
         /// Send an email reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Reply</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PostEmailsEmailIdMessagesAsyncWithHttpInfo (string emailId, EmailMessage body)
@@ -13790,8 +13790,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns></returns>
         public void PostEmailsEmailIdParticipantsParticipantIdReplace (string emailId, string participantId, TransferRequest body)
@@ -13803,8 +13803,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostEmailsEmailIdParticipantsParticipantIdReplaceWithHttpInfo (string emailId, string participantId, TransferRequest body)
@@ -13884,8 +13884,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PostEmailsEmailIdParticipantsParticipantIdReplaceAsync (string emailId, string participantId, TransferRequest body)
@@ -13898,8 +13898,8 @@ namespace ININ.PureCloudApi.Api
         /// Replace this participant with the specified user and/or address 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
-        /// <param name="participantId"></param>
+        /// <param name="emailId">emailId</param>
+        /// <param name="participantId">participantId</param>
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostEmailsEmailIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string emailId, string participantId, TransferRequest body)
@@ -14146,7 +14146,7 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Draft</param>
         /// <returns>EmailMessage</returns>
         public EmailMessage PutEmailsEmailIdMessagesDraft (string emailId, EmailMessage body)
@@ -14159,7 +14159,7 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Draft</param>
         /// <returns>ApiResponse of EmailMessage</returns>
         public ApiResponse< EmailMessage > PutEmailsEmailIdMessagesDraftWithHttpInfo (string emailId, EmailMessage body)
@@ -14235,7 +14235,7 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Draft</param>
         /// <returns>Task of EmailMessage</returns>
         public async System.Threading.Tasks.Task<EmailMessage> PutEmailsEmailIdMessagesDraftAsync (string emailId, EmailMessage body)
@@ -14249,7 +14249,7 @@ namespace ININ.PureCloudApi.Api
         /// Update conversation draft reply 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailId"></param>
+        /// <param name="emailId">emailId</param>
         /// <param name="body">Draft</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PutEmailsEmailIdMessagesDraftAsyncWithHttpInfo (string emailId, EmailMessage body)

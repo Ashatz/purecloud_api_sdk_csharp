@@ -46,8 +46,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var q64 = q64_example;  // string | 
-            var expand = new List<string>(); // List<string> |  (optional) 
+            var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | expand (optional) 
 
             try
             {
@@ -69,8 +69,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  |  |
-| **expand** | [**List<string>**](string.html)|  | [optional]  |
+| **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -104,8 +104,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var q64 = q64_example;  // string | 
-            var expand = new List<string>(); // List<string> |  (optional) 
+            var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | expand (optional) 
 
             try
             {
@@ -127,8 +127,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  |  |
-| **expand** | [**List<string>**](string.html)|  | [optional]  |
+| **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -162,9 +162,9 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var q64 = q64_example;  // string | 
-            var expand = new List<string>(); // List<string> |  (optional) 
-            var profile = true;  // bool? |  (optional)  (default to true)
+            var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | expand (optional) 
+            var profile = true;  // bool? | profile (optional)  (default to true)
 
             try
             {
@@ -186,9 +186,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  |  |
-| **expand** | [**List<string>**](string.html)|  | [optional]  |
-| **profile** | **bool?**|  | [optional] [default to true] |
+| **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string.html)| expand | [optional]  |
+| **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type
@@ -222,8 +222,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var q64 = q64_example;  // string | 
-            var expand = new List<string>(); // List<string> |  (optional) 
+            var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | expand (optional) 
 
             try
             {
@@ -245,8 +245,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  |  |
-| **expand** | [**List<string>**](string.html)|  | [optional]  |
+| **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string.html)| expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -280,8 +280,8 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new SearchApi();
-            var q64 = q64_example;  // string | 
-            var profile = true;  // bool? |  (optional)  (default to true)
+            var q64 = q64_example;  // string | q64
+            var profile = true;  // bool? | profile (optional)  (default to true)
 
             try
             {
@@ -303,8 +303,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **q64** | **string**|  |  |
-| **profile** | **bool?**|  | [optional] [default to true] |
+| **q64** | **string**| q64 |  |
+| **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type
@@ -451,7 +451,7 @@ namespace Example
 
             var apiInstance = new SearchApi();
             var body = new SearchRequest(); // SearchRequest | Search request options
-            var profile = true;  // bool? |  (optional)  (default to true)
+            var profile = true;  // bool? | profile (optional)  (default to true)
 
             try
             {
@@ -474,7 +474,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SearchRequest**](SearchRequest.html)| Search request options |  |
-| **profile** | **bool?**|  | [optional] [default to true] |
+| **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type
@@ -565,7 +565,7 @@ namespace Example
 
             var apiInstance = new SearchApi();
             var body = new SuggestSearchRequest(); // SuggestSearchRequest | Search request options
-            var profile = true;  // bool? |  (optional)  (default to true)
+            var profile = true;  // bool? | profile (optional)  (default to true)
 
             try
             {
@@ -588,7 +588,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SuggestSearchRequest**](SuggestSearchRequest.html)| Search request options |  |
-| **profile** | **bool?**|  | [optional] [default to true] |
+| **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type

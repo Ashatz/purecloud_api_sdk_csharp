@@ -140,7 +140,7 @@ namespace ININ.PureCloudApi.Test
             string callbackId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             var response = instance.GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes(callbackId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
         /// <summary>
@@ -190,7 +190,7 @@ namespace ININ.PureCloudApi.Test
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             var response = instance.GetCallsCallIdParticipantsParticipantIdWrapupcodes(callId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
         /// <summary>
@@ -265,7 +265,7 @@ namespace ININ.PureCloudApi.Test
             string chatId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             var response = instance.GetChatsChatIdParticipantsParticipantIdWrapupcodes(chatId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
         /// <summary>
@@ -415,7 +415,7 @@ namespace ININ.PureCloudApi.Test
             string emailId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             var response = instance.GetEmailsEmailIdParticipantsParticipantIdWrapupcodes(emailId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
         /// <summary>

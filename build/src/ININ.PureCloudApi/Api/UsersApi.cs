@@ -64,7 +64,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>string</returns>
         string DeleteUserIdRoutingskillsSkillId (string userId, string skillId);
 
@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId);
         /// <summary>
@@ -149,8 +149,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>UsersSearchResponse</returns>
         UsersSearchResponse GetSearch (string q64, List<string> expand = null);
 
@@ -161,8 +161,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
         ApiResponse<UsersSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -702,7 +702,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body);
@@ -715,7 +715,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
         ApiResponse<UserRoutingSkill> PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
@@ -750,7 +750,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns></returns>
         void PutUserIdStationAssociatedstationStationId (string userId, string stationId);
 
@@ -762,7 +762,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PutUserIdStationAssociatedstationStationIdWithHttpInfo (string userId, string stationId);
         /// <summary>
@@ -773,7 +773,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns></returns>
         void PutUserIdStationDefaultstationStationId (string userId, string stationId);
 
@@ -785,7 +785,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PutUserIdStationDefaultstationStationIdWithHttpInfo (string userId, string stationId);
         #endregion Synchronous Operations
@@ -840,7 +840,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> DeleteUserIdRoutingskillsSkillIdAsync (string userId, string skillId);
 
@@ -852,7 +852,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId);
         /// <summary>
@@ -925,8 +925,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
         System.Threading.Tasks.Task<UsersSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
 
@@ -937,8 +937,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
@@ -1478,7 +1478,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body);
@@ -1491,7 +1491,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
@@ -1526,7 +1526,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PutUserIdStationAssociatedstationStationIdAsync (string userId, string stationId);
 
@@ -1538,7 +1538,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PutUserIdStationAssociatedstationStationIdAsyncWithHttpInfo (string userId, string stationId);
         /// <summary>
@@ -1549,7 +1549,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task PutUserIdStationDefaultstationStationIdAsync (string userId, string stationId);
 
@@ -1561,7 +1561,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PutUserIdStationDefaultstationStationIdAsyncWithHttpInfo (string userId, string stationId);
         #endregion Asynchronous Operations
@@ -1963,7 +1963,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>string</returns>
         public string DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
         {
@@ -1976,7 +1976,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > DeleteUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId)
         {
@@ -2045,7 +2045,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> DeleteUserIdRoutingskillsSkillIdAsync (string userId, string skillId)
         {
@@ -2059,7 +2059,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId)
         {
@@ -2576,8 +2576,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>UsersSearchResponse</returns>
         public UsersSearchResponse GetSearch (string q64, List<string> expand = null)
         {
@@ -2589,8 +2589,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
         public ApiResponse< UsersSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null)
         {
@@ -2655,8 +2655,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
         public async System.Threading.Tasks.Task<UsersSearchResponse> GetSearchAsync (string q64, List<string> expand = null)
         {
@@ -2669,8 +2669,8 @@ namespace ININ.PureCloudApi.Api
         /// Search using q64 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q64"></param>
-        /// <param name="expand"> (optional)</param>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         {
@@ -6641,7 +6641,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
         public UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body)
@@ -6655,7 +6655,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
         public ApiResponse< UserRoutingSkill > PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
@@ -6736,7 +6736,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
         public async System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body)
@@ -6751,7 +6751,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="skillId"></param>
+        /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
@@ -7011,7 +7011,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns></returns>
         public void PutUserIdStationAssociatedstationStationId (string userId, string stationId)
         {
@@ -7023,7 +7023,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PutUserIdStationAssociatedstationStationIdWithHttpInfo (string userId, string stationId)
         {
@@ -7092,7 +7092,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PutUserIdStationAssociatedstationStationIdAsync (string userId, string stationId)
         {
@@ -7105,7 +7105,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PutUserIdStationAssociatedstationStationIdAsyncWithHttpInfo (string userId, string stationId)
         {
@@ -7174,7 +7174,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns></returns>
         public void PutUserIdStationDefaultstationStationId (string userId, string stationId)
         {
@@ -7186,7 +7186,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PutUserIdStationDefaultstationStationIdWithHttpInfo (string userId, string stationId)
         {
@@ -7255,7 +7255,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task PutUserIdStationDefaultstationStationIdAsync (string userId, string stationId)
         {
@@ -7268,7 +7268,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="stationId"></param>
+        /// <param name="stationId">stationId</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PutUserIdStationDefaultstationStationIdAsyncWithHttpInfo (string userId, string stationId)
         {
