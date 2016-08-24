@@ -901,7 +901,7 @@ namespace Example
 
 <a name="getqueuesqueueidconversations"></a>
 
-## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetQueuesQueueIdConversations (string queueId, int? pageSize = null, int? pageNumber = null)
+## [**ConversationEntityListing**](ConversationEntityListing.html) GetQueuesQueueIdConversations (string queueId, int? pageSize = null, int? pageNumber = null)
 
 Get recent conversations that are still active
 
@@ -933,7 +933,7 @@ namespace Example
             try
             {
                 // Get recent conversations that are still active
-                CallConversationEntityListing result = apiInstance.GetQueuesQueueIdConversations(queueId, pageSize, pageNumber);
+                ConversationEntityListing result = apiInstance.GetQueuesQueueIdConversations(queueId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -957,7 +957,7 @@ namespace Example
 
 ### Return type
 
-[**CallConversationEntityListing**](CallConversationEntityListing.html)
+[**ConversationEntityListing**](ConversationEntityListing.html)
 
 <a name="getqueuesqueueidconversationscallbacks"></a>
 
@@ -1259,7 +1259,7 @@ namespace Example
 
 <a name="getqueuesqueueidusers"></a>
 
-## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
 
 Get the members of this queue
 
@@ -1288,13 +1288,18 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            var expand = expand_example;  // string | expand (optional) 
-            var directMembers = true;  // bool? | Only get users that are direct members of the queue (optional)  (default to false)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+            var joined = true;  // bool? | Filter by joined status (optional) 
+            var name = name_example;  // string | Filter by queue member name (optional) 
+            var skills = new List<string>(); // List<string> | Filter by skill (optional) 
+            var languages = new List<string>(); // List<string> | Filter by language (optional) 
+            var routingStatus = new List<string>(); // List<string> | Filter by routing status (optional) 
+            var presence = new List<string>(); // List<string> | Filter by presence (optional) 
 
             try
             {
                 // Get the members of this queue
-                QueueMemberEntityListing result = apiInstance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
+                QueueMemberEntityListing result = apiInstance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1315,8 +1320,13 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **expand** | **string**| expand | [optional]  |
-| **directMembers** | **bool?**| Only get users that are direct members of the queue | [optional] [default to false] |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
+| **joined** | **bool?**| Filter by joined status | [optional]  |
+| **name** | **string**| Filter by queue member name | [optional]  |
+| **skills** | [**List<string>**](string.html)| Filter by skill | [optional]  |
+| **languages** | [**List<string>**](string.html)| Filter by language | [optional]  |
+| **routingStatus** | [**List<string>**](string.html)| Filter by routing status | [optional]  |
+| **presence** | [**List<string>**](string.html)| Filter by presence | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

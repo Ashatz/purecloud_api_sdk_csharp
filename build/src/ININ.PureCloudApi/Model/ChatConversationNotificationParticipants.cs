@@ -168,6 +168,12 @@ namespace ININ.PureCloudApi.Model
             Transfer,
             
             /// <summary>
+            /// Enum Timeout for "timeout"
+            /// </summary>
+            [EnumMember(Value = "timeout")]
+            Timeout,
+            
+            /// <summary>
             /// Enum Transferconference for "transfer.conference"
             /// </summary>
             [EnumMember(Value = "transfer.conference")]
@@ -190,6 +196,18 @@ namespace ININ.PureCloudApi.Model
             /// </summary>
             [EnumMember(Value = "transport.failure")]
             Transportfailure,
+            
+            /// <summary>
+            /// Enum Transportnoanswer for "transport.noanswer"
+            /// </summary>
+            [EnumMember(Value = "transport.noanswer")]
+            Transportnoanswer,
+            
+            /// <summary>
+            /// Enum Transportnotavailable for "transport.notavailable"
+            /// </summary>
+            [EnumMember(Value = "transport.notavailable")]
+            Transportnotavailable,
             
             /// <summary>
             /// Enum Error for "error"

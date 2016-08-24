@@ -12,8 +12,8 @@ title: CallConversationEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;CallConversation&gt;**](CallConversation.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |

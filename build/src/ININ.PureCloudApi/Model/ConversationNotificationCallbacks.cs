@@ -168,6 +168,18 @@ namespace ININ.PureCloudApi.Model
             TransferConsult,
             
             /// <summary>
+            /// Enum TransferNoAnswer for "TRANSFER_NO_ANSWER"
+            /// </summary>
+            [EnumMember(Value = "TRANSFER_NO_ANSWER")]
+            TransferNoAnswer,
+            
+            /// <summary>
+            /// Enum TransferNotAvailable for "TRANSFER_NOT_AVAILABLE"
+            /// </summary>
+            [EnumMember(Value = "TRANSFER_NOT_AVAILABLE")]
+            TransferNotAvailable,
+            
+            /// <summary>
             /// Enum TransferForward for "TRANSFER_FORWARD"
             /// </summary>
             [EnumMember(Value = "TRANSFER_FORWARD")]

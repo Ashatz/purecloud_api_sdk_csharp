@@ -353,8 +353,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>CallConversationEntityListing</returns>
-        CallConversationEntityListing GetQueuesQueueIdConversations (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <returns>ConversationEntityListing</returns>
+        ConversationEntityListing GetQueuesQueueIdConversations (string queueId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get recent conversations that are still active
@@ -366,8 +366,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of CallConversationEntityListing</returns>
-        ApiResponse<CallConversationEntityListing> GetQueuesQueueIdConversationsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <returns>ApiResponse of ConversationEntityListing</returns>
+        ApiResponse<ConversationEntityListing> GetQueuesQueueIdConversationsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
         /// <summary>
         /// Get recent callback conversations that are still active
         /// </summary>
@@ -502,10 +502,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>QueueMemberEntityListing</returns>
-        QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
         /// Get the members of this queue
@@ -518,10 +523,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        ApiResponse<QueueMemberEntityListing> GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        ApiResponse<QueueMemberEntityListing> GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
         /// <summary>
         /// Get the wrap-up codes for a queue
         /// </summary>
@@ -1388,8 +1398,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of CallConversationEntityListing</returns>
-        System.Threading.Tasks.Task<CallConversationEntityListing> GetQueuesQueueIdConversationsAsync (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <returns>Task of ConversationEntityListing</returns>
+        System.Threading.Tasks.Task<ConversationEntityListing> GetQueuesQueueIdConversationsAsync (string queueId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get recent conversations that are still active
@@ -1401,8 +1411,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetQueuesQueueIdConversationsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetQueuesQueueIdConversationsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
         /// <summary>
         /// Get recent callback conversations that are still active
         /// </summary>
@@ -1537,10 +1547,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
-        System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
         /// Get the members of this queue
@@ -1553,10 +1568,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
         /// <summary>
         /// Get the wrap-up codes for a queue
         /// </summary>
@@ -4522,10 +4542,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>CallConversationEntityListing</returns>
-        public CallConversationEntityListing GetQueuesQueueIdConversations (string queueId, int? pageSize = null, int? pageNumber = null)
+        /// <returns>ConversationEntityListing</returns>
+        public ConversationEntityListing GetQueuesQueueIdConversations (string queueId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<CallConversationEntityListing> localVarResponse = GetQueuesQueueIdConversationsWithHttpInfo(queueId, pageSize, pageNumber);
+             ApiResponse<ConversationEntityListing> localVarResponse = GetQueuesQueueIdConversationsWithHttpInfo(queueId, pageSize, pageNumber);
              return localVarResponse.Data;
         }
 
@@ -4536,8 +4556,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of CallConversationEntityListing</returns>
-        public ApiResponse< CallConversationEntityListing > GetQueuesQueueIdConversationsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        /// <returns>ApiResponse of ConversationEntityListing</returns>
+        public ApiResponse< ConversationEntityListing > GetQueuesQueueIdConversationsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -4591,9 +4611,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
+            return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
+                (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
             
         }
 
@@ -4604,10 +4624,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of CallConversationEntityListing</returns>
-        public async System.Threading.Tasks.Task<CallConversationEntityListing> GetQueuesQueueIdConversationsAsync (string queueId, int? pageSize = null, int? pageNumber = null)
+        /// <returns>Task of ConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<ConversationEntityListing> GetQueuesQueueIdConversationsAsync (string queueId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<CallConversationEntityListing> localVarResponse = await GetQueuesQueueIdConversationsAsyncWithHttpInfo(queueId, pageSize, pageNumber);
+             ApiResponse<ConversationEntityListing> localVarResponse = await GetQueuesQueueIdConversationsAsyncWithHttpInfo(queueId, pageSize, pageNumber);
              return localVarResponse.Data;
 
         }
@@ -4619,8 +4639,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetQueuesQueueIdConversationsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetQueuesQueueIdConversationsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -4674,9 +4694,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
+            return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
+                (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
             
         }
 
@@ -5507,12 +5527,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>QueueMemberEntityListing</returns>
-        public QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        public QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = GetQueuesQueueIdUsersWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
+             ApiResponse<QueueMemberEntityListing> localVarResponse = GetQueuesQueueIdUsersWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
              return localVarResponse.Data;
         }
 
@@ -5524,10 +5549,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        public ApiResponse< QueueMemberEntityListing > GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        public ApiResponse< QueueMemberEntityListing > GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -5563,7 +5593,12 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            if (directMembers != null) localVarQueryParams.Add("directMembers", Configuration.ApiClient.ParameterToString(directMembers)); // query parameter
+            if (joined != null) localVarQueryParams.Add("joined", Configuration.ApiClient.ParameterToString(joined)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (skills != null) localVarQueryParams.Add("skills", Configuration.ApiClient.ParameterToString(skills)); // query parameter
+            if (languages != null) localVarQueryParams.Add("languages", Configuration.ApiClient.ParameterToString(languages)); // query parameter
+            if (routingStatus != null) localVarQueryParams.Add("routingStatus", Configuration.ApiClient.ParameterToString(routingStatus)); // query parameter
+            if (presence != null) localVarQueryParams.Add("presence", Configuration.ApiClient.ParameterToString(presence)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5598,12 +5633,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = await GetQueuesQueueIdUsersAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
+             ApiResponse<QueueMemberEntityListing> localVarResponse = await GetQueuesQueueIdUsersAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
              return localVarResponse.Data;
 
         }
@@ -5616,10 +5656,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -5655,7 +5700,12 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            if (directMembers != null) localVarQueryParams.Add("directMembers", Configuration.ApiClient.ParameterToString(directMembers)); // query parameter
+            if (joined != null) localVarQueryParams.Add("joined", Configuration.ApiClient.ParameterToString(joined)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (skills != null) localVarQueryParams.Add("skills", Configuration.ApiClient.ParameterToString(skills)); // query parameter
+            if (languages != null) localVarQueryParams.Add("languages", Configuration.ApiClient.ParameterToString(languages)); // query parameter
+            if (routingStatus != null) localVarQueryParams.Add("routingStatus", Configuration.ApiClient.ParameterToString(routingStatus)); // query parameter
+            if (presence != null) localVarQueryParams.Add("presence", Configuration.ApiClient.ParameterToString(presence)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

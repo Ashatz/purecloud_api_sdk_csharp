@@ -251,7 +251,7 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             var response = instance.GetQueuesQueueIdConversations(queueId, pageSize, pageNumber);
-            Assert.IsInstanceOf<CallConversationEntityListing> (response, "response is CallConversationEntityListing");
+            Assert.IsInstanceOf<ConversationEntityListing> (response, "response is ConversationEntityListing");
         }
         
         /// <summary>
@@ -334,9 +334,14 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            string expand = null; // TODO: replace null with proper value
-            bool? directMembers = null; // TODO: replace null with proper value
-            var response = instance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
+            List<string> expand = null; // TODO: replace null with proper value
+            bool? joined = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            List<string> skills = null; // TODO: replace null with proper value
+            List<string> languages = null; // TODO: replace null with proper value
+            List<string> routingStatus = null; // TODO: replace null with proper value
+            List<string> presence = null; // TODO: replace null with proper value
+            var response = instance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
             Assert.IsInstanceOf<QueueMemberEntityListing> (response, "response is QueueMemberEntityListing");
         }
         

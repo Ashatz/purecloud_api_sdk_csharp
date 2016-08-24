@@ -12,8 +12,8 @@ title: WrapupCodeEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;WrapupCode&gt;**](WrapupCode.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
