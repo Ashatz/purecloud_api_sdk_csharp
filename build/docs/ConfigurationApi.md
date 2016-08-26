@@ -3,15 +3,72 @@ title: ConfigurationApi
 ---
 ## ININ.PureCloudApi.Api.ConfigurationApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**GetProvidersEdgesEdgeIdSetuppackage**](ConfigurationApi.html#getprovidersedgesedgeidsetuppackage) | **GET** /api/v2/telephony/providers/edges/{edgeId}/setuppackage | Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge. |
 | [**GetRecordingkeys**](ConfigurationApi.html#getrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
 | [**GetRecordingkeysRotationschedule**](ConfigurationApi.html#getrecordingkeysrotationschedule) | **GET** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
 | [**PostRecordingkeys**](ConfigurationApi.html#postrecordingkeys) | **POST** /api/v2/recording/recordingkeys | Create encryption key |
 | [**PutRecordingkeysRotationschedule**](ConfigurationApi.html#putrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
 {: class="table table-striped"}
+
+<a name="getprovidersedgesedgeidsetuppackage"></a>
+
+## [**VirtualEdgeSetupPackage**](VirtualEdgeSetupPackage.html) GetProvidersEdgesEdgeIdSetuppackage (string edgeId)
+
+Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdSetuppackageExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConfigurationApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+
+            try
+            {
+                // Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
+                VirtualEdgeSetupPackage result = apiInstance.GetProvidersEdgesEdgeIdSetuppackage(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConfigurationApi.GetProvidersEdgesEdgeIdSetuppackage: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**VirtualEdgeSetupPackage**](VirtualEdgeSetupPackage.html)
 
 <a name="getrecordingkeys"></a>
 

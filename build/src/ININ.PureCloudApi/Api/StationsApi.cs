@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>string</returns>
-        string DeleteStationAssociateduser (string stationId);
+        string DeleteStationIdAssociateduser (string stationId);
 
         /// <summary>
         /// Unassigns the user assigned to this station
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteStationAssociateduserWithHttpInfo (string stationId);
+        ApiResponse<string> DeleteStationIdAssociateduserWithHttpInfo (string stationId);
         /// <summary>
         /// Get station.
         /// </summary>
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Station</returns>
-        Station GetStation (string stationId);
+        Station GetStationId (string stationId);
 
         /// <summary>
         /// Get station.
@@ -55,7 +55,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>ApiResponse of Station</returns>
-        ApiResponse<Station> GetStationWithHttpInfo (string stationId);
+        ApiResponse<Station> GetStationIdWithHttpInfo (string stationId);
         /// <summary>
         /// Get the list of available stations.
         /// </summary>
@@ -96,7 +96,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteStationAssociateduserAsync (string stationId);
+        System.Threading.Tasks.Task<string> DeleteStationIdAssociateduserAsync (string stationId);
 
         /// <summary>
         /// Unassigns the user assigned to this station
@@ -107,7 +107,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteStationAssociateduserAsyncWithHttpInfo (string stationId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteStationIdAssociateduserAsyncWithHttpInfo (string stationId);
         /// <summary>
         /// Get station.
         /// </summary>
@@ -117,7 +117,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of Station</returns>
-        System.Threading.Tasks.Task<Station> GetStationAsync (string stationId);
+        System.Threading.Tasks.Task<Station> GetStationIdAsync (string stationId);
 
         /// <summary>
         /// Get station.
@@ -128,7 +128,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of ApiResponse (Station)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Station>> GetStationAsyncWithHttpInfo (string stationId);
+        System.Threading.Tasks.Task<ApiResponse<Station>> GetStationIdAsyncWithHttpInfo (string stationId);
         /// <summary>
         /// Get the list of available stations.
         /// </summary>
@@ -254,9 +254,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>string</returns>
-        public string DeleteStationAssociateduser (string stationId)
+        public string DeleteStationIdAssociateduser (string stationId)
         {
-             ApiResponse<string> localVarResponse = DeleteStationAssociateduserWithHttpInfo(stationId);
+             ApiResponse<string> localVarResponse = DeleteStationIdAssociateduserWithHttpInfo(stationId);
              return localVarResponse.Data;
         }
 
@@ -266,11 +266,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteStationAssociateduserWithHttpInfo (string stationId)
+        public ApiResponse< string > DeleteStationIdAssociateduserWithHttpInfo (string stationId)
         {
             // verify the required parameter 'stationId' is set
             if (stationId == null)
-                throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->DeleteStationAssociateduser");
+                throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->DeleteStationIdAssociateduser");
 
             var localVarPath = "/api/v2/stations/{stationId}/associateduser";
             var localVarPathParams = new Dictionary<String, String>();
@@ -314,9 +314,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteStationAssociateduser: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteStationIdAssociateduser: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteStationAssociateduser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteStationIdAssociateduser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -330,9 +330,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteStationAssociateduserAsync (string stationId)
+        public async System.Threading.Tasks.Task<string> DeleteStationIdAssociateduserAsync (string stationId)
         {
-             ApiResponse<string> localVarResponse = await DeleteStationAssociateduserAsyncWithHttpInfo(stationId);
+             ApiResponse<string> localVarResponse = await DeleteStationIdAssociateduserAsyncWithHttpInfo(stationId);
              return localVarResponse.Data;
 
         }
@@ -343,11 +343,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteStationAssociateduserAsyncWithHttpInfo (string stationId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteStationIdAssociateduserAsyncWithHttpInfo (string stationId)
         {
             // verify the required parameter 'stationId' is set
             if (stationId == null)
-                throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->DeleteStationAssociateduser");
+                throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->DeleteStationIdAssociateduser");
 
             var localVarPath = "/api/v2/stations/{stationId}/associateduser";
             var localVarPathParams = new Dictionary<String, String>();
@@ -391,9 +391,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteStationAssociateduser: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteStationIdAssociateduser: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteStationAssociateduser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteStationIdAssociateduser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -407,9 +407,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Station</returns>
-        public Station GetStation (string stationId)
+        public Station GetStationId (string stationId)
         {
-             ApiResponse<Station> localVarResponse = GetStationWithHttpInfo(stationId);
+             ApiResponse<Station> localVarResponse = GetStationIdWithHttpInfo(stationId);
              return localVarResponse.Data;
         }
 
@@ -419,11 +419,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>ApiResponse of Station</returns>
-        public ApiResponse< Station > GetStationWithHttpInfo (string stationId)
+        public ApiResponse< Station > GetStationIdWithHttpInfo (string stationId)
         {
             // verify the required parameter 'stationId' is set
             if (stationId == null)
-                throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->GetStation");
+                throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->GetStationId");
 
             var localVarPath = "/api/v2/stations/{stationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -467,9 +467,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetStation: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetStationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetStation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetStationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Station>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -483,9 +483,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of Station</returns>
-        public async System.Threading.Tasks.Task<Station> GetStationAsync (string stationId)
+        public async System.Threading.Tasks.Task<Station> GetStationIdAsync (string stationId)
         {
-             ApiResponse<Station> localVarResponse = await GetStationAsyncWithHttpInfo(stationId);
+             ApiResponse<Station> localVarResponse = await GetStationIdAsyncWithHttpInfo(stationId);
              return localVarResponse.Data;
 
         }
@@ -496,11 +496,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of ApiResponse (Station)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Station>> GetStationAsyncWithHttpInfo (string stationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Station>> GetStationIdAsyncWithHttpInfo (string stationId)
         {
             // verify the required parameter 'stationId' is set
             if (stationId == null)
-                throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->GetStation");
+                throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->GetStationId");
 
             var localVarPath = "/api/v2/stations/{stationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -544,9 +544,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetStation: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetStationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetStation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetStationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Station>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

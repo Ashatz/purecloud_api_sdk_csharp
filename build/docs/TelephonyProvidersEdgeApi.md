@@ -3,124 +3,236 @@ title: TelephonyProvidersEdgeApi
 ---
 ## ININ.PureCloudApi.Api.TelephonyProvidersEdgeApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteProvidersEdge**](TelephonyProvidersEdgeApi.html#deleteprovidersedge) | **DELETE** /api/v2/telephony/providers/edges/{edgeId} | Delete a edge. |
-| [**DeleteProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeApi.html#deleteprovidersedgelogicalinterface) | **DELETE** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Delete an edge logical interface |
-| [**DeleteProvidersEdgeSoftwareupdate**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesoftwareupdate) | **DELETE** /api/v2/telephony/providers/edges/{edgeId}/softwareupdate | Cancels any in-progress update for this edge. |
-| [**DeleteProvidersEdgesCertificateauthority**](TelephonyProvidersEdgeApi.html#deleteprovidersedgescertificateauthority) | **DELETE** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Delete a certificate authority. |
-| [**DeleteProvidersEdgesDidpool**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesdidpool) | **DELETE** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Delete a DID Pool by ID. |
-| [**DeleteProvidersEdgesEdgegroup**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesedgegroup) | **DELETE** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Delete an edge group. |
-| [**DeleteProvidersEdgesEndpoint**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesendpoint) | **DELETE** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Delete endpoint |
-| [**DeleteProvidersEdgesExtensionpool**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesextensionpool) | **DELETE** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Delete an extension pool by ID |
-| [**DeleteProvidersEdgesOutboundroute**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesoutboundroute) | **DELETE** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Delete Outbound Route |
-| [**DeleteProvidersEdgesPhone**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesphone) | **DELETE** /api/v2/telephony/providers/edges/phones/{phoneId} | Delete a Phone by ID |
-| [**DeleteProvidersEdgesPhonebasesetting**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesphonebasesetting) | **DELETE** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Delete a Phone Base Settings by ID |
-| [**DeleteProvidersEdgesSite**](TelephonyProvidersEdgeApi.html#deleteprovidersedgessite) | **DELETE** /api/v2/telephony/providers/edges/sites/{siteId} | Delete a Site by ID |
-| [**DeleteProvidersEdgesTrunkbasesetting**](TelephonyProvidersEdgeApi.html#deleteprovidersedgestrunkbasesetting) | **DELETE** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Delete a Trunk Base Settings object by ID |
-| [**GetProvidersEdge**](TelephonyProvidersEdgeApi.html#getprovidersedge) | **GET** /api/v2/telephony/providers/edges/{edgeId} | Get edge. |
-| [**GetProvidersEdgeLine**](TelephonyProvidersEdgeApi.html#getprovidersedgeline) | **GET** /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId} | Get line |
-| [**GetProvidersEdgeLines**](TelephonyProvidersEdgeApi.html#getprovidersedgelines) | **GET** /api/v2/telephony/providers/edges/{edgeId}/lines | Get the list of lines. |
-| [**GetProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeApi.html#getprovidersedgelogicalinterface) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Get an edge logical interface |
-| [**GetProvidersEdgeLogicalinterfaces**](TelephonyProvidersEdgeApi.html#getprovidersedgelogicalinterfaces) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces | Get edge logical interfaces. |
-| [**GetProvidersEdgeLogsJob**](TelephonyProvidersEdgeApi.html#getprovidersedgelogsjob) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId} | Get an Edge logs job. |
-| [**GetProvidersEdgePhysicalinterface**](TelephonyProvidersEdgeApi.html#getprovidersedgephysicalinterface) | **GET** /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId} | Get edge physical interface. |
-| [**GetProvidersEdgePhysicalinterfaces**](TelephonyProvidersEdgeApi.html#getprovidersedgephysicalinterfaces) | **GET** /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces | Retrieve a list of all configured physical interfaces from a specific edge. |
-| [**GetProvidersEdgeSoftwareupdate**](TelephonyProvidersEdgeApi.html#getprovidersedgesoftwareupdate) | **GET** /api/v2/telephony/providers/edges/{edgeId}/softwareupdate | Gets software update status information about any edge. |
-| [**GetProvidersEdgeSoftwareversions**](TelephonyProvidersEdgeApi.html#getprovidersedgesoftwareversions) | **GET** /api/v2/telephony/providers/edges/{edgeId}/softwareversions | Gets all the available software versions for this edge. |
+| [**DeleteProvidersEdgesCertificateauthoritiesCertificateId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgescertificateauthoritiescertificateid) | **DELETE** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Delete a certificate authority. |
+| [**DeleteProvidersEdgesDidpoolsDidpoolId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesdidpoolsdidpoolid) | **DELETE** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Delete a DID Pool by ID. |
+| [**DeleteProvidersEdgesEdgeId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesedgeid) | **DELETE** /api/v2/telephony/providers/edges/{edgeId} | Delete a edge. |
+| [**DeleteProvidersEdgesEdgeIdLogicalinterfacesInterfaceId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesedgeidlogicalinterfacesinterfaceid) | **DELETE** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Delete an edge logical interface |
+| [**DeleteProvidersEdgesEdgeIdSoftwareupdate**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesedgeidsoftwareupdate) | **DELETE** /api/v2/telephony/providers/edges/{edgeId}/softwareupdate | Cancels any in-progress update for this edge. |
+| [**DeleteProvidersEdgesEdgegroupsEdgegroupId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesedgegroupsedgegroupid) | **DELETE** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Delete an edge group. |
+| [**DeleteProvidersEdgesEndpointsEndpointId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesendpointsendpointid) | **DELETE** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Delete endpoint |
+| [**DeleteProvidersEdgesExtensionpoolsExtensionpoolId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesextensionpoolsextensionpoolid) | **DELETE** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Delete an extension pool by ID |
+| [**DeleteProvidersEdgesOutboundroutesOutboundrouteId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesoutboundroutesoutboundrouteid) | **DELETE** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Delete Outbound Route |
+| [**DeleteProvidersEdgesPhonebasesettingsPhonebaseId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesphonebasesettingsphonebaseid) | **DELETE** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Delete a Phone Base Settings by ID |
+| [**DeleteProvidersEdgesPhonesPhoneId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesphonesphoneid) | **DELETE** /api/v2/telephony/providers/edges/phones/{phoneId} | Delete a Phone by ID |
+| [**DeleteProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgessitessiteid) | **DELETE** /api/v2/telephony/providers/edges/sites/{siteId} | Delete a Site by ID |
+| [**DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgestrunkbasesettingstrunkbasesettingsid) | **DELETE** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Delete a Trunk Base Settings object by ID |
 | [**GetProvidersEdges**](TelephonyProvidersEdgeApi.html#getprovidersedges) | **GET** /api/v2/telephony/providers/edges | Get the list of edges. |
 | [**GetProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeApi.html#getprovidersedgesavailablelanguages) | **GET** /api/v2/telephony/providers/edges/availablelanguages | Get the list of available languages. |
 | [**GetProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeApi.html#getprovidersedgescertificateauthorities) | **GET** /api/v2/telephony/providers/edges/certificateauthorities | Get the list of certificate authorities. |
-| [**GetProvidersEdgesCertificateauthority**](TelephonyProvidersEdgeApi.html#getprovidersedgescertificateauthority) | **GET** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Get a certificate authority. |
-| [**GetProvidersEdgesDid**](TelephonyProvidersEdgeApi.html#getprovidersedgesdid) | **GET** /api/v2/telephony/providers/edges/dids/{didId} | Get a DID by ID. |
-| [**GetProvidersEdgesDidpool**](TelephonyProvidersEdgeApi.html#getprovidersedgesdidpool) | **GET** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Get a DID Pool by ID. |
+| [**GetProvidersEdgesCertificateauthoritiesCertificateId**](TelephonyProvidersEdgeApi.html#getprovidersedgescertificateauthoritiescertificateid) | **GET** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Get a certificate authority. |
 | [**GetProvidersEdgesDidpools**](TelephonyProvidersEdgeApi.html#getprovidersedgesdidpools) | **GET** /api/v2/telephony/providers/edges/didpools | Get a listing of DID Pools |
+| [**GetProvidersEdgesDidpoolsDidpoolId**](TelephonyProvidersEdgeApi.html#getprovidersedgesdidpoolsdidpoolid) | **GET** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Get a DID Pool by ID. |
 | [**GetProvidersEdgesDids**](TelephonyProvidersEdgeApi.html#getprovidersedgesdids) | **GET** /api/v2/telephony/providers/edges/dids | Get a listing of DIDs |
-| [**GetProvidersEdgesEdgegroup**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgegroup) | **GET** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Get edge group. |
+| [**GetProvidersEdgesDidsDidId**](TelephonyProvidersEdgeApi.html#getprovidersedgesdidsdidid) | **GET** /api/v2/telephony/providers/edges/dids/{didId} | Get a DID by ID. |
+| [**GetProvidersEdgesEdgeId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeid) | **GET** /api/v2/telephony/providers/edges/{edgeId} | Get edge. |
+| [**GetProvidersEdgesEdgeIdLines**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidlines) | **GET** /api/v2/telephony/providers/edges/{edgeId}/lines | Get the list of lines. |
+| [**GetProvidersEdgesEdgeIdLinesLineId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidlineslineid) | **GET** /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId} | Get line |
+| [**GetProvidersEdgesEdgeIdLogicalinterfaces**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidlogicalinterfaces) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces | Get edge logical interfaces. |
+| [**GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidlogicalinterfacesinterfaceid) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Get an edge logical interface |
+| [**GetProvidersEdgesEdgeIdLogsJobsJobId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidlogsjobsjobid) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId} | Get an Edge logs job. |
+| [**GetProvidersEdgesEdgeIdPhysicalinterfaces**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidphysicalinterfaces) | **GET** /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces | Retrieve a list of all configured physical interfaces from a specific edge. |
+| [**GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidphysicalinterfacesinterfaceid) | **GET** /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId} | Get edge physical interface. |
+| [**GetProvidersEdgesEdgeIdSoftwareupdate**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidsoftwareupdate) | **GET** /api/v2/telephony/providers/edges/{edgeId}/softwareupdate | Gets software update status information about any edge. |
+| [**GetProvidersEdgesEdgeIdSoftwareversions**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidsoftwareversions) | **GET** /api/v2/telephony/providers/edges/{edgeId}/softwareversions | Gets all the available software versions for this edge. |
 | [**GetProvidersEdgesEdgegroups**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgegroups) | **GET** /api/v2/telephony/providers/edges/edgegroups | Get the list of edge groups. |
+| [**GetProvidersEdgesEdgegroupsEdgegroupId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgegroupsedgegroupid) | **GET** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Get edge group. |
 | [**GetProvidersEdgesEdgeversionreport**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeversionreport) | **GET** /api/v2/telephony/providers/edges/edgeversionreport | Get the edge version report. |
-| [**GetProvidersEdgesEndpoint**](TelephonyProvidersEdgeApi.html#getprovidersedgesendpoint) | **GET** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Get endpoint |
 | [**GetProvidersEdgesEndpoints**](TelephonyProvidersEdgeApi.html#getprovidersedgesendpoints) | **GET** /api/v2/telephony/providers/edges/endpoints | Get endpoints |
-| [**GetProvidersEdgesExtension**](TelephonyProvidersEdgeApi.html#getprovidersedgesextension) | **GET** /api/v2/telephony/providers/edges/extensions/{extensionId} | Get an extension by ID. |
-| [**GetProvidersEdgesExtensionpool**](TelephonyProvidersEdgeApi.html#getprovidersedgesextensionpool) | **GET** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Get an extension pool by ID |
+| [**GetProvidersEdgesEndpointsEndpointId**](TelephonyProvidersEdgeApi.html#getprovidersedgesendpointsendpointid) | **GET** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Get endpoint |
 | [**GetProvidersEdgesExtensionpools**](TelephonyProvidersEdgeApi.html#getprovidersedgesextensionpools) | **GET** /api/v2/telephony/providers/edges/extensionpools | Get a listing of extension pools |
+| [**GetProvidersEdgesExtensionpoolsExtensionpoolId**](TelephonyProvidersEdgeApi.html#getprovidersedgesextensionpoolsextensionpoolid) | **GET** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Get an extension pool by ID |
 | [**GetProvidersEdgesExtensions**](TelephonyProvidersEdgeApi.html#getprovidersedgesextensions) | **GET** /api/v2/telephony/providers/edges/extensions | Get a listing of extensions |
-| [**GetProvidersEdgesLine**](TelephonyProvidersEdgeApi.html#getprovidersedgesline) | **GET** /api/v2/telephony/providers/edges/lines/{lineId} | Get a Line by ID |
-| [**GetProvidersEdgesLinebasesetting**](TelephonyProvidersEdgeApi.html#getprovidersedgeslinebasesetting) | **GET** /api/v2/telephony/providers/edges/linebasesettings/{lineBaseId} | Get a line base settings object by ID |
+| [**GetProvidersEdgesExtensionsExtensionId**](TelephonyProvidersEdgeApi.html#getprovidersedgesextensionsextensionid) | **GET** /api/v2/telephony/providers/edges/extensions/{extensionId} | Get an extension by ID. |
 | [**GetProvidersEdgesLinebasesettings**](TelephonyProvidersEdgeApi.html#getprovidersedgeslinebasesettings) | **GET** /api/v2/telephony/providers/edges/linebasesettings | Get a listing of line base settings objects |
+| [**GetProvidersEdgesLinebasesettingsLinebaseId**](TelephonyProvidersEdgeApi.html#getprovidersedgeslinebasesettingslinebaseid) | **GET** /api/v2/telephony/providers/edges/linebasesettings/{lineBaseId} | Get a line base settings object by ID |
 | [**GetProvidersEdgesLines**](TelephonyProvidersEdgeApi.html#getprovidersedgeslines) | **GET** /api/v2/telephony/providers/edges/lines | Get a list of Lines |
+| [**GetProvidersEdgesLinesLineId**](TelephonyProvidersEdgeApi.html#getprovidersedgeslineslineid) | **GET** /api/v2/telephony/providers/edges/lines/{lineId} | Get a Line by ID |
 | [**GetProvidersEdgesLinesTemplate**](TelephonyProvidersEdgeApi.html#getprovidersedgeslinestemplate) | **GET** /api/v2/telephony/providers/edges/lines/template | Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance |
-| [**GetProvidersEdgesOutboundroute**](TelephonyProvidersEdgeApi.html#getprovidersedgesoutboundroute) | **GET** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Get outbound route |
 | [**GetProvidersEdgesOutboundroutes**](TelephonyProvidersEdgeApi.html#getprovidersedgesoutboundroutes) | **GET** /api/v2/telephony/providers/edges/outboundroutes | Get outbound routes |
-| [**GetProvidersEdgesPhone**](TelephonyProvidersEdgeApi.html#getprovidersedgesphone) | **GET** /api/v2/telephony/providers/edges/phones/{phoneId} | Get a Phone by ID |
-| [**GetProvidersEdgesPhonebasesetting**](TelephonyProvidersEdgeApi.html#getprovidersedgesphonebasesetting) | **GET** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Get a Phone Base Settings object by ID |
+| [**GetProvidersEdgesOutboundroutesOutboundrouteId**](TelephonyProvidersEdgeApi.html#getprovidersedgesoutboundroutesoutboundrouteid) | **GET** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Get outbound route |
 | [**GetProvidersEdgesPhonebasesettings**](TelephonyProvidersEdgeApi.html#getprovidersedgesphonebasesettings) | **GET** /api/v2/telephony/providers/edges/phonebasesettings | Get a list of Phone Base Settings objects |
 | [**GetProvidersEdgesPhonebasesettingsAvailablemetabases**](TelephonyProvidersEdgeApi.html#getprovidersedgesphonebasesettingsavailablemetabases) | **GET** /api/v2/telephony/providers/edges/phonebasesettings/availablemetabases | Get a list of available makes and models to create a new Phone Base Settings |
+| [**GetProvidersEdgesPhonebasesettingsPhonebaseId**](TelephonyProvidersEdgeApi.html#getprovidersedgesphonebasesettingsphonebaseid) | **GET** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Get a Phone Base Settings object by ID |
 | [**GetProvidersEdgesPhonebasesettingsTemplate**](TelephonyProvidersEdgeApi.html#getprovidersedgesphonebasesettingstemplate) | **GET** /api/v2/telephony/providers/edges/phonebasesettings/template | Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance |
 | [**GetProvidersEdgesPhones**](TelephonyProvidersEdgeApi.html#getprovidersedgesphones) | **GET** /api/v2/telephony/providers/edges/phones | Get a list of Phone Instances |
+| [**GetProvidersEdgesPhonesPhoneId**](TelephonyProvidersEdgeApi.html#getprovidersedgesphonesphoneid) | **GET** /api/v2/telephony/providers/edges/phones/{phoneId} | Get a Phone by ID |
 | [**GetProvidersEdgesPhonesTemplate**](TelephonyProvidersEdgeApi.html#getprovidersedgesphonestemplate) | **GET** /api/v2/telephony/providers/edges/phones/template | Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance |
-| [**GetProvidersEdgesSite**](TelephonyProvidersEdgeApi.html#getprovidersedgessite) | **GET** /api/v2/telephony/providers/edges/sites/{siteId} | Get a Site by ID. |
-| [**GetProvidersEdgesSiteNumberplan**](TelephonyProvidersEdgeApi.html#getprovidersedgessitenumberplan) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId} | Get a Number Plan by ID. |
-| [**GetProvidersEdgesSiteNumberplans**](TelephonyProvidersEdgeApi.html#getprovidersedgessitenumberplans) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Get the list of Number Plans for this Site. |
-| [**GetProvidersEdgesSiteNumberplansClassifications**](TelephonyProvidersEdgeApi.html#getprovidersedgessitenumberplansclassifications) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications | Get a list of Classifications for this Site |
 | [**GetProvidersEdgesSites**](TelephonyProvidersEdgeApi.html#getprovidersedgessites) | **GET** /api/v2/telephony/providers/edges/sites | Get the list of Sites. |
+| [**GetProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteid) | **GET** /api/v2/telephony/providers/edges/sites/{siteId} | Get a Site by ID. |
+| [**GetProvidersEdgesSitesSiteIdNumberplans**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidnumberplans) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Get the list of Number Plans for this Site. |
+| [**GetProvidersEdgesSitesSiteIdNumberplansClassifications**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidnumberplansclassifications) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications | Get a list of Classifications for this Site |
+| [**GetProvidersEdgesSitesSiteIdNumberplansNumberplanId**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidnumberplansnumberplanid) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId} | Get a Number Plan by ID. |
 | [**GetProvidersEdgesTimezones**](TelephonyProvidersEdgeApi.html#getprovidersedgestimezones) | **GET** /api/v2/telephony/providers/edges/timezones | Get a list of Edge-compatible time zones |
-| [**GetProvidersEdgesTrunk**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunk) | **GET** /api/v2/telephony/providers/edges/trunks/{trunkId} | Get a Trunk by ID |
-| [**GetProvidersEdgesTrunkbasesetting**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkbasesetting) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Get a Trunk Base Settings object by ID |
 | [**GetProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkbasesettings) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings | Get Trunk Base Settings listing |
 | [**GetProvidersEdgesTrunkbasesettingsAvailablemetabases**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkbasesettingsavailablemetabases) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings/availablemetabases | Get a list of available makes and models to create a new Trunk Base Settings |
 | [**GetProvidersEdgesTrunkbasesettingsTemplate**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkbasesettingstemplate) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings/template | Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance |
+| [**GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkbasesettingstrunkbasesettingsid) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Get a Trunk Base Settings object by ID |
 | [**GetProvidersEdgesTrunks**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunks) | **GET** /api/v2/telephony/providers/edges/trunks | Get the list of available trunks. |
+| [**GetProvidersEdgesTrunksTrunkId**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkstrunkid) | **GET** /api/v2/telephony/providers/edges/trunks/{trunkId} | Get a Trunk by ID |
 | [**GetProvidersEdgesTrunkswithrecording**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkswithrecording) | **GET** /api/v2/telephony/providers/edges/trunkswithrecording | Get Counts of trunks that have recording disabled or enabled |
 | [**GetSchemasEdgesVnext**](TelephonyProvidersEdgeApi.html#getschemasedgesvnext) | **GET** /api/v2/configuration/schemas/edges/vnext | Lists available schema categories |
-| [**GetSchemasEdgesVnextSchemaCategory**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategory) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory} | List schemas of a specific category |
-| [**GetSchemasEdgesVnextSchemaCategorySchemaType**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematype) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType} | List schemas of a specific category |
-| [**GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematypeschemaid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId} | Get a json schema |
-| [**GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId} | Get metadata for a schema |
-| [**PostProvidersEdgeLogicalinterfaces**](TelephonyProvidersEdgeApi.html#postprovidersedgelogicalinterfaces) | **POST** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces | Create an edge logical interface. |
-| [**PostProvidersEdgeLogsJobUpload**](TelephonyProvidersEdgeApi.html#postprovidersedgelogsjobupload) | **POST** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload | Request that the specified fileIds be uploaded from the Edge. |
-| [**PostProvidersEdgeLogsJobs**](TelephonyProvidersEdgeApi.html#postprovidersedgelogsjobs) | **POST** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs | Create a job to upload a list of Edge logs. |
-| [**PostProvidersEdgeReboot**](TelephonyProvidersEdgeApi.html#postprovidersedgereboot) | **POST** /api/v2/telephony/providers/edges/{edgeId}/reboot | Reboot an Edge |
-| [**PostProvidersEdgeSoftwareupdate**](TelephonyProvidersEdgeApi.html#postprovidersedgesoftwareupdate) | **POST** /api/v2/telephony/providers/edges/{edgeId}/softwareupdate | Starts a software update for this edge. |
-| [**PostProvidersEdgeUnpair**](TelephonyProvidersEdgeApi.html#postprovidersedgeunpair) | **POST** /api/v2/telephony/providers/edges/{edgeId}/unpair | Unpair an Edge |
-| [**PostProvidersEdges**](TelephonyProvidersEdgeApi.html#postprovidersedges) | **POST** /api/v2/telephony/providers/edges | Create a edge. |
+| [**GetSchemasEdgesVnextSchemacategory**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategory) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory} | List schemas of a specific category |
+| [**GetSchemasEdgesVnextSchemacategorySchematype**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematype) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType} | List schemas of a specific category |
+| [**GetSchemasEdgesVnextSchemacategorySchematypeSchemaId**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematypeschemaid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId} | Get a json schema |
+| [**GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId} | Get metadata for a schema |
+| [**PostProvidersEdges**](TelephonyProvidersEdgeApi.html#postprovidersedges) | **POST** /api/v2/telephony/providers/edges | Create an edge. |
 | [**PostProvidersEdgesAddressvalidation**](TelephonyProvidersEdgeApi.html#postprovidersedgesaddressvalidation) | **POST** /api/v2/telephony/providers/edges/addressvalidation | Validates a street address |
 | [**PostProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeApi.html#postprovidersedgescertificateauthorities) | **POST** /api/v2/telephony/providers/edges/certificateauthorities | Create a certificate authority. |
 | [**PostProvidersEdgesDidpools**](TelephonyProvidersEdgeApi.html#postprovidersedgesdidpools) | **POST** /api/v2/telephony/providers/edges/didpools | Create a new DID pool |
+| [**PostProvidersEdgesEdgeIdLogicalinterfaces**](TelephonyProvidersEdgeApi.html#postprovidersedgesedgeidlogicalinterfaces) | **POST** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces | Create an edge logical interface. |
+| [**PostProvidersEdgesEdgeIdLogsJobs**](TelephonyProvidersEdgeApi.html#postprovidersedgesedgeidlogsjobs) | **POST** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs | Create a job to upload a list of Edge logs. |
+| [**PostProvidersEdgesEdgeIdLogsJobsJobIdUpload**](TelephonyProvidersEdgeApi.html#postprovidersedgesedgeidlogsjobsjobidupload) | **POST** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload | Request that the specified fileIds be uploaded from the Edge. |
+| [**PostProvidersEdgesEdgeIdReboot**](TelephonyProvidersEdgeApi.html#postprovidersedgesedgeidreboot) | **POST** /api/v2/telephony/providers/edges/{edgeId}/reboot | Reboot an Edge |
+| [**PostProvidersEdgesEdgeIdSoftwareupdate**](TelephonyProvidersEdgeApi.html#postprovidersedgesedgeidsoftwareupdate) | **POST** /api/v2/telephony/providers/edges/{edgeId}/softwareupdate | Starts a software update for this edge. |
+| [**PostProvidersEdgesEdgeIdUnpair**](TelephonyProvidersEdgeApi.html#postprovidersedgesedgeidunpair) | **POST** /api/v2/telephony/providers/edges/{edgeId}/unpair | Unpair an Edge |
 | [**PostProvidersEdgesEdgegroups**](TelephonyProvidersEdgeApi.html#postprovidersedgesedgegroups) | **POST** /api/v2/telephony/providers/edges/edgegroups | Create an edge group. |
 | [**PostProvidersEdgesEndpoints**](TelephonyProvidersEdgeApi.html#postprovidersedgesendpoints) | **POST** /api/v2/telephony/providers/edges/endpoints | Create endpoint |
 | [**PostProvidersEdgesExtensionpools**](TelephonyProvidersEdgeApi.html#postprovidersedgesextensionpools) | **POST** /api/v2/telephony/providers/edges/extensionpools | Create a new extension pool |
 | [**PostProvidersEdgesOutboundroutes**](TelephonyProvidersEdgeApi.html#postprovidersedgesoutboundroutes) | **POST** /api/v2/telephony/providers/edges/outboundroutes | Create outbound rule |
-| [**PostProvidersEdgesPhoneReboot**](TelephonyProvidersEdgeApi.html#postprovidersedgesphonereboot) | **POST** /api/v2/telephony/providers/edges/phones/{phoneId}/reboot | Reboot a Phone |
 | [**PostProvidersEdgesPhonebasesettings**](TelephonyProvidersEdgeApi.html#postprovidersedgesphonebasesettings) | **POST** /api/v2/telephony/providers/edges/phonebasesettings | Create a new Phone Base Settings object |
 | [**PostProvidersEdgesPhones**](TelephonyProvidersEdgeApi.html#postprovidersedgesphones) | **POST** /api/v2/telephony/providers/edges/phones | Create a new Phone |
+| [**PostProvidersEdgesPhonesPhoneIdReboot**](TelephonyProvidersEdgeApi.html#postprovidersedgesphonesphoneidreboot) | **POST** /api/v2/telephony/providers/edges/phones/{phoneId}/reboot | Reboot a Phone |
 | [**PostProvidersEdgesPhonesReboot**](TelephonyProvidersEdgeApi.html#postprovidersedgesphonesreboot) | **POST** /api/v2/telephony/providers/edges/phones/reboot | Reboot Multiple Phones |
-| [**PostProvidersEdgesSiteRebalance**](TelephonyProvidersEdgeApi.html#postprovidersedgessiterebalance) | **POST** /api/v2/telephony/providers/edges/sites/{siteId}/rebalance | Triggers the rebalance operation. |
 | [**PostProvidersEdgesSites**](TelephonyProvidersEdgeApi.html#postprovidersedgessites) | **POST** /api/v2/telephony/providers/edges/sites | Create a Site. |
+| [**PostProvidersEdgesSitesSiteIdRebalance**](TelephonyProvidersEdgeApi.html#postprovidersedgessitessiteidrebalance) | **POST** /api/v2/telephony/providers/edges/sites/{siteId}/rebalance | Triggers the rebalance operation. |
 | [**PostProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeApi.html#postprovidersedgestrunkbasesettings) | **POST** /api/v2/telephony/providers/edges/trunkbasesettings | Create a Trunk Base Settings object |
-| [**PutProvidersEdge**](TelephonyProvidersEdgeApi.html#putprovidersedge) | **PUT** /api/v2/telephony/providers/edges/{edgeId} | Update a edge. |
-| [**PutProvidersEdgeLine**](TelephonyProvidersEdgeApi.html#putprovidersedgeline) | **PUT** /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId} | Update a line. |
-| [**PutProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeApi.html#putprovidersedgelogicalinterface) | **PUT** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Update an edge logical interface. |
-| [**PutProvidersEdgesCertificateauthority**](TelephonyProvidersEdgeApi.html#putprovidersedgescertificateauthority) | **PUT** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Update a certificate authority. |
-| [**PutProvidersEdgesDid**](TelephonyProvidersEdgeApi.html#putprovidersedgesdid) | **PUT** /api/v2/telephony/providers/edges/dids/{didId} | Update a DID by ID. |
-| [**PutProvidersEdgesDidpool**](TelephonyProvidersEdgeApi.html#putprovidersedgesdidpool) | **PUT** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Update a DID Pool by ID. |
-| [**PutProvidersEdgesEdgegroup**](TelephonyProvidersEdgeApi.html#putprovidersedgesedgegroup) | **PUT** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Update an edge group. |
-| [**PutProvidersEdgesEndpoint**](TelephonyProvidersEdgeApi.html#putprovidersedgesendpoint) | **PUT** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Update endpoint |
-| [**PutProvidersEdgesExtension**](TelephonyProvidersEdgeApi.html#putprovidersedgesextension) | **PUT** /api/v2/telephony/providers/edges/extensions/{extensionId} | Update an extension by ID. |
-| [**PutProvidersEdgesExtensionpool**](TelephonyProvidersEdgeApi.html#putprovidersedgesextensionpool) | **PUT** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Update an extension pool by ID |
-| [**PutProvidersEdgesOutboundroute**](TelephonyProvidersEdgeApi.html#putprovidersedgesoutboundroute) | **PUT** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Update outbound route |
-| [**PutProvidersEdgesPhone**](TelephonyProvidersEdgeApi.html#putprovidersedgesphone) | **PUT** /api/v2/telephony/providers/edges/phones/{phoneId} | Update a Phone by ID |
-| [**PutProvidersEdgesPhonebasesetting**](TelephonyProvidersEdgeApi.html#putprovidersedgesphonebasesetting) | **PUT** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Update a Phone Base Settings by ID |
-| [**PutProvidersEdgesSite**](TelephonyProvidersEdgeApi.html#putprovidersedgessite) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId} | Update a Site by ID. |
-| [**PutProvidersEdgesSiteNumberplans**](TelephonyProvidersEdgeApi.html#putprovidersedgessitenumberplans) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Update the list of Number Plans. |
-| [**PutProvidersEdgesTrunkbasesetting**](TelephonyProvidersEdgeApi.html#putprovidersedgestrunkbasesetting) | **PUT** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Update a Trunk Base Settings object by ID |
+| [**PutProvidersEdgesCertificateauthoritiesCertificateId**](TelephonyProvidersEdgeApi.html#putprovidersedgescertificateauthoritiescertificateid) | **PUT** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Update a certificate authority. |
+| [**PutProvidersEdgesDidpoolsDidpoolId**](TelephonyProvidersEdgeApi.html#putprovidersedgesdidpoolsdidpoolid) | **PUT** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Update a DID Pool by ID. |
+| [**PutProvidersEdgesDidsDidId**](TelephonyProvidersEdgeApi.html#putprovidersedgesdidsdidid) | **PUT** /api/v2/telephony/providers/edges/dids/{didId} | Update a DID by ID. |
+| [**PutProvidersEdgesEdgeId**](TelephonyProvidersEdgeApi.html#putprovidersedgesedgeid) | **PUT** /api/v2/telephony/providers/edges/{edgeId} | Update a edge. |
+| [**PutProvidersEdgesEdgeIdLinesLineId**](TelephonyProvidersEdgeApi.html#putprovidersedgesedgeidlineslineid) | **PUT** /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId} | Update a line. |
+| [**PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId**](TelephonyProvidersEdgeApi.html#putprovidersedgesedgeidlogicalinterfacesinterfaceid) | **PUT** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Update an edge logical interface. |
+| [**PutProvidersEdgesEdgegroupsEdgegroupId**](TelephonyProvidersEdgeApi.html#putprovidersedgesedgegroupsedgegroupid) | **PUT** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Update an edge group. |
+| [**PutProvidersEdgesEndpointsEndpointId**](TelephonyProvidersEdgeApi.html#putprovidersedgesendpointsendpointid) | **PUT** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Update endpoint |
+| [**PutProvidersEdgesExtensionpoolsExtensionpoolId**](TelephonyProvidersEdgeApi.html#putprovidersedgesextensionpoolsextensionpoolid) | **PUT** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Update an extension pool by ID |
+| [**PutProvidersEdgesExtensionsExtensionId**](TelephonyProvidersEdgeApi.html#putprovidersedgesextensionsextensionid) | **PUT** /api/v2/telephony/providers/edges/extensions/{extensionId} | Update an extension by ID. |
+| [**PutProvidersEdgesOutboundroutesOutboundrouteId**](TelephonyProvidersEdgeApi.html#putprovidersedgesoutboundroutesoutboundrouteid) | **PUT** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Update outbound route |
+| [**PutProvidersEdgesPhonebasesettingsPhonebaseId**](TelephonyProvidersEdgeApi.html#putprovidersedgesphonebasesettingsphonebaseid) | **PUT** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Update a Phone Base Settings by ID |
+| [**PutProvidersEdgesPhonesPhoneId**](TelephonyProvidersEdgeApi.html#putprovidersedgesphonesphoneid) | **PUT** /api/v2/telephony/providers/edges/phones/{phoneId} | Update a Phone by ID |
+| [**PutProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#putprovidersedgessitessiteid) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId} | Update a Site by ID. |
+| [**PutProvidersEdgesSitesSiteIdNumberplans**](TelephonyProvidersEdgeApi.html#putprovidersedgessitessiteidnumberplans) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Update the list of Number Plans. |
+| [**PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId**](TelephonyProvidersEdgeApi.html#putprovidersedgestrunkbasesettingstrunkbasesettingsid) | **PUT** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Update a Trunk Base Settings object by ID |
 {: class="table table-striped"}
 
-<a name="deleteprovidersedge"></a>
+<a name="deleteprovidersedgescertificateauthoritiescertificateid"></a>
 
-## **string** DeleteProvidersEdge (string edgeId)
+## **string** DeleteProvidersEdgesCertificateauthoritiesCertificateId (string certificateId)
+
+Delete a certificate authority.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteProvidersEdgesCertificateauthoritiesCertificateIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var certificateId = certificateId_example;  // string | Certificate ID
+
+            try
+            {
+                // Delete a certificate authority.
+                string result = apiInstance.DeleteProvidersEdgesCertificateauthoritiesCertificateId(certificateId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesCertificateauthoritiesCertificateId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **certificateId** | **string**| Certificate ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="deleteprovidersedgesdidpoolsdidpoolid"></a>
+
+## **string** DeleteProvidersEdgesDidpoolsDidpoolId (string didPoolId)
+
+Delete a DID Pool by ID.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteProvidersEdgesDidpoolsDidpoolIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var didPoolId = didPoolId_example;  // string | DID pool ID
+
+            try
+            {
+                // Delete a DID Pool by ID.
+                string result = apiInstance.DeleteProvidersEdgesDidpoolsDidpoolId(didPoolId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesDidpoolsDidpoolId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **didPoolId** | **string**| DID pool ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="deleteprovidersedgesedgeid"></a>
+
+## **string** DeleteProvidersEdgesEdgeId (string edgeId)
 
 Delete a edge.
 
@@ -136,7 +248,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteProvidersEdgeExample
+    public class DeleteProvidersEdgesEdgeIdExample
     {
         public void main()
         {
@@ -150,12 +262,12 @@ namespace Example
             try
             {
                 // Delete a edge.
-                string result = apiInstance.DeleteProvidersEdge(edgeId);
+                string result = apiInstance.DeleteProvidersEdgesEdgeId(edgeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdge: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesEdgeId: " + e.Message );
             }
         }
     }
@@ -174,9 +286,9 @@ namespace Example
 
 **string**
 
-<a name="deleteprovidersedgelogicalinterface"></a>
+<a name="deleteprovidersedgesedgeidlogicalinterfacesinterfaceid"></a>
 
-## void DeleteProvidersEdgeLogicalinterface (string edgeId, string interfaceId)
+## void DeleteProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId)
 
 Delete an edge logical interface
 
@@ -192,7 +304,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteProvidersEdgeLogicalinterfaceExample
+    public class DeleteProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdExample
     {
         public void main()
         {
@@ -207,11 +319,11 @@ namespace Example
             try
             {
                 // Delete an edge logical interface
-                apiInstance.DeleteProvidersEdgeLogicalinterface(edgeId, interfaceId);
+                apiInstance.DeleteProvidersEdgesEdgeIdLogicalinterfacesInterfaceId(edgeId, interfaceId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgeLogicalinterface: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesEdgeIdLogicalinterfacesInterfaceId: " + e.Message );
             }
         }
     }
@@ -231,9 +343,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="deleteprovidersedgesoftwareupdate"></a>
+<a name="deleteprovidersedgesedgeidsoftwareupdate"></a>
 
-## **string** DeleteProvidersEdgeSoftwareupdate (string edgeId)
+## **string** DeleteProvidersEdgesEdgeIdSoftwareupdate (string edgeId)
 
 Cancels any in-progress update for this edge.
 
@@ -249,7 +361,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteProvidersEdgeSoftwareupdateExample
+    public class DeleteProvidersEdgesEdgeIdSoftwareupdateExample
     {
         public void main()
         {
@@ -263,12 +375,12 @@ namespace Example
             try
             {
                 // Cancels any in-progress update for this edge.
-                string result = apiInstance.DeleteProvidersEdgeSoftwareupdate(edgeId);
+                string result = apiInstance.DeleteProvidersEdgesEdgeIdSoftwareupdate(edgeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgeSoftwareupdate: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesEdgeIdSoftwareupdate: " + e.Message );
             }
         }
     }
@@ -287,121 +399,9 @@ namespace Example
 
 **string**
 
-<a name="deleteprovidersedgescertificateauthority"></a>
+<a name="deleteprovidersedgesedgegroupsedgegroupid"></a>
 
-## **string** DeleteProvidersEdgesCertificateauthority (string certificateId)
-
-Delete a certificate authority.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class DeleteProvidersEdgesCertificateauthorityExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var certificateId = certificateId_example;  // string | Certificate ID
-
-            try
-            {
-                // Delete a certificate authority.
-                string result = apiInstance.DeleteProvidersEdgesCertificateauthority(certificateId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesCertificateauthority: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **certificateId** | **string**| Certificate ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="deleteprovidersedgesdidpool"></a>
-
-## **string** DeleteProvidersEdgesDidpool (string didPoolId)
-
-Delete a DID Pool by ID.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class DeleteProvidersEdgesDidpoolExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var didPoolId = didPoolId_example;  // string | DID pool ID
-
-            try
-            {
-                // Delete a DID Pool by ID.
-                string result = apiInstance.DeleteProvidersEdgesDidpool(didPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesDidpool: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **didPoolId** | **string**| DID pool ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="deleteprovidersedgesedgegroup"></a>
-
-## **string** DeleteProvidersEdgesEdgegroup (string edgeGroupId)
+## **string** DeleteProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId)
 
 Delete an edge group.
 
@@ -417,7 +417,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteProvidersEdgesEdgegroupExample
+    public class DeleteProvidersEdgesEdgegroupsEdgegroupIdExample
     {
         public void main()
         {
@@ -431,12 +431,12 @@ namespace Example
             try
             {
                 // Delete an edge group.
-                string result = apiInstance.DeleteProvidersEdgesEdgegroup(edgeGroupId);
+                string result = apiInstance.DeleteProvidersEdgesEdgegroupsEdgegroupId(edgeGroupId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesEdgegroup: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesEdgegroupsEdgegroupId: " + e.Message );
             }
         }
     }
@@ -455,9 +455,9 @@ namespace Example
 
 **string**
 
-<a name="deleteprovidersedgesendpoint"></a>
+<a name="deleteprovidersedgesendpointsendpointid"></a>
 
-## **string** DeleteProvidersEdgesEndpoint (string endpointId)
+## **string** DeleteProvidersEdgesEndpointsEndpointId (string endpointId)
 
 Delete endpoint
 
@@ -473,7 +473,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteProvidersEdgesEndpointExample
+    public class DeleteProvidersEdgesEndpointsEndpointIdExample
     {
         public void main()
         {
@@ -487,12 +487,12 @@ namespace Example
             try
             {
                 // Delete endpoint
-                string result = apiInstance.DeleteProvidersEdgesEndpoint(endpointId);
+                string result = apiInstance.DeleteProvidersEdgesEndpointsEndpointId(endpointId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesEndpoint: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesEndpointsEndpointId: " + e.Message );
             }
         }
     }
@@ -511,9 +511,9 @@ namespace Example
 
 **string**
 
-<a name="deleteprovidersedgesextensionpool"></a>
+<a name="deleteprovidersedgesextensionpoolsextensionpoolid"></a>
 
-## **string** DeleteProvidersEdgesExtensionpool (string extensionPoolId)
+## **string** DeleteProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId)
 
 Delete an extension pool by ID
 
@@ -529,7 +529,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteProvidersEdgesExtensionpoolExample
+    public class DeleteProvidersEdgesExtensionpoolsExtensionpoolIdExample
     {
         public void main()
         {
@@ -543,12 +543,12 @@ namespace Example
             try
             {
                 // Delete an extension pool by ID
-                string result = apiInstance.DeleteProvidersEdgesExtensionpool(extensionPoolId);
+                string result = apiInstance.DeleteProvidersEdgesExtensionpoolsExtensionpoolId(extensionPoolId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesExtensionpool: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesExtensionpoolsExtensionpoolId: " + e.Message );
             }
         }
     }
@@ -567,9 +567,9 @@ namespace Example
 
 **string**
 
-<a name="deleteprovidersedgesoutboundroute"></a>
+<a name="deleteprovidersedgesoutboundroutesoutboundrouteid"></a>
 
-## **string** DeleteProvidersEdgesOutboundroute (string outboundRouteId)
+## **string** DeleteProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId)
 
 Delete Outbound Route
 
@@ -585,7 +585,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteProvidersEdgesOutboundrouteExample
+    public class DeleteProvidersEdgesOutboundroutesOutboundrouteIdExample
     {
         public void main()
         {
@@ -599,12 +599,12 @@ namespace Example
             try
             {
                 // Delete Outbound Route
-                string result = apiInstance.DeleteProvidersEdgesOutboundroute(outboundRouteId);
+                string result = apiInstance.DeleteProvidersEdgesOutboundroutesOutboundrouteId(outboundRouteId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesOutboundroute: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesOutboundroutesOutboundrouteId: " + e.Message );
             }
         }
     }
@@ -623,65 +623,9 @@ namespace Example
 
 **string**
 
-<a name="deleteprovidersedgesphone"></a>
+<a name="deleteprovidersedgesphonebasesettingsphonebaseid"></a>
 
-## **string** DeleteProvidersEdgesPhone (string phoneId)
-
-Delete a Phone by ID
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class DeleteProvidersEdgesPhoneExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var phoneId = phoneId_example;  // string | Phone ID
-
-            try
-            {
-                // Delete a Phone by ID
-                string result = apiInstance.DeleteProvidersEdgesPhone(phoneId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesPhone: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **phoneId** | **string**| Phone ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="deleteprovidersedgesphonebasesetting"></a>
-
-## **string** DeleteProvidersEdgesPhonebasesetting (string phoneBaseId)
+## **string** DeleteProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId)
 
 Delete a Phone Base Settings by ID
 
@@ -697,7 +641,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteProvidersEdgesPhonebasesettingExample
+    public class DeleteProvidersEdgesPhonebasesettingsPhonebaseIdExample
     {
         public void main()
         {
@@ -711,12 +655,12 @@ namespace Example
             try
             {
                 // Delete a Phone Base Settings by ID
-                string result = apiInstance.DeleteProvidersEdgesPhonebasesetting(phoneBaseId);
+                string result = apiInstance.DeleteProvidersEdgesPhonebasesettingsPhonebaseId(phoneBaseId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesPhonebasesetting: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesPhonebasesettingsPhonebaseId: " + e.Message );
             }
         }
     }
@@ -735,9 +679,65 @@ namespace Example
 
 **string**
 
-<a name="deleteprovidersedgessite"></a>
+<a name="deleteprovidersedgesphonesphoneid"></a>
 
-## **string** DeleteProvidersEdgesSite (string siteId)
+## **string** DeleteProvidersEdgesPhonesPhoneId (string phoneId)
+
+Delete a Phone by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteProvidersEdgesPhonesPhoneIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var phoneId = phoneId_example;  // string | Phone ID
+
+            try
+            {
+                // Delete a Phone by ID
+                string result = apiInstance.DeleteProvidersEdgesPhonesPhoneId(phoneId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesPhonesPhoneId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **phoneId** | **string**| Phone ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="deleteprovidersedgessitessiteid"></a>
+
+## **string** DeleteProvidersEdgesSitesSiteId (string siteId)
 
 Delete a Site by ID
 
@@ -753,7 +753,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteProvidersEdgesSiteExample
+    public class DeleteProvidersEdgesSitesSiteIdExample
     {
         public void main()
         {
@@ -767,12 +767,12 @@ namespace Example
             try
             {
                 // Delete a Site by ID
-                string result = apiInstance.DeleteProvidersEdgesSite(siteId);
+                string result = apiInstance.DeleteProvidersEdgesSitesSiteId(siteId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesSite: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesSitesSiteId: " + e.Message );
             }
         }
     }
@@ -791,9 +791,9 @@ namespace Example
 
 **string**
 
-<a name="deleteprovidersedgestrunkbasesetting"></a>
+<a name="deleteprovidersedgestrunkbasesettingstrunkbasesettingsid"></a>
 
-## **string** DeleteProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId)
+## **string** DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId)
 
 Delete a Trunk Base Settings object by ID
 
@@ -809,7 +809,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteProvidersEdgesTrunkbasesettingExample
+    public class DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdExample
     {
         public void main()
         {
@@ -823,12 +823,12 @@ namespace Example
             try
             {
                 // Delete a Trunk Base Settings object by ID
-                string result = apiInstance.DeleteProvidersEdgesTrunkbasesetting(trunkBaseSettingsId);
+                string result = apiInstance.DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId(trunkBaseSettingsId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesTrunkbasesetting: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId: " + e.Message );
             }
         }
     }
@@ -846,582 +846,6 @@ namespace Example
 ### Return type
 
 **string**
-
-<a name="getprovidersedge"></a>
-
-## [**Edge**](Edge.html) GetProvidersEdge (string edgeId)
-
-Get edge.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgeExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-
-            try
-            {
-                // Get edge.
-                Edge result = apiInstance.GetProvidersEdge(edgeId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdge: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Edge**](Edge.html)
-
-<a name="getprovidersedgeline"></a>
-
-## [**EdgeLine**](EdgeLine.html) GetProvidersEdgeLine (string edgeId, string lineId)
-
-Get line
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgeLineExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var lineId = lineId_example;  // string | Line ID
-
-            try
-            {
-                // Get line
-                EdgeLine result = apiInstance.GetProvidersEdgeLine(edgeId, lineId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgeLine: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **lineId** | **string**| Line ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**EdgeLine**](EdgeLine.html)
-
-<a name="getprovidersedgelines"></a>
-
-## [**EdgeLineEntityListing**](EdgeLineEntityListing.html) GetProvidersEdgeLines (string edgeId, int? pageSize = null, int? pageNumber = null)
-
-Get the list of lines.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgeLinesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            {
-                // Get the list of lines.
-                EdgeLineEntityListing result = apiInstance.GetProvidersEdgeLines(edgeId, pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgeLines: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
-
-### Return type
-
-[**EdgeLineEntityListing**](EdgeLineEntityListing.html)
-
-<a name="getprovidersedgelogicalinterface"></a>
-
-## [**DomainLogicalInterface**](DomainLogicalInterface.html) GetProvidersEdgeLogicalinterface (string edgeId, string interfaceId, List<string> expand = null)
-
-Get an edge logical interface
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgeLogicalinterfaceExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var interfaceId = interfaceId_example;  // string | Interface ID
-            var expand = new List<string>(); // List<string> | Field to expand in the response (optional) 
-
-            try
-            {
-                // Get an edge logical interface
-                DomainLogicalInterface result = apiInstance.GetProvidersEdgeLogicalinterface(edgeId, interfaceId, expand);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgeLogicalinterface: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **interfaceId** | **string**| Interface ID |  |
-| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DomainLogicalInterface**](DomainLogicalInterface.html)
-
-<a name="getprovidersedgelogicalinterfaces"></a>
-
-## [**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html) GetProvidersEdgeLogicalinterfaces (string edgeId, List<string> expand = null)
-
-Get edge logical interfaces.
-
-Retrieve a list of all configured logical interfaces from a specific edge.
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgeLogicalinterfacesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var expand = new List<string>(); // List<string> | Field to expand in the response (optional) 
-
-            try
-            {
-                // Get edge logical interfaces.
-                LogicalInterfaceEntityListing result = apiInstance.GetProvidersEdgeLogicalinterfaces(edgeId, expand);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgeLogicalinterfaces: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html)
-
-<a name="getprovidersedgelogsjob"></a>
-
-## [**EdgeLogsJob**](EdgeLogsJob.html) GetProvidersEdgeLogsJob (string edgeId, string jobId)
-
-Get an Edge logs job.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgeLogsJobExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var jobId = jobId_example;  // string | Job ID
-
-            try
-            {
-                // Get an Edge logs job.
-                EdgeLogsJob result = apiInstance.GetProvidersEdgeLogsJob(edgeId, jobId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgeLogsJob: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **jobId** | **string**| Job ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**EdgeLogsJob**](EdgeLogsJob.html)
-
-<a name="getprovidersedgephysicalinterface"></a>
-
-## [**DomainPhysicalInterface**](DomainPhysicalInterface.html) GetProvidersEdgePhysicalinterface (string edgeId, string interfaceId)
-
-Get edge physical interface.
-
-Retrieve a physical interface from a specific edge.
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgePhysicalinterfaceExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var interfaceId = interfaceId_example;  // string | Interface ID
-
-            try
-            {
-                // Get edge physical interface.
-                DomainPhysicalInterface result = apiInstance.GetProvidersEdgePhysicalinterface(edgeId, interfaceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgePhysicalinterface: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **interfaceId** | **string**| Interface ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DomainPhysicalInterface**](DomainPhysicalInterface.html)
-
-<a name="getprovidersedgephysicalinterfaces"></a>
-
-## [**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) GetProvidersEdgePhysicalinterfaces (string edgeId)
-
-Retrieve a list of all configured physical interfaces from a specific edge.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgePhysicalinterfacesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-
-            try
-            {
-                // Retrieve a list of all configured physical interfaces from a specific edge.
-                PhysicalInterfaceEntityListing result = apiInstance.GetProvidersEdgePhysicalinterfaces(edgeId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgePhysicalinterfaces: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html)
-
-<a name="getprovidersedgesoftwareupdate"></a>
-
-## [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) GetProvidersEdgeSoftwareupdate (string edgeId)
-
-Gets software update status information about any edge.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgeSoftwareupdateExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-
-            try
-            {
-                // Gets software update status information about any edge.
-                DomainEdgeSoftwareUpdateDto result = apiInstance.GetProvidersEdgeSoftwareupdate(edgeId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgeSoftwareupdate: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html)
-
-<a name="getprovidersedgesoftwareversions"></a>
-
-## [**DomainEdgeSoftwareVersionDto**](DomainEdgeSoftwareVersionDto.html) GetProvidersEdgeSoftwareversions (string edgeId)
-
-Gets all the available software versions for this edge.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgeSoftwareversionsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-
-            try
-            {
-                // Gets all the available software versions for this edge.
-                DomainEdgeSoftwareVersionDto result = apiInstance.GetProvidersEdgeSoftwareversions(edgeId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgeSoftwareversions: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DomainEdgeSoftwareVersionDto**](DomainEdgeSoftwareVersionDto.html)
 
 <a name="getprovidersedges"></a>
 
@@ -1591,9 +1015,9 @@ This endpoint does require any parameters.
 
 [**CertificateAuthorityEntityListing**](CertificateAuthorityEntityListing.html)
 
-<a name="getprovidersedgescertificateauthority"></a>
+<a name="getprovidersedgescertificateauthoritiescertificateid"></a>
 
-## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) GetProvidersEdgesCertificateauthority (string certificateId)
+## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) GetProvidersEdgesCertificateauthoritiesCertificateId (string certificateId)
 
 Get a certificate authority.
 
@@ -1609,7 +1033,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetProvidersEdgesCertificateauthorityExample
+    public class GetProvidersEdgesCertificateauthoritiesCertificateIdExample
     {
         public void main()
         {
@@ -1623,12 +1047,12 @@ namespace Example
             try
             {
                 // Get a certificate authority.
-                DomainCertificateAuthority result = apiInstance.GetProvidersEdgesCertificateauthority(certificateId);
+                DomainCertificateAuthority result = apiInstance.GetProvidersEdgesCertificateauthoritiesCertificateId(certificateId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesCertificateauthority: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesCertificateauthoritiesCertificateId: " + e.Message );
             }
         }
     }
@@ -1646,118 +1070,6 @@ namespace Example
 ### Return type
 
 [**DomainCertificateAuthority**](DomainCertificateAuthority.html)
-
-<a name="getprovidersedgesdid"></a>
-
-## [**DID**](DID.html) GetProvidersEdgesDid (string didId)
-
-Get a DID by ID.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesDidExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var didId = didId_example;  // string | DID ID
-
-            try
-            {
-                // Get a DID by ID.
-                DID result = apiInstance.GetProvidersEdgesDid(didId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesDid: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **didId** | **string**| DID ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DID**](DID.html)
-
-<a name="getprovidersedgesdidpool"></a>
-
-## [**DIDPool**](DIDPool.html) GetProvidersEdgesDidpool (string didPoolId)
-
-Get a DID Pool by ID.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesDidpoolExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var didPoolId = didPoolId_example;  // string | DID pool ID
-
-            try
-            {
-                // Get a DID Pool by ID.
-                DIDPool result = apiInstance.GetProvidersEdgesDidpool(didPoolId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesDidpool: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **didPoolId** | **string**| DID pool ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DIDPool**](DIDPool.html)
 
 <a name="getprovidersedgesdidpools"></a>
 
@@ -1818,6 +1130,62 @@ namespace Example
 ### Return type
 
 [**DIDPoolEntityListing**](DIDPoolEntityListing.html)
+
+<a name="getprovidersedgesdidpoolsdidpoolid"></a>
+
+## [**DIDPool**](DIDPool.html) GetProvidersEdgesDidpoolsDidpoolId (string didPoolId)
+
+Get a DID Pool by ID.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesDidpoolsDidpoolIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var didPoolId = didPoolId_example;  // string | DID pool ID
+
+            try
+            {
+                // Get a DID Pool by ID.
+                DIDPool result = apiInstance.GetProvidersEdgesDidpoolsDidpoolId(didPoolId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesDidpoolsDidpoolId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **didPoolId** | **string**| DID pool ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DIDPool**](DIDPool.html)
 
 <a name="getprovidersedgesdids"></a>
 
@@ -1883,11 +1251,11 @@ namespace Example
 
 [**DIDEntityListing**](DIDEntityListing.html)
 
-<a name="getprovidersedgesedgegroup"></a>
+<a name="getprovidersedgesdidsdidid"></a>
 
-## [**EdgeGroup**](EdgeGroup.html) GetProvidersEdgesEdgegroup (string edgeGroupId, List<string> expand = null)
+## [**DID**](DID.html) GetProvidersEdgesDidsDidId (string didId)
 
-Get edge group.
+Get a DID by ID.
 
 
 
@@ -1901,7 +1269,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetProvidersEdgesEdgegroupExample
+    public class GetProvidersEdgesDidsDidIdExample
     {
         public void main()
         {
@@ -1910,18 +1278,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeGroupId = edgeGroupId_example;  // string | Edge group ID
-            var expand = new List<string>(); // List<string> | Fields to expand in the response (optional) 
+            var didId = didId_example;  // string | DID ID
 
             try
             {
-                // Get edge group.
-                EdgeGroup result = apiInstance.GetProvidersEdgesEdgegroup(edgeGroupId, expand);
+                // Get a DID by ID.
+                DID result = apiInstance.GetProvidersEdgesDidsDidId(didId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgegroup: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesDidsDidId: " + e.Message );
             }
         }
     }
@@ -1933,13 +1300,588 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **edgeGroupId** | **string**| Edge group ID |  |
-| **expand** | [**List<string>**](string.html)| Fields to expand in the response | [optional]  |
+| **didId** | **string**| DID ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**EdgeGroup**](EdgeGroup.html)
+[**DID**](DID.html)
+
+<a name="getprovidersedgesedgeid"></a>
+
+## [**Edge**](Edge.html) GetProvidersEdgesEdgeId (string edgeId)
+
+Get edge.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+
+            try
+            {
+                // Get edge.
+                Edge result = apiInstance.GetProvidersEdgesEdgeId(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Edge**](Edge.html)
+
+<a name="getprovidersedgesedgeidlines"></a>
+
+## [**EdgeLineEntityListing**](EdgeLineEntityListing.html) GetProvidersEdgesEdgeIdLines (string edgeId, int? pageSize = null, int? pageNumber = null)
+
+Get the list of lines.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdLinesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get the list of lines.
+                EdgeLineEntityListing result = apiInstance.GetProvidersEdgesEdgeIdLines(edgeId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdLines: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeLineEntityListing**](EdgeLineEntityListing.html)
+
+<a name="getprovidersedgesedgeidlineslineid"></a>
+
+## [**EdgeLine**](EdgeLine.html) GetProvidersEdgesEdgeIdLinesLineId (string edgeId, string lineId)
+
+Get line
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdLinesLineIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var lineId = lineId_example;  // string | Line ID
+
+            try
+            {
+                // Get line
+                EdgeLine result = apiInstance.GetProvidersEdgesEdgeIdLinesLineId(edgeId, lineId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdLinesLineId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **lineId** | **string**| Line ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeLine**](EdgeLine.html)
+
+<a name="getprovidersedgesedgeidlogicalinterfaces"></a>
+
+## [**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html) GetProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, List<string> expand = null)
+
+Get edge logical interfaces.
+
+Retrieve a list of all configured logical interfaces from a specific edge.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdLogicalinterfacesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var expand = new List<string>(); // List<string> | Field to expand in the response (optional) 
+
+            try
+            {
+                // Get edge logical interfaces.
+                LogicalInterfaceEntityListing result = apiInstance.GetProvidersEdgesEdgeIdLogicalinterfaces(edgeId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdLogicalinterfaces: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html)
+
+<a name="getprovidersedgesedgeidlogicalinterfacesinterfaceid"></a>
+
+## [**DomainLogicalInterface**](DomainLogicalInterface.html) GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, List<string> expand = null)
+
+Get an edge logical interface
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var interfaceId = interfaceId_example;  // string | Interface ID
+            var expand = new List<string>(); // List<string> | Field to expand in the response (optional) 
+
+            try
+            {
+                // Get an edge logical interface
+                DomainLogicalInterface result = apiInstance.GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId(edgeId, interfaceId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **interfaceId** | **string**| Interface ID |  |
+| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainLogicalInterface**](DomainLogicalInterface.html)
+
+<a name="getprovidersedgesedgeidlogsjobsjobid"></a>
+
+## [**EdgeLogsJob**](EdgeLogsJob.html) GetProvidersEdgesEdgeIdLogsJobsJobId (string edgeId, string jobId)
+
+Get an Edge logs job.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdLogsJobsJobIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var jobId = jobId_example;  // string | Job ID
+
+            try
+            {
+                // Get an Edge logs job.
+                EdgeLogsJob result = apiInstance.GetProvidersEdgesEdgeIdLogsJobsJobId(edgeId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdLogsJobsJobId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **jobId** | **string**| Job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeLogsJob**](EdgeLogsJob.html)
+
+<a name="getprovidersedgesedgeidphysicalinterfaces"></a>
+
+## [**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) GetProvidersEdgesEdgeIdPhysicalinterfaces (string edgeId)
+
+Retrieve a list of all configured physical interfaces from a specific edge.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdPhysicalinterfacesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+
+            try
+            {
+                // Retrieve a list of all configured physical interfaces from a specific edge.
+                PhysicalInterfaceEntityListing result = apiInstance.GetProvidersEdgesEdgeIdPhysicalinterfaces(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdPhysicalinterfaces: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html)
+
+<a name="getprovidersedgesedgeidphysicalinterfacesinterfaceid"></a>
+
+## [**DomainPhysicalInterface**](DomainPhysicalInterface.html) GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceId (string edgeId, string interfaceId)
+
+Get edge physical interface.
+
+Retrieve a physical interface from a specific edge.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var interfaceId = interfaceId_example;  // string | Interface ID
+
+            try
+            {
+                // Get edge physical interface.
+                DomainPhysicalInterface result = apiInstance.GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceId(edgeId, interfaceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **interfaceId** | **string**| Interface ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainPhysicalInterface**](DomainPhysicalInterface.html)
+
+<a name="getprovidersedgesedgeidsoftwareupdate"></a>
+
+## [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) GetProvidersEdgesEdgeIdSoftwareupdate (string edgeId)
+
+Gets software update status information about any edge.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdSoftwareupdateExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+
+            try
+            {
+                // Gets software update status information about any edge.
+                DomainEdgeSoftwareUpdateDto result = apiInstance.GetProvidersEdgesEdgeIdSoftwareupdate(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdSoftwareupdate: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html)
+
+<a name="getprovidersedgesedgeidsoftwareversions"></a>
+
+## [**DomainEdgeSoftwareVersionDto**](DomainEdgeSoftwareVersionDto.html) GetProvidersEdgesEdgeIdSoftwareversions (string edgeId)
+
+Gets all the available software versions for this edge.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdSoftwareversionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+
+            try
+            {
+                // Gets all the available software versions for this edge.
+                DomainEdgeSoftwareVersionDto result = apiInstance.GetProvidersEdgesEdgeIdSoftwareversions(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdSoftwareversions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainEdgeSoftwareVersionDto**](DomainEdgeSoftwareVersionDto.html)
 
 <a name="getprovidersedgesedgegroups"></a>
 
@@ -2003,6 +1945,64 @@ namespace Example
 
 [**EdgeGroupEntityListing**](EdgeGroupEntityListing.html)
 
+<a name="getprovidersedgesedgegroupsedgegroupid"></a>
+
+## [**EdgeGroup**](EdgeGroup.html) GetProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, List<string> expand = null)
+
+Get edge group.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgegroupsEdgegroupIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeGroupId = edgeGroupId_example;  // string | Edge group ID
+            var expand = new List<string>(); // List<string> | Fields to expand in the response (optional) 
+
+            try
+            {
+                // Get edge group.
+                EdgeGroup result = apiInstance.GetProvidersEdgesEdgegroupsEdgegroupId(edgeGroupId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgegroupsEdgegroupId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeGroupId** | **string**| Edge group ID |  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeGroup**](EdgeGroup.html)
+
 <a name="getprovidersedgesedgeversionreport"></a>
 
 ## [**EdgeVersionReport**](EdgeVersionReport.html) GetProvidersEdgesEdgeversionreport ()
@@ -2053,62 +2053,6 @@ This endpoint does require any parameters.
 ### Return type
 
 [**EdgeVersionReport**](EdgeVersionReport.html)
-
-<a name="getprovidersedgesendpoint"></a>
-
-## [**Endpoint**](Endpoint.html) GetProvidersEdgesEndpoint (string endpointId)
-
-Get endpoint
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesEndpointExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var endpointId = endpointId_example;  // string | Endpoint ID
-
-            try
-            {
-                // Get endpoint
-                Endpoint result = apiInstance.GetProvidersEdgesEndpoint(endpointId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEndpoint: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **endpointId** | **string**| Endpoint ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Endpoint**](Endpoint.html)
 
 <a name="getprovidersedgesendpoints"></a>
 
@@ -2172,67 +2116,11 @@ namespace Example
 
 [**EndpointEntityListing**](EndpointEntityListing.html)
 
-<a name="getprovidersedgesextension"></a>
+<a name="getprovidersedgesendpointsendpointid"></a>
 
-## [**Extension**](Extension.html) GetProvidersEdgesExtension (string extensionId)
+## [**Endpoint**](Endpoint.html) GetProvidersEdgesEndpointsEndpointId (string endpointId)
 
-Get an extension by ID.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesExtensionExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var extensionId = extensionId_example;  // string | Extension ID
-
-            try
-            {
-                // Get an extension by ID.
-                Extension result = apiInstance.GetProvidersEdgesExtension(extensionId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesExtension: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **extensionId** | **string**| Extension ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Extension**](Extension.html)
-
-<a name="getprovidersedgesextensionpool"></a>
-
-## [**ExtensionPool**](ExtensionPool.html) GetProvidersEdgesExtensionpool (string extensionPoolId)
-
-Get an extension pool by ID
+Get endpoint
 
 
 
@@ -2246,7 +2134,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetProvidersEdgesExtensionpoolExample
+    public class GetProvidersEdgesEndpointsEndpointIdExample
     {
         public void main()
         {
@@ -2255,17 +2143,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var extensionPoolId = extensionPoolId_example;  // string | Extension pool ID
+            var endpointId = endpointId_example;  // string | Endpoint ID
 
             try
             {
-                // Get an extension pool by ID
-                ExtensionPool result = apiInstance.GetProvidersEdgesExtensionpool(extensionPoolId);
+                // Get endpoint
+                Endpoint result = apiInstance.GetProvidersEdgesEndpointsEndpointId(endpointId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesExtensionpool: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEndpointsEndpointId: " + e.Message );
             }
         }
     }
@@ -2277,12 +2165,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **extensionPoolId** | **string**| Extension pool ID |  |
+| **endpointId** | **string**| Endpoint ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ExtensionPool**](ExtensionPool.html)
+[**Endpoint**](Endpoint.html)
 
 <a name="getprovidersedgesextensionpools"></a>
 
@@ -2345,6 +2233,62 @@ namespace Example
 ### Return type
 
 [**ExtensionPoolEntityListing**](ExtensionPoolEntityListing.html)
+
+<a name="getprovidersedgesextensionpoolsextensionpoolid"></a>
+
+## [**ExtensionPool**](ExtensionPool.html) GetProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId)
+
+Get an extension pool by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesExtensionpoolsExtensionpoolIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var extensionPoolId = extensionPoolId_example;  // string | Extension pool ID
+
+            try
+            {
+                // Get an extension pool by ID
+                ExtensionPool result = apiInstance.GetProvidersEdgesExtensionpoolsExtensionpoolId(extensionPoolId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesExtensionpoolsExtensionpoolId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **extensionPoolId** | **string**| Extension pool ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExtensionPool**](ExtensionPool.html)
 
 <a name="getprovidersedgesextensions"></a>
 
@@ -2410,67 +2354,11 @@ namespace Example
 
 [**ExtensionEntityListing**](ExtensionEntityListing.html)
 
-<a name="getprovidersedgesline"></a>
+<a name="getprovidersedgesextensionsextensionid"></a>
 
-## [**Line**](Line.html) GetProvidersEdgesLine (string lineId)
+## [**Extension**](Extension.html) GetProvidersEdgesExtensionsExtensionId (string extensionId)
 
-Get a Line by ID
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesLineExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var lineId = lineId_example;  // string | Line ID
-
-            try
-            {
-                // Get a Line by ID
-                Line result = apiInstance.GetProvidersEdgesLine(lineId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesLine: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **lineId** | **string**| Line ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Line**](Line.html)
-
-<a name="getprovidersedgeslinebasesetting"></a>
-
-## [**LineBase**](LineBase.html) GetProvidersEdgesLinebasesetting (string lineBaseId)
-
-Get a line base settings object by ID
+Get an extension by ID.
 
 
 
@@ -2484,7 +2372,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetProvidersEdgesLinebasesettingExample
+    public class GetProvidersEdgesExtensionsExtensionIdExample
     {
         public void main()
         {
@@ -2493,17 +2381,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var lineBaseId = lineBaseId_example;  // string | Line base ID
+            var extensionId = extensionId_example;  // string | Extension ID
 
             try
             {
-                // Get a line base settings object by ID
-                LineBase result = apiInstance.GetProvidersEdgesLinebasesetting(lineBaseId);
+                // Get an extension by ID.
+                Extension result = apiInstance.GetProvidersEdgesExtensionsExtensionId(extensionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesLinebasesetting: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesExtensionsExtensionId: " + e.Message );
             }
         }
     }
@@ -2515,12 +2403,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **lineBaseId** | **string**| Line base ID |  |
+| **extensionId** | **string**| Extension ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**LineBase**](LineBase.html)
+[**Extension**](Extension.html)
 
 <a name="getprovidersedgeslinebasesettings"></a>
 
@@ -2583,6 +2471,62 @@ namespace Example
 ### Return type
 
 [**LineBaseEntityListing**](LineBaseEntityListing.html)
+
+<a name="getprovidersedgeslinebasesettingslinebaseid"></a>
+
+## [**LineBase**](LineBase.html) GetProvidersEdgesLinebasesettingsLinebaseId (string lineBaseId)
+
+Get a line base settings object by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesLinebasesettingsLinebaseIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var lineBaseId = lineBaseId_example;  // string | Line base ID
+
+            try
+            {
+                // Get a line base settings object by ID
+                LineBase result = apiInstance.GetProvidersEdgesLinebasesettingsLinebaseId(lineBaseId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesLinebasesettingsLinebaseId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **lineBaseId** | **string**| Line base ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LineBase**](LineBase.html)
 
 <a name="getprovidersedgeslines"></a>
 
@@ -2648,6 +2592,62 @@ namespace Example
 
 [**LineEntityListing**](LineEntityListing.html)
 
+<a name="getprovidersedgeslineslineid"></a>
+
+## [**Line**](Line.html) GetProvidersEdgesLinesLineId (string lineId)
+
+Get a Line by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesLinesLineIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var lineId = lineId_example;  // string | Line ID
+
+            try
+            {
+                // Get a Line by ID
+                Line result = apiInstance.GetProvidersEdgesLinesLineId(lineId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesLinesLineId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **lineId** | **string**| Line ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Line**](Line.html)
+
 <a name="getprovidersedgeslinestemplate"></a>
 
 ## [**Line**](Line.html) GetProvidersEdgesLinesTemplate (string lineBaseSettingsId)
@@ -2703,62 +2703,6 @@ namespace Example
 ### Return type
 
 [**Line**](Line.html)
-
-<a name="getprovidersedgesoutboundroute"></a>
-
-## [**OutboundRoute**](OutboundRoute.html) GetProvidersEdgesOutboundroute (string outboundRouteId)
-
-Get outbound route
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesOutboundrouteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
-
-            try
-            {
-                // Get outbound route
-                OutboundRoute result = apiInstance.GetProvidersEdgesOutboundroute(outboundRouteId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesOutboundroute: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **outboundRouteId** | **string**| Outbound route ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**OutboundRoute**](OutboundRoute.html)
 
 <a name="getprovidersedgesoutboundroutes"></a>
 
@@ -2824,67 +2768,11 @@ namespace Example
 
 [**OutboundRouteEntityListing**](OutboundRouteEntityListing.html)
 
-<a name="getprovidersedgesphone"></a>
+<a name="getprovidersedgesoutboundroutesoutboundrouteid"></a>
 
-## [**Phone**](Phone.html) GetProvidersEdgesPhone (string phoneId)
+## [**OutboundRoute**](OutboundRoute.html) GetProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId)
 
-Get a Phone by ID
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesPhoneExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var phoneId = phoneId_example;  // string | Phone ID
-
-            try
-            {
-                // Get a Phone by ID
-                Phone result = apiInstance.GetProvidersEdgesPhone(phoneId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesPhone: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **phoneId** | **string**| Phone ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Phone**](Phone.html)
-
-<a name="getprovidersedgesphonebasesetting"></a>
-
-## [**PhoneBase**](PhoneBase.html) GetProvidersEdgesPhonebasesetting (string phoneBaseId)
-
-Get a Phone Base Settings object by ID
+Get outbound route
 
 
 
@@ -2898,7 +2786,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetProvidersEdgesPhonebasesettingExample
+    public class GetProvidersEdgesOutboundroutesOutboundrouteIdExample
     {
         public void main()
         {
@@ -2907,17 +2795,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new TelephonyProvidersEdgeApi();
-            var phoneBaseId = phoneBaseId_example;  // string | Phone base ID
+            var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
 
             try
             {
-                // Get a Phone Base Settings object by ID
-                PhoneBase result = apiInstance.GetProvidersEdgesPhonebasesetting(phoneBaseId);
+                // Get outbound route
+                OutboundRoute result = apiInstance.GetProvidersEdgesOutboundroutesOutboundrouteId(outboundRouteId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesPhonebasesetting: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesOutboundroutesOutboundrouteId: " + e.Message );
             }
         }
     }
@@ -2929,12 +2817,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **phoneBaseId** | **string**| Phone base ID |  |
+| **outboundRouteId** | **string**| Outbound route ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PhoneBase**](PhoneBase.html)
+[**OutboundRoute**](OutboundRoute.html)
 
 <a name="getprovidersedgesphonebasesettings"></a>
 
@@ -3055,6 +2943,62 @@ namespace Example
 ### Return type
 
 [**PhoneMetaBaseEntityListing**](PhoneMetaBaseEntityListing.html)
+
+<a name="getprovidersedgesphonebasesettingsphonebaseid"></a>
+
+## [**PhoneBase**](PhoneBase.html) GetProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId)
+
+Get a Phone Base Settings object by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesPhonebasesettingsPhonebaseIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var phoneBaseId = phoneBaseId_example;  // string | Phone base ID
+
+            try
+            {
+                // Get a Phone Base Settings object by ID
+                PhoneBase result = apiInstance.GetProvidersEdgesPhonebasesettingsPhonebaseId(phoneBaseId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesPhonebasesettingsPhonebaseId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **phoneBaseId** | **string**| Phone base ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PhoneBase**](PhoneBase.html)
 
 <a name="getprovidersedgesphonebasesettingstemplate"></a>
 
@@ -3194,6 +3138,62 @@ namespace Example
 
 [**PhoneEntityListing**](PhoneEntityListing.html)
 
+<a name="getprovidersedgesphonesphoneid"></a>
+
+## [**Phone**](Phone.html) GetProvidersEdgesPhonesPhoneId (string phoneId)
+
+Get a Phone by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesPhonesPhoneIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var phoneId = phoneId_example;  // string | Phone ID
+
+            try
+            {
+                // Get a Phone by ID
+                Phone result = apiInstance.GetProvidersEdgesPhonesPhoneId(phoneId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesPhonesPhoneId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **phoneId** | **string**| Phone ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Phone**](Phone.html)
+
 <a name="getprovidersedgesphonestemplate"></a>
 
 ## [**Phone**](Phone.html) GetProvidersEdgesPhonesTemplate (string phoneBaseSettingsId)
@@ -3249,234 +3249,6 @@ namespace Example
 ### Return type
 
 [**Phone**](Phone.html)
-
-<a name="getprovidersedgessite"></a>
-
-## [**Site**](Site.html) GetProvidersEdgesSite (string siteId)
-
-Get a Site by ID.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesSiteExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var siteId = siteId_example;  // string | Site ID
-
-            try
-            {
-                // Get a Site by ID.
-                Site result = apiInstance.GetProvidersEdgesSite(siteId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesSite: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **siteId** | **string**| Site ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Site**](Site.html)
-
-<a name="getprovidersedgessitenumberplan"></a>
-
-## [**NumberPlan**](NumberPlan.html) GetProvidersEdgesSiteNumberplan (string siteId, string numberPlanId)
-
-Get a Number Plan by ID.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesSiteNumberplanExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var siteId = siteId_example;  // string | Site ID
-            var numberPlanId = numberPlanId_example;  // string | Number Plan ID
-
-            try
-            {
-                // Get a Number Plan by ID.
-                NumberPlan result = apiInstance.GetProvidersEdgesSiteNumberplan(siteId, numberPlanId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesSiteNumberplan: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **siteId** | **string**| Site ID |  |
-| **numberPlanId** | **string**| Number Plan ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**NumberPlan**](NumberPlan.html)
-
-<a name="getprovidersedgessitenumberplans"></a>
-
-## [**List&lt;NumberPlan&gt;**](NumberPlan.html) GetProvidersEdgesSiteNumberplans (string siteId)
-
-Get the list of Number Plans for this Site.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesSiteNumberplansExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var siteId = siteId_example;  // string | Site ID
-
-            try
-            {
-                // Get the list of Number Plans for this Site.
-                List&lt;NumberPlan&gt; result = apiInstance.GetProvidersEdgesSiteNumberplans(siteId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesSiteNumberplans: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **siteId** | **string**| Site ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**List<NumberPlan>**](NumberPlan.html)
-
-<a name="getprovidersedgessitenumberplansclassifications"></a>
-
-## **List&lt;string&gt;** GetProvidersEdgesSiteNumberplansClassifications (string siteId, string classification = null)
-
-Get a list of Classifications for this Site
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesSiteNumberplansClassificationsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var siteId = siteId_example;  // string | Site ID
-            var classification = classification_example;  // string | Classification (optional) 
-
-            try
-            {
-                // Get a list of Classifications for this Site
-                List&lt;string&gt; result = apiInstance.GetProvidersEdgesSiteNumberplansClassifications(siteId, classification);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesSiteNumberplansClassifications: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **siteId** | **string**| Site ID |  |
-| **classification** | **string**| Classification | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-**List<string>**
 
 <a name="getprovidersedgessites"></a>
 
@@ -3544,6 +3316,234 @@ namespace Example
 
 [**SiteEntityListing**](SiteEntityListing.html)
 
+<a name="getprovidersedgessitessiteid"></a>
+
+## [**Site**](Site.html) GetProvidersEdgesSitesSiteId (string siteId)
+
+Get a Site by ID.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesSitesSiteIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID
+
+            try
+            {
+                // Get a Site by ID.
+                Site result = apiInstance.GetProvidersEdgesSitesSiteId(siteId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesSitesSiteId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Site**](Site.html)
+
+<a name="getprovidersedgessitessiteidnumberplans"></a>
+
+## [**List&lt;NumberPlan&gt;**](NumberPlan.html) GetProvidersEdgesSitesSiteIdNumberplans (string siteId)
+
+Get the list of Number Plans for this Site.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesSitesSiteIdNumberplansExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID
+
+            try
+            {
+                // Get the list of Number Plans for this Site.
+                List&lt;NumberPlan&gt; result = apiInstance.GetProvidersEdgesSitesSiteIdNumberplans(siteId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesSitesSiteIdNumberplans: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<NumberPlan>**](NumberPlan.html)
+
+<a name="getprovidersedgessitessiteidnumberplansclassifications"></a>
+
+## **List&lt;string&gt;** GetProvidersEdgesSitesSiteIdNumberplansClassifications (string siteId, string classification = null)
+
+Get a list of Classifications for this Site
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesSitesSiteIdNumberplansClassificationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID
+            var classification = classification_example;  // string | Classification (optional) 
+
+            try
+            {
+                // Get a list of Classifications for this Site
+                List&lt;string&gt; result = apiInstance.GetProvidersEdgesSitesSiteIdNumberplansClassifications(siteId, classification);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesSitesSiteIdNumberplansClassifications: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID |  |
+| **classification** | **string**| Classification | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+**List<string>**
+
+<a name="getprovidersedgessitessiteidnumberplansnumberplanid"></a>
+
+## [**NumberPlan**](NumberPlan.html) GetProvidersEdgesSitesSiteIdNumberplansNumberplanId (string siteId, string numberPlanId)
+
+Get a Number Plan by ID.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesSitesSiteIdNumberplansNumberplanIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID
+            var numberPlanId = numberPlanId_example;  // string | Number Plan ID
+
+            try
+            {
+                // Get a Number Plan by ID.
+                NumberPlan result = apiInstance.GetProvidersEdgesSitesSiteIdNumberplansNumberplanId(siteId, numberPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesSitesSiteIdNumberplansNumberplanId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID |  |
+| **numberPlanId** | **string**| Number Plan ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**NumberPlan**](NumberPlan.html)
+
 <a name="getprovidersedgestimezones"></a>
 
 ## [**TimeZoneEntityListing**](TimeZoneEntityListing.html) GetProvidersEdgesTimezones (int? pageSize = null, int? pageNumber = null)
@@ -3601,118 +3601,6 @@ namespace Example
 ### Return type
 
 [**TimeZoneEntityListing**](TimeZoneEntityListing.html)
-
-<a name="getprovidersedgestrunk"></a>
-
-## [**Trunk**](Trunk.html) GetProvidersEdgesTrunk (string trunkId)
-
-Get a Trunk by ID
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesTrunkExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var trunkId = trunkId_example;  // string | Trunk ID
-
-            try
-            {
-                // Get a Trunk by ID
-                Trunk result = apiInstance.GetProvidersEdgesTrunk(trunkId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesTrunk: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **trunkId** | **string**| Trunk ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Trunk**](Trunk.html)
-
-<a name="getprovidersedgestrunkbasesetting"></a>
-
-## [**TrunkBase**](TrunkBase.html) GetProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId)
-
-Get a Trunk Base Settings object by ID
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProvidersEdgesTrunkbasesettingExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var trunkBaseSettingsId = trunkBaseSettingsId_example;  // string | Trunk Base ID
-
-            try
-            {
-                // Get a Trunk Base Settings object by ID
-                TrunkBase result = apiInstance.GetProvidersEdgesTrunkbasesetting(trunkBaseSettingsId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesTrunkbasesetting: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **trunkBaseSettingsId** | **string**| Trunk Base ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**TrunkBase**](TrunkBase.html)
 
 <a name="getprovidersedgestrunkbasesettings"></a>
 
@@ -3894,6 +3782,62 @@ namespace Example
 
 [**TrunkBase**](TrunkBase.html)
 
+<a name="getprovidersedgestrunkbasesettingstrunkbasesettingsid"></a>
+
+## [**TrunkBase**](TrunkBase.html) GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId)
+
+Get a Trunk Base Settings object by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var trunkBaseSettingsId = trunkBaseSettingsId_example;  // string | Trunk Base ID
+
+            try
+            {
+                // Get a Trunk Base Settings object by ID
+                TrunkBase result = apiInstance.GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId(trunkBaseSettingsId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trunkBaseSettingsId** | **string**| Trunk Base ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrunkBase**](TrunkBase.html)
+
 <a name="getprovidersedgestrunks"></a>
 
 ## [**TrunkEntityListing**](TrunkEntityListing.html) GetProvidersEdgesTrunks (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
@@ -3961,6 +3905,62 @@ namespace Example
 ### Return type
 
 [**TrunkEntityListing**](TrunkEntityListing.html)
+
+<a name="getprovidersedgestrunkstrunkid"></a>
+
+## [**Trunk**](Trunk.html) GetProvidersEdgesTrunksTrunkId (string trunkId)
+
+Get a Trunk by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesTrunksTrunkIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var trunkId = trunkId_example;  // string | Trunk ID
+
+            try
+            {
+                // Get a Trunk by ID
+                Trunk result = apiInstance.GetProvidersEdgesTrunksTrunkId(trunkId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesTrunksTrunkId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trunkId** | **string**| Trunk ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Trunk**](Trunk.html)
 
 <a name="getprovidersedgestrunkswithrecording"></a>
 
@@ -4078,7 +4078,7 @@ namespace Example
 
 <a name="getschemasedgesvnextschemacategory"></a>
 
-## [**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) GetSchemasEdgesVnextSchemaCategory (string schemaCategory, int? pageSize = null, int? pageNumber = null)
+## [**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) GetSchemasEdgesVnextSchemacategory (string schemaCategory, int? pageSize = null, int? pageNumber = null)
 
 List schemas of a specific category
 
@@ -4094,7 +4094,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetSchemasEdgesVnextSchemaCategoryExample
+    public class GetSchemasEdgesVnextSchemacategoryExample
     {
         public void main()
         {
@@ -4110,12 +4110,12 @@ namespace Example
             try
             {
                 // List schemas of a specific category
-                SchemaReferenceEntityListing result = apiInstance.GetSchemasEdgesVnextSchemaCategory(schemaCategory, pageSize, pageNumber);
+                SchemaReferenceEntityListing result = apiInstance.GetSchemasEdgesVnextSchemacategory(schemaCategory, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetSchemasEdgesVnextSchemaCategory: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetSchemasEdgesVnextSchemacategory: " + e.Message );
             }
         }
     }
@@ -4138,7 +4138,7 @@ namespace Example
 
 <a name="getschemasedgesvnextschemacategoryschematype"></a>
 
-## [**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) GetSchemasEdgesVnextSchemaCategorySchemaType (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
+## [**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) GetSchemasEdgesVnextSchemacategorySchematype (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
 
 List schemas of a specific category
 
@@ -4154,7 +4154,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetSchemasEdgesVnextSchemaCategorySchemaTypeExample
+    public class GetSchemasEdgesVnextSchemacategorySchematypeExample
     {
         public void main()
         {
@@ -4171,12 +4171,12 @@ namespace Example
             try
             {
                 // List schemas of a specific category
-                SchemaReferenceEntityListing result = apiInstance.GetSchemasEdgesVnextSchemaCategorySchemaType(schemaCategory, schemaType, pageSize, pageNumber);
+                SchemaReferenceEntityListing result = apiInstance.GetSchemasEdgesVnextSchemacategorySchematype(schemaCategory, schemaType, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetSchemasEdgesVnextSchemaCategorySchemaType: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetSchemasEdgesVnextSchemacategorySchematype: " + e.Message );
             }
         }
     }
@@ -4200,7 +4200,7 @@ namespace Example
 
 <a name="getschemasedgesvnextschemacategoryschematypeschemaid"></a>
 
-## [**Organization**](Organization.html) GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId (string schemaCategory, string schemaType, string schemaId)
+## [**Organization**](Organization.html) GetSchemasEdgesVnextSchemacategorySchematypeSchemaId (string schemaCategory, string schemaType, string schemaId)
 
 Get a json schema
 
@@ -4216,7 +4216,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExample
+    public class GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExample
     {
         public void main()
         {
@@ -4232,12 +4232,12 @@ namespace Example
             try
             {
                 // Get a json schema
-                Organization result = apiInstance.GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId(schemaCategory, schemaType, schemaId);
+                Organization result = apiInstance.GetSchemasEdgesVnextSchemacategorySchematypeSchemaId(schemaCategory, schemaType, schemaId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetSchemasEdgesVnextSchemacategorySchematypeSchemaId: " + e.Message );
             }
         }
     }
@@ -4260,7 +4260,7 @@ namespace Example
 
 <a name="getschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid"></a>
 
-## [**Organization**](Organization.html) GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null)
+## [**Organization**](Organization.html) GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null)
 
 Get metadata for a schema
 
@@ -4276,7 +4276,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataIdExample
+    public class GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdExample
     {
         public void main()
         {
@@ -4295,12 +4295,12 @@ namespace Example
             try
             {
                 // Get metadata for a schema
-                Organization result = apiInstance.GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);
+                Organization result = apiInstance.GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId: " + e.Message );
             }
         }
     }
@@ -4324,356 +4324,11 @@ namespace Example
 
 [**Organization**](Organization.html)
 
-<a name="postprovidersedgelogicalinterfaces"></a>
-
-## [**DomainLogicalInterface**](DomainLogicalInterface.html) PostProvidersEdgeLogicalinterfaces (string edgeId, DomainLogicalInterface body)
-
-Create an edge logical interface.
-
-Create
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostProvidersEdgeLogicalinterfacesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var body = new DomainLogicalInterface(); // DomainLogicalInterface | Logical interface
-
-            try
-            {
-                // Create an edge logical interface.
-                DomainLogicalInterface result = apiInstance.PostProvidersEdgeLogicalinterfaces(edgeId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgeLogicalinterfaces: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **body** | [**DomainLogicalInterface**](DomainLogicalInterface.html)| Logical interface |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DomainLogicalInterface**](DomainLogicalInterface.html)
-
-<a name="postprovidersedgelogsjobupload"></a>
-
-## void PostProvidersEdgeLogsJobUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
-
-Request that the specified fileIds be uploaded from the Edge.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostProvidersEdgeLogsJobUploadExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var jobId = jobId_example;  // string | Job ID
-            var body = new EdgeLogsJobUploadRequest(); // EdgeLogsJobUploadRequest | Log upload request
-
-            try
-            {
-                // Request that the specified fileIds be uploaded from the Edge.
-                apiInstance.PostProvidersEdgeLogsJobUpload(edgeId, jobId, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgeLogsJobUpload: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **jobId** | **string**| Job ID |  |
-| **body** | [**EdgeLogsJobUploadRequest**](EdgeLogsJobUploadRequest.html)| Log upload request |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="postprovidersedgelogsjobs"></a>
-
-## [**EdgeLogsJobResponse**](EdgeLogsJobResponse.html) PostProvidersEdgeLogsJobs (string edgeId, EdgeLogsJobRequest body)
-
-Create a job to upload a list of Edge logs.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostProvidersEdgeLogsJobsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var body = new EdgeLogsJobRequest(); // EdgeLogsJobRequest | EdgeLogsJobRequest
-
-            try
-            {
-                // Create a job to upload a list of Edge logs.
-                EdgeLogsJobResponse result = apiInstance.PostProvidersEdgeLogsJobs(edgeId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgeLogsJobs: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **body** | [**EdgeLogsJobRequest**](EdgeLogsJobRequest.html)| EdgeLogsJobRequest |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**EdgeLogsJobResponse**](EdgeLogsJobResponse.html)
-
-<a name="postprovidersedgereboot"></a>
-
-## **string** PostProvidersEdgeReboot (string edgeId)
-
-Reboot an Edge
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostProvidersEdgeRebootExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-
-            try
-            {
-                // Reboot an Edge
-                string result = apiInstance.PostProvidersEdgeReboot(edgeId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgeReboot: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="postprovidersedgesoftwareupdate"></a>
-
-## [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) PostProvidersEdgeSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body)
-
-Starts a software update for this edge.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostProvidersEdgeSoftwareupdateExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var body = new DomainEdgeSoftwareUpdateDto(); // DomainEdgeSoftwareUpdateDto | Software update request
-
-            try
-            {
-                // Starts a software update for this edge.
-                DomainEdgeSoftwareUpdateDto result = apiInstance.PostProvidersEdgeSoftwareupdate(edgeId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgeSoftwareupdate: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **body** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html)| Software update request |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html)
-
-<a name="postprovidersedgeunpair"></a>
-
-## **string** PostProvidersEdgeUnpair (string edgeId)
-
-Unpair an Edge
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostProvidersEdgeUnpairExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge Id
-
-            try
-            {
-                // Unpair an Edge
-                string result = apiInstance.PostProvidersEdgeUnpair(edgeId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgeUnpair: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge Id |  |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
 <a name="postprovidersedges"></a>
 
 ## [**Edge**](Edge.html) PostProvidersEdges (Edge body)
 
-Create a edge.
+Create an edge.
 
 
 
@@ -4700,7 +4355,7 @@ namespace Example
 
             try
             {
-                // Create a edge.
+                // Create an edge.
                 Edge result = apiInstance.PostProvidersEdges(body);
                 Debug.WriteLine(result);
             }
@@ -4892,6 +4547,351 @@ namespace Example
 ### Return type
 
 [**DIDPool**](DIDPool.html)
+
+<a name="postprovidersedgesedgeidlogicalinterfaces"></a>
+
+## [**DomainLogicalInterface**](DomainLogicalInterface.html) PostProvidersEdgesEdgeIdLogicalinterfaces (string edgeId, DomainLogicalInterface body)
+
+Create an edge logical interface.
+
+Create
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostProvidersEdgesEdgeIdLogicalinterfacesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var body = new DomainLogicalInterface(); // DomainLogicalInterface | Logical interface
+
+            try
+            {
+                // Create an edge logical interface.
+                DomainLogicalInterface result = apiInstance.PostProvidersEdgesEdgeIdLogicalinterfaces(edgeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesEdgeIdLogicalinterfaces: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **body** | [**DomainLogicalInterface**](DomainLogicalInterface.html)| Logical interface |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainLogicalInterface**](DomainLogicalInterface.html)
+
+<a name="postprovidersedgesedgeidlogsjobs"></a>
+
+## [**EdgeLogsJobResponse**](EdgeLogsJobResponse.html) PostProvidersEdgesEdgeIdLogsJobs (string edgeId, EdgeLogsJobRequest body)
+
+Create a job to upload a list of Edge logs.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostProvidersEdgesEdgeIdLogsJobsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var body = new EdgeLogsJobRequest(); // EdgeLogsJobRequest | EdgeLogsJobRequest
+
+            try
+            {
+                // Create a job to upload a list of Edge logs.
+                EdgeLogsJobResponse result = apiInstance.PostProvidersEdgesEdgeIdLogsJobs(edgeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesEdgeIdLogsJobs: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **body** | [**EdgeLogsJobRequest**](EdgeLogsJobRequest.html)| EdgeLogsJobRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeLogsJobResponse**](EdgeLogsJobResponse.html)
+
+<a name="postprovidersedgesedgeidlogsjobsjobidupload"></a>
+
+## void PostProvidersEdgesEdgeIdLogsJobsJobIdUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
+
+Request that the specified fileIds be uploaded from the Edge.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostProvidersEdgesEdgeIdLogsJobsJobIdUploadExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var jobId = jobId_example;  // string | Job ID
+            var body = new EdgeLogsJobUploadRequest(); // EdgeLogsJobUploadRequest | Log upload request
+
+            try
+            {
+                // Request that the specified fileIds be uploaded from the Edge.
+                apiInstance.PostProvidersEdgesEdgeIdLogsJobsJobIdUpload(edgeId, jobId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesEdgeIdLogsJobsJobIdUpload: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **jobId** | **string**| Job ID |  |
+| **body** | [**EdgeLogsJobUploadRequest**](EdgeLogsJobUploadRequest.html)| Log upload request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postprovidersedgesedgeidreboot"></a>
+
+## **string** PostProvidersEdgesEdgeIdReboot (string edgeId)
+
+Reboot an Edge
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostProvidersEdgesEdgeIdRebootExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+
+            try
+            {
+                // Reboot an Edge
+                string result = apiInstance.PostProvidersEdgesEdgeIdReboot(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesEdgeIdReboot: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="postprovidersedgesedgeidsoftwareupdate"></a>
+
+## [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) PostProvidersEdgesEdgeIdSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body)
+
+Starts a software update for this edge.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostProvidersEdgesEdgeIdSoftwareupdateExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var body = new DomainEdgeSoftwareUpdateDto(); // DomainEdgeSoftwareUpdateDto | Software update request
+
+            try
+            {
+                // Starts a software update for this edge.
+                DomainEdgeSoftwareUpdateDto result = apiInstance.PostProvidersEdgesEdgeIdSoftwareupdate(edgeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesEdgeIdSoftwareupdate: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **body** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html)| Software update request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html)
+
+<a name="postprovidersedgesedgeidunpair"></a>
+
+## **string** PostProvidersEdgesEdgeIdUnpair (string edgeId)
+
+Unpair an Edge
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostProvidersEdgesEdgeIdUnpairExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+
+            try
+            {
+                // Unpair an Edge
+                string result = apiInstance.PostProvidersEdgesEdgeIdUnpair(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesEdgeIdUnpair: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
 
 <a name="postprovidersedgesedgegroups"></a>
 
@@ -5117,61 +5117,6 @@ namespace Example
 
 [**OutboundRoute**](OutboundRoute.html)
 
-<a name="postprovidersedgesphonereboot"></a>
-
-## void PostProvidersEdgesPhoneReboot (string phoneId)
-
-Reboot a Phone
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostProvidersEdgesPhoneRebootExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var phoneId = phoneId_example;  // string | Phone Id
-
-            try
-            {
-                // Reboot a Phone
-                apiInstance.PostProvidersEdgesPhoneReboot(phoneId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesPhoneReboot: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **phoneId** | **string**| Phone Id |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
 <a name="postprovidersedgesphonebasesettings"></a>
 
 ## [**PhoneBase**](PhoneBase.html) PostProvidersEdgesPhonebasesettings (PhoneBase body)
@@ -5284,6 +5229,61 @@ namespace Example
 
 [**Phone**](Phone.html)
 
+<a name="postprovidersedgesphonesphoneidreboot"></a>
+
+## void PostProvidersEdgesPhonesPhoneIdReboot (string phoneId)
+
+Reboot a Phone
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostProvidersEdgesPhonesPhoneIdRebootExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var phoneId = phoneId_example;  // string | Phone Id
+
+            try
+            {
+                // Reboot a Phone
+                apiInstance.PostProvidersEdgesPhonesPhoneIdReboot(phoneId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesPhonesPhoneIdReboot: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **phoneId** | **string**| Phone Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postprovidersedgesphonesreboot"></a>
 
 ## void PostProvidersEdgesPhonesReboot (PhonesReboot body)
@@ -5333,61 +5333,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**PhonesReboot**](PhonesReboot.html)| Phones |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="postprovidersedgessiterebalance"></a>
-
-## void PostProvidersEdgesSiteRebalance (string siteId)
-
-Triggers the rebalance operation.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostProvidersEdgesSiteRebalanceExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var siteId = siteId_example;  // string | Site ID
-
-            try
-            {
-                // Triggers the rebalance operation.
-                apiInstance.PostProvidersEdgesSiteRebalance(siteId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesSiteRebalance: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **siteId** | **string**| Site ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5450,6 +5395,61 @@ namespace Example
 
 [**Site**](Site.html)
 
+<a name="postprovidersedgessitessiteidrebalance"></a>
+
+## void PostProvidersEdgesSitesSiteIdRebalance (string siteId)
+
+Triggers the rebalance operation.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostProvidersEdgesSitesSiteIdRebalanceExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID
+
+            try
+            {
+                // Triggers the rebalance operation.
+                apiInstance.PostProvidersEdgesSitesSiteIdRebalance(siteId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesSitesSiteIdRebalance: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postprovidersedgestrunkbasesettings"></a>
 
 ## [**TrunkBase**](TrunkBase.html) PostProvidersEdgesTrunkbasesettings (TrunkBase body)
@@ -5506,9 +5506,183 @@ namespace Example
 
 [**TrunkBase**](TrunkBase.html)
 
-<a name="putprovidersedge"></a>
+<a name="putprovidersedgescertificateauthoritiescertificateid"></a>
 
-## [**Edge**](Edge.html) PutProvidersEdge (string edgeId, Edge body)
+## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) PutProvidersEdgesCertificateauthoritiesCertificateId (string certificateId, DomainCertificateAuthority body)
+
+Update a certificate authority.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutProvidersEdgesCertificateauthoritiesCertificateIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var certificateId = certificateId_example;  // string | Certificate ID
+            var body = new DomainCertificateAuthority(); // DomainCertificateAuthority | Certificate authority
+
+            try
+            {
+                // Update a certificate authority.
+                DomainCertificateAuthority result = apiInstance.PutProvidersEdgesCertificateauthoritiesCertificateId(certificateId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesCertificateauthoritiesCertificateId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **certificateId** | **string**| Certificate ID |  |
+| **body** | [**DomainCertificateAuthority**](DomainCertificateAuthority.html)| Certificate authority |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainCertificateAuthority**](DomainCertificateAuthority.html)
+
+<a name="putprovidersedgesdidpoolsdidpoolid"></a>
+
+## [**DIDPool**](DIDPool.html) PutProvidersEdgesDidpoolsDidpoolId (string didPoolId, DIDPool body)
+
+Update a DID Pool by ID.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutProvidersEdgesDidpoolsDidpoolIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var didPoolId = didPoolId_example;  // string | DID pool ID
+            var body = new DIDPool(); // DIDPool | DID pool
+
+            try
+            {
+                // Update a DID Pool by ID.
+                DIDPool result = apiInstance.PutProvidersEdgesDidpoolsDidpoolId(didPoolId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesDidpoolsDidpoolId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **didPoolId** | **string**| DID pool ID |  |
+| **body** | [**DIDPool**](DIDPool.html)| DID pool |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DIDPool**](DIDPool.html)
+
+<a name="putprovidersedgesdidsdidid"></a>
+
+## [**DID**](DID.html) PutProvidersEdgesDidsDidId (string didId, DID body)
+
+Update a DID by ID.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutProvidersEdgesDidsDidIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var didId = didId_example;  // string | DID ID
+            var body = new DID(); // DID | DID
+
+            try
+            {
+                // Update a DID by ID.
+                DID result = apiInstance.PutProvidersEdgesDidsDidId(didId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesDidsDidId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **didId** | **string**| DID ID |  |
+| **body** | [**DID**](DID.html)| DID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DID**](DID.html)
+
+<a name="putprovidersedgesedgeid"></a>
+
+## [**Edge**](Edge.html) PutProvidersEdgesEdgeId (string edgeId, Edge body)
 
 Update a edge.
 
@@ -5524,7 +5698,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgeExample
+    public class PutProvidersEdgesEdgeIdExample
     {
         public void main()
         {
@@ -5539,12 +5713,12 @@ namespace Example
             try
             {
                 // Update a edge.
-                Edge result = apiInstance.PutProvidersEdge(edgeId, body);
+                Edge result = apiInstance.PutProvidersEdgesEdgeId(edgeId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdge: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesEdgeId: " + e.Message );
             }
         }
     }
@@ -5564,9 +5738,9 @@ namespace Example
 
 [**Edge**](Edge.html)
 
-<a name="putprovidersedgeline"></a>
+<a name="putprovidersedgesedgeidlineslineid"></a>
 
-## [**EdgeLine**](EdgeLine.html) PutProvidersEdgeLine (string edgeId, string lineId, EdgeLine body)
+## [**EdgeLine**](EdgeLine.html) PutProvidersEdgesEdgeIdLinesLineId (string edgeId, string lineId, EdgeLine body)
 
 Update a line.
 
@@ -5582,7 +5756,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgeLineExample
+    public class PutProvidersEdgesEdgeIdLinesLineIdExample
     {
         public void main()
         {
@@ -5598,12 +5772,12 @@ namespace Example
             try
             {
                 // Update a line.
-                EdgeLine result = apiInstance.PutProvidersEdgeLine(edgeId, lineId, body);
+                EdgeLine result = apiInstance.PutProvidersEdgesEdgeIdLinesLineId(edgeId, lineId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgeLine: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesEdgeIdLinesLineId: " + e.Message );
             }
         }
     }
@@ -5624,9 +5798,9 @@ namespace Example
 
 [**EdgeLine**](EdgeLine.html)
 
-<a name="putprovidersedgelogicalinterface"></a>
+<a name="putprovidersedgesedgeidlogicalinterfacesinterfaceid"></a>
 
-## [**DomainLogicalInterface**](DomainLogicalInterface.html) PutProvidersEdgeLogicalinterface (string edgeId, string interfaceId, DomainLogicalInterface body)
+## [**DomainLogicalInterface**](DomainLogicalInterface.html) PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, DomainLogicalInterface body)
 
 Update an edge logical interface.
 
@@ -5642,7 +5816,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgeLogicalinterfaceExample
+    public class PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdExample
     {
         public void main()
         {
@@ -5658,12 +5832,12 @@ namespace Example
             try
             {
                 // Update an edge logical interface.
-                DomainLogicalInterface result = apiInstance.PutProvidersEdgeLogicalinterface(edgeId, interfaceId, body);
+                DomainLogicalInterface result = apiInstance.PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId(edgeId, interfaceId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgeLogicalinterface: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId: " + e.Message );
             }
         }
     }
@@ -5684,183 +5858,9 @@ namespace Example
 
 [**DomainLogicalInterface**](DomainLogicalInterface.html)
 
-<a name="putprovidersedgescertificateauthority"></a>
+<a name="putprovidersedgesedgegroupsedgegroupid"></a>
 
-## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) PutProvidersEdgesCertificateauthority (string certificateId, DomainCertificateAuthority body)
-
-Update a certificate authority.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PutProvidersEdgesCertificateauthorityExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var certificateId = certificateId_example;  // string | Certificate ID
-            var body = new DomainCertificateAuthority(); // DomainCertificateAuthority | Certificate authority
-
-            try
-            {
-                // Update a certificate authority.
-                DomainCertificateAuthority result = apiInstance.PutProvidersEdgesCertificateauthority(certificateId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesCertificateauthority: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **certificateId** | **string**| Certificate ID |  |
-| **body** | [**DomainCertificateAuthority**](DomainCertificateAuthority.html)| Certificate authority |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DomainCertificateAuthority**](DomainCertificateAuthority.html)
-
-<a name="putprovidersedgesdid"></a>
-
-## [**DID**](DID.html) PutProvidersEdgesDid (string didId, DID body)
-
-Update a DID by ID.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PutProvidersEdgesDidExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var didId = didId_example;  // string | DID ID
-            var body = new DID(); // DID | DID
-
-            try
-            {
-                // Update a DID by ID.
-                DID result = apiInstance.PutProvidersEdgesDid(didId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesDid: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **didId** | **string**| DID ID |  |
-| **body** | [**DID**](DID.html)| DID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DID**](DID.html)
-
-<a name="putprovidersedgesdidpool"></a>
-
-## [**DIDPool**](DIDPool.html) PutProvidersEdgesDidpool (string didPoolId, DIDPool body)
-
-Update a DID Pool by ID.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PutProvidersEdgesDidpoolExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var didPoolId = didPoolId_example;  // string | DID pool ID
-            var body = new DIDPool(); // DIDPool | DID pool
-
-            try
-            {
-                // Update a DID Pool by ID.
-                DIDPool result = apiInstance.PutProvidersEdgesDidpool(didPoolId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesDidpool: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **didPoolId** | **string**| DID pool ID |  |
-| **body** | [**DIDPool**](DIDPool.html)| DID pool |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**DIDPool**](DIDPool.html)
-
-<a name="putprovidersedgesedgegroup"></a>
-
-## [**EdgeGroup**](EdgeGroup.html) PutProvidersEdgesEdgegroup (string edgeGroupId, EdgeGroup body)
+## [**EdgeGroup**](EdgeGroup.html) PutProvidersEdgesEdgegroupsEdgegroupId (string edgeGroupId, EdgeGroup body)
 
 Update an edge group.
 
@@ -5876,7 +5876,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgesEdgegroupExample
+    public class PutProvidersEdgesEdgegroupsEdgegroupIdExample
     {
         public void main()
         {
@@ -5891,12 +5891,12 @@ namespace Example
             try
             {
                 // Update an edge group.
-                EdgeGroup result = apiInstance.PutProvidersEdgesEdgegroup(edgeGroupId, body);
+                EdgeGroup result = apiInstance.PutProvidersEdgesEdgegroupsEdgegroupId(edgeGroupId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesEdgegroup: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesEdgegroupsEdgegroupId: " + e.Message );
             }
         }
     }
@@ -5916,9 +5916,9 @@ namespace Example
 
 [**EdgeGroup**](EdgeGroup.html)
 
-<a name="putprovidersedgesendpoint"></a>
+<a name="putprovidersedgesendpointsendpointid"></a>
 
-## [**Endpoint**](Endpoint.html) PutProvidersEdgesEndpoint (string endpointId, Endpoint body)
+## [**Endpoint**](Endpoint.html) PutProvidersEdgesEndpointsEndpointId (string endpointId, Endpoint body)
 
 Update endpoint
 
@@ -5934,7 +5934,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgesEndpointExample
+    public class PutProvidersEdgesEndpointsEndpointIdExample
     {
         public void main()
         {
@@ -5949,12 +5949,12 @@ namespace Example
             try
             {
                 // Update endpoint
-                Endpoint result = apiInstance.PutProvidersEdgesEndpoint(endpointId, body);
+                Endpoint result = apiInstance.PutProvidersEdgesEndpointsEndpointId(endpointId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesEndpoint: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesEndpointsEndpointId: " + e.Message );
             }
         }
     }
@@ -5974,67 +5974,9 @@ namespace Example
 
 [**Endpoint**](Endpoint.html)
 
-<a name="putprovidersedgesextension"></a>
+<a name="putprovidersedgesextensionpoolsextensionpoolid"></a>
 
-## [**Extension**](Extension.html) PutProvidersEdgesExtension (string extensionId, Extension body)
-
-Update an extension by ID.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PutProvidersEdgesExtensionExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var extensionId = extensionId_example;  // string | Extension ID
-            var body = new Extension(); // Extension | Extension
-
-            try
-            {
-                // Update an extension by ID.
-                Extension result = apiInstance.PutProvidersEdgesExtension(extensionId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesExtension: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **extensionId** | **string**| Extension ID |  |
-| **body** | [**Extension**](Extension.html)| Extension |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Extension**](Extension.html)
-
-<a name="putprovidersedgesextensionpool"></a>
-
-## [**ExtensionPool**](ExtensionPool.html) PutProvidersEdgesExtensionpool (string extensionPoolId, ExtensionPool body)
+## [**ExtensionPool**](ExtensionPool.html) PutProvidersEdgesExtensionpoolsExtensionpoolId (string extensionPoolId, ExtensionPool body)
 
 Update an extension pool by ID
 
@@ -6050,7 +5992,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgesExtensionpoolExample
+    public class PutProvidersEdgesExtensionpoolsExtensionpoolIdExample
     {
         public void main()
         {
@@ -6065,12 +6007,12 @@ namespace Example
             try
             {
                 // Update an extension pool by ID
-                ExtensionPool result = apiInstance.PutProvidersEdgesExtensionpool(extensionPoolId, body);
+                ExtensionPool result = apiInstance.PutProvidersEdgesExtensionpoolsExtensionpoolId(extensionPoolId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesExtensionpool: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesExtensionpoolsExtensionpoolId: " + e.Message );
             }
         }
     }
@@ -6090,9 +6032,67 @@ namespace Example
 
 [**ExtensionPool**](ExtensionPool.html)
 
-<a name="putprovidersedgesoutboundroute"></a>
+<a name="putprovidersedgesextensionsextensionid"></a>
 
-## [**OutboundRoute**](OutboundRoute.html) PutProvidersEdgesOutboundroute (string outboundRouteId, OutboundRoute body)
+## [**Extension**](Extension.html) PutProvidersEdgesExtensionsExtensionId (string extensionId, Extension body)
+
+Update an extension by ID.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutProvidersEdgesExtensionsExtensionIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var extensionId = extensionId_example;  // string | Extension ID
+            var body = new Extension(); // Extension | Extension
+
+            try
+            {
+                // Update an extension by ID.
+                Extension result = apiInstance.PutProvidersEdgesExtensionsExtensionId(extensionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesExtensionsExtensionId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **extensionId** | **string**| Extension ID |  |
+| **body** | [**Extension**](Extension.html)| Extension |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Extension**](Extension.html)
+
+<a name="putprovidersedgesoutboundroutesoutboundrouteid"></a>
+
+## [**OutboundRoute**](OutboundRoute.html) PutProvidersEdgesOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRoute body)
 
 Update outbound route
 
@@ -6108,7 +6108,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgesOutboundrouteExample
+    public class PutProvidersEdgesOutboundroutesOutboundrouteIdExample
     {
         public void main()
         {
@@ -6123,12 +6123,12 @@ namespace Example
             try
             {
                 // Update outbound route
-                OutboundRoute result = apiInstance.PutProvidersEdgesOutboundroute(outboundRouteId, body);
+                OutboundRoute result = apiInstance.PutProvidersEdgesOutboundroutesOutboundrouteId(outboundRouteId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesOutboundroute: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesOutboundroutesOutboundrouteId: " + e.Message );
             }
         }
     }
@@ -6148,67 +6148,9 @@ namespace Example
 
 [**OutboundRoute**](OutboundRoute.html)
 
-<a name="putprovidersedgesphone"></a>
+<a name="putprovidersedgesphonebasesettingsphonebaseid"></a>
 
-## [**Phone**](Phone.html) PutProvidersEdgesPhone (string phoneId, Phone body)
-
-Update a Phone by ID
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PutProvidersEdgesPhoneExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var phoneId = phoneId_example;  // string | Phone ID
-            var body = new Phone(); // Phone | Phone
-
-            try
-            {
-                // Update a Phone by ID
-                Phone result = apiInstance.PutProvidersEdgesPhone(phoneId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesPhone: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **phoneId** | **string**| Phone ID |  |
-| **body** | [**Phone**](Phone.html)| Phone |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Phone**](Phone.html)
-
-<a name="putprovidersedgesphonebasesetting"></a>
-
-## [**PhoneBase**](PhoneBase.html) PutProvidersEdgesPhonebasesetting (string phoneBaseId, PhoneBase body)
+## [**PhoneBase**](PhoneBase.html) PutProvidersEdgesPhonebasesettingsPhonebaseId (string phoneBaseId, PhoneBase body)
 
 Update a Phone Base Settings by ID
 
@@ -6224,7 +6166,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgesPhonebasesettingExample
+    public class PutProvidersEdgesPhonebasesettingsPhonebaseIdExample
     {
         public void main()
         {
@@ -6239,12 +6181,12 @@ namespace Example
             try
             {
                 // Update a Phone Base Settings by ID
-                PhoneBase result = apiInstance.PutProvidersEdgesPhonebasesetting(phoneBaseId, body);
+                PhoneBase result = apiInstance.PutProvidersEdgesPhonebasesettingsPhonebaseId(phoneBaseId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesPhonebasesetting: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesPhonebasesettingsPhonebaseId: " + e.Message );
             }
         }
     }
@@ -6264,9 +6206,67 @@ namespace Example
 
 [**PhoneBase**](PhoneBase.html)
 
-<a name="putprovidersedgessite"></a>
+<a name="putprovidersedgesphonesphoneid"></a>
 
-## [**Site**](Site.html) PutProvidersEdgesSite (string siteId, Site body)
+## [**Phone**](Phone.html) PutProvidersEdgesPhonesPhoneId (string phoneId, Phone body)
+
+Update a Phone by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutProvidersEdgesPhonesPhoneIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var phoneId = phoneId_example;  // string | Phone ID
+            var body = new Phone(); // Phone | Phone
+
+            try
+            {
+                // Update a Phone by ID
+                Phone result = apiInstance.PutProvidersEdgesPhonesPhoneId(phoneId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesPhonesPhoneId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **phoneId** | **string**| Phone ID |  |
+| **body** | [**Phone**](Phone.html)| Phone |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Phone**](Phone.html)
+
+<a name="putprovidersedgessitessiteid"></a>
+
+## [**Site**](Site.html) PutProvidersEdgesSitesSiteId (string siteId, Site body)
 
 Update a Site by ID.
 
@@ -6282,7 +6282,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgesSiteExample
+    public class PutProvidersEdgesSitesSiteIdExample
     {
         public void main()
         {
@@ -6297,12 +6297,12 @@ namespace Example
             try
             {
                 // Update a Site by ID.
-                Site result = apiInstance.PutProvidersEdgesSite(siteId, body);
+                Site result = apiInstance.PutProvidersEdgesSitesSiteId(siteId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesSite: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesSitesSiteId: " + e.Message );
             }
         }
     }
@@ -6322,9 +6322,9 @@ namespace Example
 
 [**Site**](Site.html)
 
-<a name="putprovidersedgessitenumberplans"></a>
+<a name="putprovidersedgessitessiteidnumberplans"></a>
 
-## [**List&lt;NumberPlan&gt;**](NumberPlan.html) PutProvidersEdgesSiteNumberplans (string siteId, List<NumberPlan> body)
+## [**List&lt;NumberPlan&gt;**](NumberPlan.html) PutProvidersEdgesSitesSiteIdNumberplans (string siteId, List<NumberPlan> body)
 
 Update the list of Number Plans.
 
@@ -6340,7 +6340,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgesSiteNumberplansExample
+    public class PutProvidersEdgesSitesSiteIdNumberplansExample
     {
         public void main()
         {
@@ -6355,12 +6355,12 @@ namespace Example
             try
             {
                 // Update the list of Number Plans.
-                List&lt;NumberPlan&gt; result = apiInstance.PutProvidersEdgesSiteNumberplans(siteId, body);
+                List&lt;NumberPlan&gt; result = apiInstance.PutProvidersEdgesSitesSiteIdNumberplans(siteId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesSiteNumberplans: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesSitesSiteIdNumberplans: " + e.Message );
             }
         }
     }
@@ -6380,9 +6380,9 @@ namespace Example
 
 [**List<NumberPlan>**](NumberPlan.html)
 
-<a name="putprovidersedgestrunkbasesetting"></a>
+<a name="putprovidersedgestrunkbasesettingstrunkbasesettingsid"></a>
 
-## [**TrunkBase**](TrunkBase.html) PutProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId, TrunkBase body)
+## [**TrunkBase**](TrunkBase.html) PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, TrunkBase body)
 
 Update a Trunk Base Settings object by ID
 
@@ -6398,7 +6398,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutProvidersEdgesTrunkbasesettingExample
+    public class PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdExample
     {
         public void main()
         {
@@ -6413,12 +6413,12 @@ namespace Example
             try
             {
                 // Update a Trunk Base Settings object by ID
-                TrunkBase result = apiInstance.PutProvidersEdgesTrunkbasesetting(trunkBaseSettingsId, body);
+                TrunkBase result = apiInstance.PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId(trunkBaseSettingsId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesTrunkbasesetting: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId: " + e.Message );
             }
         }
     }

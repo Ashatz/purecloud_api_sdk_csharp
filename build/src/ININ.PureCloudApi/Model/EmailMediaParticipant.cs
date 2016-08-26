@@ -183,6 +183,18 @@ namespace ININ.PureCloudApi.Model
             TransferForward,
             
             /// <summary>
+            /// Enum TransferNoAnswer for "TRANSFER_NO_ANSWER"
+            /// </summary>
+            [EnumMember(Value = "TRANSFER_NO_ANSWER")]
+            TransferNoAnswer,
+            
+            /// <summary>
+            /// Enum TransferNotAvailable for "TRANSFER_NOT_AVAILABLE"
+            /// </summary>
+            [EnumMember(Value = "TRANSFER_NOT_AVAILABLE")]
+            TransferNotAvailable,
+            
+            /// <summary>
             /// Enum TransportFailure for "TRANSPORT_FAILURE"
             /// </summary>
             [EnumMember(Value = "TRANSPORT_FAILURE")]

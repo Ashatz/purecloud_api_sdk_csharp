@@ -54,63 +54,63 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteUser
+        /// Test DeleteUserId
         /// </summary>
         [Test]
-        public void DeleteUserTest()
+        public void DeleteUserIdTest()
         {
-            // TODO: add unit test for the method 'DeleteUser'
+            // TODO: add unit test for the method 'DeleteUserId'
             string userId = null; // TODO: replace null with proper value
-            var response = instance.DeleteUser(userId);
+            var response = instance.DeleteUserId(userId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteUserRoles
+        /// Test DeleteUserIdRoles
         /// </summary>
         [Test]
-        public void DeleteUserRolesTest()
+        public void DeleteUserIdRolesTest()
         {
-            // TODO: add unit test for the method 'DeleteUserRoles'
+            // TODO: add unit test for the method 'DeleteUserIdRoles'
             string userId = null; // TODO: replace null with proper value
-            instance.DeleteUserRoles(userId);
+            instance.DeleteUserIdRoles(userId);
             
         }
         
         /// <summary>
-        /// Test DeleteUserRoutingskill
+        /// Test DeleteUserIdRoutingskillsSkillId
         /// </summary>
         [Test]
-        public void DeleteUserRoutingskillTest()
+        public void DeleteUserIdRoutingskillsSkillIdTest()
         {
-            // TODO: add unit test for the method 'DeleteUserRoutingskill'
+            // TODO: add unit test for the method 'DeleteUserIdRoutingskillsSkillId'
             string userId = null; // TODO: replace null with proper value
             string skillId = null; // TODO: replace null with proper value
-            var response = instance.DeleteUserRoutingskill(userId, skillId);
+            var response = instance.DeleteUserIdRoutingskillsSkillId(userId, skillId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteUserStationAssociatedstation
+        /// Test DeleteUserIdStationAssociatedstation
         /// </summary>
         [Test]
-        public void DeleteUserStationAssociatedstationTest()
+        public void DeleteUserIdStationAssociatedstationTest()
         {
-            // TODO: add unit test for the method 'DeleteUserStationAssociatedstation'
+            // TODO: add unit test for the method 'DeleteUserIdStationAssociatedstation'
             string userId = null; // TODO: replace null with proper value
-            instance.DeleteUserStationAssociatedstation(userId);
+            instance.DeleteUserIdStationAssociatedstation(userId);
             
         }
         
         /// <summary>
-        /// Test DeleteUserStationDefaultstation
+        /// Test DeleteUserIdStationDefaultstation
         /// </summary>
         [Test]
-        public void DeleteUserStationDefaultstationTest()
+        public void DeleteUserIdStationDefaultstationTest()
         {
-            // TODO: add unit test for the method 'DeleteUserStationDefaultstation'
+            // TODO: add unit test for the method 'DeleteUserIdStationDefaultstation'
             string userId = null; // TODO: replace null with proper value
-            instance.DeleteUserStationDefaultstation(userId);
+            instance.DeleteUserIdStationDefaultstation(userId);
             
         }
         
@@ -140,118 +140,118 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetUser
+        /// Test GetUserId
         /// </summary>
         [Test]
-        public void GetUserTest()
+        public void GetUserIdTest()
         {
-            // TODO: add unit test for the method 'GetUser'
+            // TODO: add unit test for the method 'GetUserId'
             string userId = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            var response = instance.GetUser(userId, expand);
+            var response = instance.GetUserId(userId, expand);
             Assert.IsInstanceOf<User> (response, "response is User");
         }
         
         /// <summary>
-        /// Test GetUserCallforwarding
+        /// Test GetUserIdCallforwarding
         /// </summary>
         [Test]
-        public void GetUserCallforwardingTest()
+        public void GetUserIdCallforwardingTest()
         {
-            // TODO: add unit test for the method 'GetUserCallforwarding'
+            // TODO: add unit test for the method 'GetUserIdCallforwarding'
             string userId = null; // TODO: replace null with proper value
-            var response = instance.GetUserCallforwarding(userId);
+            var response = instance.GetUserIdCallforwarding(userId);
             Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding");
         }
         
         /// <summary>
-        /// Test GetUserGeolocation
+        /// Test GetUserIdGeolocationsClientId
         /// </summary>
         [Test]
-        public void GetUserGeolocationTest()
+        public void GetUserIdGeolocationsClientIdTest()
         {
-            // TODO: add unit test for the method 'GetUserGeolocation'
+            // TODO: add unit test for the method 'GetUserIdGeolocationsClientId'
             string userId = null; // TODO: replace null with proper value
             string clientId = null; // TODO: replace null with proper value
-            var response = instance.GetUserGeolocation(userId, clientId);
+            var response = instance.GetUserIdGeolocationsClientId(userId, clientId);
             Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation");
         }
         
         /// <summary>
-        /// Test GetUserOutofoffice
+        /// Test GetUserIdOutofoffice
         /// </summary>
         [Test]
-        public void GetUserOutofofficeTest()
+        public void GetUserIdOutofofficeTest()
         {
-            // TODO: add unit test for the method 'GetUserOutofoffice'
+            // TODO: add unit test for the method 'GetUserIdOutofoffice'
             string userId = null; // TODO: replace null with proper value
-            var response = instance.GetUserOutofoffice(userId);
+            var response = instance.GetUserIdOutofoffice(userId);
             Assert.IsInstanceOf<OutOfOffice> (response, "response is OutOfOffice");
         }
         
         /// <summary>
-        /// Test GetUserQueues
+        /// Test GetUserIdQueues
         /// </summary>
         [Test]
-        public void GetUserQueuesTest()
+        public void GetUserIdQueuesTest()
         {
-            // TODO: add unit test for the method 'GetUserQueues'
+            // TODO: add unit test for the method 'GetUserIdQueues'
             string userId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             bool? joined = null; // TODO: replace null with proper value
-            var response = instance.GetUserQueues(userId, pageSize, pageNumber, joined);
+            var response = instance.GetUserIdQueues(userId, pageSize, pageNumber, joined);
             Assert.IsInstanceOf<UserQueueEntityListing> (response, "response is UserQueueEntityListing");
         }
         
         /// <summary>
-        /// Test GetUserRoles
+        /// Test GetUserIdRoles
         /// </summary>
         [Test]
-        public void GetUserRolesTest()
+        public void GetUserIdRolesTest()
         {
-            // TODO: add unit test for the method 'GetUserRoles'
+            // TODO: add unit test for the method 'GetUserIdRoles'
             string userId = null; // TODO: replace null with proper value
-            var response = instance.GetUserRoles(userId);
+            var response = instance.GetUserIdRoles(userId);
             Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization");
         }
         
         /// <summary>
-        /// Test GetUserRoutingskills
+        /// Test GetUserIdRoutingskills
         /// </summary>
         [Test]
-        public void GetUserRoutingskillsTest()
+        public void GetUserIdRoutingskillsTest()
         {
-            // TODO: add unit test for the method 'GetUserRoutingskills'
+            // TODO: add unit test for the method 'GetUserIdRoutingskills'
             string userId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            var response = instance.GetUserRoutingskills(userId, pageSize, pageNumber, sortOrder);
+            var response = instance.GetUserIdRoutingskills(userId, pageSize, pageNumber, sortOrder);
             Assert.IsInstanceOf<UserSkillEntityListing> (response, "response is UserSkillEntityListing");
         }
         
         /// <summary>
-        /// Test GetUserRoutingstatus
+        /// Test GetUserIdRoutingstatus
         /// </summary>
         [Test]
-        public void GetUserRoutingstatusTest()
+        public void GetUserIdRoutingstatusTest()
         {
-            // TODO: add unit test for the method 'GetUserRoutingstatus'
+            // TODO: add unit test for the method 'GetUserIdRoutingstatus'
             string userId = null; // TODO: replace null with proper value
-            var response = instance.GetUserRoutingstatus(userId);
+            var response = instance.GetUserIdRoutingstatus(userId);
             Assert.IsInstanceOf<RoutingStatus> (response, "response is RoutingStatus");
         }
         
         /// <summary>
-        /// Test GetUserStation
+        /// Test GetUserIdStation
         /// </summary>
         [Test]
-        public void GetUserStationTest()
+        public void GetUserIdStationTest()
         {
-            // TODO: add unit test for the method 'GetUserStation'
+            // TODO: add unit test for the method 'GetUserIdStation'
             string userId = null; // TODO: replace null with proper value
-            var response = instance.GetUserStation(userId);
+            var response = instance.GetUserIdStation(userId);
             Assert.IsInstanceOf<UserStations> (response, "response is UserStations");
         }
         
@@ -272,69 +272,69 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PatchUser
+        /// Test PatchUserId
         /// </summary>
         [Test]
-        public void PatchUserTest()
+        public void PatchUserIdTest()
         {
-            // TODO: add unit test for the method 'PatchUser'
+            // TODO: add unit test for the method 'PatchUserId'
             string userId = null; // TODO: replace null with proper value
             User body = null; // TODO: replace null with proper value
-            var response = instance.PatchUser(userId, body);
+            var response = instance.PatchUserId(userId, body);
             Assert.IsInstanceOf<User> (response, "response is User");
         }
         
         /// <summary>
-        /// Test PatchUserCallforwarding
+        /// Test PatchUserIdCallforwarding
         /// </summary>
         [Test]
-        public void PatchUserCallforwardingTest()
+        public void PatchUserIdCallforwardingTest()
         {
-            // TODO: add unit test for the method 'PatchUserCallforwarding'
+            // TODO: add unit test for the method 'PatchUserIdCallforwarding'
             string userId = null; // TODO: replace null with proper value
             CallForwarding body = null; // TODO: replace null with proper value
-            var response = instance.PatchUserCallforwarding(userId, body);
+            var response = instance.PatchUserIdCallforwarding(userId, body);
             Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding");
         }
         
         /// <summary>
-        /// Test PatchUserGeolocation
+        /// Test PatchUserIdGeolocationsClientId
         /// </summary>
         [Test]
-        public void PatchUserGeolocationTest()
+        public void PatchUserIdGeolocationsClientIdTest()
         {
-            // TODO: add unit test for the method 'PatchUserGeolocation'
+            // TODO: add unit test for the method 'PatchUserIdGeolocationsClientId'
             string userId = null; // TODO: replace null with proper value
             string clientId = null; // TODO: replace null with proper value
             Geolocation body = null; // TODO: replace null with proper value
-            var response = instance.PatchUserGeolocation(userId, clientId, body);
+            var response = instance.PatchUserIdGeolocationsClientId(userId, clientId, body);
             Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation");
         }
         
         /// <summary>
-        /// Test PatchUserQueue
+        /// Test PatchUserIdQueues
         /// </summary>
         [Test]
-        public void PatchUserQueueTest()
+        public void PatchUserIdQueuesTest()
         {
-            // TODO: add unit test for the method 'PatchUserQueue'
-            string queueId = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PatchUserIdQueues'
             string userId = null; // TODO: replace null with proper value
-            UserQueue body = null; // TODO: replace null with proper value
-            var response = instance.PatchUserQueue(queueId, userId, body);
+            List<UserQueue> body = null; // TODO: replace null with proper value
+            var response = instance.PatchUserIdQueues(userId, body);
             Assert.IsInstanceOf<UserQueue> (response, "response is UserQueue");
         }
         
         /// <summary>
-        /// Test PatchUserQueues
+        /// Test PatchUserIdQueuesQueueId
         /// </summary>
         [Test]
-        public void PatchUserQueuesTest()
+        public void PatchUserIdQueuesQueueIdTest()
         {
-            // TODO: add unit test for the method 'PatchUserQueues'
+            // TODO: add unit test for the method 'PatchUserIdQueuesQueueId'
+            string queueId = null; // TODO: replace null with proper value
             string userId = null; // TODO: replace null with proper value
-            List<UserQueue> body = null; // TODO: replace null with proper value
-            var response = instance.PatchUserQueues(userId, body);
+            UserQueue body = null; // TODO: replace null with proper value
+            var response = instance.PatchUserIdQueuesQueueId(queueId, userId, body);
             Assert.IsInstanceOf<UserQueue> (response, "response is UserQueue");
         }
         
@@ -351,15 +351,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostUserRoutingskills
+        /// Test PostUserIdRoutingskills
         /// </summary>
         [Test]
-        public void PostUserRoutingskillsTest()
+        public void PostUserIdRoutingskillsTest()
         {
-            // TODO: add unit test for the method 'PostUserRoutingskills'
+            // TODO: add unit test for the method 'PostUserIdRoutingskills'
             string userId = null; // TODO: replace null with proper value
             UserRoutingSkill body = null; // TODO: replace null with proper value
-            var response = instance.PostUserRoutingskills(userId, body);
+            var response = instance.PostUserIdRoutingskills(userId, body);
             Assert.IsInstanceOf<UserRoutingSkill> (response, "response is UserRoutingSkill");
         }
         
@@ -400,94 +400,94 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutUserCallforwarding
+        /// Test PutUserIdCallforwarding
         /// </summary>
         [Test]
-        public void PutUserCallforwardingTest()
+        public void PutUserIdCallforwardingTest()
         {
-            // TODO: add unit test for the method 'PutUserCallforwarding'
+            // TODO: add unit test for the method 'PutUserIdCallforwarding'
             string userId = null; // TODO: replace null with proper value
             CallForwarding body = null; // TODO: replace null with proper value
-            var response = instance.PutUserCallforwarding(userId, body);
+            var response = instance.PutUserIdCallforwarding(userId, body);
             Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding");
         }
         
         /// <summary>
-        /// Test PutUserOutofoffice
+        /// Test PutUserIdOutofoffice
         /// </summary>
         [Test]
-        public void PutUserOutofofficeTest()
+        public void PutUserIdOutofofficeTest()
         {
-            // TODO: add unit test for the method 'PutUserOutofoffice'
+            // TODO: add unit test for the method 'PutUserIdOutofoffice'
             string userId = null; // TODO: replace null with proper value
             OutOfOffice body = null; // TODO: replace null with proper value
-            var response = instance.PutUserOutofoffice(userId, body);
+            var response = instance.PutUserIdOutofoffice(userId, body);
             Assert.IsInstanceOf<OutOfOffice> (response, "response is OutOfOffice");
         }
         
         /// <summary>
-        /// Test PutUserRoles
+        /// Test PutUserIdRoles
         /// </summary>
         [Test]
-        public void PutUserRolesTest()
+        public void PutUserIdRolesTest()
         {
-            // TODO: add unit test for the method 'PutUserRoles'
+            // TODO: add unit test for the method 'PutUserIdRoles'
             string userId = null; // TODO: replace null with proper value
             List<string> body = null; // TODO: replace null with proper value
-            var response = instance.PutUserRoles(userId, body);
+            var response = instance.PutUserIdRoles(userId, body);
             Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization");
         }
         
         /// <summary>
-        /// Test PutUserRoutingskill
+        /// Test PutUserIdRoutingskillsSkillId
         /// </summary>
         [Test]
-        public void PutUserRoutingskillTest()
+        public void PutUserIdRoutingskillsSkillIdTest()
         {
-            // TODO: add unit test for the method 'PutUserRoutingskill'
+            // TODO: add unit test for the method 'PutUserIdRoutingskillsSkillId'
             string userId = null; // TODO: replace null with proper value
             string skillId = null; // TODO: replace null with proper value
             UserRoutingSkill body = null; // TODO: replace null with proper value
-            var response = instance.PutUserRoutingskill(userId, skillId, body);
+            var response = instance.PutUserIdRoutingskillsSkillId(userId, skillId, body);
             Assert.IsInstanceOf<UserRoutingSkill> (response, "response is UserRoutingSkill");
         }
         
         /// <summary>
-        /// Test PutUserRoutingstatus
+        /// Test PutUserIdRoutingstatus
         /// </summary>
         [Test]
-        public void PutUserRoutingstatusTest()
+        public void PutUserIdRoutingstatusTest()
         {
-            // TODO: add unit test for the method 'PutUserRoutingstatus'
+            // TODO: add unit test for the method 'PutUserIdRoutingstatus'
             string userId = null; // TODO: replace null with proper value
             RoutingStatus body = null; // TODO: replace null with proper value
-            var response = instance.PutUserRoutingstatus(userId, body);
+            var response = instance.PutUserIdRoutingstatus(userId, body);
             Assert.IsInstanceOf<RoutingStatus> (response, "response is RoutingStatus");
         }
         
         /// <summary>
-        /// Test PutUserStationAssociatedstationStationId
+        /// Test PutUserIdStationAssociatedstationStationId
         /// </summary>
         [Test]
-        public void PutUserStationAssociatedstationStationIdTest()
+        public void PutUserIdStationAssociatedstationStationIdTest()
         {
-            // TODO: add unit test for the method 'PutUserStationAssociatedstationStationId'
+            // TODO: add unit test for the method 'PutUserIdStationAssociatedstationStationId'
             string userId = null; // TODO: replace null with proper value
             string stationId = null; // TODO: replace null with proper value
-            instance.PutUserStationAssociatedstationStationId(userId, stationId);
+            instance.PutUserIdStationAssociatedstationStationId(userId, stationId);
             
         }
         
         /// <summary>
-        /// Test PutUserStationDefaultstationStationId
+        /// Test PutUserIdStationDefaultstationStationId
         /// </summary>
         [Test]
-        public void PutUserStationDefaultstationStationIdTest()
+        public void PutUserIdStationDefaultstationStationIdTest()
         {
-            // TODO: add unit test for the method 'PutUserStationDefaultstationStationId'
+            // TODO: add unit test for the method 'PutUserIdStationDefaultstationStationId'
             string userId = null; // TODO: replace null with proper value
             string stationId = null; // TODO: replace null with proper value
-            instance.PutUserStationDefaultstationStationId(userId, stationId);
+            instance.PutUserIdStationDefaultstationStationId(userId, stationId);
             
         }
         

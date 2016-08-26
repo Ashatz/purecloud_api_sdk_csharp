@@ -54,26 +54,26 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteReportingSchedule
+        /// Test DeleteReportingSchedulesScheduleId
         /// </summary>
         [Test]
-        public void DeleteReportingScheduleTest()
+        public void DeleteReportingSchedulesScheduleIdTest()
         {
-            // TODO: add unit test for the method 'DeleteReportingSchedule'
+            // TODO: add unit test for the method 'DeleteReportingSchedulesScheduleId'
             string scheduleId = null; // TODO: replace null with proper value
-            var response = instance.DeleteReportingSchedule(scheduleId);
+            var response = instance.DeleteReportingSchedulesScheduleId(scheduleId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test GetConversationDetails
+        /// Test GetConversationsConversationIdDetails
         /// </summary>
         [Test]
-        public void GetConversationDetailsTest()
+        public void GetConversationsConversationIdDetailsTest()
         {
-            // TODO: add unit test for the method 'GetConversationDetails'
+            // TODO: add unit test for the method 'GetConversationsConversationIdDetails'
             string conversationId = null; // TODO: replace null with proper value
-            var response = instance.GetConversationDetails(conversationId);
+            var response = instance.GetConversationsConversationIdDetails(conversationId);
             Assert.IsInstanceOf<AnalyticsConversation> (response, "response is AnalyticsConversation");
         }
         
@@ -116,57 +116,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetReportingSchedule
-        /// </summary>
-        [Test]
-        public void GetReportingScheduleTest()
-        {
-            // TODO: add unit test for the method 'GetReportingSchedule'
-            string scheduleId = null; // TODO: replace null with proper value
-            var response = instance.GetReportingSchedule(scheduleId);
-            Assert.IsInstanceOf<ReportSchedule> (response, "response is ReportSchedule");
-        }
-        
-        /// <summary>
-        /// Test GetReportingScheduleHistory
-        /// </summary>
-        [Test]
-        public void GetReportingScheduleHistoryTest()
-        {
-            // TODO: add unit test for the method 'GetReportingScheduleHistory'
-            string scheduleId = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            int? pageSize = null; // TODO: replace null with proper value
-            var response = instance.GetReportingScheduleHistory(scheduleId, pageNumber, pageSize);
-            Assert.IsInstanceOf<ReportRunEntryEntityDomainListing> (response, "response is ReportRunEntryEntityDomainListing");
-        }
-        
-        /// <summary>
-        /// Test GetReportingScheduleHistoryLatest
-        /// </summary>
-        [Test]
-        public void GetReportingScheduleHistoryLatestTest()
-        {
-            // TODO: add unit test for the method 'GetReportingScheduleHistoryLatest'
-            string scheduleId = null; // TODO: replace null with proper value
-            var response = instance.GetReportingScheduleHistoryLatest(scheduleId);
-            Assert.IsInstanceOf<ReportRunEntry> (response, "response is ReportRunEntry");
-        }
-        
-        /// <summary>
-        /// Test GetReportingScheduleHistoryRunId
-        /// </summary>
-        [Test]
-        public void GetReportingScheduleHistoryRunIdTest()
-        {
-            // TODO: add unit test for the method 'GetReportingScheduleHistoryRunId'
-            string runId = null; // TODO: replace null with proper value
-            string scheduleId = null; // TODO: replace null with proper value
-            var response = instance.GetReportingScheduleHistoryRunId(runId, scheduleId);
-            Assert.IsInstanceOf<ReportRunEntry> (response, "response is ReportRunEntry");
-        }
-        
-        /// <summary>
         /// Test GetReportingSchedules
         /// </summary>
         [Test]
@@ -177,6 +126,57 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             var response = instance.GetReportingSchedules(pageNumber, pageSize);
             Assert.IsInstanceOf<ReportScheduleEntityListing> (response, "response is ReportScheduleEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetReportingSchedulesScheduleId
+        /// </summary>
+        [Test]
+        public void GetReportingSchedulesScheduleIdTest()
+        {
+            // TODO: add unit test for the method 'GetReportingSchedulesScheduleId'
+            string scheduleId = null; // TODO: replace null with proper value
+            var response = instance.GetReportingSchedulesScheduleId(scheduleId);
+            Assert.IsInstanceOf<ReportSchedule> (response, "response is ReportSchedule");
+        }
+        
+        /// <summary>
+        /// Test GetReportingSchedulesScheduleIdHistory
+        /// </summary>
+        [Test]
+        public void GetReportingSchedulesScheduleIdHistoryTest()
+        {
+            // TODO: add unit test for the method 'GetReportingSchedulesScheduleIdHistory'
+            string scheduleId = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            var response = instance.GetReportingSchedulesScheduleIdHistory(scheduleId, pageNumber, pageSize);
+            Assert.IsInstanceOf<ReportRunEntryEntityDomainListing> (response, "response is ReportRunEntryEntityDomainListing");
+        }
+        
+        /// <summary>
+        /// Test GetReportingSchedulesScheduleIdHistoryLatest
+        /// </summary>
+        [Test]
+        public void GetReportingSchedulesScheduleIdHistoryLatestTest()
+        {
+            // TODO: add unit test for the method 'GetReportingSchedulesScheduleIdHistoryLatest'
+            string scheduleId = null; // TODO: replace null with proper value
+            var response = instance.GetReportingSchedulesScheduleIdHistoryLatest(scheduleId);
+            Assert.IsInstanceOf<ReportRunEntry> (response, "response is ReportRunEntry");
+        }
+        
+        /// <summary>
+        /// Test GetReportingSchedulesScheduleIdHistoryRunId
+        /// </summary>
+        [Test]
+        public void GetReportingSchedulesScheduleIdHistoryRunIdTest()
+        {
+            // TODO: add unit test for the method 'GetReportingSchedulesScheduleIdHistoryRunId'
+            string runId = null; // TODO: replace null with proper value
+            string scheduleId = null; // TODO: replace null with proper value
+            var response = instance.GetReportingSchedulesScheduleIdHistoryRunId(runId, scheduleId);
+            Assert.IsInstanceOf<ReportRunEntry> (response, "response is ReportRunEntry");
         }
         
         /// <summary>
@@ -191,19 +191,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostConversationDetailsProperties
-        /// </summary>
-        [Test]
-        public void PostConversationDetailsPropertiesTest()
-        {
-            // TODO: add unit test for the method 'PostConversationDetailsProperties'
-            string conversationId = null; // TODO: replace null with proper value
-            PropertyIndexRequest body = null; // TODO: replace null with proper value
-            var response = instance.PostConversationDetailsProperties(conversationId, body);
-            Assert.IsInstanceOf<PropertyIndexRequest> (response, "response is PropertyIndexRequest");
-        }
-        
-        /// <summary>
         /// Test PostConversationsAggregatesQuery
         /// </summary>
         [Test]
@@ -213,6 +200,19 @@ namespace ININ.PureCloudApi.Test
             AggregationQuery body = null; // TODO: replace null with proper value
             var response = instance.PostConversationsAggregatesQuery(body);
             Assert.IsInstanceOf<AggregateQueryResponse> (response, "response is AggregateQueryResponse");
+        }
+        
+        /// <summary>
+        /// Test PostConversationsConversationIdDetailsProperties
+        /// </summary>
+        [Test]
+        public void PostConversationsConversationIdDetailsPropertiesTest()
+        {
+            // TODO: add unit test for the method 'PostConversationsConversationIdDetailsProperties'
+            string conversationId = null; // TODO: replace null with proper value
+            PropertyIndexRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostConversationsConversationIdDetailsProperties(conversationId, body);
+            Assert.IsInstanceOf<PropertyIndexRequest> (response, "response is PropertyIndexRequest");
         }
         
         /// <summary>
@@ -252,18 +252,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostReportingScheduleRunreport
-        /// </summary>
-        [Test]
-        public void PostReportingScheduleRunreportTest()
-        {
-            // TODO: add unit test for the method 'PostReportingScheduleRunreport'
-            string scheduleId = null; // TODO: replace null with proper value
-            var response = instance.PostReportingScheduleRunreport(scheduleId);
-            Assert.IsInstanceOf<RunNowResponse> (response, "response is RunNowResponse");
-        }
-        
-        /// <summary>
         /// Test PostReportingSchedules
         /// </summary>
         [Test]
@@ -273,6 +261,18 @@ namespace ININ.PureCloudApi.Test
             ReportSchedule body = null; // TODO: replace null with proper value
             var response = instance.PostReportingSchedules(body);
             Assert.IsInstanceOf<ReportSchedule> (response, "response is ReportSchedule");
+        }
+        
+        /// <summary>
+        /// Test PostReportingSchedulesScheduleIdRunreport
+        /// </summary>
+        [Test]
+        public void PostReportingSchedulesScheduleIdRunreportTest()
+        {
+            // TODO: add unit test for the method 'PostReportingSchedulesScheduleIdRunreport'
+            string scheduleId = null; // TODO: replace null with proper value
+            var response = instance.PostReportingSchedulesScheduleIdRunreport(scheduleId);
+            Assert.IsInstanceOf<RunNowResponse> (response, "response is RunNowResponse");
         }
         
         /// <summary>
@@ -300,15 +300,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutReportingSchedule
+        /// Test PutReportingSchedulesScheduleId
         /// </summary>
         [Test]
-        public void PutReportingScheduleTest()
+        public void PutReportingSchedulesScheduleIdTest()
         {
-            // TODO: add unit test for the method 'PutReportingSchedule'
+            // TODO: add unit test for the method 'PutReportingSchedulesScheduleId'
             string scheduleId = null; // TODO: replace null with proper value
             ReportSchedule body = null; // TODO: replace null with proper value
-            var response = instance.PutReportingSchedule(scheduleId, body);
+            var response = instance.PutReportingSchedulesScheduleId(scheduleId, body);
             Assert.IsInstanceOf<ReportSchedule> (response, "response is ReportSchedule");
         }
         

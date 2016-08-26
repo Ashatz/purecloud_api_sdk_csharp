@@ -91,20 +91,20 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'EdgeUri'
         }
         /// <summary>
-        /// Test the property 'LatestRelease'
-        /// </summary>
-        [Test]
-        public void LatestReleaseTest()
-        {
-            // TODO: unit test for the property 'LatestRelease'
-        }
-        /// <summary>
         /// Test the property 'Current'
         /// </summary>
         [Test]
         public void CurrentTest()
         {
             // TODO: unit test for the property 'Current'
+        }
+        /// <summary>
+        /// Test the property 'LatestRelease'
+        /// </summary>
+        [Test]
+        public void LatestReleaseTest()
+        {
+            // TODO: unit test for the property 'LatestRelease'
         }
         /// <summary>
         /// Test the property 'SelfUri'

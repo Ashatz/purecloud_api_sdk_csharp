@@ -3,23 +3,23 @@ title: GroupsApi
 ---
 ## ININ.PureCloudApi.Api.GroupsApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteGroupMembers**](GroupsApi.html#deletegroupmembers) | **DELETE** /api/v2/groups/{groupId}/members | Remove members |
-| [**GetGroup**](GroupsApi.html#getgroup) | **GET** /api/v2/groups/{groupId} | Get group |
-| [**GetGroupMembers**](GroupsApi.html#getgroupmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
+| [**DeleteGroupIdMembers**](GroupsApi.html#deletegroupidmembers) | **DELETE** /api/v2/groups/{groupId}/members | Remove members |
+| [**GetGroupId**](GroupsApi.html#getgroupid) | **GET** /api/v2/groups/{groupId} | Get group |
+| [**GetGroupIdMembers**](GroupsApi.html#getgroupidmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
 | [**GetGroups**](GroupsApi.html#getgroups) | **GET** /api/v2/groups | Get a group list |
 | [**GetSearch**](GroupsApi.html#getsearch) | **GET** /api/v2/groups/search | Search using q64 |
-| [**PostGroupMembers**](GroupsApi.html#postgroupmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
+| [**PostGroupIdMembers**](GroupsApi.html#postgroupidmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
 | [**PostGroups**](GroupsApi.html#postgroups) | **POST** /api/v2/groups | Create a group |
 | [**PostSearch**](GroupsApi.html#postsearch) | **POST** /api/v2/groups/search | Search |
 {: class="table table-striped"}
 
-<a name="deletegroupmembers"></a>
+<a name="deletegroupidmembers"></a>
 
-## void DeleteGroupMembers (string groupId, string ids)
+## void DeleteGroupIdMembers (string groupId, string ids)
 
 Remove members
 
@@ -35,7 +35,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteGroupMembersExample
+    public class DeleteGroupIdMembersExample
     {
         public void main()
         {
@@ -50,11 +50,11 @@ namespace Example
             try
             {
                 // Remove members
-                apiInstance.DeleteGroupMembers(groupId, ids);
+                apiInstance.DeleteGroupIdMembers(groupId, ids);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GroupsApi.DeleteGroupMembers: " + e.Message );
+                Debug.Print("Exception when calling GroupsApi.DeleteGroupIdMembers: " + e.Message );
             }
         }
     }
@@ -74,9 +74,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="getgroup"></a>
+<a name="getgroupid"></a>
 
-## [**Group**](Group.html) GetGroup (string groupId)
+## [**Group**](Group.html) GetGroupId (string groupId)
 
 Get group
 
@@ -92,7 +92,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetGroupExample
+    public class GetGroupIdExample
     {
         public void main()
         {
@@ -106,12 +106,12 @@ namespace Example
             try
             {
                 // Get group
-                Group result = apiInstance.GetGroup(groupId);
+                Group result = apiInstance.GetGroupId(groupId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GroupsApi.GetGroup: " + e.Message );
+                Debug.Print("Exception when calling GroupsApi.GetGroupId: " + e.Message );
             }
         }
     }
@@ -130,9 +130,9 @@ namespace Example
 
 [**Group**](Group.html)
 
-<a name="getgroupmembers"></a>
+<a name="getgroupidmembers"></a>
 
-## [**UserEntityListing**](UserEntityListing.html) GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**UserEntityListing**](UserEntityListing.html) GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 Get group members
 
@@ -148,7 +148,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetGroupMembersExample
+    public class GetGroupIdMembersExample
     {
         public void main()
         {
@@ -165,12 +165,12 @@ namespace Example
             try
             {
                 // Get group members
-                UserEntityListing result = apiInstance.GetGroupMembers(groupId, pageSize, pageNumber, sortOrder);
+                UserEntityListing result = apiInstance.GetGroupIdMembers(groupId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GroupsApi.GetGroupMembers: " + e.Message );
+                Debug.Print("Exception when calling GroupsApi.GetGroupIdMembers: " + e.Message );
             }
         }
     }
@@ -310,9 +310,9 @@ namespace Example
 
 [**GroupsSearchResponse**](GroupsSearchResponse.html)
 
-<a name="postgroupmembers"></a>
+<a name="postgroupidmembers"></a>
 
-## void PostGroupMembers (string groupId, GroupMembersUpdate body)
+## void PostGroupIdMembers (string groupId, GroupMembersUpdate body)
 
 Add members
 
@@ -328,7 +328,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostGroupMembersExample
+    public class PostGroupIdMembersExample
     {
         public void main()
         {
@@ -343,11 +343,11 @@ namespace Example
             try
             {
                 // Add members
-                apiInstance.PostGroupMembers(groupId, body);
+                apiInstance.PostGroupIdMembers(groupId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GroupsApi.PostGroupMembers: " + e.Message );
+                Debug.Print("Exception when calling GroupsApi.PostGroupIdMembers: " + e.Message );
             }
         }
     }

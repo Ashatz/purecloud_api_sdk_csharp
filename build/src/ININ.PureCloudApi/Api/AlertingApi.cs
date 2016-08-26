@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns></returns>
-        void DeleteInteractionstatsAlert (string alertId);
+        void DeleteInteractionstatsAlertsAlertId (string alertId);
 
         /// <summary>
         /// Delete an interaction stats alert
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteInteractionstatsAlertWithHttpInfo (string alertId);
+        ApiResponse<Object> DeleteInteractionstatsAlertsAlertIdWithHttpInfo (string alertId);
         /// <summary>
         /// Delete an interaction stats rule.
         /// </summary>
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns></returns>
-        void DeleteInteractionstatsRule (string ruleId);
+        void DeleteInteractionstatsRulesRuleId (string ruleId);
 
         /// <summary>
         /// Delete an interaction stats rule.
@@ -55,28 +55,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteInteractionstatsRuleWithHttpInfo (string ruleId);
-        /// <summary>
-        /// Get an interaction stats alert
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="alertId">Alert ID</param>
-        /// <returns>InteractionStatsAlert</returns>
-        InteractionStatsAlert GetInteractionstatsAlert (string alertId);
-
-        /// <summary>
-        /// Get an interaction stats alert
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="alertId">Alert ID</param>
-        /// <returns>ApiResponse of InteractionStatsAlert</returns>
-        ApiResponse<InteractionStatsAlert> GetInteractionstatsAlertWithHttpInfo (string alertId);
+        ApiResponse<Object> DeleteInteractionstatsRulesRuleIdWithHttpInfo (string ruleId);
         /// <summary>
         /// Get interaction stats alert list.
         /// </summary>
@@ -97,6 +76,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of InteractionStatsAlertContainer</returns>
         ApiResponse<InteractionStatsAlertContainer> GetInteractionstatsAlertsWithHttpInfo ();
         /// <summary>
+        /// Get an interaction stats alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>InteractionStatsAlert</returns>
+        InteractionStatsAlert GetInteractionstatsAlertsAlertId (string alertId);
+
+        /// <summary>
+        /// Get an interaction stats alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>ApiResponse of InteractionStatsAlert</returns>
+        ApiResponse<InteractionStatsAlert> GetInteractionstatsAlertsAlertIdWithHttpInfo (string alertId);
+        /// <summary>
         /// Gets user unread count of interaction stats alerts.
         /// </summary>
         /// <remarks>
@@ -116,27 +116,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of UnreadMetric</returns>
         ApiResponse<UnreadMetric> GetInteractionstatsAlertsUnreadWithHttpInfo ();
         /// <summary>
-        /// Get an interaction stats rule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleId">Rule ID</param>
-        /// <returns>InteractionStatsRule</returns>
-        InteractionStatsRule GetInteractionstatsRule (string ruleId);
-
-        /// <summary>
-        /// Get an interaction stats rule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleId">Rule ID</param>
-        /// <returns>ApiResponse of InteractionStatsRule</returns>
-        ApiResponse<InteractionStatsRule> GetInteractionstatsRuleWithHttpInfo (string ruleId);
-        /// <summary>
         /// Get an interaction stats rule list.
         /// </summary>
         /// <remarks>
@@ -155,6 +134,27 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InteractionStatsRuleContainer</returns>
         ApiResponse<InteractionStatsRuleContainer> GetInteractionstatsRulesWithHttpInfo ();
+        /// <summary>
+        /// Get an interaction stats rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>InteractionStatsRule</returns>
+        InteractionStatsRule GetInteractionstatsRulesRuleId (string ruleId);
+
+        /// <summary>
+        /// Get an interaction stats rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>ApiResponse of InteractionStatsRule</returns>
+        ApiResponse<InteractionStatsRule> GetInteractionstatsRulesRuleIdWithHttpInfo (string ruleId);
         /// <summary>
         /// Create an interaction stats rule.
         /// </summary>
@@ -186,7 +186,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <returns>UnreadStatus</returns>
-        UnreadStatus PutInteractionstatsAlert (string alertId, UnreadStatus body);
+        UnreadStatus PutInteractionstatsAlertsAlertId (string alertId, UnreadStatus body);
 
         /// <summary>
         /// Update an interaction stats alert read status
@@ -198,7 +198,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <returns>ApiResponse of UnreadStatus</returns>
-        ApiResponse<UnreadStatus> PutInteractionstatsAlertWithHttpInfo (string alertId, UnreadStatus body);
+        ApiResponse<UnreadStatus> PutInteractionstatsAlertsAlertIdWithHttpInfo (string alertId, UnreadStatus body);
         /// <summary>
         /// Update an interaction stats rule
         /// </summary>
@@ -209,7 +209,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <returns>InteractionStatsRule</returns>
-        InteractionStatsRule PutInteractionstatsRule (string ruleId, InteractionStatsRule body);
+        InteractionStatsRule PutInteractionstatsRulesRuleId (string ruleId, InteractionStatsRule body);
 
         /// <summary>
         /// Update an interaction stats rule
@@ -221,7 +221,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
-        ApiResponse<InteractionStatsRule> PutInteractionstatsRuleWithHttpInfo (string ruleId, InteractionStatsRule body);
+        ApiResponse<InteractionStatsRule> PutInteractionstatsRulesRuleIdWithHttpInfo (string ruleId, InteractionStatsRule body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -233,7 +233,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteInteractionstatsAlertAsync (string alertId);
+        System.Threading.Tasks.Task DeleteInteractionstatsAlertsAlertIdAsync (string alertId);
 
         /// <summary>
         /// Delete an interaction stats alert
@@ -244,7 +244,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInteractionstatsAlertAsyncWithHttpInfo (string alertId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInteractionstatsAlertsAlertIdAsyncWithHttpInfo (string alertId);
         /// <summary>
         /// Delete an interaction stats rule.
         /// </summary>
@@ -254,7 +254,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteInteractionstatsRuleAsync (string ruleId);
+        System.Threading.Tasks.Task DeleteInteractionstatsRulesRuleIdAsync (string ruleId);
 
         /// <summary>
         /// Delete an interaction stats rule.
@@ -265,28 +265,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInteractionstatsRuleAsyncWithHttpInfo (string ruleId);
-        /// <summary>
-        /// Get an interaction stats alert
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="alertId">Alert ID</param>
-        /// <returns>Task of InteractionStatsAlert</returns>
-        System.Threading.Tasks.Task<InteractionStatsAlert> GetInteractionstatsAlertAsync (string alertId);
-
-        /// <summary>
-        /// Get an interaction stats alert
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="alertId">Alert ID</param>
-        /// <returns>Task of ApiResponse (InteractionStatsAlert)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlert>> GetInteractionstatsAlertAsyncWithHttpInfo (string alertId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInteractionstatsRulesRuleIdAsyncWithHttpInfo (string ruleId);
         /// <summary>
         /// Get interaction stats alert list.
         /// </summary>
@@ -307,6 +286,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (InteractionStatsAlertContainer)</returns>
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlertContainer>> GetInteractionstatsAlertsAsyncWithHttpInfo ();
         /// <summary>
+        /// Get an interaction stats alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of InteractionStatsAlert</returns>
+        System.Threading.Tasks.Task<InteractionStatsAlert> GetInteractionstatsAlertsAlertIdAsync (string alertId);
+
+        /// <summary>
+        /// Get an interaction stats alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of ApiResponse (InteractionStatsAlert)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlert>> GetInteractionstatsAlertsAlertIdAsyncWithHttpInfo (string alertId);
+        /// <summary>
         /// Gets user unread count of interaction stats alerts.
         /// </summary>
         /// <remarks>
@@ -326,27 +326,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (UnreadMetric)</returns>
         System.Threading.Tasks.Task<ApiResponse<UnreadMetric>> GetInteractionstatsAlertsUnreadAsyncWithHttpInfo ();
         /// <summary>
-        /// Get an interaction stats rule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleId">Rule ID</param>
-        /// <returns>Task of InteractionStatsRule</returns>
-        System.Threading.Tasks.Task<InteractionStatsRule> GetInteractionstatsRuleAsync (string ruleId);
-
-        /// <summary>
-        /// Get an interaction stats rule.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleId">Rule ID</param>
-        /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> GetInteractionstatsRuleAsyncWithHttpInfo (string ruleId);
-        /// <summary>
         /// Get an interaction stats rule list.
         /// </summary>
         /// <remarks>
@@ -365,6 +344,27 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InteractionStatsRuleContainer)</returns>
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRuleContainer>> GetInteractionstatsRulesAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get an interaction stats rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of InteractionStatsRule</returns>
+        System.Threading.Tasks.Task<InteractionStatsRule> GetInteractionstatsRulesRuleIdAsync (string ruleId);
+
+        /// <summary>
+        /// Get an interaction stats rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> GetInteractionstatsRulesRuleIdAsyncWithHttpInfo (string ruleId);
         /// <summary>
         /// Create an interaction stats rule.
         /// </summary>
@@ -396,7 +396,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <returns>Task of UnreadStatus</returns>
-        System.Threading.Tasks.Task<UnreadStatus> PutInteractionstatsAlertAsync (string alertId, UnreadStatus body);
+        System.Threading.Tasks.Task<UnreadStatus> PutInteractionstatsAlertsAlertIdAsync (string alertId, UnreadStatus body);
 
         /// <summary>
         /// Update an interaction stats alert read status
@@ -408,7 +408,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <returns>Task of ApiResponse (UnreadStatus)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UnreadStatus>> PutInteractionstatsAlertAsyncWithHttpInfo (string alertId, UnreadStatus body);
+        System.Threading.Tasks.Task<ApiResponse<UnreadStatus>> PutInteractionstatsAlertsAlertIdAsyncWithHttpInfo (string alertId, UnreadStatus body);
         /// <summary>
         /// Update an interaction stats rule
         /// </summary>
@@ -419,7 +419,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <returns>Task of InteractionStatsRule</returns>
-        System.Threading.Tasks.Task<InteractionStatsRule> PutInteractionstatsRuleAsync (string ruleId, InteractionStatsRule body);
+        System.Threading.Tasks.Task<InteractionStatsRule> PutInteractionstatsRulesRuleIdAsync (string ruleId, InteractionStatsRule body);
 
         /// <summary>
         /// Update an interaction stats rule
@@ -431,7 +431,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PutInteractionstatsRuleAsyncWithHttpInfo (string ruleId, InteractionStatsRule body);
+        System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PutInteractionstatsRulesRuleIdAsyncWithHttpInfo (string ruleId, InteractionStatsRule body);
         #endregion Asynchronous Operations
     }
 
@@ -528,9 +528,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns></returns>
-        public void DeleteInteractionstatsAlert (string alertId)
+        public void DeleteInteractionstatsAlertsAlertId (string alertId)
         {
-             DeleteInteractionstatsAlertWithHttpInfo(alertId);
+             DeleteInteractionstatsAlertsAlertIdWithHttpInfo(alertId);
         }
 
         /// <summary>
@@ -539,11 +539,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteInteractionstatsAlertWithHttpInfo (string alertId)
+        public ApiResponse<Object> DeleteInteractionstatsAlertsAlertIdWithHttpInfo (string alertId)
         {
             // verify the required parameter 'alertId' is set
             if (alertId == null)
-                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->DeleteInteractionstatsAlert");
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->DeleteInteractionstatsAlertsAlertId");
 
             var localVarPath = "/api/v2/alerting/interactionstats/alerts/{alertId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -587,9 +587,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsAlert: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsAlertsAlertId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsAlert: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsAlertsAlertId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -603,9 +603,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteInteractionstatsAlertAsync (string alertId)
+        public async System.Threading.Tasks.Task DeleteInteractionstatsAlertsAlertIdAsync (string alertId)
         {
-             await DeleteInteractionstatsAlertAsyncWithHttpInfo(alertId);
+             await DeleteInteractionstatsAlertsAlertIdAsyncWithHttpInfo(alertId);
 
         }
 
@@ -615,11 +615,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInteractionstatsAlertAsyncWithHttpInfo (string alertId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInteractionstatsAlertsAlertIdAsyncWithHttpInfo (string alertId)
         {
             // verify the required parameter 'alertId' is set
             if (alertId == null)
-                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->DeleteInteractionstatsAlert");
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->DeleteInteractionstatsAlertsAlertId");
 
             var localVarPath = "/api/v2/alerting/interactionstats/alerts/{alertId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -663,9 +663,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsAlert: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsAlertsAlertId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsAlert: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsAlertsAlertId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -679,9 +679,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns></returns>
-        public void DeleteInteractionstatsRule (string ruleId)
+        public void DeleteInteractionstatsRulesRuleId (string ruleId)
         {
-             DeleteInteractionstatsRuleWithHttpInfo(ruleId);
+             DeleteInteractionstatsRulesRuleIdWithHttpInfo(ruleId);
         }
 
         /// <summary>
@@ -690,11 +690,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteInteractionstatsRuleWithHttpInfo (string ruleId)
+        public ApiResponse<Object> DeleteInteractionstatsRulesRuleIdWithHttpInfo (string ruleId)
         {
             // verify the required parameter 'ruleId' is set
             if (ruleId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->DeleteInteractionstatsRule");
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->DeleteInteractionstatsRulesRuleId");
 
             var localVarPath = "/api/v2/alerting/interactionstats/rules/{ruleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -738,9 +738,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsRule: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -754,9 +754,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteInteractionstatsRuleAsync (string ruleId)
+        public async System.Threading.Tasks.Task DeleteInteractionstatsRulesRuleIdAsync (string ruleId)
         {
-             await DeleteInteractionstatsRuleAsyncWithHttpInfo(ruleId);
+             await DeleteInteractionstatsRulesRuleIdAsyncWithHttpInfo(ruleId);
 
         }
 
@@ -766,11 +766,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInteractionstatsRuleAsyncWithHttpInfo (string ruleId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInteractionstatsRulesRuleIdAsyncWithHttpInfo (string ruleId)
         {
             // verify the required parameter 'ruleId' is set
             if (ruleId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->DeleteInteractionstatsRule");
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->DeleteInteractionstatsRulesRuleId");
 
             var localVarPath = "/api/v2/alerting/interactionstats/rules/{ruleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -814,167 +814,14 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsRule: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteInteractionstatsRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
-        }
-
-        /// <summary>
-        /// Get an interaction stats alert 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="alertId">Alert ID</param>
-        /// <returns>InteractionStatsAlert</returns>
-        public InteractionStatsAlert GetInteractionstatsAlert (string alertId)
-        {
-             ApiResponse<InteractionStatsAlert> localVarResponse = GetInteractionstatsAlertWithHttpInfo(alertId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get an interaction stats alert 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="alertId">Alert ID</param>
-        /// <returns>ApiResponse of InteractionStatsAlert</returns>
-        public ApiResponse< InteractionStatsAlert > GetInteractionstatsAlertWithHttpInfo (string alertId)
-        {
-            // verify the required parameter 'alertId' is set
-            if (alertId == null)
-                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->GetInteractionstatsAlert");
-
-            var localVarPath = "/api/v2/alerting/interactionstats/alerts/{alertId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (alertId != null) localVarPathParams.Add("alertId", Configuration.ApiClient.ParameterToString(alertId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsAlert: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsAlert: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<InteractionStatsAlert>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InteractionStatsAlert) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlert)));
-            
-        }
-
-        /// <summary>
-        /// Get an interaction stats alert 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="alertId">Alert ID</param>
-        /// <returns>Task of InteractionStatsAlert</returns>
-        public async System.Threading.Tasks.Task<InteractionStatsAlert> GetInteractionstatsAlertAsync (string alertId)
-        {
-             ApiResponse<InteractionStatsAlert> localVarResponse = await GetInteractionstatsAlertAsyncWithHttpInfo(alertId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get an interaction stats alert 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="alertId">Alert ID</param>
-        /// <returns>Task of ApiResponse (InteractionStatsAlert)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlert>> GetInteractionstatsAlertAsyncWithHttpInfo (string alertId)
-        {
-            // verify the required parameter 'alertId' is set
-            if (alertId == null)
-                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->GetInteractionstatsAlert");
-
-            var localVarPath = "/api/v2/alerting/interactionstats/alerts/{alertId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (alertId != null) localVarPathParams.Add("alertId", Configuration.ApiClient.ParameterToString(alertId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsAlert: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsAlert: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<InteractionStatsAlert>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InteractionStatsAlert) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlert)));
-            
         }
 
         /// <summary>
@@ -1115,6 +962,159 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<InteractionStatsAlertContainer>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (InteractionStatsAlertContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlertContainer)));
+            
+        }
+
+        /// <summary>
+        /// Get an interaction stats alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>InteractionStatsAlert</returns>
+        public InteractionStatsAlert GetInteractionstatsAlertsAlertId (string alertId)
+        {
+             ApiResponse<InteractionStatsAlert> localVarResponse = GetInteractionstatsAlertsAlertIdWithHttpInfo(alertId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an interaction stats alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>ApiResponse of InteractionStatsAlert</returns>
+        public ApiResponse< InteractionStatsAlert > GetInteractionstatsAlertsAlertIdWithHttpInfo (string alertId)
+        {
+            // verify the required parameter 'alertId' is set
+            if (alertId == null)
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->GetInteractionstatsAlertsAlertId");
+
+            var localVarPath = "/api/v2/alerting/interactionstats/alerts/{alertId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (alertId != null) localVarPathParams.Add("alertId", Configuration.ApiClient.ParameterToString(alertId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsAlertsAlertId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsAlertsAlertId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InteractionStatsAlert>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InteractionStatsAlert) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlert)));
+            
+        }
+
+        /// <summary>
+        /// Get an interaction stats alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of InteractionStatsAlert</returns>
+        public async System.Threading.Tasks.Task<InteractionStatsAlert> GetInteractionstatsAlertsAlertIdAsync (string alertId)
+        {
+             ApiResponse<InteractionStatsAlert> localVarResponse = await GetInteractionstatsAlertsAlertIdAsyncWithHttpInfo(alertId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an interaction stats alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of ApiResponse (InteractionStatsAlert)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsAlert>> GetInteractionstatsAlertsAlertIdAsyncWithHttpInfo (string alertId)
+        {
+            // verify the required parameter 'alertId' is set
+            if (alertId == null)
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->GetInteractionstatsAlertsAlertId");
+
+            var localVarPath = "/api/v2/alerting/interactionstats/alerts/{alertId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (alertId != null) localVarPathParams.Add("alertId", Configuration.ApiClient.ParameterToString(alertId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsAlertsAlertId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsAlertsAlertId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InteractionStatsAlert>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InteractionStatsAlert) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsAlert)));
             
         }
 
@@ -1260,159 +1260,6 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get an interaction stats rule. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleId">Rule ID</param>
-        /// <returns>InteractionStatsRule</returns>
-        public InteractionStatsRule GetInteractionstatsRule (string ruleId)
-        {
-             ApiResponse<InteractionStatsRule> localVarResponse = GetInteractionstatsRuleWithHttpInfo(ruleId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get an interaction stats rule. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleId">Rule ID</param>
-        /// <returns>ApiResponse of InteractionStatsRule</returns>
-        public ApiResponse< InteractionStatsRule > GetInteractionstatsRuleWithHttpInfo (string ruleId)
-        {
-            // verify the required parameter 'ruleId' is set
-            if (ruleId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->GetInteractionstatsRule");
-
-            var localVarPath = "/api/v2/alerting/interactionstats/rules/{ruleId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (ruleId != null) localVarPathParams.Add("ruleId", Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsRule: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InteractionStatsRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
-            
-        }
-
-        /// <summary>
-        /// Get an interaction stats rule. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleId">Rule ID</param>
-        /// <returns>Task of InteractionStatsRule</returns>
-        public async System.Threading.Tasks.Task<InteractionStatsRule> GetInteractionstatsRuleAsync (string ruleId)
-        {
-             ApiResponse<InteractionStatsRule> localVarResponse = await GetInteractionstatsRuleAsyncWithHttpInfo(ruleId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get an interaction stats rule. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ruleId">Rule ID</param>
-        /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> GetInteractionstatsRuleAsyncWithHttpInfo (string ruleId)
-        {
-            // verify the required parameter 'ruleId' is set
-            if (ruleId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->GetInteractionstatsRule");
-
-            var localVarPath = "/api/v2/alerting/interactionstats/rules/{ruleId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (ruleId != null) localVarPathParams.Add("ruleId", Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsRule: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InteractionStatsRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
-            
-        }
-
-        /// <summary>
         /// Get an interaction stats rule list. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1550,6 +1397,159 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<InteractionStatsRuleContainer>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (InteractionStatsRuleContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRuleContainer)));
+            
+        }
+
+        /// <summary>
+        /// Get an interaction stats rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>InteractionStatsRule</returns>
+        public InteractionStatsRule GetInteractionstatsRulesRuleId (string ruleId)
+        {
+             ApiResponse<InteractionStatsRule> localVarResponse = GetInteractionstatsRulesRuleIdWithHttpInfo(ruleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an interaction stats rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>ApiResponse of InteractionStatsRule</returns>
+        public ApiResponse< InteractionStatsRule > GetInteractionstatsRulesRuleIdWithHttpInfo (string ruleId)
+        {
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->GetInteractionstatsRulesRuleId");
+
+            var localVarPath = "/api/v2/alerting/interactionstats/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ruleId != null) localVarPathParams.Add("ruleId", Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InteractionStatsRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
+            
+        }
+
+        /// <summary>
+        /// Get an interaction stats rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of InteractionStatsRule</returns>
+        public async System.Threading.Tasks.Task<InteractionStatsRule> GetInteractionstatsRulesRuleIdAsync (string ruleId)
+        {
+             ApiResponse<InteractionStatsRule> localVarResponse = await GetInteractionstatsRulesRuleIdAsyncWithHttpInfo(ruleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an interaction stats rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> GetInteractionstatsRulesRuleIdAsyncWithHttpInfo (string ruleId)
+        {
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->GetInteractionstatsRulesRuleId");
+
+            var localVarPath = "/api/v2/alerting/interactionstats/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ruleId != null) localVarPathParams.Add("ruleId", Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetInteractionstatsRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InteractionStatsRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
             
         }
 
@@ -1727,9 +1727,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <returns>UnreadStatus</returns>
-        public UnreadStatus PutInteractionstatsAlert (string alertId, UnreadStatus body)
+        public UnreadStatus PutInteractionstatsAlertsAlertId (string alertId, UnreadStatus body)
         {
-             ApiResponse<UnreadStatus> localVarResponse = PutInteractionstatsAlertWithHttpInfo(alertId, body);
+             ApiResponse<UnreadStatus> localVarResponse = PutInteractionstatsAlertsAlertIdWithHttpInfo(alertId, body);
              return localVarResponse.Data;
         }
 
@@ -1740,14 +1740,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <returns>ApiResponse of UnreadStatus</returns>
-        public ApiResponse< UnreadStatus > PutInteractionstatsAlertWithHttpInfo (string alertId, UnreadStatus body)
+        public ApiResponse< UnreadStatus > PutInteractionstatsAlertsAlertIdWithHttpInfo (string alertId, UnreadStatus body)
         {
             // verify the required parameter 'alertId' is set
             if (alertId == null)
-                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->PutInteractionstatsAlert");
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->PutInteractionstatsAlertsAlertId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutInteractionstatsAlert");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutInteractionstatsAlertsAlertId");
 
             var localVarPath = "/api/v2/alerting/interactionstats/alerts/{alertId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1799,9 +1799,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsAlert: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsAlertsAlertId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsAlert: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsAlertsAlertId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UnreadStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1816,9 +1816,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <returns>Task of UnreadStatus</returns>
-        public async System.Threading.Tasks.Task<UnreadStatus> PutInteractionstatsAlertAsync (string alertId, UnreadStatus body)
+        public async System.Threading.Tasks.Task<UnreadStatus> PutInteractionstatsAlertsAlertIdAsync (string alertId, UnreadStatus body)
         {
-             ApiResponse<UnreadStatus> localVarResponse = await PutInteractionstatsAlertAsyncWithHttpInfo(alertId, body);
+             ApiResponse<UnreadStatus> localVarResponse = await PutInteractionstatsAlertsAlertIdAsyncWithHttpInfo(alertId, body);
              return localVarResponse.Data;
 
         }
@@ -1830,14 +1830,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">InteractionStatsAlert</param>
         /// <returns>Task of ApiResponse (UnreadStatus)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UnreadStatus>> PutInteractionstatsAlertAsyncWithHttpInfo (string alertId, UnreadStatus body)
+        public async System.Threading.Tasks.Task<ApiResponse<UnreadStatus>> PutInteractionstatsAlertsAlertIdAsyncWithHttpInfo (string alertId, UnreadStatus body)
         {
             // verify the required parameter 'alertId' is set
             if (alertId == null)
-                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->PutInteractionstatsAlert");
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->PutInteractionstatsAlertsAlertId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutInteractionstatsAlert");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutInteractionstatsAlertsAlertId");
 
             var localVarPath = "/api/v2/alerting/interactionstats/alerts/{alertId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1889,9 +1889,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsAlert: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsAlertsAlertId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsAlert: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsAlertsAlertId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UnreadStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1906,9 +1906,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <returns>InteractionStatsRule</returns>
-        public InteractionStatsRule PutInteractionstatsRule (string ruleId, InteractionStatsRule body)
+        public InteractionStatsRule PutInteractionstatsRulesRuleId (string ruleId, InteractionStatsRule body)
         {
-             ApiResponse<InteractionStatsRule> localVarResponse = PutInteractionstatsRuleWithHttpInfo(ruleId, body);
+             ApiResponse<InteractionStatsRule> localVarResponse = PutInteractionstatsRulesRuleIdWithHttpInfo(ruleId, body);
              return localVarResponse.Data;
         }
 
@@ -1919,14 +1919,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
-        public ApiResponse< InteractionStatsRule > PutInteractionstatsRuleWithHttpInfo (string ruleId, InteractionStatsRule body)
+        public ApiResponse< InteractionStatsRule > PutInteractionstatsRulesRuleIdWithHttpInfo (string ruleId, InteractionStatsRule body)
         {
             // verify the required parameter 'ruleId' is set
             if (ruleId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->PutInteractionstatsRule");
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->PutInteractionstatsRulesRuleId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutInteractionstatsRule");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutInteractionstatsRulesRuleId");
 
             var localVarPath = "/api/v2/alerting/interactionstats/rules/{ruleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1978,9 +1978,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsRule: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1995,9 +1995,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <returns>Task of InteractionStatsRule</returns>
-        public async System.Threading.Tasks.Task<InteractionStatsRule> PutInteractionstatsRuleAsync (string ruleId, InteractionStatsRule body)
+        public async System.Threading.Tasks.Task<InteractionStatsRule> PutInteractionstatsRulesRuleIdAsync (string ruleId, InteractionStatsRule body)
         {
-             ApiResponse<InteractionStatsRule> localVarResponse = await PutInteractionstatsRuleAsyncWithHttpInfo(ruleId, body);
+             ApiResponse<InteractionStatsRule> localVarResponse = await PutInteractionstatsRulesRuleIdAsyncWithHttpInfo(ruleId, body);
              return localVarResponse.Data;
 
         }
@@ -2009,14 +2009,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">AlertingRule</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PutInteractionstatsRuleAsyncWithHttpInfo (string ruleId, InteractionStatsRule body)
+        public async System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PutInteractionstatsRulesRuleIdAsyncWithHttpInfo (string ruleId, InteractionStatsRule body)
         {
             // verify the required parameter 'ruleId' is set
             if (ruleId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->PutInteractionstatsRule");
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->PutInteractionstatsRulesRuleId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutInteractionstatsRule");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutInteractionstatsRulesRuleId");
 
             var localVarPath = "/api/v2/alerting/interactionstats/rules/{ruleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2068,9 +2068,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsRule: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsRule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutInteractionstatsRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

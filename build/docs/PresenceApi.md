@@ -3,23 +3,23 @@ title: PresenceApi
 ---
 ## ININ.PureCloudApi.Api.PresenceApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeletePresencedefinition**](PresenceApi.html#deletepresencedefinition) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition |
-| [**GetPresencedefinition**](PresenceApi.html#getpresencedefinition) | **GET** /api/v2/presencedefinitions/{presenceId} | Get a Presence Definition |
+| [**DeletePresenceId**](PresenceApi.html#deletepresenceid) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition |
+| [**GetPresenceId**](PresenceApi.html#getpresenceid) | **GET** /api/v2/presencedefinitions/{presenceId} | Get a Presence Definition |
 | [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions |
 | [**GetSystempresences**](PresenceApi.html#getsystempresences) | **GET** /api/v2/systempresences | Get the list of SystemPresences |
-| [**GetUserPresence**](PresenceApi.html#getuserpresence) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
-| [**PatchUserPresence**](PresenceApi.html#patchuserpresence) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
+| [**GetUserIdPresencesSourceId**](PresenceApi.html#getuseridpresencessourceid) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
+| [**PatchUserIdPresencesSourceId**](PresenceApi.html#patchuseridpresencessourceid) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
 | [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
-| [**PutPresencedefinition**](PresenceApi.html#putpresencedefinition) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
+| [**PutPresenceId**](PresenceApi.html#putpresenceid) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
 {: class="table table-striped"}
 
-<a name="deletepresencedefinition"></a>
+<a name="deletepresenceid"></a>
 
-## [**OrganizationPresence**](OrganizationPresence.html) DeletePresencedefinition (string presenceId)
+## [**OrganizationPresence**](OrganizationPresence.html) DeletePresenceId (string presenceId)
 
 Delete a Presence Definition
 
@@ -35,7 +35,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeletePresencedefinitionExample
+    public class DeletePresenceIdExample
     {
         public void main()
         {
@@ -49,12 +49,12 @@ namespace Example
             try
             {
                 // Delete a Presence Definition
-                OrganizationPresence result = apiInstance.DeletePresencedefinition(presenceId);
+                OrganizationPresence result = apiInstance.DeletePresenceId(presenceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.DeletePresencedefinition: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.DeletePresenceId: " + e.Message );
             }
         }
     }
@@ -73,9 +73,9 @@ namespace Example
 
 [**OrganizationPresence**](OrganizationPresence.html)
 
-<a name="getpresencedefinition"></a>
+<a name="getpresenceid"></a>
 
-## [**OrganizationPresence**](OrganizationPresence.html) GetPresencedefinition (string presenceId)
+## [**OrganizationPresence**](OrganizationPresence.html) GetPresenceId (string presenceId)
 
 Get a Presence Definition
 
@@ -91,7 +91,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetPresencedefinitionExample
+    public class GetPresenceIdExample
     {
         public void main()
         {
@@ -105,12 +105,12 @@ namespace Example
             try
             {
                 // Get a Presence Definition
-                OrganizationPresence result = apiInstance.GetPresencedefinition(presenceId);
+                OrganizationPresence result = apiInstance.GetPresenceId(presenceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.GetPresencedefinition: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.GetPresenceId: " + e.Message );
             }
         }
     }
@@ -240,9 +240,9 @@ This endpoint does require any parameters.
 
 [**List<SystemPresence>**](SystemPresence.html)
 
-<a name="getuserpresence"></a>
+<a name="getuseridpresencessourceid"></a>
 
-## [**UserPresence**](UserPresence.html) GetUserPresence (string userId, string sourceId)
+## [**UserPresence**](UserPresence.html) GetUserIdPresencesSourceId (string userId, string sourceId)
 
 Get a user's Presence
 
@@ -258,7 +258,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserPresenceExample
+    public class GetUserIdPresencesSourceIdExample
     {
         public void main()
         {
@@ -273,12 +273,12 @@ namespace Example
             try
             {
                 // Get a user's Presence
-                UserPresence result = apiInstance.GetUserPresence(userId, sourceId);
+                UserPresence result = apiInstance.GetUserIdPresencesSourceId(userId, sourceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.GetUserPresence: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.GetUserIdPresencesSourceId: " + e.Message );
             }
         }
     }
@@ -298,9 +298,9 @@ namespace Example
 
 [**UserPresence**](UserPresence.html)
 
-<a name="patchuserpresence"></a>
+<a name="patchuseridpresencessourceid"></a>
 
-## [**UserPresence**](UserPresence.html) PatchUserPresence (string userId, string sourceId, UserPresence body)
+## [**UserPresence**](UserPresence.html) PatchUserIdPresencesSourceId (string userId, string sourceId, UserPresence body)
 
 Patch a user's Presence
 
@@ -316,7 +316,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchUserPresenceExample
+    public class PatchUserIdPresencesSourceIdExample
     {
         public void main()
         {
@@ -332,12 +332,12 @@ namespace Example
             try
             {
                 // Patch a user's Presence
-                UserPresence result = apiInstance.PatchUserPresence(userId, sourceId, body);
+                UserPresence result = apiInstance.PatchUserIdPresencesSourceId(userId, sourceId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.PatchUserPresence: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.PatchUserIdPresencesSourceId: " + e.Message );
             }
         }
     }
@@ -414,9 +414,9 @@ namespace Example
 
 [**OrganizationPresence**](OrganizationPresence.html)
 
-<a name="putpresencedefinition"></a>
+<a name="putpresenceid"></a>
 
-## [**OrganizationPresence**](OrganizationPresence.html) PutPresencedefinition (string presenceId, OrganizationPresence body)
+## [**OrganizationPresence**](OrganizationPresence.html) PutPresenceId (string presenceId, OrganizationPresence body)
 
 Update a Presence Definition
 
@@ -432,7 +432,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutPresencedefinitionExample
+    public class PutPresenceIdExample
     {
         public void main()
         {
@@ -447,12 +447,12 @@ namespace Example
             try
             {
                 // Update a Presence Definition
-                OrganizationPresence result = apiInstance.PutPresencedefinition(presenceId, body);
+                OrganizationPresence result = apiInstance.PutPresenceId(presenceId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.PutPresencedefinition: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.PutPresenceId: " + e.Message );
             }
         }
     }

@@ -3,60 +3,60 @@ title: RoutingApi
 ---
 ## ININ.PureCloudApi.Api.RoutingApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteEmailDomain**](RoutingApi.html#deleteemaildomain) | **DELETE** /api/v2/routing/email/domains/{domainId} | Delete a domain |
-| [**DeleteEmailDomainsDomainNameRoute**](RoutingApi.html#deleteemaildomainsdomainnameroute) | **DELETE** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
-| [**DeleteQueue**](RoutingApi.html#deletequeue) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
-| [**DeleteQueueUser**](RoutingApi.html#deletequeueuser) | **DELETE** /api/v2/routing/queues/{queueId}/users/{memberId} | Delete queue member |
-| [**DeleteQueueWrapupcode**](RoutingApi.html#deletequeuewrapupcode) | **DELETE** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
-| [**DeleteSkill**](RoutingApi.html#deleteskill) | **DELETE** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
-| [**DeleteUserRoutingskill**](RoutingApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
+| [**DeleteEmailDomainsDomainId**](RoutingApi.html#deleteemaildomainsdomainid) | **DELETE** /api/v2/routing/email/domains/{domainId} | Delete a domain |
+| [**DeleteEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#deleteemaildomainsdomainnameroutesrouteid) | **DELETE** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
+| [**DeleteQueuesQueueId**](RoutingApi.html#deletequeuesqueueid) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
+| [**DeleteQueuesQueueIdUsersMemberId**](RoutingApi.html#deletequeuesqueueidusersmemberid) | **DELETE** /api/v2/routing/queues/{queueId}/users/{memberId} | Delete queue member |
+| [**DeleteQueuesQueueIdWrapupcodesCodeId**](RoutingApi.html#deletequeuesqueueidwrapupcodescodeid) | **DELETE** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
+| [**DeleteSkillsSkillId**](RoutingApi.html#deleteskillsskillid) | **DELETE** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
+| [**DeleteUserIdRoutingskillsSkillId**](RoutingApi.html#deleteuseridroutingskillsskillid) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
 | [**DeleteUtilization**](RoutingApi.html#deleteutilization) | **DELETE** /api/v2/routing/utilization | Delete utilization settings and revert to system defaults. |
-| [**DeleteWrapupcode**](RoutingApi.html#deletewrapupcode) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
+| [**DeleteWrapupcodesCodeId**](RoutingApi.html#deletewrapupcodescodeid) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
 | [**GetEmailDomains**](RoutingApi.html#getemaildomains) | **GET** /api/v2/routing/email/domains | Get domains |
-| [**GetEmailDomainsDomainNameRoute**](RoutingApi.html#getemaildomainsdomainnameroute) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
-| [**GetEmailDomainsDomainNameRoutes**](RoutingApi.html#getemaildomainsdomainnameroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
+| [**GetEmailDomainsDomainnameRoutes**](RoutingApi.html#getemaildomainsdomainnameroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
+| [**GetEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#getemaildomainsdomainnameroutesrouteid) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
 | [**GetEmailSetup**](RoutingApi.html#getemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
-| [**GetQueue**](RoutingApi.html#getqueue) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
-| [**GetQueueConversations**](RoutingApi.html#getqueueconversations) | **GET** /api/v2/routing/queues/{queueId}/conversations | Get recent conversations that are still active |
-| [**GetQueueConversationsCallbacks**](RoutingApi.html#getqueueconversationscallbacks) | **GET** /api/v2/routing/queues/{queueId}/conversations/callbacks | Get recent callback conversations that are still active |
-| [**GetQueueConversationsCalls**](RoutingApi.html#getqueueconversationscalls) | **GET** /api/v2/routing/queues/{queueId}/conversations/calls | Get recent call conversations that are still active |
-| [**GetQueueConversationsChats**](RoutingApi.html#getqueueconversationschats) | **GET** /api/v2/routing/queues/{queueId}/conversations/chats | Get recent chat conversations that are still active |
-| [**GetQueueConversationsEmails**](RoutingApi.html#getqueueconversationsemails) | **GET** /api/v2/routing/queues/{queueId}/conversations/emails | Get recent email conversations that are still active |
-| [**GetQueueEstimatedwaittime**](RoutingApi.html#getqueueestimatedwaittime) | **GET** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
-| [**GetQueueUsers**](RoutingApi.html#getqueueusers) | **GET** /api/v2/routing/queues/{queueId}/users | Get the members of this queue |
-| [**GetQueueWrapupcodes**](RoutingApi.html#getqueuewrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
 | [**GetQueues**](RoutingApi.html#getqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
-| [**GetSkill**](RoutingApi.html#getskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
+| [**GetQueuesQueueId**](RoutingApi.html#getqueuesqueueid) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
+| [**GetQueuesQueueIdConversations**](RoutingApi.html#getqueuesqueueidconversations) | **GET** /api/v2/routing/queues/{queueId}/conversations | Get recent conversations that are still active |
+| [**GetQueuesQueueIdConversationsCallbacks**](RoutingApi.html#getqueuesqueueidconversationscallbacks) | **GET** /api/v2/routing/queues/{queueId}/conversations/callbacks | Get recent callback conversations that are still active |
+| [**GetQueuesQueueIdConversationsCalls**](RoutingApi.html#getqueuesqueueidconversationscalls) | **GET** /api/v2/routing/queues/{queueId}/conversations/calls | Get recent call conversations that are still active |
+| [**GetQueuesQueueIdConversationsChats**](RoutingApi.html#getqueuesqueueidconversationschats) | **GET** /api/v2/routing/queues/{queueId}/conversations/chats | Get recent chat conversations that are still active |
+| [**GetQueuesQueueIdConversationsEmails**](RoutingApi.html#getqueuesqueueidconversationsemails) | **GET** /api/v2/routing/queues/{queueId}/conversations/emails | Get recent email conversations that are still active |
+| [**GetQueuesQueueIdEstimatedwaittime**](RoutingApi.html#getqueuesqueueidestimatedwaittime) | **GET** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
+| [**GetQueuesQueueIdUsers**](RoutingApi.html#getqueuesqueueidusers) | **GET** /api/v2/routing/queues/{queueId}/users | Get the members of this queue |
+| [**GetQueuesQueueIdWrapupcodes**](RoutingApi.html#getqueuesqueueidwrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
 | [**GetSkills**](RoutingApi.html#getskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
-| [**GetUserRoutingskills**](RoutingApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
+| [**GetSkillsSkillId**](RoutingApi.html#getskillsskillid) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
+| [**GetUserIdRoutingskills**](RoutingApi.html#getuseridroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
 | [**GetUtilization**](RoutingApi.html#getutilization) | **GET** /api/v2/routing/utilization | Get the utilization settings. |
-| [**GetWrapupcode**](RoutingApi.html#getwrapupcode) | **GET** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
 | [**GetWrapupcodes**](RoutingApi.html#getwrapupcodes) | **GET** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
-| [**PatchQueueUser**](RoutingApi.html#patchqueueuser) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number of joined status for a User in a Queue |
-| [**PatchQueueUsers**](RoutingApi.html#patchqueueusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | Join or unjoin a set of users for a queue |
+| [**GetWrapupcodesCodeId**](RoutingApi.html#getwrapupcodescodeid) | **GET** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
+| [**PatchQueuesQueueIdUsers**](RoutingApi.html#patchqueuesqueueidusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | Join or unjoin a set of users for a queue |
+| [**PatchQueuesQueueIdUsersMemberId**](RoutingApi.html#patchqueuesqueueidusersmemberid) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number of joined status for a User in a Queue |
 | [**PostEmailDomains**](RoutingApi.html#postemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
-| [**PostEmailDomainsDomainNameRoutes**](RoutingApi.html#postemaildomainsdomainnameroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
-| [**PostQueueUsers**](RoutingApi.html#postqueueusers) | **POST** /api/v2/routing/queues/{queueId}/users | Bulk add or delete up to 100 queue members |
-| [**PostQueueWrapupcodes**](RoutingApi.html#postqueuewrapupcodes) | **POST** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
+| [**PostEmailDomainsDomainnameRoutes**](RoutingApi.html#postemaildomainsdomainnameroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
 | [**PostQueues**](RoutingApi.html#postqueues) | **POST** /api/v2/routing/queues | Create queue |
 | [**PostQueuesObservationsQuery**](RoutingApi.html#postqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
+| [**PostQueuesQueueIdUsers**](RoutingApi.html#postqueuesqueueidusers) | **POST** /api/v2/routing/queues/{queueId}/users | Bulk add or delete up to 100 queue members |
+| [**PostQueuesQueueIdWrapupcodes**](RoutingApi.html#postqueuesqueueidwrapupcodes) | **POST** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
 | [**PostSkills**](RoutingApi.html#postskills) | **POST** /api/v2/routing/skills | Create Skill |
-| [**PostUserRoutingskills**](RoutingApi.html#postuserroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
+| [**PostUserIdRoutingskills**](RoutingApi.html#postuseridroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
 | [**PostWrapupcodes**](RoutingApi.html#postwrapupcodes) | **POST** /api/v2/routing/wrapupcodes | Create a wrap-up code |
-| [**PutEmailDomainsDomainNameRoute**](RoutingApi.html#putemaildomainsdomainnameroute) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
-| [**PutQueue**](RoutingApi.html#putqueue) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
-| [**PutUserRoutingskill**](RoutingApi.html#putuserroutingskill) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
+| [**PutEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#putemaildomainsdomainnameroutesrouteid) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
+| [**PutQueuesQueueId**](RoutingApi.html#putqueuesqueueid) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
+| [**PutUserIdRoutingskillsSkillId**](RoutingApi.html#putuseridroutingskillsskillid) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
 | [**PutUtilization**](RoutingApi.html#pututilization) | **PUT** /api/v2/routing/utilization | Update the utilization settings. |
-| [**PutWrapupcode**](RoutingApi.html#putwrapupcode) | **PUT** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
+| [**PutWrapupcodesCodeId**](RoutingApi.html#putwrapupcodescodeid) | **PUT** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
 {: class="table table-striped"}
 
-<a name="deleteemaildomain"></a>
+<a name="deleteemaildomainsdomainid"></a>
 
-## **string** DeleteEmailDomain (string domainId)
+## **string** DeleteEmailDomainsDomainId (string domainId)
 
 Delete a domain
 
@@ -72,7 +72,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteEmailDomainExample
+    public class DeleteEmailDomainsDomainIdExample
     {
         public void main()
         {
@@ -86,12 +86,12 @@ namespace Example
             try
             {
                 // Delete a domain
-                string result = apiInstance.DeleteEmailDomain(domainId);
+                string result = apiInstance.DeleteEmailDomainsDomainId(domainId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.DeleteEmailDomain: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.DeleteEmailDomainsDomainId: " + e.Message );
             }
         }
     }
@@ -110,9 +110,9 @@ namespace Example
 
 **string**
 
-<a name="deleteemaildomainsdomainnameroute"></a>
+<a name="deleteemaildomainsdomainnameroutesrouteid"></a>
 
-## **string** DeleteEmailDomainsDomainNameRoute (string domainName, string routeId)
+## **string** DeleteEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
 
 Delete a route
 
@@ -128,7 +128,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteEmailDomainsDomainNameRouteExample
+    public class DeleteEmailDomainsDomainnameRoutesRouteIdExample
     {
         public void main()
         {
@@ -143,12 +143,12 @@ namespace Example
             try
             {
                 // Delete a route
-                string result = apiInstance.DeleteEmailDomainsDomainNameRoute(domainName, routeId);
+                string result = apiInstance.DeleteEmailDomainsDomainnameRoutesRouteId(domainName, routeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.DeleteEmailDomainsDomainNameRoute: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.DeleteEmailDomainsDomainnameRoutesRouteId: " + e.Message );
             }
         }
     }
@@ -168,9 +168,9 @@ namespace Example
 
 **string**
 
-<a name="deletequeue"></a>
+<a name="deletequeuesqueueid"></a>
 
-## **string** DeleteQueue (string queueId, bool? forceDelete = null)
+## **string** DeleteQueuesQueueId (string queueId, bool? forceDelete = null)
 
 Delete a queue
 
@@ -186,7 +186,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteQueueExample
+    public class DeleteQueuesQueueIdExample
     {
         public void main()
         {
@@ -201,12 +201,12 @@ namespace Example
             try
             {
                 // Delete a queue
-                string result = apiInstance.DeleteQueue(queueId, forceDelete);
+                string result = apiInstance.DeleteQueuesQueueId(queueId, forceDelete);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.DeleteQueue: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.DeleteQueuesQueueId: " + e.Message );
             }
         }
     }
@@ -226,9 +226,9 @@ namespace Example
 
 **string**
 
-<a name="deletequeueuser"></a>
+<a name="deletequeuesqueueidusersmemberid"></a>
 
-## **string** DeleteQueueUser (string queueId, string memberId)
+## **string** DeleteQueuesQueueIdUsersMemberId (string queueId, string memberId)
 
 Delete queue member
 
@@ -244,7 +244,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteQueueUserExample
+    public class DeleteQueuesQueueIdUsersMemberIdExample
     {
         public void main()
         {
@@ -259,12 +259,12 @@ namespace Example
             try
             {
                 // Delete queue member
-                string result = apiInstance.DeleteQueueUser(queueId, memberId);
+                string result = apiInstance.DeleteQueuesQueueIdUsersMemberId(queueId, memberId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.DeleteQueueUser: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.DeleteQueuesQueueIdUsersMemberId: " + e.Message );
             }
         }
     }
@@ -284,9 +284,9 @@ namespace Example
 
 **string**
 
-<a name="deletequeuewrapupcode"></a>
+<a name="deletequeuesqueueidwrapupcodescodeid"></a>
 
-## **string** DeleteQueueWrapupcode (string queueId, string codeId)
+## **string** DeleteQueuesQueueIdWrapupcodesCodeId (string queueId, string codeId)
 
 Delete a wrap-up code from a queue
 
@@ -302,7 +302,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteQueueWrapupcodeExample
+    public class DeleteQueuesQueueIdWrapupcodesCodeIdExample
     {
         public void main()
         {
@@ -317,12 +317,12 @@ namespace Example
             try
             {
                 // Delete a wrap-up code from a queue
-                string result = apiInstance.DeleteQueueWrapupcode(queueId, codeId);
+                string result = apiInstance.DeleteQueuesQueueIdWrapupcodesCodeId(queueId, codeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.DeleteQueueWrapupcode: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.DeleteQueuesQueueIdWrapupcodesCodeId: " + e.Message );
             }
         }
     }
@@ -342,9 +342,9 @@ namespace Example
 
 **string**
 
-<a name="deleteskill"></a>
+<a name="deleteskillsskillid"></a>
 
-## **string** DeleteSkill (string skillId)
+## **string** DeleteSkillsSkillId (string skillId)
 
 Delete Routing Skill
 
@@ -360,7 +360,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteSkillExample
+    public class DeleteSkillsSkillIdExample
     {
         public void main()
         {
@@ -374,12 +374,12 @@ namespace Example
             try
             {
                 // Delete Routing Skill
-                string result = apiInstance.DeleteSkill(skillId);
+                string result = apiInstance.DeleteSkillsSkillId(skillId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.DeleteSkill: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.DeleteSkillsSkillId: " + e.Message );
             }
         }
     }
@@ -398,9 +398,9 @@ namespace Example
 
 **string**
 
-<a name="deleteuserroutingskill"></a>
+<a name="deleteuseridroutingskillsskillid"></a>
 
-## **string** DeleteUserRoutingskill (string userId, string skillId)
+## **string** DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
 
 Remove routing skill from user
 
@@ -416,7 +416,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteUserRoutingskillExample
+    public class DeleteUserIdRoutingskillsSkillIdExample
     {
         public void main()
         {
@@ -431,12 +431,12 @@ namespace Example
             try
             {
                 // Remove routing skill from user
-                string result = apiInstance.DeleteUserRoutingskill(userId, skillId);
+                string result = apiInstance.DeleteUserIdRoutingskillsSkillId(userId, skillId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.DeleteUserRoutingskill: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.DeleteUserIdRoutingskillsSkillId: " + e.Message );
             }
         }
     }
@@ -507,9 +507,9 @@ This endpoint does require any parameters.
 
 **string**
 
-<a name="deletewrapupcode"></a>
+<a name="deletewrapupcodescodeid"></a>
 
-## **string** DeleteWrapupcode (string codeId)
+## **string** DeleteWrapupcodesCodeId (string codeId)
 
 Delete wrap-up code
 
@@ -525,7 +525,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteWrapupcodeExample
+    public class DeleteWrapupcodesCodeIdExample
     {
         public void main()
         {
@@ -539,12 +539,12 @@ namespace Example
             try
             {
                 // Delete wrap-up code
-                string result = apiInstance.DeleteWrapupcode(codeId);
+                string result = apiInstance.DeleteWrapupcodesCodeId(codeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.DeleteWrapupcode: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.DeleteWrapupcodesCodeId: " + e.Message );
             }
         }
     }
@@ -614,9 +614,65 @@ This endpoint does require any parameters.
 
 [**InboundDomainEntityListing**](InboundDomainEntityListing.html)
 
-<a name="getemaildomainsdomainnameroute"></a>
+<a name="getemaildomainsdomainnameroutes"></a>
 
-## [**InboundRoute**](InboundRoute.html) GetEmailDomainsDomainNameRoute (string domainName, string routeId)
+## [**InboundRouteEntityListing**](InboundRouteEntityListing.html) GetEmailDomainsDomainnameRoutes (string domainName)
+
+Get routes
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetEmailDomainsDomainnameRoutesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var domainName = domainName_example;  // string | email domain
+
+            try
+            {
+                // Get routes
+                InboundRouteEntityListing result = apiInstance.GetEmailDomainsDomainnameRoutes(domainName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetEmailDomainsDomainnameRoutes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainName** | **string**| email domain |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InboundRouteEntityListing**](InboundRouteEntityListing.html)
+
+<a name="getemaildomainsdomainnameroutesrouteid"></a>
+
+## [**InboundRoute**](InboundRoute.html) GetEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
 
 Get a route
 
@@ -632,7 +688,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetEmailDomainsDomainNameRouteExample
+    public class GetEmailDomainsDomainnameRoutesRouteIdExample
     {
         public void main()
         {
@@ -647,12 +703,12 @@ namespace Example
             try
             {
                 // Get a route
-                InboundRoute result = apiInstance.GetEmailDomainsDomainNameRoute(domainName, routeId);
+                InboundRoute result = apiInstance.GetEmailDomainsDomainnameRoutesRouteId(domainName, routeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.GetEmailDomainsDomainNameRoute: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.GetEmailDomainsDomainnameRoutesRouteId: " + e.Message );
             }
         }
     }
@@ -671,62 +727,6 @@ namespace Example
 ### Return type
 
 [**InboundRoute**](InboundRoute.html)
-
-<a name="getemaildomainsdomainnameroutes"></a>
-
-## [**InboundRouteEntityListing**](InboundRouteEntityListing.html) GetEmailDomainsDomainNameRoutes (string domainName)
-
-Get routes
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetEmailDomainsDomainNameRoutesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var domainName = domainName_example;  // string | email domain
-
-            try
-            {
-                // Get routes
-                InboundRouteEntityListing result = apiInstance.GetEmailDomainsDomainNameRoutes(domainName);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetEmailDomainsDomainNameRoutes: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **domainName** | **string**| email domain |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**InboundRouteEntityListing**](InboundRouteEntityListing.html)
 
 <a name="getemailsetup"></a>
 
@@ -778,544 +778,6 @@ This endpoint does require any parameters.
 ### Return type
 
 [**EmailSetup**](EmailSetup.html)
-
-<a name="getqueue"></a>
-
-## [**Queue**](Queue.html) GetQueue (string queueId)
-
-Get details about this queue.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetQueueExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-
-            try
-            {
-                // Get details about this queue.
-                Queue result = apiInstance.GetQueue(queueId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetQueue: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Queue**](Queue.html)
-
-<a name="getqueueconversations"></a>
-
-## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetQueueConversations (string queueId, int? pageSize = null, int? pageNumber = null)
-
-Get recent conversations that are still active
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetQueueConversationsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            {
-                // Get recent conversations that are still active
-                CallConversationEntityListing result = apiInstance.GetQueueConversations(queueId, pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetQueueConversations: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
-
-### Return type
-
-[**CallConversationEntityListing**](CallConversationEntityListing.html)
-
-<a name="getqueueconversationscallbacks"></a>
-
-## [**CallbackConversationEntityListing**](CallbackConversationEntityListing.html) GetQueueConversationsCallbacks (string queueId, int? pageSize = null, int? pageNumber = null)
-
-Get recent callback conversations that are still active
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetQueueConversationsCallbacksExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            {
-                // Get recent callback conversations that are still active
-                CallbackConversationEntityListing result = apiInstance.GetQueueConversationsCallbacks(queueId, pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetQueueConversationsCallbacks: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
-
-### Return type
-
-[**CallbackConversationEntityListing**](CallbackConversationEntityListing.html)
-
-<a name="getqueueconversationscalls"></a>
-
-## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetQueueConversationsCalls (string queueId, int? pageSize = null, int? pageNumber = null)
-
-Get recent call conversations that are still active
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetQueueConversationsCallsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            {
-                // Get recent call conversations that are still active
-                CallConversationEntityListing result = apiInstance.GetQueueConversationsCalls(queueId, pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetQueueConversationsCalls: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
-
-### Return type
-
-[**CallConversationEntityListing**](CallConversationEntityListing.html)
-
-<a name="getqueueconversationschats"></a>
-
-## [**ChatConversationEntityListing**](ChatConversationEntityListing.html) GetQueueConversationsChats (string queueId, int? pageSize = null, int? pageNumber = null)
-
-Get recent chat conversations that are still active
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetQueueConversationsChatsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            {
-                // Get recent chat conversations that are still active
-                ChatConversationEntityListing result = apiInstance.GetQueueConversationsChats(queueId, pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetQueueConversationsChats: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
-
-### Return type
-
-[**ChatConversationEntityListing**](ChatConversationEntityListing.html)
-
-<a name="getqueueconversationsemails"></a>
-
-## [**EmailConversationEntityListing**](EmailConversationEntityListing.html) GetQueueConversationsEmails (string queueId, int? pageSize = null, int? pageNumber = null)
-
-Get recent email conversations that are still active
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetQueueConversationsEmailsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            {
-                // Get recent email conversations that are still active
-                EmailConversationEntityListing result = apiInstance.GetQueueConversationsEmails(queueId, pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetQueueConversationsEmails: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
-
-### Return type
-
-[**EmailConversationEntityListing**](EmailConversationEntityListing.html)
-
-<a name="getqueueestimatedwaittime"></a>
-
-## [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html) GetQueueEstimatedwaittime (string queueId, string conversationId = null)
-
-Get Estimated Wait Time
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetQueueEstimatedwaittimeExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | queueId
-            var conversationId = conversationId_example;  // string | conversationId (optional) 
-
-            try
-            {
-                // Get Estimated Wait Time
-                EstimatedWaitTimePredictions result = apiInstance.GetQueueEstimatedwaittime(queueId, conversationId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetQueueEstimatedwaittime: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| queueId |  |
-| **conversationId** | **string**| conversationId | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html)
-
-<a name="getqueueusers"></a>
-
-## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetQueueUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
-
-Get the members of this queue
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetQueueUsersExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
-            var expand = expand_example;  // string | expand (optional) 
-            var directMembers = true;  // bool? | Only get users that are direct members of the queue (optional)  (default to false)
-
-            try
-            {
-                // Get the members of this queue
-                QueueMemberEntityListing result = apiInstance.GetQueueUsers(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetQueueUsers: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **expand** | **string**| expand | [optional]  |
-| **directMembers** | **bool?**| Only get users that are direct members of the queue | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-[**QueueMemberEntityListing**](QueueMemberEntityListing.html)
-
-<a name="getqueuewrapupcodes"></a>
-
-## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetQueueWrapupcodes (string queueId, string codeId)
-
-Get the wrap-up codes for a queue
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetQueueWrapupcodesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var codeId = codeId_example;  // string | Code ID
-
-            try
-            {
-                // Get the wrap-up codes for a queue
-                WrapupCodeEntityListing result = apiInstance.GetQueueWrapupcodes(queueId, codeId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetQueueWrapupcodes: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **codeId** | **string**| Code ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
 
 <a name="getqueues"></a>
 
@@ -1381,11 +843,11 @@ namespace Example
 
 [**QueueEntityListing**](QueueEntityListing.html)
 
-<a name="getskill"></a>
+<a name="getqueuesqueueid"></a>
 
-## [**RoutingSkill**](RoutingSkill.html) GetSkill (string skillId)
+## [**Queue**](Queue.html) GetQueuesQueueId (string queueId)
 
-Get Routing Skill
+Get details about this queue.
 
 
 
@@ -1399,7 +861,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetSkillExample
+    public class GetQueuesQueueIdExample
     {
         public void main()
         {
@@ -1408,17 +870,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RoutingApi();
-            var skillId = skillId_example;  // string | Skill ID
+            var queueId = queueId_example;  // string | Queue ID
 
             try
             {
-                // Get Routing Skill
-                RoutingSkill result = apiInstance.GetSkill(skillId);
+                // Get details about this queue.
+                Queue result = apiInstance.GetQueuesQueueId(queueId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.GetSkill: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueId: " + e.Message );
             }
         }
     }
@@ -1430,12 +892,504 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **skillId** | **string**| Skill ID |  |
+| **queueId** | **string**| Queue ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**RoutingSkill**](RoutingSkill.html)
+[**Queue**](Queue.html)
+
+<a name="getqueuesqueueidconversations"></a>
+
+## [**ConversationEntityListing**](ConversationEntityListing.html) GetQueuesQueueIdConversations (string queueId, int? pageSize = null, int? pageNumber = null)
+
+Get recent conversations that are still active
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdConversationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get recent conversations that are still active
+                ConversationEntityListing result = apiInstance.GetQueuesQueueIdConversations(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdConversations: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConversationEntityListing**](ConversationEntityListing.html)
+
+<a name="getqueuesqueueidconversationscallbacks"></a>
+
+## [**CallbackConversationEntityListing**](CallbackConversationEntityListing.html) GetQueuesQueueIdConversationsCallbacks (string queueId, int? pageSize = null, int? pageNumber = null)
+
+Get recent callback conversations that are still active
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdConversationsCallbacksExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get recent callback conversations that are still active
+                CallbackConversationEntityListing result = apiInstance.GetQueuesQueueIdConversationsCallbacks(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdConversationsCallbacks: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**CallbackConversationEntityListing**](CallbackConversationEntityListing.html)
+
+<a name="getqueuesqueueidconversationscalls"></a>
+
+## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetQueuesQueueIdConversationsCalls (string queueId, int? pageSize = null, int? pageNumber = null)
+
+Get recent call conversations that are still active
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdConversationsCallsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get recent call conversations that are still active
+                CallConversationEntityListing result = apiInstance.GetQueuesQueueIdConversationsCalls(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdConversationsCalls: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**CallConversationEntityListing**](CallConversationEntityListing.html)
+
+<a name="getqueuesqueueidconversationschats"></a>
+
+## [**ChatConversationEntityListing**](ChatConversationEntityListing.html) GetQueuesQueueIdConversationsChats (string queueId, int? pageSize = null, int? pageNumber = null)
+
+Get recent chat conversations that are still active
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdConversationsChatsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get recent chat conversations that are still active
+                ChatConversationEntityListing result = apiInstance.GetQueuesQueueIdConversationsChats(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdConversationsChats: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ChatConversationEntityListing**](ChatConversationEntityListing.html)
+
+<a name="getqueuesqueueidconversationsemails"></a>
+
+## [**EmailConversationEntityListing**](EmailConversationEntityListing.html) GetQueuesQueueIdConversationsEmails (string queueId, int? pageSize = null, int? pageNumber = null)
+
+Get recent email conversations that are still active
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdConversationsEmailsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get recent email conversations that are still active
+                EmailConversationEntityListing result = apiInstance.GetQueuesQueueIdConversationsEmails(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdConversationsEmails: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailConversationEntityListing**](EmailConversationEntityListing.html)
+
+<a name="getqueuesqueueidestimatedwaittime"></a>
+
+## [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html) GetQueuesQueueIdEstimatedwaittime (string queueId, string conversationId = null)
+
+Get Estimated Wait Time
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdEstimatedwaittimeExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | queueId
+            var conversationId = conversationId_example;  // string | conversationId (optional) 
+
+            try
+            {
+                // Get Estimated Wait Time
+                EstimatedWaitTimePredictions result = apiInstance.GetQueuesQueueIdEstimatedwaittime(queueId, conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdEstimatedwaittime: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| queueId |  |
+| **conversationId** | **string**| conversationId | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html)
+
+<a name="getqueuesqueueidusers"></a>
+
+## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+
+Get the members of this queue
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdUsersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+            var joined = true;  // bool? | Filter by joined status (optional) 
+            var name = name_example;  // string | Filter by queue member name (optional) 
+            var skills = new List<string>(); // List<string> | Filter by skill (optional) 
+            var languages = new List<string>(); // List<string> | Filter by language (optional) 
+            var routingStatus = new List<string>(); // List<string> | Filter by routing status (optional) 
+            var presence = new List<string>(); // List<string> | Filter by presence (optional) 
+
+            try
+            {
+                // Get the members of this queue
+                QueueMemberEntityListing result = apiInstance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdUsers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
+| **joined** | **bool?**| Filter by joined status | [optional]  |
+| **name** | **string**| Filter by queue member name | [optional]  |
+| **skills** | [**List<string>**](string.html)| Filter by skill | [optional]  |
+| **languages** | [**List<string>**](string.html)| Filter by language | [optional]  |
+| **routingStatus** | [**List<string>**](string.html)| Filter by routing status | [optional]  |
+| **presence** | [**List<string>**](string.html)| Filter by presence | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**QueueMemberEntityListing**](QueueMemberEntityListing.html)
+
+<a name="getqueuesqueueidwrapupcodes"></a>
+
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetQueuesQueueIdWrapupcodes (string queueId, string codeId)
+
+Get the wrap-up codes for a queue
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetQueuesQueueIdWrapupcodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var codeId = codeId_example;  // string | Code ID
+
+            try
+            {
+                // Get the wrap-up codes for a queue
+                WrapupCodeEntityListing result = apiInstance.GetQueuesQueueIdWrapupcodes(queueId, codeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetQueuesQueueIdWrapupcodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **codeId** | **string**| Code ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
 
 <a name="getskills"></a>
 
@@ -1495,9 +1449,65 @@ namespace Example
 
 [**SkillEntityListing**](SkillEntityListing.html)
 
-<a name="getuserroutingskills"></a>
+<a name="getskillsskillid"></a>
 
-## [**UserSkillEntityListing**](UserSkillEntityListing.html) GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**RoutingSkill**](RoutingSkill.html) GetSkillsSkillId (string skillId)
+
+Get Routing Skill
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetSkillsSkillIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var skillId = skillId_example;  // string | Skill ID
+
+            try
+            {
+                // Get Routing Skill
+                RoutingSkill result = apiInstance.GetSkillsSkillId(skillId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetSkillsSkillId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **skillId** | **string**| Skill ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoutingSkill**](RoutingSkill.html)
+
+<a name="getuseridroutingskills"></a>
+
+## [**UserSkillEntityListing**](UserSkillEntityListing.html) GetUserIdRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 List routing skills for user
 
@@ -1513,7 +1523,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserRoutingskillsExample
+    public class GetUserIdRoutingskillsExample
     {
         public void main()
         {
@@ -1530,12 +1540,12 @@ namespace Example
             try
             {
                 // List routing skills for user
-                UserSkillEntityListing result = apiInstance.GetUserRoutingskills(userId, pageSize, pageNumber, sortOrder);
+                UserSkillEntityListing result = apiInstance.GetUserIdRoutingskills(userId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.GetUserRoutingskills: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.GetUserIdRoutingskills: " + e.Message );
             }
         }
     }
@@ -1608,62 +1618,6 @@ This endpoint does require any parameters.
 
 [**Utilization**](Utilization.html)
 
-<a name="getwrapupcode"></a>
-
-## [**WrapupCode**](WrapupCode.html) GetWrapupcode (string codeId)
-
-Get details about this wrap-up code.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetWrapupcodeExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var codeId = codeId_example;  // string | Wrapup Code ID
-
-            try
-            {
-                // Get details about this wrap-up code.
-                WrapupCode result = apiInstance.GetWrapupcode(codeId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetWrapupcode: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **codeId** | **string**| Wrapup Code ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**WrapupCode**](WrapupCode.html)
-
 <a name="getwrapupcodes"></a>
 
 ## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null)
@@ -1724,9 +1678,123 @@ namespace Example
 
 [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
 
-<a name="patchqueueuser"></a>
+<a name="getwrapupcodescodeid"></a>
 
-## [**QueueMember**](QueueMember.html) PatchQueueUser (string queueId, string memberId, QueueMember body)
+## [**WrapupCode**](WrapupCode.html) GetWrapupcodesCodeId (string codeId)
+
+Get details about this wrap-up code.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetWrapupcodesCodeIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var codeId = codeId_example;  // string | Wrapup Code ID
+
+            try
+            {
+                // Get details about this wrap-up code.
+                WrapupCode result = apiInstance.GetWrapupcodesCodeId(codeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetWrapupcodesCodeId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **codeId** | **string**| Wrapup Code ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WrapupCode**](WrapupCode.html)
+
+<a name="patchqueuesqueueidusers"></a>
+
+## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body)
+
+Join or unjoin a set of users for a queue
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchQueuesQueueIdUsersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var body = new List<QueueMember>(); // List<QueueMember> | Queue Members
+
+            try
+            {
+                // Join or unjoin a set of users for a queue
+                QueueMemberEntityListing result = apiInstance.PatchQueuesQueueIdUsers(queueId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchQueuesQueueIdUsers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**QueueMemberEntityListing**](QueueMemberEntityListing.html)
+
+<a name="patchqueuesqueueidusersmemberid"></a>
+
+## [**QueueMember**](QueueMember.html) PatchQueuesQueueIdUsersMemberId (string queueId, string memberId, QueueMember body)
 
 Update the ring number of joined status for a User in a Queue
 
@@ -1742,7 +1810,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchQueueUserExample
+    public class PatchQueuesQueueIdUsersMemberIdExample
     {
         public void main()
         {
@@ -1758,12 +1826,12 @@ namespace Example
             try
             {
                 // Update the ring number of joined status for a User in a Queue
-                QueueMember result = apiInstance.PatchQueueUser(queueId, memberId, body);
+                QueueMember result = apiInstance.PatchQueuesQueueIdUsersMemberId(queueId, memberId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.PatchQueueUser: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.PatchQueuesQueueIdUsersMemberId: " + e.Message );
             }
         }
     }
@@ -1783,64 +1851,6 @@ namespace Example
 ### Return type
 
 [**QueueMember**](QueueMember.html)
-
-<a name="patchqueueusers"></a>
-
-## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) PatchQueueUsers (string queueId, List<QueueMember> body)
-
-Join or unjoin a set of users for a queue
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PatchQueueUsersExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var body = new List<QueueMember>(); // List<QueueMember> | Queue Members
-
-            try
-            {
-                // Join or unjoin a set of users for a queue
-                QueueMemberEntityListing result = apiInstance.PatchQueueUsers(queueId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.PatchQueueUsers: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**QueueMemberEntityListing**](QueueMemberEntityListing.html)
 
 <a name="postemaildomains"></a>
 
@@ -1900,7 +1910,7 @@ namespace Example
 
 <a name="postemaildomainsdomainnameroutes"></a>
 
-## [**InboundRoute**](InboundRoute.html) PostEmailDomainsDomainNameRoutes (string domainName, InboundRoute body)
+## [**InboundRoute**](InboundRoute.html) PostEmailDomainsDomainnameRoutes (string domainName, InboundRoute body)
 
 Create a route
 
@@ -1916,7 +1926,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostEmailDomainsDomainNameRoutesExample
+    public class PostEmailDomainsDomainnameRoutesExample
     {
         public void main()
         {
@@ -1931,12 +1941,12 @@ namespace Example
             try
             {
                 // Create a route
-                InboundRoute result = apiInstance.PostEmailDomainsDomainNameRoutes(domainName, body);
+                InboundRoute result = apiInstance.PostEmailDomainsDomainnameRoutes(domainName, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.PostEmailDomainsDomainNameRoutes: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.PostEmailDomainsDomainnameRoutes: " + e.Message );
             }
         }
     }
@@ -1955,126 +1965,6 @@ namespace Example
 ### Return type
 
 [**InboundRoute**](InboundRoute.html)
-
-<a name="postqueueusers"></a>
-
-## **string** PostQueueUsers (string queueId, List<QueueMember> body, bool? delete = null)
-
-Bulk add or delete up to 100 queue members
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostQueueUsersExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var body = new List<QueueMember>(); // List<QueueMember> | Queue Members
-            var delete = true;  // bool? | True to delete queue members (optional)  (default to false)
-
-            try
-            {
-                // Bulk add or delete up to 100 queue members
-                string result = apiInstance.PostQueueUsers(queueId, body, delete);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.PostQueueUsers: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members |  |
-| **delete** | **bool?**| True to delete queue members | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-**string**
-
-<a name="postqueuewrapupcodes"></a>
-
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) PostQueueWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
-
-Add up to 100 wrap-up codes to a queue
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostQueueWrapupcodesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RoutingApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var codeId = codeId_example;  // string | Code ID
-            var body = new List<WrapupCode>(); // List<WrapupCode> | List of wrapup codes
-
-            try
-            {
-                // Add up to 100 wrap-up codes to a queue
-                List&lt;WrapupCode&gt; result = apiInstance.PostQueueWrapupcodes(queueId, codeId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.PostQueueWrapupcodes: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **codeId** | **string**| Code ID |  |
-| **body** | [**List<WrapupCode>**](WrapupCode.html)| List of wrapup codes |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**List<WrapupCode>**](WrapupCode.html)
 
 <a name="postqueues"></a>
 
@@ -2188,6 +2078,126 @@ namespace Example
 
 [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
 
+<a name="postqueuesqueueidusers"></a>
+
+## **string** PostQueuesQueueIdUsers (string queueId, List<QueueMember> body, bool? delete = null)
+
+Bulk add or delete up to 100 queue members
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostQueuesQueueIdUsersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var body = new List<QueueMember>(); // List<QueueMember> | Queue Members
+            var delete = true;  // bool? | True to delete queue members (optional)  (default to false)
+
+            try
+            {
+                // Bulk add or delete up to 100 queue members
+                string result = apiInstance.PostQueuesQueueIdUsers(queueId, body, delete);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostQueuesQueueIdUsers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members |  |
+| **delete** | **bool?**| True to delete queue members | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="postqueuesqueueidwrapupcodes"></a>
+
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
+
+Add up to 100 wrap-up codes to a queue
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostQueuesQueueIdWrapupcodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var codeId = codeId_example;  // string | Code ID
+            var body = new List<WrapupCode>(); // List<WrapupCode> | List of wrapup codes
+
+            try
+            {
+                // Add up to 100 wrap-up codes to a queue
+                List&lt;WrapupCode&gt; result = apiInstance.PostQueuesQueueIdWrapupcodes(queueId, codeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostQueuesQueueIdWrapupcodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **codeId** | **string**| Code ID |  |
+| **body** | [**List<WrapupCode>**](WrapupCode.html)| List of wrapup codes |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<WrapupCode>**](WrapupCode.html)
+
 <a name="postskills"></a>
 
 ## [**RoutingSkill**](RoutingSkill.html) PostSkills (RoutingSkill body)
@@ -2244,9 +2254,9 @@ namespace Example
 
 [**RoutingSkill**](RoutingSkill.html)
 
-<a name="postuserroutingskills"></a>
+<a name="postuseridroutingskills"></a>
 
-## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserRoutingskills (string userId, UserRoutingSkill body)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkill body)
 
 Add routing skill to user
 
@@ -2262,7 +2272,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostUserRoutingskillsExample
+    public class PostUserIdRoutingskillsExample
     {
         public void main()
         {
@@ -2277,12 +2287,12 @@ namespace Example
             try
             {
                 // Add routing skill to user
-                UserRoutingSkill result = apiInstance.PostUserRoutingskills(userId, body);
+                UserRoutingSkill result = apiInstance.PostUserIdRoutingskills(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.PostUserRoutingskills: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.PostUserIdRoutingskills: " + e.Message );
             }
         }
     }
@@ -2358,9 +2368,9 @@ namespace Example
 
 [**CallableTimeSet**](CallableTimeSet.html)
 
-<a name="putemaildomainsdomainnameroute"></a>
+<a name="putemaildomainsdomainnameroutesrouteid"></a>
 
-## [**InboundRoute**](InboundRoute.html) PutEmailDomainsDomainNameRoute (string domainName, string routeId, InboundRoute body)
+## [**InboundRoute**](InboundRoute.html) PutEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId, InboundRoute body)
 
 Update a route
 
@@ -2376,7 +2386,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutEmailDomainsDomainNameRouteExample
+    public class PutEmailDomainsDomainnameRoutesRouteIdExample
     {
         public void main()
         {
@@ -2392,12 +2402,12 @@ namespace Example
             try
             {
                 // Update a route
-                InboundRoute result = apiInstance.PutEmailDomainsDomainNameRoute(domainName, routeId, body);
+                InboundRoute result = apiInstance.PutEmailDomainsDomainnameRoutesRouteId(domainName, routeId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.PutEmailDomainsDomainNameRoute: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.PutEmailDomainsDomainnameRoutesRouteId: " + e.Message );
             }
         }
     }
@@ -2418,9 +2428,9 @@ namespace Example
 
 [**InboundRoute**](InboundRoute.html)
 
-<a name="putqueue"></a>
+<a name="putqueuesqueueid"></a>
 
-## [**Queue**](Queue.html) PutQueue (string queueId, Queue body)
+## [**Queue**](Queue.html) PutQueuesQueueId (string queueId, Queue body)
 
 Update a queue
 
@@ -2436,7 +2446,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutQueueExample
+    public class PutQueuesQueueIdExample
     {
         public void main()
         {
@@ -2451,12 +2461,12 @@ namespace Example
             try
             {
                 // Update a queue
-                Queue result = apiInstance.PutQueue(queueId, body);
+                Queue result = apiInstance.PutQueuesQueueId(queueId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.PutQueue: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.PutQueuesQueueId: " + e.Message );
             }
         }
     }
@@ -2476,9 +2486,9 @@ namespace Example
 
 [**Queue**](Queue.html)
 
-<a name="putuserroutingskill"></a>
+<a name="putuseridroutingskillsskillid"></a>
 
-## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body)
 
 Update routing skill proficiency or state.
 
@@ -2494,7 +2504,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutUserRoutingskillExample
+    public class PutUserIdRoutingskillsSkillIdExample
     {
         public void main()
         {
@@ -2510,12 +2520,12 @@ namespace Example
             try
             {
                 // Update routing skill proficiency or state.
-                UserRoutingSkill result = apiInstance.PutUserRoutingskill(userId, skillId, body);
+                UserRoutingSkill result = apiInstance.PutUserIdRoutingskillsSkillId(userId, skillId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.PutUserRoutingskill: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.PutUserIdRoutingskillsSkillId: " + e.Message );
             }
         }
     }
@@ -2592,9 +2602,9 @@ namespace Example
 
 [**Utilization**](Utilization.html)
 
-<a name="putwrapupcode"></a>
+<a name="putwrapupcodescodeid"></a>
 
-## [**WrapupCode**](WrapupCode.html) PutWrapupcode (string codeId, WrapupCode body)
+## [**WrapupCode**](WrapupCode.html) PutWrapupcodesCodeId (string codeId, WrapupCode body)
 
 Update wrap-up code
 
@@ -2610,7 +2620,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutWrapupcodeExample
+    public class PutWrapupcodesCodeIdExample
     {
         public void main()
         {
@@ -2625,12 +2635,12 @@ namespace Example
             try
             {
                 // Update wrap-up code
-                WrapupCode result = apiInstance.PutWrapupcode(codeId, body);
+                WrapupCode result = apiInstance.PutWrapupcodesCodeId(codeId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RoutingApi.PutWrapupcode: " + e.Message );
+                Debug.Print("Exception when calling RoutingApi.PutWrapupcodesCodeId: " + e.Message );
             }
         }
     }

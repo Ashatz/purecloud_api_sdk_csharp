@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>string</returns>
-        string DeleteEmailDomain (string domainId);
+        string DeleteEmailDomainsDomainId (string domainId);
 
         /// <summary>
         /// Delete a domain
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteEmailDomainWithHttpInfo (string domainId);
+        ApiResponse<string> DeleteEmailDomainsDomainIdWithHttpInfo (string domainId);
         /// <summary>
         /// Delete a route
         /// </summary>
@@ -45,7 +45,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>string</returns>
-        string DeleteEmailDomainsDomainNameRoute (string domainName, string routeId);
+        string DeleteEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId);
 
         /// <summary>
         /// Delete a route
@@ -57,7 +57,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteEmailDomainsDomainNameRouteWithHttpInfo (string domainName, string routeId);
+        ApiResponse<string> DeleteEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId);
         /// <summary>
         /// Delete a queue
         /// </summary>
@@ -68,7 +68,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>string</returns>
-        string DeleteQueue (string queueId, bool? forceDelete = null);
+        string DeleteQueuesQueueId (string queueId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete a queue
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteQueueWithHttpInfo (string queueId, bool? forceDelete = null);
+        ApiResponse<string> DeleteQueuesQueueIdWithHttpInfo (string queueId, bool? forceDelete = null);
         /// <summary>
         /// Delete queue member
         /// </summary>
@@ -91,7 +91,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>string</returns>
-        string DeleteQueueUser (string queueId, string memberId);
+        string DeleteQueuesQueueIdUsersMemberId (string queueId, string memberId);
 
         /// <summary>
         /// Delete queue member
@@ -103,7 +103,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteQueueUserWithHttpInfo (string queueId, string memberId);
+        ApiResponse<string> DeleteQueuesQueueIdUsersMemberIdWithHttpInfo (string queueId, string memberId);
         /// <summary>
         /// Delete a wrap-up code from a queue
         /// </summary>
@@ -114,7 +114,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>string</returns>
-        string DeleteQueueWrapupcode (string queueId, string codeId);
+        string DeleteQueuesQueueIdWrapupcodesCodeId (string queueId, string codeId);
 
         /// <summary>
         /// Delete a wrap-up code from a queue
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteQueueWrapupcodeWithHttpInfo (string queueId, string codeId);
+        ApiResponse<string> DeleteQueuesQueueIdWrapupcodesCodeIdWithHttpInfo (string queueId, string codeId);
         /// <summary>
         /// Delete Routing Skill
         /// </summary>
@@ -136,7 +136,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>string</returns>
-        string DeleteSkill (string skillId);
+        string DeleteSkillsSkillId (string skillId);
 
         /// <summary>
         /// Delete Routing Skill
@@ -147,7 +147,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteSkillWithHttpInfo (string skillId);
+        ApiResponse<string> DeleteSkillsSkillIdWithHttpInfo (string skillId);
         /// <summary>
         /// Remove routing skill from user
         /// </summary>
@@ -158,7 +158,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>string</returns>
-        string DeleteUserRoutingskill (string userId, string skillId);
+        string DeleteUserIdRoutingskillsSkillId (string userId, string skillId);
 
         /// <summary>
         /// Remove routing skill from user
@@ -170,7 +170,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId);
+        ApiResponse<string> DeleteUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId);
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
         /// </summary>
@@ -199,7 +199,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>string</returns>
-        string DeleteWrapupcode (string codeId);
+        string DeleteWrapupcodesCodeId (string codeId);
 
         /// <summary>
         /// Delete wrap-up code
@@ -210,7 +210,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteWrapupcodeWithHttpInfo (string codeId);
+        ApiResponse<string> DeleteWrapupcodesCodeIdWithHttpInfo (string codeId);
         /// <summary>
         /// Get domains
         /// </summary>
@@ -231,6 +231,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
         ApiResponse<InboundDomainEntityListing> GetEmailDomainsWithHttpInfo ();
         /// <summary>
+        /// Get routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <returns>InboundRouteEntityListing</returns>
+        InboundRouteEntityListing GetEmailDomainsDomainnameRoutes (string domainName);
+
+        /// <summary>
+        /// Get routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <returns>ApiResponse of InboundRouteEntityListing</returns>
+        ApiResponse<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesWithHttpInfo (string domainName);
+        /// <summary>
         /// Get a route
         /// </summary>
         /// <remarks>
@@ -240,7 +261,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>InboundRoute</returns>
-        InboundRoute GetEmailDomainsDomainNameRoute (string domainName, string routeId);
+        InboundRoute GetEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId);
 
         /// <summary>
         /// Get a route
@@ -252,28 +273,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        ApiResponse<InboundRoute> GetEmailDomainsDomainNameRouteWithHttpInfo (string domainName, string routeId);
-        /// <summary>
-        /// Get routes
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainName">email domain</param>
-        /// <returns>InboundRouteEntityListing</returns>
-        InboundRouteEntityListing GetEmailDomainsDomainNameRoutes (string domainName);
-
-        /// <summary>
-        /// Get routes
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainName">email domain</param>
-        /// <returns>ApiResponse of InboundRouteEntityListing</returns>
-        ApiResponse<InboundRouteEntityListing> GetEmailDomainsDomainNameRoutesWithHttpInfo (string domainName);
+        ApiResponse<InboundRoute> GetEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId);
         /// <summary>
         /// Get email setup
         /// </summary>
@@ -293,229 +293,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EmailSetup</returns>
         ApiResponse<EmailSetup> GetEmailSetupWithHttpInfo ();
-        /// <summary>
-        /// Get details about this queue.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <returns>Queue</returns>
-        Queue GetQueue (string queueId);
-
-        /// <summary>
-        /// Get details about this queue.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <returns>ApiResponse of Queue</returns>
-        ApiResponse<Queue> GetQueueWithHttpInfo (string queueId);
-        /// <summary>
-        /// Get recent conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>CallConversationEntityListing</returns>
-        CallConversationEntityListing GetQueueConversations (string queueId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get recent conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of CallConversationEntityListing</returns>
-        ApiResponse<CallConversationEntityListing> GetQueueConversationsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
-        /// Get recent callback conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>CallbackConversationEntityListing</returns>
-        CallbackConversationEntityListing GetQueueConversationsCallbacks (string queueId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get recent callback conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of CallbackConversationEntityListing</returns>
-        ApiResponse<CallbackConversationEntityListing> GetQueueConversationsCallbacksWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
-        /// Get recent call conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>CallConversationEntityListing</returns>
-        CallConversationEntityListing GetQueueConversationsCalls (string queueId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get recent call conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of CallConversationEntityListing</returns>
-        ApiResponse<CallConversationEntityListing> GetQueueConversationsCallsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
-        /// Get recent chat conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ChatConversationEntityListing</returns>
-        ChatConversationEntityListing GetQueueConversationsChats (string queueId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get recent chat conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of ChatConversationEntityListing</returns>
-        ApiResponse<ChatConversationEntityListing> GetQueueConversationsChatsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
-        /// Get recent email conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>EmailConversationEntityListing</returns>
-        EmailConversationEntityListing GetQueueConversationsEmails (string queueId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get recent email conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of EmailConversationEntityListing</returns>
-        ApiResponse<EmailConversationEntityListing> GetQueueConversationsEmailsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
-        /// Get Estimated Wait Time
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">queueId</param>
-        /// <param name="conversationId">conversationId (optional)</param>
-        /// <returns>EstimatedWaitTimePredictions</returns>
-        EstimatedWaitTimePredictions GetQueueEstimatedwaittime (string queueId, string conversationId = null);
-
-        /// <summary>
-        /// Get Estimated Wait Time
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">queueId</param>
-        /// <param name="conversationId">conversationId (optional)</param>
-        /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
-        ApiResponse<EstimatedWaitTimePredictions> GetQueueEstimatedwaittimeWithHttpInfo (string queueId, string conversationId = null);
-        /// <summary>
-        /// Get the members of this queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>QueueMemberEntityListing</returns>
-        QueueMemberEntityListing GetQueueUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
-
-        /// <summary>
-        /// Get the members of this queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        ApiResponse<QueueMemberEntityListing> GetQueueUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
-        /// <summary>
-        /// Get the wrap-up codes for a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <returns>WrapupCodeEntityListing</returns>
-        WrapupCodeEntityListing GetQueueWrapupcodes (string queueId, string codeId);
-
-        /// <summary>
-        /// Get the wrap-up codes for a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
-        ApiResponse<WrapupCodeEntityListing> GetQueueWrapupcodesWithHttpInfo (string queueId, string codeId);
         /// <summary>
         /// Get list of queues.
         /// </summary>
@@ -546,26 +323,238 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of QueueEntityListing</returns>
         ApiResponse<QueueEntityListing> GetQueuesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
         /// <summary>
-        /// Get Routing Skill
+        /// Get details about this queue.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
-        /// <returns>RoutingSkill</returns>
-        RoutingSkill GetSkill (string skillId);
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>Queue</returns>
+        Queue GetQueuesQueueId (string queueId);
 
         /// <summary>
-        /// Get Routing Skill
+        /// Get details about this queue.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
-        /// <returns>ApiResponse of RoutingSkill</returns>
-        ApiResponse<RoutingSkill> GetSkillWithHttpInfo (string skillId);
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>ApiResponse of Queue</returns>
+        ApiResponse<Queue> GetQueuesQueueIdWithHttpInfo (string queueId);
+        /// <summary>
+        /// Get recent conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ConversationEntityListing</returns>
+        ConversationEntityListing GetQueuesQueueIdConversations (string queueId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get recent conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of ConversationEntityListing</returns>
+        ApiResponse<ConversationEntityListing> GetQueuesQueueIdConversationsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get recent callback conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>CallbackConversationEntityListing</returns>
+        CallbackConversationEntityListing GetQueuesQueueIdConversationsCallbacks (string queueId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get recent callback conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of CallbackConversationEntityListing</returns>
+        ApiResponse<CallbackConversationEntityListing> GetQueuesQueueIdConversationsCallbacksWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get recent call conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>CallConversationEntityListing</returns>
+        CallConversationEntityListing GetQueuesQueueIdConversationsCalls (string queueId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get recent call conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of CallConversationEntityListing</returns>
+        ApiResponse<CallConversationEntityListing> GetQueuesQueueIdConversationsCallsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get recent chat conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ChatConversationEntityListing</returns>
+        ChatConversationEntityListing GetQueuesQueueIdConversationsChats (string queueId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get recent chat conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of ChatConversationEntityListing</returns>
+        ApiResponse<ChatConversationEntityListing> GetQueuesQueueIdConversationsChatsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get recent email conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>EmailConversationEntityListing</returns>
+        EmailConversationEntityListing GetQueuesQueueIdConversationsEmails (string queueId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get recent email conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of EmailConversationEntityListing</returns>
+        ApiResponse<EmailConversationEntityListing> GetQueuesQueueIdConversationsEmailsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get Estimated Wait Time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId (optional)</param>
+        /// <returns>EstimatedWaitTimePredictions</returns>
+        EstimatedWaitTimePredictions GetQueuesQueueIdEstimatedwaittime (string queueId, string conversationId = null);
+
+        /// <summary>
+        /// Get Estimated Wait Time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId (optional)</param>
+        /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
+        ApiResponse<EstimatedWaitTimePredictions> GetQueuesQueueIdEstimatedwaittimeWithHttpInfo (string queueId, string conversationId = null);
+        /// <summary>
+        /// Get the members of this queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>QueueMemberEntityListing</returns>
+        QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+
+        /// <summary>
+        /// Get the members of this queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        ApiResponse<QueueMemberEntityListing> GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+        /// <summary>
+        /// Get the wrap-up codes for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <returns>WrapupCodeEntityListing</returns>
+        WrapupCodeEntityListing GetQueuesQueueIdWrapupcodes (string queueId, string codeId);
+
+        /// <summary>
+        /// Get the wrap-up codes for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
+        ApiResponse<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId);
         /// <summary>
         /// Get the list of routing skills.
         /// </summary>
@@ -590,6 +579,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of SkillEntityListing</returns>
         ApiResponse<SkillEntityListing> GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         /// <summary>
+        /// Get Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>RoutingSkill</returns>
+        RoutingSkill GetSkillsSkillId (string skillId);
+
+        /// <summary>
+        /// Get Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>ApiResponse of RoutingSkill</returns>
+        ApiResponse<RoutingSkill> GetSkillsSkillIdWithHttpInfo (string skillId);
+        /// <summary>
         /// List routing skills for user
         /// </summary>
         /// <remarks>
@@ -601,7 +611,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserSkillEntityListing</returns>
-        UserSkillEntityListing GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        UserSkillEntityListing GetUserIdRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// List routing skills for user
@@ -615,7 +625,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
-        ApiResponse<UserSkillEntityListing> GetUserRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        ApiResponse<UserSkillEntityListing> GetUserIdRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
         /// Get the utilization settings.
         /// </summary>
@@ -635,27 +645,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Utilization</returns>
         ApiResponse<Utilization> GetUtilizationWithHttpInfo ();
-        /// <summary>
-        /// Get details about this wrap-up code.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>WrapupCode</returns>
-        WrapupCode GetWrapupcode (string codeId);
-
-        /// <summary>
-        /// Get details about this wrap-up code.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> GetWrapupcodeWithHttpInfo (string codeId);
         /// <summary>
         /// Get list of wrapup codes.
         /// </summary>
@@ -682,6 +671,50 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
         ApiResponse<WrapupCodeEntityListing> GetWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null);
         /// <summary>
+        /// Get details about this wrap-up code.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>WrapupCode</returns>
+        WrapupCode GetWrapupcodesCodeId (string codeId);
+
+        /// <summary>
+        /// Get details about this wrap-up code.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        ApiResponse<WrapupCode> GetWrapupcodesCodeIdWithHttpInfo (string codeId);
+        /// <summary>
+        /// Join or unjoin a set of users for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>QueueMemberEntityListing</returns>
+        QueueMemberEntityListing PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body);
+
+        /// <summary>
+        /// Join or unjoin a set of users for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        ApiResponse<QueueMemberEntityListing> PatchQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body);
+        /// <summary>
         /// Update the ring number of joined status for a User in a Queue
         /// </summary>
         /// <remarks>
@@ -692,7 +725,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>QueueMember</returns>
-        QueueMember PatchQueueUser (string queueId, string memberId, QueueMember body);
+        QueueMember PatchQueuesQueueIdUsersMemberId (string queueId, string memberId, QueueMember body);
 
         /// <summary>
         /// Update the ring number of joined status for a User in a Queue
@@ -705,30 +738,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> PatchQueueUserWithHttpInfo (string queueId, string memberId, QueueMember body);
-        /// <summary>
-        /// Join or unjoin a set of users for a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <returns>QueueMemberEntityListing</returns>
-        QueueMemberEntityListing PatchQueueUsers (string queueId, List<QueueMember> body);
-
-        /// <summary>
-        /// Join or unjoin a set of users for a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        ApiResponse<QueueMemberEntityListing> PatchQueueUsersWithHttpInfo (string queueId, List<QueueMember> body);
+        ApiResponse<QueueMember> PatchQueuesQueueIdUsersMemberIdWithHttpInfo (string queueId, string memberId, QueueMember body);
         /// <summary>
         /// Create a domain
         /// </summary>
@@ -760,7 +770,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>InboundRoute</returns>
-        InboundRoute PostEmailDomainsDomainNameRoutes (string domainName, InboundRoute body);
+        InboundRoute PostEmailDomainsDomainnameRoutes (string domainName, InboundRoute body);
 
         /// <summary>
         /// Create a route
@@ -772,57 +782,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        ApiResponse<InboundRoute> PostEmailDomainsDomainNameRoutesWithHttpInfo (string domainName, InboundRoute body);
-        /// <summary>
-        /// Bulk add or delete up to 100 queue members
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>string</returns>
-        string PostQueueUsers (string queueId, List<QueueMember> body, bool? delete = null);
-
-        /// <summary>
-        /// Bulk add or delete up to 100 queue members
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PostQueueUsersWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null);
-        /// <summary>
-        /// Add up to 100 wrap-up codes to a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <param name="body">List of wrapup codes</param>
-        /// <returns>List&lt;WrapupCode&gt;</returns>
-        List<WrapupCode> PostQueueWrapupcodes (string queueId, string codeId, List<WrapupCode> body);
-
-        /// <summary>
-        /// Add up to 100 wrap-up codes to a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <param name="body">List of wrapup codes</param>
-        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
-        ApiResponse<List<WrapupCode>> PostQueueWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body);
+        ApiResponse<InboundRoute> PostEmailDomainsDomainnameRoutesWithHttpInfo (string domainName, InboundRoute body);
         /// <summary>
         /// Create queue
         /// </summary>
@@ -866,6 +826,56 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of QualifierMappingObservationQueryResponse</returns>
         ApiResponse<QualifierMappingObservationQueryResponse> PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body);
         /// <summary>
+        /// Bulk add or delete up to 100 queue members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>string</returns>
+        string PostQueuesQueueIdUsers (string queueId, List<QueueMember> body, bool? delete = null);
+
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> PostQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null);
+        /// <summary>
+        /// Add up to 100 wrap-up codes to a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <param name="body">List of wrapup codes</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        List<WrapupCode> PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body);
+
+        /// <summary>
+        /// Add up to 100 wrap-up codes to a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <param name="body">List of wrapup codes</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        ApiResponse<List<WrapupCode>> PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body);
+        /// <summary>
         /// Create Skill
         /// </summary>
         /// <remarks>
@@ -896,7 +906,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        UserRoutingSkill PostUserRoutingskills (string userId, UserRoutingSkill body);
+        UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body);
 
         /// <summary>
         /// Add routing skill to user
@@ -908,7 +918,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        ApiResponse<UserRoutingSkill> PostUserRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body);
+        ApiResponse<UserRoutingSkill> PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body);
         /// <summary>
         /// Create a wrap-up code
         /// </summary>
@@ -941,7 +951,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="routeId">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>InboundRoute</returns>
-        InboundRoute PutEmailDomainsDomainNameRoute (string domainName, string routeId, InboundRoute body);
+        InboundRoute PutEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId, InboundRoute body);
 
         /// <summary>
         /// Update a route
@@ -954,7 +964,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="routeId">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        ApiResponse<InboundRoute> PutEmailDomainsDomainNameRouteWithHttpInfo (string domainName, string routeId, InboundRoute body);
+        ApiResponse<InboundRoute> PutEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId, InboundRoute body);
         /// <summary>
         /// Update a queue
         /// </summary>
@@ -965,7 +975,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
-        Queue PutQueue (string queueId, Queue body);
+        Queue PutQueuesQueueId (string queueId, Queue body);
 
         /// <summary>
         /// Update a queue
@@ -977,7 +987,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
-        ApiResponse<Queue> PutQueueWithHttpInfo (string queueId, Queue body);
+        ApiResponse<Queue> PutQueuesQueueIdWithHttpInfo (string queueId, Queue body);
         /// <summary>
         /// Update routing skill proficiency or state.
         /// </summary>
@@ -989,7 +999,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        UserRoutingSkill PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body);
+        UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
         /// Update routing skill proficiency or state.
@@ -1002,7 +1012,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        ApiResponse<UserRoutingSkill> PutUserRoutingskillWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
+        ApiResponse<UserRoutingSkill> PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
         /// <summary>
         /// Update the utilization settings.
         /// </summary>
@@ -1034,7 +1044,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>WrapupCode</returns>
-        WrapupCode PutWrapupcode (string codeId, WrapupCode body);
+        WrapupCode PutWrapupcodesCodeId (string codeId, WrapupCode body);
 
         /// <summary>
         /// Update wrap-up code
@@ -1046,7 +1056,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> PutWrapupcodeWithHttpInfo (string codeId, WrapupCode body);
+        ApiResponse<WrapupCode> PutWrapupcodesCodeIdWithHttpInfo (string codeId, WrapupCode body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -1058,7 +1068,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteEmailDomainAsync (string domainId);
+        System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainIdAsync (string domainId);
 
         /// <summary>
         /// Delete a domain
@@ -1069,7 +1079,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainAsyncWithHttpInfo (string domainId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainIdAsyncWithHttpInfo (string domainId);
         /// <summary>
         /// Delete a route
         /// </summary>
@@ -1080,7 +1090,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainNameRouteAsync (string domainName, string routeId);
+        System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId);
 
         /// <summary>
         /// Delete a route
@@ -1092,7 +1102,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainNameRouteAsyncWithHttpInfo (string domainName, string routeId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId);
         /// <summary>
         /// Delete a queue
         /// </summary>
@@ -1103,7 +1113,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteQueueAsync (string queueId, bool? forceDelete = null);
+        System.Threading.Tasks.Task<string> DeleteQueuesQueueIdAsync (string queueId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete a queue
@@ -1115,7 +1125,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueuesQueueIdAsyncWithHttpInfo (string queueId, bool? forceDelete = null);
         /// <summary>
         /// Delete queue member
         /// </summary>
@@ -1126,7 +1136,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteQueueUserAsync (string queueId, string memberId);
+        System.Threading.Tasks.Task<string> DeleteQueuesQueueIdUsersMemberIdAsync (string queueId, string memberId);
 
         /// <summary>
         /// Delete queue member
@@ -1138,7 +1148,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueUserAsyncWithHttpInfo (string queueId, string memberId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueuesQueueIdUsersMemberIdAsyncWithHttpInfo (string queueId, string memberId);
         /// <summary>
         /// Delete a wrap-up code from a queue
         /// </summary>
@@ -1149,7 +1159,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteQueueWrapupcodeAsync (string queueId, string codeId);
+        System.Threading.Tasks.Task<string> DeleteQueuesQueueIdWrapupcodesCodeIdAsync (string queueId, string codeId);
 
         /// <summary>
         /// Delete a wrap-up code from a queue
@@ -1161,7 +1171,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueWrapupcodeAsyncWithHttpInfo (string queueId, string codeId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueuesQueueIdWrapupcodesCodeIdAsyncWithHttpInfo (string queueId, string codeId);
         /// <summary>
         /// Delete Routing Skill
         /// </summary>
@@ -1171,7 +1181,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteSkillAsync (string skillId);
+        System.Threading.Tasks.Task<string> DeleteSkillsSkillIdAsync (string skillId);
 
         /// <summary>
         /// Delete Routing Skill
@@ -1182,7 +1192,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSkillAsyncWithHttpInfo (string skillId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSkillsSkillIdAsyncWithHttpInfo (string skillId);
         /// <summary>
         /// Remove routing skill from user
         /// </summary>
@@ -1193,7 +1203,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteUserRoutingskillAsync (string userId, string skillId);
+        System.Threading.Tasks.Task<string> DeleteUserIdRoutingskillsSkillIdAsync (string userId, string skillId);
 
         /// <summary>
         /// Remove routing skill from user
@@ -1205,7 +1215,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId);
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
         /// </summary>
@@ -1234,7 +1244,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteWrapupcodeAsync (string codeId);
+        System.Threading.Tasks.Task<string> DeleteWrapupcodesCodeIdAsync (string codeId);
 
         /// <summary>
         /// Delete wrap-up code
@@ -1245,7 +1255,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteWrapupcodeAsyncWithHttpInfo (string codeId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteWrapupcodesCodeIdAsyncWithHttpInfo (string codeId);
         /// <summary>
         /// Get domains
         /// </summary>
@@ -1266,6 +1276,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetEmailDomainsAsyncWithHttpInfo ();
         /// <summary>
+        /// Get routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <returns>Task of InboundRouteEntityListing</returns>
+        System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesAsync (string domainName);
+
+        /// <summary>
+        /// Get routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName);
+        /// <summary>
         /// Get a route
         /// </summary>
         /// <remarks>
@@ -1275,7 +1306,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of InboundRoute</returns>
-        System.Threading.Tasks.Task<InboundRoute> GetEmailDomainsDomainNameRouteAsync (string domainName, string routeId);
+        System.Threading.Tasks.Task<InboundRoute> GetEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId);
 
         /// <summary>
         /// Get a route
@@ -1287,28 +1318,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetEmailDomainsDomainNameRouteAsyncWithHttpInfo (string domainName, string routeId);
-        /// <summary>
-        /// Get routes
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainName">email domain</param>
-        /// <returns>Task of InboundRouteEntityListing</returns>
-        System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainNameRoutesAsync (string domainName);
-
-        /// <summary>
-        /// Get routes
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainName">email domain</param>
-        /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainNameRoutesAsyncWithHttpInfo (string domainName);
+        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId);
         /// <summary>
         /// Get email setup
         /// </summary>
@@ -1328,229 +1338,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EmailSetup)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmailSetup>> GetEmailSetupAsyncWithHttpInfo ();
-        /// <summary>
-        /// Get details about this queue.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <returns>Task of Queue</returns>
-        System.Threading.Tasks.Task<Queue> GetQueueAsync (string queueId);
-
-        /// <summary>
-        /// Get details about this queue.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <returns>Task of ApiResponse (Queue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Queue>> GetQueueAsyncWithHttpInfo (string queueId);
-        /// <summary>
-        /// Get recent conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of CallConversationEntityListing</returns>
-        System.Threading.Tasks.Task<CallConversationEntityListing> GetQueueConversationsAsync (string queueId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get recent conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetQueueConversationsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
-        /// Get recent callback conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of CallbackConversationEntityListing</returns>
-        System.Threading.Tasks.Task<CallbackConversationEntityListing> GetQueueConversationsCallbacksAsync (string queueId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get recent callback conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (CallbackConversationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallbackConversationEntityListing>> GetQueueConversationsCallbacksAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
-        /// Get recent call conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of CallConversationEntityListing</returns>
-        System.Threading.Tasks.Task<CallConversationEntityListing> GetQueueConversationsCallsAsync (string queueId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get recent call conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetQueueConversationsCallsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
-        /// Get recent chat conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ChatConversationEntityListing</returns>
-        System.Threading.Tasks.Task<ChatConversationEntityListing> GetQueueConversationsChatsAsync (string queueId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get recent chat conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (ChatConversationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChatConversationEntityListing>> GetQueueConversationsChatsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
-        /// Get recent email conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of EmailConversationEntityListing</returns>
-        System.Threading.Tasks.Task<EmailConversationEntityListing> GetQueueConversationsEmailsAsync (string queueId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get recent email conversations that are still active
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (EmailConversationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmailConversationEntityListing>> GetQueueConversationsEmailsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
-        /// Get Estimated Wait Time
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">queueId</param>
-        /// <param name="conversationId">conversationId (optional)</param>
-        /// <returns>Task of EstimatedWaitTimePredictions</returns>
-        System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetQueueEstimatedwaittimeAsync (string queueId, string conversationId = null);
-
-        /// <summary>
-        /// Get Estimated Wait Time
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">queueId</param>
-        /// <param name="conversationId">conversationId (optional)</param>
-        /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetQueueEstimatedwaittimeAsyncWithHttpInfo (string queueId, string conversationId = null);
-        /// <summary>
-        /// Get the members of this queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>Task of QueueMemberEntityListing</returns>
-        System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueueUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
-
-        /// <summary>
-        /// Get the members of this queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueueUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
-        /// <summary>
-        /// Get the wrap-up codes for a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <returns>Task of WrapupCodeEntityListing</returns>
-        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetQueueWrapupcodesAsync (string queueId, string codeId);
-
-        /// <summary>
-        /// Get the wrap-up codes for a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetQueueWrapupcodesAsyncWithHttpInfo (string queueId, string codeId);
         /// <summary>
         /// Get list of queues.
         /// </summary>
@@ -1581,26 +1368,238 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetQueuesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
         /// <summary>
-        /// Get Routing Skill
+        /// Get details about this queue.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
-        /// <returns>Task of RoutingSkill</returns>
-        System.Threading.Tasks.Task<RoutingSkill> GetSkillAsync (string skillId);
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>Task of Queue</returns>
+        System.Threading.Tasks.Task<Queue> GetQueuesQueueIdAsync (string queueId);
 
         /// <summary>
-        /// Get Routing Skill
+        /// Get details about this queue.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
-        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> GetSkillAsyncWithHttpInfo (string skillId);
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>Task of ApiResponse (Queue)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Queue>> GetQueuesQueueIdAsyncWithHttpInfo (string queueId);
+        /// <summary>
+        /// Get recent conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ConversationEntityListing</returns>
+        System.Threading.Tasks.Task<ConversationEntityListing> GetQueuesQueueIdConversationsAsync (string queueId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get recent conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetQueuesQueueIdConversationsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get recent callback conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of CallbackConversationEntityListing</returns>
+        System.Threading.Tasks.Task<CallbackConversationEntityListing> GetQueuesQueueIdConversationsCallbacksAsync (string queueId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get recent callback conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (CallbackConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallbackConversationEntityListing>> GetQueuesQueueIdConversationsCallbacksAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get recent call conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of CallConversationEntityListing</returns>
+        System.Threading.Tasks.Task<CallConversationEntityListing> GetQueuesQueueIdConversationsCallsAsync (string queueId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get recent call conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetQueuesQueueIdConversationsCallsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get recent chat conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ChatConversationEntityListing</returns>
+        System.Threading.Tasks.Task<ChatConversationEntityListing> GetQueuesQueueIdConversationsChatsAsync (string queueId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get recent chat conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ChatConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ChatConversationEntityListing>> GetQueuesQueueIdConversationsChatsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get recent email conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of EmailConversationEntityListing</returns>
+        System.Threading.Tasks.Task<EmailConversationEntityListing> GetQueuesQueueIdConversationsEmailsAsync (string queueId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get recent email conversations that are still active
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (EmailConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailConversationEntityListing>> GetQueuesQueueIdConversationsEmailsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get Estimated Wait Time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId (optional)</param>
+        /// <returns>Task of EstimatedWaitTimePredictions</returns>
+        System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetQueuesQueueIdEstimatedwaittimeAsync (string queueId, string conversationId = null);
+
+        /// <summary>
+        /// Get Estimated Wait Time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId (optional)</param>
+        /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetQueuesQueueIdEstimatedwaittimeAsyncWithHttpInfo (string queueId, string conversationId = null);
+        /// <summary>
+        /// Get the members of this queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+
+        /// <summary>
+        /// Get the members of this queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+        /// <summary>
+        /// Get the wrap-up codes for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <returns>Task of WrapupCodeEntityListing</returns>
+        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesAsync (string queueId, string codeId);
+
+        /// <summary>
+        /// Get the wrap-up codes for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId);
         /// <summary>
         /// Get the list of routing skills.
         /// </summary>
@@ -1625,6 +1624,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         /// <summary>
+        /// Get Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of RoutingSkill</returns>
+        System.Threading.Tasks.Task<RoutingSkill> GetSkillsSkillIdAsync (string skillId);
+
+        /// <summary>
+        /// Get Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> GetSkillsSkillIdAsyncWithHttpInfo (string skillId);
+        /// <summary>
         /// List routing skills for user
         /// </summary>
         /// <remarks>
@@ -1636,7 +1656,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserSkillEntityListing</returns>
-        System.Threading.Tasks.Task<UserSkillEntityListing> GetUserRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<UserSkillEntityListing> GetUserIdRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// List routing skills for user
@@ -1650,7 +1670,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserIdRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
         /// Get the utilization settings.
         /// </summary>
@@ -1670,27 +1690,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Utilization)</returns>
         System.Threading.Tasks.Task<ApiResponse<Utilization>> GetUtilizationAsyncWithHttpInfo ();
-        /// <summary>
-        /// Get details about this wrap-up code.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> GetWrapupcodeAsync (string codeId);
-
-        /// <summary>
-        /// Get details about this wrap-up code.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetWrapupcodeAsyncWithHttpInfo (string codeId);
         /// <summary>
         /// Get list of wrapup codes.
         /// </summary>
@@ -1717,6 +1716,50 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null);
         /// <summary>
+        /// Get details about this wrap-up code.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>Task of WrapupCode</returns>
+        System.Threading.Tasks.Task<WrapupCode> GetWrapupcodesCodeIdAsync (string codeId);
+
+        /// <summary>
+        /// Get details about this wrap-up code.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetWrapupcodesCodeIdAsyncWithHttpInfo (string codeId);
+        /// <summary>
+        /// Join or unjoin a set of users for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        System.Threading.Tasks.Task<QueueMemberEntityListing> PatchQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body);
+
+        /// <summary>
+        /// Join or unjoin a set of users for a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body);
+        /// <summary>
         /// Update the ring number of joined status for a User in a Queue
         /// </summary>
         /// <remarks>
@@ -1727,7 +1770,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> PatchQueueUserAsync (string queueId, string memberId, QueueMember body);
+        System.Threading.Tasks.Task<QueueMember> PatchQueuesQueueIdUsersMemberIdAsync (string queueId, string memberId, QueueMember body);
 
         /// <summary>
         /// Update the ring number of joined status for a User in a Queue
@@ -1740,30 +1783,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchQueueUserAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
-        /// <summary>
-        /// Join or unjoin a set of users for a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <returns>Task of QueueMemberEntityListing</returns>
-        System.Threading.Tasks.Task<QueueMemberEntityListing> PatchQueueUsersAsync (string queueId, List<QueueMember> body);
-
-        /// <summary>
-        /// Join or unjoin a set of users for a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body);
+        System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchQueuesQueueIdUsersMemberIdAsyncWithHttpInfo (string queueId, string memberId, QueueMember body);
         /// <summary>
         /// Create a domain
         /// </summary>
@@ -1795,7 +1815,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
-        System.Threading.Tasks.Task<InboundRoute> PostEmailDomainsDomainNameRoutesAsync (string domainName, InboundRoute body);
+        System.Threading.Tasks.Task<InboundRoute> PostEmailDomainsDomainnameRoutesAsync (string domainName, InboundRoute body);
 
         /// <summary>
         /// Create a route
@@ -1807,57 +1827,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostEmailDomainsDomainNameRoutesAsyncWithHttpInfo (string domainName, InboundRoute body);
-        /// <summary>
-        /// Bulk add or delete up to 100 queue members
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PostQueueUsersAsync (string queueId, List<QueueMember> body, bool? delete = null);
-
-        /// <summary>
-        /// Bulk add or delete up to 100 queue members
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PostQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null);
-        /// <summary>
-        /// Add up to 100 wrap-up codes to a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <param name="body">List of wrapup codes</param>
-        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
-        System.Threading.Tasks.Task<List<WrapupCode>> PostQueueWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body);
-
-        /// <summary>
-        /// Add up to 100 wrap-up codes to a queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <param name="body">List of wrapup codes</param>
-        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostQueueWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body);
+        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName, InboundRoute body);
         /// <summary>
         /// Create queue
         /// </summary>
@@ -1901,6 +1871,56 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (QualifierMappingObservationQueryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<QualifierMappingObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
         /// <summary>
+        /// Bulk add or delete up to 100 queue members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> PostQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body, bool? delete = null);
+
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> PostQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null);
+        /// <summary>
+        /// Add up to 100 wrap-up codes to a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <param name="body">List of wrapup codes</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        System.Threading.Tasks.Task<List<WrapupCode>> PostQueuesQueueIdWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body);
+
+        /// <summary>
+        /// Add up to 100 wrap-up codes to a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <param name="body">List of wrapup codes</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body);
+        /// <summary>
         /// Create Skill
         /// </summary>
         /// <remarks>
@@ -1931,7 +1951,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        System.Threading.Tasks.Task<UserRoutingSkill> PostUserRoutingskillsAsync (string userId, UserRoutingSkill body);
+        System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body);
 
         /// <summary>
         /// Add routing skill to user
@@ -1943,7 +1963,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body);
+        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body);
         /// <summary>
         /// Create a wrap-up code
         /// </summary>
@@ -1976,7 +1996,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="routeId">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
-        System.Threading.Tasks.Task<InboundRoute> PutEmailDomainsDomainNameRouteAsync (string domainName, string routeId, InboundRoute body);
+        System.Threading.Tasks.Task<InboundRoute> PutEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId, InboundRoute body);
 
         /// <summary>
         /// Update a route
@@ -1989,7 +2009,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="routeId">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutEmailDomainsDomainNameRouteAsyncWithHttpInfo (string domainName, string routeId, InboundRoute body);
+        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId, InboundRoute body);
         /// <summary>
         /// Update a queue
         /// </summary>
@@ -2000,7 +2020,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        System.Threading.Tasks.Task<Queue> PutQueueAsync (string queueId, Queue body);
+        System.Threading.Tasks.Task<Queue> PutQueuesQueueIdAsync (string queueId, Queue body);
 
         /// <summary>
         /// Update a queue
@@ -2012,7 +2032,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Queue>> PutQueueAsyncWithHttpInfo (string queueId, Queue body);
+        System.Threading.Tasks.Task<ApiResponse<Queue>> PutQueuesQueueIdAsyncWithHttpInfo (string queueId, Queue body);
         /// <summary>
         /// Update routing skill proficiency or state.
         /// </summary>
@@ -2024,7 +2044,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        System.Threading.Tasks.Task<UserRoutingSkill> PutUserRoutingskillAsync (string userId, string skillId, UserRoutingSkill body);
+        System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body);
 
         /// <summary>
         /// Update routing skill proficiency or state.
@@ -2037,7 +2057,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserRoutingskillAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
+        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body);
         /// <summary>
         /// Update the utilization settings.
         /// </summary>
@@ -2069,7 +2089,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> PutWrapupcodeAsync (string codeId, WrapupCode body);
+        System.Threading.Tasks.Task<WrapupCode> PutWrapupcodesCodeIdAsync (string codeId, WrapupCode body);
 
         /// <summary>
         /// Update wrap-up code
@@ -2081,7 +2101,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PutWrapupcodeAsyncWithHttpInfo (string codeId, WrapupCode body);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PutWrapupcodesCodeIdAsyncWithHttpInfo (string codeId, WrapupCode body);
         #endregion Asynchronous Operations
     }
 
@@ -2178,9 +2198,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>string</returns>
-        public string DeleteEmailDomain (string domainId)
+        public string DeleteEmailDomainsDomainId (string domainId)
         {
-             ApiResponse<string> localVarResponse = DeleteEmailDomainWithHttpInfo(domainId);
+             ApiResponse<string> localVarResponse = DeleteEmailDomainsDomainIdWithHttpInfo(domainId);
              return localVarResponse.Data;
         }
 
@@ -2190,11 +2210,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteEmailDomainWithHttpInfo (string domainId)
+        public ApiResponse< string > DeleteEmailDomainsDomainIdWithHttpInfo (string domainId)
         {
             // verify the required parameter 'domainId' is set
             if (domainId == null)
-                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->DeleteEmailDomain");
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->DeleteEmailDomainsDomainId");
 
             var localVarPath = "/api/v2/routing/email/domains/{domainId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2238,9 +2258,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomain: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomain: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2254,9 +2274,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteEmailDomainAsync (string domainId)
+        public async System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainIdAsync (string domainId)
         {
-             ApiResponse<string> localVarResponse = await DeleteEmailDomainAsyncWithHttpInfo(domainId);
+             ApiResponse<string> localVarResponse = await DeleteEmailDomainsDomainIdAsyncWithHttpInfo(domainId);
              return localVarResponse.Data;
 
         }
@@ -2267,11 +2287,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainAsyncWithHttpInfo (string domainId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainIdAsyncWithHttpInfo (string domainId)
         {
             // verify the required parameter 'domainId' is set
             if (domainId == null)
-                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->DeleteEmailDomain");
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->DeleteEmailDomainsDomainId");
 
             var localVarPath = "/api/v2/routing/email/domains/{domainId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2315,9 +2335,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomain: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomain: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2332,9 +2352,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>string</returns>
-        public string DeleteEmailDomainsDomainNameRoute (string domainName, string routeId)
+        public string DeleteEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
         {
-             ApiResponse<string> localVarResponse = DeleteEmailDomainsDomainNameRouteWithHttpInfo(domainName, routeId);
+             ApiResponse<string> localVarResponse = DeleteEmailDomainsDomainnameRoutesRouteIdWithHttpInfo(domainName, routeId);
              return localVarResponse.Data;
         }
 
@@ -2345,14 +2365,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteEmailDomainsDomainNameRouteWithHttpInfo (string domainName, string routeId)
+        public ApiResponse< string > DeleteEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
-                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->DeleteEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->DeleteEmailDomainsDomainnameRoutesRouteId");
             // verify the required parameter 'routeId' is set
             if (routeId == null)
-                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->DeleteEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->DeleteEmailDomainsDomainnameRoutesRouteId");
 
             var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2397,9 +2417,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainNameRoute: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainNameRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2414,9 +2434,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainNameRouteAsync (string domainName, string routeId)
+        public async System.Threading.Tasks.Task<string> DeleteEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId)
         {
-             ApiResponse<string> localVarResponse = await DeleteEmailDomainsDomainNameRouteAsyncWithHttpInfo(domainName, routeId);
+             ApiResponse<string> localVarResponse = await DeleteEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo(domainName, routeId);
              return localVarResponse.Data;
 
         }
@@ -2428,14 +2448,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainNameRouteAsyncWithHttpInfo (string domainName, string routeId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
-                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->DeleteEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->DeleteEmailDomainsDomainnameRoutesRouteId");
             // verify the required parameter 'routeId' is set
             if (routeId == null)
-                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->DeleteEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->DeleteEmailDomainsDomainnameRoutesRouteId");
 
             var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2480,9 +2500,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainNameRoute: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainNameRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2497,9 +2517,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>string</returns>
-        public string DeleteQueue (string queueId, bool? forceDelete = null)
+        public string DeleteQueuesQueueId (string queueId, bool? forceDelete = null)
         {
-             ApiResponse<string> localVarResponse = DeleteQueueWithHttpInfo(queueId, forceDelete);
+             ApiResponse<string> localVarResponse = DeleteQueuesQueueIdWithHttpInfo(queueId, forceDelete);
              return localVarResponse.Data;
         }
 
@@ -2510,11 +2530,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteQueueWithHttpInfo (string queueId, bool? forceDelete = null)
+        public ApiResponse< string > DeleteQueuesQueueIdWithHttpInfo (string queueId, bool? forceDelete = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueue");
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueuesQueueId");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2559,9 +2579,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueue: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2576,9 +2596,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteQueueAsync (string queueId, bool? forceDelete = null)
+        public async System.Threading.Tasks.Task<string> DeleteQueuesQueueIdAsync (string queueId, bool? forceDelete = null)
         {
-             ApiResponse<string> localVarResponse = await DeleteQueueAsyncWithHttpInfo(queueId, forceDelete);
+             ApiResponse<string> localVarResponse = await DeleteQueuesQueueIdAsyncWithHttpInfo(queueId, forceDelete);
              return localVarResponse.Data;
 
         }
@@ -2590,11 +2610,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueuesQueueIdAsyncWithHttpInfo (string queueId, bool? forceDelete = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueue");
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueuesQueueId");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2639,9 +2659,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueue: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2656,9 +2676,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>string</returns>
-        public string DeleteQueueUser (string queueId, string memberId)
+        public string DeleteQueuesQueueIdUsersMemberId (string queueId, string memberId)
         {
-             ApiResponse<string> localVarResponse = DeleteQueueUserWithHttpInfo(queueId, memberId);
+             ApiResponse<string> localVarResponse = DeleteQueuesQueueIdUsersMemberIdWithHttpInfo(queueId, memberId);
              return localVarResponse.Data;
         }
 
@@ -2669,14 +2689,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteQueueUserWithHttpInfo (string queueId, string memberId)
+        public ApiResponse< string > DeleteQueuesQueueIdUsersMemberIdWithHttpInfo (string queueId, string memberId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueueUser");
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueuesQueueIdUsersMemberId");
             // verify the required parameter 'memberId' is set
             if (memberId == null)
-                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->DeleteQueueUser");
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->DeleteQueuesQueueIdUsersMemberId");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}/users/{memberId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2721,9 +2741,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueueUser: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueIdUsersMemberId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueueUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueIdUsersMemberId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2738,9 +2758,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteQueueUserAsync (string queueId, string memberId)
+        public async System.Threading.Tasks.Task<string> DeleteQueuesQueueIdUsersMemberIdAsync (string queueId, string memberId)
         {
-             ApiResponse<string> localVarResponse = await DeleteQueueUserAsyncWithHttpInfo(queueId, memberId);
+             ApiResponse<string> localVarResponse = await DeleteQueuesQueueIdUsersMemberIdAsyncWithHttpInfo(queueId, memberId);
              return localVarResponse.Data;
 
         }
@@ -2752,14 +2772,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueUserAsyncWithHttpInfo (string queueId, string memberId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueuesQueueIdUsersMemberIdAsyncWithHttpInfo (string queueId, string memberId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueueUser");
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueuesQueueIdUsersMemberId");
             // verify the required parameter 'memberId' is set
             if (memberId == null)
-                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->DeleteQueueUser");
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->DeleteQueuesQueueIdUsersMemberId");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}/users/{memberId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2804,9 +2824,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueueUser: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueIdUsersMemberId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueueUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueIdUsersMemberId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2821,9 +2841,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>string</returns>
-        public string DeleteQueueWrapupcode (string queueId, string codeId)
+        public string DeleteQueuesQueueIdWrapupcodesCodeId (string queueId, string codeId)
         {
-             ApiResponse<string> localVarResponse = DeleteQueueWrapupcodeWithHttpInfo(queueId, codeId);
+             ApiResponse<string> localVarResponse = DeleteQueuesQueueIdWrapupcodesCodeIdWithHttpInfo(queueId, codeId);
              return localVarResponse.Data;
         }
 
@@ -2834,14 +2854,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteQueueWrapupcodeWithHttpInfo (string queueId, string codeId)
+        public ApiResponse< string > DeleteQueuesQueueIdWrapupcodesCodeIdWithHttpInfo (string queueId, string codeId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueueWrapupcode");
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueuesQueueIdWrapupcodesCodeId");
             // verify the required parameter 'codeId' is set
             if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->DeleteQueueWrapupcode");
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->DeleteQueuesQueueIdWrapupcodesCodeId");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes/{codeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2886,9 +2906,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueueWrapupcode: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueIdWrapupcodesCodeId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueueWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueIdWrapupcodesCodeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2903,9 +2923,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteQueueWrapupcodeAsync (string queueId, string codeId)
+        public async System.Threading.Tasks.Task<string> DeleteQueuesQueueIdWrapupcodesCodeIdAsync (string queueId, string codeId)
         {
-             ApiResponse<string> localVarResponse = await DeleteQueueWrapupcodeAsyncWithHttpInfo(queueId, codeId);
+             ApiResponse<string> localVarResponse = await DeleteQueuesQueueIdWrapupcodesCodeIdAsyncWithHttpInfo(queueId, codeId);
              return localVarResponse.Data;
 
         }
@@ -2917,14 +2937,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueWrapupcodeAsyncWithHttpInfo (string queueId, string codeId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueuesQueueIdWrapupcodesCodeIdAsyncWithHttpInfo (string queueId, string codeId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueueWrapupcode");
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueuesQueueIdWrapupcodesCodeId");
             // verify the required parameter 'codeId' is set
             if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->DeleteQueueWrapupcode");
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->DeleteQueuesQueueIdWrapupcodesCodeId");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes/{codeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2969,9 +2989,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueueWrapupcode: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueIdWrapupcodesCodeId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteQueueWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQueuesQueueIdWrapupcodesCodeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2985,9 +3005,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>string</returns>
-        public string DeleteSkill (string skillId)
+        public string DeleteSkillsSkillId (string skillId)
         {
-             ApiResponse<string> localVarResponse = DeleteSkillWithHttpInfo(skillId);
+             ApiResponse<string> localVarResponse = DeleteSkillsSkillIdWithHttpInfo(skillId);
              return localVarResponse.Data;
         }
 
@@ -2997,11 +3017,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteSkillWithHttpInfo (string skillId)
+        public ApiResponse< string > DeleteSkillsSkillIdWithHttpInfo (string skillId)
         {
             // verify the required parameter 'skillId' is set
             if (skillId == null)
-                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->DeleteSkill");
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->DeleteSkillsSkillId");
 
             var localVarPath = "/api/v2/routing/skills/{skillId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3045,9 +3065,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteSkill: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteSkill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3061,9 +3081,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteSkillAsync (string skillId)
+        public async System.Threading.Tasks.Task<string> DeleteSkillsSkillIdAsync (string skillId)
         {
-             ApiResponse<string> localVarResponse = await DeleteSkillAsyncWithHttpInfo(skillId);
+             ApiResponse<string> localVarResponse = await DeleteSkillsSkillIdAsyncWithHttpInfo(skillId);
              return localVarResponse.Data;
 
         }
@@ -3074,11 +3094,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSkillAsyncWithHttpInfo (string skillId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSkillsSkillIdAsyncWithHttpInfo (string skillId)
         {
             // verify the required parameter 'skillId' is set
             if (skillId == null)
-                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->DeleteSkill");
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->DeleteSkillsSkillId");
 
             var localVarPath = "/api/v2/routing/skills/{skillId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3122,9 +3142,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteSkill: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteSkill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3139,9 +3159,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>string</returns>
-        public string DeleteUserRoutingskill (string userId, string skillId)
+        public string DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
         {
-             ApiResponse<string> localVarResponse = DeleteUserRoutingskillWithHttpInfo(userId, skillId);
+             ApiResponse<string> localVarResponse = DeleteUserIdRoutingskillsSkillIdWithHttpInfo(userId, skillId);
              return localVarResponse.Data;
         }
 
@@ -3152,14 +3172,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteUserRoutingskillWithHttpInfo (string userId, string skillId)
+        public ApiResponse< string > DeleteUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->DeleteUserRoutingskill");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->DeleteUserIdRoutingskillsSkillId");
             // verify the required parameter 'skillId' is set
             if (skillId == null)
-                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->DeleteUserRoutingskill");
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->DeleteUserIdRoutingskillsSkillId");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3204,9 +3224,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutingskill: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoutingskillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutingskill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoutingskillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3221,9 +3241,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteUserRoutingskillAsync (string userId, string skillId)
+        public async System.Threading.Tasks.Task<string> DeleteUserIdRoutingskillsSkillIdAsync (string userId, string skillId)
         {
-             ApiResponse<string> localVarResponse = await DeleteUserRoutingskillAsyncWithHttpInfo(userId, skillId);
+             ApiResponse<string> localVarResponse = await DeleteUserIdRoutingskillsSkillIdAsyncWithHttpInfo(userId, skillId);
              return localVarResponse.Data;
 
         }
@@ -3235,14 +3255,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->DeleteUserRoutingskill");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->DeleteUserIdRoutingskillsSkillId");
             // verify the required parameter 'skillId' is set
             if (skillId == null)
-                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->DeleteUserRoutingskill");
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->DeleteUserIdRoutingskillsSkillId");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3287,9 +3307,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutingskill: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoutingskillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutingskill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoutingskillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3444,9 +3464,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>string</returns>
-        public string DeleteWrapupcode (string codeId)
+        public string DeleteWrapupcodesCodeId (string codeId)
         {
-             ApiResponse<string> localVarResponse = DeleteWrapupcodeWithHttpInfo(codeId);
+             ApiResponse<string> localVarResponse = DeleteWrapupcodesCodeIdWithHttpInfo(codeId);
              return localVarResponse.Data;
         }
 
@@ -3456,11 +3476,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteWrapupcodeWithHttpInfo (string codeId)
+        public ApiResponse< string > DeleteWrapupcodesCodeIdWithHttpInfo (string codeId)
         {
             // verify the required parameter 'codeId' is set
             if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->DeleteWrapupcode");
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->DeleteWrapupcodesCodeId");
 
             var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3504,9 +3524,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteWrapupcode: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWrapupcodesCodeId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWrapupcodesCodeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3520,9 +3540,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteWrapupcodeAsync (string codeId)
+        public async System.Threading.Tasks.Task<string> DeleteWrapupcodesCodeIdAsync (string codeId)
         {
-             ApiResponse<string> localVarResponse = await DeleteWrapupcodeAsyncWithHttpInfo(codeId);
+             ApiResponse<string> localVarResponse = await DeleteWrapupcodesCodeIdAsyncWithHttpInfo(codeId);
              return localVarResponse.Data;
 
         }
@@ -3533,11 +3553,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteWrapupcodeAsyncWithHttpInfo (string codeId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteWrapupcodesCodeIdAsyncWithHttpInfo (string codeId)
         {
             // verify the required parameter 'codeId' is set
             if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->DeleteWrapupcode");
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->DeleteWrapupcodesCodeId");
 
             var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3581,9 +3601,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteWrapupcode: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWrapupcodesCodeId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWrapupcodesCodeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3733,15 +3753,168 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get routes 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <returns>InboundRouteEntityListing</returns>
+        public InboundRouteEntityListing GetEmailDomainsDomainnameRoutes (string domainName)
+        {
+             ApiResponse<InboundRouteEntityListing> localVarResponse = GetEmailDomainsDomainnameRoutesWithHttpInfo(domainName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get routes 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <returns>ApiResponse of InboundRouteEntityListing</returns>
+        public ApiResponse< InboundRouteEntityListing > GetEmailDomainsDomainnameRoutesWithHttpInfo (string domainName)
+        {
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainnameRoutes");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InboundRouteEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InboundRouteEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundRouteEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get routes 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <returns>Task of InboundRouteEntityListing</returns>
+        public async System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesAsync (string domainName)
+        {
+             ApiResponse<InboundRouteEntityListing> localVarResponse = await GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo(domainName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get routes 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainName">email domain</param>
+        /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName)
+        {
+            // verify the required parameter 'domainName' is set
+            if (domainName == null)
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainnameRoutes");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InboundRouteEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InboundRouteEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundRouteEntityListing)));
+            
+        }
+
+        /// <summary>
         /// Get a route 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>InboundRoute</returns>
-        public InboundRoute GetEmailDomainsDomainNameRoute (string domainName, string routeId)
+        public InboundRoute GetEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId)
         {
-             ApiResponse<InboundRoute> localVarResponse = GetEmailDomainsDomainNameRouteWithHttpInfo(domainName, routeId);
+             ApiResponse<InboundRoute> localVarResponse = GetEmailDomainsDomainnameRoutesRouteIdWithHttpInfo(domainName, routeId);
              return localVarResponse.Data;
         }
 
@@ -3752,14 +3925,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        public ApiResponse< InboundRoute > GetEmailDomainsDomainNameRouteWithHttpInfo (string domainName, string routeId)
+        public ApiResponse< InboundRoute > GetEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
-                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainnameRoutesRouteId");
             // verify the required parameter 'routeId' is set
             if (routeId == null)
-                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->GetEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->GetEmailDomainsDomainnameRoutesRouteId");
 
             var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3804,9 +3977,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainNameRoute: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainNameRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3821,9 +3994,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of InboundRoute</returns>
-        public async System.Threading.Tasks.Task<InboundRoute> GetEmailDomainsDomainNameRouteAsync (string domainName, string routeId)
+        public async System.Threading.Tasks.Task<InboundRoute> GetEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId)
         {
-             ApiResponse<InboundRoute> localVarResponse = await GetEmailDomainsDomainNameRouteAsyncWithHttpInfo(domainName, routeId);
+             ApiResponse<InboundRoute> localVarResponse = await GetEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo(domainName, routeId);
              return localVarResponse.Data;
 
         }
@@ -3835,14 +4008,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetEmailDomainsDomainNameRouteAsyncWithHttpInfo (string domainName, string routeId)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
-                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainnameRoutesRouteId");
             // verify the required parameter 'routeId' is set
             if (routeId == null)
-                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->GetEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->GetEmailDomainsDomainnameRoutesRouteId");
 
             var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3887,166 +4060,13 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainNameRoute: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainNameRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (InboundRoute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundRoute)));
-            
-        }
-
-        /// <summary>
-        /// Get routes 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainName">email domain</param>
-        /// <returns>InboundRouteEntityListing</returns>
-        public InboundRouteEntityListing GetEmailDomainsDomainNameRoutes (string domainName)
-        {
-             ApiResponse<InboundRouteEntityListing> localVarResponse = GetEmailDomainsDomainNameRoutesWithHttpInfo(domainName);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get routes 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainName">email domain</param>
-        /// <returns>ApiResponse of InboundRouteEntityListing</returns>
-        public ApiResponse< InboundRouteEntityListing > GetEmailDomainsDomainNameRoutesWithHttpInfo (string domainName)
-        {
-            // verify the required parameter 'domainName' is set
-            if (domainName == null)
-                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainNameRoutes");
-
-            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainNameRoutes: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainNameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<InboundRouteEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InboundRouteEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundRouteEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get routes 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainName">email domain</param>
-        /// <returns>Task of InboundRouteEntityListing</returns>
-        public async System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainNameRoutesAsync (string domainName)
-        {
-             ApiResponse<InboundRouteEntityListing> localVarResponse = await GetEmailDomainsDomainNameRoutesAsyncWithHttpInfo(domainName);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get routes 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainName">email domain</param>
-        /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainNameRoutesAsyncWithHttpInfo (string domainName)
-        {
-            // verify the required parameter 'domainName' is set
-            if (domainName == null)
-                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->GetEmailDomainsDomainNameRoutes");
-
-            var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainNameRoutes: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainNameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<InboundRouteEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InboundRouteEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundRouteEntityListing)));
             
         }
 
@@ -4188,1491 +4208,6 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EmailSetup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmailSetup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailSetup)));
-            
-        }
-
-        /// <summary>
-        /// Get details about this queue. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <returns>Queue</returns>
-        public Queue GetQueue (string queueId)
-        {
-             ApiResponse<Queue> localVarResponse = GetQueueWithHttpInfo(queueId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get details about this queue. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <returns>ApiResponse of Queue</returns>
-        public ApiResponse< Queue > GetQueueWithHttpInfo (string queueId)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueue");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueue: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Queue>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Queue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Queue)));
-            
-        }
-
-        /// <summary>
-        /// Get details about this queue. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <returns>Task of Queue</returns>
-        public async System.Threading.Tasks.Task<Queue> GetQueueAsync (string queueId)
-        {
-             ApiResponse<Queue> localVarResponse = await GetQueueAsyncWithHttpInfo(queueId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get details about this queue. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <returns>Task of ApiResponse (Queue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Queue>> GetQueueAsyncWithHttpInfo (string queueId)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueue");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueue: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Queue>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Queue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Queue)));
-            
-        }
-
-        /// <summary>
-        /// Get recent conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>CallConversationEntityListing</returns>
-        public CallConversationEntityListing GetQueueConversations (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<CallConversationEntityListing> localVarResponse = GetQueueConversationsWithHttpInfo(queueId, pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get recent conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of CallConversationEntityListing</returns>
-        public ApiResponse< CallConversationEntityListing > GetQueueConversationsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueConversations");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversations: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get recent conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of CallConversationEntityListing</returns>
-        public async System.Threading.Tasks.Task<CallConversationEntityListing> GetQueueConversationsAsync (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<CallConversationEntityListing> localVarResponse = await GetQueueConversationsAsyncWithHttpInfo(queueId, pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get recent conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetQueueConversationsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueConversations");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversations: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get recent callback conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>CallbackConversationEntityListing</returns>
-        public CallbackConversationEntityListing GetQueueConversationsCallbacks (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<CallbackConversationEntityListing> localVarResponse = GetQueueConversationsCallbacksWithHttpInfo(queueId, pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get recent callback conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of CallbackConversationEntityListing</returns>
-        public ApiResponse< CallbackConversationEntityListing > GetQueueConversationsCallbacksWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueConversationsCallbacks");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/callbacks";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsCallbacks: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsCallbacks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<CallbackConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CallbackConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallbackConversationEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get recent callback conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of CallbackConversationEntityListing</returns>
-        public async System.Threading.Tasks.Task<CallbackConversationEntityListing> GetQueueConversationsCallbacksAsync (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<CallbackConversationEntityListing> localVarResponse = await GetQueueConversationsCallbacksAsyncWithHttpInfo(queueId, pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get recent callback conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (CallbackConversationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallbackConversationEntityListing>> GetQueueConversationsCallbacksAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueConversationsCallbacks");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/callbacks";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsCallbacks: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsCallbacks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<CallbackConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CallbackConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallbackConversationEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get recent call conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>CallConversationEntityListing</returns>
-        public CallConversationEntityListing GetQueueConversationsCalls (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<CallConversationEntityListing> localVarResponse = GetQueueConversationsCallsWithHttpInfo(queueId, pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get recent call conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of CallConversationEntityListing</returns>
-        public ApiResponse< CallConversationEntityListing > GetQueueConversationsCallsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueConversationsCalls");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/calls";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsCalls: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsCalls: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get recent call conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of CallConversationEntityListing</returns>
-        public async System.Threading.Tasks.Task<CallConversationEntityListing> GetQueueConversationsCallsAsync (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<CallConversationEntityListing> localVarResponse = await GetQueueConversationsCallsAsyncWithHttpInfo(queueId, pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get recent call conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetQueueConversationsCallsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueConversationsCalls");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/calls";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsCalls: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsCalls: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get recent chat conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ChatConversationEntityListing</returns>
-        public ChatConversationEntityListing GetQueueConversationsChats (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<ChatConversationEntityListing> localVarResponse = GetQueueConversationsChatsWithHttpInfo(queueId, pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get recent chat conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of ChatConversationEntityListing</returns>
-        public ApiResponse< ChatConversationEntityListing > GetQueueConversationsChatsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueConversationsChats");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/chats";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsChats: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsChats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ChatConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ChatConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatConversationEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get recent chat conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ChatConversationEntityListing</returns>
-        public async System.Threading.Tasks.Task<ChatConversationEntityListing> GetQueueConversationsChatsAsync (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<ChatConversationEntityListing> localVarResponse = await GetQueueConversationsChatsAsyncWithHttpInfo(queueId, pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get recent chat conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (ChatConversationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChatConversationEntityListing>> GetQueueConversationsChatsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueConversationsChats");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/chats";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsChats: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsChats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ChatConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ChatConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatConversationEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get recent email conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>EmailConversationEntityListing</returns>
-        public EmailConversationEntityListing GetQueueConversationsEmails (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<EmailConversationEntityListing> localVarResponse = GetQueueConversationsEmailsWithHttpInfo(queueId, pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get recent email conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of EmailConversationEntityListing</returns>
-        public ApiResponse< EmailConversationEntityListing > GetQueueConversationsEmailsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueConversationsEmails");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/emails";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsEmails: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsEmails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EmailConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EmailConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailConversationEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get recent email conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of EmailConversationEntityListing</returns>
-        public async System.Threading.Tasks.Task<EmailConversationEntityListing> GetQueueConversationsEmailsAsync (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<EmailConversationEntityListing> localVarResponse = await GetQueueConversationsEmailsAsyncWithHttpInfo(queueId, pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get recent email conversations that are still active 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (EmailConversationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmailConversationEntityListing>> GetQueueConversationsEmailsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueConversationsEmails");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/emails";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsEmails: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueConversationsEmails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EmailConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EmailConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailConversationEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get Estimated Wait Time 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">queueId</param>
-        /// <param name="conversationId">conversationId (optional)</param>
-        /// <returns>EstimatedWaitTimePredictions</returns>
-        public EstimatedWaitTimePredictions GetQueueEstimatedwaittime (string queueId, string conversationId = null)
-        {
-             ApiResponse<EstimatedWaitTimePredictions> localVarResponse = GetQueueEstimatedwaittimeWithHttpInfo(queueId, conversationId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get Estimated Wait Time 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">queueId</param>
-        /// <param name="conversationId">conversationId (optional)</param>
-        /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
-        public ApiResponse< EstimatedWaitTimePredictions > GetQueueEstimatedwaittimeWithHttpInfo (string queueId, string conversationId = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueEstimatedwaittime");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/estimatedwaittime";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (conversationId != null) localVarQueryParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueEstimatedwaittime: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueEstimatedwaittime: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EstimatedWaitTimePredictions>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EstimatedWaitTimePredictions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EstimatedWaitTimePredictions)));
-            
-        }
-
-        /// <summary>
-        /// Get Estimated Wait Time 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">queueId</param>
-        /// <param name="conversationId">conversationId (optional)</param>
-        /// <returns>Task of EstimatedWaitTimePredictions</returns>
-        public async System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetQueueEstimatedwaittimeAsync (string queueId, string conversationId = null)
-        {
-             ApiResponse<EstimatedWaitTimePredictions> localVarResponse = await GetQueueEstimatedwaittimeAsyncWithHttpInfo(queueId, conversationId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get Estimated Wait Time 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">queueId</param>
-        /// <param name="conversationId">conversationId (optional)</param>
-        /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetQueueEstimatedwaittimeAsyncWithHttpInfo (string queueId, string conversationId = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueEstimatedwaittime");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/estimatedwaittime";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (conversationId != null) localVarQueryParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueEstimatedwaittime: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueEstimatedwaittime: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EstimatedWaitTimePredictions>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EstimatedWaitTimePredictions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EstimatedWaitTimePredictions)));
-            
-        }
-
-        /// <summary>
-        /// Get the members of this queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>QueueMemberEntityListing</returns>
-        public QueueMemberEntityListing GetQueueUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
-        {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = GetQueueUsersWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get the members of this queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        public ApiResponse< QueueMemberEntityListing > GetQueueUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueUsers");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            if (directMembers != null) localVarQueryParams.Add("directMembers", Configuration.ApiClient.ParameterToString(directMembers)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueUsers: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get the members of this queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>Task of QueueMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueueUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
-        {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = await GetQueueUsersAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get the members of this queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortBy">Sort by (optional, default to name)</param>
-        /// <param name="expand">expand (optional)</param>
-        /// <param name="directMembers">Only get users that are direct members of the queue (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueueUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueUsers");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            if (directMembers != null) localVarQueryParams.Add("directMembers", Configuration.ApiClient.ParameterToString(directMembers)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueUsers: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get the wrap-up codes for a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <returns>WrapupCodeEntityListing</returns>
-        public WrapupCodeEntityListing GetQueueWrapupcodes (string queueId, string codeId)
-        {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetQueueWrapupcodesWithHttpInfo(queueId, codeId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get the wrap-up codes for a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
-        public ApiResponse< WrapupCodeEntityListing > GetQueueWrapupcodesWithHttpInfo (string queueId, string codeId)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueWrapupcodes");
-            // verify the required parameter 'codeId' is set
-            if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetQueueWrapupcodes");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<WrapupCodeEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCodeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCodeEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get the wrap-up codes for a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <returns>Task of WrapupCodeEntityListing</returns>
-        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetQueueWrapupcodesAsync (string queueId, string codeId)
-        {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetQueueWrapupcodesAsyncWithHttpInfo(queueId, codeId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get the wrap-up codes for a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetQueueWrapupcodesAsyncWithHttpInfo (string queueId, string codeId)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueueWrapupcodes");
-            // verify the required parameter 'codeId' is set
-            if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetQueueWrapupcodes");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueueWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<WrapupCodeEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCodeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCodeEntityListing)));
             
         }
 
@@ -5848,30 +4383,30 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get Routing Skill 
+        /// Get details about this queue. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
-        /// <returns>RoutingSkill</returns>
-        public RoutingSkill GetSkill (string skillId)
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>Queue</returns>
+        public Queue GetQueuesQueueId (string queueId)
         {
-             ApiResponse<RoutingSkill> localVarResponse = GetSkillWithHttpInfo(skillId);
+             ApiResponse<Queue> localVarResponse = GetQueuesQueueIdWithHttpInfo(queueId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Routing Skill 
+        /// Get details about this queue. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
-        /// <returns>ApiResponse of RoutingSkill</returns>
-        public ApiResponse< RoutingSkill > GetSkillWithHttpInfo (string skillId)
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>ApiResponse of Queue</returns>
+        public ApiResponse< Queue > GetQueuesQueueIdWithHttpInfo (string queueId)
         {
-            // verify the required parameter 'skillId' is set
-            if (skillId == null)
-                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->GetSkill");
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueId");
 
-            var localVarPath = "/api/v2/routing/skills/{skillId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5896,7 +4431,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5913,42 +4448,42 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSkill: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetSkill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<RoutingSkill>(localVarStatusCode,
+            return new ApiResponse<Queue>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
+                (Queue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Queue)));
             
         }
 
         /// <summary>
-        /// Get Routing Skill 
+        /// Get details about this queue. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
-        /// <returns>Task of RoutingSkill</returns>
-        public async System.Threading.Tasks.Task<RoutingSkill> GetSkillAsync (string skillId)
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>Task of Queue</returns>
+        public async System.Threading.Tasks.Task<Queue> GetQueuesQueueIdAsync (string queueId)
         {
-             ApiResponse<RoutingSkill> localVarResponse = await GetSkillAsyncWithHttpInfo(skillId);
+             ApiResponse<Queue> localVarResponse = await GetQueuesQueueIdAsyncWithHttpInfo(queueId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get Routing Skill 
+        /// Get details about this queue. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="skillId">Skill ID</param>
-        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> GetSkillAsyncWithHttpInfo (string skillId)
+        /// <param name="queueId">Queue ID</param>
+        /// <returns>Task of ApiResponse (Queue)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Queue>> GetQueuesQueueIdAsyncWithHttpInfo (string queueId)
         {
-            // verify the required parameter 'skillId' is set
-            if (skillId == null)
-                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->GetSkill");
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueId");
 
-            var localVarPath = "/api/v2/routing/skills/{skillId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5973,7 +4508,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5990,13 +4525,1375 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSkill: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetSkill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<RoutingSkill>(localVarStatusCode,
+            return new ApiResponse<Queue>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
+                (Queue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Queue)));
+            
+        }
+
+        /// <summary>
+        /// Get recent conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ConversationEntityListing</returns>
+        public ConversationEntityListing GetQueuesQueueIdConversations (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<ConversationEntityListing> localVarResponse = GetQueuesQueueIdConversationsWithHttpInfo(queueId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recent conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of ConversationEntityListing</returns>
+        public ApiResponse< ConversationEntityListing > GetQueuesQueueIdConversationsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdConversations");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversations: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<ConversationEntityListing> GetQueuesQueueIdConversationsAsync (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<ConversationEntityListing> localVarResponse = await GetQueuesQueueIdConversationsAsyncWithHttpInfo(queueId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recent conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetQueuesQueueIdConversationsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdConversations");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversations: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent callback conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>CallbackConversationEntityListing</returns>
+        public CallbackConversationEntityListing GetQueuesQueueIdConversationsCallbacks (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<CallbackConversationEntityListing> localVarResponse = GetQueuesQueueIdConversationsCallbacksWithHttpInfo(queueId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recent callback conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of CallbackConversationEntityListing</returns>
+        public ApiResponse< CallbackConversationEntityListing > GetQueuesQueueIdConversationsCallbacksWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdConversationsCallbacks");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/callbacks";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsCallbacks: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsCallbacks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallbackConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallbackConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallbackConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent callback conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of CallbackConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<CallbackConversationEntityListing> GetQueuesQueueIdConversationsCallbacksAsync (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<CallbackConversationEntityListing> localVarResponse = await GetQueuesQueueIdConversationsCallbacksAsyncWithHttpInfo(queueId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recent callback conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (CallbackConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallbackConversationEntityListing>> GetQueuesQueueIdConversationsCallbacksAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdConversationsCallbacks");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/callbacks";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsCallbacks: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsCallbacks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallbackConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallbackConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallbackConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent call conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>CallConversationEntityListing</returns>
+        public CallConversationEntityListing GetQueuesQueueIdConversationsCalls (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<CallConversationEntityListing> localVarResponse = GetQueuesQueueIdConversationsCallsWithHttpInfo(queueId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recent call conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of CallConversationEntityListing</returns>
+        public ApiResponse< CallConversationEntityListing > GetQueuesQueueIdConversationsCallsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdConversationsCalls");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/calls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsCalls: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsCalls: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent call conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of CallConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<CallConversationEntityListing> GetQueuesQueueIdConversationsCallsAsync (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<CallConversationEntityListing> localVarResponse = await GetQueuesQueueIdConversationsCallsAsyncWithHttpInfo(queueId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recent call conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetQueuesQueueIdConversationsCallsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdConversationsCalls");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/calls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsCalls: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsCalls: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent chat conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ChatConversationEntityListing</returns>
+        public ChatConversationEntityListing GetQueuesQueueIdConversationsChats (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<ChatConversationEntityListing> localVarResponse = GetQueuesQueueIdConversationsChatsWithHttpInfo(queueId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recent chat conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of ChatConversationEntityListing</returns>
+        public ApiResponse< ChatConversationEntityListing > GetQueuesQueueIdConversationsChatsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdConversationsChats");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/chats";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsChats: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsChats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ChatConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent chat conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ChatConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<ChatConversationEntityListing> GetQueuesQueueIdConversationsChatsAsync (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<ChatConversationEntityListing> localVarResponse = await GetQueuesQueueIdConversationsChatsAsyncWithHttpInfo(queueId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recent chat conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ChatConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ChatConversationEntityListing>> GetQueuesQueueIdConversationsChatsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdConversationsChats");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/chats";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsChats: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsChats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ChatConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent email conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>EmailConversationEntityListing</returns>
+        public EmailConversationEntityListing GetQueuesQueueIdConversationsEmails (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<EmailConversationEntityListing> localVarResponse = GetQueuesQueueIdConversationsEmailsWithHttpInfo(queueId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recent email conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of EmailConversationEntityListing</returns>
+        public ApiResponse< EmailConversationEntityListing > GetQueuesQueueIdConversationsEmailsWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdConversationsEmails");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/emails";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsEmails: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsEmails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent email conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of EmailConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<EmailConversationEntityListing> GetQueuesQueueIdConversationsEmailsAsync (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<EmailConversationEntityListing> localVarResponse = await GetQueuesQueueIdConversationsEmailsAsyncWithHttpInfo(queueId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recent email conversations that are still active 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (EmailConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailConversationEntityListing>> GetQueuesQueueIdConversationsEmailsAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdConversationsEmails");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/conversations/emails";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsEmails: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdConversationsEmails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmailConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get Estimated Wait Time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId (optional)</param>
+        /// <returns>EstimatedWaitTimePredictions</returns>
+        public EstimatedWaitTimePredictions GetQueuesQueueIdEstimatedwaittime (string queueId, string conversationId = null)
+        {
+             ApiResponse<EstimatedWaitTimePredictions> localVarResponse = GetQueuesQueueIdEstimatedwaittimeWithHttpInfo(queueId, conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Estimated Wait Time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId (optional)</param>
+        /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
+        public ApiResponse< EstimatedWaitTimePredictions > GetQueuesQueueIdEstimatedwaittimeWithHttpInfo (string queueId, string conversationId = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdEstimatedwaittime");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/estimatedwaittime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (conversationId != null) localVarQueryParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdEstimatedwaittime: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdEstimatedwaittime: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EstimatedWaitTimePredictions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EstimatedWaitTimePredictions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EstimatedWaitTimePredictions)));
+            
+        }
+
+        /// <summary>
+        /// Get Estimated Wait Time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId (optional)</param>
+        /// <returns>Task of EstimatedWaitTimePredictions</returns>
+        public async System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetQueuesQueueIdEstimatedwaittimeAsync (string queueId, string conversationId = null)
+        {
+             ApiResponse<EstimatedWaitTimePredictions> localVarResponse = await GetQueuesQueueIdEstimatedwaittimeAsyncWithHttpInfo(queueId, conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Estimated Wait Time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId (optional)</param>
+        /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetQueuesQueueIdEstimatedwaittimeAsyncWithHttpInfo (string queueId, string conversationId = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdEstimatedwaittime");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/estimatedwaittime";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (conversationId != null) localVarQueryParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdEstimatedwaittime: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdEstimatedwaittime: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EstimatedWaitTimePredictions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EstimatedWaitTimePredictions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EstimatedWaitTimePredictions)));
+            
+        }
+
+        /// <summary>
+        /// Get the members of this queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>QueueMemberEntityListing</returns>
+        public QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        {
+             ApiResponse<QueueMemberEntityListing> localVarResponse = GetQueuesQueueIdUsersWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the members of this queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        public ApiResponse< QueueMemberEntityListing > GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdUsers");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (joined != null) localVarQueryParams.Add("joined", Configuration.ApiClient.ParameterToString(joined)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (skills != null) localVarQueryParams.Add("skills", Configuration.ApiClient.ParameterToString(skills)); // query parameter
+            if (languages != null) localVarQueryParams.Add("languages", Configuration.ApiClient.ParameterToString(languages)); // query parameter
+            if (routingStatus != null) localVarQueryParams.Add("routingStatus", Configuration.ApiClient.ParameterToString(routingStatus)); // query parameter
+            if (presence != null) localVarQueryParams.Add("presence", Configuration.ApiClient.ParameterToString(presence)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdUsers: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the members of this queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        {
+             ApiResponse<QueueMemberEntityListing> localVarResponse = await GetQueuesQueueIdUsersAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the members of this queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="joined">Filter by joined status (optional)</param>
+        /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="skills">Filter by skill (optional)</param>
+        /// <param name="languages">Filter by language (optional)</param>
+        /// <param name="routingStatus">Filter by routing status (optional)</param>
+        /// <param name="presence">Filter by presence (optional)</param>
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdUsers");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (joined != null) localVarQueryParams.Add("joined", Configuration.ApiClient.ParameterToString(joined)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (skills != null) localVarQueryParams.Add("skills", Configuration.ApiClient.ParameterToString(skills)); // query parameter
+            if (languages != null) localVarQueryParams.Add("languages", Configuration.ApiClient.ParameterToString(languages)); // query parameter
+            if (routingStatus != null) localVarQueryParams.Add("routingStatus", Configuration.ApiClient.ParameterToString(routingStatus)); // query parameter
+            if (presence != null) localVarQueryParams.Add("presence", Configuration.ApiClient.ParameterToString(presence)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdUsers: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up codes for a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <returns>WrapupCodeEntityListing</returns>
+        public WrapupCodeEntityListing GetQueuesQueueIdWrapupcodes (string queueId, string codeId)
+        {
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetQueuesQueueIdWrapupcodesWithHttpInfo(queueId, codeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the wrap-up codes for a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
+        public ApiResponse< WrapupCodeEntityListing > GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdWrapupcodes");
+            // verify the required parameter 'codeId' is set
+            if (codeId == null)
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetQueuesQueueIdWrapupcodes");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCodeEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCodeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCodeEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up codes for a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <returns>Task of WrapupCodeEntityListing</returns>
+        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesAsync (string queueId, string codeId)
+        {
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo(queueId, codeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the wrap-up codes for a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdWrapupcodes");
+            // verify the required parameter 'codeId' is set
+            if (codeId == null)
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetQueuesQueueIdWrapupcodes");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCodeEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCodeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCodeEntityListing)));
             
         }
 
@@ -6154,6 +6051,159 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>RoutingSkill</returns>
+        public RoutingSkill GetSkillsSkillId (string skillId)
+        {
+             ApiResponse<RoutingSkill> localVarResponse = GetSkillsSkillIdWithHttpInfo(skillId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>ApiResponse of RoutingSkill</returns>
+        public ApiResponse< RoutingSkill > GetSkillsSkillIdWithHttpInfo (string skillId)
+        {
+            // verify the required parameter 'skillId' is set
+            if (skillId == null)
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->GetSkillsSkillId");
+
+            var localVarPath = "/api/v2/routing/skills/{skillId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RoutingSkill>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
+            
+        }
+
+        /// <summary>
+        /// Get Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of RoutingSkill</returns>
+        public async System.Threading.Tasks.Task<RoutingSkill> GetSkillsSkillIdAsync (string skillId)
+        {
+             ApiResponse<RoutingSkill> localVarResponse = await GetSkillsSkillIdAsyncWithHttpInfo(skillId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> GetSkillsSkillIdAsyncWithHttpInfo (string skillId)
+        {
+            // verify the required parameter 'skillId' is set
+            if (skillId == null)
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->GetSkillsSkillId");
+
+            var localVarPath = "/api/v2/routing/skills/{skillId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RoutingSkill>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
+            
+        }
+
+        /// <summary>
         /// List routing skills for user 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6162,9 +6212,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserSkillEntityListing</returns>
-        public UserSkillEntityListing GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public UserSkillEntityListing GetUserIdRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<UserSkillEntityListing> localVarResponse = GetUserRoutingskillsWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
+             ApiResponse<UserSkillEntityListing> localVarResponse = GetUserIdRoutingskillsWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -6177,11 +6227,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
-        public ApiResponse< UserSkillEntityListing > GetUserRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public ApiResponse< UserSkillEntityListing > GetUserIdRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->GetUserRoutingskills");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->GetUserIdRoutingskills");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6228,9 +6278,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserSkillEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6247,9 +6297,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserSkillEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserSkillEntityListing> GetUserRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<UserSkillEntityListing> GetUserIdRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<UserSkillEntityListing> localVarResponse = await GetUserRoutingskillsAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
+             ApiResponse<UserSkillEntityListing> localVarResponse = await GetUserIdRoutingskillsAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -6263,11 +6313,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserIdRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->GetUserRoutingskills");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->GetUserIdRoutingskills");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6314,9 +6364,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserSkillEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6462,159 +6512,6 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Utilization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Utilization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Utilization)));
-            
-        }
-
-        /// <summary>
-        /// Get details about this wrap-up code. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>WrapupCode</returns>
-        public WrapupCode GetWrapupcode (string codeId)
-        {
-             ApiResponse<WrapupCode> localVarResponse = GetWrapupcodeWithHttpInfo(codeId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get details about this wrap-up code. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > GetWrapupcodeWithHttpInfo (string codeId)
-        {
-            // verify the required parameter 'codeId' is set
-            if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetWrapupcode");
-
-            var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcode: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
-            
-        }
-
-        /// <summary>
-        /// Get details about this wrap-up code. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> GetWrapupcodeAsync (string codeId)
-        {
-             ApiResponse<WrapupCode> localVarResponse = await GetWrapupcodeAsyncWithHttpInfo(codeId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get details about this wrap-up code. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetWrapupcodeAsyncWithHttpInfo (string codeId)
-        {
-            // verify the required parameter 'codeId' is set
-            if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetWrapupcode");
-
-            var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcode: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
             
         }
 
@@ -6778,6 +6675,338 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get details about this wrap-up code. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>WrapupCode</returns>
+        public WrapupCode GetWrapupcodesCodeId (string codeId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetWrapupcodesCodeIdWithHttpInfo(codeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get details about this wrap-up code. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        public ApiResponse< WrapupCode > GetWrapupcodesCodeIdWithHttpInfo (string codeId)
+        {
+            // verify the required parameter 'codeId' is set
+            if (codeId == null)
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetWrapupcodesCodeId");
+
+            var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcodesCodeId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcodesCodeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Get details about this wrap-up code. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>Task of WrapupCode</returns>
+        public async System.Threading.Tasks.Task<WrapupCode> GetWrapupcodesCodeIdAsync (string codeId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetWrapupcodesCodeIdAsyncWithHttpInfo(codeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get details about this wrap-up code. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetWrapupcodesCodeIdAsyncWithHttpInfo (string codeId)
+        {
+            // verify the required parameter 'codeId' is set
+            if (codeId == null)
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetWrapupcodesCodeId");
+
+            var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcodesCodeId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWrapupcodesCodeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (WrapupCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+            
+        }
+
+        /// <summary>
+        /// Join or unjoin a set of users for a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>QueueMemberEntityListing</returns>
+        public QueueMemberEntityListing PatchQueuesQueueIdUsers (string queueId, List<QueueMember> body)
+        {
+             ApiResponse<QueueMemberEntityListing> localVarResponse = PatchQueuesQueueIdUsersWithHttpInfo(queueId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Join or unjoin a set of users for a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
+        public ApiResponse< QueueMemberEntityListing > PatchQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchQueuesQueueIdUsers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchQueuesQueueIdUsers");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchQueuesQueueIdUsers: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Join or unjoin a set of users for a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>Task of QueueMemberEntityListing</returns>
+        public async System.Threading.Tasks.Task<QueueMemberEntityListing> PatchQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body)
+        {
+             ApiResponse<QueueMemberEntityListing> localVarResponse = await PatchQueuesQueueIdUsersAsyncWithHttpInfo(queueId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Join or unjoin a set of users for a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchQueuesQueueIdUsers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchQueuesQueueIdUsers");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchQueuesQueueIdUsers: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
+            
+        }
+
+        /// <summary>
         /// Update the ring number of joined status for a User in a Queue 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6785,9 +7014,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>QueueMember</returns>
-        public QueueMember PatchQueueUser (string queueId, string memberId, QueueMember body)
+        public QueueMember PatchQueuesQueueIdUsersMemberId (string queueId, string memberId, QueueMember body)
         {
-             ApiResponse<QueueMember> localVarResponse = PatchQueueUserWithHttpInfo(queueId, memberId, body);
+             ApiResponse<QueueMember> localVarResponse = PatchQueuesQueueIdUsersMemberIdWithHttpInfo(queueId, memberId, body);
              return localVarResponse.Data;
         }
 
@@ -6799,17 +7028,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > PatchQueueUserWithHttpInfo (string queueId, string memberId, QueueMember body)
+        public ApiResponse< QueueMember > PatchQueuesQueueIdUsersMemberIdWithHttpInfo (string queueId, string memberId, QueueMember body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchQueueUser");
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchQueuesQueueIdUsersMemberId");
             // verify the required parameter 'memberId' is set
             if (memberId == null)
-                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->PatchQueueUser");
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->PatchQueuesQueueIdUsersMemberId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchQueueUser");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchQueuesQueueIdUsersMemberId");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}/users/{memberId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6862,9 +7091,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchQueueUser: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchQueuesQueueIdUsersMemberId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchQueueUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PatchQueuesQueueIdUsersMemberId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<QueueMember>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6880,9 +7109,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> PatchQueueUserAsync (string queueId, string memberId, QueueMember body)
+        public async System.Threading.Tasks.Task<QueueMember> PatchQueuesQueueIdUsersMemberIdAsync (string queueId, string memberId, QueueMember body)
         {
-             ApiResponse<QueueMember> localVarResponse = await PatchQueueUserAsyncWithHttpInfo(queueId, memberId, body);
+             ApiResponse<QueueMember> localVarResponse = await PatchQueuesQueueIdUsersMemberIdAsyncWithHttpInfo(queueId, memberId, body);
              return localVarResponse.Data;
 
         }
@@ -6895,17 +7124,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchQueueUserAsyncWithHttpInfo (string queueId, string memberId, QueueMember body)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchQueuesQueueIdUsersMemberIdAsyncWithHttpInfo (string queueId, string memberId, QueueMember body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchQueueUser");
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchQueuesQueueIdUsersMemberId");
             // verify the required parameter 'memberId' is set
             if (memberId == null)
-                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->PatchQueueUser");
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->PatchQueuesQueueIdUsersMemberId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchQueueUser");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchQueuesQueueIdUsersMemberId");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}/users/{memberId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6958,192 +7187,13 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchQueueUser: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchQueuesQueueIdUsersMemberId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchQueueUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PatchQueuesQueueIdUsersMemberId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<QueueMember>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QueueMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)));
-            
-        }
-
-        /// <summary>
-        /// Join or unjoin a set of users for a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <returns>QueueMemberEntityListing</returns>
-        public QueueMemberEntityListing PatchQueueUsers (string queueId, List<QueueMember> body)
-        {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = PatchQueueUsersWithHttpInfo(queueId, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Join or unjoin a set of users for a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        public ApiResponse< QueueMemberEntityListing > PatchQueueUsersWithHttpInfo (string queueId, List<QueueMember> body)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchQueueUsers");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchQueueUsers");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchQueueUsers: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchQueueUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Join or unjoin a set of users for a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <returns>Task of QueueMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueMemberEntityListing> PatchQueueUsersAsync (string queueId, List<QueueMember> body)
-        {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = await PatchQueueUsersAsyncWithHttpInfo(queueId, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Join or unjoin a set of users for a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> PatchQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchQueueUsers");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchQueueUsers");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchQueueUsers: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchQueueUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
             
         }
 
@@ -7321,9 +7371,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>InboundRoute</returns>
-        public InboundRoute PostEmailDomainsDomainNameRoutes (string domainName, InboundRoute body)
+        public InboundRoute PostEmailDomainsDomainnameRoutes (string domainName, InboundRoute body)
         {
-             ApiResponse<InboundRoute> localVarResponse = PostEmailDomainsDomainNameRoutesWithHttpInfo(domainName, body);
+             ApiResponse<InboundRoute> localVarResponse = PostEmailDomainsDomainnameRoutesWithHttpInfo(domainName, body);
              return localVarResponse.Data;
         }
 
@@ -7334,14 +7384,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        public ApiResponse< InboundRoute > PostEmailDomainsDomainNameRoutesWithHttpInfo (string domainName, InboundRoute body)
+        public ApiResponse< InboundRoute > PostEmailDomainsDomainnameRoutesWithHttpInfo (string domainName, InboundRoute body)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
-                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PostEmailDomainsDomainNameRoutes");
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PostEmailDomainsDomainnameRoutes");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostEmailDomainsDomainNameRoutes");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostEmailDomainsDomainnameRoutes");
 
             var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7393,9 +7443,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainNameRoutes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainnameRoutes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainNameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainnameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7410,9 +7460,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
-        public async System.Threading.Tasks.Task<InboundRoute> PostEmailDomainsDomainNameRoutesAsync (string domainName, InboundRoute body)
+        public async System.Threading.Tasks.Task<InboundRoute> PostEmailDomainsDomainnameRoutesAsync (string domainName, InboundRoute body)
         {
-             ApiResponse<InboundRoute> localVarResponse = await PostEmailDomainsDomainNameRoutesAsyncWithHttpInfo(domainName, body);
+             ApiResponse<InboundRoute> localVarResponse = await PostEmailDomainsDomainnameRoutesAsyncWithHttpInfo(domainName, body);
              return localVarResponse.Data;
 
         }
@@ -7424,14 +7474,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domainName">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostEmailDomainsDomainNameRoutesAsyncWithHttpInfo (string domainName, InboundRoute body)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName, InboundRoute body)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
-                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PostEmailDomainsDomainNameRoutes");
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PostEmailDomainsDomainnameRoutes");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostEmailDomainsDomainNameRoutes");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostEmailDomainsDomainnameRoutes");
 
             var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7483,389 +7533,13 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainNameRoutes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainnameRoutes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainNameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostEmailDomainsDomainnameRoutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (InboundRoute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundRoute)));
-            
-        }
-
-        /// <summary>
-        /// Bulk add or delete up to 100 queue members 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>string</returns>
-        public string PostQueueUsers (string queueId, List<QueueMember> body, bool? delete = null)
-        {
-             ApiResponse<string> localVarResponse = PostQueueUsersWithHttpInfo(queueId, body, delete);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Bulk add or delete up to 100 queue members 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PostQueueUsersWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueueUsers");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostQueueUsers");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (delete != null) localVarQueryParams.Add("delete", Configuration.ApiClient.ParameterToString(delete)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostQueueUsers: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostQueueUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-
-        /// <summary>
-        /// Bulk add or delete up to 100 queue members 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PostQueueUsersAsync (string queueId, List<QueueMember> body, bool? delete = null)
-        {
-             ApiResponse<string> localVarResponse = await PostQueueUsersAsyncWithHttpInfo(queueId, body, delete);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Bulk add or delete up to 100 queue members 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="body">Queue Members</param>
-        /// <param name="delete">True to delete queue members (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PostQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueueUsers");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostQueueUsers");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (delete != null) localVarQueryParams.Add("delete", Configuration.ApiClient.ParameterToString(delete)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostQueueUsers: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostQueueUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-
-        /// <summary>
-        /// Add up to 100 wrap-up codes to a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <param name="body">List of wrapup codes</param>
-        /// <returns>List&lt;WrapupCode&gt;</returns>
-        public List<WrapupCode> PostQueueWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
-        {
-             ApiResponse<List<WrapupCode>> localVarResponse = PostQueueWrapupcodesWithHttpInfo(queueId, codeId, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Add up to 100 wrap-up codes to a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <param name="body">List of wrapup codes</param>
-        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
-        public ApiResponse< List<WrapupCode> > PostQueueWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueueWrapupcodes");
-            // verify the required parameter 'codeId' is set
-            if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PostQueueWrapupcodes");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostQueueWrapupcodes");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostQueueWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostQueueWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
-            
-        }
-
-        /// <summary>
-        /// Add up to 100 wrap-up codes to a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <param name="body">List of wrapup codes</param>
-        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WrapupCode>> PostQueueWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body)
-        {
-             ApiResponse<List<WrapupCode>> localVarResponse = await PostQueueWrapupcodesAsyncWithHttpInfo(queueId, codeId, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Add up to 100 wrap-up codes to a queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
-        /// <param name="body">List of wrapup codes</param>
-        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostQueueWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueueWrapupcodes");
-            // verify the required parameter 'codeId' is set
-            if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PostQueueWrapupcodes");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostQueueWrapupcodes");
-
-            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostQueueWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostQueueWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
             
         }
 
@@ -8204,6 +7878,382 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Bulk add or delete up to 100 queue members 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>string</returns>
+        public string PostQueuesQueueIdUsers (string queueId, List<QueueMember> body, bool? delete = null)
+        {
+             ApiResponse<string> localVarResponse = PostQueuesQueueIdUsersWithHttpInfo(queueId, body, delete);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > PostQueuesQueueIdUsersWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueuesQueueIdUsers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostQueuesQueueIdUsers");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (delete != null) localVarQueryParams.Add("delete", Configuration.ApiClient.ParameterToString(delete)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdUsers: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> PostQueuesQueueIdUsersAsync (string queueId, List<QueueMember> body, bool? delete = null)
+        {
+             ApiResponse<string> localVarResponse = await PostQueuesQueueIdUsersAsyncWithHttpInfo(queueId, body, delete);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bulk add or delete up to 100 queue members 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body">Queue Members</param>
+        /// <param name="delete">True to delete queue members (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueuesQueueIdUsers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostQueuesQueueIdUsers");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (delete != null) localVarQueryParams.Add("delete", Configuration.ApiClient.ParameterToString(delete)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdUsers: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Add up to 100 wrap-up codes to a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <param name="body">List of wrapup codes</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        public List<WrapupCode> PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
+        {
+             ApiResponse<List<WrapupCode>> localVarResponse = PostQueuesQueueIdWrapupcodesWithHttpInfo(queueId, codeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add up to 100 wrap-up codes to a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <param name="body">List of wrapup codes</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        public ApiResponse< List<WrapupCode> > PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
+            // verify the required parameter 'codeId' is set
+            if (codeId == null)
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
+            
+        }
+
+        /// <summary>
+        /// Add up to 100 wrap-up codes to a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <param name="body">List of wrapup codes</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        public async System.Threading.Tasks.Task<List<WrapupCode>> PostQueuesQueueIdWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body)
+        {
+             ApiResponse<List<WrapupCode>> localVarResponse = await PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo(queueId, codeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add up to 100 wrap-up codes to a queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="codeId">Code ID</param>
+        /// <param name="body">List of wrapup codes</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
+            // verify the required parameter 'codeId' is set
+            if (codeId == null)
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
+
+            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesQueueIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
+            
+        }
+
+        /// <summary>
         /// Create Skill 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8377,9 +8427,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        public UserRoutingSkill PostUserRoutingskills (string userId, UserRoutingSkill body)
+        public UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body)
         {
-             ApiResponse<UserRoutingSkill> localVarResponse = PostUserRoutingskillsWithHttpInfo(userId, body);
+             ApiResponse<UserRoutingSkill> localVarResponse = PostUserIdRoutingskillsWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
@@ -8390,14 +8440,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        public ApiResponse< UserRoutingSkill > PostUserRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body)
+        public ApiResponse< UserRoutingSkill > PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PostUserRoutingskills");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PostUserIdRoutingskills");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostUserRoutingskills");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostUserIdRoutingskills");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8449,9 +8499,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostUserRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostUserIdRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostUserRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostUserIdRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserRoutingSkill>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8466,9 +8516,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserRoutingskillsAsync (string userId, UserRoutingSkill body)
+        public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body)
         {
-             ApiResponse<UserRoutingSkill> localVarResponse = await PostUserRoutingskillsAsyncWithHttpInfo(userId, body);
+             ApiResponse<UserRoutingSkill> localVarResponse = await PostUserIdRoutingskillsAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -8480,14 +8530,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PostUserRoutingskills");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PostUserIdRoutingskills");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostUserRoutingskills");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostUserIdRoutingskills");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8539,9 +8589,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostUserRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostUserIdRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostUserRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostUserIdRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserRoutingSkill>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8724,9 +8774,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="routeId">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>InboundRoute</returns>
-        public InboundRoute PutEmailDomainsDomainNameRoute (string domainName, string routeId, InboundRoute body)
+        public InboundRoute PutEmailDomainsDomainnameRoutesRouteId (string domainName, string routeId, InboundRoute body)
         {
-             ApiResponse<InboundRoute> localVarResponse = PutEmailDomainsDomainNameRouteWithHttpInfo(domainName, routeId, body);
+             ApiResponse<InboundRoute> localVarResponse = PutEmailDomainsDomainnameRoutesRouteIdWithHttpInfo(domainName, routeId, body);
              return localVarResponse.Data;
         }
 
@@ -8738,17 +8788,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="routeId">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        public ApiResponse< InboundRoute > PutEmailDomainsDomainNameRouteWithHttpInfo (string domainName, string routeId, InboundRoute body)
+        public ApiResponse< InboundRoute > PutEmailDomainsDomainnameRoutesRouteIdWithHttpInfo (string domainName, string routeId, InboundRoute body)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
-                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PutEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PutEmailDomainsDomainnameRoutesRouteId");
             // verify the required parameter 'routeId' is set
             if (routeId == null)
-                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->PutEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->PutEmailDomainsDomainnameRoutesRouteId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutEmailDomainsDomainnameRoutesRouteId");
 
             var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8801,9 +8851,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainNameRoute: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainNameRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8819,9 +8869,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="routeId">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
-        public async System.Threading.Tasks.Task<InboundRoute> PutEmailDomainsDomainNameRouteAsync (string domainName, string routeId, InboundRoute body)
+        public async System.Threading.Tasks.Task<InboundRoute> PutEmailDomainsDomainnameRoutesRouteIdAsync (string domainName, string routeId, InboundRoute body)
         {
-             ApiResponse<InboundRoute> localVarResponse = await PutEmailDomainsDomainNameRouteAsyncWithHttpInfo(domainName, routeId, body);
+             ApiResponse<InboundRoute> localVarResponse = await PutEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo(domainName, routeId, body);
              return localVarResponse.Data;
 
         }
@@ -8834,17 +8884,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="routeId">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutEmailDomainsDomainNameRouteAsyncWithHttpInfo (string domainName, string routeId, InboundRoute body)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PutEmailDomainsDomainnameRoutesRouteIdAsyncWithHttpInfo (string domainName, string routeId, InboundRoute body)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
-                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PutEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'domainName' when calling RoutingApi->PutEmailDomainsDomainnameRoutesRouteId");
             // verify the required parameter 'routeId' is set
             if (routeId == null)
-                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->PutEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'routeId' when calling RoutingApi->PutEmailDomainsDomainnameRoutesRouteId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutEmailDomainsDomainNameRoute");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutEmailDomainsDomainnameRoutesRouteId");
 
             var localVarPath = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8897,9 +8947,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainNameRoute: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainNameRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutEmailDomainsDomainnameRoutesRouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8914,9 +8964,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
-        public Queue PutQueue (string queueId, Queue body)
+        public Queue PutQueuesQueueId (string queueId, Queue body)
         {
-             ApiResponse<Queue> localVarResponse = PutQueueWithHttpInfo(queueId, body);
+             ApiResponse<Queue> localVarResponse = PutQueuesQueueIdWithHttpInfo(queueId, body);
              return localVarResponse.Data;
         }
 
@@ -8927,14 +8977,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
-        public ApiResponse< Queue > PutQueueWithHttpInfo (string queueId, Queue body)
+        public ApiResponse< Queue > PutQueuesQueueIdWithHttpInfo (string queueId, Queue body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PutQueue");
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PutQueuesQueueId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutQueue");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutQueuesQueueId");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8986,9 +9036,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutQueue: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutQueuesQueueId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutQueue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutQueuesQueueId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Queue>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9003,9 +9053,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        public async System.Threading.Tasks.Task<Queue> PutQueueAsync (string queueId, Queue body)
+        public async System.Threading.Tasks.Task<Queue> PutQueuesQueueIdAsync (string queueId, Queue body)
         {
-             ApiResponse<Queue> localVarResponse = await PutQueueAsyncWithHttpInfo(queueId, body);
+             ApiResponse<Queue> localVarResponse = await PutQueuesQueueIdAsyncWithHttpInfo(queueId, body);
              return localVarResponse.Data;
 
         }
@@ -9017,14 +9067,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Queue>> PutQueueAsyncWithHttpInfo (string queueId, Queue body)
+        public async System.Threading.Tasks.Task<ApiResponse<Queue>> PutQueuesQueueIdAsyncWithHttpInfo (string queueId, Queue body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PutQueue");
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PutQueuesQueueId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutQueue");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutQueuesQueueId");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9076,9 +9126,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutQueue: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutQueuesQueueId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutQueue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutQueuesQueueId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Queue>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9094,9 +9144,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        public UserRoutingSkill PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body)
+        public UserRoutingSkill PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body)
         {
-             ApiResponse<UserRoutingSkill> localVarResponse = PutUserRoutingskillWithHttpInfo(userId, skillId, body);
+             ApiResponse<UserRoutingSkill> localVarResponse = PutUserIdRoutingskillsSkillIdWithHttpInfo(userId, skillId, body);
              return localVarResponse.Data;
         }
 
@@ -9108,17 +9158,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        public ApiResponse< UserRoutingSkill > PutUserRoutingskillWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
+        public ApiResponse< UserRoutingSkill > PutUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PutUserRoutingskill");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PutUserIdRoutingskillsSkillId");
             // verify the required parameter 'skillId' is set
             if (skillId == null)
-                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->PutUserRoutingskill");
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->PutUserIdRoutingskillsSkillId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutUserRoutingskill");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutUserIdRoutingskillsSkillId");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9171,9 +9221,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutUserRoutingskill: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoutingskillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutUserRoutingskill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoutingskillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserRoutingSkill>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9189,9 +9239,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        public async System.Threading.Tasks.Task<UserRoutingSkill> PutUserRoutingskillAsync (string userId, string skillId, UserRoutingSkill body)
+        public async System.Threading.Tasks.Task<UserRoutingSkill> PutUserIdRoutingskillsSkillIdAsync (string userId, string skillId, UserRoutingSkill body)
         {
-             ApiResponse<UserRoutingSkill> localVarResponse = await PutUserRoutingskillAsyncWithHttpInfo(userId, skillId, body);
+             ApiResponse<UserRoutingSkill> localVarResponse = await PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo(userId, skillId, body);
              return localVarResponse.Data;
 
         }
@@ -9204,17 +9254,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillId">skillId</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserRoutingskillAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PutUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId, UserRoutingSkill body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PutUserRoutingskill");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PutUserIdRoutingskillsSkillId");
             // verify the required parameter 'skillId' is set
             if (skillId == null)
-                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->PutUserRoutingskill");
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->PutUserIdRoutingskillsSkillId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutUserRoutingskill");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutUserIdRoutingskillsSkillId");
 
             var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9267,9 +9317,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutUserRoutingskill: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoutingskillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutUserRoutingskill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoutingskillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserRoutingSkill>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9451,9 +9501,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>WrapupCode</returns>
-        public WrapupCode PutWrapupcode (string codeId, WrapupCode body)
+        public WrapupCode PutWrapupcodesCodeId (string codeId, WrapupCode body)
         {
-             ApiResponse<WrapupCode> localVarResponse = PutWrapupcodeWithHttpInfo(codeId, body);
+             ApiResponse<WrapupCode> localVarResponse = PutWrapupcodesCodeIdWithHttpInfo(codeId, body);
              return localVarResponse.Data;
         }
 
@@ -9464,14 +9514,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > PutWrapupcodeWithHttpInfo (string codeId, WrapupCode body)
+        public ApiResponse< WrapupCode > PutWrapupcodesCodeIdWithHttpInfo (string codeId, WrapupCode body)
         {
             // verify the required parameter 'codeId' is set
             if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PutWrapupcode");
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PutWrapupcodesCodeId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutWrapupcode");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutWrapupcodesCodeId");
 
             var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9523,9 +9573,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcode: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcodesCodeId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcodesCodeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<WrapupCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9540,9 +9590,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> PutWrapupcodeAsync (string codeId, WrapupCode body)
+        public async System.Threading.Tasks.Task<WrapupCode> PutWrapupcodesCodeIdAsync (string codeId, WrapupCode body)
         {
-             ApiResponse<WrapupCode> localVarResponse = await PutWrapupcodeAsyncWithHttpInfo(codeId, body);
+             ApiResponse<WrapupCode> localVarResponse = await PutWrapupcodesCodeIdAsyncWithHttpInfo(codeId, body);
              return localVarResponse.Data;
 
         }
@@ -9554,14 +9604,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PutWrapupcodeAsyncWithHttpInfo (string codeId, WrapupCode body)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PutWrapupcodesCodeIdAsyncWithHttpInfo (string codeId, WrapupCode body)
         {
             // verify the required parameter 'codeId' is set
             if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PutWrapupcode");
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PutWrapupcodesCodeId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutWrapupcode");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutWrapupcodesCodeId");
 
             var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9613,9 +9663,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcode: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcodesCodeId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutWrapupcodesCodeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<WrapupCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

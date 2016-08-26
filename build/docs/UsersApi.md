@@ -3,49 +3,49 @@ title: UsersApi
 ---
 ## ININ.PureCloudApi.Api.UsersApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteUser**](UsersApi.html#deleteuser) | **DELETE** /api/v2/users/{userId} | Delete user |
-| [**DeleteUserRoles**](UsersApi.html#deleteuserroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
-| [**DeleteUserRoutingskill**](UsersApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
-| [**DeleteUserStationAssociatedstation**](UsersApi.html#deleteuserstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
-| [**DeleteUserStationDefaultstation**](UsersApi.html#deleteuserstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
+| [**DeleteUserId**](UsersApi.html#deleteuserid) | **DELETE** /api/v2/users/{userId} | Delete user |
+| [**DeleteUserIdRoles**](UsersApi.html#deleteuseridroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
+| [**DeleteUserIdRoutingskillsSkillId**](UsersApi.html#deleteuseridroutingskillsskillid) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
+| [**DeleteUserIdStationAssociatedstation**](UsersApi.html#deleteuseridstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
+| [**DeleteUserIdStationDefaultstation**](UsersApi.html#deleteuseridstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
 | [**GetMe**](UsersApi.html#getme) | **GET** /api/v2/users/me | Get current user details. |
 | [**GetSearch**](UsersApi.html#getsearch) | **GET** /api/v2/users/search | Search using q64 |
-| [**GetUser**](UsersApi.html#getuser) | **GET** /api/v2/users/{userId} | Get user. |
-| [**GetUserCallforwarding**](UsersApi.html#getusercallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
-| [**GetUserGeolocation**](UsersApi.html#getusergeolocation) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
-| [**GetUserOutofoffice**](UsersApi.html#getuseroutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
-| [**GetUserQueues**](UsersApi.html#getuserqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
-| [**GetUserRoles**](UsersApi.html#getuserroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
-| [**GetUserRoutingskills**](UsersApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
-| [**GetUserRoutingstatus**](UsersApi.html#getuserroutingstatus) | **GET** /api/v2/users/{userId}/routingstatus | Fetch the routing status of a user |
-| [**GetUserStation**](UsersApi.html#getuserstation) | **GET** /api/v2/users/{userId}/station | Get station information for user |
+| [**GetUserId**](UsersApi.html#getuserid) | **GET** /api/v2/users/{userId} | Get user. |
+| [**GetUserIdCallforwarding**](UsersApi.html#getuseridcallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
+| [**GetUserIdGeolocationsClientId**](UsersApi.html#getuseridgeolocationsclientid) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
+| [**GetUserIdOutofoffice**](UsersApi.html#getuseridoutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
+| [**GetUserIdQueues**](UsersApi.html#getuseridqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
+| [**GetUserIdRoles**](UsersApi.html#getuseridroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
+| [**GetUserIdRoutingskills**](UsersApi.html#getuseridroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
+| [**GetUserIdRoutingstatus**](UsersApi.html#getuseridroutingstatus) | **GET** /api/v2/users/{userId}/routingstatus | Fetch the routing status of a user |
+| [**GetUserIdStation**](UsersApi.html#getuseridstation) | **GET** /api/v2/users/{userId}/station | Get station information for user |
 | [**GetUsers**](UsersApi.html#getusers) | **GET** /api/v2/users | Get the list of available users. |
-| [**PatchUser**](UsersApi.html#patchuser) | **PATCH** /api/v2/users/{userId} | Update user |
-| [**PatchUserCallforwarding**](UsersApi.html#patchusercallforwarding) | **PATCH** /api/v2/users/{userId}/callforwarding | Patch a user&#39;s CallForwarding |
-| [**PatchUserGeolocation**](UsersApi.html#patchusergeolocation) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
-| [**PatchUserQueue**](UsersApi.html#patchuserqueue) | **PATCH** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
-| [**PatchUserQueues**](UsersApi.html#patchuserqueues) | **PATCH** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
+| [**PatchUserId**](UsersApi.html#patchuserid) | **PATCH** /api/v2/users/{userId} | Update user |
+| [**PatchUserIdCallforwarding**](UsersApi.html#patchuseridcallforwarding) | **PATCH** /api/v2/users/{userId}/callforwarding | Patch a user&#39;s CallForwarding |
+| [**PatchUserIdGeolocationsClientId**](UsersApi.html#patchuseridgeolocationsclientid) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
+| [**PatchUserIdQueues**](UsersApi.html#patchuseridqueues) | **PATCH** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
+| [**PatchUserIdQueuesQueueId**](UsersApi.html#patchuseridqueuesqueueid) | **PATCH** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
 | [**PostSearch**](UsersApi.html#postsearch) | **POST** /api/v2/users/search | Search |
-| [**PostUserRoutingskills**](UsersApi.html#postuserroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
+| [**PostUserIdRoutingskills**](UsersApi.html#postuseridroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
 | [**PostUsers**](UsersApi.html#postusers) | **POST** /api/v2/users | Create user |
 | [**PostUsersAggregatesQuery**](UsersApi.html#postusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
 | [**PostUsersObservationsQuery**](UsersApi.html#postusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
-| [**PutUserCallforwarding**](UsersApi.html#putusercallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
-| [**PutUserOutofoffice**](UsersApi.html#putuseroutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
-| [**PutUserRoles**](UsersApi.html#putuserroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
-| [**PutUserRoutingskill**](UsersApi.html#putuserroutingskill) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
-| [**PutUserRoutingstatus**](UsersApi.html#putuserroutingstatus) | **PUT** /api/v2/users/{userId}/routingstatus | Update the routing status of a user |
-| [**PutUserStationAssociatedstationStationId**](UsersApi.html#putuserstationassociatedstationstationid) | **PUT** /api/v2/users/{userId}/station/associatedstation/{stationId} | Set associated station |
-| [**PutUserStationDefaultstationStationId**](UsersApi.html#putuserstationdefaultstationstationid) | **PUT** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
+| [**PutUserIdCallforwarding**](UsersApi.html#putuseridcallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
+| [**PutUserIdOutofoffice**](UsersApi.html#putuseridoutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
+| [**PutUserIdRoles**](UsersApi.html#putuseridroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
+| [**PutUserIdRoutingskillsSkillId**](UsersApi.html#putuseridroutingskillsskillid) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
+| [**PutUserIdRoutingstatus**](UsersApi.html#putuseridroutingstatus) | **PUT** /api/v2/users/{userId}/routingstatus | Update the routing status of a user |
+| [**PutUserIdStationAssociatedstationStationId**](UsersApi.html#putuseridstationassociatedstationstationid) | **PUT** /api/v2/users/{userId}/station/associatedstation/{stationId} | Set associated station |
+| [**PutUserIdStationDefaultstationStationId**](UsersApi.html#putuseridstationdefaultstationstationid) | **PUT** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
 {: class="table table-striped"}
 
-<a name="deleteuser"></a>
+<a name="deleteuserid"></a>
 
-## **string** DeleteUser (string userId)
+## **string** DeleteUserId (string userId)
 
 Delete user
 
@@ -61,7 +61,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteUserExample
+    public class DeleteUserIdExample
     {
         public void main()
         {
@@ -75,12 +75,12 @@ namespace Example
             try
             {
                 // Delete user
-                string result = apiInstance.DeleteUser(userId);
+                string result = apiInstance.DeleteUserId(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.DeleteUser: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.DeleteUserId: " + e.Message );
             }
         }
     }
@@ -99,9 +99,9 @@ namespace Example
 
 **string**
 
-<a name="deleteuserroles"></a>
+<a name="deleteuseridroles"></a>
 
-## void DeleteUserRoles (string userId)
+## void DeleteUserIdRoles (string userId)
 
 Removes all the roles from the user.
 
@@ -117,7 +117,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteUserRolesExample
+    public class DeleteUserIdRolesExample
     {
         public void main()
         {
@@ -131,11 +131,11 @@ namespace Example
             try
             {
                 // Removes all the roles from the user.
-                apiInstance.DeleteUserRoles(userId);
+                apiInstance.DeleteUserIdRoles(userId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.DeleteUserRoles: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.DeleteUserIdRoles: " + e.Message );
             }
         }
     }
@@ -154,9 +154,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="deleteuserroutingskill"></a>
+<a name="deleteuseridroutingskillsskillid"></a>
 
-## **string** DeleteUserRoutingskill (string userId, string skillId)
+## **string** DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
 
 Remove routing skill from user
 
@@ -172,7 +172,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteUserRoutingskillExample
+    public class DeleteUserIdRoutingskillsSkillIdExample
     {
         public void main()
         {
@@ -187,12 +187,12 @@ namespace Example
             try
             {
                 // Remove routing skill from user
-                string result = apiInstance.DeleteUserRoutingskill(userId, skillId);
+                string result = apiInstance.DeleteUserIdRoutingskillsSkillId(userId, skillId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.DeleteUserRoutingskill: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.DeleteUserIdRoutingskillsSkillId: " + e.Message );
             }
         }
     }
@@ -212,9 +212,9 @@ namespace Example
 
 **string**
 
-<a name="deleteuserstationassociatedstation"></a>
+<a name="deleteuseridstationassociatedstation"></a>
 
-## void DeleteUserStationAssociatedstation (string userId)
+## void DeleteUserIdStationAssociatedstation (string userId)
 
 Clear associated station
 
@@ -230,7 +230,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteUserStationAssociatedstationExample
+    public class DeleteUserIdStationAssociatedstationExample
     {
         public void main()
         {
@@ -244,11 +244,11 @@ namespace Example
             try
             {
                 // Clear associated station
-                apiInstance.DeleteUserStationAssociatedstation(userId);
+                apiInstance.DeleteUserIdStationAssociatedstation(userId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.DeleteUserStationAssociatedstation: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.DeleteUserIdStationAssociatedstation: " + e.Message );
             }
         }
     }
@@ -267,9 +267,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="deleteuserstationdefaultstation"></a>
+<a name="deleteuseridstationdefaultstation"></a>
 
-## void DeleteUserStationDefaultstation (string userId)
+## void DeleteUserIdStationDefaultstation (string userId)
 
 Clear default station
 
@@ -285,7 +285,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteUserStationDefaultstationExample
+    public class DeleteUserIdStationDefaultstationExample
     {
         public void main()
         {
@@ -299,11 +299,11 @@ namespace Example
             try
             {
                 // Clear default station
-                apiInstance.DeleteUserStationDefaultstation(userId);
+                apiInstance.DeleteUserIdStationDefaultstation(userId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.DeleteUserStationDefaultstation: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.DeleteUserIdStationDefaultstation: " + e.Message );
             }
         }
     }
@@ -436,9 +436,9 @@ namespace Example
 
 [**UsersSearchResponse**](UsersSearchResponse.html)
 
-<a name="getuser"></a>
+<a name="getuserid"></a>
 
-## [**User**](User.html) GetUser (string userId, List<string> expand = null)
+## [**User**](User.html) GetUserId (string userId, List<string> expand = null)
 
 Get user.
 
@@ -454,7 +454,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserExample
+    public class GetUserIdExample
     {
         public void main()
         {
@@ -469,12 +469,12 @@ namespace Example
             try
             {
                 // Get user.
-                User result = apiInstance.GetUser(userId, expand);
+                User result = apiInstance.GetUserId(userId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUser: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetUserId: " + e.Message );
             }
         }
     }
@@ -494,9 +494,9 @@ namespace Example
 
 [**User**](User.html)
 
-<a name="getusercallforwarding"></a>
+<a name="getuseridcallforwarding"></a>
 
-## [**CallForwarding**](CallForwarding.html) GetUserCallforwarding (string userId)
+## [**CallForwarding**](CallForwarding.html) GetUserIdCallforwarding (string userId)
 
 Get a user's CallForwarding
 
@@ -512,7 +512,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserCallforwardingExample
+    public class GetUserIdCallforwardingExample
     {
         public void main()
         {
@@ -526,12 +526,12 @@ namespace Example
             try
             {
                 // Get a user's CallForwarding
-                CallForwarding result = apiInstance.GetUserCallforwarding(userId);
+                CallForwarding result = apiInstance.GetUserIdCallforwarding(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserCallforwarding: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetUserIdCallforwarding: " + e.Message );
             }
         }
     }
@@ -550,9 +550,9 @@ namespace Example
 
 [**CallForwarding**](CallForwarding.html)
 
-<a name="getusergeolocation"></a>
+<a name="getuseridgeolocationsclientid"></a>
 
-## [**Geolocation**](Geolocation.html) GetUserGeolocation (string userId, string clientId)
+## [**Geolocation**](Geolocation.html) GetUserIdGeolocationsClientId (string userId, string clientId)
 
 Get a user's Geolocation
 
@@ -568,7 +568,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserGeolocationExample
+    public class GetUserIdGeolocationsClientIdExample
     {
         public void main()
         {
@@ -583,12 +583,12 @@ namespace Example
             try
             {
                 // Get a user's Geolocation
-                Geolocation result = apiInstance.GetUserGeolocation(userId, clientId);
+                Geolocation result = apiInstance.GetUserIdGeolocationsClientId(userId, clientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserGeolocation: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetUserIdGeolocationsClientId: " + e.Message );
             }
         }
     }
@@ -608,9 +608,9 @@ namespace Example
 
 [**Geolocation**](Geolocation.html)
 
-<a name="getuseroutofoffice"></a>
+<a name="getuseridoutofoffice"></a>
 
-## [**OutOfOffice**](OutOfOffice.html) GetUserOutofoffice (string userId)
+## [**OutOfOffice**](OutOfOffice.html) GetUserIdOutofoffice (string userId)
 
 Get a OutOfOffice
 
@@ -626,7 +626,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserOutofofficeExample
+    public class GetUserIdOutofofficeExample
     {
         public void main()
         {
@@ -640,12 +640,12 @@ namespace Example
             try
             {
                 // Get a OutOfOffice
-                OutOfOffice result = apiInstance.GetUserOutofoffice(userId);
+                OutOfOffice result = apiInstance.GetUserIdOutofoffice(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserOutofoffice: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetUserIdOutofoffice: " + e.Message );
             }
         }
     }
@@ -664,9 +664,9 @@ namespace Example
 
 [**OutOfOffice**](OutOfOffice.html)
 
-<a name="getuserqueues"></a>
+<a name="getuseridqueues"></a>
 
-## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetUserIdQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
 
 Get queues for user
 
@@ -682,7 +682,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserQueuesExample
+    public class GetUserIdQueuesExample
     {
         public void main()
         {
@@ -699,12 +699,12 @@ namespace Example
             try
             {
                 // Get queues for user
-                UserQueueEntityListing result = apiInstance.GetUserQueues(userId, pageSize, pageNumber, joined);
+                UserQueueEntityListing result = apiInstance.GetUserIdQueues(userId, pageSize, pageNumber, joined);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserQueues: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetUserIdQueues: " + e.Message );
             }
         }
     }
@@ -726,9 +726,9 @@ namespace Example
 
 [**UserQueueEntityListing**](UserQueueEntityListing.html)
 
-<a name="getuserroles"></a>
+<a name="getuseridroles"></a>
 
-## [**UserAuthorization**](UserAuthorization.html) GetUserRoles (string userId)
+## [**UserAuthorization**](UserAuthorization.html) GetUserIdRoles (string userId)
 
 Returns a listing of roles and permissions for a user.
 
@@ -744,7 +744,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserRolesExample
+    public class GetUserIdRolesExample
     {
         public void main()
         {
@@ -758,12 +758,12 @@ namespace Example
             try
             {
                 // Returns a listing of roles and permissions for a user.
-                UserAuthorization result = apiInstance.GetUserRoles(userId);
+                UserAuthorization result = apiInstance.GetUserIdRoles(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserRoles: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetUserIdRoles: " + e.Message );
             }
         }
     }
@@ -782,9 +782,9 @@ namespace Example
 
 [**UserAuthorization**](UserAuthorization.html)
 
-<a name="getuserroutingskills"></a>
+<a name="getuseridroutingskills"></a>
 
-## [**UserSkillEntityListing**](UserSkillEntityListing.html) GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**UserSkillEntityListing**](UserSkillEntityListing.html) GetUserIdRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 List routing skills for user
 
@@ -800,7 +800,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserRoutingskillsExample
+    public class GetUserIdRoutingskillsExample
     {
         public void main()
         {
@@ -817,12 +817,12 @@ namespace Example
             try
             {
                 // List routing skills for user
-                UserSkillEntityListing result = apiInstance.GetUserRoutingskills(userId, pageSize, pageNumber, sortOrder);
+                UserSkillEntityListing result = apiInstance.GetUserIdRoutingskills(userId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserRoutingskills: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetUserIdRoutingskills: " + e.Message );
             }
         }
     }
@@ -844,9 +844,9 @@ namespace Example
 
 [**UserSkillEntityListing**](UserSkillEntityListing.html)
 
-<a name="getuserroutingstatus"></a>
+<a name="getuseridroutingstatus"></a>
 
-## [**RoutingStatus**](RoutingStatus.html) GetUserRoutingstatus (string userId)
+## [**RoutingStatus**](RoutingStatus.html) GetUserIdRoutingstatus (string userId)
 
 Fetch the routing status of a user
 
@@ -862,7 +862,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserRoutingstatusExample
+    public class GetUserIdRoutingstatusExample
     {
         public void main()
         {
@@ -876,12 +876,12 @@ namespace Example
             try
             {
                 // Fetch the routing status of a user
-                RoutingStatus result = apiInstance.GetUserRoutingstatus(userId);
+                RoutingStatus result = apiInstance.GetUserIdRoutingstatus(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserRoutingstatus: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetUserIdRoutingstatus: " + e.Message );
             }
         }
     }
@@ -900,9 +900,9 @@ namespace Example
 
 [**RoutingStatus**](RoutingStatus.html)
 
-<a name="getuserstation"></a>
+<a name="getuseridstation"></a>
 
-## [**UserStations**](UserStations.html) GetUserStation (string userId)
+## [**UserStations**](UserStations.html) GetUserIdStation (string userId)
 
 Get station information for user
 
@@ -918,7 +918,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserStationExample
+    public class GetUserIdStationExample
     {
         public void main()
         {
@@ -932,12 +932,12 @@ namespace Example
             try
             {
                 // Get station information for user
-                UserStations result = apiInstance.GetUserStation(userId);
+                UserStations result = apiInstance.GetUserIdStation(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserStation: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetUserIdStation: " + e.Message );
             }
         }
     }
@@ -1020,9 +1020,9 @@ namespace Example
 
 [**UsersEntityListing**](UsersEntityListing.html)
 
-<a name="patchuser"></a>
+<a name="patchuserid"></a>
 
-## [**User**](User.html) PatchUser (string userId, User body)
+## [**User**](User.html) PatchUserId (string userId, User body)
 
 Update user
 
@@ -1038,7 +1038,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchUserExample
+    public class PatchUserIdExample
     {
         public void main()
         {
@@ -1053,12 +1053,12 @@ namespace Example
             try
             {
                 // Update user
-                User result = apiInstance.PatchUser(userId, body);
+                User result = apiInstance.PatchUserId(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PatchUser: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PatchUserId: " + e.Message );
             }
         }
     }
@@ -1078,9 +1078,9 @@ namespace Example
 
 [**User**](User.html)
 
-<a name="patchusercallforwarding"></a>
+<a name="patchuseridcallforwarding"></a>
 
-## [**CallForwarding**](CallForwarding.html) PatchUserCallforwarding (string userId, CallForwarding body)
+## [**CallForwarding**](CallForwarding.html) PatchUserIdCallforwarding (string userId, CallForwarding body)
 
 Patch a user's CallForwarding
 
@@ -1096,7 +1096,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchUserCallforwardingExample
+    public class PatchUserIdCallforwardingExample
     {
         public void main()
         {
@@ -1111,12 +1111,12 @@ namespace Example
             try
             {
                 // Patch a user's CallForwarding
-                CallForwarding result = apiInstance.PatchUserCallforwarding(userId, body);
+                CallForwarding result = apiInstance.PatchUserIdCallforwarding(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PatchUserCallforwarding: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PatchUserIdCallforwarding: " + e.Message );
             }
         }
     }
@@ -1136,9 +1136,9 @@ namespace Example
 
 [**CallForwarding**](CallForwarding.html)
 
-<a name="patchusergeolocation"></a>
+<a name="patchuseridgeolocationsclientid"></a>
 
-## [**Geolocation**](Geolocation.html) PatchUserGeolocation (string userId, string clientId, Geolocation body)
+## [**Geolocation**](Geolocation.html) PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body)
 
 Patch a user's Geolocation
 
@@ -1154,7 +1154,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchUserGeolocationExample
+    public class PatchUserIdGeolocationsClientIdExample
     {
         public void main()
         {
@@ -1170,12 +1170,12 @@ namespace Example
             try
             {
                 // Patch a user's Geolocation
-                Geolocation result = apiInstance.PatchUserGeolocation(userId, clientId, body);
+                Geolocation result = apiInstance.PatchUserIdGeolocationsClientId(userId, clientId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PatchUserGeolocation: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PatchUserIdGeolocationsClientId: " + e.Message );
             }
         }
     }
@@ -1196,69 +1196,9 @@ namespace Example
 
 [**Geolocation**](Geolocation.html)
 
-<a name="patchuserqueue"></a>
+<a name="patchuseridqueues"></a>
 
-## [**UserQueue**](UserQueue.html) PatchUserQueue (string queueId, string userId, UserQueue body)
-
-Join or unjoin a queue for a user
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PatchUserQueueExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new UsersApi();
-            var queueId = queueId_example;  // string | Queue ID
-            var userId = userId_example;  // string | User ID
-            var body = new UserQueue(); // UserQueue | Queue Member
-
-            try
-            {
-                // Join or unjoin a queue for a user
-                UserQueue result = apiInstance.PatchUserQueue(queueId, userId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UsersApi.PatchUserQueue: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **queueId** | **string**| Queue ID |  |
-| **userId** | **string**| User ID |  |
-| **body** | [**UserQueue**](UserQueue.html)| Queue Member |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**UserQueue**](UserQueue.html)
-
-<a name="patchuserqueues"></a>
-
-## [**UserQueue**](UserQueue.html) PatchUserQueues (string userId, List<UserQueue> body)
+## [**UserQueue**](UserQueue.html) PatchUserIdQueues (string userId, List<UserQueue> body)
 
 Join or unjoin a set of queues for a user
 
@@ -1274,7 +1214,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchUserQueuesExample
+    public class PatchUserIdQueuesExample
     {
         public void main()
         {
@@ -1289,12 +1229,12 @@ namespace Example
             try
             {
                 // Join or unjoin a set of queues for a user
-                UserQueue result = apiInstance.PatchUserQueues(userId, body);
+                UserQueue result = apiInstance.PatchUserIdQueues(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PatchUserQueues: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PatchUserIdQueues: " + e.Message );
             }
         }
     }
@@ -1308,6 +1248,66 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**List<UserQueue>**](UserQueue.html)| User Queues |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserQueue**](UserQueue.html)
+
+<a name="patchuseridqueuesqueueid"></a>
+
+## [**UserQueue**](UserQueue.html) PatchUserIdQueuesQueueId (string queueId, string userId, UserQueue body)
+
+Join or unjoin a queue for a user
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchUserIdQueuesQueueIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UsersApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var userId = userId_example;  // string | User ID
+            var body = new UserQueue(); // UserQueue | Queue Member
+
+            try
+            {
+                // Join or unjoin a queue for a user
+                UserQueue result = apiInstance.PatchUserIdQueuesQueueId(queueId, userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PatchUserIdQueuesQueueId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **userId** | **string**| User ID |  |
+| **body** | [**UserQueue**](UserQueue.html)| Queue Member |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1370,9 +1370,9 @@ namespace Example
 
 [**UsersSearchResponse**](UsersSearchResponse.html)
 
-<a name="postuserroutingskills"></a>
+<a name="postuseridroutingskills"></a>
 
-## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserRoutingskills (string userId, UserRoutingSkill body)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkill body)
 
 Add routing skill to user
 
@@ -1388,7 +1388,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostUserRoutingskillsExample
+    public class PostUserIdRoutingskillsExample
     {
         public void main()
         {
@@ -1403,12 +1403,12 @@ namespace Example
             try
             {
                 // Add routing skill to user
-                UserRoutingSkill result = apiInstance.PostUserRoutingskills(userId, body);
+                UserRoutingSkill result = apiInstance.PostUserIdRoutingskills(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PostUserRoutingskills: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PostUserIdRoutingskills: " + e.Message );
             }
         }
     }
@@ -1596,9 +1596,9 @@ namespace Example
 
 [**ObservationQueryResponse**](ObservationQueryResponse.html)
 
-<a name="putusercallforwarding"></a>
+<a name="putuseridcallforwarding"></a>
 
-## [**CallForwarding**](CallForwarding.html) PutUserCallforwarding (string userId, CallForwarding body)
+## [**CallForwarding**](CallForwarding.html) PutUserIdCallforwarding (string userId, CallForwarding body)
 
 Update a user's CallForwarding
 
@@ -1614,7 +1614,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutUserCallforwardingExample
+    public class PutUserIdCallforwardingExample
     {
         public void main()
         {
@@ -1629,12 +1629,12 @@ namespace Example
             try
             {
                 // Update a user's CallForwarding
-                CallForwarding result = apiInstance.PutUserCallforwarding(userId, body);
+                CallForwarding result = apiInstance.PutUserIdCallforwarding(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PutUserCallforwarding: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PutUserIdCallforwarding: " + e.Message );
             }
         }
     }
@@ -1654,9 +1654,9 @@ namespace Example
 
 [**CallForwarding**](CallForwarding.html)
 
-<a name="putuseroutofoffice"></a>
+<a name="putuseridoutofoffice"></a>
 
-## [**OutOfOffice**](OutOfOffice.html) PutUserOutofoffice (string userId, OutOfOffice body)
+## [**OutOfOffice**](OutOfOffice.html) PutUserIdOutofoffice (string userId, OutOfOffice body)
 
 Update an OutOfOffice
 
@@ -1672,7 +1672,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutUserOutofofficeExample
+    public class PutUserIdOutofofficeExample
     {
         public void main()
         {
@@ -1687,12 +1687,12 @@ namespace Example
             try
             {
                 // Update an OutOfOffice
-                OutOfOffice result = apiInstance.PutUserOutofoffice(userId, body);
+                OutOfOffice result = apiInstance.PutUserIdOutofoffice(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PutUserOutofoffice: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PutUserIdOutofoffice: " + e.Message );
             }
         }
     }
@@ -1712,9 +1712,9 @@ namespace Example
 
 [**OutOfOffice**](OutOfOffice.html)
 
-<a name="putuserroles"></a>
+<a name="putuseridroles"></a>
 
-## [**UserAuthorization**](UserAuthorization.html) PutUserRoles (string userId, List<string> body)
+## [**UserAuthorization**](UserAuthorization.html) PutUserIdRoles (string userId, List<string> body)
 
 Sets the user's roles
 
@@ -1730,7 +1730,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutUserRolesExample
+    public class PutUserIdRolesExample
     {
         public void main()
         {
@@ -1745,12 +1745,12 @@ namespace Example
             try
             {
                 // Sets the user's roles
-                UserAuthorization result = apiInstance.PutUserRoles(userId, body);
+                UserAuthorization result = apiInstance.PutUserIdRoles(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PutUserRoles: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PutUserIdRoles: " + e.Message );
             }
         }
     }
@@ -1770,9 +1770,9 @@ namespace Example
 
 [**UserAuthorization**](UserAuthorization.html)
 
-<a name="putuserroutingskill"></a>
+<a name="putuseridroutingskillsskillid"></a>
 
-## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserIdRoutingskillsSkillId (string userId, string skillId, UserRoutingSkill body)
 
 Update routing skill proficiency or state.
 
@@ -1788,7 +1788,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutUserRoutingskillExample
+    public class PutUserIdRoutingskillsSkillIdExample
     {
         public void main()
         {
@@ -1804,12 +1804,12 @@ namespace Example
             try
             {
                 // Update routing skill proficiency or state.
-                UserRoutingSkill result = apiInstance.PutUserRoutingskill(userId, skillId, body);
+                UserRoutingSkill result = apiInstance.PutUserIdRoutingskillsSkillId(userId, skillId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PutUserRoutingskill: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PutUserIdRoutingskillsSkillId: " + e.Message );
             }
         }
     }
@@ -1830,9 +1830,9 @@ namespace Example
 
 [**UserRoutingSkill**](UserRoutingSkill.html)
 
-<a name="putuserroutingstatus"></a>
+<a name="putuseridroutingstatus"></a>
 
-## [**RoutingStatus**](RoutingStatus.html) PutUserRoutingstatus (string userId, RoutingStatus body)
+## [**RoutingStatus**](RoutingStatus.html) PutUserIdRoutingstatus (string userId, RoutingStatus body)
 
 Update the routing status of a user
 
@@ -1848,7 +1848,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutUserRoutingstatusExample
+    public class PutUserIdRoutingstatusExample
     {
         public void main()
         {
@@ -1863,12 +1863,12 @@ namespace Example
             try
             {
                 // Update the routing status of a user
-                RoutingStatus result = apiInstance.PutUserRoutingstatus(userId, body);
+                RoutingStatus result = apiInstance.PutUserIdRoutingstatus(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PutUserRoutingstatus: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PutUserIdRoutingstatus: " + e.Message );
             }
         }
     }
@@ -1888,9 +1888,9 @@ namespace Example
 
 [**RoutingStatus**](RoutingStatus.html)
 
-<a name="putuserstationassociatedstationstationid"></a>
+<a name="putuseridstationassociatedstationstationid"></a>
 
-## void PutUserStationAssociatedstationStationId (string userId, string stationId)
+## void PutUserIdStationAssociatedstationStationId (string userId, string stationId)
 
 Set associated station
 
@@ -1906,7 +1906,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutUserStationAssociatedstationStationIdExample
+    public class PutUserIdStationAssociatedstationStationIdExample
     {
         public void main()
         {
@@ -1921,11 +1921,11 @@ namespace Example
             try
             {
                 // Set associated station
-                apiInstance.PutUserStationAssociatedstationStationId(userId, stationId);
+                apiInstance.PutUserIdStationAssociatedstationStationId(userId, stationId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PutUserStationAssociatedstationStationId: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PutUserIdStationAssociatedstationStationId: " + e.Message );
             }
         }
     }
@@ -1945,9 +1945,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="putuserstationdefaultstationstationid"></a>
+<a name="putuseridstationdefaultstationstationid"></a>
 
-## void PutUserStationDefaultstationStationId (string userId, string stationId)
+## void PutUserIdStationDefaultstationStationId (string userId, string stationId)
 
 Set default station
 
@@ -1963,7 +1963,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutUserStationDefaultstationStationIdExample
+    public class PutUserIdStationDefaultstationStationIdExample
     {
         public void main()
         {
@@ -1978,11 +1978,11 @@ namespace Example
             try
             {
                 // Set default station
-                apiInstance.PutUserStationDefaultstationStationId(userId, stationId);
+                apiInstance.PutUserIdStationDefaultstationStationId(userId, stationId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.PutUserStationDefaultstationStationId: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.PutUserIdStationDefaultstationStationId: " + e.Message );
             }
         }
     }

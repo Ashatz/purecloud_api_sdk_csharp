@@ -54,18 +54,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteMessage
-        /// </summary>
-        [Test]
-        public void DeleteMessageTest()
-        {
-            // TODO: add unit test for the method 'DeleteMessage'
-            string messageId = null; // TODO: replace null with proper value
-            var response = instance.DeleteMessage(messageId);
-            Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
         /// Test DeleteMessages
         /// </summary>
         [Test]
@@ -73,6 +61,18 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteMessages'
             var response = instance.DeleteMessages();
+            Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test DeleteMessagesMessageId
+        /// </summary>
+        [Test]
+        public void DeleteMessagesMessageIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteMessagesMessageId'
+            string messageId = null; // TODO: replace null with proper value
+            var response = instance.DeleteMessagesMessageId(messageId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
@@ -88,31 +88,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetMessage
-        /// </summary>
-        [Test]
-        public void GetMessageTest()
-        {
-            // TODO: add unit test for the method 'GetMessage'
-            string messageId = null; // TODO: replace null with proper value
-            var response = instance.GetMessage(messageId);
-            Assert.IsInstanceOf<VoicemailMessage> (response, "response is VoicemailMessage");
-        }
-        
-        /// <summary>
-        /// Test GetMessageMedia
-        /// </summary>
-        [Test]
-        public void GetMessageMediaTest()
-        {
-            // TODO: add unit test for the method 'GetMessageMedia'
-            string messageId = null; // TODO: replace null with proper value
-            string formatId = null; // TODO: replace null with proper value
-            var response = instance.GetMessageMedia(messageId, formatId);
-            Assert.IsInstanceOf<VoicemailMediaInfo> (response, "response is VoicemailMediaInfo");
-        }
-        
-        /// <summary>
         /// Test GetMessages
         /// </summary>
         [Test]
@@ -121,6 +96,31 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetMessages'
             var response = instance.GetMessages();
             Assert.IsInstanceOf<VoicemailMessageEntityListing> (response, "response is VoicemailMessageEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetMessagesMessageId
+        /// </summary>
+        [Test]
+        public void GetMessagesMessageIdTest()
+        {
+            // TODO: add unit test for the method 'GetMessagesMessageId'
+            string messageId = null; // TODO: replace null with proper value
+            var response = instance.GetMessagesMessageId(messageId);
+            Assert.IsInstanceOf<VoicemailMessage> (response, "response is VoicemailMessage");
+        }
+        
+        /// <summary>
+        /// Test GetMessagesMessageIdMedia
+        /// </summary>
+        [Test]
+        public void GetMessagesMessageIdMediaTest()
+        {
+            // TODO: add unit test for the method 'GetMessagesMessageIdMedia'
+            string messageId = null; // TODO: replace null with proper value
+            string formatId = null; // TODO: replace null with proper value
+            var response = instance.GetMessagesMessageIdMedia(messageId, formatId);
+            Assert.IsInstanceOf<VoicemailMediaInfo> (response, "response is VoicemailMediaInfo");
         }
         
         /// <summary>
@@ -135,40 +135,40 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetUserpolicy
+        /// Test GetUserpoliciesUserId
         /// </summary>
         [Test]
-        public void GetUserpolicyTest()
+        public void GetUserpoliciesUserIdTest()
         {
-            // TODO: add unit test for the method 'GetUserpolicy'
+            // TODO: add unit test for the method 'GetUserpoliciesUserId'
             string userId = null; // TODO: replace null with proper value
-            var response = instance.GetUserpolicy(userId);
+            var response = instance.GetUserpoliciesUserId(userId);
             Assert.IsInstanceOf<VoicemailUserPolicy> (response, "response is VoicemailUserPolicy");
         }
         
         /// <summary>
-        /// Test PatchUserpolicy
+        /// Test PatchUserpoliciesUserId
         /// </summary>
         [Test]
-        public void PatchUserpolicyTest()
+        public void PatchUserpoliciesUserIdTest()
         {
-            // TODO: add unit test for the method 'PatchUserpolicy'
+            // TODO: add unit test for the method 'PatchUserpoliciesUserId'
             string userId = null; // TODO: replace null with proper value
             VoicemailUserPolicy body = null; // TODO: replace null with proper value
-            var response = instance.PatchUserpolicy(userId, body);
+            var response = instance.PatchUserpoliciesUserId(userId, body);
             Assert.IsInstanceOf<VoicemailUserPolicy> (response, "response is VoicemailUserPolicy");
         }
         
         /// <summary>
-        /// Test PutMessage
+        /// Test PutMessagesMessageId
         /// </summary>
         [Test]
-        public void PutMessageTest()
+        public void PutMessagesMessageIdTest()
         {
-            // TODO: add unit test for the method 'PutMessage'
+            // TODO: add unit test for the method 'PutMessagesMessageId'
             string messageId = null; // TODO: replace null with proper value
             VoicemailMessage body = null; // TODO: replace null with proper value
-            var response = instance.PutMessage(messageId, body);
+            var response = instance.PutMessagesMessageId(messageId, body);
             Assert.IsInstanceOf<VoicemailMessage> (response, "response is VoicemailMessage");
         }
         
