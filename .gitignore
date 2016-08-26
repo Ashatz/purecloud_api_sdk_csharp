@@ -1,5 +1,6 @@
 /buildScripts/node_modules/
 /buildScripts/npm-debug.log
+/buildScripts/configureLocalEnvironment.sh
 /bin/
 npm-debug.log
 /local/
