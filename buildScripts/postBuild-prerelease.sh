@@ -1,7 +1,7 @@
 cd $REPO
 
 # Get version string
-PACKAGE_VERSION=`cat bin/VERSION`
+PACKAGE_VERSION=`cat bin/VERSION`-prerelease
 echo $PACKAGE_VERSION
 
 # Make nuspec
