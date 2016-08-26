@@ -28,6 +28,7 @@ title: ConversationNotificationParticipants
 | **Calls** | [**List&lt;ConversationNotificationCalls&gt;**](ConversationNotificationCalls.html) |  | [optional] |
 | **Callbacks** | [**List&lt;ConversationNotificationCallbacks&gt;**](ConversationNotificationCallbacks.html) |  | [optional] |
 | **Chats** | [**List&lt;ConversationNotificationChats&gt;**](ConversationNotificationChats.html) |  | [optional] |
+| **Cobrowses** | [**List&lt;ConversationNotificationCobrowses&gt;**](ConversationNotificationCobrowses.html) |  | [optional] |
 | **Emails** | [**List&lt;ConversationNotificationEmails&gt;**](ConversationNotificationEmails.html) |  | [optional] |
 | **SocialExpressions** | [**List&lt;ConversationNotificationSocialExpressions&gt;**](ConversationNotificationSocialExpressions.html) |  | [optional] |
 | **Videos** | [**List&lt;ConversationNotificationVideos&gt;**](ConversationNotificationVideos.html) |  | [optional] |
