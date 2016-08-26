@@ -65,15 +65,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetUserIdGeolocationsClientId
+        /// Test GetUserGeolocation
         /// </summary>
         [Test]
-        public void GetUserIdGeolocationsClientIdTest()
+        public void GetUserGeolocationTest()
         {
-            // TODO: add unit test for the method 'GetUserIdGeolocationsClientId'
+            // TODO: add unit test for the method 'GetUserGeolocation'
             string userId = null; // TODO: replace null with proper value
             string clientId = null; // TODO: replace null with proper value
-            var response = instance.GetUserIdGeolocationsClientId(userId, clientId);
+            var response = instance.GetUserGeolocation(userId, clientId);
             Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation");
         }
         
@@ -90,16 +90,16 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PatchUserIdGeolocationsClientId
+        /// Test PatchUserGeolocation
         /// </summary>
         [Test]
-        public void PatchUserIdGeolocationsClientIdTest()
+        public void PatchUserGeolocationTest()
         {
-            // TODO: add unit test for the method 'PatchUserIdGeolocationsClientId'
+            // TODO: add unit test for the method 'PatchUserGeolocation'
             string userId = null; // TODO: replace null with proper value
             string clientId = null; // TODO: replace null with proper value
             Geolocation body = null; // TODO: replace null with proper value
-            var response = instance.PatchUserIdGeolocationsClientId(userId, clientId, body);
+            var response = instance.PatchUserGeolocation(userId, clientId, body);
             Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation");
         }
         

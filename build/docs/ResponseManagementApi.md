@@ -3,26 +3,26 @@ title: ResponseManagementApi
 ---
 ## ININ.PureCloudApi.Api.ResponseManagementApi
 
-All URIs are relative to *https://api.mypurecloud.com*
+All URIs are relative to *https://api.inindca.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteLibrariesLibraryId**](ResponseManagementApi.html#deletelibrarieslibraryid) | **DELETE** /api/v2/responsemanagement/libraries/{libraryId} | Delete an existing response library. |
-| [**DeleteResponsesResponseId**](ResponseManagementApi.html#deleteresponsesresponseid) | **DELETE** /api/v2/responsemanagement/responses/{responseId} | Delete an existing response. |
+| [**DeleteLibrary**](ResponseManagementApi.html#deletelibrary) | **DELETE** /api/v2/responsemanagement/libraries/{libraryId} | Delete an existing response library. |
+| [**DeleteResponse**](ResponseManagementApi.html#deleteresponse) | **DELETE** /api/v2/responsemanagement/responses/{responseId} | Delete an existing response. |
 | [**GetLibraries**](ResponseManagementApi.html#getlibraries) | **GET** /api/v2/responsemanagement/libraries | Gets a list of existing response libraries. |
-| [**GetLibrariesLibraryId**](ResponseManagementApi.html#getlibrarieslibraryid) | **GET** /api/v2/responsemanagement/libraries/{libraryId} | Get details about an existing response library. |
+| [**GetLibrary**](ResponseManagementApi.html#getlibrary) | **GET** /api/v2/responsemanagement/libraries/{libraryId} | Get details about an existing response library. |
+| [**GetResponse**](ResponseManagementApi.html#getresponse) | **GET** /api/v2/responsemanagement/responses/{responseId} | Get details about an existing response. |
 | [**GetResponses**](ResponseManagementApi.html#getresponses) | **GET** /api/v2/responsemanagement/responses | Gets a list of existing responses. |
-| [**GetResponsesResponseId**](ResponseManagementApi.html#getresponsesresponseid) | **GET** /api/v2/responsemanagement/responses/{responseId} | Get details about an existing response. |
 | [**PostLibraries**](ResponseManagementApi.html#postlibraries) | **POST** /api/v2/responsemanagement/libraries | Create a response library. |
 | [**PostResponses**](ResponseManagementApi.html#postresponses) | **POST** /api/v2/responsemanagement/responses | Create a response. |
 | [**PostResponsesQuery**](ResponseManagementApi.html#postresponsesquery) | **POST** /api/v2/responsemanagement/responses/query | Query responses |
-| [**PutLibrariesLibraryId**](ResponseManagementApi.html#putlibrarieslibraryid) | **PUT** /api/v2/responsemanagement/libraries/{libraryId} | Update an existing response library. |
-| [**PutResponsesResponseId**](ResponseManagementApi.html#putresponsesresponseid) | **PUT** /api/v2/responsemanagement/responses/{responseId} | Update an existing response. |
+| [**PutLibrary**](ResponseManagementApi.html#putlibrary) | **PUT** /api/v2/responsemanagement/libraries/{libraryId} | Update an existing response library. |
+| [**PutResponse**](ResponseManagementApi.html#putresponse) | **PUT** /api/v2/responsemanagement/responses/{responseId} | Update an existing response. |
 {: class="table table-striped"}
 
-<a name="deletelibrarieslibraryid"></a>
+<a name="deletelibrary"></a>
 
-## void DeleteLibrariesLibraryId (string libraryId)
+## void DeleteLibrary (string libraryId)
 
 Delete an existing response library.
 
@@ -38,7 +38,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteLibrariesLibraryIdExample
+    public class DeleteLibraryExample
     {
         public void main()
         {
@@ -52,11 +52,11 @@ namespace Example
             try
             {
                 // Delete an existing response library.
-                apiInstance.DeleteLibrariesLibraryId(libraryId);
+                apiInstance.DeleteLibrary(libraryId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ResponseManagementApi.DeleteLibrariesLibraryId: " + e.Message );
+                Debug.Print("Exception when calling ResponseManagementApi.DeleteLibrary: " + e.Message );
             }
         }
     }
@@ -75,9 +75,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="deleteresponsesresponseid"></a>
+<a name="deleteresponse"></a>
 
-## void DeleteResponsesResponseId (string responseId)
+## void DeleteResponse (string responseId)
 
 Delete an existing response.
 
@@ -93,7 +93,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteResponsesResponseIdExample
+    public class DeleteResponseExample
     {
         public void main()
         {
@@ -107,11 +107,11 @@ namespace Example
             try
             {
                 // Delete an existing response.
-                apiInstance.DeleteResponsesResponseId(responseId);
+                apiInstance.DeleteResponse(responseId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ResponseManagementApi.DeleteResponsesResponseId: " + e.Message );
+                Debug.Print("Exception when calling ResponseManagementApi.DeleteResponse: " + e.Message );
             }
         }
     }
@@ -188,9 +188,9 @@ namespace Example
 
 [**LibraryEntityListing**](LibraryEntityListing.html)
 
-<a name="getlibrarieslibraryid"></a>
+<a name="getlibrary"></a>
 
-## [**Library**](Library.html) GetLibrariesLibraryId (string libraryId)
+## [**Library**](Library.html) GetLibrary (string libraryId)
 
 Get details about an existing response library.
 
@@ -206,7 +206,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetLibrariesLibraryIdExample
+    public class GetLibraryExample
     {
         public void main()
         {
@@ -220,12 +220,12 @@ namespace Example
             try
             {
                 // Get details about an existing response library.
-                Library result = apiInstance.GetLibrariesLibraryId(libraryId);
+                Library result = apiInstance.GetLibrary(libraryId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ResponseManagementApi.GetLibrariesLibraryId: " + e.Message );
+                Debug.Print("Exception when calling ResponseManagementApi.GetLibrary: " + e.Message );
             }
         }
     }
@@ -243,6 +243,62 @@ namespace Example
 ### Return type
 
 [**Library**](Library.html)
+
+<a name="getresponse"></a>
+
+## [**Response**](Response.html) GetResponse (string responseId)
+
+Get details about an existing response.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetResponseExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ResponseManagementApi();
+            var responseId = responseId_example;  // string | Response ID
+
+            try
+            {
+                // Get details about an existing response.
+                Response result = apiInstance.GetResponse(responseId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.GetResponse: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **responseId** | **string**| Response ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Response**](Response.html)
 
 <a name="getresponses"></a>
 
@@ -303,62 +359,6 @@ namespace Example
 ### Return type
 
 [**ResponseEntityListing**](ResponseEntityListing.html)
-
-<a name="getresponsesresponseid"></a>
-
-## [**Response**](Response.html) GetResponsesResponseId (string responseId)
-
-Get details about an existing response.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetResponsesResponseIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ResponseManagementApi();
-            var responseId = responseId_example;  // string | Response ID
-
-            try
-            {
-                // Get details about an existing response.
-                Response result = apiInstance.GetResponsesResponseId(responseId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ResponseManagementApi.GetResponsesResponseId: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **responseId** | **string**| Response ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Response**](Response.html)
 
 <a name="postlibraries"></a>
 
@@ -528,9 +528,9 @@ namespace Example
 
 [**ResponseQueryResults**](ResponseQueryResults.html)
 
-<a name="putlibrarieslibraryid"></a>
+<a name="putlibrary"></a>
 
-## [**Library**](Library.html) PutLibrariesLibraryId (string libraryId, Library body)
+## [**Library**](Library.html) PutLibrary (string libraryId, Library body)
 
 Update an existing response library.
 
@@ -546,7 +546,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutLibrariesLibraryIdExample
+    public class PutLibraryExample
     {
         public void main()
         {
@@ -561,12 +561,12 @@ namespace Example
             try
             {
                 // Update an existing response library.
-                Library result = apiInstance.PutLibrariesLibraryId(libraryId, body);
+                Library result = apiInstance.PutLibrary(libraryId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ResponseManagementApi.PutLibrariesLibraryId: " + e.Message );
+                Debug.Print("Exception when calling ResponseManagementApi.PutLibrary: " + e.Message );
             }
         }
     }
@@ -586,9 +586,9 @@ namespace Example
 
 [**Library**](Library.html)
 
-<a name="putresponsesresponseid"></a>
+<a name="putresponse"></a>
 
-## [**Response**](Response.html) PutResponsesResponseId (string responseId, Response body)
+## [**Response**](Response.html) PutResponse (string responseId, Response body)
 
 Update an existing response.
 
@@ -604,7 +604,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutResponsesResponseIdExample
+    public class PutResponseExample
     {
         public void main()
         {
@@ -619,12 +619,12 @@ namespace Example
             try
             {
                 // Update an existing response.
-                Response result = apiInstance.PutResponsesResponseId(responseId, body);
+                Response result = apiInstance.PutResponse(responseId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ResponseManagementApi.PutResponsesResponseId: " + e.Message );
+                Debug.Print("Exception when calling ResponseManagementApi.PutResponse: " + e.Message );
             }
         }
     }

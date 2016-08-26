@@ -54,14 +54,14 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteChannelsChannelIdSubscriptions
+        /// Test DeleteChannelSubscriptions
         /// </summary>
         [Test]
-        public void DeleteChannelsChannelIdSubscriptionsTest()
+        public void DeleteChannelSubscriptionsTest()
         {
-            // TODO: add unit test for the method 'DeleteChannelsChannelIdSubscriptions'
+            // TODO: add unit test for the method 'DeleteChannelSubscriptions'
             string channelId = null; // TODO: replace null with proper value
-            var response = instance.DeleteChannelsChannelIdSubscriptions(channelId);
+            var response = instance.DeleteChannelSubscriptions(channelId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
@@ -78,6 +78,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetChannelSubscriptions
+        /// </summary>
+        [Test]
+        public void GetChannelSubscriptionsTest()
+        {
+            // TODO: add unit test for the method 'GetChannelSubscriptions'
+            string channelId = null; // TODO: replace null with proper value
+            var response = instance.GetChannelSubscriptions(channelId);
+            Assert.IsInstanceOf<ChannelTopicEntityListing> (response, "response is ChannelTopicEntityListing");
+        }
+        
+        /// <summary>
         /// Test GetChannels
         /// </summary>
         [Test]
@@ -89,14 +101,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetChannelsChannelIdSubscriptions
+        /// Test PostChannelSubscriptions
         /// </summary>
         [Test]
-        public void GetChannelsChannelIdSubscriptionsTest()
+        public void PostChannelSubscriptionsTest()
         {
-            // TODO: add unit test for the method 'GetChannelsChannelIdSubscriptions'
+            // TODO: add unit test for the method 'PostChannelSubscriptions'
             string channelId = null; // TODO: replace null with proper value
-            var response = instance.GetChannelsChannelIdSubscriptions(channelId);
+            List<ChannelTopic> body = null; // TODO: replace null with proper value
+            var response = instance.PostChannelSubscriptions(channelId, body);
             Assert.IsInstanceOf<ChannelTopicEntityListing> (response, "response is ChannelTopicEntityListing");
         }
         
@@ -112,28 +125,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostChannelsChannelIdSubscriptions
+        /// Test PutChannelSubscriptions
         /// </summary>
         [Test]
-        public void PostChannelsChannelIdSubscriptionsTest()
+        public void PutChannelSubscriptionsTest()
         {
-            // TODO: add unit test for the method 'PostChannelsChannelIdSubscriptions'
+            // TODO: add unit test for the method 'PutChannelSubscriptions'
             string channelId = null; // TODO: replace null with proper value
             List<ChannelTopic> body = null; // TODO: replace null with proper value
-            var response = instance.PostChannelsChannelIdSubscriptions(channelId, body);
-            Assert.IsInstanceOf<ChannelTopicEntityListing> (response, "response is ChannelTopicEntityListing");
-        }
-        
-        /// <summary>
-        /// Test PutChannelsChannelIdSubscriptions
-        /// </summary>
-        [Test]
-        public void PutChannelsChannelIdSubscriptionsTest()
-        {
-            // TODO: add unit test for the method 'PutChannelsChannelIdSubscriptions'
-            string channelId = null; // TODO: replace null with proper value
-            List<ChannelTopic> body = null; // TODO: replace null with proper value
-            var response = instance.PutChannelsChannelIdSubscriptions(channelId, body);
+            var response = instance.PutChannelSubscriptions(channelId, body);
             Assert.IsInstanceOf<ChannelTopicEntityListing> (response, "response is ChannelTopicEntityListing");
         }
         

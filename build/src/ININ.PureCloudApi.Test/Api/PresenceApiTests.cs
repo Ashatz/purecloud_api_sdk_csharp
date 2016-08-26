@@ -54,26 +54,26 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeletePresenceId
+        /// Test DeletePresencedefinition
         /// </summary>
         [Test]
-        public void DeletePresenceIdTest()
+        public void DeletePresencedefinitionTest()
         {
-            // TODO: add unit test for the method 'DeletePresenceId'
+            // TODO: add unit test for the method 'DeletePresencedefinition'
             string presenceId = null; // TODO: replace null with proper value
-            var response = instance.DeletePresenceId(presenceId);
+            var response = instance.DeletePresencedefinition(presenceId);
             Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
         }
         
         /// <summary>
-        /// Test GetPresenceId
+        /// Test GetPresencedefinition
         /// </summary>
         [Test]
-        public void GetPresenceIdTest()
+        public void GetPresencedefinitionTest()
         {
-            // TODO: add unit test for the method 'GetPresenceId'
+            // TODO: add unit test for the method 'GetPresencedefinition'
             string presenceId = null; // TODO: replace null with proper value
-            var response = instance.GetPresenceId(presenceId);
+            var response = instance.GetPresencedefinition(presenceId);
             Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
         }
         
@@ -103,29 +103,29 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetUserIdPresencesSourceId
+        /// Test GetUserPresence
         /// </summary>
         [Test]
-        public void GetUserIdPresencesSourceIdTest()
+        public void GetUserPresenceTest()
         {
-            // TODO: add unit test for the method 'GetUserIdPresencesSourceId'
+            // TODO: add unit test for the method 'GetUserPresence'
             string userId = null; // TODO: replace null with proper value
             string sourceId = null; // TODO: replace null with proper value
-            var response = instance.GetUserIdPresencesSourceId(userId, sourceId);
+            var response = instance.GetUserPresence(userId, sourceId);
             Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence");
         }
         
         /// <summary>
-        /// Test PatchUserIdPresencesSourceId
+        /// Test PatchUserPresence
         /// </summary>
         [Test]
-        public void PatchUserIdPresencesSourceIdTest()
+        public void PatchUserPresenceTest()
         {
-            // TODO: add unit test for the method 'PatchUserIdPresencesSourceId'
+            // TODO: add unit test for the method 'PatchUserPresence'
             string userId = null; // TODO: replace null with proper value
             string sourceId = null; // TODO: replace null with proper value
             UserPresence body = null; // TODO: replace null with proper value
-            var response = instance.PatchUserIdPresencesSourceId(userId, sourceId, body);
+            var response = instance.PatchUserPresence(userId, sourceId, body);
             Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence");
         }
         
@@ -142,15 +142,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutPresenceId
+        /// Test PutPresencedefinition
         /// </summary>
         [Test]
-        public void PutPresenceIdTest()
+        public void PutPresencedefinitionTest()
         {
-            // TODO: add unit test for the method 'PutPresenceId'
+            // TODO: add unit test for the method 'PutPresencedefinition'
             string presenceId = null; // TODO: replace null with proper value
             OrganizationPresence body = null; // TODO: replace null with proper value
-            var response = instance.PutPresenceId(presenceId, body);
+            var response = instance.PutPresencedefinition(presenceId, body);
             Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
         }
         

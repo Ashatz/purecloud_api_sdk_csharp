@@ -41,7 +41,6 @@ title: Edge
 | **SerialNumber** | **string** |  | [optional] |
 | **PhysicalEdge** | **bool?** |  | [optional] [default to false]|
 | **Managed** | **bool?** |  | [optional] [default to false]|
-| **EdgeDeploymentType** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

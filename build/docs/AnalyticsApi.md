@@ -3,36 +3,36 @@ title: AnalyticsApi
 ---
 ## ININ.PureCloudApi.Api.AnalyticsApi
 
-All URIs are relative to *https://api.mypurecloud.com*
+All URIs are relative to *https://api.inindca.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteReportingSchedulesScheduleId**](AnalyticsApi.html#deletereportingschedulesscheduleid) | **DELETE** /api/v2/analytics/reporting/schedules/{scheduleId} | Delete a scheduled report job. |
-| [**GetConversationsConversationIdDetails**](AnalyticsApi.html#getconversationsconversationiddetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
+| [**DeleteReportingSchedule**](AnalyticsApi.html#deletereportingschedule) | **DELETE** /api/v2/analytics/reporting/schedules/{scheduleId} | Delete a scheduled report job. |
+| [**GetConversationDetails**](AnalyticsApi.html#getconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetReportingMetadata**](AnalyticsApi.html#getreportingmetadata) | **GET** /api/v2/analytics/reporting/metadata | Get list of reporting metadata. |
 | [**GetReportingReportIdMetadata**](AnalyticsApi.html#getreportingreportidmetadata) | **GET** /api/v2/analytics/reporting/{reportId}/metadata | Get a reporting metadata. |
 | [**GetReportingReportformats**](AnalyticsApi.html#getreportingreportformats) | **GET** /api/v2/analytics/reporting/reportformats | Get a list of report formats |
+| [**GetReportingSchedule**](AnalyticsApi.html#getreportingschedule) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId} | Get a scheduled report job. |
+| [**GetReportingScheduleHistory**](AnalyticsApi.html#getreportingschedulehistory) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history | Get list of completed scheduled report jobs. |
+| [**GetReportingScheduleHistoryLatest**](AnalyticsApi.html#getreportingschedulehistorylatest) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest | Get most recently completed scheduled report job. |
+| [**GetReportingScheduleHistoryRunId**](AnalyticsApi.html#getreportingschedulehistoryrunid) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} | A completed scheduled report job |
 | [**GetReportingSchedules**](AnalyticsApi.html#getreportingschedules) | **GET** /api/v2/analytics/reporting/schedules | Get a list of scheduled report jobs |
-| [**GetReportingSchedulesScheduleId**](AnalyticsApi.html#getreportingschedulesscheduleid) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId} | Get a scheduled report job. |
-| [**GetReportingSchedulesScheduleIdHistory**](AnalyticsApi.html#getreportingschedulesscheduleidhistory) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history | Get list of completed scheduled report jobs. |
-| [**GetReportingSchedulesScheduleIdHistoryLatest**](AnalyticsApi.html#getreportingschedulesscheduleidhistorylatest) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest | Get most recently completed scheduled report job. |
-| [**GetReportingSchedulesScheduleIdHistoryRunId**](AnalyticsApi.html#getreportingschedulesscheduleidhistoryrunid) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} | A completed scheduled report job |
 | [**GetReportingTimeperiods**](AnalyticsApi.html#getreportingtimeperiods) | **GET** /api/v2/analytics/reporting/timeperiods | Get a list of report time periods. |
+| [**PostConversationDetailsProperties**](AnalyticsApi.html#postconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
 | [**PostConversationsAggregatesQuery**](AnalyticsApi.html#postconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
-| [**PostConversationsConversationIdDetailsProperties**](AnalyticsApi.html#postconversationsconversationiddetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
 | [**PostConversationsDetailsQuery**](AnalyticsApi.html#postconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
 | [**PostEvaluationsAggregatesQuery**](AnalyticsApi.html#postevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
 | [**PostQueuesObservationsQuery**](AnalyticsApi.html#postqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
+| [**PostReportingScheduleRunreport**](AnalyticsApi.html#postreportingschedulerunreport) | **POST** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
 | [**PostReportingSchedules**](AnalyticsApi.html#postreportingschedules) | **POST** /api/v2/analytics/reporting/schedules | Create a scheduled report job |
-| [**PostReportingSchedulesScheduleIdRunreport**](AnalyticsApi.html#postreportingschedulesscheduleidrunreport) | **POST** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
 | [**PostUsersAggregatesQuery**](AnalyticsApi.html#postusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
 | [**PostUsersObservationsQuery**](AnalyticsApi.html#postusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
-| [**PutReportingSchedulesScheduleId**](AnalyticsApi.html#putreportingschedulesscheduleid) | **PUT** /api/v2/analytics/reporting/schedules/{scheduleId} | Update a scheduled report job. |
+| [**PutReportingSchedule**](AnalyticsApi.html#putreportingschedule) | **PUT** /api/v2/analytics/reporting/schedules/{scheduleId} | Update a scheduled report job. |
 {: class="table table-striped"}
 
-<a name="deletereportingschedulesscheduleid"></a>
+<a name="deletereportingschedule"></a>
 
-## **string** DeleteReportingSchedulesScheduleId (string scheduleId)
+## **string** DeleteReportingSchedule (string scheduleId)
 
 Delete a scheduled report job.
 
@@ -48,7 +48,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteReportingSchedulesScheduleIdExample
+    public class DeleteReportingScheduleExample
     {
         public void main()
         {
@@ -62,12 +62,12 @@ namespace Example
             try
             {
                 // Delete a scheduled report job.
-                string result = apiInstance.DeleteReportingSchedulesScheduleId(scheduleId);
+                string result = apiInstance.DeleteReportingSchedule(scheduleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AnalyticsApi.DeleteReportingSchedulesScheduleId: " + e.Message );
+                Debug.Print("Exception when calling AnalyticsApi.DeleteReportingSchedule: " + e.Message );
             }
         }
     }
@@ -86,9 +86,9 @@ namespace Example
 
 **string**
 
-<a name="getconversationsconversationiddetails"></a>
+<a name="getconversationdetails"></a>
 
-## [**AnalyticsConversation**](AnalyticsConversation.html) GetConversationsConversationIdDetails (string conversationId)
+## [**AnalyticsConversation**](AnalyticsConversation.html) GetConversationDetails (string conversationId)
 
 Get a conversation by id
 
@@ -104,7 +104,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetConversationsConversationIdDetailsExample
+    public class GetConversationDetailsExample
     {
         public void main()
         {
@@ -118,12 +118,12 @@ namespace Example
             try
             {
                 // Get a conversation by id
-                AnalyticsConversation result = apiInstance.GetConversationsConversationIdDetails(conversationId);
+                AnalyticsConversation result = apiInstance.GetConversationDetails(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AnalyticsApi.GetConversationsConversationIdDetails: " + e.Message );
+                Debug.Print("Exception when calling AnalyticsApi.GetConversationDetails: " + e.Message );
             }
         }
     }
@@ -311,6 +311,236 @@ This endpoint does require any parameters.
 
 **List<string>**
 
+<a name="getreportingschedule"></a>
+
+## [**ReportSchedule**](ReportSchedule.html) GetReportingSchedule (string scheduleId)
+
+Get a scheduled report job.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetReportingScheduleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AnalyticsApi();
+            var scheduleId = scheduleId_example;  // string | Schedule ID
+
+            try
+            {
+                // Get a scheduled report job.
+                ReportSchedule result = apiInstance.GetReportingSchedule(scheduleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetReportingSchedule: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduleId** | **string**| Schedule ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ReportSchedule**](ReportSchedule.html)
+
+<a name="getreportingschedulehistory"></a>
+
+## [**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html) GetReportingScheduleHistory (string scheduleId, int? pageNumber = null, int? pageSize = null)
+
+Get list of completed scheduled report jobs.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetReportingScheduleHistoryExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AnalyticsApi();
+            var scheduleId = scheduleId_example;  // string | Schedule ID
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? |  (optional)  (default to 25)
+
+            try
+            {
+                // Get list of completed scheduled report jobs.
+                ReportRunEntryEntityDomainListing result = apiInstance.GetReportingScheduleHistory(scheduleId, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetReportingScheduleHistory: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduleId** | **string**| Schedule ID |  |
+| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageSize** | **int?**|  | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html)
+
+<a name="getreportingschedulehistorylatest"></a>
+
+## [**ReportRunEntry**](ReportRunEntry.html) GetReportingScheduleHistoryLatest (string scheduleId)
+
+Get most recently completed scheduled report job.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetReportingScheduleHistoryLatestExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AnalyticsApi();
+            var scheduleId = scheduleId_example;  // string | Schedule ID
+
+            try
+            {
+                // Get most recently completed scheduled report job.
+                ReportRunEntry result = apiInstance.GetReportingScheduleHistoryLatest(scheduleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetReportingScheduleHistoryLatest: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduleId** | **string**| Schedule ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ReportRunEntry**](ReportRunEntry.html)
+
+<a name="getreportingschedulehistoryrunid"></a>
+
+## [**ReportRunEntry**](ReportRunEntry.html) GetReportingScheduleHistoryRunId (string runId, string scheduleId)
+
+A completed scheduled report job
+
+A completed scheduled report job.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetReportingScheduleHistoryRunIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AnalyticsApi();
+            var runId = runId_example;  // string | Run ID
+            var scheduleId = scheduleId_example;  // string | Schedule ID
+
+            try
+            {
+                // A completed scheduled report job
+                ReportRunEntry result = apiInstance.GetReportingScheduleHistoryRunId(runId, scheduleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetReportingScheduleHistoryRunId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **runId** | **string**| Run ID |  |
+| **scheduleId** | **string**| Schedule ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ReportRunEntry**](ReportRunEntry.html)
+
 <a name="getreportingschedules"></a>
 
 ## [**ReportScheduleEntityListing**](ReportScheduleEntityListing.html) GetReportingSchedules (int? pageNumber = null, int? pageSize = null)
@@ -369,236 +599,6 @@ namespace Example
 
 [**ReportScheduleEntityListing**](ReportScheduleEntityListing.html)
 
-<a name="getreportingschedulesscheduleid"></a>
-
-## [**ReportSchedule**](ReportSchedule.html) GetReportingSchedulesScheduleId (string scheduleId)
-
-Get a scheduled report job.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetReportingSchedulesScheduleIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AnalyticsApi();
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-
-            try
-            {
-                // Get a scheduled report job.
-                ReportSchedule result = apiInstance.GetReportingSchedulesScheduleId(scheduleId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetReportingSchedulesScheduleId: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scheduleId** | **string**| Schedule ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportSchedule**](ReportSchedule.html)
-
-<a name="getreportingschedulesscheduleidhistory"></a>
-
-## [**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html) GetReportingSchedulesScheduleIdHistory (string scheduleId, int? pageNumber = null, int? pageSize = null)
-
-Get list of completed scheduled report jobs.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetReportingSchedulesScheduleIdHistoryExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AnalyticsApi();
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-            var pageNumber = 56;  // int? |  (optional)  (default to 1)
-            var pageSize = 56;  // int? |  (optional)  (default to 25)
-
-            try
-            {
-                // Get list of completed scheduled report jobs.
-                ReportRunEntryEntityDomainListing result = apiInstance.GetReportingSchedulesScheduleIdHistory(scheduleId, pageNumber, pageSize);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetReportingSchedulesScheduleIdHistory: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scheduleId** | **string**| Schedule ID |  |
-| **pageNumber** | **int?**|  | [optional] [default to 1] |
-| **pageSize** | **int?**|  | [optional] [default to 25] |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html)
-
-<a name="getreportingschedulesscheduleidhistorylatest"></a>
-
-## [**ReportRunEntry**](ReportRunEntry.html) GetReportingSchedulesScheduleIdHistoryLatest (string scheduleId)
-
-Get most recently completed scheduled report job.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetReportingSchedulesScheduleIdHistoryLatestExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AnalyticsApi();
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-
-            try
-            {
-                // Get most recently completed scheduled report job.
-                ReportRunEntry result = apiInstance.GetReportingSchedulesScheduleIdHistoryLatest(scheduleId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetReportingSchedulesScheduleIdHistoryLatest: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scheduleId** | **string**| Schedule ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportRunEntry**](ReportRunEntry.html)
-
-<a name="getreportingschedulesscheduleidhistoryrunid"></a>
-
-## [**ReportRunEntry**](ReportRunEntry.html) GetReportingSchedulesScheduleIdHistoryRunId (string runId, string scheduleId)
-
-A completed scheduled report job
-
-A completed scheduled report job.
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetReportingSchedulesScheduleIdHistoryRunIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AnalyticsApi();
-            var runId = runId_example;  // string | Run ID
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-
-            try
-            {
-                // A completed scheduled report job
-                ReportRunEntry result = apiInstance.GetReportingSchedulesScheduleIdHistoryRunId(runId, scheduleId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetReportingSchedulesScheduleIdHistoryRunId: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **runId** | **string**| Run ID |  |
-| **scheduleId** | **string**| Schedule ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportRunEntry**](ReportRunEntry.html)
-
 <a name="getreportingtimeperiods"></a>
 
 ## **List&lt;string&gt;** GetReportingTimeperiods ()
@@ -649,6 +649,64 @@ This endpoint does require any parameters.
 ### Return type
 
 **List<string>**
+
+<a name="postconversationdetailsproperties"></a>
+
+## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
+
+Index conversation properties
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostConversationDetailsPropertiesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AnalyticsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new PropertyIndexRequest(); // PropertyIndexRequest | request
+
+            try
+            {
+                // Index conversation properties
+                PropertyIndexRequest result = apiInstance.PostConversationDetailsProperties(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostConversationDetailsProperties: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PropertyIndexRequest**](PropertyIndexRequest.html)
 
 <a name="postconversationsaggregatesquery"></a>
 
@@ -705,64 +763,6 @@ namespace Example
 ### Return type
 
 [**AggregateQueryResponse**](AggregateQueryResponse.html)
-
-<a name="postconversationsconversationiddetailsproperties"></a>
-
-## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body)
-
-Index conversation properties
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostConversationsConversationIdDetailsPropertiesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AnalyticsApi();
-            var conversationId = conversationId_example;  // string | conversationId
-            var body = new PropertyIndexRequest(); // PropertyIndexRequest | request
-
-            try
-            {
-                // Index conversation properties
-                PropertyIndexRequest result = apiInstance.PostConversationsConversationIdDetailsProperties(conversationId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.PostConversationsConversationIdDetailsProperties: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**| conversationId |  |
-| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**PropertyIndexRequest**](PropertyIndexRequest.html)
 
 <a name="postconversationsdetailsquery"></a>
 
@@ -932,6 +932,62 @@ namespace Example
 
 [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
 
+<a name="postreportingschedulerunreport"></a>
+
+## [**RunNowResponse**](RunNowResponse.html) PostReportingScheduleRunreport (string scheduleId)
+
+Place a scheduled report immediately into the reporting queue
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostReportingScheduleRunreportExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AnalyticsApi();
+            var scheduleId = scheduleId_example;  // string | Schedule ID
+
+            try
+            {
+                // Place a scheduled report immediately into the reporting queue
+                RunNowResponse result = apiInstance.PostReportingScheduleRunreport(scheduleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostReportingScheduleRunreport: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduleId** | **string**| Schedule ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RunNowResponse**](RunNowResponse.html)
+
 <a name="postreportingschedules"></a>
 
 ## [**ReportSchedule**](ReportSchedule.html) PostReportingSchedules (ReportSchedule body)
@@ -987,62 +1043,6 @@ namespace Example
 ### Return type
 
 [**ReportSchedule**](ReportSchedule.html)
-
-<a name="postreportingschedulesscheduleidrunreport"></a>
-
-## [**RunNowResponse**](RunNowResponse.html) PostReportingSchedulesScheduleIdRunreport (string scheduleId)
-
-Place a scheduled report immediately into the reporting queue
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostReportingSchedulesScheduleIdRunreportExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new AnalyticsApi();
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-
-            try
-            {
-                // Place a scheduled report immediately into the reporting queue
-                RunNowResponse result = apiInstance.PostReportingSchedulesScheduleIdRunreport(scheduleId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.PostReportingSchedulesScheduleIdRunreport: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scheduleId** | **string**| Schedule ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**RunNowResponse**](RunNowResponse.html)
 
 <a name="postusersaggregatesquery"></a>
 
@@ -1156,9 +1156,9 @@ namespace Example
 
 [**ObservationQueryResponse**](ObservationQueryResponse.html)
 
-<a name="putreportingschedulesscheduleid"></a>
+<a name="putreportingschedule"></a>
 
-## [**ReportSchedule**](ReportSchedule.html) PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body)
+## [**ReportSchedule**](ReportSchedule.html) PutReportingSchedule (string scheduleId, ReportSchedule body)
 
 Update a scheduled report job.
 
@@ -1174,7 +1174,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutReportingSchedulesScheduleIdExample
+    public class PutReportingScheduleExample
     {
         public void main()
         {
@@ -1189,12 +1189,12 @@ namespace Example
             try
             {
                 // Update a scheduled report job.
-                ReportSchedule result = apiInstance.PutReportingSchedulesScheduleId(scheduleId, body);
+                ReportSchedule result = apiInstance.PutReportingSchedule(scheduleId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AnalyticsApi.PutReportingSchedulesScheduleId: " + e.Message );
+                Debug.Print("Exception when calling AnalyticsApi.PutReportingSchedule: " + e.Message );
             }
         }
     }

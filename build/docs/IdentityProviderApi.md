@@ -3,30 +3,30 @@ title: IdentityProviderApi
 ---
 ## ININ.PureCloudApi.Api.IdentityProviderApi
 
-All URIs are relative to *https://api.mypurecloud.com*
+All URIs are relative to *https://api.inindca.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteAdfs**](IdentityProviderApi.html#deleteadfs) | **DELETE** /api/v2/identityproviders/adfs | Delete ADFS Identity Provider |
 | [**DeleteCic**](IdentityProviderApi.html#deletecic) | **DELETE** /api/v2/identityproviders/cic | Delete Customer Interaction Center (CIC) Identity Provider |
+| [**DeleteIdentityprovider**](IdentityProviderApi.html#deleteidentityprovider) | **DELETE** /api/v2/identityproviders/{providerId} | Delete an identity provider |
 | [**DeleteOkta**](IdentityProviderApi.html#deleteokta) | **DELETE** /api/v2/identityproviders/okta | Delete Okta Identity Provider |
 | [**DeleteOnelogin**](IdentityProviderApi.html#deleteonelogin) | **DELETE** /api/v2/identityproviders/onelogin | Delete OneLogin Identity Provider |
-| [**DeleteProviderId**](IdentityProviderApi.html#deleteproviderid) | **DELETE** /api/v2/identityproviders/{providerId} | Delete an identity provider |
 | [**DeletePurecloud**](IdentityProviderApi.html#deletepurecloud) | **DELETE** /api/v2/identityproviders/purecloud | Delete PureCloud Identity Provider |
 | [**DeleteSalesforce**](IdentityProviderApi.html#deletesalesforce) | **DELETE** /api/v2/identityproviders/salesforce | Delete Salesforce Identity Provider |
 | [**GetAdfs**](IdentityProviderApi.html#getadfs) | **GET** /api/v2/identityproviders/adfs | Get ADFS Identity Provider |
 | [**GetCic**](IdentityProviderApi.html#getcic) | **GET** /api/v2/identityproviders/cic | Get Customer Interaction Center (CIC) Identity Provider |
+| [**GetIdentityprovider**](IdentityProviderApi.html#getidentityprovider) | **GET** /api/v2/identityproviders/{providerId} | Get an identity provider |
 | [**GetIdentityproviders**](IdentityProviderApi.html#getidentityproviders) | **GET** /api/v2/identityproviders | The list of identity providers |
 | [**GetOkta**](IdentityProviderApi.html#getokta) | **GET** /api/v2/identityproviders/okta | Get Okta Identity Provider |
 | [**GetOnelogin**](IdentityProviderApi.html#getonelogin) | **GET** /api/v2/identityproviders/onelogin | Get OneLogin Identity Provider |
-| [**GetProviderId**](IdentityProviderApi.html#getproviderid) | **GET** /api/v2/identityproviders/{providerId} | Get an identity provider |
 | [**GetPurecloud**](IdentityProviderApi.html#getpurecloud) | **GET** /api/v2/identityproviders/purecloud | Get PureCloud Identity Provider |
 | [**GetSalesforce**](IdentityProviderApi.html#getsalesforce) | **GET** /api/v2/identityproviders/salesforce | Get Salesforce Identity Provider |
 | [**PutAdfs**](IdentityProviderApi.html#putadfs) | **PUT** /api/v2/identityproviders/adfs | Update/Create ADFS Identity Provider |
 | [**PutCic**](IdentityProviderApi.html#putcic) | **PUT** /api/v2/identityproviders/cic | Update/Create Customer Interaction Center (CIC) Identity Provider |
+| [**PutIdentityprovider**](IdentityProviderApi.html#putidentityprovider) | **PUT** /api/v2/identityproviders/{providerId} | Update an identity provider |
 | [**PutOkta**](IdentityProviderApi.html#putokta) | **PUT** /api/v2/identityproviders/okta | Update/Create Okta Identity Provider |
 | [**PutOnelogin**](IdentityProviderApi.html#putonelogin) | **PUT** /api/v2/identityproviders/onelogin | Update/Create OneLogin Identity Provider |
-| [**PutProviderId**](IdentityProviderApi.html#putproviderid) | **PUT** /api/v2/identityproviders/{providerId} | Update an identity provider |
 | [**PutPurecloud**](IdentityProviderApi.html#putpurecloud) | **PUT** /api/v2/identityproviders/purecloud | Update/Create PureCloud Identity Provider |
 | [**PutSalesforce**](IdentityProviderApi.html#putsalesforce) | **PUT** /api/v2/identityproviders/salesforce | Update/Create Salesforce Identity Provider |
 {: class="table table-striped"}
@@ -131,6 +131,56 @@ This endpoint does require any parameters.
 
 void (empty response body)
 
+<a name="deleteidentityprovider"></a>
+
+## void DeleteIdentityprovider ()
+
+Delete an identity provider
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteIdentityproviderExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new IdentityProviderApi();
+
+            try
+            {
+                // Delete an identity provider
+                apiInstance.DeleteIdentityprovider();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.DeleteIdentityprovider: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="deleteokta"></a>
 
 ## void DeleteOkta ()
@@ -217,56 +267,6 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling IdentityProviderApi.DeleteOnelogin: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="deleteproviderid"></a>
-
-## void DeleteProviderId ()
-
-Delete an identity provider
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class DeleteProviderIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new IdentityProviderApi();
-
-            try
-            {
-                // Delete an identity provider
-                apiInstance.DeleteProviderId();
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling IdentityProviderApi.DeleteProviderId: " + e.Message );
             }
         }
     }
@@ -483,6 +483,57 @@ This endpoint does require any parameters.
 
 [**CustomerInteractionCenter**](CustomerInteractionCenter.html)
 
+<a name="getidentityprovider"></a>
+
+## [**OAuthProvider**](OAuthProvider.html) GetIdentityprovider ()
+
+Get an identity provider
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetIdentityproviderExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new IdentityProviderApi();
+
+            try
+            {
+                // Get an identity provider
+                OAuthProvider result = apiInstance.GetIdentityprovider();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.GetIdentityprovider: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**OAuthProvider**](OAuthProvider.html)
+
 <a name="getidentityproviders"></a>
 
 ## [**OAuthProviderEntityListing**](OAuthProviderEntityListing.html) GetIdentityproviders ()
@@ -635,57 +686,6 @@ This endpoint does require any parameters.
 ### Return type
 
 [**OneLogin**](OneLogin.html)
-
-<a name="getproviderid"></a>
-
-## [**OAuthProvider**](OAuthProvider.html) GetProviderId ()
-
-Get an identity provider
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetProviderIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new IdentityProviderApi();
-
-            try
-            {
-                // Get an identity provider
-                OAuthProvider result = apiInstance.GetProviderId();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling IdentityProviderApi.GetProviderId: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**OAuthProvider**](OAuthProvider.html)
 
 <a name="getpurecloud"></a>
 
@@ -899,6 +899,61 @@ namespace Example
 
 void (empty response body)
 
+<a name="putidentityprovider"></a>
+
+## void PutIdentityprovider (OAuthProvider body)
+
+Update an identity provider
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutIdentityproviderExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new IdentityProviderApi();
+            var body = new OAuthProvider(); // OAuthProvider | Provider
+
+            try
+            {
+                // Update an identity provider
+                apiInstance.PutIdentityprovider(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.PutIdentityprovider: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OAuthProvider**](OAuthProvider.html)| Provider |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="putokta"></a>
 
 ## void PutOkta (Okta body)
@@ -1003,61 +1058,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OneLogin**](OneLogin.html)| Provider |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="putproviderid"></a>
-
-## void PutProviderId (OAuthProvider body)
-
-Update an identity provider
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PutProviderIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new IdentityProviderApi();
-            var body = new OAuthProvider(); // OAuthProvider | Provider
-
-            try
-            {
-                // Update an identity provider
-                apiInstance.PutProviderId(body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling IdentityProviderApi.PutProviderId: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**OAuthProvider**](OAuthProvider.html)| Provider |  |
 {: class="table table-striped"}
 
 ### Return type

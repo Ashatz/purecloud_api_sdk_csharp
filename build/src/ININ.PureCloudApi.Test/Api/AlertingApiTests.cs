@@ -54,27 +54,39 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteInteractionstatsAlertsAlertId
+        /// Test DeleteInteractionstatsAlert
         /// </summary>
         [Test]
-        public void DeleteInteractionstatsAlertsAlertIdTest()
+        public void DeleteInteractionstatsAlertTest()
         {
-            // TODO: add unit test for the method 'DeleteInteractionstatsAlertsAlertId'
+            // TODO: add unit test for the method 'DeleteInteractionstatsAlert'
             string alertId = null; // TODO: replace null with proper value
-            instance.DeleteInteractionstatsAlertsAlertId(alertId);
+            instance.DeleteInteractionstatsAlert(alertId);
             
         }
         
         /// <summary>
-        /// Test DeleteInteractionstatsRulesRuleId
+        /// Test DeleteInteractionstatsRule
         /// </summary>
         [Test]
-        public void DeleteInteractionstatsRulesRuleIdTest()
+        public void DeleteInteractionstatsRuleTest()
         {
-            // TODO: add unit test for the method 'DeleteInteractionstatsRulesRuleId'
+            // TODO: add unit test for the method 'DeleteInteractionstatsRule'
             string ruleId = null; // TODO: replace null with proper value
-            instance.DeleteInteractionstatsRulesRuleId(ruleId);
+            instance.DeleteInteractionstatsRule(ruleId);
             
+        }
+        
+        /// <summary>
+        /// Test GetInteractionstatsAlert
+        /// </summary>
+        [Test]
+        public void GetInteractionstatsAlertTest()
+        {
+            // TODO: add unit test for the method 'GetInteractionstatsAlert'
+            string alertId = null; // TODO: replace null with proper value
+            var response = instance.GetInteractionstatsAlert(alertId);
+            Assert.IsInstanceOf<InteractionStatsAlert> (response, "response is InteractionStatsAlert");
         }
         
         /// <summary>
@@ -89,18 +101,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetInteractionstatsAlertsAlertId
-        /// </summary>
-        [Test]
-        public void GetInteractionstatsAlertsAlertIdTest()
-        {
-            // TODO: add unit test for the method 'GetInteractionstatsAlertsAlertId'
-            string alertId = null; // TODO: replace null with proper value
-            var response = instance.GetInteractionstatsAlertsAlertId(alertId);
-            Assert.IsInstanceOf<InteractionStatsAlert> (response, "response is InteractionStatsAlert");
-        }
-        
-        /// <summary>
         /// Test GetInteractionstatsAlertsUnread
         /// </summary>
         [Test]
@@ -112,6 +112,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetInteractionstatsRule
+        /// </summary>
+        [Test]
+        public void GetInteractionstatsRuleTest()
+        {
+            // TODO: add unit test for the method 'GetInteractionstatsRule'
+            string ruleId = null; // TODO: replace null with proper value
+            var response = instance.GetInteractionstatsRule(ruleId);
+            Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule");
+        }
+        
+        /// <summary>
         /// Test GetInteractionstatsRules
         /// </summary>
         [Test]
@@ -120,18 +132,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetInteractionstatsRules'
             var response = instance.GetInteractionstatsRules();
             Assert.IsInstanceOf<InteractionStatsRuleContainer> (response, "response is InteractionStatsRuleContainer");
-        }
-        
-        /// <summary>
-        /// Test GetInteractionstatsRulesRuleId
-        /// </summary>
-        [Test]
-        public void GetInteractionstatsRulesRuleIdTest()
-        {
-            // TODO: add unit test for the method 'GetInteractionstatsRulesRuleId'
-            string ruleId = null; // TODO: replace null with proper value
-            var response = instance.GetInteractionstatsRulesRuleId(ruleId);
-            Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule");
         }
         
         /// <summary>
@@ -147,28 +147,28 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutInteractionstatsAlertsAlertId
+        /// Test PutInteractionstatsAlert
         /// </summary>
         [Test]
-        public void PutInteractionstatsAlertsAlertIdTest()
+        public void PutInteractionstatsAlertTest()
         {
-            // TODO: add unit test for the method 'PutInteractionstatsAlertsAlertId'
+            // TODO: add unit test for the method 'PutInteractionstatsAlert'
             string alertId = null; // TODO: replace null with proper value
             UnreadStatus body = null; // TODO: replace null with proper value
-            var response = instance.PutInteractionstatsAlertsAlertId(alertId, body);
+            var response = instance.PutInteractionstatsAlert(alertId, body);
             Assert.IsInstanceOf<UnreadStatus> (response, "response is UnreadStatus");
         }
         
         /// <summary>
-        /// Test PutInteractionstatsRulesRuleId
+        /// Test PutInteractionstatsRule
         /// </summary>
         [Test]
-        public void PutInteractionstatsRulesRuleIdTest()
+        public void PutInteractionstatsRuleTest()
         {
-            // TODO: add unit test for the method 'PutInteractionstatsRulesRuleId'
+            // TODO: add unit test for the method 'PutInteractionstatsRule'
             string ruleId = null; // TODO: replace null with proper value
             InteractionStatsRule body = null; // TODO: replace null with proper value
-            var response = instance.PutInteractionstatsRulesRuleId(ruleId, body);
+            var response = instance.PutInteractionstatsRule(ruleId, body);
             Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule");
         }
         

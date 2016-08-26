@@ -3,14 +3,14 @@ title: GeolocationApi
 ---
 ## ININ.PureCloudApi.Api.GeolocationApi
 
-All URIs are relative to *https://api.mypurecloud.com*
+All URIs are relative to *https://api.inindca.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetSettings**](GeolocationApi.html#getsettings) | **GET** /api/v2/geolocations/settings | Get a organization&#39;s GeolocationSettings |
-| [**GetUserIdGeolocationsClientId**](GeolocationApi.html#getuseridgeolocationsclientid) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
+| [**GetUserGeolocation**](GeolocationApi.html#getusergeolocation) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
 | [**PatchSettings**](GeolocationApi.html#patchsettings) | **PATCH** /api/v2/geolocations/settings | Patch a organization&#39;s GeolocationSettings |
-| [**PatchUserIdGeolocationsClientId**](GeolocationApi.html#patchuseridgeolocationsclientid) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
+| [**PatchUserGeolocation**](GeolocationApi.html#patchusergeolocation) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
 {: class="table table-striped"}
 
 <a name="getsettings"></a>
@@ -64,9 +64,9 @@ This endpoint does require any parameters.
 
 [**GeolocationSettings**](GeolocationSettings.html)
 
-<a name="getuseridgeolocationsclientid"></a>
+<a name="getusergeolocation"></a>
 
-## [**Geolocation**](Geolocation.html) GetUserIdGeolocationsClientId (string userId, string clientId)
+## [**Geolocation**](Geolocation.html) GetUserGeolocation (string userId, string clientId)
 
 Get a user's Geolocation
 
@@ -82,7 +82,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserIdGeolocationsClientIdExample
+    public class GetUserGeolocationExample
     {
         public void main()
         {
@@ -97,12 +97,12 @@ namespace Example
             try
             {
                 // Get a user's Geolocation
-                Geolocation result = apiInstance.GetUserIdGeolocationsClientId(userId, clientId);
+                Geolocation result = apiInstance.GetUserGeolocation(userId, clientId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GeolocationApi.GetUserIdGeolocationsClientId: " + e.Message );
+                Debug.Print("Exception when calling GeolocationApi.GetUserGeolocation: " + e.Message );
             }
         }
     }
@@ -178,9 +178,9 @@ namespace Example
 
 [**GeolocationSettings**](GeolocationSettings.html)
 
-<a name="patchuseridgeolocationsclientid"></a>
+<a name="patchusergeolocation"></a>
 
-## [**Geolocation**](Geolocation.html) PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body)
+## [**Geolocation**](Geolocation.html) PatchUserGeolocation (string userId, string clientId, Geolocation body)
 
 Patch a user's Geolocation
 
@@ -196,7 +196,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchUserIdGeolocationsClientIdExample
+    public class PatchUserGeolocationExample
     {
         public void main()
         {
@@ -212,12 +212,12 @@ namespace Example
             try
             {
                 // Patch a user's Geolocation
-                Geolocation result = apiInstance.PatchUserIdGeolocationsClientId(userId, clientId, body);
+                Geolocation result = apiInstance.PatchUserGeolocation(userId, clientId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GeolocationApi.PatchUserIdGeolocationsClientId: " + e.Message );
+                Debug.Print("Exception when calling GeolocationApi.PatchUserGeolocation: " + e.Message );
             }
         }
     }

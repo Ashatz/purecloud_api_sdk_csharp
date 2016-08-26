@@ -3,20 +3,20 @@ title: LanguagesApi
 ---
 ## ININ.PureCloudApi.Api.LanguagesApi
 
-All URIs are relative to *https://api.mypurecloud.com*
+All URIs are relative to *https://api.inindca.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteLanguageId**](LanguagesApi.html#deletelanguageid) | **DELETE** /api/v2/languages/{languageId} | Delete Language |
-| [**GetLanguageId**](LanguagesApi.html#getlanguageid) | **GET** /api/v2/languages/{languageId} | Get language |
+| [**DeleteLanguage**](LanguagesApi.html#deletelanguage) | **DELETE** /api/v2/languages/{languageId} | Delete Language |
+| [**GetLanguage**](LanguagesApi.html#getlanguage) | **GET** /api/v2/languages/{languageId} | Get language |
 | [**GetLanguages**](LanguagesApi.html#getlanguages) | **GET** /api/v2/languages | Get the list of supported languages. |
 | [**PostLanguages**](LanguagesApi.html#postlanguages) | **POST** /api/v2/languages | Create Language |
-| [**PutLanguageId**](LanguagesApi.html#putlanguageid) | **PUT** /api/v2/languages/{languageId} | Update Language |
+| [**PutLanguage**](LanguagesApi.html#putlanguage) | **PUT** /api/v2/languages/{languageId} | Update Language |
 {: class="table table-striped"}
 
-<a name="deletelanguageid"></a>
+<a name="deletelanguage"></a>
 
-## void DeleteLanguageId (string languageId)
+## void DeleteLanguage (string languageId)
 
 Delete Language
 
@@ -32,7 +32,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteLanguageIdExample
+    public class DeleteLanguageExample
     {
         public void main()
         {
@@ -46,11 +46,11 @@ namespace Example
             try
             {
                 // Delete Language
-                apiInstance.DeleteLanguageId(languageId);
+                apiInstance.DeleteLanguage(languageId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LanguagesApi.DeleteLanguageId: " + e.Message );
+                Debug.Print("Exception when calling LanguagesApi.DeleteLanguage: " + e.Message );
             }
         }
     }
@@ -69,9 +69,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="getlanguageid"></a>
+<a name="getlanguage"></a>
 
-## [**Language**](Language.html) GetLanguageId (string languageId)
+## [**Language**](Language.html) GetLanguage (string languageId)
 
 Get language
 
@@ -87,7 +87,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetLanguageIdExample
+    public class GetLanguageExample
     {
         public void main()
         {
@@ -101,12 +101,12 @@ namespace Example
             try
             {
                 // Get language
-                Language result = apiInstance.GetLanguageId(languageId);
+                Language result = apiInstance.GetLanguage(languageId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LanguagesApi.GetLanguageId: " + e.Message );
+                Debug.Print("Exception when calling LanguagesApi.GetLanguage: " + e.Message );
             }
         }
     }
@@ -243,9 +243,9 @@ namespace Example
 
 [**Language**](Language.html)
 
-<a name="putlanguageid"></a>
+<a name="putlanguage"></a>
 
-## [**Language**](Language.html) PutLanguageId (string languageId, Language body)
+## [**Language**](Language.html) PutLanguage (string languageId, Language body)
 
 Update Language
 
@@ -261,7 +261,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutLanguageIdExample
+    public class PutLanguageExample
     {
         public void main()
         {
@@ -276,12 +276,12 @@ namespace Example
             try
             {
                 // Update Language
-                Language result = apiInstance.PutLanguageId(languageId, body);
+                Language result = apiInstance.PutLanguage(languageId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LanguagesApi.PutLanguageId: " + e.Message );
+                Debug.Print("Exception when calling LanguagesApi.PutLanguage: " + e.Message );
             }
         }
     }

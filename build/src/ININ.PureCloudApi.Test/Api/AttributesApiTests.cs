@@ -54,26 +54,26 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteAttributeId
+        /// Test DeleteAttribute
         /// </summary>
         [Test]
-        public void DeleteAttributeIdTest()
+        public void DeleteAttributeTest()
         {
-            // TODO: add unit test for the method 'DeleteAttributeId'
+            // TODO: add unit test for the method 'DeleteAttribute'
             string attributeId = null; // TODO: replace null with proper value
-            instance.DeleteAttributeId(attributeId);
+            instance.DeleteAttribute(attributeId);
             
         }
         
         /// <summary>
-        /// Test GetAttributeId
+        /// Test GetAttribute
         /// </summary>
         [Test]
-        public void GetAttributeIdTest()
+        public void GetAttributeTest()
         {
-            // TODO: add unit test for the method 'GetAttributeId'
+            // TODO: add unit test for the method 'GetAttribute'
             string attributeId = null; // TODO: replace null with proper value
-            var response = instance.GetAttributeId(attributeId);
+            var response = instance.GetAttribute(attributeId);
             Assert.IsInstanceOf<ININ.PureCloudApi.Model.Attribute> (response, "response is ININ.PureCloudApi.Model.Attribute");
         }
         
@@ -115,15 +115,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutAttributeId
+        /// Test PutAttribute
         /// </summary>
         [Test]
-        public void PutAttributeIdTest()
+        public void PutAttributeTest()
         {
-            // TODO: add unit test for the method 'PutAttributeId'
+            // TODO: add unit test for the method 'PutAttribute'
             string attributeId = null; // TODO: replace null with proper value
             ININ.PureCloudApi.Model.Attribute body = null; // TODO: replace null with proper value
-            var response = instance.PutAttributeId(attributeId, body);
+            var response = instance.PutAttribute(attributeId, body);
             Assert.IsInstanceOf<ININ.PureCloudApi.Model.Attribute> (response, "response is ININ.PureCloudApi.Model.Attribute");
         }
         

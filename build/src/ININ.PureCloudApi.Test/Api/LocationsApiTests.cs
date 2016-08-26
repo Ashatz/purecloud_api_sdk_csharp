@@ -54,14 +54,14 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetLocationId
+        /// Test GetLocation
         /// </summary>
         [Test]
-        public void GetLocationIdTest()
+        public void GetLocationTest()
         {
-            // TODO: add unit test for the method 'GetLocationId'
+            // TODO: add unit test for the method 'GetLocation'
             string locationId = null; // TODO: replace null with proper value
-            var response = instance.GetLocationId(locationId);
+            var response = instance.GetLocation(locationId);
             Assert.IsInstanceOf<Location> (response, "response is Location");
         }
         

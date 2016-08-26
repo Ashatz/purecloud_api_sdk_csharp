@@ -3,27 +3,27 @@ title: GreetingsApi
 ---
 ## ININ.PureCloudApi.Api.GreetingsApi
 
-All URIs are relative to *https://api.mypurecloud.com*
+All URIs are relative to *https://api.inindca.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteGreetingId**](GreetingsApi.html#deletegreetingid) | **DELETE** /api/v2/greetings/{greetingId} | Deletes a Greeting with the given GreetingId |
+| [**DeleteGreeting**](GreetingsApi.html#deletegreeting) | **DELETE** /api/v2/greetings/{greetingId} | Deletes a Greeting with the given GreetingId |
 | [**GetDefaults**](GreetingsApi.html#getdefaults) | **GET** /api/v2/greetings/defaults | Get an Organization&#39;s DefaultGreetingList |
-| [**GetGreetingId**](GreetingsApi.html#getgreetingid) | **GET** /api/v2/greetings/{greetingId} | Get a Greeting with the given GreetingId |
-| [**GetGreetingIdMedia**](GreetingsApi.html#getgreetingidmedia) | **GET** /api/v2/greetings/{greetingId}/media | Get media playback URI for this greeting |
+| [**GetGreeting**](GreetingsApi.html#getgreeting) | **GET** /api/v2/greetings/{greetingId} | Get a Greeting with the given GreetingId |
+| [**GetGreetingMedia**](GreetingsApi.html#getgreetingmedia) | **GET** /api/v2/greetings/{greetingId}/media | Get media playback URI for this greeting |
 | [**GetGreetings**](GreetingsApi.html#getgreetings) | **GET** /api/v2/greetings | Gets an Organization&#39;s Greetings |
-| [**GetUserIdGreetings**](GreetingsApi.html#getuseridgreetings) | **GET** /api/v2/users/{userId}/greetings | Get a list of the User&#39;s Greetings |
-| [**GetUserIdGreetingsDefaults**](GreetingsApi.html#getuseridgreetingsdefaults) | **GET** /api/v2/users/{userId}/greetings/defaults | Grabs the list of Default Greetings given a User&#39;s ID |
+| [**GetUserGreetings**](GreetingsApi.html#getusergreetings) | **GET** /api/v2/users/{userId}/greetings | Get a list of the User&#39;s Greetings |
+| [**GetUserGreetingsDefaults**](GreetingsApi.html#getusergreetingsdefaults) | **GET** /api/v2/users/{userId}/greetings/defaults | Grabs the list of Default Greetings given a User&#39;s ID |
 | [**PostGreetings**](GreetingsApi.html#postgreetings) | **POST** /api/v2/greetings | Create a Greeting for an Organization |
-| [**PostUserIdGreetings**](GreetingsApi.html#postuseridgreetings) | **POST** /api/v2/users/{userId}/greetings | Creates a Greeting for a User |
+| [**PostUserGreetings**](GreetingsApi.html#postusergreetings) | **POST** /api/v2/users/{userId}/greetings | Creates a Greeting for a User |
 | [**PutDefaults**](GreetingsApi.html#putdefaults) | **PUT** /api/v2/greetings/defaults | Update an Organization&#39;s DefaultGreetingList |
-| [**PutGreetingId**](GreetingsApi.html#putgreetingid) | **PUT** /api/v2/greetings/{greetingId} | Updates the Greeting with the given GreetingId |
-| [**PutUserIdGreetingsDefaults**](GreetingsApi.html#putuseridgreetingsdefaults) | **PUT** /api/v2/users/{userId}/greetings/defaults | Updates the DefaultGreetingList of the specified User |
+| [**PutGreeting**](GreetingsApi.html#putgreeting) | **PUT** /api/v2/greetings/{greetingId} | Updates the Greeting with the given GreetingId |
+| [**PutUserGreetingsDefaults**](GreetingsApi.html#putusergreetingsdefaults) | **PUT** /api/v2/users/{userId}/greetings/defaults | Updates the DefaultGreetingList of the specified User |
 {: class="table table-striped"}
 
-<a name="deletegreetingid"></a>
+<a name="deletegreeting"></a>
 
-## [**Greeting**](Greeting.html) DeleteGreetingId (string greetingId)
+## [**Greeting**](Greeting.html) DeleteGreeting (string greetingId)
 
 Deletes a Greeting with the given GreetingId
 
@@ -39,7 +39,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteGreetingIdExample
+    public class DeleteGreetingExample
     {
         public void main()
         {
@@ -53,12 +53,12 @@ namespace Example
             try
             {
                 // Deletes a Greeting with the given GreetingId
-                Greeting result = apiInstance.DeleteGreetingId(greetingId);
+                Greeting result = apiInstance.DeleteGreeting(greetingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GreetingsApi.DeleteGreetingId: " + e.Message );
+                Debug.Print("Exception when calling GreetingsApi.DeleteGreeting: " + e.Message );
             }
         }
     }
@@ -128,9 +128,9 @@ This endpoint does require any parameters.
 
 [**DefaultGreetingList**](DefaultGreetingList.html)
 
-<a name="getgreetingid"></a>
+<a name="getgreeting"></a>
 
-## [**Greeting**](Greeting.html) GetGreetingId (string greetingId)
+## [**Greeting**](Greeting.html) GetGreeting (string greetingId)
 
 Get a Greeting with the given GreetingId
 
@@ -146,7 +146,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetGreetingIdExample
+    public class GetGreetingExample
     {
         public void main()
         {
@@ -160,12 +160,12 @@ namespace Example
             try
             {
                 // Get a Greeting with the given GreetingId
-                Greeting result = apiInstance.GetGreetingId(greetingId);
+                Greeting result = apiInstance.GetGreeting(greetingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GreetingsApi.GetGreetingId: " + e.Message );
+                Debug.Print("Exception when calling GreetingsApi.GetGreeting: " + e.Message );
             }
         }
     }
@@ -184,9 +184,9 @@ namespace Example
 
 [**Greeting**](Greeting.html)
 
-<a name="getgreetingidmedia"></a>
+<a name="getgreetingmedia"></a>
 
-## [**GreetingMediaInfo**](GreetingMediaInfo.html) GetGreetingIdMedia (string greetingId, string formatId = null)
+## [**GreetingMediaInfo**](GreetingMediaInfo.html) GetGreetingMedia (string greetingId, string formatId = null)
 
 Get media playback URI for this greeting
 
@@ -202,7 +202,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetGreetingIdMediaExample
+    public class GetGreetingMediaExample
     {
         public void main()
         {
@@ -217,12 +217,12 @@ namespace Example
             try
             {
                 // Get media playback URI for this greeting
-                GreetingMediaInfo result = apiInstance.GetGreetingIdMedia(greetingId, formatId);
+                GreetingMediaInfo result = apiInstance.GetGreetingMedia(greetingId, formatId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GreetingsApi.GetGreetingIdMedia: " + e.Message );
+                Debug.Print("Exception when calling GreetingsApi.GetGreetingMedia: " + e.Message );
             }
         }
     }
@@ -300,9 +300,9 @@ namespace Example
 
 [**DomainEntityListing**](DomainEntityListing.html)
 
-<a name="getuseridgreetings"></a>
+<a name="getusergreetings"></a>
 
-## [**DomainEntityListing**](DomainEntityListing.html) GetUserIdGreetings (string userId, int? pageSize = null, int? pageNumber = null)
+## [**DomainEntityListing**](DomainEntityListing.html) GetUserGreetings (string userId, int? pageSize = null, int? pageNumber = null)
 
 Get a list of the User's Greetings
 
@@ -318,7 +318,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserIdGreetingsExample
+    public class GetUserGreetingsExample
     {
         public void main()
         {
@@ -334,12 +334,12 @@ namespace Example
             try
             {
                 // Get a list of the User's Greetings
-                DomainEntityListing result = apiInstance.GetUserIdGreetings(userId, pageSize, pageNumber);
+                DomainEntityListing result = apiInstance.GetUserGreetings(userId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GreetingsApi.GetUserIdGreetings: " + e.Message );
+                Debug.Print("Exception when calling GreetingsApi.GetUserGreetings: " + e.Message );
             }
         }
     }
@@ -360,9 +360,9 @@ namespace Example
 
 [**DomainEntityListing**](DomainEntityListing.html)
 
-<a name="getuseridgreetingsdefaults"></a>
+<a name="getusergreetingsdefaults"></a>
 
-## [**DefaultGreetingList**](DefaultGreetingList.html) GetUserIdGreetingsDefaults (string userId)
+## [**DefaultGreetingList**](DefaultGreetingList.html) GetUserGreetingsDefaults (string userId)
 
 Grabs the list of Default Greetings given a User's ID
 
@@ -378,7 +378,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetUserIdGreetingsDefaultsExample
+    public class GetUserGreetingsDefaultsExample
     {
         public void main()
         {
@@ -392,12 +392,12 @@ namespace Example
             try
             {
                 // Grabs the list of Default Greetings given a User's ID
-                DefaultGreetingList result = apiInstance.GetUserIdGreetingsDefaults(userId);
+                DefaultGreetingList result = apiInstance.GetUserGreetingsDefaults(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GreetingsApi.GetUserIdGreetingsDefaults: " + e.Message );
+                Debug.Print("Exception when calling GreetingsApi.GetUserGreetingsDefaults: " + e.Message );
             }
         }
     }
@@ -472,9 +472,9 @@ namespace Example
 
 [**DefaultGreetingList**](DefaultGreetingList.html)
 
-<a name="postuseridgreetings"></a>
+<a name="postusergreetings"></a>
 
-## [**Greeting**](Greeting.html) PostUserIdGreetings (string userId, Greeting body)
+## [**Greeting**](Greeting.html) PostUserGreetings (string userId, Greeting body)
 
 Creates a Greeting for a User
 
@@ -490,7 +490,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostUserIdGreetingsExample
+    public class PostUserGreetingsExample
     {
         public void main()
         {
@@ -505,12 +505,12 @@ namespace Example
             try
             {
                 // Creates a Greeting for a User
-                Greeting result = apiInstance.PostUserIdGreetings(userId, body);
+                Greeting result = apiInstance.PostUserGreetings(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GreetingsApi.PostUserIdGreetings: " + e.Message );
+                Debug.Print("Exception when calling GreetingsApi.PostUserGreetings: " + e.Message );
             }
         }
     }
@@ -586,9 +586,9 @@ namespace Example
 
 [**DefaultGreetingList**](DefaultGreetingList.html)
 
-<a name="putgreetingid"></a>
+<a name="putgreeting"></a>
 
-## [**Greeting**](Greeting.html) PutGreetingId (string greetingId, Greeting body)
+## [**Greeting**](Greeting.html) PutGreeting (string greetingId, Greeting body)
 
 Updates the Greeting with the given GreetingId
 
@@ -604,7 +604,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutGreetingIdExample
+    public class PutGreetingExample
     {
         public void main()
         {
@@ -619,12 +619,12 @@ namespace Example
             try
             {
                 // Updates the Greeting with the given GreetingId
-                Greeting result = apiInstance.PutGreetingId(greetingId, body);
+                Greeting result = apiInstance.PutGreeting(greetingId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GreetingsApi.PutGreetingId: " + e.Message );
+                Debug.Print("Exception when calling GreetingsApi.PutGreeting: " + e.Message );
             }
         }
     }
@@ -644,9 +644,9 @@ namespace Example
 
 [**Greeting**](Greeting.html)
 
-<a name="putuseridgreetingsdefaults"></a>
+<a name="putusergreetingsdefaults"></a>
 
-## [**DefaultGreetingList**](DefaultGreetingList.html) PutUserIdGreetingsDefaults (string userId, DefaultGreetingList body)
+## [**DefaultGreetingList**](DefaultGreetingList.html) PutUserGreetingsDefaults (string userId, DefaultGreetingList body)
 
 Updates the DefaultGreetingList of the specified User
 
@@ -662,7 +662,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutUserIdGreetingsDefaultsExample
+    public class PutUserGreetingsDefaultsExample
     {
         public void main()
         {
@@ -677,12 +677,12 @@ namespace Example
             try
             {
                 // Updates the DefaultGreetingList of the specified User
-                DefaultGreetingList result = apiInstance.PutUserIdGreetingsDefaults(userId, body);
+                DefaultGreetingList result = apiInstance.PutUserGreetingsDefaults(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GreetingsApi.PutUserIdGreetingsDefaults: " + e.Message );
+                Debug.Print("Exception when calling GreetingsApi.PutUserGreetingsDefaults: " + e.Message );
             }
         }
     }

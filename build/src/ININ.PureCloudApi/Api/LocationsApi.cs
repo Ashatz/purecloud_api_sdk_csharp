@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Location</returns>
-        Location GetLocationId (string locationId);
+        Location GetLocation (string locationId);
 
         /// <summary>
         /// Get Location by ID.
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>ApiResponse of Location</returns>
-        ApiResponse<Location> GetLocationIdWithHttpInfo (string locationId);
+        ApiResponse<Location> GetLocationWithHttpInfo (string locationId);
         /// <summary>
         /// Get a list of all locations.
         /// </summary>
@@ -115,7 +115,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of Location</returns>
-        System.Threading.Tasks.Task<Location> GetLocationIdAsync (string locationId);
+        System.Threading.Tasks.Task<Location> GetLocationAsync (string locationId);
 
         /// <summary>
         /// Get Location by ID.
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationIdAsyncWithHttpInfo (string locationId);
+        System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationAsyncWithHttpInfo (string locationId);
         /// <summary>
         /// Get a list of all locations.
         /// </summary>
@@ -292,9 +292,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Location</returns>
-        public Location GetLocationId (string locationId)
+        public Location GetLocation (string locationId)
         {
-             ApiResponse<Location> localVarResponse = GetLocationIdWithHttpInfo(locationId);
+             ApiResponse<Location> localVarResponse = GetLocationWithHttpInfo(locationId);
              return localVarResponse.Data;
         }
 
@@ -304,11 +304,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>ApiResponse of Location</returns>
-        public ApiResponse< Location > GetLocationIdWithHttpInfo (string locationId)
+        public ApiResponse< Location > GetLocationWithHttpInfo (string locationId)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
-                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocationId");
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocation");
 
             var localVarPath = "/api/v2/locations/{locationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -352,9 +352,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLocationId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetLocation: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetLocationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetLocation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Location>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -368,9 +368,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of Location</returns>
-        public async System.Threading.Tasks.Task<Location> GetLocationIdAsync (string locationId)
+        public async System.Threading.Tasks.Task<Location> GetLocationAsync (string locationId)
         {
-             ApiResponse<Location> localVarResponse = await GetLocationIdAsyncWithHttpInfo(locationId);
+             ApiResponse<Location> localVarResponse = await GetLocationAsyncWithHttpInfo(locationId);
              return localVarResponse.Data;
 
         }
@@ -381,11 +381,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationIdAsyncWithHttpInfo (string locationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationAsyncWithHttpInfo (string locationId)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
-                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocationId");
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocation");
 
             var localVarPath = "/api/v2/locations/{locationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -429,9 +429,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLocationId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetLocation: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetLocationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetLocation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Location>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
