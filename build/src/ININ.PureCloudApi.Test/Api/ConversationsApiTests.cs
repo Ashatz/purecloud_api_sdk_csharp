@@ -54,43 +54,121 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteCallsCallIdParticipantsParticipantIdConsult
+        /// Test DeleteCallParticipantConsult
         /// </summary>
         [Test]
-        public void DeleteCallsCallIdParticipantsParticipantIdConsultTest()
+        public void DeleteCallParticipantConsultTest()
         {
-            // TODO: add unit test for the method 'DeleteCallsCallIdParticipantsParticipantIdConsult'
+            // TODO: add unit test for the method 'DeleteCallParticipantConsult'
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
-            var response = instance.DeleteCallsCallIdParticipantsParticipantIdConsult(callId, participantId);
+            var response = instance.DeleteCallParticipantConsult(callId, participantId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode
+        /// Test DeleteConversationParticipantCodesAddCommunicationCode
         /// </summary>
         [Test]
-        public void DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcodeTest()
+        public void DeleteConversationParticipantCodesAddCommunicationCodeTest()
         {
-            // TODO: add unit test for the method 'DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode'
+            // TODO: add unit test for the method 'DeleteConversationParticipantCodesAddCommunicationCode'
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             string addCommunicationCode = null; // TODO: replace null with proper value
-            instance.DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode(conversationId, participantId, addCommunicationCode);
+            instance.DeleteConversationParticipantCodesAddCommunicationCode(conversationId, participantId, addCommunicationCode);
             
         }
         
         /// <summary>
-        /// Test DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId
+        /// Test DeleteEmailMessagesDraftAttachment
         /// </summary>
         [Test]
-        public void DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdTest()
+        public void DeleteEmailMessagesDraftAttachmentTest()
         {
-            // TODO: add unit test for the method 'DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId'
+            // TODO: add unit test for the method 'DeleteEmailMessagesDraftAttachment'
             string emailId = null; // TODO: replace null with proper value
             string attachmentId = null; // TODO: replace null with proper value
-            var response = instance.DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId(emailId, attachmentId);
+            var response = instance.DeleteEmailMessagesDraftAttachment(emailId, attachmentId);
             Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test GetCall
+        /// </summary>
+        [Test]
+        public void GetCallTest()
+        {
+            // TODO: add unit test for the method 'GetCall'
+            string callId = null; // TODO: replace null with proper value
+            var response = instance.GetCall(callId);
+            Assert.IsInstanceOf<CallConversation> (response, "response is CallConversation");
+        }
+        
+        /// <summary>
+        /// Test GetCallParticipantWrapup
+        /// </summary>
+        [Test]
+        public void GetCallParticipantWrapupTest()
+        {
+            // TODO: add unit test for the method 'GetCallParticipantWrapup'
+            string callId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            bool? provisional = null; // TODO: replace null with proper value
+            var response = instance.GetCallParticipantWrapup(callId, participantId, provisional);
+            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
+        }
+        
+        /// <summary>
+        /// Test GetCallParticipantWrapupcodes
+        /// </summary>
+        [Test]
+        public void GetCallParticipantWrapupcodesTest()
+        {
+            // TODO: add unit test for the method 'GetCallParticipantWrapupcodes'
+            string callId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            var response = instance.GetCallParticipantWrapupcodes(callId, participantId);
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
+        }
+        
+        /// <summary>
+        /// Test GetCallback
+        /// </summary>
+        [Test]
+        public void GetCallbackTest()
+        {
+            // TODO: add unit test for the method 'GetCallback'
+            string callbackId = null; // TODO: replace null with proper value
+            var response = instance.GetCallback(callbackId);
+            Assert.IsInstanceOf<CallbackConversation> (response, "response is CallbackConversation");
+        }
+        
+        /// <summary>
+        /// Test GetCallbackParticipantWrapup
+        /// </summary>
+        [Test]
+        public void GetCallbackParticipantWrapupTest()
+        {
+            // TODO: add unit test for the method 'GetCallbackParticipantWrapup'
+            string callbackId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            bool? provisional = null; // TODO: replace null with proper value
+            var response = instance.GetCallbackParticipantWrapup(callbackId, participantId, provisional);
+            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
+        }
+        
+        /// <summary>
+        /// Test GetCallbackParticipantWrapupcodes
+        /// </summary>
+        [Test]
+        public void GetCallbackParticipantWrapupcodesTest()
+        {
+            // TODO: add unit test for the method 'GetCallbackParticipantWrapupcodes'
+            string callbackId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            var response = instance.GetCallbackParticipantWrapupcodes(callbackId, participantId);
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
         /// <summary>
@@ -105,45 +183,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetCallbacksCallbackId
-        /// </summary>
-        [Test]
-        public void GetCallbacksCallbackIdTest()
-        {
-            // TODO: add unit test for the method 'GetCallbacksCallbackId'
-            string callbackId = null; // TODO: replace null with proper value
-            var response = instance.GetCallbacksCallbackId(callbackId);
-            Assert.IsInstanceOf<CallbackConversation> (response, "response is CallbackConversation");
-        }
-        
-        /// <summary>
-        /// Test GetCallbacksCallbackIdParticipantsParticipantIdWrapup
-        /// </summary>
-        [Test]
-        public void GetCallbacksCallbackIdParticipantsParticipantIdWrapupTest()
-        {
-            // TODO: add unit test for the method 'GetCallbacksCallbackIdParticipantsParticipantIdWrapup'
-            string callbackId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            bool? provisional = null; // TODO: replace null with proper value
-            var response = instance.GetCallbacksCallbackIdParticipantsParticipantIdWrapup(callbackId, participantId, provisional);
-            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
-        }
-        
-        /// <summary>
-        /// Test GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes
-        /// </summary>
-        [Test]
-        public void GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesTest()
-        {
-            // TODO: add unit test for the method 'GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes'
-            string callbackId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            var response = instance.GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes(callbackId, participantId);
-            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
-        }
-        
-        /// <summary>
         /// Test GetCalls
         /// </summary>
         [Test]
@@ -152,45 +191,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetCalls'
             var response = instance.GetCalls();
             Assert.IsInstanceOf<CallConversationEntityListing> (response, "response is CallConversationEntityListing");
-        }
-        
-        /// <summary>
-        /// Test GetCallsCallId
-        /// </summary>
-        [Test]
-        public void GetCallsCallIdTest()
-        {
-            // TODO: add unit test for the method 'GetCallsCallId'
-            string callId = null; // TODO: replace null with proper value
-            var response = instance.GetCallsCallId(callId);
-            Assert.IsInstanceOf<CallConversation> (response, "response is CallConversation");
-        }
-        
-        /// <summary>
-        /// Test GetCallsCallIdParticipantsParticipantIdWrapup
-        /// </summary>
-        [Test]
-        public void GetCallsCallIdParticipantsParticipantIdWrapupTest()
-        {
-            // TODO: add unit test for the method 'GetCallsCallIdParticipantsParticipantIdWrapup'
-            string callId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            bool? provisional = null; // TODO: replace null with proper value
-            var response = instance.GetCallsCallIdParticipantsParticipantIdWrapup(callId, participantId, provisional);
-            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
-        }
-        
-        /// <summary>
-        /// Test GetCallsCallIdParticipantsParticipantIdWrapupcodes
-        /// </summary>
-        [Test]
-        public void GetCallsCallIdParticipantsParticipantIdWrapupcodesTest()
-        {
-            // TODO: add unit test for the method 'GetCallsCallIdParticipantsParticipantIdWrapupcodes'
-            string callId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            var response = instance.GetCallsCallIdParticipantsParticipantIdWrapupcodes(callId, participantId);
-            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
         /// <summary>
@@ -219,6 +219,45 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetChat
+        /// </summary>
+        [Test]
+        public void GetChatTest()
+        {
+            // TODO: add unit test for the method 'GetChat'
+            string chatId = null; // TODO: replace null with proper value
+            var response = instance.GetChat(chatId);
+            Assert.IsInstanceOf<ChatConversation> (response, "response is ChatConversation");
+        }
+        
+        /// <summary>
+        /// Test GetChatParticipantWrapup
+        /// </summary>
+        [Test]
+        public void GetChatParticipantWrapupTest()
+        {
+            // TODO: add unit test for the method 'GetChatParticipantWrapup'
+            string chatId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            bool? provisional = null; // TODO: replace null with proper value
+            var response = instance.GetChatParticipantWrapup(chatId, participantId, provisional);
+            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
+        }
+        
+        /// <summary>
+        /// Test GetChatParticipantWrapupcodes
+        /// </summary>
+        [Test]
+        public void GetChatParticipantWrapupcodesTest()
+        {
+            // TODO: add unit test for the method 'GetChatParticipantWrapupcodes'
+            string chatId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            var response = instance.GetChatParticipantWrapupcodes(chatId, participantId);
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
+        }
+        
+        /// <summary>
         /// Test GetChats
         /// </summary>
         [Test]
@@ -230,80 +269,53 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetChatsChatId
+        /// Test GetConversation
         /// </summary>
         [Test]
-        public void GetChatsChatIdTest()
+        public void GetConversationTest()
         {
-            // TODO: add unit test for the method 'GetChatsChatId'
-            string chatId = null; // TODO: replace null with proper value
-            var response = instance.GetChatsChatId(chatId);
-            Assert.IsInstanceOf<ChatConversation> (response, "response is ChatConversation");
-        }
-        
-        /// <summary>
-        /// Test GetChatsChatIdParticipantsParticipantIdWrapup
-        /// </summary>
-        [Test]
-        public void GetChatsChatIdParticipantsParticipantIdWrapupTest()
-        {
-            // TODO: add unit test for the method 'GetChatsChatIdParticipantsParticipantIdWrapup'
-            string chatId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            bool? provisional = null; // TODO: replace null with proper value
-            var response = instance.GetChatsChatIdParticipantsParticipantIdWrapup(chatId, participantId, provisional);
-            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
-        }
-        
-        /// <summary>
-        /// Test GetChatsChatIdParticipantsParticipantIdWrapupcodes
-        /// </summary>
-        [Test]
-        public void GetChatsChatIdParticipantsParticipantIdWrapupcodesTest()
-        {
-            // TODO: add unit test for the method 'GetChatsChatIdParticipantsParticipantIdWrapupcodes'
-            string chatId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            var response = instance.GetChatsChatIdParticipantsParticipantIdWrapupcodes(chatId, participantId);
-            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
-        }
-        
-        /// <summary>
-        /// Test GetConversationId
-        /// </summary>
-        [Test]
-        public void GetConversationIdTest()
-        {
-            // TODO: add unit test for the method 'GetConversationId'
+            // TODO: add unit test for the method 'GetConversation'
             string conversationId = null; // TODO: replace null with proper value
-            var response = instance.GetConversationId(conversationId);
+            var response = instance.GetConversation(conversationId);
             Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
         }
         
         /// <summary>
-        /// Test GetConversationIdParticipantsParticipantIdWrapup
+        /// Test GetConversationDetails
         /// </summary>
         [Test]
-        public void GetConversationIdParticipantsParticipantIdWrapupTest()
+        public void GetConversationDetailsTest()
         {
-            // TODO: add unit test for the method 'GetConversationIdParticipantsParticipantIdWrapup'
+            // TODO: add unit test for the method 'GetConversationDetails'
+            string conversationId = null; // TODO: replace null with proper value
+            var response = instance.GetConversationDetails(conversationId);
+            Assert.IsInstanceOf<AnalyticsConversation> (response, "response is AnalyticsConversation");
+        }
+        
+        /// <summary>
+        /// Test GetConversationParticipantWrapup
+        /// </summary>
+        [Test]
+        public void GetConversationParticipantWrapupTest()
+        {
+            // TODO: add unit test for the method 'GetConversationParticipantWrapup'
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             bool? provisional = null; // TODO: replace null with proper value
-            var response = instance.GetConversationIdParticipantsParticipantIdWrapup(conversationId, participantId, provisional);
+            var response = instance.GetConversationParticipantWrapup(conversationId, participantId, provisional);
             Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode");
         }
         
         /// <summary>
-        /// Test GetConversationIdParticipantsParticipantIdWrapupcodes
+        /// Test GetConversationParticipantWrapupcodes
         /// </summary>
         [Test]
-        public void GetConversationIdParticipantsParticipantIdWrapupcodesTest()
+        public void GetConversationParticipantWrapupcodesTest()
         {
-            // TODO: add unit test for the method 'GetConversationIdParticipantsParticipantIdWrapupcodes'
+            // TODO: add unit test for the method 'GetConversationParticipantWrapupcodes'
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
-            var response = instance.GetConversationIdParticipantsParticipantIdWrapupcodes(conversationId, participantId);
+            var response = instance.GetConversationParticipantWrapupcodes(conversationId, participantId);
             Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
@@ -320,15 +332,79 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetConversationsConversationIdDetails
+        /// Test GetEmail
         /// </summary>
         [Test]
-        public void GetConversationsConversationIdDetailsTest()
+        public void GetEmailTest()
         {
-            // TODO: add unit test for the method 'GetConversationsConversationIdDetails'
-            string conversationId = null; // TODO: replace null with proper value
-            var response = instance.GetConversationsConversationIdDetails(conversationId);
-            Assert.IsInstanceOf<AnalyticsConversation> (response, "response is AnalyticsConversation");
+            // TODO: add unit test for the method 'GetEmail'
+            string emailId = null; // TODO: replace null with proper value
+            var response = instance.GetEmail(emailId);
+            Assert.IsInstanceOf<EmailConversation> (response, "response is EmailConversation");
+        }
+        
+        /// <summary>
+        /// Test GetEmailMessage
+        /// </summary>
+        [Test]
+        public void GetEmailMessageTest()
+        {
+            // TODO: add unit test for the method 'GetEmailMessage'
+            string emailId = null; // TODO: replace null with proper value
+            string messageId = null; // TODO: replace null with proper value
+            var response = instance.GetEmailMessage(emailId, messageId);
+            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage");
+        }
+        
+        /// <summary>
+        /// Test GetEmailMessages
+        /// </summary>
+        [Test]
+        public void GetEmailMessagesTest()
+        {
+            // TODO: add unit test for the method 'GetEmailMessages'
+            string emailId = null; // TODO: replace null with proper value
+            var response = instance.GetEmailMessages(emailId);
+            Assert.IsInstanceOf<EmailMessageListing> (response, "response is EmailMessageListing");
+        }
+        
+        /// <summary>
+        /// Test GetEmailMessagesDraft
+        /// </summary>
+        [Test]
+        public void GetEmailMessagesDraftTest()
+        {
+            // TODO: add unit test for the method 'GetEmailMessagesDraft'
+            string emailId = null; // TODO: replace null with proper value
+            var response = instance.GetEmailMessagesDraft(emailId);
+            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage");
+        }
+        
+        /// <summary>
+        /// Test GetEmailParticipantWrapup
+        /// </summary>
+        [Test]
+        public void GetEmailParticipantWrapupTest()
+        {
+            // TODO: add unit test for the method 'GetEmailParticipantWrapup'
+            string emailId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            bool? provisional = null; // TODO: replace null with proper value
+            var response = instance.GetEmailParticipantWrapup(emailId, participantId, provisional);
+            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
+        }
+        
+        /// <summary>
+        /// Test GetEmailParticipantWrapupcodes
+        /// </summary>
+        [Test]
+        public void GetEmailParticipantWrapupcodesTest()
+        {
+            // TODO: add unit test for the method 'GetEmailParticipantWrapupcodes'
+            string emailId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            var response = instance.GetEmailParticipantWrapupcodes(emailId, participantId);
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
         /// <summary>
@@ -343,329 +419,334 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetEmailsEmailId
+        /// Test PatchCall
         /// </summary>
         [Test]
-        public void GetEmailsEmailIdTest()
+        public void PatchCallTest()
         {
-            // TODO: add unit test for the method 'GetEmailsEmailId'
-            string emailId = null; // TODO: replace null with proper value
-            var response = instance.GetEmailsEmailId(emailId);
-            Assert.IsInstanceOf<EmailConversation> (response, "response is EmailConversation");
-        }
-        
-        /// <summary>
-        /// Test GetEmailsEmailIdMessages
-        /// </summary>
-        [Test]
-        public void GetEmailsEmailIdMessagesTest()
-        {
-            // TODO: add unit test for the method 'GetEmailsEmailIdMessages'
-            string emailId = null; // TODO: replace null with proper value
-            var response = instance.GetEmailsEmailIdMessages(emailId);
-            Assert.IsInstanceOf<EmailMessageListing> (response, "response is EmailMessageListing");
-        }
-        
-        /// <summary>
-        /// Test GetEmailsEmailIdMessagesDraft
-        /// </summary>
-        [Test]
-        public void GetEmailsEmailIdMessagesDraftTest()
-        {
-            // TODO: add unit test for the method 'GetEmailsEmailIdMessagesDraft'
-            string emailId = null; // TODO: replace null with proper value
-            var response = instance.GetEmailsEmailIdMessagesDraft(emailId);
-            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage");
-        }
-        
-        /// <summary>
-        /// Test GetEmailsEmailIdMessagesMessageId
-        /// </summary>
-        [Test]
-        public void GetEmailsEmailIdMessagesMessageIdTest()
-        {
-            // TODO: add unit test for the method 'GetEmailsEmailIdMessagesMessageId'
-            string emailId = null; // TODO: replace null with proper value
-            string messageId = null; // TODO: replace null with proper value
-            var response = instance.GetEmailsEmailIdMessagesMessageId(emailId, messageId);
-            Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage");
-        }
-        
-        /// <summary>
-        /// Test GetEmailsEmailIdParticipantsParticipantIdWrapup
-        /// </summary>
-        [Test]
-        public void GetEmailsEmailIdParticipantsParticipantIdWrapupTest()
-        {
-            // TODO: add unit test for the method 'GetEmailsEmailIdParticipantsParticipantIdWrapup'
-            string emailId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            bool? provisional = null; // TODO: replace null with proper value
-            var response = instance.GetEmailsEmailIdParticipantsParticipantIdWrapup(emailId, participantId, provisional);
-            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
-        }
-        
-        /// <summary>
-        /// Test GetEmailsEmailIdParticipantsParticipantIdWrapupcodes
-        /// </summary>
-        [Test]
-        public void GetEmailsEmailIdParticipantsParticipantIdWrapupcodesTest()
-        {
-            // TODO: add unit test for the method 'GetEmailsEmailIdParticipantsParticipantIdWrapupcodes'
-            string emailId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            var response = instance.GetEmailsEmailIdParticipantsParticipantIdWrapupcodes(emailId, participantId);
-            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
-        }
-        
-        /// <summary>
-        /// Test PatchCallbacksCallbackId
-        /// </summary>
-        [Test]
-        public void PatchCallbacksCallbackIdTest()
-        {
-            // TODO: add unit test for the method 'PatchCallbacksCallbackId'
-            string callbackId = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PatchCall'
+            string callId = null; // TODO: replace null with proper value
             Conversation body = null; // TODO: replace null with proper value
-            var response = instance.PatchCallbacksCallbackId(callbackId, body);
+            var response = instance.PatchCall(callId, body);
             Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
         }
         
         /// <summary>
-        /// Test PatchCallbacksCallbackIdParticipantsParticipantId
+        /// Test PatchCallParticipant
         /// </summary>
         [Test]
-        public void PatchCallbacksCallbackIdParticipantsParticipantIdTest()
+        public void PatchCallParticipantTest()
         {
-            // TODO: add unit test for the method 'PatchCallbacksCallbackIdParticipantsParticipantId'
-            string callbackId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchCallbacksCallbackIdParticipantsParticipantId(callbackId, participantId, body);
-            
-        }
-        
-        /// <summary>
-        /// Test PatchCallbacksCallbackIdParticipantsParticipantIdAttributes
-        /// </summary>
-        [Test]
-        public void PatchCallbacksCallbackIdParticipantsParticipantIdAttributesTest()
-        {
-            // TODO: add unit test for the method 'PatchCallbacksCallbackIdParticipantsParticipantIdAttributes'
-            string callbackId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            ParticipantAttributes body = null; // TODO: replace null with proper value
-            instance.PatchCallbacksCallbackIdParticipantsParticipantIdAttributes(callbackId, participantId, body);
-            
-        }
-        
-        /// <summary>
-        /// Test PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId
-        /// </summary>
-        [Test]
-        public void PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdTest()
-        {
-            // TODO: add unit test for the method 'PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId'
-            string callbackId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            string communicationId = null; // TODO: replace null with proper value
-            MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId(callbackId, participantId, communicationId, body);
-            
-        }
-        
-        /// <summary>
-        /// Test PatchCallsCallId
-        /// </summary>
-        [Test]
-        public void PatchCallsCallIdTest()
-        {
-            // TODO: add unit test for the method 'PatchCallsCallId'
-            string callId = null; // TODO: replace null with proper value
-            Conversation body = null; // TODO: replace null with proper value
-            var response = instance.PatchCallsCallId(callId, body);
-            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
-        }
-        
-        /// <summary>
-        /// Test PatchCallsCallIdParticipantsParticipantId
-        /// </summary>
-        [Test]
-        public void PatchCallsCallIdParticipantsParticipantIdTest()
-        {
-            // TODO: add unit test for the method 'PatchCallsCallIdParticipantsParticipantId'
+            // TODO: add unit test for the method 'PatchCallParticipant'
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchCallsCallIdParticipantsParticipantId(callId, participantId, body);
+            instance.PatchCallParticipant(callId, participantId, body);
             
         }
         
         /// <summary>
-        /// Test PatchCallsCallIdParticipantsParticipantIdAttributes
+        /// Test PatchCallParticipantAttributes
         /// </summary>
         [Test]
-        public void PatchCallsCallIdParticipantsParticipantIdAttributesTest()
+        public void PatchCallParticipantAttributesTest()
         {
-            // TODO: add unit test for the method 'PatchCallsCallIdParticipantsParticipantIdAttributes'
+            // TODO: add unit test for the method 'PatchCallParticipantAttributes'
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ParticipantAttributes body = null; // TODO: replace null with proper value
-            instance.PatchCallsCallIdParticipantsParticipantIdAttributes(callId, participantId, body);
+            instance.PatchCallParticipantAttributes(callId, participantId, body);
             
         }
         
         /// <summary>
-        /// Test PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId
+        /// Test PatchCallParticipantCommunication
         /// </summary>
         [Test]
-        public void PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdTest()
+        public void PatchCallParticipantCommunicationTest()
         {
-            // TODO: add unit test for the method 'PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId'
+            // TODO: add unit test for the method 'PatchCallParticipantCommunication'
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             string communicationId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId(callId, participantId, communicationId, body);
+            instance.PatchCallParticipantCommunication(callId, participantId, communicationId, body);
             
         }
         
         /// <summary>
-        /// Test PatchCallsCallIdParticipantsParticipantIdConsult
+        /// Test PatchCallParticipantConsult
         /// </summary>
         [Test]
-        public void PatchCallsCallIdParticipantsParticipantIdConsultTest()
+        public void PatchCallParticipantConsultTest()
         {
-            // TODO: add unit test for the method 'PatchCallsCallIdParticipantsParticipantIdConsult'
+            // TODO: add unit test for the method 'PatchCallParticipantConsult'
             string callId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ConsultTransferUpdate body = null; // TODO: replace null with proper value
-            var response = instance.PatchCallsCallIdParticipantsParticipantIdConsult(callId, participantId, body);
+            var response = instance.PatchCallParticipantConsult(callId, participantId, body);
             Assert.IsInstanceOf<ConsultTransferResponse> (response, "response is ConsultTransferResponse");
         }
         
         /// <summary>
-        /// Test PatchChatsChatId
+        /// Test PatchCallback
         /// </summary>
         [Test]
-        public void PatchChatsChatIdTest()
+        public void PatchCallbackTest()
         {
-            // TODO: add unit test for the method 'PatchChatsChatId'
-            string chatId = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PatchCallback'
+            string callbackId = null; // TODO: replace null with proper value
             Conversation body = null; // TODO: replace null with proper value
-            var response = instance.PatchChatsChatId(chatId, body);
+            var response = instance.PatchCallback(callbackId, body);
             Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
         }
         
         /// <summary>
-        /// Test PatchChatsChatIdParticipantsParticipantId
+        /// Test PatchCallbackParticipant
         /// </summary>
         [Test]
-        public void PatchChatsChatIdParticipantsParticipantIdTest()
+        public void PatchCallbackParticipantTest()
         {
-            // TODO: add unit test for the method 'PatchChatsChatIdParticipantsParticipantId'
+            // TODO: add unit test for the method 'PatchCallbackParticipant'
+            string callbackId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            MediaParticipantRequest body = null; // TODO: replace null with proper value
+            instance.PatchCallbackParticipant(callbackId, participantId, body);
+            
+        }
+        
+        /// <summary>
+        /// Test PatchCallbackParticipantAttributes
+        /// </summary>
+        [Test]
+        public void PatchCallbackParticipantAttributesTest()
+        {
+            // TODO: add unit test for the method 'PatchCallbackParticipantAttributes'
+            string callbackId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            ParticipantAttributes body = null; // TODO: replace null with proper value
+            instance.PatchCallbackParticipantAttributes(callbackId, participantId, body);
+            
+        }
+        
+        /// <summary>
+        /// Test PatchCallbackParticipantCommunication
+        /// </summary>
+        [Test]
+        public void PatchCallbackParticipantCommunicationTest()
+        {
+            // TODO: add unit test for the method 'PatchCallbackParticipantCommunication'
+            string callbackId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            string communicationId = null; // TODO: replace null with proper value
+            MediaParticipantRequest body = null; // TODO: replace null with proper value
+            instance.PatchCallbackParticipantCommunication(callbackId, participantId, communicationId, body);
+            
+        }
+        
+        /// <summary>
+        /// Test PatchChat
+        /// </summary>
+        [Test]
+        public void PatchChatTest()
+        {
+            // TODO: add unit test for the method 'PatchChat'
+            string chatId = null; // TODO: replace null with proper value
+            Conversation body = null; // TODO: replace null with proper value
+            var response = instance.PatchChat(chatId, body);
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
+        }
+        
+        /// <summary>
+        /// Test PatchChatParticipant
+        /// </summary>
+        [Test]
+        public void PatchChatParticipantTest()
+        {
+            // TODO: add unit test for the method 'PatchChatParticipant'
             string chatId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchChatsChatIdParticipantsParticipantId(chatId, participantId, body);
+            instance.PatchChatParticipant(chatId, participantId, body);
             
         }
         
         /// <summary>
-        /// Test PatchChatsChatIdParticipantsParticipantIdAttributes
+        /// Test PatchChatParticipantAttributes
         /// </summary>
         [Test]
-        public void PatchChatsChatIdParticipantsParticipantIdAttributesTest()
+        public void PatchChatParticipantAttributesTest()
         {
-            // TODO: add unit test for the method 'PatchChatsChatIdParticipantsParticipantIdAttributes'
+            // TODO: add unit test for the method 'PatchChatParticipantAttributes'
             string chatId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ParticipantAttributes body = null; // TODO: replace null with proper value
-            instance.PatchChatsChatIdParticipantsParticipantIdAttributes(chatId, participantId, body);
+            instance.PatchChatParticipantAttributes(chatId, participantId, body);
             
         }
         
         /// <summary>
-        /// Test PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId
+        /// Test PatchChatParticipantCommunication
         /// </summary>
         [Test]
-        public void PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdTest()
+        public void PatchChatParticipantCommunicationTest()
         {
-            // TODO: add unit test for the method 'PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId'
+            // TODO: add unit test for the method 'PatchChatParticipantCommunication'
             string chatId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             string communicationId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId(chatId, participantId, communicationId, body);
+            instance.PatchChatParticipantCommunication(chatId, participantId, communicationId, body);
             
         }
         
         /// <summary>
-        /// Test PatchConversationIdParticipantsParticipantId
+        /// Test PatchConversationParticipant
         /// </summary>
         [Test]
-        public void PatchConversationIdParticipantsParticipantIdTest()
+        public void PatchConversationParticipantTest()
         {
-            // TODO: add unit test for the method 'PatchConversationIdParticipantsParticipantId'
+            // TODO: add unit test for the method 'PatchConversationParticipant'
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchConversationIdParticipantsParticipantId(conversationId, participantId, body);
+            instance.PatchConversationParticipant(conversationId, participantId, body);
             
         }
         
         /// <summary>
-        /// Test PatchConversationIdParticipantsParticipantIdAttributes
+        /// Test PatchConversationParticipantAttributes
         /// </summary>
         [Test]
-        public void PatchConversationIdParticipantsParticipantIdAttributesTest()
+        public void PatchConversationParticipantAttributesTest()
         {
-            // TODO: add unit test for the method 'PatchConversationIdParticipantsParticipantIdAttributes'
+            // TODO: add unit test for the method 'PatchConversationParticipantAttributes'
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ParticipantAttributes body = null; // TODO: replace null with proper value
-            instance.PatchConversationIdParticipantsParticipantIdAttributes(conversationId, participantId, body);
+            instance.PatchConversationParticipantAttributes(conversationId, participantId, body);
             
         }
         
         /// <summary>
-        /// Test PatchEmailsEmailId
+        /// Test PatchEmail
         /// </summary>
         [Test]
-        public void PatchEmailsEmailIdTest()
+        public void PatchEmailTest()
         {
-            // TODO: add unit test for the method 'PatchEmailsEmailId'
+            // TODO: add unit test for the method 'PatchEmail'
             string emailId = null; // TODO: replace null with proper value
             Conversation body = null; // TODO: replace null with proper value
-            var response = instance.PatchEmailsEmailId(emailId, body);
+            var response = instance.PatchEmail(emailId, body);
             Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
         }
         
         /// <summary>
-        /// Test PatchEmailsEmailIdParticipantsParticipantId
+        /// Test PatchEmailParticipant
         /// </summary>
         [Test]
-        public void PatchEmailsEmailIdParticipantsParticipantIdTest()
+        public void PatchEmailParticipantTest()
         {
-            // TODO: add unit test for the method 'PatchEmailsEmailIdParticipantsParticipantId'
+            // TODO: add unit test for the method 'PatchEmailParticipant'
             string emailId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchEmailsEmailIdParticipantsParticipantId(emailId, participantId, body);
+            instance.PatchEmailParticipant(emailId, participantId, body);
             
         }
         
         /// <summary>
-        /// Test PatchEmailsEmailIdParticipantsParticipantIdAttributes
+        /// Test PatchEmailParticipantAttributes
         /// </summary>
         [Test]
-        public void PatchEmailsEmailIdParticipantsParticipantIdAttributesTest()
+        public void PatchEmailParticipantAttributesTest()
         {
-            // TODO: add unit test for the method 'PatchEmailsEmailIdParticipantsParticipantIdAttributes'
+            // TODO: add unit test for the method 'PatchEmailParticipantAttributes'
             string emailId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             ParticipantAttributes body = null; // TODO: replace null with proper value
-            instance.PatchEmailsEmailIdParticipantsParticipantIdAttributes(emailId, participantId, body);
+            instance.PatchEmailParticipantAttributes(emailId, participantId, body);
+            
+        }
+        
+        /// <summary>
+        /// Test PostCall
+        /// </summary>
+        [Test]
+        public void PostCallTest()
+        {
+            // TODO: add unit test for the method 'PostCall'
+            string callId = null; // TODO: replace null with proper value
+            CallCommand body = null; // TODO: replace null with proper value
+            var response = instance.PostCall(callId, body);
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
+        }
+        
+        /// <summary>
+        /// Test PostCallParticipantConsult
+        /// </summary>
+        [Test]
+        public void PostCallParticipantConsultTest()
+        {
+            // TODO: add unit test for the method 'PostCallParticipantConsult'
+            string callId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            ConsultTransfer body = null; // TODO: replace null with proper value
+            var response = instance.PostCallParticipantConsult(callId, participantId, body);
+            Assert.IsInstanceOf<ConsultTransferResponse> (response, "response is ConsultTransferResponse");
+        }
+        
+        /// <summary>
+        /// Test PostCallParticipantMonitor
+        /// </summary>
+        [Test]
+        public void PostCallParticipantMonitorTest()
+        {
+            // TODO: add unit test for the method 'PostCallParticipantMonitor'
+            string callId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            instance.PostCallParticipantMonitor(callId, participantId);
+            
+        }
+        
+        /// <summary>
+        /// Test PostCallParticipantReplace
+        /// </summary>
+        [Test]
+        public void PostCallParticipantReplaceTest()
+        {
+            // TODO: add unit test for the method 'PostCallParticipantReplace'
+            string callId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            TransferRequest body = null; // TODO: replace null with proper value
+            instance.PostCallParticipantReplace(callId, participantId, body);
+            
+        }
+        
+        /// <summary>
+        /// Test PostCallParticipants
+        /// </summary>
+        [Test]
+        public void PostCallParticipantsTest()
+        {
+            // TODO: add unit test for the method 'PostCallParticipants'
+            string callId = null; // TODO: replace null with proper value
+            Conversation body = null; // TODO: replace null with proper value
+            var response = instance.PostCallParticipants(callId, body);
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
+        }
+        
+        /// <summary>
+        /// Test PostCallbackParticipantReplace
+        /// </summary>
+        [Test]
+        public void PostCallbackParticipantReplaceTest()
+        {
+            // TODO: add unit test for the method 'PostCallbackParticipantReplace'
+            string callbackId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            TransferRequest body = null; // TODO: replace null with proper value
+            instance.PostCallbackParticipantReplace(callbackId, participantId, body);
             
         }
         
@@ -682,20 +763,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostCallbacksCallbackIdParticipantsParticipantIdReplace
-        /// </summary>
-        [Test]
-        public void PostCallbacksCallbackIdParticipantsParticipantIdReplaceTest()
-        {
-            // TODO: add unit test for the method 'PostCallbacksCallbackIdParticipantsParticipantIdReplace'
-            string callbackId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            TransferRequest body = null; // TODO: replace null with proper value
-            instance.PostCallbacksCallbackIdParticipantsParticipantIdReplace(callbackId, participantId, body);
-            
-        }
-        
-        /// <summary>
         /// Test PostCalls
         /// </summary>
         [Test]
@@ -708,111 +775,57 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostCallsCallId
+        /// Test PostChatParticipantReplace
         /// </summary>
         [Test]
-        public void PostCallsCallIdTest()
+        public void PostChatParticipantReplaceTest()
         {
-            // TODO: add unit test for the method 'PostCallsCallId'
-            string callId = null; // TODO: replace null with proper value
-            CallCommand body = null; // TODO: replace null with proper value
-            var response = instance.PostCallsCallId(callId, body);
-            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
-        }
-        
-        /// <summary>
-        /// Test PostCallsCallIdParticipants
-        /// </summary>
-        [Test]
-        public void PostCallsCallIdParticipantsTest()
-        {
-            // TODO: add unit test for the method 'PostCallsCallIdParticipants'
-            string callId = null; // TODO: replace null with proper value
-            Conversation body = null; // TODO: replace null with proper value
-            var response = instance.PostCallsCallIdParticipants(callId, body);
-            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
-        }
-        
-        /// <summary>
-        /// Test PostCallsCallIdParticipantsParticipantIdConsult
-        /// </summary>
-        [Test]
-        public void PostCallsCallIdParticipantsParticipantIdConsultTest()
-        {
-            // TODO: add unit test for the method 'PostCallsCallIdParticipantsParticipantIdConsult'
-            string callId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            ConsultTransfer body = null; // TODO: replace null with proper value
-            var response = instance.PostCallsCallIdParticipantsParticipantIdConsult(callId, participantId, body);
-            Assert.IsInstanceOf<ConsultTransferResponse> (response, "response is ConsultTransferResponse");
-        }
-        
-        /// <summary>
-        /// Test PostCallsCallIdParticipantsParticipantIdMonitor
-        /// </summary>
-        [Test]
-        public void PostCallsCallIdParticipantsParticipantIdMonitorTest()
-        {
-            // TODO: add unit test for the method 'PostCallsCallIdParticipantsParticipantIdMonitor'
-            string callId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            instance.PostCallsCallIdParticipantsParticipantIdMonitor(callId, participantId);
-            
-        }
-        
-        /// <summary>
-        /// Test PostCallsCallIdParticipantsParticipantIdReplace
-        /// </summary>
-        [Test]
-        public void PostCallsCallIdParticipantsParticipantIdReplaceTest()
-        {
-            // TODO: add unit test for the method 'PostCallsCallIdParticipantsParticipantIdReplace'
-            string callId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            TransferRequest body = null; // TODO: replace null with proper value
-            instance.PostCallsCallIdParticipantsParticipantIdReplace(callId, participantId, body);
-            
-        }
-        
-        /// <summary>
-        /// Test PostChatsChatIdParticipantsParticipantIdReplace
-        /// </summary>
-        [Test]
-        public void PostChatsChatIdParticipantsParticipantIdReplaceTest()
-        {
-            // TODO: add unit test for the method 'PostChatsChatIdParticipantsParticipantIdReplace'
+            // TODO: add unit test for the method 'PostChatParticipantReplace'
             string chatId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             TransferRequest body = null; // TODO: replace null with proper value
-            instance.PostChatsChatIdParticipantsParticipantIdReplace(chatId, participantId, body);
+            instance.PostChatParticipantReplace(chatId, participantId, body);
             
         }
         
         /// <summary>
-        /// Test PostConversationIdParticipantsParticipantIdCallbacks
+        /// Test PostConversationDetailsProperties
         /// </summary>
         [Test]
-        public void PostConversationIdParticipantsParticipantIdCallbacksTest()
+        public void PostConversationDetailsPropertiesTest()
         {
-            // TODO: add unit test for the method 'PostConversationIdParticipantsParticipantIdCallbacks'
+            // TODO: add unit test for the method 'PostConversationDetailsProperties'
+            string conversationId = null; // TODO: replace null with proper value
+            PropertyIndexRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostConversationDetailsProperties(conversationId, body);
+            Assert.IsInstanceOf<PropertyIndexRequest> (response, "response is PropertyIndexRequest");
+        }
+        
+        /// <summary>
+        /// Test PostConversationParticipantCallbacks
+        /// </summary>
+        [Test]
+        public void PostConversationParticipantCallbacksTest()
+        {
+            // TODO: add unit test for the method 'PostConversationParticipantCallbacks'
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             CreateCallbackCommand body = null; // TODO: replace null with proper value
-            instance.PostConversationIdParticipantsParticipantIdCallbacks(conversationId, participantId, body);
+            instance.PostConversationParticipantCallbacks(conversationId, participantId, body);
             
         }
         
         /// <summary>
-        /// Test PostConversationIdParticipantsParticipantIdReplace
+        /// Test PostConversationParticipantReplace
         /// </summary>
         [Test]
-        public void PostConversationIdParticipantsParticipantIdReplaceTest()
+        public void PostConversationParticipantReplaceTest()
         {
-            // TODO: add unit test for the method 'PostConversationIdParticipantsParticipantIdReplace'
+            // TODO: add unit test for the method 'PostConversationParticipantReplace'
             string conversationId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             TransferRequest body = null; // TODO: replace null with proper value
-            instance.PostConversationIdParticipantsParticipantIdReplace(conversationId, participantId, body);
+            instance.PostConversationParticipantReplace(conversationId, participantId, body);
             
         }
         
@@ -829,19 +842,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostConversationsConversationIdDetailsProperties
-        /// </summary>
-        [Test]
-        public void PostConversationsConversationIdDetailsPropertiesTest()
-        {
-            // TODO: add unit test for the method 'PostConversationsConversationIdDetailsProperties'
-            string conversationId = null; // TODO: replace null with proper value
-            PropertyIndexRequest body = null; // TODO: replace null with proper value
-            var response = instance.PostConversationsConversationIdDetailsProperties(conversationId, body);
-            Assert.IsInstanceOf<PropertyIndexRequest> (response, "response is PropertyIndexRequest");
-        }
-        
-        /// <summary>
         /// Test PostConversationsDetailsQuery
         /// </summary>
         [Test]
@@ -854,29 +854,29 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostEmailsEmailIdMessages
+        /// Test PostEmailMessages
         /// </summary>
         [Test]
-        public void PostEmailsEmailIdMessagesTest()
+        public void PostEmailMessagesTest()
         {
-            // TODO: add unit test for the method 'PostEmailsEmailIdMessages'
+            // TODO: add unit test for the method 'PostEmailMessages'
             string emailId = null; // TODO: replace null with proper value
             EmailMessage body = null; // TODO: replace null with proper value
-            var response = instance.PostEmailsEmailIdMessages(emailId, body);
+            var response = instance.PostEmailMessages(emailId, body);
             Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage");
         }
         
         /// <summary>
-        /// Test PostEmailsEmailIdParticipantsParticipantIdReplace
+        /// Test PostEmailParticipantReplace
         /// </summary>
         [Test]
-        public void PostEmailsEmailIdParticipantsParticipantIdReplaceTest()
+        public void PostEmailParticipantReplaceTest()
         {
-            // TODO: add unit test for the method 'PostEmailsEmailIdParticipantsParticipantIdReplace'
+            // TODO: add unit test for the method 'PostEmailParticipantReplace'
             string emailId = null; // TODO: replace null with proper value
             string participantId = null; // TODO: replace null with proper value
             TransferRequest body = null; // TODO: replace null with proper value
-            instance.PostEmailsEmailIdParticipantsParticipantIdReplace(emailId, participantId, body);
+            instance.PostEmailParticipantReplace(emailId, participantId, body);
             
         }
         
@@ -893,15 +893,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutEmailsEmailIdMessagesDraft
+        /// Test PutEmailMessagesDraft
         /// </summary>
         [Test]
-        public void PutEmailsEmailIdMessagesDraftTest()
+        public void PutEmailMessagesDraftTest()
         {
-            // TODO: add unit test for the method 'PutEmailsEmailIdMessagesDraft'
+            // TODO: add unit test for the method 'PutEmailMessagesDraft'
             string emailId = null; // TODO: replace null with proper value
             EmailMessage body = null; // TODO: replace null with proper value
-            var response = instance.PutEmailsEmailIdMessagesDraft(emailId, body);
+            var response = instance.PutEmailMessagesDraft(emailId, body);
             Assert.IsInstanceOf<EmailMessage> (response, "response is EmailMessage");
         }
         

@@ -156,44 +156,6 @@ namespace ININ.PureCloudApi.Model
             Offline
         }
         /// <summary>
-        /// Gets or Sets EdgeDeploymentType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EdgeDeploymentTypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Hardware for "HARDWARE"
-            /// </summary>
-            [EnumMember(Value = "HARDWARE")]
-            Hardware,
-            
-            /// <summary>
-            /// Enum Ldm for "LDM"
-            /// </summary>
-            [EnumMember(Value = "LDM")]
-            Ldm,
-            
-            /// <summary>
-            /// Enum Cdm for "CDM"
-            /// </summary>
-            [EnumMember(Value = "CDM")]
-            Cdm,
-            
-            /// <summary>
-            /// Enum Invalid for "INVALID"
-            /// </summary>
-            [EnumMember(Value = "INVALID")]
-            Invalid
-        }
-        /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
@@ -208,11 +170,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="onlineStatus", EmitDefaultValue=false)]
         public OnlineStatusEnum? OnlineStatus { get; set; }
-        /// <summary>
-        /// Gets or Sets EdgeDeploymentType
-        /// </summary>
-        [DataMember(Name="edgeDeploymentType", EmitDefaultValue=false)]
-        public EdgeDeploymentTypeEnum? EdgeDeploymentType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Edge" /> class.
         /// </summary>
@@ -254,8 +211,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SerialNumber">SerialNumber.</param>
         /// <param name="PhysicalEdge">PhysicalEdge (default to false).</param>
         /// <param name="Managed">Managed (default to false).</param>
-        /// <param name="EdgeDeploymentType">EdgeDeploymentType.</param>
-        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, UriReference Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null)
+        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, UriReference Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -314,7 +270,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Managed = Managed;
             }
-            this.EdgeDeploymentType = EdgeDeploymentType;
         }
         
         /// <summary>
@@ -524,7 +479,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SerialNumber: ").Append(SerialNumber).Append("\n");
             sb.Append("  PhysicalEdge: ").Append(PhysicalEdge).Append("\n");
             sb.Append("  Managed: ").Append(Managed).Append("\n");
-            sb.Append("  EdgeDeploymentType: ").Append(EdgeDeploymentType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -733,11 +687,6 @@ namespace ININ.PureCloudApi.Model
                     this.Managed.Equals(other.Managed)
                 ) &&
                 (
-                    this.EdgeDeploymentType == other.EdgeDeploymentType ||
-                    this.EdgeDeploymentType != null &&
-                    this.EdgeDeploymentType.Equals(other.EdgeDeploymentType)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -823,8 +772,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PhysicalEdge.GetHashCode();
                 if (this.Managed != null)
                     hash = hash * 59 + this.Managed.GetHashCode();
-                if (this.EdgeDeploymentType != null)
-                    hash = hash * 59 + this.EdgeDeploymentType.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

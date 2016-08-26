@@ -3,21 +3,21 @@ title: UserRecordingsApi
 ---
 ## ININ.PureCloudApi.Api.UserRecordingsApi
 
-All URIs are relative to *https://api.mypurecloud.com*
+All URIs are relative to *https://api.inindca.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteRecordingId**](UserRecordingsApi.html#deleterecordingid) | **DELETE** /api/v2/userrecordings/{recordingId} | Delete a user recording. |
-| [**GetRecordingId**](UserRecordingsApi.html#getrecordingid) | **GET** /api/v2/userrecordings/{recordingId} | Get a user recording. |
-| [**GetRecordingIdMedia**](UserRecordingsApi.html#getrecordingidmedia) | **GET** /api/v2/userrecordings/{recordingId}/media | Download a user recording. |
+| [**DeleteUserrecording**](UserRecordingsApi.html#deleteuserrecording) | **DELETE** /api/v2/userrecordings/{recordingId} | Delete a user recording. |
 | [**GetSummary**](UserRecordingsApi.html#getsummary) | **GET** /api/v2/userrecordings/summary | Get user recording summary |
+| [**GetUserrecording**](UserRecordingsApi.html#getuserrecording) | **GET** /api/v2/userrecordings/{recordingId} | Get a user recording. |
+| [**GetUserrecordingMedia**](UserRecordingsApi.html#getuserrecordingmedia) | **GET** /api/v2/userrecordings/{recordingId}/media | Download a user recording. |
 | [**GetUserrecordings**](UserRecordingsApi.html#getuserrecordings) | **GET** /api/v2/userrecordings | Get a list of user recordings. |
-| [**PutRecordingId**](UserRecordingsApi.html#putrecordingid) | **PUT** /api/v2/userrecordings/{recordingId} | Update a user recording. |
+| [**PutUserrecording**](UserRecordingsApi.html#putuserrecording) | **PUT** /api/v2/userrecordings/{recordingId} | Update a user recording. |
 {: class="table table-striped"}
 
-<a name="deleterecordingid"></a>
+<a name="deleteuserrecording"></a>
 
-## void DeleteRecordingId (string recordingId)
+## void DeleteUserrecording (string recordingId)
 
 Delete a user recording.
 
@@ -33,7 +33,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteRecordingIdExample
+    public class DeleteUserrecordingExample
     {
         public void main()
         {
@@ -47,11 +47,11 @@ namespace Example
             try
             {
                 // Delete a user recording.
-                apiInstance.DeleteRecordingId(recordingId);
+                apiInstance.DeleteUserrecording(recordingId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UserRecordingsApi.DeleteRecordingId: " + e.Message );
+                Debug.Print("Exception when calling UserRecordingsApi.DeleteUserrecording: " + e.Message );
             }
         }
     }
@@ -69,122 +69,6 @@ namespace Example
 ### Return type
 
 void (empty response body)
-
-<a name="getrecordingid"></a>
-
-## [**UserRecording**](UserRecording.html) GetRecordingId (string recordingId, string expand = null)
-
-Get a user recording.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetRecordingIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new UserRecordingsApi();
-            var recordingId = recordingId_example;  // string | User Recording ID
-            var expand = expand_example;  // string | conversation (optional) 
-
-            try
-            {
-                // Get a user recording.
-                UserRecording result = apiInstance.GetRecordingId(recordingId, expand);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UserRecordingsApi.GetRecordingId: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **recordingId** | **string**| User Recording ID |  |
-| **expand** | **string**| conversation | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**UserRecording**](UserRecording.html)
-
-<a name="getrecordingidmedia"></a>
-
-## [**DownloadResponse**](DownloadResponse.html) GetRecordingIdMedia (string recordingId, string formatId = null)
-
-Download a user recording.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetRecordingIdMediaExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new UserRecordingsApi();
-            var recordingId = recordingId_example;  // string | User Recording ID
-            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
-
-            try
-            {
-                // Download a user recording.
-                DownloadResponse result = apiInstance.GetRecordingIdMedia(recordingId, formatId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UserRecordingsApi.GetRecordingIdMedia: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **recordingId** | **string**| User Recording ID |  |
-| **formatId** | **string**| The desired media format. | [optional] [default to WEBM] |
-{: class="table table-striped"}
-
-### Return type
-
-[**DownloadResponse**](DownloadResponse.html)
 
 <a name="getsummary"></a>
 
@@ -236,6 +120,122 @@ This endpoint does require any parameters.
 ### Return type
 
 [**FaxSummary**](FaxSummary.html)
+
+<a name="getuserrecording"></a>
+
+## [**UserRecording**](UserRecording.html) GetUserrecording (string recordingId, string expand = null)
+
+Get a user recording.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserrecordingExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UserRecordingsApi();
+            var recordingId = recordingId_example;  // string | User Recording ID
+            var expand = expand_example;  // string | conversation (optional) 
+
+            try
+            {
+                // Get a user recording.
+                UserRecording result = apiInstance.GetUserrecording(recordingId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UserRecordingsApi.GetUserrecording: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **recordingId** | **string**| User Recording ID |  |
+| **expand** | **string**| conversation | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserRecording**](UserRecording.html)
+
+<a name="getuserrecordingmedia"></a>
+
+## [**DownloadResponse**](DownloadResponse.html) GetUserrecordingMedia (string recordingId, string formatId = null)
+
+Download a user recording.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserrecordingMediaExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UserRecordingsApi();
+            var recordingId = recordingId_example;  // string | User Recording ID
+            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
+
+            try
+            {
+                // Download a user recording.
+                DownloadResponse result = apiInstance.GetUserrecordingMedia(recordingId, formatId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UserRecordingsApi.GetUserrecordingMedia: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **recordingId** | **string**| User Recording ID |  |
+| **formatId** | **string**| The desired media format. | [optional] [default to WEBM] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DownloadResponse**](DownloadResponse.html)
 
 <a name="getuserrecordings"></a>
 
@@ -297,9 +297,9 @@ namespace Example
 
 [**UserRecordingEntityListing**](UserRecordingEntityListing.html)
 
-<a name="putrecordingid"></a>
+<a name="putuserrecording"></a>
 
-## [**UserRecording**](UserRecording.html) PutRecordingId (string recordingId, UserRecording body, string expand = null)
+## [**UserRecording**](UserRecording.html) PutUserrecording (string recordingId, UserRecording body, string expand = null)
 
 Update a user recording.
 
@@ -315,7 +315,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutRecordingIdExample
+    public class PutUserrecordingExample
     {
         public void main()
         {
@@ -331,12 +331,12 @@ namespace Example
             try
             {
                 // Update a user recording.
-                UserRecording result = apiInstance.PutRecordingId(recordingId, body, expand);
+                UserRecording result = apiInstance.PutUserrecording(recordingId, body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UserRecordingsApi.PutRecordingId: " + e.Message );
+                Debug.Print("Exception when calling UserRecordingsApi.PutUserrecording: " + e.Message );
             }
         }
     }

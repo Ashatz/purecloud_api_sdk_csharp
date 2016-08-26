@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Greeting</returns>
-        Greeting DeleteGreetingId (string greetingId);
+        Greeting DeleteGreeting (string greetingId);
 
         /// <summary>
         /// Deletes a Greeting with the given GreetingId
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Greeting</returns>
-        ApiResponse<Greeting> DeleteGreetingIdWithHttpInfo (string greetingId);
+        ApiResponse<Greeting> DeleteGreetingWithHttpInfo (string greetingId);
         /// <summary>
         /// Get an Organization&#39;s DefaultGreetingList
         /// </summary>
@@ -63,7 +63,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Greeting</returns>
-        Greeting GetGreetingId (string greetingId);
+        Greeting GetGreeting (string greetingId);
 
         /// <summary>
         /// Get a Greeting with the given GreetingId
@@ -74,7 +74,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Greeting</returns>
-        ApiResponse<Greeting> GetGreetingIdWithHttpInfo (string greetingId);
+        ApiResponse<Greeting> GetGreetingWithHttpInfo (string greetingId);
         /// <summary>
         /// Get media playback URI for this greeting
         /// </summary>
@@ -85,7 +85,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>GreetingMediaInfo</returns>
-        GreetingMediaInfo GetGreetingIdMedia (string greetingId, string formatId = null);
+        GreetingMediaInfo GetGreetingMedia (string greetingId, string formatId = null);
 
         /// <summary>
         /// Get media playback URI for this greeting
@@ -97,7 +97,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
-        ApiResponse<GreetingMediaInfo> GetGreetingIdMediaWithHttpInfo (string greetingId, string formatId = null);
+        ApiResponse<GreetingMediaInfo> GetGreetingMediaWithHttpInfo (string greetingId, string formatId = null);
         /// <summary>
         /// Gets an Organization&#39;s Greetings
         /// </summary>
@@ -132,7 +132,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>DomainEntityListing</returns>
-        DomainEntityListing GetUserIdGreetings (string userId, int? pageSize = null, int? pageNumber = null);
+        DomainEntityListing GetUserGreetings (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of the User&#39;s Greetings
@@ -145,7 +145,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of DomainEntityListing</returns>
-        ApiResponse<DomainEntityListing> GetUserIdGreetingsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<DomainEntityListing> GetUserGreetingsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
         /// <summary>
         /// Grabs the list of Default Greetings given a User&#39;s ID
         /// </summary>
@@ -155,7 +155,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>DefaultGreetingList</returns>
-        DefaultGreetingList GetUserIdGreetingsDefaults (string userId);
+        DefaultGreetingList GetUserGreetingsDefaults (string userId);
 
         /// <summary>
         /// Grabs the list of Default Greetings given a User&#39;s ID
@@ -166,7 +166,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        ApiResponse<DefaultGreetingList> GetUserIdGreetingsDefaultsWithHttpInfo (string userId);
+        ApiResponse<DefaultGreetingList> GetUserGreetingsDefaultsWithHttpInfo (string userId);
         /// <summary>
         /// Create a Greeting for an Organization
         /// </summary>
@@ -198,7 +198,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Greeting</returns>
-        Greeting PostUserIdGreetings (string userId, Greeting body);
+        Greeting PostUserGreetings (string userId, Greeting body);
 
         /// <summary>
         /// Creates a Greeting for a User
@@ -210,7 +210,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
-        ApiResponse<Greeting> PostUserIdGreetingsWithHttpInfo (string userId, Greeting body);
+        ApiResponse<Greeting> PostUserGreetingsWithHttpInfo (string userId, Greeting body);
         /// <summary>
         /// Update an Organization&#39;s DefaultGreetingList
         /// </summary>
@@ -242,7 +242,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Greeting</returns>
-        Greeting PutGreetingId (string greetingId, Greeting body);
+        Greeting PutGreeting (string greetingId, Greeting body);
 
         /// <summary>
         /// Updates the Greeting with the given GreetingId
@@ -254,7 +254,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>ApiResponse of Greeting</returns>
-        ApiResponse<Greeting> PutGreetingIdWithHttpInfo (string greetingId, Greeting body);
+        ApiResponse<Greeting> PutGreetingWithHttpInfo (string greetingId, Greeting body);
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
         /// </summary>
@@ -265,7 +265,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>DefaultGreetingList</returns>
-        DefaultGreetingList PutUserIdGreetingsDefaults (string userId, DefaultGreetingList body);
+        DefaultGreetingList PutUserGreetingsDefaults (string userId, DefaultGreetingList body);
 
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
@@ -277,7 +277,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        ApiResponse<DefaultGreetingList> PutUserIdGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body);
+        ApiResponse<DefaultGreetingList> PutUserGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -289,7 +289,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of Greeting</returns>
-        System.Threading.Tasks.Task<Greeting> DeleteGreetingIdAsync (string greetingId);
+        System.Threading.Tasks.Task<Greeting> DeleteGreetingAsync (string greetingId);
 
         /// <summary>
         /// Deletes a Greeting with the given GreetingId
@@ -300,7 +300,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Greeting>> DeleteGreetingIdAsyncWithHttpInfo (string greetingId);
+        System.Threading.Tasks.Task<ApiResponse<Greeting>> DeleteGreetingAsyncWithHttpInfo (string greetingId);
         /// <summary>
         /// Get an Organization&#39;s DefaultGreetingList
         /// </summary>
@@ -329,7 +329,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of Greeting</returns>
-        System.Threading.Tasks.Task<Greeting> GetGreetingIdAsync (string greetingId);
+        System.Threading.Tasks.Task<Greeting> GetGreetingAsync (string greetingId);
 
         /// <summary>
         /// Get a Greeting with the given GreetingId
@@ -340,7 +340,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingIdAsyncWithHttpInfo (string greetingId);
+        System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingAsyncWithHttpInfo (string greetingId);
         /// <summary>
         /// Get media playback URI for this greeting
         /// </summary>
@@ -351,7 +351,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of GreetingMediaInfo</returns>
-        System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingIdMediaAsync (string greetingId, string formatId = null);
+        System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingMediaAsync (string greetingId, string formatId = null);
 
         /// <summary>
         /// Get media playback URI for this greeting
@@ -363,7 +363,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingIdMediaAsyncWithHttpInfo (string greetingId, string formatId = null);
+        System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingMediaAsyncWithHttpInfo (string greetingId, string formatId = null);
         /// <summary>
         /// Gets an Organization&#39;s Greetings
         /// </summary>
@@ -398,7 +398,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of DomainEntityListing</returns>
-        System.Threading.Tasks.Task<DomainEntityListing> GetUserIdGreetingsAsync (string userId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<DomainEntityListing> GetUserGreetingsAsync (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of the User&#39;s Greetings
@@ -411,7 +411,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetUserIdGreetingsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetUserGreetingsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
         /// <summary>
         /// Grabs the list of Default Greetings given a User&#39;s ID
         /// </summary>
@@ -421,7 +421,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        System.Threading.Tasks.Task<DefaultGreetingList> GetUserIdGreetingsDefaultsAsync (string userId);
+        System.Threading.Tasks.Task<DefaultGreetingList> GetUserGreetingsDefaultsAsync (string userId);
 
         /// <summary>
         /// Grabs the list of Default Greetings given a User&#39;s ID
@@ -432,7 +432,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetUserIdGreetingsDefaultsAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetUserGreetingsDefaultsAsyncWithHttpInfo (string userId);
         /// <summary>
         /// Create a Greeting for an Organization
         /// </summary>
@@ -464,7 +464,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of Greeting</returns>
-        System.Threading.Tasks.Task<Greeting> PostUserIdGreetingsAsync (string userId, Greeting body);
+        System.Threading.Tasks.Task<Greeting> PostUserGreetingsAsync (string userId, Greeting body);
 
         /// <summary>
         /// Creates a Greeting for a User
@@ -476,7 +476,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Greeting>> PostUserIdGreetingsAsyncWithHttpInfo (string userId, Greeting body);
+        System.Threading.Tasks.Task<ApiResponse<Greeting>> PostUserGreetingsAsyncWithHttpInfo (string userId, Greeting body);
         /// <summary>
         /// Update an Organization&#39;s DefaultGreetingList
         /// </summary>
@@ -508,7 +508,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of Greeting</returns>
-        System.Threading.Tasks.Task<Greeting> PutGreetingIdAsync (string greetingId, Greeting body);
+        System.Threading.Tasks.Task<Greeting> PutGreetingAsync (string greetingId, Greeting body);
 
         /// <summary>
         /// Updates the Greeting with the given GreetingId
@@ -520,7 +520,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Greeting>> PutGreetingIdAsyncWithHttpInfo (string greetingId, Greeting body);
+        System.Threading.Tasks.Task<ApiResponse<Greeting>> PutGreetingAsyncWithHttpInfo (string greetingId, Greeting body);
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
         /// </summary>
@@ -531,7 +531,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        System.Threading.Tasks.Task<DefaultGreetingList> PutUserIdGreetingsDefaultsAsync (string userId, DefaultGreetingList body);
+        System.Threading.Tasks.Task<DefaultGreetingList> PutUserGreetingsDefaultsAsync (string userId, DefaultGreetingList body);
 
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
@@ -543,7 +543,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutUserIdGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body);
+        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutUserGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body);
         #endregion Asynchronous Operations
     }
 
@@ -640,9 +640,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Greeting</returns>
-        public Greeting DeleteGreetingId (string greetingId)
+        public Greeting DeleteGreeting (string greetingId)
         {
-             ApiResponse<Greeting> localVarResponse = DeleteGreetingIdWithHttpInfo(greetingId);
+             ApiResponse<Greeting> localVarResponse = DeleteGreetingWithHttpInfo(greetingId);
              return localVarResponse.Data;
         }
 
@@ -652,11 +652,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Greeting</returns>
-        public ApiResponse< Greeting > DeleteGreetingIdWithHttpInfo (string greetingId)
+        public ApiResponse< Greeting > DeleteGreetingWithHttpInfo (string greetingId)
         {
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
-                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->DeleteGreetingId");
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->DeleteGreeting");
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -700,9 +700,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteGreetingId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGreeting: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteGreetingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGreeting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -716,9 +716,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of Greeting</returns>
-        public async System.Threading.Tasks.Task<Greeting> DeleteGreetingIdAsync (string greetingId)
+        public async System.Threading.Tasks.Task<Greeting> DeleteGreetingAsync (string greetingId)
         {
-             ApiResponse<Greeting> localVarResponse = await DeleteGreetingIdAsyncWithHttpInfo(greetingId);
+             ApiResponse<Greeting> localVarResponse = await DeleteGreetingAsyncWithHttpInfo(greetingId);
              return localVarResponse.Data;
 
         }
@@ -729,11 +729,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> DeleteGreetingIdAsyncWithHttpInfo (string greetingId)
+        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> DeleteGreetingAsyncWithHttpInfo (string greetingId)
         {
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
-                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->DeleteGreetingId");
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->DeleteGreeting");
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -777,9 +777,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteGreetingId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGreeting: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteGreetingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGreeting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -934,9 +934,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Greeting</returns>
-        public Greeting GetGreetingId (string greetingId)
+        public Greeting GetGreeting (string greetingId)
         {
-             ApiResponse<Greeting> localVarResponse = GetGreetingIdWithHttpInfo(greetingId);
+             ApiResponse<Greeting> localVarResponse = GetGreetingWithHttpInfo(greetingId);
              return localVarResponse.Data;
         }
 
@@ -946,11 +946,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Greeting</returns>
-        public ApiResponse< Greeting > GetGreetingIdWithHttpInfo (string greetingId)
+        public ApiResponse< Greeting > GetGreetingWithHttpInfo (string greetingId)
         {
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
-                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingId");
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreeting");
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -994,9 +994,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetGreetingId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetGreeting: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetGreetingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetGreeting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1010,9 +1010,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of Greeting</returns>
-        public async System.Threading.Tasks.Task<Greeting> GetGreetingIdAsync (string greetingId)
+        public async System.Threading.Tasks.Task<Greeting> GetGreetingAsync (string greetingId)
         {
-             ApiResponse<Greeting> localVarResponse = await GetGreetingIdAsyncWithHttpInfo(greetingId);
+             ApiResponse<Greeting> localVarResponse = await GetGreetingAsyncWithHttpInfo(greetingId);
              return localVarResponse.Data;
 
         }
@@ -1023,11 +1023,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingIdAsyncWithHttpInfo (string greetingId)
+        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingAsyncWithHttpInfo (string greetingId)
         {
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
-                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingId");
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreeting");
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1071,9 +1071,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetGreetingId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetGreeting: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetGreetingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetGreeting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1088,9 +1088,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>GreetingMediaInfo</returns>
-        public GreetingMediaInfo GetGreetingIdMedia (string greetingId, string formatId = null)
+        public GreetingMediaInfo GetGreetingMedia (string greetingId, string formatId = null)
         {
-             ApiResponse<GreetingMediaInfo> localVarResponse = GetGreetingIdMediaWithHttpInfo(greetingId, formatId);
+             ApiResponse<GreetingMediaInfo> localVarResponse = GetGreetingMediaWithHttpInfo(greetingId, formatId);
              return localVarResponse.Data;
         }
 
@@ -1101,11 +1101,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
-        public ApiResponse< GreetingMediaInfo > GetGreetingIdMediaWithHttpInfo (string greetingId, string formatId = null)
+        public ApiResponse< GreetingMediaInfo > GetGreetingMediaWithHttpInfo (string greetingId, string formatId = null)
         {
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
-                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingIdMedia");
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingMedia");
 
             var localVarPath = "/api/v2/greetings/{greetingId}/media";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1150,9 +1150,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetGreetingIdMedia: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingMedia: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetGreetingIdMedia: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingMedia: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<GreetingMediaInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1167,9 +1167,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of GreetingMediaInfo</returns>
-        public async System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingIdMediaAsync (string greetingId, string formatId = null)
+        public async System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingMediaAsync (string greetingId, string formatId = null)
         {
-             ApiResponse<GreetingMediaInfo> localVarResponse = await GetGreetingIdMediaAsyncWithHttpInfo(greetingId, formatId);
+             ApiResponse<GreetingMediaInfo> localVarResponse = await GetGreetingMediaAsyncWithHttpInfo(greetingId, formatId);
              return localVarResponse.Data;
 
         }
@@ -1181,11 +1181,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingIdMediaAsyncWithHttpInfo (string greetingId, string formatId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingMediaAsyncWithHttpInfo (string greetingId, string formatId = null)
         {
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
-                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingIdMedia");
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingMedia");
 
             var localVarPath = "/api/v2/greetings/{greetingId}/media";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1230,9 +1230,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetGreetingIdMedia: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingMedia: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetGreetingIdMedia: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetingMedia: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<GreetingMediaInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1401,9 +1401,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>DomainEntityListing</returns>
-        public DomainEntityListing GetUserIdGreetings (string userId, int? pageSize = null, int? pageNumber = null)
+        public DomainEntityListing GetUserGreetings (string userId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<DomainEntityListing> localVarResponse = GetUserIdGreetingsWithHttpInfo(userId, pageSize, pageNumber);
+             ApiResponse<DomainEntityListing> localVarResponse = GetUserGreetingsWithHttpInfo(userId, pageSize, pageNumber);
              return localVarResponse.Data;
         }
 
@@ -1415,11 +1415,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of DomainEntityListing</returns>
-        public ApiResponse< DomainEntityListing > GetUserIdGreetingsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< DomainEntityListing > GetUserGreetingsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserIdGreetings");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetings");
 
             var localVarPath = "/api/v2/users/{userId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1465,9 +1465,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdGreetings: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserGreetings: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DomainEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1483,9 +1483,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of DomainEntityListing</returns>
-        public async System.Threading.Tasks.Task<DomainEntityListing> GetUserIdGreetingsAsync (string userId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<DomainEntityListing> GetUserGreetingsAsync (string userId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<DomainEntityListing> localVarResponse = await GetUserIdGreetingsAsyncWithHttpInfo(userId, pageSize, pageNumber);
+             ApiResponse<DomainEntityListing> localVarResponse = await GetUserGreetingsAsyncWithHttpInfo(userId, pageSize, pageNumber);
              return localVarResponse.Data;
 
         }
@@ -1498,11 +1498,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetUserIdGreetingsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetUserGreetingsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserIdGreetings");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetings");
 
             var localVarPath = "/api/v2/users/{userId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1548,9 +1548,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdGreetings: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserGreetings: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DomainEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1564,9 +1564,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>DefaultGreetingList</returns>
-        public DefaultGreetingList GetUserIdGreetingsDefaults (string userId)
+        public DefaultGreetingList GetUserGreetingsDefaults (string userId)
         {
-             ApiResponse<DefaultGreetingList> localVarResponse = GetUserIdGreetingsDefaultsWithHttpInfo(userId);
+             ApiResponse<DefaultGreetingList> localVarResponse = GetUserGreetingsDefaultsWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
@@ -1576,11 +1576,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        public ApiResponse< DefaultGreetingList > GetUserIdGreetingsDefaultsWithHttpInfo (string userId)
+        public ApiResponse< DefaultGreetingList > GetUserGreetingsDefaultsWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserIdGreetingsDefaults");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetingsDefaults");
 
             var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1624,9 +1624,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1640,9 +1640,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        public async System.Threading.Tasks.Task<DefaultGreetingList> GetUserIdGreetingsDefaultsAsync (string userId)
+        public async System.Threading.Tasks.Task<DefaultGreetingList> GetUserGreetingsDefaultsAsync (string userId)
         {
-             ApiResponse<DefaultGreetingList> localVarResponse = await GetUserIdGreetingsDefaultsAsyncWithHttpInfo(userId);
+             ApiResponse<DefaultGreetingList> localVarResponse = await GetUserGreetingsDefaultsAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -1653,11 +1653,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetUserIdGreetingsDefaultsAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetUserGreetingsDefaultsAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserIdGreetingsDefaults");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetingsDefaults");
 
             var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1701,9 +1701,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1885,9 +1885,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Greeting</returns>
-        public Greeting PostUserIdGreetings (string userId, Greeting body)
+        public Greeting PostUserGreetings (string userId, Greeting body)
         {
-             ApiResponse<Greeting> localVarResponse = PostUserIdGreetingsWithHttpInfo(userId, body);
+             ApiResponse<Greeting> localVarResponse = PostUserGreetingsWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
@@ -1898,14 +1898,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
-        public ApiResponse< Greeting > PostUserIdGreetingsWithHttpInfo (string userId, Greeting body)
+        public ApiResponse< Greeting > PostUserGreetingsWithHttpInfo (string userId, Greeting body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PostUserIdGreetings");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PostUserGreetings");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostUserIdGreetings");
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostUserGreetings");
 
             var localVarPath = "/api/v2/users/{userId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1957,9 +1957,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostUserIdGreetings: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostUserGreetings: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostUserIdGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostUserGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1974,9 +1974,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of Greeting</returns>
-        public async System.Threading.Tasks.Task<Greeting> PostUserIdGreetingsAsync (string userId, Greeting body)
+        public async System.Threading.Tasks.Task<Greeting> PostUserGreetingsAsync (string userId, Greeting body)
         {
-             ApiResponse<Greeting> localVarResponse = await PostUserIdGreetingsAsyncWithHttpInfo(userId, body);
+             ApiResponse<Greeting> localVarResponse = await PostUserGreetingsAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -1988,14 +1988,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PostUserIdGreetingsAsyncWithHttpInfo (string userId, Greeting body)
+        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PostUserGreetingsAsyncWithHttpInfo (string userId, Greeting body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PostUserIdGreetings");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PostUserGreetings");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostUserIdGreetings");
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostUserGreetings");
 
             var localVarPath = "/api/v2/users/{userId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2047,9 +2047,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostUserIdGreetings: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostUserGreetings: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostUserIdGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostUserGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2231,9 +2231,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Greeting</returns>
-        public Greeting PutGreetingId (string greetingId, Greeting body)
+        public Greeting PutGreeting (string greetingId, Greeting body)
         {
-             ApiResponse<Greeting> localVarResponse = PutGreetingIdWithHttpInfo(greetingId, body);
+             ApiResponse<Greeting> localVarResponse = PutGreetingWithHttpInfo(greetingId, body);
              return localVarResponse.Data;
         }
 
@@ -2244,14 +2244,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>ApiResponse of Greeting</returns>
-        public ApiResponse< Greeting > PutGreetingIdWithHttpInfo (string greetingId, Greeting body)
+        public ApiResponse< Greeting > PutGreetingWithHttpInfo (string greetingId, Greeting body)
         {
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
-                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->PutGreetingId");
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->PutGreeting");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreetingId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreeting");
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2303,9 +2303,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutGreetingId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutGreeting: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutGreetingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutGreeting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2320,9 +2320,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of Greeting</returns>
-        public async System.Threading.Tasks.Task<Greeting> PutGreetingIdAsync (string greetingId, Greeting body)
+        public async System.Threading.Tasks.Task<Greeting> PutGreetingAsync (string greetingId, Greeting body)
         {
-             ApiResponse<Greeting> localVarResponse = await PutGreetingIdAsyncWithHttpInfo(greetingId, body);
+             ApiResponse<Greeting> localVarResponse = await PutGreetingAsyncWithHttpInfo(greetingId, body);
              return localVarResponse.Data;
 
         }
@@ -2334,14 +2334,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PutGreetingIdAsyncWithHttpInfo (string greetingId, Greeting body)
+        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PutGreetingAsyncWithHttpInfo (string greetingId, Greeting body)
         {
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
-                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->PutGreetingId");
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->PutGreeting");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreetingId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreeting");
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2393,9 +2393,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutGreetingId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutGreeting: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutGreetingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutGreeting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2410,9 +2410,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>DefaultGreetingList</returns>
-        public DefaultGreetingList PutUserIdGreetingsDefaults (string userId, DefaultGreetingList body)
+        public DefaultGreetingList PutUserGreetingsDefaults (string userId, DefaultGreetingList body)
         {
-             ApiResponse<DefaultGreetingList> localVarResponse = PutUserIdGreetingsDefaultsWithHttpInfo(userId, body);
+             ApiResponse<DefaultGreetingList> localVarResponse = PutUserGreetingsDefaultsWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
@@ -2423,14 +2423,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        public ApiResponse< DefaultGreetingList > PutUserIdGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body)
+        public ApiResponse< DefaultGreetingList > PutUserGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PutUserIdGreetingsDefaults");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PutUserGreetingsDefaults");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutUserIdGreetingsDefaults");
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutUserGreetingsDefaults");
 
             var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2482,9 +2482,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutUserIdGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutUserIdGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2499,9 +2499,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        public async System.Threading.Tasks.Task<DefaultGreetingList> PutUserIdGreetingsDefaultsAsync (string userId, DefaultGreetingList body)
+        public async System.Threading.Tasks.Task<DefaultGreetingList> PutUserGreetingsDefaultsAsync (string userId, DefaultGreetingList body)
         {
-             ApiResponse<DefaultGreetingList> localVarResponse = await PutUserIdGreetingsDefaultsAsyncWithHttpInfo(userId, body);
+             ApiResponse<DefaultGreetingList> localVarResponse = await PutUserGreetingsDefaultsAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -2513,14 +2513,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutUserIdGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body)
+        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutUserGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PutUserIdGreetingsDefaults");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PutUserGreetingsDefaults");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutUserIdGreetingsDefaults");
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutUserGreetingsDefaults");
 
             var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2572,9 +2572,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutUserIdGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutUserIdGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

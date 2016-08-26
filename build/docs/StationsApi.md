@@ -3,18 +3,18 @@ title: StationsApi
 ---
 ## ININ.PureCloudApi.Api.StationsApi
 
-All URIs are relative to *https://api.mypurecloud.com*
+All URIs are relative to *https://api.inindca.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteStationIdAssociateduser**](StationsApi.html#deletestationidassociateduser) | **DELETE** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
-| [**GetStationId**](StationsApi.html#getstationid) | **GET** /api/v2/stations/{stationId} | Get station. |
+| [**DeleteStationAssociateduser**](StationsApi.html#deletestationassociateduser) | **DELETE** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
+| [**GetStation**](StationsApi.html#getstation) | **GET** /api/v2/stations/{stationId} | Get station. |
 | [**GetStations**](StationsApi.html#getstations) | **GET** /api/v2/stations | Get the list of available stations. |
 {: class="table table-striped"}
 
-<a name="deletestationidassociateduser"></a>
+<a name="deletestationassociateduser"></a>
 
-## **string** DeleteStationIdAssociateduser (string stationId)
+## **string** DeleteStationAssociateduser (string stationId)
 
 Unassigns the user assigned to this station
 
@@ -30,7 +30,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteStationIdAssociateduserExample
+    public class DeleteStationAssociateduserExample
     {
         public void main()
         {
@@ -44,12 +44,12 @@ namespace Example
             try
             {
                 // Unassigns the user assigned to this station
-                string result = apiInstance.DeleteStationIdAssociateduser(stationId);
+                string result = apiInstance.DeleteStationAssociateduser(stationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StationsApi.DeleteStationIdAssociateduser: " + e.Message );
+                Debug.Print("Exception when calling StationsApi.DeleteStationAssociateduser: " + e.Message );
             }
         }
     }
@@ -68,9 +68,9 @@ namespace Example
 
 **string**
 
-<a name="getstationid"></a>
+<a name="getstation"></a>
 
-## [**Station**](Station.html) GetStationId (string stationId)
+## [**Station**](Station.html) GetStation (string stationId)
 
 Get station.
 
@@ -86,7 +86,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetStationIdExample
+    public class GetStationExample
     {
         public void main()
         {
@@ -100,12 +100,12 @@ namespace Example
             try
             {
                 // Get station.
-                Station result = apiInstance.GetStationId(stationId);
+                Station result = apiInstance.GetStation(stationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StationsApi.GetStationId: " + e.Message );
+                Debug.Print("Exception when calling StationsApi.GetStation: " + e.Message );
             }
         }
     }
