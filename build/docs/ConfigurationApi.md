@@ -16,7 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="getprovidersedgesedgeidsetuppackage"></a>
 
-## [**VirtualEdgeSetupPackage**](VirtualEdgeSetupPackage.html) GetProvidersEdgesEdgeIdSetuppackage (string edgeId)
+## [**VmPairingInfo**](VmPairingInfo.html) GetProvidersEdgesEdgeIdSetuppackage (string edgeId)
 
 Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
 
@@ -46,7 +46,7 @@ namespace Example
             try
             {
                 // Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
-                VirtualEdgeSetupPackage result = apiInstance.GetProvidersEdgesEdgeIdSetuppackage(edgeId);
+                VmPairingInfo result = apiInstance.GetProvidersEdgesEdgeIdSetuppackage(edgeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -68,7 +68,7 @@ namespace Example
 
 ### Return type
 
-[**VirtualEdgeSetupPackage**](VirtualEdgeSetupPackage.html)
+[**VmPairingInfo**](VmPairingInfo.html)
 
 <a name="getrecordingkeys"></a>
 

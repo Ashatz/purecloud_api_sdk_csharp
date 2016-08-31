@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PairingToken">PairingToken.</param>
         /// <param name="PairingTrust">PairingTrust.</param>
         /// <param name="PairingUrl">PairingUrl.</param>
-        public MetaData(string PairingToken = null, string PairingTrust = null, string PairingUrl = null)
+        public MetaData(string PairingToken = null, List<string> PairingTrust = null, string PairingUrl = null)
         {
             this.PairingToken = PairingToken;
             this.PairingTrust = PairingTrust;
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets PairingTrust
         /// </summary>
         [DataMember(Name="pairing-trust", EmitDefaultValue=false)]
-        public string PairingTrust { get; set; }
+        public List<string> PairingTrust { get; set; }
         /// <summary>
         /// Gets or Sets PairingUrl
         /// </summary>
@@ -100,7 +100,7 @@ namespace ININ.PureCloudApi.Model
                 (
                     this.PairingTrust == other.PairingTrust ||
                     this.PairingTrust != null &&
-                    this.PairingTrust.Equals(other.PairingTrust)
+                    this.PairingTrust.SequenceEqual(other.PairingTrust)
                 ) &&
                 (
                     this.PairingUrl == other.PairingUrl ||

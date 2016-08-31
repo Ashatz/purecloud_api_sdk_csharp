@@ -1171,6 +1171,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostProvidersEdgesOfflineconfiguration
+        /// </summary>
+        [Test]
+        public void PostProvidersEdgesOfflineconfigurationTest()
+        {
+            // TODO: add unit test for the method 'PostProvidersEdgesOfflineconfiguration'
+            EdgeOfflineConfiguration body = null; // TODO: replace null with proper value
+            var response = instance.PostProvidersEdgesOfflineconfiguration(body);
+            Assert.IsInstanceOf<EdgeOfflineConfigurationResponse> (response, "response is EdgeOfflineConfigurationResponse");
+        }
+        
+        /// <summary>
         /// Test PostProvidersEdgesOutboundroutes
         /// </summary>
         [Test]

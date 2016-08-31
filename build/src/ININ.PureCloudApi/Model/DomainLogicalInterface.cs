@@ -50,6 +50,33 @@ namespace ININ.PureCloudApi.Model
             Deleted
         }
         /// <summary>
+        /// The type of this network interface.
+        /// </summary>
+        /// <value>The type of this network interface.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum InterfaceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Diagnostic for "DIAGNOSTIC"
+            /// </summary>
+            [EnumMember(Value = "DIAGNOSTIC")]
+            Diagnostic,
+            
+            /// <summary>
+            /// Enum System for "SYSTEM"
+            /// </summary>
+            [EnumMember(Value = "SYSTEM")]
+            System
+        }
+        /// <summary>
         /// Gets or Sets CurrentState
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
@@ -105,6 +132,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
+        /// The type of this network interface.
+        /// </summary>
+        /// <value>The type of this network interface.</value>
+        [DataMember(Name="interfaceType", EmitDefaultValue=false)]
+        public InterfaceTypeEnum? InterfaceType { get; set; }
+        /// <summary>
         /// Gets or Sets CurrentState
         /// </summary>
         [DataMember(Name="currentState", EmitDefaultValue=false)]
@@ -133,15 +166,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="VlanTagId">VlanTagId.</param>
         /// <param name="HardwareAddress">Hardware Address (required).</param>
         /// <param name="PhysicalAdapterId">Physical Adapter Id (required).</param>
-        /// <param name="IpAddress">IpAddress.</param>
-        /// <param name="Gateway">Gateway.</param>
-        /// <param name="PrimaryDns">PrimaryDns.</param>
-        /// <param name="SecondaryDns">SecondaryDns.</param>
         /// <param name="IfStatus">IfStatus.</param>
-        /// <param name="Routes">Routes.</param>
-        /// <param name="Addresses">Addresses.</param>
-        /// <param name="Ipv4Capabilities">Ipv4Capabilities.</param>
-        /// <param name="Ipv6Capabilities">Ipv6Capabilities.</param>
+        /// <param name="Routes">The list of routes assigned to this interface..</param>
+        /// <param name="Addresses">The list of IP addresses on this interface.  Priority of dns addresses are based on order in the list..</param>
+        /// <param name="Ipv4Capabilities">IPv4 interface settings..</param>
+        /// <param name="Ipv6Capabilities">IPv6 interface settings..</param>
         /// <param name="CurrentState">CurrentState.</param>
         /// <param name="LastModifiedUserId">LastModifiedUserId.</param>
         /// <param name="LastModifiedCorrelationId">LastModifiedCorrelationId.</param>
@@ -151,7 +180,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. (default to false).</param>
         /// <param name="ExternalTrunkBaseAssignments">External trunk base settings to use for external communication from this interface..</param>
         /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
-        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IpAddress = null, string Gateway = null, string PrimaryDns = null, string SecondaryDns = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
+        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -201,10 +230,6 @@ namespace ININ.PureCloudApi.Model
             this.EdgeUri = EdgeUri;
             this.EdgeAssignedId = EdgeAssignedId;
             this.VlanTagId = VlanTagId;
-            this.IpAddress = IpAddress;
-            this.Gateway = Gateway;
-            this.PrimaryDns = PrimaryDns;
-            this.SecondaryDns = SecondaryDns;
             this.IfStatus = IfStatus;
             this.Routes = Routes;
             this.Addresses = Addresses;
@@ -333,48 +358,32 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="physicalAdapterId", EmitDefaultValue=false)]
         public string PhysicalAdapterId { get; set; }
         /// <summary>
-        /// Gets or Sets IpAddress
-        /// </summary>
-        [DataMember(Name="ipAddress", EmitDefaultValue=false)]
-        public string IpAddress { get; set; }
-        /// <summary>
-        /// Gets or Sets Gateway
-        /// </summary>
-        [DataMember(Name="gateway", EmitDefaultValue=false)]
-        public string Gateway { get; set; }
-        /// <summary>
-        /// Gets or Sets PrimaryDns
-        /// </summary>
-        [DataMember(Name="primaryDns", EmitDefaultValue=false)]
-        public string PrimaryDns { get; set; }
-        /// <summary>
-        /// Gets or Sets SecondaryDns
-        /// </summary>
-        [DataMember(Name="secondaryDns", EmitDefaultValue=false)]
-        public string SecondaryDns { get; set; }
-        /// <summary>
         /// Gets or Sets IfStatus
         /// </summary>
         [DataMember(Name="ifStatus", EmitDefaultValue=false)]
         public string IfStatus { get; set; }
         /// <summary>
-        /// Gets or Sets Routes
+        /// The list of routes assigned to this interface.
         /// </summary>
+        /// <value>The list of routes assigned to this interface.</value>
         [DataMember(Name="routes", EmitDefaultValue=false)]
         public List<DomainNetworkRoute> Routes { get; set; }
         /// <summary>
-        /// Gets or Sets Addresses
+        /// The list of IP addresses on this interface.  Priority of dns addresses are based on order in the list.
         /// </summary>
+        /// <value>The list of IP addresses on this interface.  Priority of dns addresses are based on order in the list.</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<DomainNetworkAddress> Addresses { get; set; }
         /// <summary>
-        /// Gets or Sets Ipv4Capabilities
+        /// IPv4 interface settings.
         /// </summary>
+        /// <value>IPv4 interface settings.</value>
         [DataMember(Name="ipv4Capabilities", EmitDefaultValue=false)]
         public DomainCapabilities Ipv4Capabilities { get; set; }
         /// <summary>
-        /// Gets or Sets Ipv6Capabilities
+        /// IPv6 interface settings.
         /// </summary>
+        /// <value>IPv6 interface settings.</value>
         [DataMember(Name="ipv6Capabilities", EmitDefaultValue=false)]
         public DomainCapabilities Ipv6Capabilities { get; set; }
         /// <summary>
@@ -453,11 +462,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  VlanTagId: ").Append(VlanTagId).Append("\n");
             sb.Append("  HardwareAddress: ").Append(HardwareAddress).Append("\n");
             sb.Append("  PhysicalAdapterId: ").Append(PhysicalAdapterId).Append("\n");
-            sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
-            sb.Append("  Gateway: ").Append(Gateway).Append("\n");
-            sb.Append("  PrimaryDns: ").Append(PrimaryDns).Append("\n");
-            sb.Append("  SecondaryDns: ").Append(SecondaryDns).Append("\n");
             sb.Append("  IfStatus: ").Append(IfStatus).Append("\n");
+            sb.Append("  InterfaceType: ").Append(InterfaceType).Append("\n");
             sb.Append("  Routes: ").Append(Routes).Append("\n");
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  Ipv4Capabilities: ").Append(Ipv4Capabilities).Append("\n");
@@ -594,29 +600,14 @@ namespace ININ.PureCloudApi.Model
                     this.PhysicalAdapterId.Equals(other.PhysicalAdapterId)
                 ) &&
                 (
-                    this.IpAddress == other.IpAddress ||
-                    this.IpAddress != null &&
-                    this.IpAddress.Equals(other.IpAddress)
-                ) &&
-                (
-                    this.Gateway == other.Gateway ||
-                    this.Gateway != null &&
-                    this.Gateway.Equals(other.Gateway)
-                ) &&
-                (
-                    this.PrimaryDns == other.PrimaryDns ||
-                    this.PrimaryDns != null &&
-                    this.PrimaryDns.Equals(other.PrimaryDns)
-                ) &&
-                (
-                    this.SecondaryDns == other.SecondaryDns ||
-                    this.SecondaryDns != null &&
-                    this.SecondaryDns.Equals(other.SecondaryDns)
-                ) &&
-                (
                     this.IfStatus == other.IfStatus ||
                     this.IfStatus != null &&
                     this.IfStatus.Equals(other.IfStatus)
+                ) &&
+                (
+                    this.InterfaceType == other.InterfaceType ||
+                    this.InterfaceType != null &&
+                    this.InterfaceType.Equals(other.InterfaceType)
                 ) &&
                 (
                     this.Routes == other.Routes ||
@@ -735,16 +726,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.HardwareAddress.GetHashCode();
                 if (this.PhysicalAdapterId != null)
                     hash = hash * 59 + this.PhysicalAdapterId.GetHashCode();
-                if (this.IpAddress != null)
-                    hash = hash * 59 + this.IpAddress.GetHashCode();
-                if (this.Gateway != null)
-                    hash = hash * 59 + this.Gateway.GetHashCode();
-                if (this.PrimaryDns != null)
-                    hash = hash * 59 + this.PrimaryDns.GetHashCode();
-                if (this.SecondaryDns != null)
-                    hash = hash * 59 + this.SecondaryDns.GetHashCode();
                 if (this.IfStatus != null)
                     hash = hash * 59 + this.IfStatus.GetHashCode();
+                if (this.InterfaceType != null)
+                    hash = hash * 59 + this.InterfaceType.GetHashCode();
                 if (this.Routes != null)
                     hash = hash * 59 + this.Routes.GetHashCode();
                 if (this.Addresses != null)

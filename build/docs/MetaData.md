@@ -8,7 +8,7 @@ title: MetaData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **PairingToken** | **string** |  | [optional] |
-| **PairingTrust** | **string** |  | [optional] |
+| **PairingTrust** | **List&lt;string&gt;** |  | [optional] |
 | **PairingUrl** | **string** |  | [optional] |
 {: class="table table-striped"}
 

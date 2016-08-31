@@ -22,8 +22,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>VirtualEdgeSetupPackage</returns>
-        VirtualEdgeSetupPackage GetProvidersEdgesEdgeIdSetuppackage (string edgeId);
+        /// <returns>VmPairingInfo</returns>
+        VmPairingInfo GetProvidersEdgesEdgeIdSetuppackage (string edgeId);
 
         /// <summary>
         /// Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
@@ -33,8 +33,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>ApiResponse of VirtualEdgeSetupPackage</returns>
-        ApiResponse<VirtualEdgeSetupPackage> GetProvidersEdgesEdgeIdSetuppackageWithHttpInfo (string edgeId);
+        /// <returns>ApiResponse of VmPairingInfo</returns>
+        ApiResponse<VmPairingInfo> GetProvidersEdgesEdgeIdSetuppackageWithHttpInfo (string edgeId);
         /// <summary>
         /// Get encryption key list
         /// </summary>
@@ -127,8 +127,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of VirtualEdgeSetupPackage</returns>
-        System.Threading.Tasks.Task<VirtualEdgeSetupPackage> GetProvidersEdgesEdgeIdSetuppackageAsync (string edgeId);
+        /// <returns>Task of VmPairingInfo</returns>
+        System.Threading.Tasks.Task<VmPairingInfo> GetProvidersEdgesEdgeIdSetuppackageAsync (string edgeId);
 
         /// <summary>
         /// Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
@@ -138,8 +138,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of ApiResponse (VirtualEdgeSetupPackage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VirtualEdgeSetupPackage>> GetProvidersEdgesEdgeIdSetuppackageAsyncWithHttpInfo (string edgeId);
+        /// <returns>Task of ApiResponse (VmPairingInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VmPairingInfo>> GetProvidersEdgesEdgeIdSetuppackageAsyncWithHttpInfo (string edgeId);
         /// <summary>
         /// Get encryption key list
         /// </summary>
@@ -317,10 +317,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>VirtualEdgeSetupPackage</returns>
-        public VirtualEdgeSetupPackage GetProvidersEdgesEdgeIdSetuppackage (string edgeId)
+        /// <returns>VmPairingInfo</returns>
+        public VmPairingInfo GetProvidersEdgesEdgeIdSetuppackage (string edgeId)
         {
-             ApiResponse<VirtualEdgeSetupPackage> localVarResponse = GetProvidersEdgesEdgeIdSetuppackageWithHttpInfo(edgeId);
+             ApiResponse<VmPairingInfo> localVarResponse = GetProvidersEdgesEdgeIdSetuppackageWithHttpInfo(edgeId);
              return localVarResponse.Data;
         }
 
@@ -329,8 +329,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>ApiResponse of VirtualEdgeSetupPackage</returns>
-        public ApiResponse< VirtualEdgeSetupPackage > GetProvidersEdgesEdgeIdSetuppackageWithHttpInfo (string edgeId)
+        /// <returns>ApiResponse of VmPairingInfo</returns>
+        public ApiResponse< VmPairingInfo > GetProvidersEdgesEdgeIdSetuppackageWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -382,9 +382,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesEdgeIdSetuppackage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<VirtualEdgeSetupPackage>(localVarStatusCode,
+            return new ApiResponse<VmPairingInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (VirtualEdgeSetupPackage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VirtualEdgeSetupPackage)));
+                (VmPairingInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VmPairingInfo)));
             
         }
 
@@ -393,10 +393,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of VirtualEdgeSetupPackage</returns>
-        public async System.Threading.Tasks.Task<VirtualEdgeSetupPackage> GetProvidersEdgesEdgeIdSetuppackageAsync (string edgeId)
+        /// <returns>Task of VmPairingInfo</returns>
+        public async System.Threading.Tasks.Task<VmPairingInfo> GetProvidersEdgesEdgeIdSetuppackageAsync (string edgeId)
         {
-             ApiResponse<VirtualEdgeSetupPackage> localVarResponse = await GetProvidersEdgesEdgeIdSetuppackageAsyncWithHttpInfo(edgeId);
+             ApiResponse<VmPairingInfo> localVarResponse = await GetProvidersEdgesEdgeIdSetuppackageAsyncWithHttpInfo(edgeId);
              return localVarResponse.Data;
 
         }
@@ -406,8 +406,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of ApiResponse (VirtualEdgeSetupPackage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VirtualEdgeSetupPackage>> GetProvidersEdgesEdgeIdSetuppackageAsyncWithHttpInfo (string edgeId)
+        /// <returns>Task of ApiResponse (VmPairingInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VmPairingInfo>> GetProvidersEdgesEdgeIdSetuppackageAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -459,9 +459,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesEdgeIdSetuppackage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<VirtualEdgeSetupPackage>(localVarStatusCode,
+            return new ApiResponse<VmPairingInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (VirtualEdgeSetupPackage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VirtualEdgeSetupPackage)));
+                (VmPairingInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VmPairingInfo)));
             
         }
 

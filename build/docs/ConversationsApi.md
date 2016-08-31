@@ -24,6 +24,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetChatsChatId**](ConversationsApi.html#getchatschatid) | **GET** /api/v2/conversations/chats/{chatId} | Get chat conversation |
 | [**GetChatsChatIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getchatschatidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetChatsChatIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getchatschatidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetCobrowsesessions**](ConversationsApi.html#getcobrowsesessions) | **GET** /api/v2/conversations/cobrowsesessions | Get recent cobrowse conversations |
+| [**GetCobrowsesessionsCobrowseId**](ConversationsApi.html#getcobrowsesessionscobrowseid) | **GET** /api/v2/conversations/cobrowsesessions/{cobrowseId} | Get cobrowse conversation |
+| [**GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getcobrowsesessionscobrowseidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getcobrowsesessionscobrowseidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationId**](ConversationsApi.html#getconversationid) | **GET** /api/v2/conversations/{conversationId} | Get conversation |
 | [**GetConversationIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getconversationidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getconversationidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
@@ -49,6 +53,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchChatsChatIdParticipantsParticipantId**](ConversationsApi.html#patchchatschatidparticipantsparticipantid) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId} | Update conversation participant |
 | [**PatchChatsChatIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchchatschatidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchchatschatidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchCobrowsesessionsCobrowseId**](ConversationsApi.html#patchcobrowsesessionscobrowseid) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId} | Update a conversation by disconnecting all of the participants |
+| [**PatchCobrowsesessionsCobrowseIdParticipantsParticipantId**](ConversationsApi.html#patchcobrowsesessionscobrowseidparticipantsparticipantid) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId} | Update conversation participant |
+| [**PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchcobrowsesessionscobrowseidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchcobrowsesessionscobrowseidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
 | [**PatchConversationIdParticipantsParticipantId**](ConversationsApi.html#patchconversationidparticipantsparticipantid) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchconversationidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchEmailsEmailId**](ConversationsApi.html#patchemailsemailid) | **PATCH** /api/v2/conversations/emails/{emailId} | Update a conversation by disconnecting all of the participants |
@@ -63,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostCallsCallIdParticipantsParticipantIdMonitor**](ConversationsApi.html#postcallscallidparticipantsparticipantidmonitor) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
 | [**PostCallsCallIdParticipantsParticipantIdReplace**](ConversationsApi.html#postcallscallidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostChatsChatIdParticipantsParticipantIdReplace**](ConversationsApi.html#postchatschatidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/chats/{chatId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace**](ConversationsApi.html#postcobrowsesessionscobrowseidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationIdParticipantsParticipantIdCallbacks**](ConversationsApi.html#postconversationidparticipantsparticipantidcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
 | [**PostConversationIdParticipantsParticipantIdReplace**](ConversationsApi.html#postconversationidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsAggregatesQuery**](ConversationsApi.html#postconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
@@ -1028,6 +1037,231 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **chatId** | **string**| chatId |  |
+| **participantId** | **string**| participantId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<WrapupCode>**](WrapupCode.html)
+
+<a name="getcobrowsesessions"></a>
+
+## [**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html) GetCobrowsesessions ()
+
+Get recent cobrowse conversations
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCobrowsesessionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+
+            try
+            {
+                // Get recent cobrowse conversations
+                CobrowseConversationEntityListing result = apiInstance.GetCobrowsesessions();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCobrowsesessions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html)
+
+<a name="getcobrowsesessionscobrowseid"></a>
+
+## [**CobrowseConversation**](CobrowseConversation.html) GetCobrowsesessionsCobrowseId (string cobrowseId)
+
+Get cobrowse conversation
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCobrowsesessionsCobrowseIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+
+            try
+            {
+                // Get cobrowse conversation
+                CobrowseConversation result = apiInstance.GetCobrowsesessionsCobrowseId(cobrowseId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCobrowsesessionsCobrowseId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CobrowseConversation**](CobrowseConversation.html)
+
+<a name="getcobrowsesessionscobrowseidparticipantsparticipantidwrapup"></a>
+
+## [**Wrapup**](Wrapup.html) GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup (string cobrowseId, string participantId, bool? provisional = null)
+
+Get the wrap-up for this conversation participant. 
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+
+            try
+            {
+                // Get the wrap-up for this conversation participant. 
+                Wrapup result = apiInstance.GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup(cobrowseId, participantId, provisional);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**Wrapup**](Wrapup.html)
+
+<a name="getcobrowsesessionscobrowseidparticipantsparticipantidwrapupcodes"></a>
+
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes (string cobrowseId, string participantId)
+
+Get list of wrapup codes for this conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+
+            try
+            {
+                // Get list of wrapup codes for this conversation participant
+                List&lt;WrapupCode&gt; result = apiInstance.GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes(cobrowseId, participantId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
 | **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
@@ -2487,6 +2721,243 @@ namespace Example
 
 void (empty response body)
 
+<a name="patchcobrowsesessionscobrowseid"></a>
+
+## [**Conversation**](Conversation.html) PatchCobrowsesessionsCobrowseId (string cobrowseId, Conversation body)
+
+Update a conversation by disconnecting all of the participants
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCobrowsesessionsCobrowseIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var body = new Conversation(); // Conversation | Conversation
+
+            try
+            {
+                // Update a conversation by disconnecting all of the participants
+                Conversation result = apiInstance.PatchCobrowsesessionsCobrowseId(cobrowseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCobrowsesessionsCobrowseId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **body** | [**Conversation**](Conversation.html)| Conversation |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Conversation**](Conversation.html)
+
+<a name="patchcobrowsesessionscobrowseidparticipantsparticipantid"></a>
+
+## void PatchCobrowsesessionsCobrowseIdParticipantsParticipantId (string cobrowseId, string participantId, MediaParticipantRequest body = null)
+
+Update conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
+
+            try
+            {
+                // Update conversation participant
+                apiInstance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantId(cobrowseId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCobrowsesessionsCobrowseIdParticipantsParticipantId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchcobrowsesessionscobrowseidparticipantsparticipantidattributes"></a>
+
+## void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes (string cobrowseId, string participantId, ParticipantAttributes body = null)
+
+Update the attributes on a conversation participant.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
+
+            try
+            {
+                // Update the attributes on a conversation participant.
+                apiInstance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes(cobrowseId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchcobrowsesessionscobrowseidparticipantsparticipantidcommunicationscommunicationid"></a>
+
+## void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+
+Update conversation participant's communication by disconnecting it.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+            var communicationId = communicationId_example;  // string | communicationId
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+
+            try
+            {
+                // Update conversation participant's communication by disconnecting it.
+                apiInstance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId(cobrowseId, participantId, communicationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="patchconversationidparticipantsparticipantid"></a>
 
 ## void PatchConversationIdParticipantsParticipantId (string conversationId, string participantId, MediaParticipantRequest body)
@@ -3297,6 +3768,65 @@ namespace Example
 | **chatId** | **string**| chatId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postcobrowsesessionscobrowseidparticipantsparticipantidreplace"></a>
+
+## void PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace (string cobrowseId, string participantId, TransferRequest body = null)
+
+Replace this participant with the specified user and/or address
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+            var body = new TransferRequest(); // TransferRequest |  (optional) 
+
+            try
+            {
+                // Replace this participant with the specified user and/or address
+                apiInstance.PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace(cobrowseId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

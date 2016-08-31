@@ -27,7 +27,7 @@ title: Edge
 | **SoftwareVersionPlatform** | **string** |  | [optional] |
 | **SoftwareVersionConfiguration** | **string** |  | [optional] |
 | **FullSoftwareVersion** | **string** |  | [optional] |
-| **PairingId** | **string** |  | [optional] |
+| **PairingId** | **string** | The pairing Id for a hardware Edge in the format: 00000-00000-00000-00000-00000. This field is only required when creating an Edge with a deployment type of HARDWARE. | [optional] |
 | **Fingerprint** | **string** |  | [optional] |
 | **FingerprintHint** | **string** |  | [optional] |
 | **CurrentVersion** | **string** |  | [optional] |

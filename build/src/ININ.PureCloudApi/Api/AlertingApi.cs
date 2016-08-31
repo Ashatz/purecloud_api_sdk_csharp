@@ -15,6 +15,48 @@ namespace ININ.PureCloudApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Delete a heart beat alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns></returns>
+        void DeleteHeartbeatAlertsAlertId (string alertId);
+
+        /// <summary>
+        /// Delete a heart beat alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteHeartbeatAlertsAlertIdWithHttpInfo (string alertId);
+        /// <summary>
+        /// Delete a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns></returns>
+        void DeleteHeartbeatRulesRuleId (string ruleId);
+
+        /// <summary>
+        /// Delete a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteHeartbeatRulesRuleIdWithHttpInfo (string ruleId);
+        /// <summary>
         /// Delete an interaction stats alert
         /// </summary>
         /// <remarks>
@@ -56,6 +98,86 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteInteractionstatsRulesRuleIdWithHttpInfo (string ruleId);
+        /// <summary>
+        /// Get heart beat alert list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>HeartBeatAlertContainer</returns>
+        HeartBeatAlertContainer GetHeartbeatAlerts ();
+
+        /// <summary>
+        /// Get heart beat alert list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of HeartBeatAlertContainer</returns>
+        ApiResponse<HeartBeatAlertContainer> GetHeartbeatAlertsWithHttpInfo ();
+        /// <summary>
+        /// Get a heart beat alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>HeartBeatAlert</returns>
+        HeartBeatAlert GetHeartbeatAlertsAlertId (string alertId);
+
+        /// <summary>
+        /// Get a heart beat alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>ApiResponse of HeartBeatAlert</returns>
+        ApiResponse<HeartBeatAlert> GetHeartbeatAlertsAlertIdWithHttpInfo (string alertId);
+        /// <summary>
+        /// Get a heart beat rule list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>HeartBeatRuleContainer</returns>
+        HeartBeatRuleContainer GetHeartbeatRules ();
+
+        /// <summary>
+        /// Get a heart beat rule list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of HeartBeatRuleContainer</returns>
+        ApiResponse<HeartBeatRuleContainer> GetHeartbeatRulesWithHttpInfo ();
+        /// <summary>
+        /// Get a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>HeartBeatRule</returns>
+        HeartBeatRule GetHeartbeatRulesRuleId (string ruleId);
+
+        /// <summary>
+        /// Get a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>ApiResponse of HeartBeatRule</returns>
+        ApiResponse<HeartBeatRule> GetHeartbeatRulesRuleIdWithHttpInfo (string ruleId);
         /// <summary>
         /// Get interaction stats alert list.
         /// </summary>
@@ -156,6 +278,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of InteractionStatsRule</returns>
         ApiResponse<InteractionStatsRule> GetInteractionstatsRulesRuleIdWithHttpInfo (string ruleId);
         /// <summary>
+        /// Create a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>HeartBeatRule</returns>
+        HeartBeatRule PostHeartbeatRules (HeartBeatRule body);
+
+        /// <summary>
+        /// Create a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>ApiResponse of HeartBeatRule</returns>
+        ApiResponse<HeartBeatRule> PostHeartbeatRulesWithHttpInfo (HeartBeatRule body);
+        /// <summary>
         /// Create an interaction stats rule.
         /// </summary>
         /// <remarks>
@@ -176,6 +319,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">AlertingRule</param>
         /// <returns>ApiResponse of InteractionStatsRule</returns>
         ApiResponse<InteractionStatsRule> PostInteractionstatsRulesWithHttpInfo (InteractionStatsRule body);
+        /// <summary>
+        /// Update a heart beat rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>HeartBeatRule</returns>
+        HeartBeatRule PutHeartbeatRulesRuleId (string ruleId, HeartBeatRule body);
+
+        /// <summary>
+        /// Update a heart beat rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>ApiResponse of HeartBeatRule</returns>
+        ApiResponse<HeartBeatRule> PutHeartbeatRulesRuleIdWithHttpInfo (string ruleId, HeartBeatRule body);
         /// <summary>
         /// Update an interaction stats alert read status
         /// </summary>
@@ -225,6 +391,48 @@ namespace ININ.PureCloudApi.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Delete a heart beat alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteHeartbeatAlertsAlertIdAsync (string alertId);
+
+        /// <summary>
+        /// Delete a heart beat alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteHeartbeatAlertsAlertIdAsyncWithHttpInfo (string alertId);
+        /// <summary>
+        /// Delete a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteHeartbeatRulesRuleIdAsync (string ruleId);
+
+        /// <summary>
+        /// Delete a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteHeartbeatRulesRuleIdAsyncWithHttpInfo (string ruleId);
+        /// <summary>
         /// Delete an interaction stats alert
         /// </summary>
         /// <remarks>
@@ -266,6 +474,86 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteInteractionstatsRulesRuleIdAsyncWithHttpInfo (string ruleId);
+        /// <summary>
+        /// Get heart beat alert list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of HeartBeatAlertContainer</returns>
+        System.Threading.Tasks.Task<HeartBeatAlertContainer> GetHeartbeatAlertsAsync ();
+
+        /// <summary>
+        /// Get heart beat alert list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (HeartBeatAlertContainer)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HeartBeatAlertContainer>> GetHeartbeatAlertsAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get a heart beat alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of HeartBeatAlert</returns>
+        System.Threading.Tasks.Task<HeartBeatAlert> GetHeartbeatAlertsAlertIdAsync (string alertId);
+
+        /// <summary>
+        /// Get a heart beat alert
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of ApiResponse (HeartBeatAlert)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HeartBeatAlert>> GetHeartbeatAlertsAlertIdAsyncWithHttpInfo (string alertId);
+        /// <summary>
+        /// Get a heart beat rule list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of HeartBeatRuleContainer</returns>
+        System.Threading.Tasks.Task<HeartBeatRuleContainer> GetHeartbeatRulesAsync ();
+
+        /// <summary>
+        /// Get a heart beat rule list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (HeartBeatRuleContainer)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HeartBeatRuleContainer>> GetHeartbeatRulesAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of HeartBeatRule</returns>
+        System.Threading.Tasks.Task<HeartBeatRule> GetHeartbeatRulesRuleIdAsync (string ruleId);
+
+        /// <summary>
+        /// Get a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of ApiResponse (HeartBeatRule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HeartBeatRule>> GetHeartbeatRulesRuleIdAsyncWithHttpInfo (string ruleId);
         /// <summary>
         /// Get interaction stats alert list.
         /// </summary>
@@ -366,6 +654,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> GetInteractionstatsRulesRuleIdAsyncWithHttpInfo (string ruleId);
         /// <summary>
+        /// Create a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>Task of HeartBeatRule</returns>
+        System.Threading.Tasks.Task<HeartBeatRule> PostHeartbeatRulesAsync (HeartBeatRule body);
+
+        /// <summary>
+        /// Create a heart beat rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>Task of ApiResponse (HeartBeatRule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HeartBeatRule>> PostHeartbeatRulesAsyncWithHttpInfo (HeartBeatRule body);
+        /// <summary>
         /// Create an interaction stats rule.
         /// </summary>
         /// <remarks>
@@ -386,6 +695,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">AlertingRule</param>
         /// <returns>Task of ApiResponse (InteractionStatsRule)</returns>
         System.Threading.Tasks.Task<ApiResponse<InteractionStatsRule>> PostInteractionstatsRulesAsyncWithHttpInfo (InteractionStatsRule body);
+        /// <summary>
+        /// Update a heart beat rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>Task of HeartBeatRule</returns>
+        System.Threading.Tasks.Task<HeartBeatRule> PutHeartbeatRulesRuleIdAsync (string ruleId, HeartBeatRule body);
+
+        /// <summary>
+        /// Update a heart beat rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>Task of ApiResponse (HeartBeatRule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HeartBeatRule>> PutHeartbeatRulesRuleIdAsyncWithHttpInfo (string ruleId, HeartBeatRule body);
         /// <summary>
         /// Update an interaction stats alert read status
         /// </summary>
@@ -520,6 +852,308 @@ namespace ININ.PureCloudApi.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Delete a heart beat alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns></returns>
+        public void DeleteHeartbeatAlertsAlertId (string alertId)
+        {
+             DeleteHeartbeatAlertsAlertIdWithHttpInfo(alertId);
+        }
+
+        /// <summary>
+        /// Delete a heart beat alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteHeartbeatAlertsAlertIdWithHttpInfo (string alertId)
+        {
+            // verify the required parameter 'alertId' is set
+            if (alertId == null)
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->DeleteHeartbeatAlertsAlertId");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/alerts/{alertId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (alertId != null) localVarPathParams.Add("alertId", Configuration.ApiClient.ParameterToString(alertId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteHeartbeatAlertsAlertId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteHeartbeatAlertsAlertId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete a heart beat alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteHeartbeatAlertsAlertIdAsync (string alertId)
+        {
+             await DeleteHeartbeatAlertsAlertIdAsyncWithHttpInfo(alertId);
+
+        }
+
+        /// <summary>
+        /// Delete a heart beat alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteHeartbeatAlertsAlertIdAsyncWithHttpInfo (string alertId)
+        {
+            // verify the required parameter 'alertId' is set
+            if (alertId == null)
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->DeleteHeartbeatAlertsAlertId");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/alerts/{alertId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (alertId != null) localVarPathParams.Add("alertId", Configuration.ApiClient.ParameterToString(alertId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteHeartbeatAlertsAlertId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteHeartbeatAlertsAlertId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns></returns>
+        public void DeleteHeartbeatRulesRuleId (string ruleId)
+        {
+             DeleteHeartbeatRulesRuleIdWithHttpInfo(ruleId);
+        }
+
+        /// <summary>
+        /// Delete a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteHeartbeatRulesRuleIdWithHttpInfo (string ruleId)
+        {
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->DeleteHeartbeatRulesRuleId");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ruleId != null) localVarPathParams.Add("ruleId", Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteHeartbeatRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteHeartbeatRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteHeartbeatRulesRuleIdAsync (string ruleId)
+        {
+             await DeleteHeartbeatRulesRuleIdAsyncWithHttpInfo(ruleId);
+
+        }
+
+        /// <summary>
+        /// Delete a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteHeartbeatRulesRuleIdAsyncWithHttpInfo (string ruleId)
+        {
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->DeleteHeartbeatRulesRuleId");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ruleId != null) localVarPathParams.Add("ruleId", Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteHeartbeatRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteHeartbeatRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
@@ -822,6 +1456,594 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+
+        /// <summary>
+        /// Get heart beat alert list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>HeartBeatAlertContainer</returns>
+        public HeartBeatAlertContainer GetHeartbeatAlerts ()
+        {
+             ApiResponse<HeartBeatAlertContainer> localVarResponse = GetHeartbeatAlertsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get heart beat alert list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of HeartBeatAlertContainer</returns>
+        public ApiResponse< HeartBeatAlertContainer > GetHeartbeatAlertsWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/alerting/heartbeat/alerts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatAlerts: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatAlerts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatAlertContainer>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatAlertContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatAlertContainer)));
+            
+        }
+
+        /// <summary>
+        /// Get heart beat alert list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of HeartBeatAlertContainer</returns>
+        public async System.Threading.Tasks.Task<HeartBeatAlertContainer> GetHeartbeatAlertsAsync ()
+        {
+             ApiResponse<HeartBeatAlertContainer> localVarResponse = await GetHeartbeatAlertsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get heart beat alert list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (HeartBeatAlertContainer)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HeartBeatAlertContainer>> GetHeartbeatAlertsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/alerting/heartbeat/alerts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatAlerts: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatAlerts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatAlertContainer>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatAlertContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatAlertContainer)));
+            
+        }
+
+        /// <summary>
+        /// Get a heart beat alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>HeartBeatAlert</returns>
+        public HeartBeatAlert GetHeartbeatAlertsAlertId (string alertId)
+        {
+             ApiResponse<HeartBeatAlert> localVarResponse = GetHeartbeatAlertsAlertIdWithHttpInfo(alertId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a heart beat alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>ApiResponse of HeartBeatAlert</returns>
+        public ApiResponse< HeartBeatAlert > GetHeartbeatAlertsAlertIdWithHttpInfo (string alertId)
+        {
+            // verify the required parameter 'alertId' is set
+            if (alertId == null)
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->GetHeartbeatAlertsAlertId");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/alerts/{alertId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (alertId != null) localVarPathParams.Add("alertId", Configuration.ApiClient.ParameterToString(alertId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatAlertsAlertId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatAlertsAlertId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatAlert>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatAlert) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatAlert)));
+            
+        }
+
+        /// <summary>
+        /// Get a heart beat alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of HeartBeatAlert</returns>
+        public async System.Threading.Tasks.Task<HeartBeatAlert> GetHeartbeatAlertsAlertIdAsync (string alertId)
+        {
+             ApiResponse<HeartBeatAlert> localVarResponse = await GetHeartbeatAlertsAlertIdAsyncWithHttpInfo(alertId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a heart beat alert 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="alertId">Alert ID</param>
+        /// <returns>Task of ApiResponse (HeartBeatAlert)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HeartBeatAlert>> GetHeartbeatAlertsAlertIdAsyncWithHttpInfo (string alertId)
+        {
+            // verify the required parameter 'alertId' is set
+            if (alertId == null)
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->GetHeartbeatAlertsAlertId");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/alerts/{alertId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (alertId != null) localVarPathParams.Add("alertId", Configuration.ApiClient.ParameterToString(alertId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatAlertsAlertId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatAlertsAlertId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatAlert>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatAlert) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatAlert)));
+            
+        }
+
+        /// <summary>
+        /// Get a heart beat rule list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>HeartBeatRuleContainer</returns>
+        public HeartBeatRuleContainer GetHeartbeatRules ()
+        {
+             ApiResponse<HeartBeatRuleContainer> localVarResponse = GetHeartbeatRulesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a heart beat rule list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of HeartBeatRuleContainer</returns>
+        public ApiResponse< HeartBeatRuleContainer > GetHeartbeatRulesWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/alerting/heartbeat/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatRules: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatRuleContainer>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatRuleContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatRuleContainer)));
+            
+        }
+
+        /// <summary>
+        /// Get a heart beat rule list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of HeartBeatRuleContainer</returns>
+        public async System.Threading.Tasks.Task<HeartBeatRuleContainer> GetHeartbeatRulesAsync ()
+        {
+             ApiResponse<HeartBeatRuleContainer> localVarResponse = await GetHeartbeatRulesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a heart beat rule list. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (HeartBeatRuleContainer)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HeartBeatRuleContainer>> GetHeartbeatRulesAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/alerting/heartbeat/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatRules: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatRuleContainer>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatRuleContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatRuleContainer)));
+            
+        }
+
+        /// <summary>
+        /// Get a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>HeartBeatRule</returns>
+        public HeartBeatRule GetHeartbeatRulesRuleId (string ruleId)
+        {
+             ApiResponse<HeartBeatRule> localVarResponse = GetHeartbeatRulesRuleIdWithHttpInfo(ruleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>ApiResponse of HeartBeatRule</returns>
+        public ApiResponse< HeartBeatRule > GetHeartbeatRulesRuleIdWithHttpInfo (string ruleId)
+        {
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->GetHeartbeatRulesRuleId");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ruleId != null) localVarPathParams.Add("ruleId", Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatRule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatRule)));
+            
+        }
+
+        /// <summary>
+        /// Get a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of HeartBeatRule</returns>
+        public async System.Threading.Tasks.Task<HeartBeatRule> GetHeartbeatRulesRuleIdAsync (string ruleId)
+        {
+             ApiResponse<HeartBeatRule> localVarResponse = await GetHeartbeatRulesRuleIdAsyncWithHttpInfo(ruleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <returns>Task of ApiResponse (HeartBeatRule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HeartBeatRule>> GetHeartbeatRulesRuleIdAsyncWithHttpInfo (string ruleId)
+        {
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->GetHeartbeatRulesRuleId");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ruleId != null) localVarPathParams.Add("ruleId", Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetHeartbeatRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatRule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatRule)));
+            
         }
 
         /// <summary>
@@ -1554,6 +2776,173 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Create a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>HeartBeatRule</returns>
+        public HeartBeatRule PostHeartbeatRules (HeartBeatRule body)
+        {
+             ApiResponse<HeartBeatRule> localVarResponse = PostHeartbeatRulesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>ApiResponse of HeartBeatRule</returns>
+        public ApiResponse< HeartBeatRule > PostHeartbeatRulesWithHttpInfo (HeartBeatRule body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PostHeartbeatRules");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostHeartbeatRules: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostHeartbeatRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatRule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatRule)));
+            
+        }
+
+        /// <summary>
+        /// Create a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>Task of HeartBeatRule</returns>
+        public async System.Threading.Tasks.Task<HeartBeatRule> PostHeartbeatRulesAsync (HeartBeatRule body)
+        {
+             ApiResponse<HeartBeatRule> localVarResponse = await PostHeartbeatRulesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a heart beat rule. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>Task of ApiResponse (HeartBeatRule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HeartBeatRule>> PostHeartbeatRulesAsyncWithHttpInfo (HeartBeatRule body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PostHeartbeatRules");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/rules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostHeartbeatRules: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostHeartbeatRules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatRule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatRule)));
+            
+        }
+
+        /// <summary>
         /// Create an interaction stats rule. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1717,6 +3106,185 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<InteractionStatsRule>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (InteractionStatsRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InteractionStatsRule)));
+            
+        }
+
+        /// <summary>
+        /// Update a heart beat rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>HeartBeatRule</returns>
+        public HeartBeatRule PutHeartbeatRulesRuleId (string ruleId, HeartBeatRule body)
+        {
+             ApiResponse<HeartBeatRule> localVarResponse = PutHeartbeatRulesRuleIdWithHttpInfo(ruleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a heart beat rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>ApiResponse of HeartBeatRule</returns>
+        public ApiResponse< HeartBeatRule > PutHeartbeatRulesRuleIdWithHttpInfo (string ruleId, HeartBeatRule body)
+        {
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->PutHeartbeatRulesRuleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutHeartbeatRulesRuleId");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ruleId != null) localVarPathParams.Add("ruleId", Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutHeartbeatRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutHeartbeatRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatRule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatRule)));
+            
+        }
+
+        /// <summary>
+        /// Update a heart beat rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>Task of HeartBeatRule</returns>
+        public async System.Threading.Tasks.Task<HeartBeatRule> PutHeartbeatRulesRuleIdAsync (string ruleId, HeartBeatRule body)
+        {
+             ApiResponse<HeartBeatRule> localVarResponse = await PutHeartbeatRulesRuleIdAsyncWithHttpInfo(ruleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a heart beat rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ruleId">Rule ID</param>
+        /// <param name="body">HeartBeatRule</param>
+        /// <returns>Task of ApiResponse (HeartBeatRule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HeartBeatRule>> PutHeartbeatRulesRuleIdAsyncWithHttpInfo (string ruleId, HeartBeatRule body)
+        {
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->PutHeartbeatRulesRuleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutHeartbeatRulesRuleId");
+
+            var localVarPath = "/api/v2/alerting/heartbeat/rules/{ruleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ruleId != null) localVarPathParams.Add("ruleId", Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutHeartbeatRulesRuleId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutHeartbeatRulesRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HeartBeatRule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HeartBeatRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HeartBeatRule)));
             
         }
 

@@ -18,13 +18,91 @@ namespace ININ.PureCloudApi.Model
     public partial class DomainNetworkAddress :  IEquatable<DomainNetworkAddress>
     {
         /// <summary>
+        /// The type of address.
+        /// </summary>
+        /// <value>The type of address.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Ip for "ip"
+            /// </summary>
+            [EnumMember(Value = "ip")]
+            Ip,
+            
+            /// <summary>
+            /// Enum Dns for "dns"
+            /// </summary>
+            [EnumMember(Value = "dns")]
+            Dns,
+            
+            /// <summary>
+            /// Enum Gateway for "gateway"
+            /// </summary>
+            [EnumMember(Value = "gateway")]
+            Gateway,
+            
+            /// <summary>
+            /// Enum Tdm for "tdm"
+            /// </summary>
+            [EnumMember(Value = "tdm")]
+            Tdm
+        }
+        /// <summary>
+        /// The address family for this address.
+        /// </summary>
+        /// <value>The address family for this address.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FamilyEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum NUMBER_2 for 2
+            /// </summary>
+            [EnumMember(Value = "2")]
+            NUMBER_2 = 2,
+            
+            /// <summary>
+            /// Enum NUMBER_23 for 23
+            /// </summary>
+            [EnumMember(Value = "23")]
+            NUMBER_23 = 23
+        }
+        /// <summary>
+        /// The type of address.
+        /// </summary>
+        /// <value>The type of address.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// The address family for this address.
+        /// </summary>
+        /// <value>The address family for this address.</value>
+        [DataMember(Name="family", EmitDefaultValue=false)]
+        public FamilyEnum? Family { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkAddress" /> class.
         /// </summary>
-        /// <param name="Type">Type.</param>
-        /// <param name="Address">Address.</param>
-        /// <param name="Persistent">Persistent (default to false).</param>
-        /// <param name="Family">Family.</param>
-        public DomainNetworkAddress(string Type = null, string Address = null, bool? Persistent = null, int? Family = null)
+        /// <param name="Type">The type of address..</param>
+        /// <param name="Address">An IPv4 or IPv6 IP address. When specifying an address of type \&quot;ip\&quot;, use CIDR format for the subnet mask..</param>
+        /// <param name="Persistent">True if this address will persist on Edge restart.  Addresses assigned by DHCP will be returned as false. (default to false).</param>
+        /// <param name="Family">The address family for this address..</param>
+        public DomainNetworkAddress(TypeEnum? Type = null, string Address = null, bool? Persistent = null, FamilyEnum? Family = null)
         {
             this.Type = Type;
             this.Address = Address;
@@ -41,25 +119,17 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets Type
+        /// An IPv4 or IPv6 IP address. When specifying an address of type \&quot;ip\&quot;, use CIDR format for the subnet mask.
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-        /// <summary>
-        /// Gets or Sets Address
-        /// </summary>
+        /// <value>An IPv4 or IPv6 IP address. When specifying an address of type \&quot;ip\&quot;, use CIDR format for the subnet mask.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
         /// <summary>
-        /// Gets or Sets Persistent
+        /// True if this address will persist on Edge restart.  Addresses assigned by DHCP will be returned as false.
         /// </summary>
+        /// <value>True if this address will persist on Edge restart.  Addresses assigned by DHCP will be returned as false.</value>
         [DataMember(Name="persistent", EmitDefaultValue=false)]
         public bool? Persistent { get; set; }
-        /// <summary>
-        /// Gets or Sets Family
-        /// </summary>
-        [DataMember(Name="family", EmitDefaultValue=false)]
-        public int? Family { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -291,6 +291,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetCampaignsCampaignIdInteractions
+        /// </summary>
+        [Test]
+        public void GetCampaignsCampaignIdInteractionsTest()
+        {
+            // TODO: add unit test for the method 'GetCampaignsCampaignIdInteractions'
+            string campaignId = null; // TODO: replace null with proper value
+            var response = instance.GetCampaignsCampaignIdInteractions(campaignId);
+            Assert.IsInstanceOf<CampaignInteractions> (response, "response is CampaignInteractions");
+        }
+        
+        /// <summary>
         /// Test GetCampaignsCampaignIdProgress
         /// </summary>
         [Test]

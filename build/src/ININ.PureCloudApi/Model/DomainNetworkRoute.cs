@@ -18,14 +18,47 @@ namespace ININ.PureCloudApi.Model
     public partial class DomainNetworkRoute :  IEquatable<DomainNetworkRoute>
     {
         /// <summary>
+        /// The address family for this route.
+        /// </summary>
+        /// <value>The address family for this route.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FamilyEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum NUMBER_2 for 2
+            /// </summary>
+            [EnumMember(Value = "2")]
+            NUMBER_2 = 2,
+            
+            /// <summary>
+            /// Enum NUMBER_23 for 23
+            /// </summary>
+            [EnumMember(Value = "23")]
+            NUMBER_23 = 23
+        }
+        /// <summary>
+        /// The address family for this route.
+        /// </summary>
+        /// <value>The address family for this route.</value>
+        [DataMember(Name="family", EmitDefaultValue=false)]
+        public FamilyEnum? Family { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkRoute" /> class.
         /// </summary>
-        /// <param name="Prefix">Prefix.</param>
-        /// <param name="Nexthop">Nexthop.</param>
-        /// <param name="Persistent">Persistent (default to false).</param>
-        /// <param name="Metric">Metric.</param>
-        /// <param name="Family">Family.</param>
-        public DomainNetworkRoute(string Prefix = null, string Nexthop = null, bool? Persistent = null, int? Metric = null, int? Family = null)
+        /// <param name="Prefix">The IPv4 or IPv6 route prefix in CIDR notation..</param>
+        /// <param name="Nexthop">The IPv4 or IPv6 nexthop IP address..</param>
+        /// <param name="Persistent">True if this route will persist on Edge restart.  Routes assigned by DHCP will be returned as false. (default to false).</param>
+        /// <param name="Metric">The metric being used for route. Lower values will have a higher priority..</param>
+        /// <param name="Family">The address family for this route..</param>
+        public DomainNetworkRoute(string Prefix = null, string Nexthop = null, bool? Persistent = null, int? Metric = null, FamilyEnum? Family = null)
         {
             this.Prefix = Prefix;
             this.Nexthop = Nexthop;
@@ -43,30 +76,29 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets Prefix
+        /// The IPv4 or IPv6 route prefix in CIDR notation.
         /// </summary>
+        /// <value>The IPv4 or IPv6 route prefix in CIDR notation.</value>
         [DataMember(Name="prefix", EmitDefaultValue=false)]
         public string Prefix { get; set; }
         /// <summary>
-        /// Gets or Sets Nexthop
+        /// The IPv4 or IPv6 nexthop IP address.
         /// </summary>
+        /// <value>The IPv4 or IPv6 nexthop IP address.</value>
         [DataMember(Name="nexthop", EmitDefaultValue=false)]
         public string Nexthop { get; set; }
         /// <summary>
-        /// Gets or Sets Persistent
+        /// True if this route will persist on Edge restart.  Routes assigned by DHCP will be returned as false.
         /// </summary>
+        /// <value>True if this route will persist on Edge restart.  Routes assigned by DHCP will be returned as false.</value>
         [DataMember(Name="persistent", EmitDefaultValue=false)]
         public bool? Persistent { get; set; }
         /// <summary>
-        /// Gets or Sets Metric
+        /// The metric being used for route. Lower values will have a higher priority.
         /// </summary>
+        /// <value>The metric being used for route. Lower values will have a higher priority.</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public int? Metric { get; set; }
-        /// <summary>
-        /// Gets or Sets Family
-        /// </summary>
-        [DataMember(Name="family", EmitDefaultValue=false)]
-        public int? Family { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

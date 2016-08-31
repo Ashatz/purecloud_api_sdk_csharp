@@ -435,6 +435,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of CampaignDiagnostics</returns>
         ApiResponse<CampaignDiagnostics> GetCampaignsCampaignIdDiagnosticsWithHttpInfo (string campaignId);
         /// <summary>
+        /// Get dialer campaign interactions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignInteractions</returns>
+        CampaignInteractions GetCampaignsCampaignIdInteractions (string campaignId);
+
+        /// <summary>
+        /// Get dialer campaign interactions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignInteractions</returns>
+        ApiResponse<CampaignInteractions> GetCampaignsCampaignIdInteractionsWithHttpInfo (string campaignId);
+        /// <summary>
         /// Get campaign progress
         /// </summary>
         /// <remarks>
@@ -1943,6 +1964,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignDiagnostics)</returns>
         System.Threading.Tasks.Task<ApiResponse<CampaignDiagnostics>> GetCampaignsCampaignIdDiagnosticsAsyncWithHttpInfo (string campaignId);
+        /// <summary>
+        /// Get dialer campaign interactions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignInteractions</returns>
+        System.Threading.Tasks.Task<CampaignInteractions> GetCampaignsCampaignIdInteractionsAsync (string campaignId);
+
+        /// <summary>
+        /// Get dialer campaign interactions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignInteractions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignInteractions>> GetCampaignsCampaignIdInteractionsAsyncWithHttpInfo (string campaignId);
         /// <summary>
         /// Get campaign progress
         /// </summary>
@@ -5985,6 +6027,159 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignDiagnostics>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignDiagnostics) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDiagnostics)));
+            
+        }
+
+        /// <summary>
+        /// Get dialer campaign interactions. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignInteractions</returns>
+        public CampaignInteractions GetCampaignsCampaignIdInteractions (string campaignId)
+        {
+             ApiResponse<CampaignInteractions> localVarResponse = GetCampaignsCampaignIdInteractionsWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get dialer campaign interactions. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignInteractions</returns>
+        public ApiResponse< CampaignInteractions > GetCampaignsCampaignIdInteractionsWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdInteractions");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/interactions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdInteractions: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdInteractions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignInteractions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignInteractions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignInteractions)));
+            
+        }
+
+        /// <summary>
+        /// Get dialer campaign interactions. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignInteractions</returns>
+        public async System.Threading.Tasks.Task<CampaignInteractions> GetCampaignsCampaignIdInteractionsAsync (string campaignId)
+        {
+             ApiResponse<CampaignInteractions> localVarResponse = await GetCampaignsCampaignIdInteractionsAsyncWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get dialer campaign interactions. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignInteractions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignInteractions>> GetCampaignsCampaignIdInteractionsAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdInteractions");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/interactions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdInteractions: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdInteractions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignInteractions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignInteractions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignInteractions)));
             
         }
 

@@ -91,14 +91,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Version'
         }
         /// <summary>
-        /// Test the property 'PhoneNumberColumns'
-        /// </summary>
-        [Test]
-        public void PhoneNumberColumnsTest()
-        {
-            // TODO: unit test for the property 'PhoneNumberColumns'
-        }
-        /// <summary>
         /// Test the property 'ImportStatus'
         /// </summary>
         [Test]

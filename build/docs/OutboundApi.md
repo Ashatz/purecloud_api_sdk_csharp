@@ -25,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetCampaigns**](OutboundApi.html#getcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
 | [**GetCampaignsCampaignId**](OutboundApi.html#getcampaignscampaignid) | **GET** /api/v2/outbound/campaigns/{campaignId} | Get dialer campaign. |
 | [**GetCampaignsCampaignIdDiagnostics**](OutboundApi.html#getcampaignscampaigniddiagnostics) | **GET** /api/v2/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
+| [**GetCampaignsCampaignIdInteractions**](OutboundApi.html#getcampaignscampaignidinteractions) | **GET** /api/v2/outbound/campaigns/{campaignId}/interactions | Get dialer campaign interactions. |
 | [**GetCampaignsCampaignIdProgress**](OutboundApi.html#getcampaignscampaignidprogress) | **GET** /api/v2/outbound/campaigns/{campaignId}/progress | Get campaign progress |
 | [**GetCampaignsCampaignIdStats**](OutboundApi.html#getcampaignscampaignidstats) | **GET** /api/v2/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
 | [**GetContactlists**](OutboundApi.html#getcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
@@ -1123,6 +1124,62 @@ namespace Example
 ### Return type
 
 [**CampaignDiagnostics**](CampaignDiagnostics.html)
+
+<a name="getcampaignscampaignidinteractions"></a>
+
+## [**CampaignInteractions**](CampaignInteractions.html) GetCampaignsCampaignIdInteractions (string campaignId)
+
+Get dialer campaign interactions.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCampaignsCampaignIdInteractionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+
+            try
+            {
+                // Get dialer campaign interactions.
+                CampaignInteractions result = apiInstance.GetCampaignsCampaignIdInteractions(campaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetCampaignsCampaignIdInteractions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignInteractions**](CampaignInteractions.html)
 
 <a name="getcampaignscampaignidprogress"></a>
 

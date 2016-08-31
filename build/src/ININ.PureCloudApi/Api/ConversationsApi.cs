@@ -394,6 +394,94 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
         ApiResponse<List<WrapupCode>> GetChatsChatIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string chatId, string participantId);
         /// <summary>
+        /// Get recent cobrowse conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CobrowseConversationEntityListing</returns>
+        CobrowseConversationEntityListing GetCobrowsesessions ();
+
+        /// <summary>
+        /// Get recent cobrowse conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CobrowseConversationEntityListing</returns>
+        ApiResponse<CobrowseConversationEntityListing> GetCobrowsesessionsWithHttpInfo ();
+        /// <summary>
+        /// Get cobrowse conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <returns>CobrowseConversation</returns>
+        CobrowseConversation GetCobrowsesessionsCobrowseId (string cobrowseId);
+
+        /// <summary>
+        /// Get cobrowse conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <returns>ApiResponse of CobrowseConversation</returns>
+        ApiResponse<CobrowseConversation> GetCobrowsesessionsCobrowseIdWithHttpInfo (string cobrowseId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Wrapup</returns>
+        Wrapup GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup (string cobrowseId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of Wrapup</returns>
+        ApiResponse<Wrapup> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupWithHttpInfo (string cobrowseId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        List<WrapupCode> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes (string cobrowseId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        ApiResponse<List<WrapupCode>> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string cobrowseId, string participantId);
+        /// <summary>
         /// Get conversation
         /// </summary>
         /// <remarks>
@@ -983,6 +1071,106 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
+        /// Update a conversation by disconnecting all of the participants
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="body">Conversation</param>
+        /// <returns>Conversation</returns>
+        Conversation PatchCobrowsesessionsCobrowseId (string cobrowseId, Conversation body);
+
+        /// <summary>
+        /// Update a conversation by disconnecting all of the participants
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="body">Conversation</param>
+        /// <returns>ApiResponse of Conversation</returns>
+        ApiResponse<Conversation> PatchCobrowsesessionsCobrowseIdWithHttpInfo (string cobrowseId, Conversation body);
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchCobrowsesessionsCobrowseIdParticipantsParticipantId (string cobrowseId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdWithHttpInfo (string cobrowseId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes (string cobrowseId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesWithHttpInfo (string cobrowseId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Update conversation participant&#39;s communication by disconnecting it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Participant</param>
+        /// <returns></returns>
+        void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
+
+        /// <summary>
+        /// Update conversation participant&#39;s communication by disconnecting it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Participant</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <summary>
         /// Update a participant.
         /// </summary>
         /// <remarks>
@@ -1316,6 +1504,31 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Transfer request</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostChatsChatIdParticipantsParticipantIdReplaceWithHttpInfo (string chatId, string participantId, TransferRequest body);
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        void PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace (string cobrowseId, string participantId, TransferRequest body = null);
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceWithHttpInfo (string cobrowseId, string participantId, TransferRequest body = null);
         /// <summary>
         /// Create a new callback for the specified participant on the conversation.
         /// </summary>
@@ -1904,6 +2117,94 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetChatsChatIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string chatId, string participantId);
+        /// <summary>
+        /// Get recent cobrowse conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CobrowseConversationEntityListing</returns>
+        System.Threading.Tasks.Task<CobrowseConversationEntityListing> GetCobrowsesessionsAsync ();
+
+        /// <summary>
+        /// Get recent cobrowse conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CobrowseConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CobrowseConversationEntityListing>> GetCobrowsesessionsAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get cobrowse conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <returns>Task of CobrowseConversation</returns>
+        System.Threading.Tasks.Task<CobrowseConversation> GetCobrowsesessionsCobrowseIdAsync (string cobrowseId);
+
+        /// <summary>
+        /// Get cobrowse conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <returns>Task of ApiResponse (CobrowseConversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CobrowseConversation>> GetCobrowsesessionsCobrowseIdAsyncWithHttpInfo (string cobrowseId);
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of Wrapup</returns>
+        System.Threading.Tasks.Task<Wrapup> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupAsync (string cobrowseId, string participantId, bool? provisional = null);
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant. 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (Wrapup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string cobrowseId, string participantId, bool? provisional = null);
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        System.Threading.Tasks.Task<List<WrapupCode>> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesAsync (string cobrowseId, string participantId);
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string cobrowseId, string participantId);
         /// <summary>
         /// Get conversation
         /// </summary>
@@ -2494,6 +2795,106 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
+        /// Update a conversation by disconnecting all of the participants
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="body">Conversation</param>
+        /// <returns>Task of Conversation</returns>
+        System.Threading.Tasks.Task<Conversation> PatchCobrowsesessionsCobrowseIdAsync (string cobrowseId, Conversation body);
+
+        /// <summary>
+        /// Update a conversation by disconnecting all of the participants
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="body">Conversation</param>
+        /// <returns>Task of ApiResponse (Conversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchCobrowsesessionsCobrowseIdAsyncWithHttpInfo (string cobrowseId, Conversation body);
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAsync (string cobrowseId, string participantId, MediaParticipantRequest body = null);
+
+        /// <summary>
+        /// Update conversation participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAsyncWithHttpInfo (string cobrowseId, string participantId, MediaParticipantRequest body = null);
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesAsync (string cobrowseId, string participantId, ParticipantAttributes body = null);
+
+        /// <summary>
+        /// Update the attributes on a conversation participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string cobrowseId, string participantId, ParticipantAttributes body = null);
+        /// <summary>
+        /// Update conversation participant&#39;s communication by disconnecting it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Participant</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
+
+        /// <summary>
+        /// Update conversation participant&#39;s communication by disconnecting it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Participant</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <summary>
         /// Update a participant.
         /// </summary>
         /// <remarks>
@@ -2827,6 +3228,31 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsChatIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string chatId, string participantId, TransferRequest body);
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceAsync (string cobrowseId, string participantId, TransferRequest body = null);
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string cobrowseId, string participantId, TransferRequest body = null);
         /// <summary>
         /// Create a new callback for the specified participant on the conversation.
         /// </summary>
@@ -5812,6 +6238,636 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetChatsChatIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
+            
+        }
+
+        /// <summary>
+        /// Get recent cobrowse conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CobrowseConversationEntityListing</returns>
+        public CobrowseConversationEntityListing GetCobrowsesessions ()
+        {
+             ApiResponse<CobrowseConversationEntityListing> localVarResponse = GetCobrowsesessionsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recent cobrowse conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CobrowseConversationEntityListing</returns>
+        public ApiResponse< CobrowseConversationEntityListing > GetCobrowsesessionsWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessions: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CobrowseConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CobrowseConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CobrowseConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get recent cobrowse conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CobrowseConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<CobrowseConversationEntityListing> GetCobrowsesessionsAsync ()
+        {
+             ApiResponse<CobrowseConversationEntityListing> localVarResponse = await GetCobrowsesessionsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recent cobrowse conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CobrowseConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CobrowseConversationEntityListing>> GetCobrowsesessionsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessions: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CobrowseConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CobrowseConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CobrowseConversationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get cobrowse conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <returns>CobrowseConversation</returns>
+        public CobrowseConversation GetCobrowsesessionsCobrowseId (string cobrowseId)
+        {
+             ApiResponse<CobrowseConversation> localVarResponse = GetCobrowsesessionsCobrowseIdWithHttpInfo(cobrowseId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get cobrowse conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <returns>ApiResponse of CobrowseConversation</returns>
+        public ApiResponse< CobrowseConversation > GetCobrowsesessionsCobrowseIdWithHttpInfo (string cobrowseId)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->GetCobrowsesessionsCobrowseId");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CobrowseConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CobrowseConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CobrowseConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get cobrowse conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <returns>Task of CobrowseConversation</returns>
+        public async System.Threading.Tasks.Task<CobrowseConversation> GetCobrowsesessionsCobrowseIdAsync (string cobrowseId)
+        {
+             ApiResponse<CobrowseConversation> localVarResponse = await GetCobrowsesessionsCobrowseIdAsyncWithHttpInfo(cobrowseId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get cobrowse conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <returns>Task of ApiResponse (CobrowseConversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CobrowseConversation>> GetCobrowsesessionsCobrowseIdAsyncWithHttpInfo (string cobrowseId)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->GetCobrowsesessionsCobrowseId");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CobrowseConversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CobrowseConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CobrowseConversation)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Wrapup</returns>
+        public Wrapup GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup (string cobrowseId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<Wrapup> localVarResponse = GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupWithHttpInfo(cobrowseId, participantId, provisional);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>ApiResponse of Wrapup</returns>
+        public ApiResponse< Wrapup > GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupWithHttpInfo (string cobrowseId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Wrapup>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Wrapup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+            
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of Wrapup</returns>
+        public async System.Threading.Tasks.Task<Wrapup> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupAsync (string cobrowseId, string participantId, bool? provisional = null)
+        {
+             ApiResponse<Wrapup> localVarResponse = await GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupAsyncWithHttpInfo(cobrowseId, participantId, provisional);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the wrap-up for this conversation participant.  
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (Wrapup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupAsyncWithHttpInfo (string cobrowseId, string participantId, bool? provisional = null)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (provisional != null) localVarQueryParams.Add("provisional", Configuration.ApiClient.ParameterToString(provisional)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Wrapup>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Wrapup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>List&lt;WrapupCode&gt;</returns>
+        public List<WrapupCode> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes (string cobrowseId, string participantId)
+        {
+             ApiResponse<List<WrapupCode>> localVarResponse = GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesWithHttpInfo(cobrowseId, participantId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
+        public ApiResponse< List<WrapupCode> > GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesWithHttpInfo (string cobrowseId, string participantId)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<WrapupCode>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)));
+            
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of List&lt;WrapupCode&gt;</returns>
+        public async System.Threading.Tasks.Task<List<WrapupCode>> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesAsync (string cobrowseId, string participantId)
+        {
+             ApiResponse<List<WrapupCode>> localVarResponse = await GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo(cobrowseId, participantId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of wrapup codes for this conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesAsyncWithHttpInfo (string cobrowseId, string participantId)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapupcodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10175,6 +11231,752 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Update a conversation by disconnecting all of the participants 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="body">Conversation</param>
+        /// <returns>Conversation</returns>
+        public Conversation PatchCobrowsesessionsCobrowseId (string cobrowseId, Conversation body)
+        {
+             ApiResponse<Conversation> localVarResponse = PatchCobrowsesessionsCobrowseIdWithHttpInfo(cobrowseId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a conversation by disconnecting all of the participants 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="body">Conversation</param>
+        /// <returns>ApiResponse of Conversation</returns>
+        public ApiResponse< Conversation > PatchCobrowsesessionsCobrowseIdWithHttpInfo (string cobrowseId, Conversation body)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchCobrowsesessionsCobrowseId");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+            
+        }
+
+        /// <summary>
+        /// Update a conversation by disconnecting all of the participants 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="body">Conversation</param>
+        /// <returns>Task of Conversation</returns>
+        public async System.Threading.Tasks.Task<Conversation> PatchCobrowsesessionsCobrowseIdAsync (string cobrowseId, Conversation body)
+        {
+             ApiResponse<Conversation> localVarResponse = await PatchCobrowsesessionsCobrowseIdAsyncWithHttpInfo(cobrowseId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a conversation by disconnecting all of the participants 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="body">Conversation</param>
+        /// <returns>Task of ApiResponse (Conversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchCobrowsesessionsCobrowseIdAsyncWithHttpInfo (string cobrowseId, Conversation body)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchCobrowsesessionsCobrowseId");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Conversation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+            
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchCobrowsesessionsCobrowseIdParticipantsParticipantId (string cobrowseId, string participantId, MediaParticipantRequest body = null)
+        {
+             PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdWithHttpInfo(cobrowseId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdWithHttpInfo (string cobrowseId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAsync (string cobrowseId, string participantId, MediaParticipantRequest body = null)
+        {
+             await PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAsyncWithHttpInfo(cobrowseId, participantId, body);
+
+        }
+
+        /// <summary>
+        /// Update conversation participant 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAsyncWithHttpInfo (string cobrowseId, string participantId, MediaParticipantRequest body = null)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantId");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes (string cobrowseId, string participantId, ParticipantAttributes body = null)
+        {
+             PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesWithHttpInfo(cobrowseId, participantId, body);
+        }
+
+        /// <summary>
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesWithHttpInfo (string cobrowseId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/attributes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesAsync (string cobrowseId, string participantId, ParticipantAttributes body = null)
+        {
+             await PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesAsyncWithHttpInfo(cobrowseId, participantId, body);
+
+        }
+
+        /// <summary>
+        /// Update the attributes on a conversation participant. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesAsyncWithHttpInfo (string cobrowseId, string participantId, ParticipantAttributes body = null)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/attributes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update conversation participant&#39;s communication by disconnecting it. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Participant</param>
+        /// <returns></returns>
+        public void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+        {
+             PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(cobrowseId, participantId, communicationId, body);
+        }
+
+        /// <summary>
+        /// Update conversation participant&#39;s communication by disconnecting it. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Participant</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId");
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/communications/{communicationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (communicationId != null) localVarPathParams.Add("communicationId", Configuration.ApiClient.ParameterToString(communicationId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update conversation participant&#39;s communication by disconnecting it. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Participant</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+        {
+             await PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(cobrowseId, participantId, communicationId, body);
+
+        }
+
+        /// <summary>
+        /// Update conversation participant&#39;s communication by disconnecting it. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">Participant</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId");
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/communications/{communicationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (communicationId != null) localVarPathParams.Add("communicationId", Configuration.ApiClient.ParameterToString(communicationId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
         /// Update a participant. Update conversation participant.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12715,6 +14517,189 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException (localVarStatusCode, "Error calling PostChatsChatIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostChatsChatIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        public void PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace (string cobrowseId, string participantId, TransferRequest body = null)
+        {
+             PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceWithHttpInfo(cobrowseId, participantId, body);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceWithHttpInfo (string cobrowseId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/replace";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceAsync (string cobrowseId, string participantId, TransferRequest body = null)
+        {
+             await PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceAsyncWithHttpInfo(cobrowseId, participantId, body);
+
+        }
+
+        /// <summary>
+        /// Replace this participant with the specified user and/or address 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cobrowseId">cobrowseId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string cobrowseId, string participantId, TransferRequest body = null)
+        {
+            // verify the required parameter 'cobrowseId' is set
+            if (cobrowseId == null)
+                throw new ApiException(400, "Missing required parameter 'cobrowseId' when calling ConversationsApi->PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace");
+
+            var localVarPath = "/api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/replace";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (cobrowseId != null) localVarPathParams.Add("cobrowseId", Configuration.ApiClient.ParameterToString(cobrowseId)); // path parameter
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,

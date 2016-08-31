@@ -240,7 +240,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SoftwareVersionPlatform">SoftwareVersionPlatform.</param>
         /// <param name="SoftwareVersionConfiguration">SoftwareVersionConfiguration.</param>
         /// <param name="FullSoftwareVersion">FullSoftwareVersion.</param>
-        /// <param name="PairingId">PairingId.</param>
+        /// <param name="PairingId">The pairing Id for a hardware Edge in the format: 00000-00000-00000-00000-00000. This field is only required when creating an Edge with a deployment type of HARDWARE..</param>
         /// <param name="Fingerprint">Fingerprint.</param>
         /// <param name="FingerprintHint">FingerprintHint.</param>
         /// <param name="CurrentVersion">CurrentVersion.</param>
@@ -417,8 +417,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="fullSoftwareVersion", EmitDefaultValue=false)]
         public string FullSoftwareVersion { get; set; }
         /// <summary>
-        /// Gets or Sets PairingId
+        /// The pairing Id for a hardware Edge in the format: 00000-00000-00000-00000-00000. This field is only required when creating an Edge with a deployment type of HARDWARE.
         /// </summary>
+        /// <value>The pairing Id for a hardware Edge in the format: 00000-00000-00000-00000-00000. This field is only required when creating an Edge with a deployment type of HARDWARE.</value>
         [DataMember(Name="pairingId", EmitDefaultValue=false)]
         public string PairingId { get; set; }
         /// <summary>

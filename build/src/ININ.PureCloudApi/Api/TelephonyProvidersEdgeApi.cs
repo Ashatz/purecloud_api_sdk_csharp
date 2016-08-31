@@ -1994,6 +1994,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Extension</returns>
         ApiResponse<Extension> PostProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body);
         /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>EdgeOfflineConfigurationResponse</returns>
+        EdgeOfflineConfigurationResponse PostProvidersEdgesOfflineconfiguration (EdgeOfflineConfiguration body);
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>ApiResponse of EdgeOfflineConfigurationResponse</returns>
+        ApiResponse<EdgeOfflineConfigurationResponse> PostProvidersEdgesOfflineconfigurationWithHttpInfo (EdgeOfflineConfiguration body);
+        /// <summary>
         /// Create outbound rule
         /// </summary>
         /// <remarks>
@@ -4514,6 +4535,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (Extension)</returns>
         System.Threading.Tasks.Task<ApiResponse<Extension>> PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body);
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>Task of EdgeOfflineConfigurationResponse</returns>
+        System.Threading.Tasks.Task<EdgeOfflineConfigurationResponse> PostProvidersEdgesOfflineconfigurationAsync (EdgeOfflineConfiguration body);
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>Task of ApiResponse (EdgeOfflineConfigurationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeOfflineConfigurationResponse>> PostProvidersEdgesOfflineconfigurationAsyncWithHttpInfo (EdgeOfflineConfiguration body);
         /// <summary>
         /// Create outbound rule
         /// </summary>
@@ -18848,6 +18890,173 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Extension>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Extension) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Extension)));
+            
+        }
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>EdgeOfflineConfigurationResponse</returns>
+        public EdgeOfflineConfigurationResponse PostProvidersEdgesOfflineconfiguration (EdgeOfflineConfiguration body)
+        {
+             ApiResponse<EdgeOfflineConfigurationResponse> localVarResponse = PostProvidersEdgesOfflineconfigurationWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>ApiResponse of EdgeOfflineConfigurationResponse</returns>
+        public ApiResponse< EdgeOfflineConfigurationResponse > PostProvidersEdgesOfflineconfigurationWithHttpInfo (EdgeOfflineConfiguration body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesOfflineconfiguration");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/offlineconfiguration";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostProvidersEdgesOfflineconfiguration: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostProvidersEdgesOfflineconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeOfflineConfigurationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeOfflineConfigurationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeOfflineConfigurationResponse)));
+            
+        }
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>Task of EdgeOfflineConfigurationResponse</returns>
+        public async System.Threading.Tasks.Task<EdgeOfflineConfigurationResponse> PostProvidersEdgesOfflineconfigurationAsync (EdgeOfflineConfiguration body)
+        {
+             ApiResponse<EdgeOfflineConfigurationResponse> localVarResponse = await PostProvidersEdgesOfflineconfigurationAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>Task of ApiResponse (EdgeOfflineConfigurationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeOfflineConfigurationResponse>> PostProvidersEdgesOfflineconfigurationAsyncWithHttpInfo (EdgeOfflineConfiguration body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesOfflineconfiguration");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/offlineconfiguration";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostProvidersEdgesOfflineconfiguration: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostProvidersEdgesOfflineconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeOfflineConfigurationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeOfflineConfigurationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeOfflineConfigurationResponse)));
             
         }
 

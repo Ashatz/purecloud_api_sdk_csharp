@@ -54,6 +54,30 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
+        /// Test DeleteHeartbeatAlertsAlertId
+        /// </summary>
+        [Test]
+        public void DeleteHeartbeatAlertsAlertIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteHeartbeatAlertsAlertId'
+            string alertId = null; // TODO: replace null with proper value
+            instance.DeleteHeartbeatAlertsAlertId(alertId);
+            
+        }
+        
+        /// <summary>
+        /// Test DeleteHeartbeatRulesRuleId
+        /// </summary>
+        [Test]
+        public void DeleteHeartbeatRulesRuleIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteHeartbeatRulesRuleId'
+            string ruleId = null; // TODO: replace null with proper value
+            instance.DeleteHeartbeatRulesRuleId(ruleId);
+            
+        }
+        
+        /// <summary>
         /// Test DeleteInteractionstatsAlertsAlertId
         /// </summary>
         [Test]
@@ -75,6 +99,52 @@ namespace ININ.PureCloudApi.Test
             string ruleId = null; // TODO: replace null with proper value
             instance.DeleteInteractionstatsRulesRuleId(ruleId);
             
+        }
+        
+        /// <summary>
+        /// Test GetHeartbeatAlerts
+        /// </summary>
+        [Test]
+        public void GetHeartbeatAlertsTest()
+        {
+            // TODO: add unit test for the method 'GetHeartbeatAlerts'
+            var response = instance.GetHeartbeatAlerts();
+            Assert.IsInstanceOf<HeartBeatAlertContainer> (response, "response is HeartBeatAlertContainer");
+        }
+        
+        /// <summary>
+        /// Test GetHeartbeatAlertsAlertId
+        /// </summary>
+        [Test]
+        public void GetHeartbeatAlertsAlertIdTest()
+        {
+            // TODO: add unit test for the method 'GetHeartbeatAlertsAlertId'
+            string alertId = null; // TODO: replace null with proper value
+            var response = instance.GetHeartbeatAlertsAlertId(alertId);
+            Assert.IsInstanceOf<HeartBeatAlert> (response, "response is HeartBeatAlert");
+        }
+        
+        /// <summary>
+        /// Test GetHeartbeatRules
+        /// </summary>
+        [Test]
+        public void GetHeartbeatRulesTest()
+        {
+            // TODO: add unit test for the method 'GetHeartbeatRules'
+            var response = instance.GetHeartbeatRules();
+            Assert.IsInstanceOf<HeartBeatRuleContainer> (response, "response is HeartBeatRuleContainer");
+        }
+        
+        /// <summary>
+        /// Test GetHeartbeatRulesRuleId
+        /// </summary>
+        [Test]
+        public void GetHeartbeatRulesRuleIdTest()
+        {
+            // TODO: add unit test for the method 'GetHeartbeatRulesRuleId'
+            string ruleId = null; // TODO: replace null with proper value
+            var response = instance.GetHeartbeatRulesRuleId(ruleId);
+            Assert.IsInstanceOf<HeartBeatRule> (response, "response is HeartBeatRule");
         }
         
         /// <summary>
@@ -135,6 +205,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostHeartbeatRules
+        /// </summary>
+        [Test]
+        public void PostHeartbeatRulesTest()
+        {
+            // TODO: add unit test for the method 'PostHeartbeatRules'
+            HeartBeatRule body = null; // TODO: replace null with proper value
+            var response = instance.PostHeartbeatRules(body);
+            Assert.IsInstanceOf<HeartBeatRule> (response, "response is HeartBeatRule");
+        }
+        
+        /// <summary>
         /// Test PostInteractionstatsRules
         /// </summary>
         [Test]
@@ -144,6 +226,19 @@ namespace ININ.PureCloudApi.Test
             InteractionStatsRule body = null; // TODO: replace null with proper value
             var response = instance.PostInteractionstatsRules(body);
             Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule");
+        }
+        
+        /// <summary>
+        /// Test PutHeartbeatRulesRuleId
+        /// </summary>
+        [Test]
+        public void PutHeartbeatRulesRuleIdTest()
+        {
+            // TODO: add unit test for the method 'PutHeartbeatRulesRuleId'
+            string ruleId = null; // TODO: replace null with proper value
+            HeartBeatRule body = null; // TODO: replace null with proper value
+            var response = instance.PutHeartbeatRulesRuleId(ruleId, body);
+            Assert.IsInstanceOf<HeartBeatRule> (response, "response is HeartBeatRule");
         }
         
         /// <summary>

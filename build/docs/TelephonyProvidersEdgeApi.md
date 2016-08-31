@@ -92,6 +92,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostProvidersEdgesEdgegroups**](TelephonyProvidersEdgeApi.html#postprovidersedgesedgegroups) | **POST** /api/v2/telephony/providers/edges/edgegroups | Create an edge group. |
 | [**PostProvidersEdgesEndpoints**](TelephonyProvidersEdgeApi.html#postprovidersedgesendpoints) | **POST** /api/v2/telephony/providers/edges/endpoints | Create endpoint |
 | [**PostProvidersEdgesExtensionpools**](TelephonyProvidersEdgeApi.html#postprovidersedgesextensionpools) | **POST** /api/v2/telephony/providers/edges/extensionpools | Create a new extension pool |
+| [**PostProvidersEdgesOfflineconfiguration**](TelephonyProvidersEdgeApi.html#postprovidersedgesofflineconfiguration) | **POST** /api/v2/telephony/providers/edges/offlineconfiguration | Create a file that can be used to configure a hardware Edge&#39;s settings. |
 | [**PostProvidersEdgesOutboundroutes**](TelephonyProvidersEdgeApi.html#postprovidersedgesoutboundroutes) | **POST** /api/v2/telephony/providers/edges/outboundroutes | Create outbound rule |
 | [**PostProvidersEdgesPhonebasesettings**](TelephonyProvidersEdgeApi.html#postprovidersedgesphonebasesettings) | **POST** /api/v2/telephony/providers/edges/phonebasesettings | Create a new Phone Base Settings object |
 | [**PostProvidersEdgesPhones**](TelephonyProvidersEdgeApi.html#postprovidersedgesphones) | **POST** /api/v2/telephony/providers/edges/phones | Create a new Phone |
@@ -5060,6 +5061,62 @@ namespace Example
 ### Return type
 
 [**Extension**](Extension.html)
+
+<a name="postprovidersedgesofflineconfiguration"></a>
+
+## [**EdgeOfflineConfigurationResponse**](EdgeOfflineConfigurationResponse.html) PostProvidersEdgesOfflineconfiguration (EdgeOfflineConfiguration body)
+
+Create a file that can be used to configure a hardware Edge's settings.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostProvidersEdgesOfflineconfigurationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var body = new EdgeOfflineConfiguration(); // EdgeOfflineConfiguration | EdgeOfflineConfiguration
+
+            try
+            {
+                // Create a file that can be used to configure a hardware Edge's settings.
+                EdgeOfflineConfigurationResponse result = apiInstance.PostProvidersEdgesOfflineconfiguration(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesOfflineconfiguration: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**EdgeOfflineConfiguration**](EdgeOfflineConfiguration.html)| EdgeOfflineConfiguration |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeOfflineConfigurationResponse**](EdgeOfflineConfigurationResponse.html)
 
 <a name="postprovidersedgesoutboundroutes"></a>
 

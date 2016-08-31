@@ -24,15 +24,12 @@ title: DomainLogicalInterface
 | **VlanTagId** | **int?** |  | [optional] |
 | **HardwareAddress** | **string** | Hardware Address | |
 | **PhysicalAdapterId** | **string** | Physical Adapter Id | |
-| **IpAddress** | **string** |  | [optional] |
-| **Gateway** | **string** |  | [optional] |
-| **PrimaryDns** | **string** |  | [optional] |
-| **SecondaryDns** | **string** |  | [optional] |
 | **IfStatus** | **string** |  | [optional] |
-| **Routes** | [**List&lt;DomainNetworkRoute&gt;**](DomainNetworkRoute.html) |  | [optional] |
-| **Addresses** | [**List&lt;DomainNetworkAddress&gt;**](DomainNetworkAddress.html) |  | [optional] |
-| **Ipv4Capabilities** | [**DomainCapabilities**](DomainCapabilities.html) |  | [optional] |
-| **Ipv6Capabilities** | [**DomainCapabilities**](DomainCapabilities.html) |  | [optional] |
+| **InterfaceType** | **string** | The type of this network interface. | [optional] |
+| **Routes** | [**List&lt;DomainNetworkRoute&gt;**](DomainNetworkRoute.html) | The list of routes assigned to this interface. | [optional] |
+| **Addresses** | [**List&lt;DomainNetworkAddress&gt;**](DomainNetworkAddress.html) | The list of IP addresses on this interface.  Priority of dns addresses are based on order in the list. | [optional] |
+| **Ipv4Capabilities** | [**DomainCapabilities**](DomainCapabilities.html) | IPv4 interface settings. | [optional] |
+| **Ipv6Capabilities** | [**DomainCapabilities**](DomainCapabilities.html) | IPv6 interface settings. | [optional] |
 | **CurrentState** | **string** |  | [optional] |
 | **LastModifiedUserId** | **string** |  | [optional] |
 | **LastModifiedCorrelationId** | **string** |  | [optional] |

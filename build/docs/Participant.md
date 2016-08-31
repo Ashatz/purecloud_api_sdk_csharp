@@ -35,6 +35,7 @@ title: Participant
 | **Calls** | [**List&lt;Call&gt;**](Call.html) |  | [optional] |
 | **Callbacks** | [**List&lt;Callback&gt;**](Callback.html) |  | [optional] |
 | **Chats** | [**List&lt;ConversationChat&gt;**](ConversationChat.html) |  | [optional] |
+| **Cobrowsesessions** | [**List&lt;Cobrowsesession&gt;**](Cobrowsesession.html) |  | [optional] |
 | **Emails** | [**List&lt;Email&gt;**](Email.html) |  | [optional] |
 | **SocialExpressions** | [**List&lt;SocialExpression&gt;**](SocialExpression.html) |  | [optional] |
 | **Videos** | [**List&lt;Video&gt;**](Video.html) |  | [optional] |

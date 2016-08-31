@@ -269,6 +269,56 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetCobrowsesessions
+        /// </summary>
+        [Test]
+        public void GetCobrowsesessionsTest()
+        {
+            // TODO: add unit test for the method 'GetCobrowsesessions'
+            var response = instance.GetCobrowsesessions();
+            Assert.IsInstanceOf<CobrowseConversationEntityListing> (response, "response is CobrowseConversationEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetCobrowsesessionsCobrowseId
+        /// </summary>
+        [Test]
+        public void GetCobrowsesessionsCobrowseIdTest()
+        {
+            // TODO: add unit test for the method 'GetCobrowsesessionsCobrowseId'
+            string cobrowseId = null; // TODO: replace null with proper value
+            var response = instance.GetCobrowsesessionsCobrowseId(cobrowseId);
+            Assert.IsInstanceOf<CobrowseConversation> (response, "response is CobrowseConversation");
+        }
+        
+        /// <summary>
+        /// Test GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup
+        /// </summary>
+        [Test]
+        public void GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupTest()
+        {
+            // TODO: add unit test for the method 'GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup'
+            string cobrowseId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            bool? provisional = null; // TODO: replace null with proper value
+            var response = instance.GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup(cobrowseId, participantId, provisional);
+            Assert.IsInstanceOf<Wrapup> (response, "response is Wrapup");
+        }
+        
+        /// <summary>
+        /// Test GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes
+        /// </summary>
+        [Test]
+        public void GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesTest()
+        {
+            // TODO: add unit test for the method 'GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes'
+            string cobrowseId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            var response = instance.GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes(cobrowseId, participantId);
+            Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
+        }
+        
+        /// <summary>
         /// Test GetConversationId
         /// </summary>
         [Test]
@@ -601,6 +651,62 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PatchCobrowsesessionsCobrowseId
+        /// </summary>
+        [Test]
+        public void PatchCobrowsesessionsCobrowseIdTest()
+        {
+            // TODO: add unit test for the method 'PatchCobrowsesessionsCobrowseId'
+            string cobrowseId = null; // TODO: replace null with proper value
+            Conversation body = null; // TODO: replace null with proper value
+            var response = instance.PatchCobrowsesessionsCobrowseId(cobrowseId, body);
+            Assert.IsInstanceOf<Conversation> (response, "response is Conversation");
+        }
+        
+        /// <summary>
+        /// Test PatchCobrowsesessionsCobrowseIdParticipantsParticipantId
+        /// </summary>
+        [Test]
+        public void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdTest()
+        {
+            // TODO: add unit test for the method 'PatchCobrowsesessionsCobrowseIdParticipantsParticipantId'
+            string cobrowseId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            MediaParticipantRequest body = null; // TODO: replace null with proper value
+            instance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantId(cobrowseId, participantId, body);
+            
+        }
+        
+        /// <summary>
+        /// Test PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes
+        /// </summary>
+        [Test]
+        public void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesTest()
+        {
+            // TODO: add unit test for the method 'PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes'
+            string cobrowseId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            ParticipantAttributes body = null; // TODO: replace null with proper value
+            instance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes(cobrowseId, participantId, body);
+            
+        }
+        
+        /// <summary>
+        /// Test PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId
+        /// </summary>
+        [Test]
+        public void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdTest()
+        {
+            // TODO: add unit test for the method 'PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId'
+            string cobrowseId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            string communicationId = null; // TODO: replace null with proper value
+            MediaParticipantRequest body = null; // TODO: replace null with proper value
+            instance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId(cobrowseId, participantId, communicationId, body);
+            
+        }
+        
+        /// <summary>
         /// Test PatchConversationIdParticipantsParticipantId
         /// </summary>
         [Test]
@@ -785,6 +891,20 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             TransferRequest body = null; // TODO: replace null with proper value
             instance.PostChatsChatIdParticipantsParticipantIdReplace(chatId, participantId, body);
+            
+        }
+        
+        /// <summary>
+        /// Test PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace
+        /// </summary>
+        [Test]
+        public void PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceTest()
+        {
+            // TODO: add unit test for the method 'PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace'
+            string cobrowseId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            TransferRequest body = null; // TODO: replace null with proper value
+            instance.PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace(cobrowseId, participantId, body);
             
         }
         
