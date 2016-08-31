@@ -63,7 +63,7 @@ namespace ININ.PureCloudApi.Client
         /// <param name="type">The <see cref="Type"/> to cast notifications on this topic to</param>
         public void AddSubscription(string topic, Type type)
         {
-            _notificationsApi.PostChannelSubscriptions(Channel.Id,
+            _notificationsApi.PostChannelsChannelIdSubscriptions(Channel.Id,
                 new List<ChannelTopic>() { new ChannelTopic(topic) });
             _typeMap.Add(topic.ToLowerInvariant(), type);
         }
@@ -74,13 +74,13 @@ namespace ININ.PureCloudApi.Client
         /// <param name="topic">The notification topic to remove</param>
         public void RemoveSubscription(string topic)
         {
-            var subscriptions = _notificationsApi.GetChannelSubscriptions(Channel.Id);
+            var subscriptions = _notificationsApi.GetChannelsChannelIdSubscriptions(Channel.Id);
             var match =
                 subscriptions.Entities.FirstOrDefault(
                     e => e.Id.Equals(topic, StringComparison.InvariantCultureIgnoreCase));
             if (match == null) return;
             subscriptions.Entities.Remove(match);
-            _notificationsApi.PutChannelSubscriptions(Channel.Id, subscriptions.Entities);
+            _notificationsApi.PutChannelsChannelIdSubscriptions(Channel.Id, subscriptions.Entities);
             _typeMap.Remove(topic);
         }
 
@@ -89,7 +89,7 @@ namespace ININ.PureCloudApi.Client
         /// </summary>
         public void RemoveAllSubscriptions()
         {
-            _notificationsApi.DeleteChannelSubscriptions(Channel.Id);
+            _notificationsApi.DeleteChannelsChannelIdSubscriptions(Channel.Id);
             _typeMap.Clear();
         }
 
