@@ -54,18 +54,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetProvidersEdgesEdgeIdSetuppackage
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdSetuppackageTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdSetuppackage'
-            string edgeId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdSetuppackage(edgeId);
-            Assert.IsInstanceOf<VmPairingInfo> (response, "response is VmPairingInfo");
-        }
-        
-        /// <summary>
         /// Test GetRecordingkeys
         /// </summary>
         [Test]

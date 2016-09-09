@@ -36,6 +36,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetProvidersEdgesEdgeIdLogsJobsJobId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidlogsjobsjobid) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId} | Get an Edge logs job. |
 | [**GetProvidersEdgesEdgeIdPhysicalinterfaces**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidphysicalinterfaces) | **GET** /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces | Retrieve a list of all configured physical interfaces from a specific edge. |
 | [**GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidphysicalinterfacesinterfaceid) | **GET** /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId} | Get edge physical interface. |
+| [**GetProvidersEdgesEdgeIdSetuppackage**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidsetuppackage) | **GET** /api/v2/telephony/providers/edges/{edgeId}/setuppackage | Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge. |
 | [**GetProvidersEdgesEdgeIdSoftwareupdate**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidsoftwareupdate) | **GET** /api/v2/telephony/providers/edges/{edgeId}/softwareupdate | Gets software update status information about any edge. |
 | [**GetProvidersEdgesEdgeIdSoftwareversions**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidsoftwareversions) | **GET** /api/v2/telephony/providers/edges/{edgeId}/softwareversions | Gets all the available software versions for this edge. |
 | [**GetProvidersEdgesEdgegroups**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgegroups) | **GET** /api/v2/telephony/providers/edges/edgegroups | Get the list of edge groups. |
@@ -1771,6 +1772,62 @@ namespace Example
 ### Return type
 
 [**DomainPhysicalInterface**](DomainPhysicalInterface.html)
+
+<a name="getprovidersedgesedgeidsetuppackage"></a>
+
+## [**VmPairingInfo**](VmPairingInfo.html) GetProvidersEdgesEdgeIdSetuppackage (string edgeId)
+
+Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdSetuppackageExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+
+            try
+            {
+                // Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
+                VmPairingInfo result = apiInstance.GetProvidersEdgesEdgeIdSetuppackage(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdSetuppackage: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**VmPairingInfo**](VmPairingInfo.html)
 
 <a name="getprovidersedgesedgeidsoftwareupdate"></a>
 

@@ -12,9 +12,9 @@ title: TimeZoneEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;TimeZone&gt;**](TimeZone.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}

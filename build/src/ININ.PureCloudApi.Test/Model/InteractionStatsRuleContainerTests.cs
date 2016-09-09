@@ -91,6 +91,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'SelfUri'
         }
         /// <summary>
+        /// Test the property 'NextUri'
+        /// </summary>
+        [Test]
+        public void NextUriTest()
+        {
+            // TODO: unit test for the property 'NextUri'
+        }
+        /// <summary>
         /// Test the property 'FirstUri'
         /// </summary>
         [Test]
@@ -105,14 +113,6 @@ namespace ININ.PureCloudApi.Test
         public void PreviousUriTest()
         {
             // TODO: unit test for the property 'PreviousUri'
-        }
-        /// <summary>
-        /// Test the property 'NextUri'
-        /// </summary>
-        [Test]
-        public void NextUriTest()
-        {
-            // TODO: unit test for the property 'NextUri'
         }
         /// <summary>
         /// Test the property 'LastUri'
