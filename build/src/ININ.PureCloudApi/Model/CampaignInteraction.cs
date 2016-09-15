@@ -110,7 +110,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DialerSystemParticipantId">conversation participant id that is the dialer system participant to monitor the call from dialer perspective.</param>
         /// <param name="DialingMode">DialingMode.</param>
         /// <param name="Skills">Any skills that are attached to the call for routing.</param>
-        public CampaignInteraction(string Id = null, UriReference Campaign = null, UriReference Agent = null, UriReference Contact = null, string DestinationAddress = null, bool? ActivePreviewCall = null, DateTime? LastActivePreviewWrapupTime = null, DateTime? CreationTime = null, DateTime? CallPlacedTime = null, DateTime? CallRoutedTime = null, DateTime? PreviewConnectedTime = null, UriReference Queue = null, UriReference Script = null, DispositionEnum? Disposition = null, string CallerName = null, string CallerAddress = null, DateTime? PreviewPopDeliveredTime = null, UriReference Conversation = null, string DialerSystemParticipantId = null, string DialingMode = null, List<UriReference> Skills = null)
+        public CampaignInteraction(string Id = null, UriReference Campaign = null, UriReference Agent = null, UriReference Contact = null, string DestinationAddress = null, bool? ActivePreviewCall = null, DateTime? LastActivePreviewWrapupTime = null, DateTime? CreationTime = null, DateTime? CallPlacedTime = null, DateTime? CallRoutedTime = null, DateTime? PreviewConnectedTime = null, UriReference Queue = null, UriReference Script = null, DispositionEnum? Disposition = null, string CallerName = null, string CallerAddress = null, DateTime? PreviewPopDeliveredTime = null, Conversation Conversation = null, string DialerSystemParticipantId = null, string DialingMode = null, List<UriReference> Skills = null)
         {
             this.Id = Id;
             this.Campaign = Campaign;
@@ -234,7 +234,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Conversation
         /// </summary>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public UriReference Conversation { get; set; }
+        public Conversation Conversation { get; set; }
         /// <summary>
         /// conversation participant id that is the dialer system participant to monitor the call from dialer perspective
         /// </summary>

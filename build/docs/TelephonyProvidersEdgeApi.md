@@ -5065,7 +5065,7 @@ namespace Example
 
 <a name="postprovidersedgesextensionpools"></a>
 
-## [**Extension**](Extension.html) PostProvidersEdgesExtensionpools (ExtensionPool body)
+## [**ExtensionPool**](ExtensionPool.html) PostProvidersEdgesExtensionpools (ExtensionPool body)
 
 Create a new extension pool
 
@@ -5095,7 +5095,7 @@ namespace Example
             try
             {
                 // Create a new extension pool
-                Extension result = apiInstance.PostProvidersEdgesExtensionpools(body);
+                ExtensionPool result = apiInstance.PostProvidersEdgesExtensionpools(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5117,7 +5117,7 @@ namespace Example
 
 ### Return type
 
-[**Extension**](Extension.html)
+[**ExtensionPool**](ExtensionPool.html)
 
 <a name="postprovidersedgesofflineconfiguration"></a>
 

@@ -1179,7 +1179,7 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostProvidersEdgesExtensionpools'
             ExtensionPool body = null; // TODO: replace null with proper value
             var response = instance.PostProvidersEdgesExtensionpools(body);
-            Assert.IsInstanceOf<Extension> (response, "response is Extension");
+            Assert.IsInstanceOf<ExtensionPool> (response, "response is ExtensionPool");
         }
         
         /// <summary>

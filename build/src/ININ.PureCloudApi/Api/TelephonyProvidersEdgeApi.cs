@@ -2001,8 +2001,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
-        /// <returns>Extension</returns>
-        Extension PostProvidersEdgesExtensionpools (ExtensionPool body);
+        /// <returns>ExtensionPool</returns>
+        ExtensionPool PostProvidersEdgesExtensionpools (ExtensionPool body);
 
         /// <summary>
         /// Create a new extension pool
@@ -2012,8 +2012,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
-        /// <returns>ApiResponse of Extension</returns>
-        ApiResponse<Extension> PostProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body);
+        /// <returns>ApiResponse of ExtensionPool</returns>
+        ApiResponse<ExtensionPool> PostProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body);
         /// <summary>
         /// Create a file that can be used to configure a hardware Edge&#39;s settings.
         /// </summary>
@@ -4564,8 +4564,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
-        /// <returns>Task of Extension</returns>
-        System.Threading.Tasks.Task<Extension> PostProvidersEdgesExtensionpoolsAsync (ExtensionPool body);
+        /// <returns>Task of ExtensionPool</returns>
+        System.Threading.Tasks.Task<ExtensionPool> PostProvidersEdgesExtensionpoolsAsync (ExtensionPool body);
 
         /// <summary>
         /// Create a new extension pool
@@ -4575,8 +4575,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
-        /// <returns>Task of ApiResponse (Extension)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Extension>> PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body);
+        /// <returns>Task of ApiResponse (ExtensionPool)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body);
         /// <summary>
         /// Create a file that can be used to configure a hardware Edge&#39;s settings.
         /// </summary>
@@ -18926,10 +18926,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
-        /// <returns>Extension</returns>
-        public Extension PostProvidersEdgesExtensionpools (ExtensionPool body)
+        /// <returns>ExtensionPool</returns>
+        public ExtensionPool PostProvidersEdgesExtensionpools (ExtensionPool body)
         {
-             ApiResponse<Extension> localVarResponse = PostProvidersEdgesExtensionpoolsWithHttpInfo(body);
+             ApiResponse<ExtensionPool> localVarResponse = PostProvidersEdgesExtensionpoolsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -18938,8 +18938,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
-        /// <returns>ApiResponse of Extension</returns>
-        public ApiResponse< Extension > PostProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body)
+        /// <returns>ApiResponse of ExtensionPool</returns>
+        public ApiResponse< ExtensionPool > PostProvidersEdgesExtensionpoolsWithHttpInfo (ExtensionPool body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -18998,9 +18998,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostProvidersEdgesExtensionpools: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Extension>(localVarStatusCode,
+            return new ApiResponse<ExtensionPool>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Extension) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Extension)));
+                (ExtensionPool) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionPool)));
             
         }
 
@@ -19009,10 +19009,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
-        /// <returns>Task of Extension</returns>
-        public async System.Threading.Tasks.Task<Extension> PostProvidersEdgesExtensionpoolsAsync (ExtensionPool body)
+        /// <returns>Task of ExtensionPool</returns>
+        public async System.Threading.Tasks.Task<ExtensionPool> PostProvidersEdgesExtensionpoolsAsync (ExtensionPool body)
         {
-             ApiResponse<Extension> localVarResponse = await PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo(body);
+             ApiResponse<ExtensionPool> localVarResponse = await PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -19022,8 +19022,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExtensionPool</param>
-        /// <returns>Task of ApiResponse (Extension)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Extension>> PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body)
+        /// <returns>Task of ApiResponse (ExtensionPool)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PostProvidersEdgesExtensionpoolsAsyncWithHttpInfo (ExtensionPool body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -19082,9 +19082,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostProvidersEdgesExtensionpools: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Extension>(localVarStatusCode,
+            return new ApiResponse<ExtensionPool>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Extension) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Extension)));
+                (ExtensionPool) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtensionPool)));
             
         }
 

@@ -24,7 +24,7 @@ title: CampaignInteraction
 | **CallerName** | **string** |  | [optional] |
 | **CallerAddress** | **string** |  | [optional] |
 | **PreviewPopDeliveredTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **Conversation** | [**UriReference**](UriReference.html) |  | [optional] |
+| **Conversation** | [**Conversation**](Conversation.html) |  | [optional] |
 | **DialerSystemParticipantId** | **string** | conversation participant id that is the dialer system participant to monitor the call from dialer perspective | [optional] |
 | **DialingMode** | **string** |  | [optional] |
 | **Skills** | [**List&lt;UriReference&gt;**](UriReference.html) | Any skills that are attached to the call for routing | [optional] |
