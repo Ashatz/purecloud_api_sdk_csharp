@@ -13,9 +13,9 @@ title: PhoneBaseEntityListing
 | **Entities** | [**List&lt;PhoneBase&gt;**](PhoneBase.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
