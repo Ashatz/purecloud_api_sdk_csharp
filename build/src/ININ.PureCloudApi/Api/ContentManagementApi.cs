@@ -157,13 +157,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>DocumentEntityListing</returns>
-        DocumentEntityListing GetDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        DocumentEntityListing GetDocuments (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of documents.
@@ -174,13 +174,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>ApiResponse of DocumentEntityListing</returns>
-        ApiResponse<DocumentEntityListing> GetDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<DocumentEntityListing> GetDocumentsWithHttpInfo (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Get a document.
         /// </summary>
@@ -189,9 +189,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Document</returns>
-        Document GetDocumentsDocumentId (string documentId, string expand = null);
+        Document GetDocumentsDocumentId (string documentId, List<string> expand = null);
 
         /// <summary>
         /// Get a document.
@@ -201,9 +201,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Document</returns>
-        ApiResponse<Document> GetDocumentsDocumentIdWithHttpInfo (string documentId, string expand = null);
+        ApiResponse<Document> GetDocumentsDocumentIdWithHttpInfo (string documentId, List<string> expand = null);
         /// <summary>
         /// Get a list of audits for a document.
         /// </summary>
@@ -245,7 +245,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>DownloadResponse</returns>
         DownloadResponse GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null);
@@ -258,7 +258,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
         ApiResponse<DownloadResponse> GetDocumentsDocumentIdContentWithHttpInfo (string documentId, string disposition = null, string contentType = null);
@@ -274,9 +274,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>QueryResults</returns>
-        QueryResults GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        QueryResults GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Query content
@@ -290,9 +290,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of QueryResults</returns>
-        ApiResponse<QueryResults> GetQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        ApiResponse<QueryResults> GetQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
         /// <summary>
         /// Get a List of Security Profiles
         /// </summary>
@@ -370,11 +370,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ShareEntityListing</returns>
-        ShareEntityListing GetShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        ShareEntityListing GetShares (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -384,11 +384,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ShareEntityListing</returns>
-        ApiResponse<ShareEntityListing> GetSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<ShareEntityListing> GetSharesWithHttpInfo (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null);
         /// <summary>
         /// Retrieve details about an existing share.
         /// </summary>
@@ -397,9 +397,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Share</returns>
-        Share GetSharesShareId (string shareId, string expand = null);
+        Share GetSharesShareId (string shareId, List<string> expand = null);
 
         /// <summary>
         /// Retrieve details about an existing share.
@@ -409,9 +409,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Share</returns>
-        ApiResponse<Share> GetSharesShareIdWithHttpInfo (string shareId, string expand = null);
+        ApiResponse<Share> GetSharesShareIdWithHttpInfo (string shareId, List<string> expand = null);
         /// <summary>
         /// Get a list of statuses for pending operations
         /// </summary>
@@ -484,10 +484,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="access">Requested access level. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceEntityListing</returns>
-        WorkspaceEntityListing GetWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        WorkspaceEntityListing GetWorkspaces (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of workspaces.
@@ -498,10 +498,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="access">Requested access level. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceEntityListing</returns>
-        ApiResponse<WorkspaceEntityListing> GetWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        ApiResponse<WorkspaceEntityListing> GetWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null);
         /// <summary>
         /// Get a workspace.
         /// </summary>
@@ -510,9 +510,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Workspace</returns>
-        Workspace GetWorkspacesWorkspaceId (string workspaceId, string expand = null);
+        Workspace GetWorkspacesWorkspaceId (string workspaceId, List<string> expand = null);
 
         /// <summary>
         /// Get a workspace.
@@ -522,9 +522,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Workspace</returns>
-        ApiResponse<Workspace> GetWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, string expand = null);
+        ApiResponse<Workspace> GetWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, List<string> expand = null);
         /// <summary>
         /// Get a list workspace members
         /// </summary>
@@ -535,9 +535,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceMemberEntityListing</returns>
-        WorkspaceMemberEntityListing GetWorkspacesWorkspaceIdMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        WorkspaceMemberEntityListing GetWorkspacesWorkspaceIdMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list workspace members
@@ -549,9 +549,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceMemberEntityListing</returns>
-        ApiResponse<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        ApiResponse<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
         /// <summary>
         /// Get a workspace member
         /// </summary>
@@ -561,9 +561,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceMember</returns>
-        WorkspaceMember GetWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, string expand = null);
+        WorkspaceMember GetWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, List<string> expand = null);
 
         /// <summary>
         /// Get a workspace member
@@ -574,9 +574,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        ApiResponse<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, string expand = null);
+        ApiResponse<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, List<string> expand = null);
         /// <summary>
         /// Get a list of workspace tags
         /// </summary>
@@ -588,9 +588,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="value">filter the list of tags returned (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValueEntityListing</returns>
-        TagValueEntityListing GetWorkspacesWorkspaceIdTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        TagValueEntityListing GetWorkspacesWorkspaceIdTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of workspace tags
@@ -603,9 +603,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="value">filter the list of tags returned (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        ApiResponse<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        ApiResponse<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
         /// <summary>
         /// Get a workspace tag
         /// </summary>
@@ -615,9 +615,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValue</returns>
-        TagValue GetWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, string expand = null);
+        TagValue GetWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, List<string> expand = null);
 
         /// <summary>
         /// Get a workspace tag
@@ -628,9 +628,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValue</returns>
-        ApiResponse<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, string expand = null);
+        ApiResponse<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, List<string> expand = null);
         /// <summary>
         /// Query audits
         /// </summary>
@@ -828,9 +828,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValueEntityListing</returns>
-        TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body, string expand = null);
+        TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body, List<string> expand = null);
 
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -841,9 +841,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        ApiResponse<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body, string expand = null);
+        ApiResponse<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body, List<string> expand = null);
         /// <summary>
         /// Update a workspace
         /// </summary>
@@ -876,7 +876,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace Member</param>
         /// <returns>WorkspaceMember</returns>
         WorkspaceMember PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body);
 
@@ -889,7 +889,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace Member</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
         ApiResponse<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body);
         /// <summary>
@@ -1062,13 +1062,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>Task of DocumentEntityListing</returns>
-        System.Threading.Tasks.Task<DocumentEntityListing> GetDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<DocumentEntityListing> GetDocumentsAsync (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of documents.
@@ -1079,13 +1079,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Get a document.
         /// </summary>
@@ -1094,9 +1094,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Document</returns>
-        System.Threading.Tasks.Task<Document> GetDocumentsDocumentIdAsync (string documentId, string expand = null);
+        System.Threading.Tasks.Task<Document> GetDocumentsDocumentIdAsync (string documentId, List<string> expand = null);
 
         /// <summary>
         /// Get a document.
@@ -1106,9 +1106,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Document>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Document>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId, List<string> expand = null);
         /// <summary>
         /// Get a list of audits for a document.
         /// </summary>
@@ -1150,7 +1150,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of DownloadResponse</returns>
         System.Threading.Tasks.Task<DownloadResponse> GetDocumentsDocumentIdContentAsync (string documentId, string disposition = null, string contentType = null);
@@ -1163,7 +1163,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null);
@@ -1179,9 +1179,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of QueryResults</returns>
-        System.Threading.Tasks.Task<QueryResults> GetQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        System.Threading.Tasks.Task<QueryResults> GetQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Query content
@@ -1195,9 +1195,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null);
         /// <summary>
         /// Get a List of Security Profiles
         /// </summary>
@@ -1275,11 +1275,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ShareEntityListing</returns>
-        System.Threading.Tasks.Task<ShareEntityListing> GetSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ShareEntityListing> GetSharesAsync (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -1289,11 +1289,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ShareEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetSharesAsyncWithHttpInfo (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null);
         /// <summary>
         /// Retrieve details about an existing share.
         /// </summary>
@@ -1302,9 +1302,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Share</returns>
-        System.Threading.Tasks.Task<Share> GetSharesShareIdAsync (string shareId, string expand = null);
+        System.Threading.Tasks.Task<Share> GetSharesShareIdAsync (string shareId, List<string> expand = null);
 
         /// <summary>
         /// Retrieve details about an existing share.
@@ -1314,9 +1314,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Share)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Share>> GetSharesShareIdAsyncWithHttpInfo (string shareId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Share>> GetSharesShareIdAsyncWithHttpInfo (string shareId, List<string> expand = null);
         /// <summary>
         /// Get a list of statuses for pending operations
         /// </summary>
@@ -1389,10 +1389,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="access">Requested access level. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceEntityListing</returns>
-        System.Threading.Tasks.Task<WorkspaceEntityListing> GetWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        System.Threading.Tasks.Task<WorkspaceEntityListing> GetWorkspacesAsync (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of workspaces.
@@ -1403,10 +1403,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="access">Requested access level. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null);
         /// <summary>
         /// Get a workspace.
         /// </summary>
@@ -1415,9 +1415,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Workspace</returns>
-        System.Threading.Tasks.Task<Workspace> GetWorkspacesWorkspaceIdAsync (string workspaceId, string expand = null);
+        System.Threading.Tasks.Task<Workspace> GetWorkspacesWorkspaceIdAsync (string workspaceId, List<string> expand = null);
 
         /// <summary>
         /// Get a workspace.
@@ -1427,9 +1427,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, List<string> expand = null);
         /// <summary>
         /// Get a list workspace members
         /// </summary>
@@ -1440,9 +1440,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceMemberEntityListing</returns>
-        System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list workspace members
@@ -1454,9 +1454,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetWorkspacesWorkspaceIdMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetWorkspacesWorkspaceIdMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
         /// <summary>
         /// Get a workspace member
         /// </summary>
@@ -1466,9 +1466,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceMember</returns>
-        System.Threading.Tasks.Task<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, string expand = null);
+        System.Threading.Tasks.Task<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, List<string> expand = null);
 
         /// <summary>
         /// Get a workspace member
@@ -1479,9 +1479,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, List<string> expand = null);
         /// <summary>
         /// Get a list of workspace tags
         /// </summary>
@@ -1493,9 +1493,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="value">filter the list of tags returned (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        System.Threading.Tasks.Task<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of workspace tags
@@ -1508,9 +1508,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="value">filter the list of tags returned (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null);
         /// <summary>
         /// Get a workspace tag
         /// </summary>
@@ -1520,9 +1520,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValue</returns>
-        System.Threading.Tasks.Task<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, string expand = null);
+        System.Threading.Tasks.Task<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, List<string> expand = null);
 
         /// <summary>
         /// Get a workspace tag
@@ -1533,9 +1533,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValue>> GetWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValue>> GetWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, List<string> expand = null);
         /// <summary>
         /// Query audits
         /// </summary>
@@ -1733,9 +1733,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body, string expand = null);
+        System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body, List<string> expand = null);
 
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -1746,9 +1746,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body, List<string> expand = null);
         /// <summary>
         /// Update a workspace
         /// </summary>
@@ -1781,7 +1781,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace Member</param>
         /// <returns>Task of WorkspaceMember</returns>
         System.Threading.Tasks.Task<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body);
 
@@ -1794,7 +1794,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace Member</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body);
         /// <summary>
@@ -2860,13 +2860,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>DocumentEntityListing</returns>
-        public DocumentEntityListing GetDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public DocumentEntityListing GetDocuments (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DocumentEntityListing> localVarResponse = GetDocumentsWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
              return localVarResponse.Data;
@@ -2878,13 +2878,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>ApiResponse of DocumentEntityListing</returns>
-        public ApiResponse< DocumentEntityListing > GetDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< DocumentEntityListing > GetDocumentsWithHttpInfo (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -2954,13 +2954,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>Task of DocumentEntityListing</returns>
-        public async System.Threading.Tasks.Task<DocumentEntityListing> GetDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<DocumentEntityListing> GetDocumentsAsync (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<DocumentEntityListing> localVarResponse = await GetDocumentsAsyncWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
              return localVarResponse.Data;
@@ -2973,13 +2973,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="name">Name (optional)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -3048,9 +3048,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Document</returns>
-        public Document GetDocumentsDocumentId (string documentId, string expand = null)
+        public Document GetDocumentsDocumentId (string documentId, List<string> expand = null)
         {
              ApiResponse<Document> localVarResponse = GetDocumentsDocumentIdWithHttpInfo(documentId, expand);
              return localVarResponse.Data;
@@ -3061,9 +3061,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Document</returns>
-        public ApiResponse< Document > GetDocumentsDocumentIdWithHttpInfo (string documentId, string expand = null)
+        public ApiResponse< Document > GetDocumentsDocumentIdWithHttpInfo (string documentId, List<string> expand = null)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
@@ -3127,9 +3127,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Document</returns>
-        public async System.Threading.Tasks.Task<Document> GetDocumentsDocumentIdAsync (string documentId, string expand = null)
+        public async System.Threading.Tasks.Task<Document> GetDocumentsDocumentIdAsync (string documentId, List<string> expand = null)
         {
              ApiResponse<Document> localVarResponse = await GetDocumentsDocumentIdAsyncWithHttpInfo(documentId, expand);
              return localVarResponse.Data;
@@ -3141,9 +3141,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Document>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Document>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId, List<string> expand = null)
         {
             // verify the required parameter 'documentId' is set
             if (documentId == null)
@@ -3396,7 +3396,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>DownloadResponse</returns>
         public DownloadResponse GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null)
@@ -3410,7 +3410,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
         public ApiResponse< DownloadResponse > GetDocumentsDocumentIdContentWithHttpInfo (string documentId, string disposition = null, string contentType = null)
@@ -3478,7 +3478,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of DownloadResponse</returns>
         public async System.Threading.Tasks.Task<DownloadResponse> GetDocumentsDocumentIdContentAsync (string documentId, string disposition = null, string contentType = null)
@@ -3493,7 +3493,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentId">Document ID</param>
-        /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional)</param>
+        /// <param name="disposition">Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null)
@@ -3565,9 +3565,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>QueryResults</returns>
-        public QueryResults GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public QueryResults GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<QueryResults> localVarResponse = GetQueryWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
              return localVarResponse.Data;
@@ -3582,9 +3582,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of QueryResults</returns>
-        public ApiResponse< QueryResults > GetQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public ApiResponse< QueryResults > GetQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         {
             // verify the required parameter 'queryPhrase' is set
             if (queryPhrase == null)
@@ -3656,9 +3656,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of QueryResults</returns>
-        public async System.Threading.Tasks.Task<QueryResults> GetQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public async System.Threading.Tasks.Task<QueryResults> GetQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<QueryResults> localVarResponse = await GetQueryAsyncWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
              return localVarResponse.Data;
@@ -3674,9 +3674,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">name or dateCreated (optional, default to name)</param>
         /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
         {
             // verify the required parameter 'queryPhrase' is set
             if (queryPhrase == null)
@@ -4213,11 +4213,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ShareEntityListing</returns>
-        public ShareEntityListing GetShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public ShareEntityListing GetShares (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<ShareEntityListing> localVarResponse = GetSharesWithHttpInfo(entityId, expand, pageSize, pageNumber);
              return localVarResponse.Data;
@@ -4228,11 +4228,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ShareEntityListing</returns>
-        public ApiResponse< ShareEntityListing > GetSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< ShareEntityListing > GetSharesWithHttpInfo (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
         {
 
             var localVarPath = "/api/v2/contentmanagement/shares";
@@ -4295,11 +4295,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ShareEntityListing</returns>
-        public async System.Threading.Tasks.Task<ShareEntityListing> GetSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ShareEntityListing> GetSharesAsync (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<ShareEntityListing> localVarResponse = await GetSharesAsyncWithHttpInfo(entityId, expand, pageSize, pageNumber);
              return localVarResponse.Data;
@@ -4311,11 +4311,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entityId">Filters the shares returned to only the entity specified by the value of this parameter. (optional)</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ShareEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetSharesAsyncWithHttpInfo (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
         {
 
             var localVarPath = "/api/v2/contentmanagement/shares";
@@ -4378,9 +4378,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Share</returns>
-        public Share GetSharesShareId (string shareId, string expand = null)
+        public Share GetSharesShareId (string shareId, List<string> expand = null)
         {
              ApiResponse<Share> localVarResponse = GetSharesShareIdWithHttpInfo(shareId, expand);
              return localVarResponse.Data;
@@ -4391,9 +4391,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Share</returns>
-        public ApiResponse< Share > GetSharesShareIdWithHttpInfo (string shareId, string expand = null)
+        public ApiResponse< Share > GetSharesShareIdWithHttpInfo (string shareId, List<string> expand = null)
         {
             // verify the required parameter 'shareId' is set
             if (shareId == null)
@@ -4457,9 +4457,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Share</returns>
-        public async System.Threading.Tasks.Task<Share> GetSharesShareIdAsync (string shareId, string expand = null)
+        public async System.Threading.Tasks.Task<Share> GetSharesShareIdAsync (string shareId, List<string> expand = null)
         {
              ApiResponse<Share> localVarResponse = await GetSharesShareIdAsyncWithHttpInfo(shareId, expand);
              return localVarResponse.Data;
@@ -4471,9 +4471,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="shareId">Share ID</param>
-        /// <param name="expand">Expand share fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Share)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Share>> GetSharesShareIdAsyncWithHttpInfo (string shareId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Share>> GetSharesShareIdAsyncWithHttpInfo (string shareId, List<string> expand = null)
         {
             // verify the required parameter 'shareId' is set
             if (shareId == null)
@@ -4985,10 +4985,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="access">Requested access level. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceEntityListing</returns>
-        public WorkspaceEntityListing GetWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public WorkspaceEntityListing GetWorkspaces (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
         {
              ApiResponse<WorkspaceEntityListing> localVarResponse = GetWorkspacesWithHttpInfo(pageSize, pageNumber, access, expand);
              return localVarResponse.Data;
@@ -5000,10 +5000,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="access">Requested access level. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceEntityListing</returns>
-        public ApiResponse< WorkspaceEntityListing > GetWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public ApiResponse< WorkspaceEntityListing > GetWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/contentmanagement/workspaces";
@@ -5067,10 +5067,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="access">Requested access level. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceEntityListing</returns>
-        public async System.Threading.Tasks.Task<WorkspaceEntityListing> GetWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public async System.Threading.Tasks.Task<WorkspaceEntityListing> GetWorkspacesAsync (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
         {
              ApiResponse<WorkspaceEntityListing> localVarResponse = await GetWorkspacesAsyncWithHttpInfo(pageSize, pageNumber, access, expand);
              return localVarResponse.Data;
@@ -5083,10 +5083,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="access">Requested access level (optional, default to document:viewmetadata)</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="access">Requested access level. (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/contentmanagement/workspaces";
@@ -5149,9 +5149,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Workspace</returns>
-        public Workspace GetWorkspacesWorkspaceId (string workspaceId, string expand = null)
+        public Workspace GetWorkspacesWorkspaceId (string workspaceId, List<string> expand = null)
         {
              ApiResponse<Workspace> localVarResponse = GetWorkspacesWorkspaceIdWithHttpInfo(workspaceId, expand);
              return localVarResponse.Data;
@@ -5162,9 +5162,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of Workspace</returns>
-        public ApiResponse< Workspace > GetWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, string expand = null)
+        public ApiResponse< Workspace > GetWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -5228,9 +5228,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of Workspace</returns>
-        public async System.Threading.Tasks.Task<Workspace> GetWorkspacesWorkspaceIdAsync (string workspaceId, string expand = null)
+        public async System.Threading.Tasks.Task<Workspace> GetWorkspacesWorkspaceIdAsync (string workspaceId, List<string> expand = null)
         {
              ApiResponse<Workspace> localVarResponse = await GetWorkspacesWorkspaceIdAsyncWithHttpInfo(workspaceId, expand);
              return localVarResponse.Data;
@@ -5242,9 +5242,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -5310,9 +5310,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceMemberEntityListing</returns>
-        public WorkspaceMemberEntityListing GetWorkspacesWorkspaceIdMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public WorkspaceMemberEntityListing GetWorkspacesWorkspaceIdMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<WorkspaceMemberEntityListing> localVarResponse = GetWorkspacesWorkspaceIdMembersWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
              return localVarResponse.Data;
@@ -5325,9 +5325,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceMemberEntityListing</returns>
-        public ApiResponse< WorkspaceMemberEntityListing > GetWorkspacesWorkspaceIdMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public ApiResponse< WorkspaceMemberEntityListing > GetWorkspacesWorkspaceIdMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -5395,9 +5395,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<WorkspaceMemberEntityListing> localVarResponse = await GetWorkspacesWorkspaceIdMembersAsyncWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
              return localVarResponse.Data;
@@ -5411,9 +5411,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetWorkspacesWorkspaceIdMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetWorkspacesWorkspaceIdMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -5480,9 +5480,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkspaceMember</returns>
-        public WorkspaceMember GetWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, string expand = null)
+        public WorkspaceMember GetWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, List<string> expand = null)
         {
              ApiResponse<WorkspaceMember> localVarResponse = GetWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo(workspaceId, memberId, expand);
              return localVarResponse.Data;
@@ -5494,9 +5494,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        public ApiResponse< WorkspaceMember > GetWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, string expand = null)
+        public ApiResponse< WorkspaceMember > GetWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -5565,9 +5565,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkspaceMember</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, string expand = null)
+        public async System.Threading.Tasks.Task<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, List<string> expand = null)
         {
              ApiResponse<WorkspaceMember> localVarResponse = await GetWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo(workspaceId, memberId, expand);
              return localVarResponse.Data;
@@ -5580,9 +5580,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="expand">Expand workspace member fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -5653,9 +5653,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="value">filter the list of tags returned (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValueEntityListing</returns>
-        public TagValueEntityListing GetWorkspacesWorkspaceIdTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public TagValueEntityListing GetWorkspacesWorkspaceIdTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<TagValueEntityListing> localVarResponse = GetWorkspacesWorkspaceIdTagvaluesWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
              return localVarResponse.Data;
@@ -5669,9 +5669,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="value">filter the list of tags returned (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        public ApiResponse< TagValueEntityListing > GetWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public ApiResponse< TagValueEntityListing > GetWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -5741,9 +5741,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="value">filter the list of tags returned (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        public async System.Threading.Tasks.Task<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<TagValueEntityListing> localVarResponse = await GetWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
              return localVarResponse.Data;
@@ -5758,9 +5758,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="value">filter the list of tags returned (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -5828,9 +5828,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValue</returns>
-        public TagValue GetWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, string expand = null)
+        public TagValue GetWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, List<string> expand = null)
         {
              ApiResponse<TagValue> localVarResponse = GetWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo(workspaceId, tagId, expand);
              return localVarResponse.Data;
@@ -5842,9 +5842,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValue</returns>
-        public ApiResponse< TagValue > GetWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, string expand = null)
+        public ApiResponse< TagValue > GetWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -5913,9 +5913,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValue</returns>
-        public async System.Threading.Tasks.Task<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, string expand = null)
+        public async System.Threading.Tasks.Task<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, List<string> expand = null)
         {
              ApiResponse<TagValue> localVarResponse = await GetWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo(workspaceId, tagId, expand);
              return localVarResponse.Data;
@@ -5928,9 +5928,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> GetWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> GetWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -7413,9 +7413,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>TagValueEntityListing</returns>
-        public TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body, string expand = null)
+        public TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body, List<string> expand = null)
         {
              ApiResponse<TagValueEntityListing> localVarResponse = PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo(workspaceId, body, expand);
              return localVarResponse.Data;
@@ -7427,9 +7427,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        public ApiResponse< TagValueEntityListing > PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body, string expand = null)
+        public ApiResponse< TagValueEntityListing > PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -7505,9 +7505,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        public async System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body, string expand = null)
+        public async System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body, List<string> expand = null)
         {
              ApiResponse<TagValueEntityListing> localVarResponse = await PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo(workspaceId, body, expand);
              return localVarResponse.Data;
@@ -7520,9 +7520,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">query</param>
-        /// <param name="expand">Expand some document fields (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body, List<string> expand = null)
         {
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
@@ -7777,7 +7777,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace Member</param>
         /// <returns>WorkspaceMember</returns>
         public WorkspaceMember PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body)
         {
@@ -7791,7 +7791,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace Member</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
         public ApiResponse< WorkspaceMember > PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body)
         {
@@ -7872,7 +7872,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace Member</param>
         /// <returns>Task of WorkspaceMember</returns>
         public async System.Threading.Tasks.Task<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body)
         {
@@ -7887,7 +7887,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <param name="body">Workspace</param>
+        /// <param name="body">Workspace Member</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body)
         {

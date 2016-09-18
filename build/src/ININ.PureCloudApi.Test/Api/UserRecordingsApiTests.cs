@@ -73,7 +73,7 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetRecordingId'
             string recordingId = null; // TODO: replace null with proper value
-            string expand = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
             var response = instance.GetRecordingId(recordingId, expand);
             Assert.IsInstanceOf<UserRecording> (response, "response is UserRecording");
         }
@@ -111,7 +111,7 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetUserrecordings'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            string expand = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
             var response = instance.GetUserrecordings(pageSize, pageNumber, expand);
             Assert.IsInstanceOf<UserRecordingEntityListing> (response, "response is UserRecordingEntityListing");
         }
@@ -125,7 +125,7 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutRecordingId'
             string recordingId = null; // TODO: replace null with proper value
             UserRecording body = null; // TODO: replace null with proper value
-            string expand = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
             var response = instance.PutRecordingId(recordingId, body, expand);
             Assert.IsInstanceOf<UserRecording> (response, "response is UserRecording");
         }

@@ -43,9 +43,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecording</returns>
-        UserRecording GetRecordingId (string recordingId, string expand = null);
+        UserRecording GetRecordingId (string recordingId, List<string> expand = null);
 
         /// <summary>
         /// Get a user recording.
@@ -55,9 +55,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecording</returns>
-        ApiResponse<UserRecording> GetRecordingIdWithHttpInfo (string recordingId, string expand = null);
+        ApiResponse<UserRecording> GetRecordingIdWithHttpInfo (string recordingId, List<string> expand = null);
         /// <summary>
         /// Download a user recording.
         /// </summary>
@@ -109,9 +109,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecordingEntityListing</returns>
-        UserRecordingEntityListing GetUserrecordings (int? pageSize = null, int? pageNumber = null, string expand = null);
+        UserRecordingEntityListing GetUserrecordings (int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of user recordings.
@@ -122,9 +122,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecordingEntityListing</returns>
-        ApiResponse<UserRecordingEntityListing> GetUserrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
+        ApiResponse<UserRecordingEntityListing> GetUserrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null);
         /// <summary>
         /// Update a user recording.
         /// </summary>
@@ -134,9 +134,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="body">UserRecording</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecording</returns>
-        UserRecording PutRecordingId (string recordingId, UserRecording body, string expand = null);
+        UserRecording PutRecordingId (string recordingId, UserRecording body, List<string> expand = null);
 
         /// <summary>
         /// Update a user recording.
@@ -147,9 +147,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="body">UserRecording</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecording</returns>
-        ApiResponse<UserRecording> PutRecordingIdWithHttpInfo (string recordingId, UserRecording body, string expand = null);
+        ApiResponse<UserRecording> PutRecordingIdWithHttpInfo (string recordingId, UserRecording body, List<string> expand = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -181,9 +181,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecording</returns>
-        System.Threading.Tasks.Task<UserRecording> GetRecordingIdAsync (string recordingId, string expand = null);
+        System.Threading.Tasks.Task<UserRecording> GetRecordingIdAsync (string recordingId, List<string> expand = null);
 
         /// <summary>
         /// Get a user recording.
@@ -193,9 +193,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRecording>> GetRecordingIdAsyncWithHttpInfo (string recordingId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserRecording>> GetRecordingIdAsyncWithHttpInfo (string recordingId, List<string> expand = null);
         /// <summary>
         /// Download a user recording.
         /// </summary>
@@ -247,9 +247,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecordingEntityListing</returns>
-        System.Threading.Tasks.Task<UserRecordingEntityListing> GetUserrecordingsAsync (int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<UserRecordingEntityListing> GetUserrecordingsAsync (int? pageSize = null, int? pageNumber = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of user recordings.
@@ -260,9 +260,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecordingEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetUserrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetUserrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null);
         /// <summary>
         /// Update a user recording.
         /// </summary>
@@ -272,9 +272,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="body">UserRecording</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecording</returns>
-        System.Threading.Tasks.Task<UserRecording> PutRecordingIdAsync (string recordingId, UserRecording body, string expand = null);
+        System.Threading.Tasks.Task<UserRecording> PutRecordingIdAsync (string recordingId, UserRecording body, List<string> expand = null);
 
         /// <summary>
         /// Update a user recording.
@@ -285,9 +285,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="body">UserRecording</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutRecordingIdAsyncWithHttpInfo (string recordingId, UserRecording body, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutRecordingIdAsyncWithHttpInfo (string recordingId, UserRecording body, List<string> expand = null);
         #endregion Asynchronous Operations
     }
 
@@ -534,9 +534,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecording</returns>
-        public UserRecording GetRecordingId (string recordingId, string expand = null)
+        public UserRecording GetRecordingId (string recordingId, List<string> expand = null)
         {
              ApiResponse<UserRecording> localVarResponse = GetRecordingIdWithHttpInfo(recordingId, expand);
              return localVarResponse.Data;
@@ -547,9 +547,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecording</returns>
-        public ApiResponse< UserRecording > GetRecordingIdWithHttpInfo (string recordingId, string expand = null)
+        public ApiResponse< UserRecording > GetRecordingIdWithHttpInfo (string recordingId, List<string> expand = null)
         {
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
@@ -613,9 +613,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecording</returns>
-        public async System.Threading.Tasks.Task<UserRecording> GetRecordingIdAsync (string recordingId, string expand = null)
+        public async System.Threading.Tasks.Task<UserRecording> GetRecordingIdAsync (string recordingId, List<string> expand = null)
         {
              ApiResponse<UserRecording> localVarResponse = await GetRecordingIdAsyncWithHttpInfo(recordingId, expand);
              return localVarResponse.Data;
@@ -627,9 +627,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> GetRecordingIdAsyncWithHttpInfo (string recordingId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> GetRecordingIdAsyncWithHttpInfo (string recordingId, List<string> expand = null)
         {
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
@@ -994,9 +994,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecordingEntityListing</returns>
-        public UserRecordingEntityListing GetUserrecordings (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public UserRecordingEntityListing GetUserrecordings (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<UserRecordingEntityListing> localVarResponse = GetUserrecordingsWithHttpInfo(pageSize, pageNumber, expand);
              return localVarResponse.Data;
@@ -1008,9 +1008,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecordingEntityListing</returns>
-        public ApiResponse< UserRecordingEntityListing > GetUserrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public ApiResponse< UserRecordingEntityListing > GetUserrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/userrecordings";
@@ -1073,9 +1073,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecordingEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserRecordingEntityListing> GetUserrecordingsAsync (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<UserRecordingEntityListing> GetUserrecordingsAsync (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
              ApiResponse<UserRecordingEntityListing> localVarResponse = await GetUserrecordingsAsyncWithHttpInfo(pageSize, pageNumber, expand);
              return localVarResponse.Data;
@@ -1088,9 +1088,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecordingEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetUserrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetUserrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/userrecordings";
@@ -1153,9 +1153,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="body">UserRecording</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>UserRecording</returns>
-        public UserRecording PutRecordingId (string recordingId, UserRecording body, string expand = null)
+        public UserRecording PutRecordingId (string recordingId, UserRecording body, List<string> expand = null)
         {
              ApiResponse<UserRecording> localVarResponse = PutRecordingIdWithHttpInfo(recordingId, body, expand);
              return localVarResponse.Data;
@@ -1167,9 +1167,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="body">UserRecording</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of UserRecording</returns>
-        public ApiResponse< UserRecording > PutRecordingIdWithHttpInfo (string recordingId, UserRecording body, string expand = null)
+        public ApiResponse< UserRecording > PutRecordingIdWithHttpInfo (string recordingId, UserRecording body, List<string> expand = null)
         {
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
@@ -1245,9 +1245,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="body">UserRecording</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of UserRecording</returns>
-        public async System.Threading.Tasks.Task<UserRecording> PutRecordingIdAsync (string recordingId, UserRecording body, string expand = null)
+        public async System.Threading.Tasks.Task<UserRecording> PutRecordingIdAsync (string recordingId, UserRecording body, List<string> expand = null)
         {
              ApiResponse<UserRecording> localVarResponse = await PutRecordingIdAsyncWithHttpInfo(recordingId, body, expand);
              return localVarResponse.Data;
@@ -1260,9 +1260,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="body">UserRecording</param>
-        /// <param name="expand">conversation (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutRecordingIdAsyncWithHttpInfo (string recordingId, UserRecording body, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutRecordingIdAsyncWithHttpInfo (string recordingId, UserRecording body, List<string> expand = null)
         {
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)

@@ -386,7 +386,7 @@ void (empty response body)
 
 <a name="getdocuments"></a>
 
-## [**DocumentEntityListing**](DocumentEntityListing.html) GetDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+## [**DocumentEntityListing**](DocumentEntityListing.html) GetDocuments (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
 
 Get a list of documents.
 
@@ -413,7 +413,7 @@ namespace Example
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
             var name = name_example;  // string | Name (optional) 
-            var expand = expand_example;  // string | Expand some document fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | name or dateCreated (optional) 
@@ -441,7 +441,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **name** | **string**| Name | [optional]  |
-| **expand** | **string**| Expand some document fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| name or dateCreated | [optional]  |
@@ -454,7 +454,7 @@ namespace Example
 
 <a name="getdocumentsdocumentid"></a>
 
-## [**Document**](Document.html) GetDocumentsDocumentId (string documentId, string expand = null)
+## [**Document**](Document.html) GetDocumentsDocumentId (string documentId, List<string> expand = null)
 
 Get a document.
 
@@ -480,7 +480,7 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var documentId = documentId_example;  // string | Document ID
-            var expand = expand_example;  // string | Expand some document fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -503,7 +503,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-| **expand** | **string**| Expand some document fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -606,7 +606,7 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var documentId = documentId_example;  // string | Document ID
-            var disposition = disposition_example;  // string | Request how the content will be downloaded: attached as a file or inline. Default is attachment. (optional) 
+            var disposition = disposition_example;  // string | Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional) 
             var contentType = contentType_example;  // string | The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav (optional) 
 
             try
@@ -630,7 +630,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-| **disposition** | **string**| Request how the content will be downloaded: attached as a file or inline. Default is attachment. | [optional]  |
+| **disposition** | **string**| Request how the content will be downloaded: a file attachment or inline. Default is attachment. | [optional]  |
 | **contentType** | **string**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav | [optional]  |
 {: class="table table-striped"}
 
@@ -640,7 +640,7 @@ namespace Example
 
 <a name="getquery"></a>
 
-## [**QueryResults**](QueryResults.html) GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+## [**QueryResults**](QueryResults.html) GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
 
 Query content
 
@@ -670,7 +670,7 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | name or dateCreated (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to ascending)
-            var expand = expand_example;  // string | Expand some document fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -697,7 +697,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| name or dateCreated | [optional] [default to name] |
 | **sortOrder** | **string**| ascending or descending | [optional] [default to ascending] |
-| **expand** | **string**| Expand some document fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -876,7 +876,7 @@ void (empty response body)
 
 <a name="getshares"></a>
 
-## [**ShareEntityListing**](ShareEntityListing.html) GetShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+## [**ShareEntityListing**](ShareEntityListing.html) GetShares (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
 
 Gets a list of shares.  You must specify at least one filter (e.g. entityId).
 
@@ -902,7 +902,7 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var entityId = entityId_example;  // string | Filters the shares returned to only the entity specified by the value of this parameter. (optional) 
-            var expand = expand_example;  // string | Expand share fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
 
@@ -927,7 +927,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **entityId** | **string**| Filters the shares returned to only the entity specified by the value of this parameter. | [optional]  |
-| **expand** | **string**| Expand share fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 {: class="table table-striped"}
@@ -938,7 +938,7 @@ namespace Example
 
 <a name="getsharesshareid"></a>
 
-## [**Share**](Share.html) GetSharesShareId (string shareId, string expand = null)
+## [**Share**](Share.html) GetSharesShareId (string shareId, List<string> expand = null)
 
 Retrieve details about an existing share.
 
@@ -964,7 +964,7 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var shareId = shareId_example;  // string | Share ID
-            var expand = expand_example;  // string | Expand share fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -987,7 +987,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **shareId** | **string**| Share ID |  |
-| **expand** | **string**| Expand share fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1161,7 +1161,7 @@ This endpoint does require any parameters.
 
 <a name="getworkspaces"></a>
 
-## [**WorkspaceEntityListing**](WorkspaceEntityListing.html) GetWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+## [**WorkspaceEntityListing**](WorkspaceEntityListing.html) GetWorkspaces (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
 
 Get a list of workspaces.
 
@@ -1188,8 +1188,8 @@ namespace Example
             var apiInstance = new ContentManagementApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var access = access_example;  // string | Requested access level (optional)  (default to document:viewmetadata)
-            var expand = expand_example;  // string | Expand some workspace fields (optional) 
+            var access = new List<string>(); // List<string> | Requested access level. (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -1213,8 +1213,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **access** | **string**| Requested access level | [optional] [default to document:viewmetadata] |
-| **expand** | **string**| Expand some workspace fields | [optional]  |
+| **access** | [**List<string>**](string.html)| Requested access level. | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1223,7 +1223,7 @@ namespace Example
 
 <a name="getworkspacesworkspaceid"></a>
 
-## [**Workspace**](Workspace.html) GetWorkspacesWorkspaceId (string workspaceId, string expand = null)
+## [**Workspace**](Workspace.html) GetWorkspacesWorkspaceId (string workspaceId, List<string> expand = null)
 
 Get a workspace.
 
@@ -1249,7 +1249,7 @@ namespace Example
 
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
-            var expand = expand_example;  // string | Expand some workspace fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -1272,7 +1272,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
-| **expand** | **string**| Expand some workspace fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1281,7 +1281,7 @@ namespace Example
 
 <a name="getworkspacesworkspaceidmembers"></a>
 
-## [**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing.html) GetWorkspacesWorkspaceIdMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+## [**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing.html) GetWorkspacesWorkspaceIdMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 
 Get a list workspace members
 
@@ -1309,7 +1309,7 @@ namespace Example
             var workspaceId = workspaceId_example;  // string | Workspace ID
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var expand = expand_example;  // string | Expand workspace member fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -1334,7 +1334,7 @@ namespace Example
 | **workspaceId** | **string**| Workspace ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand workspace member fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1343,7 +1343,7 @@ namespace Example
 
 <a name="getworkspacesworkspaceidmembersmemberid"></a>
 
-## [**WorkspaceMember**](WorkspaceMember.html) GetWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, string expand = null)
+## [**WorkspaceMember**](WorkspaceMember.html) GetWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, List<string> expand = null)
 
 Get a workspace member
 
@@ -1370,7 +1370,7 @@ namespace Example
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
             var memberId = memberId_example;  // string | Member ID
-            var expand = expand_example;  // string | Expand workspace member fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -1394,7 +1394,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **memberId** | **string**| Member ID |  |
-| **expand** | **string**| Expand workspace member fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1403,7 +1403,7 @@ namespace Example
 
 <a name="getworkspacesworkspaceidtagvalues"></a>
 
-## [**TagValueEntityListing**](TagValueEntityListing.html) GetWorkspacesWorkspaceIdTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+## [**TagValueEntityListing**](TagValueEntityListing.html) GetWorkspacesWorkspaceIdTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 
 Get a list of workspace tags
 
@@ -1432,7 +1432,7 @@ namespace Example
             var value = value_example;  // string | filter the list of tags returned (optional) 
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var expand = expand_example;  // string | Expand some document fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -1458,7 +1458,7 @@ namespace Example
 | **value** | **string**| filter the list of tags returned | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand some document fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1467,7 +1467,7 @@ namespace Example
 
 <a name="getworkspacesworkspaceidtagvaluestagid"></a>
 
-## [**TagValue**](TagValue.html) GetWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, string expand = null)
+## [**TagValue**](TagValue.html) GetWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, List<string> expand = null)
 
 Get a workspace tag
 
@@ -1494,7 +1494,7 @@ namespace Example
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
             var tagId = tagId_example;  // string | Tag ID
-            var expand = expand_example;  // string | Expand some document fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -1518,7 +1518,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **tagId** | **string**| Tag ID |  |
-| **expand** | **string**| Expand some document fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1995,7 +1995,7 @@ namespace Example
 
 <a name="postworkspacesworkspaceidtagvaluesquery"></a>
 
-## [**TagValueEntityListing**](TagValueEntityListing.html) PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body, string expand = null)
+## [**TagValueEntityListing**](TagValueEntityListing.html) PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body, List<string> expand = null)
 
 Perform a prefix query on tags in the workspace
 
@@ -2022,7 +2022,7 @@ namespace Example
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
             var body = new TagQueryRequest(); // TagQueryRequest | query
-            var expand = expand_example;  // string | Expand some document fields (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -2046,7 +2046,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **body** | [**TagQueryRequest**](TagQueryRequest.html)| query |  |
-| **expand** | **string**| Expand some document fields | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2140,7 +2140,7 @@ namespace Example
             var apiInstance = new ContentManagementApi();
             var workspaceId = workspaceId_example;  // string | Workspace ID
             var memberId = memberId_example;  // string | Member ID
-            var body = new WorkspaceMember(); // WorkspaceMember | Workspace
+            var body = new WorkspaceMember(); // WorkspaceMember | Workspace Member
 
             try
             {
@@ -2164,7 +2164,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **memberId** | **string**| Member ID |  |
-| **body** | [**WorkspaceMember**](WorkspaceMember.html)| Workspace |  |
+| **body** | [**WorkspaceMember**](WorkspaceMember.html)| Workspace Member |  |
 {: class="table table-striped"}
 
 ### Return type

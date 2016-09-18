@@ -12,10 +12,10 @@ title: QueueMemberEntityListing
 | **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;QueueMember&gt;**](QueueMember.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

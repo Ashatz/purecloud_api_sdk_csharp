@@ -291,6 +291,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Emails'
         }
         /// <summary>
+        /// Test the property 'Screenshares'
+        /// </summary>
+        [Test]
+        public void ScreensharesTest()
+        {
+            // TODO: unit test for the property 'Screenshares'
+        }
+        /// <summary>
         /// Test the property 'SocialExpressions'
         /// </summary>
         [Test]

@@ -72,7 +72,7 @@ void (empty response body)
 
 <a name="getrecordingid"></a>
 
-## [**UserRecording**](UserRecording.html) GetRecordingId (string recordingId, string expand = null)
+## [**UserRecording**](UserRecording.html) GetRecordingId (string recordingId, List<string> expand = null)
 
 Get a user recording.
 
@@ -98,7 +98,7 @@ namespace Example
 
             var apiInstance = new UserRecordingsApi();
             var recordingId = recordingId_example;  // string | User Recording ID
-            var expand = expand_example;  // string | conversation (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -121,7 +121,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
-| **expand** | **string**| conversation | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -239,7 +239,7 @@ This endpoint does require any parameters.
 
 <a name="getuserrecordings"></a>
 
-## [**UserRecordingEntityListing**](UserRecordingEntityListing.html) GetUserrecordings (int? pageSize = null, int? pageNumber = null, string expand = null)
+## [**UserRecordingEntityListing**](UserRecordingEntityListing.html) GetUserrecordings (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 
 Get a list of user recordings.
 
@@ -266,7 +266,7 @@ namespace Example
             var apiInstance = new UserRecordingsApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var expand = expand_example;  // string | conversation (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -290,7 +290,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| conversation | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -299,7 +299,7 @@ namespace Example
 
 <a name="putrecordingid"></a>
 
-## [**UserRecording**](UserRecording.html) PutRecordingId (string recordingId, UserRecording body, string expand = null)
+## [**UserRecording**](UserRecording.html) PutRecordingId (string recordingId, UserRecording body, List<string> expand = null)
 
 Update a user recording.
 
@@ -326,7 +326,7 @@ namespace Example
             var apiInstance = new UserRecordingsApi();
             var recordingId = recordingId_example;  // string | User Recording ID
             var body = new UserRecording(); // UserRecording | UserRecording
-            var expand = expand_example;  // string | conversation (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             {
@@ -350,7 +350,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
 | **body** | [**UserRecording**](UserRecording.html)| UserRecording |  |
-| **expand** | **string**| conversation | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
