@@ -10,10 +10,10 @@ title: CallbackConversationNotificationCallbackMediaParticipant
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
-| **StartTime** | **int?** |  | [optional] |
-| **ConnectedTime** | **int?** |  | [optional] |
-| **EndTime** | **int?** |  | [optional] |
-| **StartHoldTime** | **int?** |  | [optional] |
+| **StartTime** | **DateTime?** |  | [optional] |
+| **ConnectedTime** | **DateTime?** |  | [optional] |
+| **EndTime** | **DateTime?** |  | [optional] |
+| **StartHoldTime** | **DateTime?** |  | [optional] |
 | **Purpose** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **Direction** | **string** |  | [optional] |
@@ -22,8 +22,10 @@ title: CallbackConversationNotificationCallbackMediaParticipant
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
 | **User** | [**CallbackConversationNotificationUser**](CallbackConversationNotificationUser.html) |  | [optional] |
+| **Queue** | [**CallbackConversationNotificationUriReference**](CallbackConversationNotificationUriReference.html) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ErrorInfo** | [**CallbackConversationNotificationErrorInfo**](CallbackConversationNotificationErrorInfo.html) |  | [optional] |
+| **Script** | [**CallbackConversationNotificationUriReference**](CallbackConversationNotificationUriReference.html) |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **OutboundPreview** | [**ConversationNotificationDialerPreview**](ConversationNotificationDialerPreview.html) |  | [optional] |
@@ -31,7 +33,7 @@ title: CallbackConversationNotificationCallbackMediaParticipant
 | **CallbackUserName** | **string** |  | [optional] |
 | **SkipEnabled** | **bool?** |  | [optional] |
 | **TimeoutSeconds** | **int?** |  | [optional] |
-| **CallbackScheduledTime** | **int?** |  | [optional] |
+| **CallbackScheduledTime** | **DateTime?** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -41,12 +41,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Calls">Calls.</param>
         /// <param name="Callbacks">Callbacks.</param>
         /// <param name="Chats">Chats.</param>
-        /// <param name="Cobrowses">Cobrowses.</param>
+        /// <param name="Cobrowsesessions">Cobrowsesessions.</param>
         /// <param name="Emails">Emails.</param>
+        /// <param name="ScreenShares">ScreenShares.</param>
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationParticipant(string Id = null, int? ConnectedTime = null, int? EndTime = null, string UserId = null, string ExternalContactId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowses> Cobrowses = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
+        public ConversationNotificationParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationScreenShares> ScreenShares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
@@ -69,8 +70,9 @@ namespace ININ.PureCloudApi.Model
             this.Calls = Calls;
             this.Callbacks = Callbacks;
             this.Chats = Chats;
-            this.Cobrowses = Cobrowses;
+            this.Cobrowsesessions = Cobrowsesessions;
             this.Emails = Emails;
+            this.ScreenShares = ScreenShares;
             this.SocialExpressions = SocialExpressions;
             this.Videos = Videos;
             this.AdditionalProperties = AdditionalProperties;
@@ -85,12 +87,12 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
-        public int? ConnectedTime { get; set; }
+        public DateTime? ConnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets EndTime
         /// </summary>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
-        public int? EndTime { get; set; }
+        public DateTime? EndTime { get; set; }
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
@@ -182,15 +184,20 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="chats", EmitDefaultValue=false)]
         public List<ConversationNotificationChats> Chats { get; set; }
         /// <summary>
-        /// Gets or Sets Cobrowses
+        /// Gets or Sets Cobrowsesessions
         /// </summary>
-        [DataMember(Name="cobrowses", EmitDefaultValue=false)]
-        public List<ConversationNotificationCobrowses> Cobrowses { get; set; }
+        [DataMember(Name="cobrowsesessions", EmitDefaultValue=false)]
+        public List<ConversationNotificationCobrowsesessions> Cobrowsesessions { get; set; }
         /// <summary>
         /// Gets or Sets Emails
         /// </summary>
         [DataMember(Name="emails", EmitDefaultValue=false)]
         public List<ConversationNotificationEmails> Emails { get; set; }
+        /// <summary>
+        /// Gets or Sets ScreenShares
+        /// </summary>
+        [DataMember(Name="screenShares", EmitDefaultValue=false)]
+        public List<ConversationNotificationScreenShares> ScreenShares { get; set; }
         /// <summary>
         /// Gets or Sets SocialExpressions
         /// </summary>
@@ -235,8 +242,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Calls: ").Append(Calls).Append("\n");
             sb.Append("  Callbacks: ").Append(Callbacks).Append("\n");
             sb.Append("  Chats: ").Append(Chats).Append("\n");
-            sb.Append("  Cobrowses: ").Append(Cobrowses).Append("\n");
+            sb.Append("  Cobrowsesessions: ").Append(Cobrowsesessions).Append("\n");
             sb.Append("  Emails: ").Append(Emails).Append("\n");
+            sb.Append("  ScreenShares: ").Append(ScreenShares).Append("\n");
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
             sb.Append("  Videos: ").Append(Videos).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
@@ -382,14 +390,19 @@ namespace ININ.PureCloudApi.Model
                     this.Chats.SequenceEqual(other.Chats)
                 ) &&
                 (
-                    this.Cobrowses == other.Cobrowses ||
-                    this.Cobrowses != null &&
-                    this.Cobrowses.SequenceEqual(other.Cobrowses)
+                    this.Cobrowsesessions == other.Cobrowsesessions ||
+                    this.Cobrowsesessions != null &&
+                    this.Cobrowsesessions.SequenceEqual(other.Cobrowsesessions)
                 ) &&
                 (
                     this.Emails == other.Emails ||
                     this.Emails != null &&
                     this.Emails.SequenceEqual(other.Emails)
+                ) &&
+                (
+                    this.ScreenShares == other.ScreenShares ||
+                    this.ScreenShares != null &&
+                    this.ScreenShares.SequenceEqual(other.ScreenShares)
                 ) &&
                 (
                     this.SocialExpressions == other.SocialExpressions ||
@@ -461,10 +474,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Callbacks.GetHashCode();
                 if (this.Chats != null)
                     hash = hash * 59 + this.Chats.GetHashCode();
-                if (this.Cobrowses != null)
-                    hash = hash * 59 + this.Cobrowses.GetHashCode();
+                if (this.Cobrowsesessions != null)
+                    hash = hash * 59 + this.Cobrowsesessions.GetHashCode();
                 if (this.Emails != null)
                     hash = hash * 59 + this.Emails.GetHashCode();
+                if (this.ScreenShares != null)
+                    hash = hash * 59 + this.ScreenShares.GetHashCode();
                 if (this.SocialExpressions != null)
                     hash = hash * 59 + this.SocialExpressions.GetHashCode();
                 if (this.Videos != null)

@@ -219,12 +219,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Chats'
         }
         /// <summary>
-        /// Test the property 'Cobrowses'
+        /// Test the property 'Cobrowsesessions'
         /// </summary>
         [Test]
-        public void CobrowsesTest()
+        public void CobrowsesessionsTest()
         {
-            // TODO: unit test for the property 'Cobrowses'
+            // TODO: unit test for the property 'Cobrowsesessions'
         }
         /// <summary>
         /// Test the property 'Emails'
@@ -233,6 +233,14 @@ namespace ININ.PureCloudApi.Test
         public void EmailsTest()
         {
             // TODO: unit test for the property 'Emails'
+        }
+        /// <summary>
+        /// Test the property 'ScreenShares'
+        /// </summary>
+        [Test]
+        public void ScreenSharesTest()
+        {
+            // TODO: unit test for the property 'ScreenShares'
         }
         /// <summary>
         /// Test the property 'SocialExpressions'

@@ -192,16 +192,16 @@ namespace ININ.PureCloudApi.Model
             TransferForward,
             
             /// <summary>
-            /// Enum TransferNoAnswer for "TRANSFER_NO_ANSWER"
+            /// Enum TransferNoanswer for "TRANSFER_NOANSWER"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NO_ANSWER")]
-            TransferNoAnswer,
+            [EnumMember(Value = "TRANSFER_NOANSWER")]
+            TransferNoanswer,
             
             /// <summary>
-            /// Enum TransferNotAvailable for "TRANSFER_NOT_AVAILABLE"
+            /// Enum TransferNotavailable for "TRANSFER_NOTAVAILABLE"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOT_AVAILABLE")]
-            TransferNotAvailable,
+            [EnumMember(Value = "TRANSFER_NOTAVAILABLE")]
+            TransferNotavailable,
             
             /// <summary>
             /// Enum TransportFailure for "TRANSPORT_FAILURE"
@@ -282,6 +282,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationCall" /> class.
         /// </summary>
+        /// <param name="Id">Id.</param>
         /// <param name="State">State.</param>
         /// <param name="Recording">Recording.</param>
         /// <param name="RecordingState">RecordingState.</param>
@@ -294,13 +295,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Direction">Direction.</param>
         /// <param name="DocumentId">DocumentId.</param>
         /// <param name="Self">Self.</param>
+        /// <param name="Other">Other.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="DisconnectReasons">DisconnectReasons.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationCall(StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationNotificationErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, int? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationNotificationSelf Self = null, int? ConnectedTime = null, int? DisconnectedTime = null, List<ConversationNotificationDisconnectReasons> DisconnectReasons = null, ConversationNotificationFaxStatus FaxStatus = null, Object AdditionalProperties = null)
+        public ConversationNotificationCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationNotificationErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationNotificationSelf Self = null, ConversationNotificationAddress Other = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationNotificationDisconnectReasons> DisconnectReasons = null, ConversationNotificationFaxStatus FaxStatus = null, Object AdditionalProperties = null)
         {
+            this.Id = Id;
             this.State = State;
             this.Recording = Recording;
             this.RecordingState = RecordingState;
@@ -313,6 +316,7 @@ namespace ININ.PureCloudApi.Model
             this.Direction = Direction;
             this.DocumentId = DocumentId;
             this.Self = Self;
+            this.Other = Other;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.DisconnectReasons = DisconnectReasons;
@@ -320,6 +324,11 @@ namespace ININ.PureCloudApi.Model
             this.AdditionalProperties = AdditionalProperties;
         }
         
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
         /// <summary>
         /// Gets or Sets Recording
         /// </summary>
@@ -349,7 +358,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
-        public int? StartHoldTime { get; set; }
+        public DateTime? StartHoldTime { get; set; }
         /// <summary>
         /// Gets or Sets DocumentId
         /// </summary>
@@ -361,15 +370,20 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="self", EmitDefaultValue=false)]
         public ConversationNotificationSelf Self { get; set; }
         /// <summary>
+        /// Gets or Sets Other
+        /// </summary>
+        [DataMember(Name="other", EmitDefaultValue=false)]
+        public ConversationNotificationAddress Other { get; set; }
+        /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
-        public int? ConnectedTime { get; set; }
+        public DateTime? ConnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets DisconnectedTime
         /// </summary>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
-        public int? DisconnectedTime { get; set; }
+        public DateTime? DisconnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets DisconnectReasons
         /// </summary>
@@ -393,6 +407,7 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationCall {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
@@ -405,6 +420,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
             sb.Append("  Self: ").Append(Self).Append("\n");
+            sb.Append("  Other: ").Append(Other).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
@@ -446,6 +462,11 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
@@ -507,6 +528,11 @@ namespace ININ.PureCloudApi.Model
                     this.Self.Equals(other.Self)
                 ) &&
                 (
+                    this.Other == other.Other ||
+                    this.Other != null &&
+                    this.Other.Equals(other.Other)
+                ) &&
+                (
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
@@ -544,6 +570,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
                 if (this.Recording != null)
@@ -568,6 +596,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DocumentId.GetHashCode();
                 if (this.Self != null)
                     hash = hash * 59 + this.Self.GetHashCode();
+                if (this.Other != null)
+                    hash = hash * 59 + this.Other.GetHashCode();
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
                 if (this.DisconnectedTime != null)

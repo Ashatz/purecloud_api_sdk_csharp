@@ -10,10 +10,10 @@ title: ChatConversationNotificationChatMediaParticipant
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
-| **StartTime** | **int?** |  | [optional] |
-| **ConnectedTime** | **int?** |  | [optional] |
-| **EndTime** | **int?** |  | [optional] |
-| **StartHoldTime** | **int?** |  | [optional] |
+| **StartTime** | **DateTime?** |  | [optional] |
+| **ConnectedTime** | **DateTime?** |  | [optional] |
+| **EndTime** | **DateTime?** |  | [optional] |
+| **StartHoldTime** | **DateTime?** |  | [optional] |
 | **Purpose** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **Direction** | **string** |  | [optional] |
@@ -22,8 +22,10 @@ title: ChatConversationNotificationChatMediaParticipant
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
 | **User** | [**CallbackConversationNotificationUser**](CallbackConversationNotificationUser.html) |  | [optional] |
+| **Queue** | [**ChatConversationNotificationUriReference**](ChatConversationNotificationUriReference.html) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **ErrorInfo** | [**CallbackConversationNotificationErrorInfo**](CallbackConversationNotificationErrorInfo.html) |  | [optional] |
+| **ErrorInfo** | [**ChatConversationNotificationErrorInfo**](ChatConversationNotificationErrorInfo.html) |  | [optional] |
+| **Script** | [**ChatConversationNotificationUriReference**](ChatConversationNotificationUriReference.html) |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **RoomId** | **string** |  | [optional] |

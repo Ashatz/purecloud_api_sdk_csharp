@@ -23,11 +23,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ErrorCode">ErrorCode.</param>
         /// <param name="FieldName">FieldName.</param>
         /// <param name="EntityId">EntityId.</param>
-        public SocialConversationNotificationDetail(string ErrorCode = null, string FieldName = null, string EntityId = null)
+        /// <param name="EntityName">EntityName.</param>
+        public SocialConversationNotificationDetail(string ErrorCode = null, string FieldName = null, string EntityId = null, string EntityName = null)
         {
             this.ErrorCode = ErrorCode;
             this.FieldName = FieldName;
             this.EntityId = EntityId;
+            this.EntityName = EntityName;
         }
         
         /// <summary>
@@ -46,6 +48,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="entityId", EmitDefaultValue=false)]
         public string EntityId { get; set; }
         /// <summary>
+        /// Gets or Sets EntityName
+        /// </summary>
+        [DataMember(Name="entityName", EmitDefaultValue=false)]
+        public string EntityName { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -56,6 +63,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
+            sb.Append("  EntityName: ").Append(EntityName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,6 +114,11 @@ namespace ININ.PureCloudApi.Model
                     this.EntityId == other.EntityId ||
                     this.EntityId != null &&
                     this.EntityId.Equals(other.EntityId)
+                ) &&
+                (
+                    this.EntityName == other.EntityName ||
+                    this.EntityName != null &&
+                    this.EntityName.Equals(other.EntityName)
                 );
         }
 
@@ -126,6 +139,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.FieldName.GetHashCode();
                 if (this.EntityId != null)
                     hash = hash * 59 + this.EntityId.GetHashCode();
+                if (this.EntityName != null)
+                    hash = hash * 59 + this.EntityName.GetHashCode();
                 return hash;
             }
         }

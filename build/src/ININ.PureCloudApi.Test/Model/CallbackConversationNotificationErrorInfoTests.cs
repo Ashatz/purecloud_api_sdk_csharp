@@ -67,6 +67,22 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Code'
         }
         /// <summary>
+        /// Test the property 'EntityId'
+        /// </summary>
+        [Test]
+        public void EntityIdTest()
+        {
+            // TODO: unit test for the property 'EntityId'
+        }
+        /// <summary>
+        /// Test the property 'EntityName'
+        /// </summary>
+        [Test]
+        public void EntityNameTest()
+        {
+            // TODO: unit test for the property 'EntityName'
+        }
+        /// <summary>
         /// Test the property 'Message'
         /// </summary>
         [Test]
@@ -105,6 +121,14 @@ namespace ININ.PureCloudApi.Test
         public void DetailsTest()
         {
             // TODO: unit test for the property 'Details'
+        }
+        /// <summary>
+        /// Test the property 'Errors'
+        /// </summary>
+        [Test]
+        public void ErrorsTest()
+        {
+            // TODO: unit test for the property 'Errors'
         }
 
     }

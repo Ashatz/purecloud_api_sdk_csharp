@@ -19,9 +19,9 @@ title: InteractionStatAlertNotification
 | **Statistic** | **string** |  | [optional] |
 | **Value** | **double?** |  | [optional] |
 | **Unread** | **bool?** |  | [optional] |
-| **StartDate** | **int?** |  | [optional] |
-| **EndDate** | **int?** |  | [optional] |
-| **NotificationUsers** | [**List&lt;InteractionStatAlertNotificationNotificationUsers&gt;**](InteractionStatAlertNotificationNotificationUsers.html) |  | [optional] |
+| **StartDate** | **DateTime?** |  | [optional] |
+| **EndDate** | **DateTime?** |  | [optional] |
+| **NotificationUsers** | [**List&lt;HeartBeatAlertNotificationNotificationUsers&gt;**](HeartBeatAlertNotificationNotificationUsers.html) |  | [optional] |
 | **AlertTypes** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 

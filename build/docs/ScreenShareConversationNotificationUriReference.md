@@ -1,14 +1,14 @@
 ---
-title: InteractionStatAlertNotificationNotificationUsers
+title: ScreenShareConversationNotificationUriReference
 ---
-## ININ.PureCloudApi.Model.InteractionStatAlertNotificationNotificationUsers
+## ININ.PureCloudApi.Model.ScreenShareConversationNotificationUriReference
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **DisplayName** | **string** |  | [optional] |
+| **Name** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

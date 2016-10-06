@@ -12,10 +12,10 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// ConversationNotificationCobrowses
+    /// ConversationNotificationCobrowsesessions
     /// </summary>
     [DataContract]
-    public partial class ConversationNotificationCobrowses :  IEquatable<ConversationNotificationCobrowses>
+    public partial class ConversationNotificationCobrowsesessions :  IEquatable<ConversationNotificationCobrowsesessions>
     {
         /// <summary>
         /// Gets or Sets State
@@ -182,29 +182,35 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationNotificationCobrowses" /> class.
+        /// Initializes a new instance of the <see cref="ConversationNotificationCobrowsesessions" /> class.
         /// </summary>
         /// <param name="State">State.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="Id">Id.</param>
+        /// <param name="Self">Self.</param>
         /// <param name="RoomId">RoomId.</param>
         /// <param name="CobrowseSessionId">CobrowseSessionId.</param>
         /// <param name="CobrowseRole">CobrowseRole.</param>
         /// <param name="Controlling">Controlling.</param>
         /// <param name="ViewerUrl">ViewerUrl.</param>
         /// <param name="ProviderEventTime">ProviderEventTime.</param>
+        /// <param name="ConnectedTime">ConnectedTime.</param>
+        /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationCobrowses(StateEnum? State = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, int? ProviderEventTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationCobrowsesessions(StateEnum? State = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, ConversationNotificationAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.DisconnectType = DisconnectType;
             this.Id = Id;
+            this.Self = Self;
             this.RoomId = RoomId;
             this.CobrowseSessionId = CobrowseSessionId;
             this.CobrowseRole = CobrowseRole;
             this.Controlling = Controlling;
             this.ViewerUrl = ViewerUrl;
             this.ProviderEventTime = ProviderEventTime;
+            this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
             this.AdditionalProperties = AdditionalProperties;
         }
         
@@ -213,6 +219,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        /// <summary>
+        /// Gets or Sets Self
+        /// </summary>
+        [DataMember(Name="self", EmitDefaultValue=false)]
+        public ConversationNotificationAddress Self { get; set; }
         /// <summary>
         /// Gets or Sets RoomId
         /// </summary>
@@ -242,7 +253,17 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets ProviderEventTime
         /// </summary>
         [DataMember(Name="providerEventTime", EmitDefaultValue=false)]
-        public int? ProviderEventTime { get; set; }
+        public DateTime? ProviderEventTime { get; set; }
+        /// <summary>
+        /// Gets or Sets ConnectedTime
+        /// </summary>
+        [DataMember(Name="connectedTime", EmitDefaultValue=false)]
+        public DateTime? ConnectedTime { get; set; }
+        /// <summary>
+        /// Gets or Sets DisconnectedTime
+        /// </summary>
+        [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
+        public DateTime? DisconnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
@@ -255,16 +276,19 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ConversationNotificationCobrowses {\n");
+            sb.Append("class ConversationNotificationCobrowsesessions {\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("  CobrowseSessionId: ").Append(CobrowseSessionId).Append("\n");
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
             sb.Append("  Controlling: ").Append(Controlling).Append("\n");
             sb.Append("  ViewerUrl: ").Append(ViewerUrl).Append("\n");
             sb.Append("  ProviderEventTime: ").Append(ProviderEventTime).Append("\n");
+            sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -287,15 +311,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ConversationNotificationCobrowses);
+            return this.Equals(obj as ConversationNotificationCobrowsesessions);
         }
 
         /// <summary>
-        /// Returns true if ConversationNotificationCobrowses instances are equal
+        /// Returns true if ConversationNotificationCobrowsesessions instances are equal
         /// </summary>
-        /// <param name="other">Instance of ConversationNotificationCobrowses to be compared</param>
+        /// <param name="other">Instance of ConversationNotificationCobrowsesessions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ConversationNotificationCobrowses other)
+        public bool Equals(ConversationNotificationCobrowsesessions other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -316,6 +340,11 @@ namespace ININ.PureCloudApi.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Self == other.Self ||
+                    this.Self != null &&
+                    this.Self.Equals(other.Self)
                 ) &&
                 (
                     this.RoomId == other.RoomId ||
@@ -348,6 +377,16 @@ namespace ININ.PureCloudApi.Model
                     this.ProviderEventTime.Equals(other.ProviderEventTime)
                 ) &&
                 (
+                    this.ConnectedTime == other.ConnectedTime ||
+                    this.ConnectedTime != null &&
+                    this.ConnectedTime.Equals(other.ConnectedTime)
+                ) &&
+                (
+                    this.DisconnectedTime == other.DisconnectedTime ||
+                    this.DisconnectedTime != null &&
+                    this.DisconnectedTime.Equals(other.DisconnectedTime)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -371,6 +410,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                if (this.Self != null)
+                    hash = hash * 59 + this.Self.GetHashCode();
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
                 if (this.CobrowseSessionId != null)
@@ -383,6 +424,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ViewerUrl.GetHashCode();
                 if (this.ProviderEventTime != null)
                     hash = hash * 59 + this.ProviderEventTime.GetHashCode();
+                if (this.ConnectedTime != null)
+                    hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                if (this.DisconnectedTime != null)
+                    hash = hash * 59 + this.DisconnectedTime.GetHashCode();
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;

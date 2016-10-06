@@ -311,7 +311,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Enabled">Enabled.</param>
         /// <param name="NotificationUsers">NotificationUsers.</param>
         /// <param name="AlertTypes">AlertTypes.</param>
-        public InteractionStatRuleNotification(string Id = null, string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, string DimensionValueName = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? InAlarm = null, bool? Enabled = null, List<InteractionStatAlertNotificationNotificationUsers> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
+        public InteractionStatRuleNotification(string Id = null, string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, string DimensionValueName = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? InAlarm = null, bool? Enabled = null, List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -368,7 +368,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets NotificationUsers
         /// </summary>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
-        public List<InteractionStatAlertNotificationNotificationUsers> NotificationUsers { get; set; }
+        public List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers { get; set; }
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>

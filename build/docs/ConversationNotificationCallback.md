@@ -12,16 +12,16 @@ title: ConversationNotificationCallback
 | **Direction** | **string** |  | [optional] |
 | **Held** | **bool?** |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |
-| **StartHoldTime** | **int?** |  | [optional] |
+| **StartHoldTime** | **DateTime?** |  | [optional] |
 | **DialerPreview** | [**ConversationNotificationDialerPreview**](ConversationNotificationDialerPreview.html) |  | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
 | **CallbackUserName** | **string** |  | [optional] |
 | **ScriptId** | **string** |  | [optional] |
 | **SkipEnabled** | **bool?** |  | [optional] |
 | **TimeoutSeconds** | **int?** |  | [optional] |
-| **ConnectedTime** | **int?** |  | [optional] |
-| **DisconnectedTime** | **int?** |  | [optional] |
-| **CallbackScheduledTime** | **int?** |  | [optional] |
+| **ConnectedTime** | **DateTime?** |  | [optional] |
+| **DisconnectedTime** | **DateTime?** |  | [optional] |
+| **CallbackScheduledTime** | **DateTime?** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

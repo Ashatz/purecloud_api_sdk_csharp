@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DurationSeconds">DurationSeconds.</param>
         /// <param name="EndTime">EndTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationWrapup(string Code = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, int? EndTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationWrapup(string Code = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, Object AdditionalProperties = null)
         {
             this.Code = Code;
             this.Notes = Notes;
@@ -60,7 +60,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets EndTime
         /// </summary>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
-        public int? EndTime { get; set; }
+        public DateTime? EndTime { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>

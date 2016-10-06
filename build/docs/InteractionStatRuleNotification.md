@@ -19,7 +19,7 @@ title: InteractionStatRuleNotification
 | **Value** | **double?** |  | [optional] |
 | **InAlarm** | **bool?** |  | [optional] |
 | **Enabled** | **bool?** |  | [optional] |
-| **NotificationUsers** | [**List&lt;InteractionStatAlertNotificationNotificationUsers&gt;**](InteractionStatAlertNotificationNotificationUsers.html) |  | [optional] |
+| **NotificationUsers** | [**List&lt;HeartBeatAlertNotificationNotificationUsers&gt;**](HeartBeatAlertNotificationNotificationUsers.html) |  | [optional] |
 | **AlertTypes** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 

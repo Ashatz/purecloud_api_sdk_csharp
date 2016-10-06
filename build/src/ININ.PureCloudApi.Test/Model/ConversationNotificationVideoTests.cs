@@ -59,6 +59,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'State'
         }
         /// <summary>
+        /// Test the property 'Self'
+        /// </summary>
+        [Test]
+        public void SelfTest()
+        {
+            // TODO: unit test for the property 'Self'
+        }
+        /// <summary>
         /// Test the property 'Id'
         /// </summary>
         [Test]

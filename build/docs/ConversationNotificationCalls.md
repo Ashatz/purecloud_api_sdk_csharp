@@ -7,6 +7,7 @@ title: ConversationNotificationCalls
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Id** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **Recording** | **bool?** |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
@@ -15,12 +16,13 @@ title: ConversationNotificationCalls
 | **Held** | **bool?** |  | [optional] |
 | **ErrorInfo** | [**ConversationNotificationErrorInfo**](ConversationNotificationErrorInfo.html) |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |
-| **StartHoldTime** | **int?** |  | [optional] |
+| **StartHoldTime** | **DateTime?** |  | [optional] |
 | **Direction** | **string** |  | [optional] |
 | **DocumentId** | **string** |  | [optional] |
 | **Self** | [**ConversationNotificationSelf**](ConversationNotificationSelf.html) |  | [optional] |
-| **ConnectedTime** | **int?** |  | [optional] |
-| **DisconnectedTime** | **int?** |  | [optional] |
+| **Other** | [**ConversationNotificationAddress**](ConversationNotificationAddress.html) |  | [optional] |
+| **ConnectedTime** | **DateTime?** |  | [optional] |
+| **DisconnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectReasons** | [**List&lt;ConversationNotificationDisconnectReasons&gt;**](ConversationNotificationDisconnectReasons.html) |  | [optional] |
 | **FaxStatus** | [**ConversationNotificationFaxStatus**](ConversationNotificationFaxStatus.html) |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |

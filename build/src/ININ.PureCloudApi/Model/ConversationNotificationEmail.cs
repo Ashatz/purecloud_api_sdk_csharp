@@ -118,16 +118,16 @@ namespace ININ.PureCloudApi.Model
             TransferForward,
             
             /// <summary>
-            /// Enum TransferNoAnswer for "TRANSFER_NO_ANSWER"
+            /// Enum TransferNoanswer for "TRANSFER_NOANSWER"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NO_ANSWER")]
-            TransferNoAnswer,
+            [EnumMember(Value = "TRANSFER_NOANSWER")]
+            TransferNoanswer,
             
             /// <summary>
-            /// Enum TransferNotAvailable for "TRANSFER_NOT_AVAILABLE"
+            /// Enum TransferNotavailable for "TRANSFER_NOTAVAILABLE"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOT_AVAILABLE")]
-            TransferNotAvailable,
+            [EnumMember(Value = "TRANSFER_NOTAVAILABLE")]
+            TransferNotavailable,
             
             /// <summary>
             /// Enum TransportFailure for "TRANSPORT_FAILURE"
@@ -172,21 +172,25 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationEmail" /> class.
         /// </summary>
+        /// <param name="Id">Id.</param>
         /// <param name="State">State.</param>
         /// <param name="Held">Held.</param>
         /// <param name="Subject">Subject.</param>
         /// <param name="MessagesSent">MessagesSent.</param>
+        /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="StartHoldTime">StartHoldTime.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationEmail(StateEnum? State = null, bool? Held = null, string Subject = null, int? MessagesSent = null, DisconnectTypeEnum? DisconnectType = null, int? StartHoldTime = null, int? ConnectedTime = null, int? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationEmail(string Id = null, StateEnum? State = null, bool? Held = null, string Subject = null, int? MessagesSent = null, ConversationNotificationErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
+            this.Id = Id;
             this.State = State;
             this.Held = Held;
             this.Subject = Subject;
             this.MessagesSent = MessagesSent;
+            this.ErrorInfo = ErrorInfo;
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
             this.ConnectedTime = ConnectedTime;
@@ -194,6 +198,11 @@ namespace ININ.PureCloudApi.Model
             this.AdditionalProperties = AdditionalProperties;
         }
         
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
@@ -210,20 +219,25 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="messagesSent", EmitDefaultValue=false)]
         public int? MessagesSent { get; set; }
         /// <summary>
+        /// Gets or Sets ErrorInfo
+        /// </summary>
+        [DataMember(Name="errorInfo", EmitDefaultValue=false)]
+        public ConversationNotificationErrorDetails ErrorInfo { get; set; }
+        /// <summary>
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
-        public int? StartHoldTime { get; set; }
+        public DateTime? StartHoldTime { get; set; }
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
-        public int? ConnectedTime { get; set; }
+        public DateTime? ConnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets DisconnectedTime
         /// </summary>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
-        public int? DisconnectedTime { get; set; }
+        public DateTime? DisconnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
@@ -237,10 +251,12 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationEmail {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  MessagesSent: ").Append(MessagesSent).Append("\n");
+            sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
@@ -283,6 +299,11 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
@@ -301,6 +322,11 @@ namespace ININ.PureCloudApi.Model
                     this.MessagesSent == other.MessagesSent ||
                     this.MessagesSent != null &&
                     this.MessagesSent.Equals(other.MessagesSent)
+                ) &&
+                (
+                    this.ErrorInfo == other.ErrorInfo ||
+                    this.ErrorInfo != null &&
+                    this.ErrorInfo.Equals(other.ErrorInfo)
                 ) &&
                 (
                     this.DisconnectType == other.DisconnectType ||
@@ -340,6 +366,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
                 if (this.Held != null)
@@ -348,6 +376,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Subject.GetHashCode();
                 if (this.MessagesSent != null)
                     hash = hash * 59 + this.MessagesSent.GetHashCode();
+                if (this.ErrorInfo != null)
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
                 if (this.StartHoldTime != null)

@@ -10,10 +10,10 @@ title: CallConversationNotificationParticipants
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
-| **StartTime** | **int?** |  | [optional] |
-| **ConnectedTime** | **int?** |  | [optional] |
-| **EndTime** | **int?** |  | [optional] |
-| **StartHoldTime** | **int?** |  | [optional] |
+| **StartTime** | **DateTime?** |  | [optional] |
+| **ConnectedTime** | **DateTime?** |  | [optional] |
+| **EndTime** | **DateTime?** |  | [optional] |
+| **StartHoldTime** | **DateTime?** |  | [optional] |
 | **Purpose** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **Direction** | **string** |  | [optional] |
@@ -22,14 +22,17 @@ title: CallConversationNotificationParticipants
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
 | **User** | [**CallbackConversationNotificationUser**](CallbackConversationNotificationUser.html) |  | [optional] |
+| **Queue** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
-| **ErrorInfo** | [**CallbackConversationNotificationErrorInfo**](CallbackConversationNotificationErrorInfo.html) |  | [optional] |
+| **ErrorInfo** | [**CallConversationNotificationErrorInfo**](CallConversationNotificationErrorInfo.html) |  | [optional] |
+| **Script** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **Muted** | **bool?** |  | [optional] |
 | **Confined** | **bool?** |  | [optional] |
 | **Recording** | **bool?** |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
+| **Group** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **Ani** | **string** |  | [optional] |
 | **Dnis** | **string** |  | [optional] |
 | **DocumentId** | **string** |  | [optional] |
