@@ -177,6 +177,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetEmailDomainsDomainId
+        /// </summary>
+        [Test]
+        public void GetEmailDomainsDomainIdTest()
+        {
+            // TODO: add unit test for the method 'GetEmailDomainsDomainId'
+            string domainId = null; // TODO: replace null with proper value
+            var response = instance.GetEmailDomainsDomainId(domainId);
+            Assert.IsInstanceOf<InboundDomain> (response, "response is InboundDomain");
+        }
+        
+        /// <summary>
         /// Test GetEmailDomainsDomainnameRoutes
         /// </summary>
         [Test]
@@ -337,11 +349,12 @@ namespace ININ.PureCloudApi.Test
             List<string> expand = null; // TODO: replace null with proper value
             bool? joined = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
+            List<string> profileSkills = null; // TODO: replace null with proper value
             List<string> skills = null; // TODO: replace null with proper value
             List<string> languages = null; // TODO: replace null with proper value
             List<string> routingStatus = null; // TODO: replace null with proper value
             List<string> presence = null; // TODO: replace null with proper value
-            var response = instance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
+            var response = instance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
             Assert.IsInstanceOf<QueueMemberEntityListing> (response, "response is QueueMemberEntityListing");
         }
         
@@ -559,7 +572,7 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostUserIdRoutingskills'
             string userId = null; // TODO: replace null with proper value
-            UserRoutingSkill body = null; // TODO: replace null with proper value
+            UserRoutingSkillPost body = null; // TODO: replace null with proper value
             var response = instance.PostUserIdRoutingskills(userId, body);
             Assert.IsInstanceOf<UserRoutingSkill> (response, "response is UserRoutingSkill");
         }

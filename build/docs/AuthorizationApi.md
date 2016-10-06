@@ -545,7 +545,7 @@ namespace Example
 
 <a name="postroles"></a>
 
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) PostRoles (DomainOrganizationRole body)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) PostRoles (DomainOrganizationRoleCreate body)
 
 Create an organization role.
 
@@ -570,7 +570,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AuthorizationApi();
-            var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role
+            var body = new DomainOrganizationRoleCreate(); // DomainOrganizationRoleCreate | Organization role
 
             try
             {
@@ -592,7 +592,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)| Organization role |  |
+| **body** | [**DomainOrganizationRoleCreate**](DomainOrganizationRoleCreate.html)| Organization role |  |
 {: class="table table-striped"}
 
 ### Return type

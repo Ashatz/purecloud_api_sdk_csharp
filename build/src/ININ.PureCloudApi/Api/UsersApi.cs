@@ -549,7 +549,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body);
+        UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkillPost body);
 
         /// <summary>
         /// Add routing skill to user
@@ -561,7 +561,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        ApiResponse<UserRoutingSkill> PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body);
+        ApiResponse<UserRoutingSkill> PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkillPost body);
         /// <summary>
         /// Create user
         /// </summary>
@@ -1325,7 +1325,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body);
+        System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkillPost body);
 
         /// <summary>
         /// Add routing skill to user
@@ -1337,7 +1337,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body);
+        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkillPost body);
         /// <summary>
         /// Create user
         /// </summary>
@@ -5426,7 +5426,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        public UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body)
+        public UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkillPost body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = PostUserIdRoutingskillsWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -5439,7 +5439,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        public ApiResponse< UserRoutingSkill > PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body)
+        public ApiResponse< UserRoutingSkill > PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkillPost body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -5515,7 +5515,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body)
+        public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkillPost body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = await PostUserIdRoutingskillsAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -5529,7 +5529,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkillPost body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)

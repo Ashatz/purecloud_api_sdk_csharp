@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteGroupId**](GroupsApi.html#deletegroupid) | **DELETE** /api/v2/groups/{groupId} | Delete group |
 | [**DeleteGroupIdMembers**](GroupsApi.html#deletegroupidmembers) | **DELETE** /api/v2/groups/{groupId}/members | Remove members |
 | [**GetGroupId**](GroupsApi.html#getgroupid) | **GET** /api/v2/groups/{groupId} | Get group |
 | [**GetGroupIdMembers**](GroupsApi.html#getgroupidmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
@@ -15,7 +16,64 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostGroupIdMembers**](GroupsApi.html#postgroupidmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
 | [**PostGroups**](GroupsApi.html#postgroups) | **POST** /api/v2/groups | Create a group |
 | [**PostSearch**](GroupsApi.html#postsearch) | **POST** /api/v2/groups/search | Search |
+| [**PutGroupId**](GroupsApi.html#putgroupid) | **PUT** /api/v2/groups/{groupId} | Update group |
 {: class="table table-striped"}
+
+<a name="deletegroupid"></a>
+
+## **string** DeleteGroupId (string groupId)
+
+Delete group
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteGroupIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GroupsApi();
+            var groupId = groupId_example;  // string | Group ID
+
+            try
+            {
+                // Delete group
+                string result = apiInstance.DeleteGroupId(groupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.DeleteGroupId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
 
 <a name="deletegroupidmembers"></a>
 
@@ -478,4 +536,62 @@ namespace Example
 ### Return type
 
 [**GroupsSearchResponse**](GroupsSearchResponse.html)
+
+<a name="putgroupid"></a>
+
+## [**Group**](Group.html) PutGroupId (string groupId, GroupUpdate body = null)
+
+Update group
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutGroupIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GroupsApi();
+            var groupId = groupId_example;  // string | Group ID
+            var body = new GroupUpdate(); // GroupUpdate | Group (optional) 
+
+            try
+            {
+                // Update group
+                Group result = apiInstance.PutGroupId(groupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.PutGroupId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+| **body** | [**GroupUpdate**](GroupUpdate.html)| Group | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Group**](Group.html)
 

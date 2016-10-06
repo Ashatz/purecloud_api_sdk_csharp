@@ -54,6 +54,18 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
+        /// Test DeleteAttemptlimitsAttemptlimitsId
+        /// </summary>
+        [Test]
+        public void DeleteAttemptlimitsAttemptlimitsIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteAttemptlimitsAttemptlimitsId'
+            string attemptLimitsId = null; // TODO: replace null with proper value
+            var response = instance.DeleteAttemptlimitsAttemptlimitsId(attemptLimitsId);
+            Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test DeleteCallabletimesetsCallabletimesetId
         /// </summary>
         [Test]
@@ -184,6 +196,35 @@ namespace ININ.PureCloudApi.Test
             string sequenceId = null; // TODO: replace null with proper value
             var response = instance.DeleteSequencesSequenceId(sequenceId);
             Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test GetAttemptlimits
+        /// </summary>
+        [Test]
+        public void GetAttemptlimitsTest()
+        {
+            // TODO: add unit test for the method 'GetAttemptlimits'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string filterType = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            var response = instance.GetAttemptlimits(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+            Assert.IsInstanceOf<AttemptLimitsEntityListing> (response, "response is AttemptLimitsEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetAttemptlimitsAttemptlimitsId
+        /// </summary>
+        [Test]
+        public void GetAttemptlimitsAttemptlimitsIdTest()
+        {
+            // TODO: add unit test for the method 'GetAttemptlimitsAttemptlimitsId'
+            string attemptLimitsId = null; // TODO: replace null with proper value
+            var response = instance.GetAttemptlimitsAttemptlimitsId(attemptLimitsId);
+            Assert.IsInstanceOf<AttemptLimits> (response, "response is AttemptLimits");
         }
         
         /// <summary>
@@ -571,6 +612,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostAttemptlimits
+        /// </summary>
+        [Test]
+        public void PostAttemptlimitsTest()
+        {
+            // TODO: add unit test for the method 'PostAttemptlimits'
+            AttemptLimits body = null; // TODO: replace null with proper value
+            var response = instance.PostAttemptlimits(body);
+            Assert.IsInstanceOf<AttemptLimits> (response, "response is AttemptLimits");
+        }
+        
+        /// <summary>
         /// Test PostAudits
         /// </summary>
         [Test]
@@ -757,6 +810,19 @@ namespace ININ.PureCloudApi.Test
             CampaignSequence body = null; // TODO: replace null with proper value
             var response = instance.PostSequences(body);
             Assert.IsInstanceOf<CampaignSequence> (response, "response is CampaignSequence");
+        }
+        
+        /// <summary>
+        /// Test PutAttemptlimitsAttemptlimitsId
+        /// </summary>
+        [Test]
+        public void PutAttemptlimitsAttemptlimitsIdTest()
+        {
+            // TODO: add unit test for the method 'PutAttemptlimitsAttemptlimitsId'
+            string attemptLimitsId = null; // TODO: replace null with proper value
+            AttemptLimits body = null; // TODO: replace null with proper value
+            var response = instance.PutAttemptlimitsAttemptlimitsId(attemptLimitsId, body);
+            Assert.IsInstanceOf<AttemptLimits> (response, "response is AttemptLimits");
         }
         
         /// <summary>

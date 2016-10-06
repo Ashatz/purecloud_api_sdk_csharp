@@ -171,6 +171,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'User'
         }
         /// <summary>
+        /// Test the property 'Queue'
+        /// </summary>
+        [Test]
+        public void QueueTest()
+        {
+            // TODO: unit test for the property 'Queue'
+        }
+        /// <summary>
         /// Test the property 'Attributes'
         /// </summary>
         [Test]
@@ -185,6 +193,14 @@ namespace ININ.PureCloudApi.Test
         public void ErrorInfoTest()
         {
             // TODO: unit test for the property 'ErrorInfo'
+        }
+        /// <summary>
+        /// Test the property 'Script'
+        /// </summary>
+        [Test]
+        public void ScriptTest()
+        {
+            // TODO: unit test for the property 'Script'
         }
         /// <summary>
         /// Test the property 'WrapupTimeoutMs'

@@ -28,6 +28,9 @@ title: CallbackMediaParticipant
 | **Script** | [**UriReference**](UriReference.html) | The Engage script that should be used by this participant. | [optional] |
 | **WrapupTimeoutMs** | **int?** | The amount of time the participant has to complete wrap-up. | [optional] |
 | **WrapupSkipped** | **bool?** | Value is true when the participant has skipped wrap-up. | [optional] [default to false]|
+| **Provider** | **string** | The source provider for the communication. | [optional] |
+| **ExternalContact** | [**UriReference**](UriReference.html) | If this participant represents an external contact, then this will be the reference for the external contact. | [optional] |
+| **ExternalOrganization** | [**UriReference**](UriReference.html) | If this participant represents an external org, then this will be the reference for the external org. | [optional] |
 | **OutboundPreview** | [**DialerPreview**](DialerPreview.html) | The outbound preview associated with this callback. | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** | The list of phone number to use for this callback. | [optional] |
 | **CallbackUserName** | **string** | The name of the callback target. | [optional] |

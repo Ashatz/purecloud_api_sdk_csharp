@@ -75,20 +75,20 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'User'
         }
         /// <summary>
-        /// Test the property 'Timestamp'
-        /// </summary>
-        [Test]
-        public void TimestampTest()
-        {
-            // TODO: unit test for the property 'Timestamp'
-        }
-        /// <summary>
         /// Test the property 'Level'
         /// </summary>
         [Test]
         public void LevelTest()
         {
             // TODO: unit test for the property 'Level'
+        }
+        /// <summary>
+        /// Test the property 'Timestamp'
+        /// </summary>
+        [Test]
+        public void TimestampTest()
+        {
+            // TODO: unit test for the property 'Timestamp'
         }
         /// <summary>
         /// Test the property 'Entity'

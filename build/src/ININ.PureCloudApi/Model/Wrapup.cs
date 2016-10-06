@@ -20,13 +20,13 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Wrapup" /> class.
         /// </summary>
-        /// <param name="Code">Code.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Notes">Notes.</param>
-        /// <param name="Tags">Tags.</param>
-        /// <param name="DurationSeconds">DurationSeconds.</param>
-        /// <param name="EndTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Provisional">Provisional (default to false).</param>
+        /// <param name="Code">The user configured wrap up code id..</param>
+        /// <param name="Name">The user configured wrap up code name..</param>
+        /// <param name="Notes">Text entered by the agent to describe the call or disposition..</param>
+        /// <param name="Tags">List of tags selected by the agent to describe the call or disposition..</param>
+        /// <param name="DurationSeconds">The length of time in seconds that the agent spent doing after call work..</param>
+        /// <param name="EndTime">The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Provisional">Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later. (default to false).</param>
         public Wrapup(string Code = null, string Name = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, bool? Provisional = null)
         {
             this.Code = Code;
@@ -47,39 +47,45 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets Code
+        /// The user configured wrap up code id.
         /// </summary>
+        /// <value>The user configured wrap up code id.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The user configured wrap up code name.
         /// </summary>
+        /// <value>The user configured wrap up code name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets Notes
+        /// Text entered by the agent to describe the call or disposition.
         /// </summary>
+        /// <value>Text entered by the agent to describe the call or disposition.</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
         /// <summary>
-        /// Gets or Sets Tags
+        /// List of tags selected by the agent to describe the call or disposition.
         /// </summary>
+        /// <value>List of tags selected by the agent to describe the call or disposition.</value>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
         /// <summary>
-        /// Gets or Sets DurationSeconds
+        /// The length of time in seconds that the agent spent doing after call work.
         /// </summary>
+        /// <value>The length of time in seconds that the agent spent doing after call work.</value>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public int? DurationSeconds { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
         /// <summary>
-        /// Gets or Sets Provisional
+        /// Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later.
         /// </summary>
+        /// <value>Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later.</value>
         [DataMember(Name="provisional", EmitDefaultValue=false)]
         public bool? Provisional { get; set; }
         /// <summary>

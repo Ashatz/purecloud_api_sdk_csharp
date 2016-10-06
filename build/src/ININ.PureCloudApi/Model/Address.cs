@@ -20,11 +20,11 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Address" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="NameRaw">NameRaw.</param>
-        /// <param name="AddressNormalized">AddressNormalized.</param>
-        /// <param name="AddressRaw">AddressRaw.</param>
-        /// <param name="AddressDisplayable">AddressDisplayable.</param>
+        /// <param name="Name">This will be nameRaw if present, or a locality lookup of the address field otherwise..</param>
+        /// <param name="NameRaw">The name as close to the bits on the wire as possible..</param>
+        /// <param name="AddressNormalized">The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table..</param>
+        /// <param name="AddressRaw">The address as close to the bits on the wire as possible..</param>
+        /// <param name="AddressDisplayable">The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table..</param>
         public Address(string Name = null, string NameRaw = null, string AddressNormalized = null, string AddressRaw = null, string AddressDisplayable = null)
         {
             this.Name = Name;
@@ -35,28 +35,33 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// This will be nameRaw if present, or a locality lookup of the address field otherwise.
         /// </summary>
+        /// <value>This will be nameRaw if present, or a locality lookup of the address field otherwise.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets NameRaw
+        /// The name as close to the bits on the wire as possible.
         /// </summary>
+        /// <value>The name as close to the bits on the wire as possible.</value>
         [DataMember(Name="nameRaw", EmitDefaultValue=false)]
         public string NameRaw { get; set; }
         /// <summary>
-        /// Gets or Sets AddressNormalized
+        /// The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.
         /// </summary>
+        /// <value>The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.</value>
         [DataMember(Name="addressNormalized", EmitDefaultValue=false)]
         public string AddressNormalized { get; set; }
         /// <summary>
-        /// Gets or Sets AddressRaw
+        /// The address as close to the bits on the wire as possible.
         /// </summary>
+        /// <value>The address as close to the bits on the wire as possible.</value>
         [DataMember(Name="addressRaw", EmitDefaultValue=false)]
         public string AddressRaw { get; set; }
         /// <summary>
-        /// Gets or Sets AddressDisplayable
+        /// The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.
         /// </summary>
+        /// <value>The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.</value>
         [DataMember(Name="addressDisplayable", EmitDefaultValue=false)]
         public string AddressDisplayable { get; set; }
         /// <summary>

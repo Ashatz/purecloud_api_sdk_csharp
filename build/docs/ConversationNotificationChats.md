@@ -12,9 +12,9 @@ title: ConversationNotificationChats
 | **RoomId** | **string** |  | [optional] |
 | **Held** | **bool?** |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |
-| **StartHoldTime** | **int?** |  | [optional] |
-| **ConnectedTime** | **int?** |  | [optional] |
-| **DisconnectedTime** | **int?** |  | [optional] |
+| **StartHoldTime** | **DateTime?** |  | [optional] |
+| **ConnectedTime** | **DateTime?** |  | [optional] |
+| **DisconnectedTime** | **DateTime?** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

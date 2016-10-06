@@ -75,7 +75,7 @@ namespace Example
 
 <a name="getpresenceid"></a>
 
-## [**OrganizationPresence**](OrganizationPresence.html) GetPresenceId (string presenceId)
+## [**OrganizationPresence**](OrganizationPresence.html) GetPresenceId (string presenceId, string localeCode = null)
 
 Get a Presence Definition
 
@@ -101,11 +101,12 @@ namespace Example
 
             var apiInstance = new PresenceApi();
             var presenceId = presenceId_example;  // string | Organization Presence ID
+            var localeCode = localeCode_example;  // string | The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional) 
 
             try
             {
                 // Get a Presence Definition
-                OrganizationPresence result = apiInstance.GetPresenceId(presenceId);
+                OrganizationPresence result = apiInstance.GetPresenceId(presenceId, localeCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,6 +124,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **presenceId** | **string**| Organization Presence ID |  |
+| **localeCode** | **string**| The locale code to fetch for the presence definition. Use ALL to fetch everything. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -131,7 +133,7 @@ namespace Example
 
 <a name="getpresencedefinitions"></a>
 
-## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null)
+## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
 
 Get an Organization's list of Presence Definitions
 
@@ -158,12 +160,13 @@ namespace Example
             var apiInstance = new PresenceApi();
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var deleted = deleted_example;  // string | Deleted query can be true, false or all (optional)  (default to false)
+            var deleted = deleted_example;  // string | Deleted query can be TRUE, FALSE or ALL (optional)  (default to false)
+            var localeCode = localeCode_example;  // string | The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional) 
 
             try
             {
                 // Get an Organization's list of Presence Definitions
-                OrganizationPresenceEntityListing result = apiInstance.GetPresencedefinitions(pageNumber, pageSize, deleted);
+                OrganizationPresenceEntityListing result = apiInstance.GetPresencedefinitions(pageNumber, pageSize, deleted, localeCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -182,7 +185,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **deleted** | **string**| Deleted query can be true, false or all | [optional] [default to false] |
+| **deleted** | **string**| Deleted query can be TRUE, FALSE or ALL | [optional] [default to false] |
+| **localeCode** | **string**| The locale code to fetch for each presence definition. Use ALL to fetch everything. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

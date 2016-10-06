@@ -20,7 +20,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Attribute" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected Attribute() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Attribute" /> class.
+        /// </summary>
+        /// <param name="Name">The attribute name. (required).</param>
         /// <param name="Version">Version.</param>
         /// <param name="Description">Description.</param>
         /// <param name="CreatedBy">CreatedBy.</param>
@@ -29,7 +34,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public Attribute(string Name = null, int? Version = null, string Description = null, UriReference CreatedBy = null, DateTime? DateCreated = null, UriReference ModifiedBy = null, DateTime? DateModified = null)
         {
-            this.Name = Name;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for Attribute and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             this.Version = Version;
             this.Description = Description;
             this.CreatedBy = CreatedBy;
@@ -45,8 +58,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The attribute name.
         /// </summary>
+        /// <value>The attribute name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

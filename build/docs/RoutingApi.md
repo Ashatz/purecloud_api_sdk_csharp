@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUtilization**](RoutingApi.html#deleteutilization) | **DELETE** /api/v2/routing/utilization | Delete utilization settings and revert to system defaults. |
 | [**DeleteWrapupcodesCodeId**](RoutingApi.html#deletewrapupcodescodeid) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
 | [**GetEmailDomains**](RoutingApi.html#getemaildomains) | **GET** /api/v2/routing/email/domains | Get domains |
+| [**GetEmailDomainsDomainId**](RoutingApi.html#getemaildomainsdomainid) | **GET** /api/v2/routing/email/domains/{domainId} | Get domain |
 | [**GetEmailDomainsDomainnameRoutes**](RoutingApi.html#getemaildomainsdomainnameroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
 | [**GetEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#getemaildomainsdomainnameroutesrouteid) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
 | [**GetEmailSetup**](RoutingApi.html#getemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
@@ -613,6 +614,62 @@ This endpoint does require any parameters.
 ### Return type
 
 [**InboundDomainEntityListing**](InboundDomainEntityListing.html)
+
+<a name="getemaildomainsdomainid"></a>
+
+## [**InboundDomain**](InboundDomain.html) GetEmailDomainsDomainId (string domainId)
+
+Get domain
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetEmailDomainsDomainIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            {
+                // Get domain
+                InboundDomain result = apiInstance.GetEmailDomainsDomainId(domainId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetEmailDomainsDomainId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InboundDomain**](InboundDomain.html)
 
 <a name="getemaildomainsdomainnameroutes"></a>
 
@@ -1259,7 +1316,7 @@ namespace Example
 
 <a name="getqueuesqueueidusers"></a>
 
-## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
 
 Get the members of this queue
 
@@ -1291,6 +1348,7 @@ namespace Example
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
             var joined = true;  // bool? | Filter by joined status (optional) 
             var name = name_example;  // string | Filter by queue member name (optional) 
+            var profileSkills = new List<string>(); // List<string> | Filter by profile skill (optional) 
             var skills = new List<string>(); // List<string> | Filter by skill (optional) 
             var languages = new List<string>(); // List<string> | Filter by language (optional) 
             var routingStatus = new List<string>(); // List<string> | Filter by routing status (optional) 
@@ -1299,7 +1357,7 @@ namespace Example
             try
             {
                 // Get the members of this queue
-                QueueMemberEntityListing result = apiInstance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
+                QueueMemberEntityListing result = apiInstance.GetQueuesQueueIdUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1323,6 +1381,7 @@ namespace Example
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
+| **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
 | **skills** | [**List<string>**](string.html)| Filter by skill | [optional]  |
 | **languages** | [**List<string>**](string.html)| Filter by language | [optional]  |
 | **routingStatus** | [**List<string>**](string.html)| Filter by routing status | [optional]  |
@@ -2256,7 +2315,7 @@ namespace Example
 
 <a name="postuseridroutingskills"></a>
 
-## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkill body)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkillPost body)
 
 Add routing skill to user
 
@@ -2282,7 +2341,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var userId = userId_example;  // string | User ID
-            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
+            var body = new UserRoutingSkillPost(); // UserRoutingSkillPost | Skill
 
             try
             {
@@ -2305,7 +2364,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill |  |
+| **body** | [**UserRoutingSkillPost**](UserRoutingSkillPost.html)| Skill |  |
 {: class="table table-striped"}
 
 ### Return type

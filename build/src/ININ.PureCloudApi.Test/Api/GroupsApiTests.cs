@@ -54,6 +54,18 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
+        /// Test DeleteGroupId
+        /// </summary>
+        [Test]
+        public void DeleteGroupIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteGroupId'
+            string groupId = null; // TODO: replace null with proper value
+            var response = instance.DeleteGroupId(groupId);
+            Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test DeleteGroupIdMembers
         /// </summary>
         [Test]
@@ -155,6 +167,19 @@ namespace ININ.PureCloudApi.Test
             GroupSearchRequest body = null; // TODO: replace null with proper value
             var response = instance.PostSearch(body);
             Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse");
+        }
+        
+        /// <summary>
+        /// Test PutGroupId
+        /// </summary>
+        [Test]
+        public void PutGroupIdTest()
+        {
+            // TODO: add unit test for the method 'PutGroupId'
+            string groupId = null; // TODO: replace null with proper value
+            GroupUpdate body = null; // TODO: replace null with proper value
+            var response = instance.PutGroupId(groupId, body);
+            Assert.IsInstanceOf<Group> (response, "response is Group");
         }
         
     }

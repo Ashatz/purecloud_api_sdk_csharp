@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class Screenshare :  IEquatable<Screenshare>
     {
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StateEnum
         {
@@ -80,8 +81,9 @@ namespace ININ.PureCloudApi.Model
             None
         }
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DisconnectTypeEnum
         {
@@ -184,26 +186,28 @@ namespace ININ.PureCloudApi.Model
             Spam
         }
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Screenshare" /> class.
         /// </summary>
-        /// <param name="State">State.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="Context">Context.</param>
-        /// <param name="Sharing">Sharing (default to false).</param>
-        /// <param name="PeerCount">PeerCount.</param>
-        /// <param name="DisconnectType">DisconnectType.</param>
-        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DisconnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="State">The connection state of this communication..</param>
+        /// <param name="Id">A globally unique identifier for this communication..</param>
+        /// <param name="Context">The room id context (xmpp jid) for the conference session..</param>
+        /// <param name="Sharing">Indicates whether this participant is sharing their screen. (default to false).</param>
+        /// <param name="PeerCount">The number of peer participants from the perspective of the participant in the conference..</param>
+        /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
+        /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public Screenshare(StateEnum? State = null, string Id = null, string Context = null, bool? Sharing = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null)
         {
             this.State = State;
@@ -225,35 +229,39 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// A globally unique identifier for this communication.
         /// </summary>
+        /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         /// <summary>
-        /// Gets or Sets Context
+        /// The room id context (xmpp jid) for the conference session.
         /// </summary>
+        /// <value>The room id context (xmpp jid) for the conference session.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public string Context { get; set; }
         /// <summary>
-        /// Gets or Sets Sharing
+        /// Indicates whether this participant is sharing their screen.
         /// </summary>
+        /// <value>Indicates whether this participant is sharing their screen.</value>
         [DataMember(Name="sharing", EmitDefaultValue=false)]
         public bool? Sharing { get; set; }
         /// <summary>
-        /// Gets or Sets PeerCount
+        /// The number of peer participants from the perspective of the participant in the conference.
         /// </summary>
+        /// <value>The number of peer participants from the perspective of the participant in the conference.</value>
         [DataMember(Name="peerCount", EmitDefaultValue=false)]
         public int? PeerCount { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
         /// <summary>

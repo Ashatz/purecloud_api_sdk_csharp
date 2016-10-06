@@ -142,16 +142,16 @@ namespace ININ.PureCloudApi.Model
             TransferForward,
             
             /// <summary>
-            /// Enum TransferNoAnswer for "TRANSFER_NO_ANSWER"
+            /// Enum TransferNoanswer for "TRANSFER_NOANSWER"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NO_ANSWER")]
-            TransferNoAnswer,
+            [EnumMember(Value = "TRANSFER_NOANSWER")]
+            TransferNoanswer,
             
             /// <summary>
-            /// Enum TransferNotAvailable for "TRANSFER_NOT_AVAILABLE"
+            /// Enum TransferNotavailable for "TRANSFER_NOTAVAILABLE"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOT_AVAILABLE")]
-            TransferNotAvailable,
+            [EnumMember(Value = "TRANSFER_NOTAVAILABLE")]
+            TransferNotavailable,
             
             /// <summary>
             /// Enum TransportFailure for "TRANSPORT_FAILURE"
@@ -209,7 +209,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationSocialExpressions(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, int? StartHoldTime = null, int? ConnectedTime = null, int? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationSocialExpressions(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -265,17 +265,17 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
-        public int? StartHoldTime { get; set; }
+        public DateTime? StartHoldTime { get; set; }
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
-        public int? ConnectedTime { get; set; }
+        public DateTime? ConnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets DisconnectedTime
         /// </summary>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
-        public int? DisconnectedTime { get; set; }
+        public DateTime? DisconnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>

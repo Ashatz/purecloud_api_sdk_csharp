@@ -1372,7 +1372,7 @@ namespace Example
 
 <a name="postuseridroutingskills"></a>
 
-## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkill body)
+## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserIdRoutingskills (string userId, UserRoutingSkillPost body)
 
 Add routing skill to user
 
@@ -1398,7 +1398,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
+            var body = new UserRoutingSkillPost(); // UserRoutingSkillPost | Skill
 
             try
             {
@@ -1421,7 +1421,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**UserRoutingSkill**](UserRoutingSkill.html)| Skill |  |
+| **body** | [**UserRoutingSkillPost**](UserRoutingSkillPost.html)| Skill |  |
 {: class="table table-striped"}
 
 ### Return type

@@ -575,7 +575,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Calibration</returns>
-        Calibration PostCalibrations (Calibration body, string expand = null);
+        Calibration PostCalibrations (CalibrationCreate body, string expand = null);
 
         /// <summary>
         /// Create a calibration
@@ -587,7 +587,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> PostCalibrationsWithHttpInfo (Calibration body, string expand = null);
+        ApiResponse<Calibration> PostCalibrationsWithHttpInfo (CalibrationCreate body, string expand = null);
         /// <summary>
         /// Create an evaluation
         /// </summary>
@@ -1400,7 +1400,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (Calibration body, string expand = null);
+        System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (CalibrationCreate body, string expand = null);
 
         /// <summary>
         /// Create a calibration
@@ -1412,7 +1412,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (Calibration body, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (CalibrationCreate body, string expand = null);
         /// <summary>
         /// Create an evaluation
         /// </summary>
@@ -5108,7 +5108,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Calibration</returns>
-        public Calibration PostCalibrations (Calibration body, string expand = null)
+        public Calibration PostCalibrations (CalibrationCreate body, string expand = null)
         {
              ApiResponse<Calibration> localVarResponse = PostCalibrationsWithHttpInfo(body, expand);
              return localVarResponse.Data;
@@ -5121,7 +5121,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > PostCalibrationsWithHttpInfo (Calibration body, string expand = null)
+        public ApiResponse< Calibration > PostCalibrationsWithHttpInfo (CalibrationCreate body, string expand = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5194,7 +5194,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (Calibration body, string expand = null)
+        public async System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (CalibrationCreate body, string expand = null)
         {
              ApiResponse<Calibration> localVarResponse = await PostCalibrationsAsyncWithHttpInfo(body, expand);
              return localVarResponse.Data;
@@ -5208,7 +5208,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (Calibration body, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (CalibrationCreate body, string expand = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)

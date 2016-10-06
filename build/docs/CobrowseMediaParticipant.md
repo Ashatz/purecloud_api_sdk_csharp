@@ -28,6 +28,9 @@ title: CobrowseMediaParticipant
 | **Script** | [**UriReference**](UriReference.html) | The Engage script that should be used by this participant. | [optional] |
 | **WrapupTimeoutMs** | **int?** | The amount of time the participant has to complete wrap-up. | [optional] |
 | **WrapupSkipped** | **bool?** | Value is true when the participant has skipped wrap-up. | [optional] [default to false]|
+| **Provider** | **string** | The source provider for the communication. | [optional] |
+| **ExternalContact** | [**UriReference**](UriReference.html) | If this participant represents an external contact, then this will be the reference for the external contact. | [optional] |
+| **ExternalOrganization** | [**UriReference**](UriReference.html) | If this participant represents an external org, then this will be the reference for the external org. | [optional] |
 | **CobrowseSessionId** | **string** | The co-browse session ID. | [optional] |
 | **CobrowseRole** | **string** | This value identifies the role of the co-browse client within the co-browse session (a client is a sharer or a viewer). | [optional] |
 | **Controlling** | **List&lt;string&gt;** | ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages). | [optional] |

@@ -9,7 +9,7 @@ title: OrganizationPresence
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **LanguageLabels** | **Dictionary&lt;string, string&gt;** |  | [optional] |
+| **LanguageLabels** | **Dictionary&lt;string, string&gt;** | The label used for the system presence in each specified language | |
 | **SystemPresence** | **string** |  | [optional] |
 | **Deactivated** | **bool?** |  | [optional] [default to false]|
 | **Primary** | **bool?** |  | [optional] [default to false]|

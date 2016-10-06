@@ -59,14 +59,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'NodeType'
         }
         /// <summary>
-        /// Test the property '_Float'
-        /// </summary>
-        [Test]
-        public void _FloatTest()
-        {
-            // TODO: unit test for the property '_Float'
-        }
-        /// <summary>
         /// Test the property '_Object'
         /// </summary>
         [Test]
@@ -89,6 +81,14 @@ namespace ININ.PureCloudApi.Test
         public void NumberTest()
         {
             // TODO: unit test for the property 'Number'
+        }
+        /// <summary>
+        /// Test the property '_Float'
+        /// </summary>
+        [Test]
+        public void _FloatTest()
+        {
+            // TODO: unit test for the property '_Float'
         }
         /// <summary>
         /// Test the property 'ValueNode'

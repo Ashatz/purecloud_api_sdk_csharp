@@ -75,6 +75,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Id'
         }
         /// <summary>
+        /// Test the property 'Self'
+        /// </summary>
+        [Test]
+        public void SelfTest()
+        {
+            // TODO: unit test for the property 'Self'
+        }
+        /// <summary>
         /// Test the property 'RoomId'
         /// </summary>
         [Test]
@@ -121,6 +129,22 @@ namespace ININ.PureCloudApi.Test
         public void ProviderEventTimeTest()
         {
             // TODO: unit test for the property 'ProviderEventTime'
+        }
+        /// <summary>
+        /// Test the property 'ConnectedTime'
+        /// </summary>
+        [Test]
+        public void ConnectedTimeTest()
+        {
+            // TODO: unit test for the property 'ConnectedTime'
+        }
+        /// <summary>
+        /// Test the property 'DisconnectedTime'
+        /// </summary>
+        [Test]
+        public void DisconnectedTimeTest()
+        {
+            // TODO: unit test for the property 'DisconnectedTime'
         }
         /// <summary>
         /// Test the property 'AdditionalProperties'

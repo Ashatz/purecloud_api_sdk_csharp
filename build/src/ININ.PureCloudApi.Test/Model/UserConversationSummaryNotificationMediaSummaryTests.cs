@@ -58,6 +58,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'ContactCenter'
         }
+        /// <summary>
+        /// Test the property 'Enterprise'
+        /// </summary>
+        [Test]
+        public void EnterpriseTest()
+        {
+            // TODO: unit test for the property 'Enterprise'
+        }
 
     }
 

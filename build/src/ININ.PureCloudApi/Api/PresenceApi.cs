@@ -43,8 +43,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresence</returns>
-        OrganizationPresence GetPresenceId (string presenceId);
+        OrganizationPresence GetPresenceId (string presenceId, string localeCode = null);
 
         /// <summary>
         /// Get a Presence Definition
@@ -54,8 +55,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        ApiResponse<OrganizationPresence> GetPresenceIdWithHttpInfo (string presenceId);
+        ApiResponse<OrganizationPresence> GetPresenceIdWithHttpInfo (string presenceId, string localeCode = null);
         /// <summary>
         /// Get an Organization&#39;s list of Presence Definitions
         /// </summary>
@@ -65,9 +67,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
+        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
+        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceEntityListing</returns>
-        OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null);
+        OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
         /// <summary>
         /// Get an Organization&#39;s list of Presence Definitions
@@ -78,9 +81,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
+        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
+        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
-        ApiResponse<OrganizationPresenceEntityListing> GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null);
+        ApiResponse<OrganizationPresenceEntityListing> GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
         /// <summary>
         /// Get the list of SystemPresences
         /// </summary>
@@ -223,8 +227,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresence</returns>
-        System.Threading.Tasks.Task<OrganizationPresence> GetPresenceIdAsync (string presenceId);
+        System.Threading.Tasks.Task<OrganizationPresence> GetPresenceIdAsync (string presenceId, string localeCode = null);
 
         /// <summary>
         /// Get a Presence Definition
@@ -234,8 +239,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresenceIdAsyncWithHttpInfo (string presenceId);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresenceIdAsyncWithHttpInfo (string presenceId, string localeCode = null);
         /// <summary>
         /// Get an Organization&#39;s list of Presence Definitions
         /// </summary>
@@ -245,9 +251,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
+        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
+        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null);
+        System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
         /// <summary>
         /// Get an Organization&#39;s list of Presence Definitions
@@ -258,9 +265,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
+        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
+        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
         /// <summary>
         /// Get the list of SystemPresences
         /// </summary>
@@ -620,10 +628,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresence</returns>
-        public OrganizationPresence GetPresenceId (string presenceId)
+        public OrganizationPresence GetPresenceId (string presenceId, string localeCode = null)
         {
-             ApiResponse<OrganizationPresence> localVarResponse = GetPresenceIdWithHttpInfo(presenceId);
+             ApiResponse<OrganizationPresence> localVarResponse = GetPresenceIdWithHttpInfo(presenceId, localeCode);
              return localVarResponse.Data;
         }
 
@@ -632,8 +641,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        public ApiResponse< OrganizationPresence > GetPresenceIdWithHttpInfo (string presenceId)
+        public ApiResponse< OrganizationPresence > GetPresenceIdWithHttpInfo (string presenceId, string localeCode = null)
         {
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
@@ -665,6 +675,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId)); // path parameter
+            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -696,10 +707,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresence</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresence> GetPresenceIdAsync (string presenceId)
+        public async System.Threading.Tasks.Task<OrganizationPresence> GetPresenceIdAsync (string presenceId, string localeCode = null)
         {
-             ApiResponse<OrganizationPresence> localVarResponse = await GetPresenceIdAsyncWithHttpInfo(presenceId);
+             ApiResponse<OrganizationPresence> localVarResponse = await GetPresenceIdAsyncWithHttpInfo(presenceId, localeCode);
              return localVarResponse.Data;
 
         }
@@ -709,8 +721,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
+        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresenceIdAsyncWithHttpInfo (string presenceId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresenceIdAsyncWithHttpInfo (string presenceId, string localeCode = null)
         {
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
@@ -742,6 +755,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId)); // path parameter
+            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -774,11 +788,12 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
+        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
+        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceEntityListing</returns>
-        public OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null)
+        public OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         {
-             ApiResponse<OrganizationPresenceEntityListing> localVarResponse = GetPresencedefinitionsWithHttpInfo(pageNumber, pageSize, deleted);
+             ApiResponse<OrganizationPresenceEntityListing> localVarResponse = GetPresencedefinitionsWithHttpInfo(pageNumber, pageSize, deleted, localeCode);
              return localVarResponse.Data;
         }
 
@@ -788,9 +803,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
+        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
+        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
-        public ApiResponse< OrganizationPresenceEntityListing > GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null)
+        public ApiResponse< OrganizationPresenceEntityListing > GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         {
 
             var localVarPath = "/api/v2/presencedefinitions";
@@ -821,6 +837,7 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
+            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -853,11 +870,12 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
+        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
+        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null)
+        public async System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         {
-             ApiResponse<OrganizationPresenceEntityListing> localVarResponse = await GetPresencedefinitionsAsyncWithHttpInfo(pageNumber, pageSize, deleted);
+             ApiResponse<OrganizationPresenceEntityListing> localVarResponse = await GetPresencedefinitionsAsyncWithHttpInfo(pageNumber, pageSize, deleted, localeCode);
              return localVarResponse.Data;
 
         }
@@ -868,9 +886,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
+        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
+        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         {
 
             var localVarPath = "/api/v2/presencedefinitions";
@@ -901,6 +920,7 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
+            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

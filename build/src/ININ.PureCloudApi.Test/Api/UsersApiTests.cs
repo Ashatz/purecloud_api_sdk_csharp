@@ -358,7 +358,7 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostUserIdRoutingskills'
             string userId = null; // TODO: replace null with proper value
-            UserRoutingSkill body = null; // TODO: replace null with proper value
+            UserRoutingSkillPost body = null; // TODO: replace null with proper value
             var response = instance.PostUserIdRoutingskills(userId, body);
             Assert.IsInstanceOf<UserRoutingSkill> (response, "response is UserRoutingSkill");
         }

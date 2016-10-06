@@ -266,13 +266,16 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Script">The Engage script that should be used by this participant..</param>
         /// <param name="WrapupTimeoutMs">The amount of time the participant has to complete wrap-up..</param>
         /// <param name="WrapupSkipped">Value is true when the participant has skipped wrap-up. (default to false).</param>
+        /// <param name="Provider">The source provider for the communication..</param>
+        /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
+        /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
         /// <param name="OutboundPreview">The outbound preview associated with this callback..</param>
         /// <param name="CallbackNumbers">The list of phone number to use for this callback..</param>
         /// <param name="CallbackUserName">The name of the callback target..</param>
         /// <param name="SkipEnabled">If true, the callback can be skipped (default to false).</param>
         /// <param name="TimeoutSeconds">Duration in seconds before the callback will be auto-dialed..</param>
         /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, DialerPreview OutboundPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null)
+        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, DialerPreview OutboundPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -319,6 +322,9 @@ namespace ININ.PureCloudApi.Model
             {
                 this.WrapupSkipped = WrapupSkipped;
             }
+            this.Provider = Provider;
+            this.ExternalContact = ExternalContact;
+            this.ExternalOrganization = ExternalOrganization;
             this.OutboundPreview = OutboundPreview;
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackUserName = CallbackUserName;
@@ -444,6 +450,24 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
         /// <summary>
+        /// The source provider for the communication.
+        /// </summary>
+        /// <value>The source provider for the communication.</value>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
+        /// If this participant represents an external contact, then this will be the reference for the external contact.
+        /// </summary>
+        /// <value>If this participant represents an external contact, then this will be the reference for the external contact.</value>
+        [DataMember(Name="externalContact", EmitDefaultValue=false)]
+        public UriReference ExternalContact { get; set; }
+        /// <summary>
+        /// If this participant represents an external org, then this will be the reference for the external org.
+        /// </summary>
+        /// <value>If this participant represents an external org, then this will be the reference for the external org.</value>
+        [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
+        public UriReference ExternalOrganization { get; set; }
+        /// <summary>
         /// The outbound preview associated with this callback.
         /// </summary>
         /// <value>The outbound preview associated with this callback.</value>
@@ -508,6 +532,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Script: ").Append(Script).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  OutboundPreview: ").Append(OutboundPreview).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
@@ -656,6 +683,21 @@ namespace ININ.PureCloudApi.Model
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
+                    this.ExternalContact == other.ExternalContact ||
+                    this.ExternalContact != null &&
+                    this.ExternalContact.Equals(other.ExternalContact)
+                ) &&
+                (
+                    this.ExternalOrganization == other.ExternalOrganization ||
+                    this.ExternalOrganization != null &&
+                    this.ExternalOrganization.Equals(other.ExternalOrganization)
+                ) &&
+                (
                     this.OutboundPreview == other.OutboundPreview ||
                     this.OutboundPreview != null &&
                     this.OutboundPreview.Equals(other.OutboundPreview)
@@ -740,6 +782,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ExternalContact != null)
+                    hash = hash * 59 + this.ExternalContact.GetHashCode();
+                if (this.ExternalOrganization != null)
+                    hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.OutboundPreview != null)
                     hash = hash * 59 + this.OutboundPreview.GetHashCode();
                 if (this.CallbackNumbers != null)

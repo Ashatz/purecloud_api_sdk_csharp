@@ -228,16 +228,16 @@ namespace ININ.PureCloudApi.Model
             TransferForward,
             
             /// <summary>
-            /// Enum TransferNoAnswer for "TRANSFER_NO_ANSWER"
+            /// Enum TransferNoanswer for "TRANSFER_NOANSWER"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NO_ANSWER")]
-            TransferNoAnswer,
+            [EnumMember(Value = "TRANSFER_NOANSWER")]
+            TransferNoanswer,
             
             /// <summary>
-            /// Enum TransferNotAvailable for "TRANSFER_NOT_AVAILABLE"
+            /// Enum TransferNotavailable for "TRANSFER_NOTAVAILABLE"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOT_AVAILABLE")]
-            TransferNotAvailable,
+            [EnumMember(Value = "TRANSFER_NOTAVAILABLE")]
+            TransferNotavailable,
             
             /// <summary>
             /// Enum TransportFailure for "TRANSPORT_FAILURE"
@@ -288,6 +288,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="ConversationNotificationVideos" /> class.
         /// </summary>
         /// <param name="State">State.</param>
+        /// <param name="Self">Self.</param>
         /// <param name="Id">Id.</param>
         /// <param name="Context">Context.</param>
         /// <param name="AudioMuted">AudioMuted.</param>
@@ -298,9 +299,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationVideos(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, ProviderEnum? Provider = null, DisconnectTypeEnum? DisconnectType = null, int? ConnectedTime = null, int? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationVideos(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, ProviderEnum? Provider = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
+            this.Self = Self;
             this.Id = Id;
             this.Context = Context;
             this.AudioMuted = AudioMuted;
@@ -313,6 +315,11 @@ namespace ININ.PureCloudApi.Model
             this.AdditionalProperties = AdditionalProperties;
         }
         
+        /// <summary>
+        /// Gets or Sets Self
+        /// </summary>
+        [DataMember(Name="self", EmitDefaultValue=false)]
+        public ConversationNotificationAddress Self { get; set; }
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
@@ -342,12 +349,12 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
-        public int? ConnectedTime { get; set; }
+        public DateTime? ConnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets DisconnectedTime
         /// </summary>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
-        public int? DisconnectedTime { get; set; }
+        public DateTime? DisconnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
@@ -362,6 +369,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationVideos {\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
@@ -412,6 +420,11 @@ namespace ININ.PureCloudApi.Model
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
+                ) &&
+                (
+                    this.Self == other.Self ||
+                    this.Self != null &&
+                    this.Self.Equals(other.Self)
                 ) &&
                 (
                     this.Id == other.Id ||
@@ -478,6 +491,8 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                if (this.Self != null)
+                    hash = hash * 59 + this.Self.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Context != null)

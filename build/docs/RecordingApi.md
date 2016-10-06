@@ -22,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSettings**](RecordingApi.html#getsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
 | [**GetsScreensessions**](RecordingApi.html#getsscreensessions) | **GET** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
 | [**PatchMediaretentionpoliciesPolicyId**](RecordingApi.html#patchmediaretentionpoliciespolicyid) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
+| [**PatchsScreensessionsRecordingsessionId**](RecordingApi.html#patchsscreensessionsrecordingsessionid) | **PATCH** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
 | [**PostConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#postconversationidrecordingsrecordingidannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
 | [**PostMediaretentionpolicies**](RecordingApi.html#postmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
 | [**PutConversationIdRecordingsRecordingId**](RecordingApi.html#putconversationidrecordingsrecordingid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
@@ -922,6 +923,63 @@ namespace Example
 
 [**Policy**](Policy.html)
 
+<a name="patchsscreensessionsrecordingsessionid"></a>
+
+## void PatchsScreensessionsRecordingsessionId (string recordingSessionId, ScreenRecordingSessionRequest body = null)
+
+Update a screen recording session
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchsScreensessionsRecordingsessionIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var recordingSessionId = recordingSessionId_example;  // string | Screen recording session ID
+            var body = new ScreenRecordingSessionRequest(); // ScreenRecordingSessionRequest |  (optional) 
+
+            try
+            {
+                // Update a screen recording session
+                apiInstance.PatchsScreensessionsRecordingsessionId(recordingSessionId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PatchsScreensessionsRecordingsessionId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **recordingSessionId** | **string**| Screen recording session ID |  |
+| **body** | [**ScreenRecordingSessionRequest**](ScreenRecordingSessionRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postconversationidrecordingsrecordingidannotations"></a>
 
 ## [**Annotation**](Annotation.html) PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body)
@@ -984,7 +1042,7 @@ namespace Example
 
 <a name="postmediaretentionpolicies"></a>
 
-## [**Policy**](Policy.html) PostMediaretentionpolicies (Policy body)
+## [**Policy**](Policy.html) PostMediaretentionpolicies (PolicyCreate body)
 
 Create media retention policy
 
@@ -1009,7 +1067,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RecordingApi();
-            var body = new Policy(); // Policy | Policy
+            var body = new PolicyCreate(); // PolicyCreate | Policy
 
             try
             {
@@ -1031,7 +1089,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Policy**](Policy.html)| Policy |  |
+| **body** | [**PolicyCreate**](PolicyCreate.html)| Policy |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1044,7 +1102,7 @@ namespace Example
 
 Updates the retention records on a recording.
 
-Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter 'restoreDays' is deprecated and will be removed in the next major version release. If 'restoreDays' is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays=10 would instead set the archiveDate's time stamp in the PUT body to 10 days in the future.
+Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
 
 ### Example
 ~~~csharp

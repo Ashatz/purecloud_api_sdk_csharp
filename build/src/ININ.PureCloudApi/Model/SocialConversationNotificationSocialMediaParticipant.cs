@@ -192,22 +192,22 @@ namespace ININ.PureCloudApi.Model
             Transferforward,
             
             /// <summary>
+            /// Enum Transfernoanswer for "transfer.noanswer"
+            /// </summary>
+            [EnumMember(Value = "transfer.noanswer")]
+            Transfernoanswer,
+            
+            /// <summary>
+            /// Enum Transfernotavailable for "transfer.notavailable"
+            /// </summary>
+            [EnumMember(Value = "transfer.notavailable")]
+            Transfernotavailable,
+            
+            /// <summary>
             /// Enum Transportfailure for "transport.failure"
             /// </summary>
             [EnumMember(Value = "transport.failure")]
             Transportfailure,
-            
-            /// <summary>
-            /// Enum Transportnoanswer for "transport.noanswer"
-            /// </summary>
-            [EnumMember(Value = "transport.noanswer")]
-            Transportnoanswer,
-            
-            /// <summary>
-            /// Enum Transportnotavailable for "transport.notavailable"
-            /// </summary>
-            [EnumMember(Value = "transport.notavailable")]
-            Transportnotavailable,
             
             /// <summary>
             /// Enum Error for "error"
@@ -266,15 +266,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="WrapupRequired">WrapupRequired.</param>
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
         /// <param name="User">User.</param>
+        /// <param name="Queue">Queue.</param>
         /// <param name="Attributes">Attributes.</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
+        /// <param name="Script">Script.</param>
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
         /// <param name="SocialMediaId">SocialMediaId.</param>
         /// <param name="SocialMediaHub">SocialMediaHub.</param>
         /// <param name="SocialUserName">SocialUserName.</param>
         /// <param name="PreviewText">PreviewText.</param>
-        public SocialConversationNotificationSocialMediaParticipant(string Id = null, string Name = null, string Address = null, int? StartTime = null, int? ConnectedTime = null, int? EndTime = null, int? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
+        public SocialConversationNotificationSocialMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, SocialConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, SocialConversationNotificationErrorInfo ErrorInfo = null, SocialConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -291,8 +293,10 @@ namespace ININ.PureCloudApi.Model
             this.WrapupRequired = WrapupRequired;
             this.WrapupPrompt = WrapupPrompt;
             this.User = User;
+            this.Queue = Queue;
             this.Attributes = Attributes;
             this.ErrorInfo = ErrorInfo;
+            this.Script = Script;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
             this.SocialMediaId = SocialMediaId;
@@ -320,22 +324,22 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets StartTime
         /// </summary>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
-        public int? StartTime { get; set; }
+        public DateTime? StartTime { get; set; }
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
-        public int? ConnectedTime { get; set; }
+        public DateTime? ConnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets EndTime
         /// </summary>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
-        public int? EndTime { get; set; }
+        public DateTime? EndTime { get; set; }
         /// <summary>
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
-        public int? StartHoldTime { get; set; }
+        public DateTime? StartHoldTime { get; set; }
         /// <summary>
         /// Gets or Sets Purpose
         /// </summary>
@@ -362,6 +366,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="user", EmitDefaultValue=false)]
         public CallbackConversationNotificationUser User { get; set; }
         /// <summary>
+        /// Gets or Sets Queue
+        /// </summary>
+        [DataMember(Name="queue", EmitDefaultValue=false)]
+        public SocialConversationNotificationUriReference Queue { get; set; }
+        /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
@@ -370,7 +379,12 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
-        public CallbackConversationNotificationErrorInfo ErrorInfo { get; set; }
+        public SocialConversationNotificationErrorInfo ErrorInfo { get; set; }
+        /// <summary>
+        /// Gets or Sets Script
+        /// </summary>
+        [DataMember(Name="script", EmitDefaultValue=false)]
+        public SocialConversationNotificationUriReference Script { get; set; }
         /// <summary>
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
@@ -424,8 +438,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
+            sb.Append("  Script: ").Append(Script).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
             sb.Append("  SocialMediaId: ").Append(SocialMediaId).Append("\n");
@@ -544,6 +560,11 @@ namespace ININ.PureCloudApi.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
+                    this.Queue == other.Queue ||
+                    this.Queue != null &&
+                    this.Queue.Equals(other.Queue)
+                ) &&
+                (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
@@ -552,6 +573,11 @@ namespace ININ.PureCloudApi.Model
                     this.ErrorInfo == other.ErrorInfo ||
                     this.ErrorInfo != null &&
                     this.ErrorInfo.Equals(other.ErrorInfo)
+                ) &&
+                (
+                    this.Script == other.Script ||
+                    this.Script != null &&
+                    this.Script.Equals(other.Script)
                 ) &&
                 (
                     this.WrapupTimeoutMs == other.WrapupTimeoutMs ||
@@ -626,10 +652,14 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                if (this.Queue != null)
+                    hash = hash * 59 + this.Queue.GetHashCode();
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
+                if (this.Script != null)
+                    hash = hash * 59 + this.Script.GetHashCode();
                 if (this.WrapupTimeoutMs != null)
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
                 if (this.WrapupSkipped != null)

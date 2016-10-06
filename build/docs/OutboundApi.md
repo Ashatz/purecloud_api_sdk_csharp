@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteAttemptlimitsAttemptlimitsId**](OutboundApi.html#deleteattemptlimitsattemptlimitsid) | **DELETE** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Delete attempt limits |
 | [**DeleteCallabletimesetsCallabletimesetId**](OutboundApi.html#deletecallabletimesetscallabletimesetid) | **DELETE** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Delete callable time set |
 | [**DeleteCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#deletecallanalysisresponsesetscallanalysissetid) | **DELETE** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Delete a dialer call analysis response set. |
 | [**DeleteCampaignsCampaignId**](OutboundApi.html#deletecampaignscampaignid) | **DELETE** /api/v2/outbound/campaigns/{campaignId} | Delete a campaign. |
@@ -18,6 +19,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteSchedulesCampaignsCampaignId**](OutboundApi.html#deleteschedulescampaignscampaignid) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
 | [**DeleteSchedulesSequencesSequenceId**](OutboundApi.html#deleteschedulessequencessequenceid) | **DELETE** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
 | [**DeleteSequencesSequenceId**](OutboundApi.html#deletesequencessequenceid) | **DELETE** /api/v2/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
+| [**GetAttemptlimits**](OutboundApi.html#getattemptlimits) | **GET** /api/v2/outbound/attemptlimits | Query attempt limits list |
+| [**GetAttemptlimitsAttemptlimitsId**](OutboundApi.html#getattemptlimitsattemptlimitsid) | **GET** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Get attempt limits |
 | [**GetCallabletimesets**](OutboundApi.html#getcallabletimesets) | **GET** /api/v2/outbound/callabletimesets | Query callable time set list |
 | [**GetCallabletimesetsCallabletimesetId**](OutboundApi.html#getcallabletimesetscallabletimesetid) | **GET** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Get callable time set |
 | [**GetCallanalysisresponsesets**](OutboundApi.html#getcallanalysisresponsesets) | **GET** /api/v2/outbound/callanalysisresponsesets | Query a list of dialer call analysis response sets. |
@@ -46,6 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSequences**](OutboundApi.html#getsequences) | **GET** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
 | [**GetSequencesSequenceId**](OutboundApi.html#getsequencessequenceid) | **GET** /api/v2/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
 | [**GetWrapupcodemappings**](OutboundApi.html#getwrapupcodemappings) | **GET** /api/v2/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
+| [**PostAttemptlimits**](OutboundApi.html#postattemptlimits) | **POST** /api/v2/outbound/attemptlimits | Create attempt limits |
 | [**PostAudits**](OutboundApi.html#postaudits) | **POST** /api/v2/outbound/audits | Retrieves audits for dialer. |
 | [**PostCallabletimesets**](OutboundApi.html#postcallabletimesets) | **POST** /api/v2/outbound/callabletimesets | Create callable time set |
 | [**PostCallanalysisresponsesets**](OutboundApi.html#postcallanalysisresponsesets) | **POST** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
@@ -61,6 +65,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostDnclistsDnclistIdPhonenumbers**](OutboundApi.html#postdnclistsdnclistidphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a Dialer DNC list. |
 | [**PostRulesets**](OutboundApi.html#postrulesets) | **POST** /api/v2/outbound/rulesets | Create a Dialer Call Analysis Response Set. |
 | [**PostSequences**](OutboundApi.html#postsequences) | **POST** /api/v2/outbound/sequences | Create a new campaign sequence. |
+| [**PutAttemptlimitsAttemptlimitsId**](OutboundApi.html#putattemptlimitsattemptlimitsid) | **PUT** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Update attempt limits |
 | [**PutCallabletimesetsCallabletimesetId**](OutboundApi.html#putcallabletimesetscallabletimesetid) | **PUT** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Update callable time set |
 | [**PutCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#putcallanalysisresponsesetscallanalysissetid) | **PUT** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Update a dialer call analysis response set. |
 | [**PutCampaignsCampaignId**](OutboundApi.html#putcampaignscampaignid) | **PUT** /api/v2/outbound/campaigns/{campaignId} | Update a campaign. |
@@ -74,6 +79,62 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutSequencesSequenceId**](OutboundApi.html#putsequencessequenceid) | **PUT** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
 | [**PutWrapupcodemappings**](OutboundApi.html#putwrapupcodemappings) | **PUT** /api/v2/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
 {: class="table table-striped"}
+
+<a name="deleteattemptlimitsattemptlimitsid"></a>
+
+## **string** DeleteAttemptlimitsAttemptlimitsId (string attemptLimitsId)
+
+Delete attempt limits
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteAttemptlimitsAttemptlimitsIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var attemptLimitsId = attemptLimitsId_example;  // string | Attempt limits ID
+
+            try
+            {
+                // Delete attempt limits
+                string result = apiInstance.DeleteAttemptlimitsAttemptlimitsId(attemptLimitsId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteAttemptlimitsAttemptlimitsId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **attemptLimitsId** | **string**| Attempt limits ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
 
 <a name="deletecallabletimesetscallabletimesetid"></a>
 
@@ -692,6 +753,128 @@ namespace Example
 ### Return type
 
 **string**
+
+<a name="getattemptlimits"></a>
+
+## [**AttemptLimitsEntityListing**](AttemptLimitsEntityListing.html) GetAttemptlimits (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+
+Query attempt limits list
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetAttemptlimitsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var name = name_example;  // string | Name (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+
+            try
+            {
+                // Query attempt limits list
+                AttemptLimitsEntityListing result = apiInstance.GetAttemptlimits(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetAttemptlimits: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **name** | **string**| Name | [optional]  |
+| **sortBy** | **string**| Sort by | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to a] |
+{: class="table table-striped"}
+
+### Return type
+
+[**AttemptLimitsEntityListing**](AttemptLimitsEntityListing.html)
+
+<a name="getattemptlimitsattemptlimitsid"></a>
+
+## [**AttemptLimits**](AttemptLimits.html) GetAttemptlimitsAttemptlimitsId (string attemptLimitsId)
+
+Get attempt limits
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetAttemptlimitsAttemptlimitsIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var attemptLimitsId = attemptLimitsId_example;  // string | Attempt limits ID
+
+            try
+            {
+                // Get attempt limits
+                AttemptLimits result = apiInstance.GetAttemptlimitsAttemptlimitsId(attemptLimitsId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetAttemptlimitsAttemptlimitsId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **attemptLimitsId** | **string**| Attempt limits ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AttemptLimits**](AttemptLimits.html)
 
 <a name="getcallabletimesets"></a>
 
@@ -2348,6 +2531,62 @@ This endpoint does require any parameters.
 
 [**WrapUpCodeMapping**](WrapUpCodeMapping.html)
 
+<a name="postattemptlimits"></a>
+
+## [**AttemptLimits**](AttemptLimits.html) PostAttemptlimits (AttemptLimits body)
+
+Create attempt limits
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostAttemptlimitsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new AttemptLimits(); // AttemptLimits | AttemptLimits
+
+            try
+            {
+                // Create attempt limits
+                AttemptLimits result = apiInstance.PostAttemptlimits(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostAttemptlimits: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AttemptLimits**](AttemptLimits.html)| AttemptLimits |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AttemptLimits**](AttemptLimits.html)
+
 <a name="postaudits"></a>
 
 ## [**AuditSearchResult**](AuditSearchResult.html) PostAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
@@ -3203,6 +3442,64 @@ namespace Example
 ### Return type
 
 [**CampaignSequence**](CampaignSequence.html)
+
+<a name="putattemptlimitsattemptlimitsid"></a>
+
+## [**AttemptLimits**](AttemptLimits.html) PutAttemptlimitsAttemptlimitsId (string attemptLimitsId, AttemptLimits body)
+
+Update attempt limits
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutAttemptlimitsAttemptlimitsIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var attemptLimitsId = attemptLimitsId_example;  // string | Attempt limits ID
+            var body = new AttemptLimits(); // AttemptLimits | AttemptLimits
+
+            try
+            {
+                // Update attempt limits
+                AttemptLimits result = apiInstance.PutAttemptlimitsAttemptlimitsId(attemptLimitsId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutAttemptlimitsAttemptlimitsId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **attemptLimitsId** | **string**| Attempt limits ID |  |
+| **body** | [**AttemptLimits**](AttemptLimits.html)| AttemptLimits |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AttemptLimits**](AttemptLimits.html)
 
 <a name="putcallabletimesetscallabletimesetid"></a>
 

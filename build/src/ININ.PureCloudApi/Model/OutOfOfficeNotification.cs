@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="StartDate">StartDate.</param>
         /// <param name="EndDate">EndDate.</param>
         /// <param name="ModifiedDate">ModifiedDate.</param>
-        public OutOfOfficeNotification(OutOfOfficeNotificationUser User = null, bool? Active = null, int? StartDate = null, int? EndDate = null, int? ModifiedDate = null)
+        public OutOfOfficeNotification(OutOfOfficeNotificationUser User = null, bool? Active = null, DateTime? StartDate = null, DateTime? EndDate = null, DateTime? ModifiedDate = null)
         {
             this.User = User;
             this.Active = Active;
@@ -48,17 +48,17 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
-        public int? StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
         /// <summary>
         /// Gets or Sets EndDate
         /// </summary>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
-        public int? EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         /// <summary>
         /// Gets or Sets ModifiedDate
         /// </summary>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
-        public int? ModifiedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

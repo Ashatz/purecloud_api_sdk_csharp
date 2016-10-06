@@ -1257,7 +1257,7 @@ namespace Example
 
 <a name="postcalibrations"></a>
 
-## [**Calibration**](Calibration.html) PostCalibrations (Calibration body, string expand = null)
+## [**Calibration**](Calibration.html) PostCalibrations (CalibrationCreate body, string expand = null)
 
 Create a calibration
 
@@ -1282,7 +1282,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var body = new Calibration(); // Calibration | calibration
+            var body = new CalibrationCreate(); // CalibrationCreate | calibration
             var expand = expand_example;  // string | calibratorId (optional) 
 
             try
@@ -1305,7 +1305,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Calibration**](Calibration.html)| calibration |  |
+| **body** | [**CalibrationCreate**](CalibrationCreate.html)| calibration |  |
 | **expand** | **string**| calibratorId | [optional]  |
 {: class="table table-striped"}
 

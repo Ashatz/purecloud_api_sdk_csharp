@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CountryCode">The country code to be associated with the callback numbers..</param>
         /// <param name="IsAutomated">Whether or not to automatically place a call for this callback. (default to false).</param>
         /// <param name="AutomatedCallbackConfigId">The id of the configuration to handle the response (e.g. live voice, machine) from automatically placing a call for a callback..</param>
-        /// <param name="Data">A map of key-value pairs containing additional data that can be associated to the callback. These could be set up for instance to be used in a customized script shown during the call. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }.</param>
+        /// <param name="Data">A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }.</param>
         public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? IsAutomated = null, string AutomatedCallbackConfigId = null, Dictionary<string, string> Data = null)
         {
             // to ensure "CallbackNumbers" is required (not null)
@@ -120,9 +120,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="automatedCallbackConfigId", EmitDefaultValue=false)]
         public string AutomatedCallbackConfigId { get; set; }
         /// <summary>
-        /// A map of key-value pairs containing additional data that can be associated to the callback. These could be set up for instance to be used in a customized script shown during the call. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }
+        /// A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }
         /// </summary>
-        /// <value>A map of key-value pairs containing additional data that can be associated to the callback. These could be set up for instance to be used in a customized script shown during the call. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }</value>
+        /// <value>A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public Dictionary<string, string> Data { get; set; }
         /// <summary>

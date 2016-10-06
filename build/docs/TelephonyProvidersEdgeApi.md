@@ -1887,7 +1887,7 @@ namespace Example
 
 <a name="getprovidersedgesedgeidsoftwareversions"></a>
 
-## [**DomainEdgeSoftwareVersionDto**](DomainEdgeSoftwareVersionDto.html) GetProvidersEdgesEdgeIdSoftwareversions (string edgeId)
+## [**DomainEdgeSoftwareVersionDtoEntityListing**](DomainEdgeSoftwareVersionDtoEntityListing.html) GetProvidersEdgesEdgeIdSoftwareversions (string edgeId)
 
 Gets all the available software versions for this edge.
 
@@ -1917,7 +1917,7 @@ namespace Example
             try
             {
                 // Gets all the available software versions for this edge.
-                DomainEdgeSoftwareVersionDto result = apiInstance.GetProvidersEdgesEdgeIdSoftwareversions(edgeId);
+                DomainEdgeSoftwareVersionDtoEntityListing result = apiInstance.GetProvidersEdgesEdgeIdSoftwareversions(edgeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1939,7 +1939,7 @@ namespace Example
 
 ### Return type
 
-[**DomainEdgeSoftwareVersionDto**](DomainEdgeSoftwareVersionDto.html)
+[**DomainEdgeSoftwareVersionDtoEntityListing**](DomainEdgeSoftwareVersionDtoEntityListing.html)
 
 <a name="getprovidersedgesedgegroups"></a>
 

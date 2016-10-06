@@ -231,6 +231,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
         ApiResponse<InboundDomainEntityListing> GetEmailDomainsWithHttpInfo ();
         /// <summary>
+        /// Get domain
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>InboundDomain</returns>
+        InboundDomain GetEmailDomainsDomainId (string domainId);
+
+        /// <summary>
+        /// Get domain
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of InboundDomain</returns>
+        ApiResponse<InboundDomain> GetEmailDomainsDomainIdWithHttpInfo (string domainId);
+        /// <summary>
         /// Get routes
         /// </summary>
         /// <remarks>
@@ -505,12 +526,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
         /// <param name="skills">Filter by skill (optional)</param>
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>QueueMemberEntityListing</returns>
-        QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+        QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
         /// Get the members of this queue
@@ -526,12 +548,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
         /// <param name="skills">Filter by skill (optional)</param>
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        ApiResponse<QueueMemberEntityListing> GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+        ApiResponse<QueueMemberEntityListing> GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
         /// <summary>
         /// Get the wrap-up codes for a queue
         /// </summary>
@@ -906,7 +929,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body);
+        UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkillPost body);
 
         /// <summary>
         /// Add routing skill to user
@@ -918,7 +941,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        ApiResponse<UserRoutingSkill> PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body);
+        ApiResponse<UserRoutingSkill> PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkillPost body);
         /// <summary>
         /// Create a wrap-up code
         /// </summary>
@@ -1276,6 +1299,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetEmailDomainsAsyncWithHttpInfo ();
         /// <summary>
+        /// Get domain
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of InboundDomain</returns>
+        System.Threading.Tasks.Task<InboundDomain> GetEmailDomainsDomainIdAsync (string domainId);
+
+        /// <summary>
+        /// Get domain
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (InboundDomain)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InboundDomain>> GetEmailDomainsDomainIdAsyncWithHttpInfo (string domainId);
+        /// <summary>
         /// Get routes
         /// </summary>
         /// <remarks>
@@ -1550,12 +1594,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
         /// <param name="skills">Filter by skill (optional)</param>
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
-        System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+        System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
 
         /// <summary>
         /// Get the members of this queue
@@ -1571,12 +1616,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
         /// <param name="skills">Filter by skill (optional)</param>
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null);
         /// <summary>
         /// Get the wrap-up codes for a queue
         /// </summary>
@@ -1951,7 +1997,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body);
+        System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkillPost body);
 
         /// <summary>
         /// Add routing skill to user
@@ -1963,7 +2009,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body);
+        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkillPost body);
         /// <summary>
         /// Create a wrap-up code
         /// </summary>
@@ -3753,6 +3799,159 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get domain 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>InboundDomain</returns>
+        public InboundDomain GetEmailDomainsDomainId (string domainId)
+        {
+             ApiResponse<InboundDomain> localVarResponse = GetEmailDomainsDomainIdWithHttpInfo(domainId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get domain 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of InboundDomain</returns>
+        public ApiResponse< InboundDomain > GetEmailDomainsDomainIdWithHttpInfo (string domainId)
+        {
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->GetEmailDomainsDomainId");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (domainId != null) localVarPathParams.Add("domainId", Configuration.ApiClient.ParameterToString(domainId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InboundDomain>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InboundDomain) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundDomain)));
+            
+        }
+
+        /// <summary>
+        /// Get domain 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of InboundDomain</returns>
+        public async System.Threading.Tasks.Task<InboundDomain> GetEmailDomainsDomainIdAsync (string domainId)
+        {
+             ApiResponse<InboundDomain> localVarResponse = await GetEmailDomainsDomainIdAsyncWithHttpInfo(domainId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get domain 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (InboundDomain)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> GetEmailDomainsDomainIdAsyncWithHttpInfo (string domainId)
+        {
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->GetEmailDomainsDomainId");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (domainId != null) localVarPathParams.Add("domainId", Configuration.ApiClient.ParameterToString(domainId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmailDomainsDomainId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InboundDomain>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InboundDomain) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundDomain)));
+            
+        }
+
+        /// <summary>
         /// Get routes 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5530,14 +5729,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
         /// <param name="skills">Filter by skill (optional)</param>
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>QueueMemberEntityListing</returns>
-        public QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        public QueueMemberEntityListing GetQueuesQueueIdUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = GetQueuesQueueIdUsersWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
+             ApiResponse<QueueMemberEntityListing> localVarResponse = GetQueuesQueueIdUsersWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
              return localVarResponse.Data;
         }
 
@@ -5552,12 +5752,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
         /// <param name="skills">Filter by skill (optional)</param>
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        public ApiResponse< QueueMemberEntityListing > GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        public ApiResponse< QueueMemberEntityListing > GetQueuesQueueIdUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -5595,6 +5796,7 @@ namespace ININ.PureCloudApi.Api
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (joined != null) localVarQueryParams.Add("joined", Configuration.ApiClient.ParameterToString(joined)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (profileSkills != null) localVarQueryParams.Add("profileSkills", Configuration.ApiClient.ParameterToString(profileSkills)); // query parameter
             if (skills != null) localVarQueryParams.Add("skills", Configuration.ApiClient.ParameterToString(skills)); // query parameter
             if (languages != null) localVarQueryParams.Add("languages", Configuration.ApiClient.ParameterToString(languages)); // query parameter
             if (routingStatus != null) localVarQueryParams.Add("routingStatus", Configuration.ApiClient.ParameterToString(routingStatus)); // query parameter
@@ -5636,14 +5838,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
         /// <param name="skills">Filter by skill (optional)</param>
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = await GetQueuesQueueIdUsersAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, joined, name, skills, languages, routingStatus, presence);
+             ApiResponse<QueueMemberEntityListing> localVarResponse = await GetQueuesQueueIdUsersAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
              return localVarResponse.Data;
 
         }
@@ -5659,12 +5862,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="joined">Filter by joined status (optional)</param>
         /// <param name="name">Filter by queue member name (optional)</param>
+        /// <param name="profileSkills">Filter by profile skill (optional)</param>
         /// <param name="skills">Filter by skill (optional)</param>
         /// <param name="languages">Filter by language (optional)</param>
         /// <param name="routingStatus">Filter by routing status (optional)</param>
         /// <param name="presence">Filter by presence (optional)</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -5702,6 +5906,7 @@ namespace ININ.PureCloudApi.Api
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (joined != null) localVarQueryParams.Add("joined", Configuration.ApiClient.ParameterToString(joined)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (profileSkills != null) localVarQueryParams.Add("profileSkills", Configuration.ApiClient.ParameterToString(profileSkills)); // query parameter
             if (skills != null) localVarQueryParams.Add("skills", Configuration.ApiClient.ParameterToString(skills)); // query parameter
             if (languages != null) localVarQueryParams.Add("languages", Configuration.ApiClient.ParameterToString(languages)); // query parameter
             if (routingStatus != null) localVarQueryParams.Add("routingStatus", Configuration.ApiClient.ParameterToString(routingStatus)); // query parameter
@@ -8427,7 +8632,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>UserRoutingSkill</returns>
-        public UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body)
+        public UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkillPost body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = PostUserIdRoutingskillsWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -8440,7 +8645,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of UserRoutingSkill</returns>
-        public ApiResponse< UserRoutingSkill > PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body)
+        public ApiResponse< UserRoutingSkill > PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkillPost body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -8516,7 +8721,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of UserRoutingSkill</returns>
-        public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body)
+        public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkillPost body)
         {
              ApiResponse<UserRoutingSkill> localVarResponse = await PostUserIdRoutingskillsAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -8530,7 +8735,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkillPost body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)

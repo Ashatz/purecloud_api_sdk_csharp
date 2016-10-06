@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class RoutingStatus :  IEquatable<RoutingStatus>
     {
         /// <summary>
-        /// Gets or Sets Status
+        /// Indicates the Routing State of the agent.
         /// </summary>
+        /// <value>Indicates the Routing State of the agent.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -62,16 +63,17 @@ namespace ININ.PureCloudApi.Model
             Communicating
         }
         /// <summary>
-        /// Gets or Sets Status
+        /// Indicates the Routing State of the agent.
         /// </summary>
+        /// <value>Indicates the Routing State of the agent.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingStatus" /> class.
         /// </summary>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="UserId">The userId of the agent.</param>
+        /// <param name="Status">Indicates the Routing State of the agent..</param>
+        /// <param name="StartTime">The timestamp when the agent went into this state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public RoutingStatus(string UserId = null, StatusEnum? Status = null, DateTime? StartTime = null)
         {
             this.UserId = UserId;
@@ -80,14 +82,15 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets UserId
+        /// The userId of the agent
         /// </summary>
+        /// <value>The userId of the agent</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when the agent went into this state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when the agent went into this state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
         /// <summary>

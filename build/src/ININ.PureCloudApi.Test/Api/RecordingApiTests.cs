@@ -261,6 +261,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PatchsScreensessionsRecordingsessionId
+        /// </summary>
+        [Test]
+        public void PatchsScreensessionsRecordingsessionIdTest()
+        {
+            // TODO: add unit test for the method 'PatchsScreensessionsRecordingsessionId'
+            string recordingSessionId = null; // TODO: replace null with proper value
+            ScreenRecordingSessionRequest body = null; // TODO: replace null with proper value
+            instance.PatchsScreensessionsRecordingsessionId(recordingSessionId, body);
+            
+        }
+        
+        /// <summary>
         /// Test PostConversationIdRecordingsRecordingIdAnnotations
         /// </summary>
         [Test]
@@ -281,7 +294,7 @@ namespace ININ.PureCloudApi.Test
         public void PostMediaretentionpoliciesTest()
         {
             // TODO: add unit test for the method 'PostMediaretentionpolicies'
-            Policy body = null; // TODO: replace null with proper value
+            PolicyCreate body = null; // TODO: replace null with proper value
             var response = instance.PostMediaretentionpolicies(body);
             Assert.IsInstanceOf<Policy> (response, "response is Policy");
         }

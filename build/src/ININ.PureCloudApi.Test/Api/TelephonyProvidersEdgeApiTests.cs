@@ -452,7 +452,7 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdSoftwareversions'
             string edgeId = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesEdgeIdSoftwareversions(edgeId);
-            Assert.IsInstanceOf<DomainEdgeSoftwareVersionDto> (response, "response is DomainEdgeSoftwareVersionDto");
+            Assert.IsInstanceOf<DomainEdgeSoftwareVersionDtoEntityListing> (response, "response is DomainEdgeSoftwareVersionDtoEntityListing");
         }
         
         /// <summary>

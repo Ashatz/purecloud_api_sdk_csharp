@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class Call :  IEquatable<Call>
     {
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StateEnum
         {
@@ -98,8 +99,9 @@ namespace ININ.PureCloudApi.Model
             None
         }
         /// <summary>
-        /// Gets or Sets Direction
+        /// The direction of the call
         /// </summary>
+        /// <value>The direction of the call</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DirectionEnum
         {
@@ -124,8 +126,9 @@ namespace ININ.PureCloudApi.Model
             Outbound
         }
         /// <summary>
-        /// Gets or Sets RecordingState
+        /// State of recording on this call.
         /// </summary>
+        /// <value>State of recording on this call.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RecordingStateEnum
         {
@@ -156,8 +159,9 @@ namespace ININ.PureCloudApi.Model
             Paused
         }
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DisconnectTypeEnum
         {
@@ -260,46 +264,50 @@ namespace ININ.PureCloudApi.Model
             Spam
         }
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
-        /// Gets or Sets Direction
+        /// The direction of the call
         /// </summary>
+        /// <value>The direction of the call</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
         /// <summary>
-        /// Gets or Sets RecordingState
+        /// State of recording on this call.
         /// </summary>
+        /// <value>State of recording on this call.</value>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Call" /> class.
         /// </summary>
-        /// <param name="State">State.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="Direction">Direction.</param>
-        /// <param name="Recording">Recording (default to false).</param>
-        /// <param name="RecordingState">RecordingState.</param>
-        /// <param name="Muted">Muted (default to false).</param>
-        /// <param name="Confined">Confined (default to false).</param>
-        /// <param name="Held">Held (default to false).</param>
-        /// <param name="RecordingId">RecordingId.</param>
-        /// <param name="Segments">Segments.</param>
+        /// <param name="State">The connection state of this communication..</param>
+        /// <param name="Id">A globally unique identifier for this communication..</param>
+        /// <param name="Direction">The direction of the call.</param>
+        /// <param name="Recording">True if this call is being recorded. (default to false).</param>
+        /// <param name="RecordingState">State of recording on this call..</param>
+        /// <param name="Muted">True if this call is muted so that remote participants can&#39;t hear any audio from this end. (default to false).</param>
+        /// <param name="Confined">True if this call is held and the person on this side hears hold music. (default to false).</param>
+        /// <param name="Held">True if this call is held and the person on this side hears silence. (default to false).</param>
+        /// <param name="RecordingId">A globally unique identifier for the recording associated with this call..</param>
+        /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
-        /// <param name="DisconnectType">DisconnectType.</param>
-        /// <param name="StartHoldTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DocumentId">DocumentId.</param>
-        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DisconnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DisconnectReasons">DisconnectReasons.</param>
-        /// <param name="FaxStatus">FaxStatus.</param>
+        /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
+        /// <param name="StartHoldTime">The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DocumentId">If call is an outbound fax of a document from content management, then this is the id in content management..</param>
+        /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DisconnectReasons">List of reasons that this call was disconnected. This will be set once the call disconnects..</param>
+        /// <param name="FaxStatus">Extra information on fax transmission..</param>
         public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null)
         {
             this.State = State;
@@ -355,38 +363,45 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// A globally unique identifier for this communication.
         /// </summary>
+        /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         /// <summary>
-        /// Gets or Sets Recording
+        /// True if this call is being recorded.
         /// </summary>
+        /// <value>True if this call is being recorded.</value>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public bool? Recording { get; set; }
         /// <summary>
-        /// Gets or Sets Muted
+        /// True if this call is muted so that remote participants can&#39;t hear any audio from this end.
         /// </summary>
+        /// <value>True if this call is muted so that remote participants can&#39;t hear any audio from this end.</value>
         [DataMember(Name="muted", EmitDefaultValue=false)]
         public bool? Muted { get; set; }
         /// <summary>
-        /// Gets or Sets Confined
+        /// True if this call is held and the person on this side hears hold music.
         /// </summary>
+        /// <value>True if this call is held and the person on this side hears hold music.</value>
         [DataMember(Name="confined", EmitDefaultValue=false)]
         public bool? Confined { get; set; }
         /// <summary>
-        /// Gets or Sets Held
+        /// True if this call is held and the person on this side hears silence.
         /// </summary>
+        /// <value>True if this call is held and the person on this side hears silence.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
         /// <summary>
-        /// Gets or Sets RecordingId
+        /// A globally unique identifier for the recording associated with this call.
         /// </summary>
+        /// <value>A globally unique identifier for the recording associated with this call.</value>
         [DataMember(Name="recordingId", EmitDefaultValue=false)]
         public string RecordingId { get; set; }
         /// <summary>
-        /// Gets or Sets Segments
+        /// The time line of the participant&#39;s call, divided into activity segments.
         /// </summary>
+        /// <value>The time line of the participant&#39;s call, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
         /// <summary>
@@ -395,36 +410,39 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorBody ErrorInfo { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
         /// <summary>
-        /// Gets or Sets DocumentId
+        /// If call is an outbound fax of a document from content management, then this is the id in content management.
         /// </summary>
+        /// <value>If call is an outbound fax of a document from content management, then this is the id in content management.</value>
         [DataMember(Name="documentId", EmitDefaultValue=false)]
         public string DocumentId { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
         /// <summary>
-        /// Gets or Sets DisconnectReasons
+        /// List of reasons that this call was disconnected. This will be set once the call disconnects.
         /// </summary>
+        /// <value>List of reasons that this call was disconnected. This will be set once the call disconnects.</value>
         [DataMember(Name="disconnectReasons", EmitDefaultValue=false)]
         public List<DisconnectReason> DisconnectReasons { get; set; }
         /// <summary>
-        /// Gets or Sets FaxStatus
+        /// Extra information on fax transmission.
         /// </summary>
+        /// <value>Extra information on fax transmission.</value>
         [DataMember(Name="faxStatus", EmitDefaultValue=false)]
         public FaxStatus FaxStatus { get; set; }
         /// <summary>

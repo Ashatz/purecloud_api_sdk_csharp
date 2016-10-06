@@ -7,7 +7,7 @@ title: VmPairingInfo
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **MetaData** | [**MetaData**](MetaData.html) |  | [optional] |
+| **MetaData** | [**MetaData**](MetaData.html) | This is to be used to complete the setup process of a locally deployed virtual edge device. | [optional] |
 | **EdgeId** | **string** |  | [optional] |
 | **AuthToken** | **string** |  | [optional] |
 | **OrgId** | **string** |  | [optional] |

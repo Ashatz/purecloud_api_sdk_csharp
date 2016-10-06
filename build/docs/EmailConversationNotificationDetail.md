@@ -10,6 +10,7 @@ title: EmailConversationNotificationDetail
 | **ErrorCode** | **string** |  | [optional] |
 | **FieldName** | **string** |  | [optional] |
 | **EntityId** | **string** |  | [optional] |
+| **EntityName** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

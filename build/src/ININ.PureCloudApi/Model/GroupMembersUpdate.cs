@@ -20,22 +20,45 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupMembersUpdate" /> class.
         /// </summary>
-        /// <param name="MemberIds">MemberIds.</param>
-        /// <param name="Version">Version.</param>
+        [JsonConstructorAttribute]
+        protected GroupMembersUpdate() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GroupMembersUpdate" /> class.
+        /// </summary>
+        /// <param name="MemberIds">A list of the ids of the members to add. (required).</param>
+        /// <param name="Version">The current group version. (required).</param>
         public GroupMembersUpdate(List<string> MemberIds = null, int? Version = null)
         {
-            this.MemberIds = MemberIds;
-            this.Version = Version;
+            // to ensure "MemberIds" is required (not null)
+            if (MemberIds == null)
+            {
+                throw new InvalidDataException("MemberIds is a required property for GroupMembersUpdate and cannot be null");
+            }
+            else
+            {
+                this.MemberIds = MemberIds;
+            }
+            // to ensure "Version" is required (not null)
+            if (Version == null)
+            {
+                throw new InvalidDataException("Version is a required property for GroupMembersUpdate and cannot be null");
+            }
+            else
+            {
+                this.Version = Version;
+            }
         }
         
         /// <summary>
-        /// Gets or Sets MemberIds
+        /// A list of the ids of the members to add.
         /// </summary>
+        /// <value>A list of the ids of the members to add.</value>
         [DataMember(Name="memberIds", EmitDefaultValue=false)]
         public List<string> MemberIds { get; set; }
         /// <summary>
-        /// Gets or Sets Version
+        /// The current group version.
         /// </summary>
+        /// <value>The current group version.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         /// <summary>

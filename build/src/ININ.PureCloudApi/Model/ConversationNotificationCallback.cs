@@ -168,16 +168,16 @@ namespace ININ.PureCloudApi.Model
             TransferConsult,
             
             /// <summary>
-            /// Enum TransferNoAnswer for "TRANSFER_NO_ANSWER"
+            /// Enum TransferNoanswer for "TRANSFER_NOANSWER"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NO_ANSWER")]
-            TransferNoAnswer,
+            [EnumMember(Value = "TRANSFER_NOANSWER")]
+            TransferNoanswer,
             
             /// <summary>
-            /// Enum TransferNotAvailable for "TRANSFER_NOT_AVAILABLE"
+            /// Enum TransferNotavailable for "TRANSFER_NOTAVAILABLE"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOT_AVAILABLE")]
-            TransferNotAvailable,
+            [EnumMember(Value = "TRANSFER_NOTAVAILABLE")]
+            TransferNotavailable,
             
             /// <summary>
             /// Enum TransferForward for "TRANSFER_FORWARD"
@@ -249,7 +249,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, int? StartHoldTime = null, ConversationNotificationDialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, int? ConnectedTime = null, int? DisconnectedTime = null, int? CallbackScheduledTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, ConversationNotificationDialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -283,7 +283,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
-        public int? StartHoldTime { get; set; }
+        public DateTime? StartHoldTime { get; set; }
         /// <summary>
         /// Gets or Sets DialerPreview
         /// </summary>
@@ -318,17 +318,17 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
-        public int? ConnectedTime { get; set; }
+        public DateTime? ConnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets DisconnectedTime
         /// </summary>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
-        public int? DisconnectedTime { get; set; }
+        public DateTime? DisconnectedTime { get; set; }
         /// <summary>
         /// Gets or Sets CallbackScheduledTime
         /// </summary>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
-        public int? CallbackScheduledTime { get; set; }
+        public DateTime? CallbackScheduledTime { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>

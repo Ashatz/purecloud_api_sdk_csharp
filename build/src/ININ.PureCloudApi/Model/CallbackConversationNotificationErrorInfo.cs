@@ -22,20 +22,26 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Status">Status.</param>
         /// <param name="Code">Code.</param>
+        /// <param name="EntityId">EntityId.</param>
+        /// <param name="EntityName">EntityName.</param>
         /// <param name="Message">Message.</param>
         /// <param name="MessageWithParams">MessageWithParams.</param>
         /// <param name="MessageParams">MessageParams.</param>
         /// <param name="ContextId">ContextId.</param>
         /// <param name="Details">Details.</param>
-        public CallbackConversationNotificationErrorInfo(int? Status = null, string Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, List<CallbackConversationNotificationErrorInfoDetails> Details = null)
+        /// <param name="Errors">Errors.</param>
+        public CallbackConversationNotificationErrorInfo(int? Status = null, string Code = null, string EntityId = null, string EntityName = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, List<CallbackConversationNotificationErrorInfoDetails> Details = null, List<CallbackConversationNotificationErrorBody> Errors = null)
         {
             this.Status = Status;
             this.Code = Code;
+            this.EntityId = EntityId;
+            this.EntityName = EntityName;
             this.Message = Message;
             this.MessageWithParams = MessageWithParams;
             this.MessageParams = MessageParams;
             this.ContextId = ContextId;
             this.Details = Details;
+            this.Errors = Errors;
         }
         
         /// <summary>
@@ -48,6 +54,16 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
+        /// <summary>
+        /// Gets or Sets EntityId
+        /// </summary>
+        [DataMember(Name="entityId", EmitDefaultValue=false)]
+        public string EntityId { get; set; }
+        /// <summary>
+        /// Gets or Sets EntityName
+        /// </summary>
+        [DataMember(Name="entityName", EmitDefaultValue=false)]
+        public string EntityName { get; set; }
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
@@ -74,6 +90,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="details", EmitDefaultValue=false)]
         public List<CallbackConversationNotificationErrorInfoDetails> Details { get; set; }
         /// <summary>
+        /// Gets or Sets Errors
+        /// </summary>
+        [DataMember(Name="errors", EmitDefaultValue=false)]
+        public List<CallbackConversationNotificationErrorBody> Errors { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,11 +104,14 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class CallbackConversationNotificationErrorInfo {\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  EntityId: ").Append(EntityId).Append("\n");
+            sb.Append("  EntityName: ").Append(EntityName).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  MessageWithParams: ").Append(MessageWithParams).Append("\n");
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
+            sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -135,6 +159,16 @@ namespace ININ.PureCloudApi.Model
                     this.Code.Equals(other.Code)
                 ) &&
                 (
+                    this.EntityId == other.EntityId ||
+                    this.EntityId != null &&
+                    this.EntityId.Equals(other.EntityId)
+                ) &&
+                (
+                    this.EntityName == other.EntityName ||
+                    this.EntityName != null &&
+                    this.EntityName.Equals(other.EntityName)
+                ) &&
+                (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
@@ -158,6 +192,11 @@ namespace ININ.PureCloudApi.Model
                     this.Details == other.Details ||
                     this.Details != null &&
                     this.Details.SequenceEqual(other.Details)
+                ) &&
+                (
+                    this.Errors == other.Errors ||
+                    this.Errors != null &&
+                    this.Errors.SequenceEqual(other.Errors)
                 );
         }
 
@@ -176,6 +215,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Status.GetHashCode();
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
+                if (this.EntityId != null)
+                    hash = hash * 59 + this.EntityId.GetHashCode();
+                if (this.EntityName != null)
+                    hash = hash * 59 + this.EntityName.GetHashCode();
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
                 if (this.MessageWithParams != null)
@@ -186,6 +229,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ContextId.GetHashCode();
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
+                if (this.Errors != null)
+                    hash = hash * 59 + this.Errors.GetHashCode();
                 return hash;
             }
         }

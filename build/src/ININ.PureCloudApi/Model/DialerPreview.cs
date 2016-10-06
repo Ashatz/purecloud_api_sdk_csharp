@@ -21,10 +21,10 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="DialerPreview" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="ContactId">ContactId.</param>
-        /// <param name="ContactListId">ContactListId.</param>
-        /// <param name="CampaignId">CampaignId.</param>
-        /// <param name="PhoneNumberColumns">PhoneNumberColumns.</param>
+        /// <param name="ContactId">The contact associated with this preview data pop.</param>
+        /// <param name="ContactListId">The contactList associated with this preview data pop..</param>
+        /// <param name="CampaignId">The campaignId associated with this preview data pop..</param>
+        /// <param name="PhoneNumberColumns">The phone number columns associated with this campaign.</param>
         public DialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<PhoneNumberColumn> PhoneNumberColumns = null)
         {
             this.Id = Id;
@@ -40,23 +40,27 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         /// <summary>
-        /// Gets or Sets ContactId
+        /// The contact associated with this preview data pop
         /// </summary>
+        /// <value>The contact associated with this preview data pop</value>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public string ContactId { get; set; }
         /// <summary>
-        /// Gets or Sets ContactListId
+        /// The contactList associated with this preview data pop.
         /// </summary>
+        /// <value>The contactList associated with this preview data pop.</value>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
         /// <summary>
-        /// Gets or Sets CampaignId
+        /// The campaignId associated with this preview data pop.
         /// </summary>
+        /// <value>The campaignId associated with this preview data pop.</value>
         [DataMember(Name="campaignId", EmitDefaultValue=false)]
         public string CampaignId { get; set; }
         /// <summary>
-        /// Gets or Sets PhoneNumberColumns
+        /// The phone number columns associated with this campaign
         /// </summary>
+        /// <value>The phone number columns associated with this campaign</value>
         [DataMember(Name="phoneNumberColumns", EmitDefaultValue=false)]
         public List<PhoneNumberColumn> PhoneNumberColumns { get; set; }
         /// <summary>

@@ -7,7 +7,7 @@ title: WorkspaceCreate
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** |  | [optional] |
+| **Name** | **string** | The workspace name | |
 | **Bucket** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 {: class="table table-striped"}

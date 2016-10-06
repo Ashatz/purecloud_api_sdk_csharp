@@ -313,7 +313,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EndDate">EndDate.</param>
         /// <param name="NotificationUsers">NotificationUsers.</param>
         /// <param name="AlertTypes">AlertTypes.</param>
-        public InteractionStatAlertNotification(string Id = null, string Name = null, string RuleId = null, DimensionEnum? Dimension = null, string DimensionValue = null, string DimensionValueName = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Unread = null, int? StartDate = null, int? EndDate = null, List<InteractionStatAlertNotificationNotificationUsers> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
+        public InteractionStatAlertNotification(string Id = null, string Name = null, string RuleId = null, DimensionEnum? Dimension = null, string DimensionValue = null, string DimensionValueName = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Unread = null, DateTime? StartDate = null, DateTime? EndDate = null, List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -372,17 +372,17 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
-        public int? StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
         /// <summary>
         /// Gets or Sets EndDate
         /// </summary>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
-        public int? EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         /// <summary>
         /// Gets or Sets NotificationUsers
         /// </summary>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
-        public List<InteractionStatAlertNotificationNotificationUsers> NotificationUsers { get; set; }
+        public List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers { get; set; }
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>

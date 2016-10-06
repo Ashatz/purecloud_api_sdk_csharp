@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class Cobrowsesession :  IEquatable<Cobrowsesession>
     {
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StateEnum
         {
@@ -86,8 +87,9 @@ namespace ININ.PureCloudApi.Model
             None
         }
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DisconnectTypeEnum
         {
@@ -178,29 +180,31 @@ namespace ININ.PureCloudApi.Model
             Spam
         }
         /// <summary>
-        /// Gets or Sets State
+        /// The connection state of this communication.
         /// </summary>
+        /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
+        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Cobrowsesession" /> class.
         /// </summary>
-        /// <param name="State">State.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="DisconnectType">DisconnectType.</param>
-        /// <param name="Self">Self.</param>
-        /// <param name="CobrowseSessionId">CobrowseSessionId.</param>
-        /// <param name="CobrowseRole">CobrowseRole.</param>
-        /// <param name="Controlling">Controlling.</param>
-        /// <param name="ViewerUrl">ViewerUrl.</param>
-        /// <param name="ProviderEventTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DisconnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="State">The connection state of this communication..</param>
+        /// <param name="Id">A globally unique identifier for this communication..</param>
+        /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
+        /// <param name="Self">Address and name data for a call endpoint..</param>
+        /// <param name="CobrowseSessionId">The co-browse session ID..</param>
+        /// <param name="CobrowseRole">This value identifies the role of the co-browse client within the co-browse session (a client is a sharer or a viewer)..</param>
+        /// <param name="Controlling">ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages)..</param>
+        /// <param name="ViewerUrl">The URL that can be used to open co-browse session in web browser..</param>
+        /// <param name="ProviderEventTime">The time when the provider event which triggered this conversation update happened in the corrected provider clock (milliseconds since 1970-01-01 00:00:00 UTC). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public Cobrowsesession(StateEnum? State = null, string Id = null, DisconnectTypeEnum? DisconnectType = null, Address Self = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null)
         {
             this.State = State;
@@ -217,51 +221,57 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// A globally unique identifier for this communication.
         /// </summary>
+        /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         /// <summary>
-        /// Gets or Sets Self
+        /// Address and name data for a call endpoint.
         /// </summary>
+        /// <value>Address and name data for a call endpoint.</value>
         [DataMember(Name="self", EmitDefaultValue=false)]
         public Address Self { get; set; }
         /// <summary>
-        /// Gets or Sets CobrowseSessionId
+        /// The co-browse session ID.
         /// </summary>
+        /// <value>The co-browse session ID.</value>
         [DataMember(Name="cobrowseSessionId", EmitDefaultValue=false)]
         public string CobrowseSessionId { get; set; }
         /// <summary>
-        /// Gets or Sets CobrowseRole
+        /// This value identifies the role of the co-browse client within the co-browse session (a client is a sharer or a viewer).
         /// </summary>
+        /// <value>This value identifies the role of the co-browse client within the co-browse session (a client is a sharer or a viewer).</value>
         [DataMember(Name="cobrowseRole", EmitDefaultValue=false)]
         public string CobrowseRole { get; set; }
         /// <summary>
-        /// Gets or Sets Controlling
+        /// ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages).
         /// </summary>
+        /// <value>ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages).</value>
         [DataMember(Name="controlling", EmitDefaultValue=false)]
         public List<string> Controlling { get; set; }
         /// <summary>
-        /// Gets or Sets ViewerUrl
+        /// The URL that can be used to open co-browse session in web browser.
         /// </summary>
+        /// <value>The URL that can be used to open co-browse session in web browser.</value>
         [DataMember(Name="viewerUrl", EmitDefaultValue=false)]
         public string ViewerUrl { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time when the provider event which triggered this conversation update happened in the corrected provider clock (milliseconds since 1970-01-01 00:00:00 UTC). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time when the provider event which triggered this conversation update happened in the corrected provider clock (milliseconds since 1970-01-01 00:00:00 UTC). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="providerEventTime", EmitDefaultValue=false)]
         public DateTime? ProviderEventTime { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
         /// <summary>

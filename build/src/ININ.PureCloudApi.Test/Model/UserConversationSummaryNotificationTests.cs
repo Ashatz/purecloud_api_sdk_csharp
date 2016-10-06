@@ -66,6 +66,46 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'Call'
         }
+        /// <summary>
+        /// Test the property 'Callback'
+        /// </summary>
+        [Test]
+        public void CallbackTest()
+        {
+            // TODO: unit test for the property 'Callback'
+        }
+        /// <summary>
+        /// Test the property 'Email'
+        /// </summary>
+        [Test]
+        public void EmailTest()
+        {
+            // TODO: unit test for the property 'Email'
+        }
+        /// <summary>
+        /// Test the property 'Chat'
+        /// </summary>
+        [Test]
+        public void ChatTest()
+        {
+            // TODO: unit test for the property 'Chat'
+        }
+        /// <summary>
+        /// Test the property 'SocialExpression'
+        /// </summary>
+        [Test]
+        public void SocialExpressionTest()
+        {
+            // TODO: unit test for the property 'SocialExpression'
+        }
+        /// <summary>
+        /// Test the property 'Video'
+        /// </summary>
+        [Test]
+        public void VideoTest()
+        {
+            // TODO: unit test for the property 'Video'
+        }
 
     }
 

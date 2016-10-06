@@ -20,7 +20,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VmPairingInfo" /> class.
         /// </summary>
-        /// <param name="MetaData">MetaData.</param>
+        /// <param name="MetaData">This is to be used to complete the setup process of a locally deployed virtual edge device..</param>
         /// <param name="EdgeId">EdgeId.</param>
         /// <param name="AuthToken">AuthToken.</param>
         /// <param name="OrgId">OrgId.</param>
@@ -33,8 +33,9 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets MetaData
+        /// This is to be used to complete the setup process of a locally deployed virtual edge device.
         /// </summary>
+        /// <value>This is to be used to complete the setup process of a locally deployed virtual edge device.</value>
         [DataMember(Name="meta-data", EmitDefaultValue=false)]
         public MetaData MetaData { get; set; }
         /// <summary>

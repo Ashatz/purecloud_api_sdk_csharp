@@ -32,6 +32,7 @@ title: Campaign
 | **PreviewTimeOutSeconds** | **long?** | for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls | [optional] |
 | **ContactSort** | [**ContactSort**](ContactSort.html) | information determining the order in which the contacts will be dialed | [optional] |
 | **NoAnswerTimeout** | **int?** | for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds | [optional] |
+| **CallAnalysisLanguage** | **string** | The language the edge will use to analyse the call | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

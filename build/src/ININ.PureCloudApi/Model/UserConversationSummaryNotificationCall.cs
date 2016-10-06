@@ -21,9 +21,11 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="UserConversationSummaryNotificationCall" /> class.
         /// </summary>
         /// <param name="ContactCenter">ContactCenter.</param>
-        public UserConversationSummaryNotificationCall(UserConversationSummaryNotificationCallContactCenter ContactCenter = null)
+        /// <param name="Enterprise">Enterprise.</param>
+        public UserConversationSummaryNotificationCall(UserConversationSummaryNotificationCallContactCenter ContactCenter = null, UserConversationSummaryNotificationMediaSummaryDetail Enterprise = null)
         {
             this.ContactCenter = ContactCenter;
+            this.Enterprise = Enterprise;
         }
         
         /// <summary>
@@ -31,6 +33,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="contactCenter", EmitDefaultValue=false)]
         public UserConversationSummaryNotificationCallContactCenter ContactCenter { get; set; }
+        /// <summary>
+        /// Gets or Sets Enterprise
+        /// </summary>
+        [DataMember(Name="enterprise", EmitDefaultValue=false)]
+        public UserConversationSummaryNotificationMediaSummaryDetail Enterprise { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,6 +47,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class UserConversationSummaryNotificationCall {\n");
             sb.Append("  ContactCenter: ").Append(ContactCenter).Append("\n");
+            sb.Append("  Enterprise: ").Append(Enterprise).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -80,6 +88,11 @@ namespace ININ.PureCloudApi.Model
                     this.ContactCenter == other.ContactCenter ||
                     this.ContactCenter != null &&
                     this.ContactCenter.Equals(other.ContactCenter)
+                ) &&
+                (
+                    this.Enterprise == other.Enterprise ||
+                    this.Enterprise != null &&
+                    this.Enterprise.Equals(other.Enterprise)
                 );
         }
 
@@ -96,6 +109,8 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.ContactCenter != null)
                     hash = hash * 59 + this.ContactCenter.GetHashCode();
+                if (this.Enterprise != null)
+                    hash = hash * 59 + this.Enterprise.GetHashCode();
                 return hash;
             }
         }

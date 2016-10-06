@@ -20,19 +20,33 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceCreate" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected WorkspaceCreate() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WorkspaceCreate" /> class.
+        /// </summary>
+        /// <param name="Name">The workspace name (required).</param>
         /// <param name="Bucket">Bucket.</param>
         /// <param name="Description">Description.</param>
         public WorkspaceCreate(string Name = null, string Bucket = null, string Description = null)
         {
-            this.Name = Name;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for WorkspaceCreate and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             this.Bucket = Bucket;
             this.Description = Description;
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The workspace name
         /// </summary>
+        /// <value>The workspace name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

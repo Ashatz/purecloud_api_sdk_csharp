@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Language">Language code, such as &#39;en-US&#39; (required).</param>
         /// <param name="Agents">Agents.</param>
         /// <param name="Keywords">The list of keywords to be used for keyword spotting. (required).</param>
-        /// <param name="ParticipantPurposes">ParticipantPurposes (required).</param>
+        /// <param name="ParticipantPurposes">The types of participants to use keyword spotting on. (required).</param>
         public KeywordSet(string Name = null, string Description = null, Queue Queue = null, List<Queue> Queues = null, string Language = null, List<User> Agents = null, List<Keyword> Keywords = null, List<ParticipantPurposesEnum> ParticipantPurposes = null)
         {
             // to ensure "Language" is required (not null)
@@ -139,8 +139,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="keywords", EmitDefaultValue=false)]
         public List<Keyword> Keywords { get; set; }
         /// <summary>
-        /// Gets or Sets ParticipantPurposes
+        /// The types of participants to use keyword spotting on.
         /// </summary>
+        /// <value>The types of participants to use keyword spotting on.</value>
         [DataMember(Name="participantPurposes", EmitDefaultValue=false)]
         public List<ParticipantPurposesEnum> ParticipantPurposes { get; set; }
         /// <summary>

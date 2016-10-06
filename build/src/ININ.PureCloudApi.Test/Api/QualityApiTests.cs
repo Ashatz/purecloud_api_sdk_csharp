@@ -364,7 +364,7 @@ namespace ININ.PureCloudApi.Test
         public void PostCalibrationsTest()
         {
             // TODO: add unit test for the method 'PostCalibrations'
-            Calibration body = null; // TODO: replace null with proper value
+            CalibrationCreate body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
             var response = instance.PostCalibrations(body, expand);
             Assert.IsInstanceOf<Calibration> (response, "response is Calibration");

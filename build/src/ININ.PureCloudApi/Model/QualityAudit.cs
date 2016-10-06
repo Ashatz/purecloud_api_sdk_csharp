@@ -22,19 +22,19 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
-        /// <param name="Timestamp">Timestamp.</param>
         /// <param name="Level">Level.</param>
+        /// <param name="Timestamp">Timestamp.</param>
         /// <param name="Entity">Entity.</param>
         /// <param name="Action">Action.</param>
         /// <param name="Status">Status.</param>
         /// <param name="Changes">Changes.</param>
         /// <param name="EntityType">EntityType.</param>
-        public QualityAudit(string Name = null, User User = null, string Timestamp = null, string Level = null, AuditEntity Entity = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
+        public QualityAudit(string Name = null, User User = null, string Level = null, string Timestamp = null, AuditEntity Entity = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
         {
             this.Name = Name;
             this.User = User;
-            this.Timestamp = Timestamp;
             this.Level = Level;
+            this.Timestamp = Timestamp;
             this.Entity = Entity;
             this.Action = Action;
             this.Status = Status;
@@ -59,15 +59,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
         /// <summary>
-        /// Gets or Sets Timestamp
-        /// </summary>
-        [DataMember(Name="timestamp", EmitDefaultValue=false)]
-        public string Timestamp { get; set; }
-        /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public string Level { get; set; }
+        /// <summary>
+        /// Gets or Sets Timestamp
+        /// </summary>
+        [DataMember(Name="timestamp", EmitDefaultValue=false)]
+        public string Timestamp { get; set; }
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
@@ -110,8 +110,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
-            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
+            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -170,14 +170,14 @@ namespace ININ.PureCloudApi.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
-                    this.Timestamp == other.Timestamp ||
-                    this.Timestamp != null &&
-                    this.Timestamp.Equals(other.Timestamp)
-                ) &&
-                (
                     this.Level == other.Level ||
                     this.Level != null &&
                     this.Level.Equals(other.Level)
+                ) &&
+                (
+                    this.Timestamp == other.Timestamp ||
+                    this.Timestamp != null &&
+                    this.Timestamp.Equals(other.Timestamp)
                 ) &&
                 (
                     this.Entity == other.Entity ||
@@ -228,10 +228,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                if (this.Timestamp != null)
-                    hash = hash * 59 + this.Timestamp.GetHashCode();
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
+                if (this.Timestamp != null)
+                    hash = hash * 59 + this.Timestamp.GetHashCode();
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
                 if (this.Action != null)

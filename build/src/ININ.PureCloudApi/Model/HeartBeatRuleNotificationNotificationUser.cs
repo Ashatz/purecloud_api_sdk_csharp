@@ -12,17 +12,17 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// InteractionStatAlertNotificationNotificationUsers
+    /// HeartBeatRuleNotificationNotificationUser
     /// </summary>
     [DataContract]
-    public partial class InteractionStatAlertNotificationNotificationUsers :  IEquatable<InteractionStatAlertNotificationNotificationUsers>
+    public partial class HeartBeatRuleNotificationNotificationUser :  IEquatable<HeartBeatRuleNotificationNotificationUser>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="InteractionStatAlertNotificationNotificationUsers" /> class.
+        /// Initializes a new instance of the <see cref="HeartBeatRuleNotificationNotificationUser" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="DisplayName">DisplayName.</param>
-        public InteractionStatAlertNotificationNotificationUsers(string Id = null, string DisplayName = null)
+        public HeartBeatRuleNotificationNotificationUser(string Id = null, string DisplayName = null)
         {
             this.Id = Id;
             this.DisplayName = DisplayName;
@@ -45,7 +45,7 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class InteractionStatAlertNotificationNotificationUsers {\n");
+            sb.Append("class HeartBeatRuleNotificationNotificationUser {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("}\n");
@@ -69,15 +69,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as InteractionStatAlertNotificationNotificationUsers);
+            return this.Equals(obj as HeartBeatRuleNotificationNotificationUser);
         }
 
         /// <summary>
-        /// Returns true if InteractionStatAlertNotificationNotificationUsers instances are equal
+        /// Returns true if HeartBeatRuleNotificationNotificationUser instances are equal
         /// </summary>
-        /// <param name="other">Instance of InteractionStatAlertNotificationNotificationUsers to be compared</param>
+        /// <param name="other">Instance of HeartBeatRuleNotificationNotificationUser to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(InteractionStatAlertNotificationNotificationUsers other)
+        public bool Equals(HeartBeatRuleNotificationNotificationUser other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

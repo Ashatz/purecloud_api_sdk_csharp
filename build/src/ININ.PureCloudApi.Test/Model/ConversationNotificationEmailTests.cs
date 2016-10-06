@@ -51,6 +51,14 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Test]
+        public void IdTest()
+        {
+            // TODO: unit test for the property 'Id'
+        }
+        /// <summary>
         /// Test the property 'State'
         /// </summary>
         [Test]
@@ -81,6 +89,14 @@ namespace ININ.PureCloudApi.Test
         public void MessagesSentTest()
         {
             // TODO: unit test for the property 'MessagesSent'
+        }
+        /// <summary>
+        /// Test the property 'ErrorInfo'
+        /// </summary>
+        [Test]
+        public void ErrorInfoTest()
+        {
+            // TODO: unit test for the property 'ErrorInfo'
         }
         /// <summary>
         /// Test the property 'DisconnectType'

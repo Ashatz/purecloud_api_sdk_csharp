@@ -8,10 +8,10 @@ title: JsonNode
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **NodeType** | **string** |  | [optional] |
-| **_Float** | **bool?** |  | [optional] [default to false]|
 | **_Object** | **bool?** |  | [optional] [default to false]|
 | **Boolean** | **bool?** |  | [optional] [default to false]|
 | **Number** | **bool?** |  | [optional] [default to false]|
+| **_Float** | **bool?** |  | [optional] [default to false]|
 | **ValueNode** | **bool?** |  | [optional] [default to false]|
 | **ContainerNode** | **bool?** |  | [optional] [default to false]|
 | **MissingNode** | **bool?** |  | [optional] [default to false]|

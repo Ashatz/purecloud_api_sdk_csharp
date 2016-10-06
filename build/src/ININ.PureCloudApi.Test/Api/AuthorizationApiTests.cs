@@ -177,7 +177,7 @@ namespace ININ.PureCloudApi.Test
         public void PostRolesTest()
         {
             // TODO: add unit test for the method 'PostRoles'
-            DomainOrganizationRole body = null; // TODO: replace null with proper value
+            DomainOrganizationRoleCreate body = null; // TODO: replace null with proper value
             var response = instance.PostRoles(body);
             Assert.IsInstanceOf<DomainOrganizationRole> (response, "response is DomainOrganizationRole");
         }

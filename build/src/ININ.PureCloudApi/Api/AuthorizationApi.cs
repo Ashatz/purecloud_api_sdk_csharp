@@ -230,7 +230,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole PostRoles (DomainOrganizationRole body);
+        DomainOrganizationRole PostRoles (DomainOrganizationRoleCreate body);
 
         /// <summary>
         /// Create an organization role.
@@ -241,7 +241,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> PostRolesWithHttpInfo (DomainOrganizationRole body);
+        ApiResponse<DomainOrganizationRole> PostRolesWithHttpInfo (DomainOrganizationRoleCreate body);
         /// <summary>
         /// Restores all default roles
         /// </summary>
@@ -619,7 +619,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> PostRolesAsync (DomainOrganizationRole body);
+        System.Threading.Tasks.Task<DomainOrganizationRole> PostRolesAsync (DomainOrganizationRoleCreate body);
 
         /// <summary>
         /// Create an organization role.
@@ -630,7 +630,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostRolesAsyncWithHttpInfo (DomainOrganizationRole body);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostRolesAsyncWithHttpInfo (DomainOrganizationRoleCreate body);
         /// <summary>
         /// Restores all default roles
         /// </summary>
@@ -2321,7 +2321,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole PostRoles (DomainOrganizationRole body)
+        public DomainOrganizationRole PostRoles (DomainOrganizationRoleCreate body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = PostRolesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2333,7 +2333,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > PostRolesWithHttpInfo (DomainOrganizationRole body)
+        public ApiResponse< DomainOrganizationRole > PostRolesWithHttpInfo (DomainOrganizationRoleCreate body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2404,7 +2404,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> PostRolesAsync (DomainOrganizationRole body)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> PostRolesAsync (DomainOrganizationRoleCreate body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = await PostRolesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2417,7 +2417,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostRolesAsyncWithHttpInfo (DomainOrganizationRole body)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostRolesAsyncWithHttpInfo (DomainOrganizationRoleCreate body)
         {
             // verify the required parameter 'body' is set
             if (body == null)

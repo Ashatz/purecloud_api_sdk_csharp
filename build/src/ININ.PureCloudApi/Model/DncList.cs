@@ -59,13 +59,26 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DncList" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected DncList() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DncList" /> class.
+        /// </summary>
+        /// <param name="Name">The name of the list. (required).</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="ImportStatus">the status of the import process.</param>
         /// <param name="DncCodes">the list of dnc.com codes to be treated as DNC.</param>
         public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, List<string> DncCodes = null)
         {
-            this.Name = Name;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for DncList and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             this.Version = Version;
             this.ImportStatus = ImportStatus;
             this.DncCodes = DncCodes;
@@ -78,8 +91,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the list.
         /// </summary>
+        /// <value>The name of the list.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

@@ -15,6 +15,27 @@ namespace ININ.PureCloudApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Delete attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>string</returns>
+        string DeleteAttemptlimitsAttemptlimitsId (string attemptLimitsId);
+
+        /// <summary>
+        /// Delete attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteAttemptlimitsAttemptlimitsIdWithHttpInfo (string attemptLimitsId);
+        /// <summary>
         /// Delete callable time set
         /// </summary>
         /// <remarks>
@@ -247,6 +268,58 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteSequencesSequenceIdWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Query attempt limits list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>AttemptLimitsEntityListing</returns>
+        AttemptLimitsEntityListing GetAttemptlimits (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query attempt limits list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of AttemptLimitsEntityListing</returns>
+        ApiResponse<AttemptLimitsEntityListing> GetAttemptlimitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>AttemptLimits</returns>
+        AttemptLimits GetAttemptlimitsAttemptlimitsId (string attemptLimitsId);
+
+        /// <summary>
+        /// Get attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>ApiResponse of AttemptLimits</returns>
+        ApiResponse<AttemptLimits> GetAttemptlimitsAttemptlimitsIdWithHttpInfo (string attemptLimitsId);
         /// <summary>
         /// Query callable time set list
         /// </summary>
@@ -932,6 +1005,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of WrapUpCodeMapping</returns>
         ApiResponse<WrapUpCodeMapping> GetWrapupcodemappingsWithHttpInfo ();
         /// <summary>
+        /// Create attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>AttemptLimits</returns>
+        AttemptLimits PostAttemptlimits (AttemptLimits body);
+
+        /// <summary>
+        /// Create attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>ApiResponse of AttemptLimits</returns>
+        ApiResponse<AttemptLimits> PostAttemptlimitsWithHttpInfo (AttemptLimits body);
+        /// <summary>
         /// Retrieves audits for dialer.
         /// </summary>
         /// <remarks>
@@ -1265,6 +1359,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of CampaignSequence</returns>
         ApiResponse<CampaignSequence> PostSequencesWithHttpInfo (CampaignSequence body);
         /// <summary>
+        /// Update attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>AttemptLimits</returns>
+        AttemptLimits PutAttemptlimitsAttemptlimitsId (string attemptLimitsId, AttemptLimits body);
+
+        /// <summary>
+        /// Update attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>ApiResponse of AttemptLimits</returns>
+        ApiResponse<AttemptLimits> PutAttemptlimitsAttemptlimitsIdWithHttpInfo (string attemptLimitsId, AttemptLimits body);
+        /// <summary>
         /// Update callable time set
         /// </summary>
         /// <remarks>
@@ -1545,6 +1662,27 @@ namespace ININ.PureCloudApi.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Delete attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteAttemptlimitsAttemptlimitsIdAsync (string attemptLimitsId);
+
+        /// <summary>
+        /// Delete attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteAttemptlimitsAttemptlimitsIdAsyncWithHttpInfo (string attemptLimitsId);
+        /// <summary>
         /// Delete callable time set
         /// </summary>
         /// <remarks>
@@ -1777,6 +1915,58 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteSequencesSequenceIdAsyncWithHttpInfo (string sequenceId);
+        /// <summary>
+        /// Query attempt limits list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of AttemptLimitsEntityListing</returns>
+        System.Threading.Tasks.Task<AttemptLimitsEntityListing> GetAttemptlimitsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query attempt limits list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (AttemptLimitsEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttemptLimitsEntityListing>> GetAttemptlimitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>Task of AttemptLimits</returns>
+        System.Threading.Tasks.Task<AttemptLimits> GetAttemptlimitsAttemptlimitsIdAsync (string attemptLimitsId);
+
+        /// <summary>
+        /// Get attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>Task of ApiResponse (AttemptLimits)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> GetAttemptlimitsAttemptlimitsIdAsyncWithHttpInfo (string attemptLimitsId);
         /// <summary>
         /// Query callable time set list
         /// </summary>
@@ -2462,6 +2652,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
         System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> GetWrapupcodemappingsAsyncWithHttpInfo ();
         /// <summary>
+        /// Create attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>Task of AttemptLimits</returns>
+        System.Threading.Tasks.Task<AttemptLimits> PostAttemptlimitsAsync (AttemptLimits body);
+
+        /// <summary>
+        /// Create attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>Task of ApiResponse (AttemptLimits)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> PostAttemptlimitsAsyncWithHttpInfo (AttemptLimits body);
+        /// <summary>
         /// Retrieves audits for dialer.
         /// </summary>
         /// <remarks>
@@ -2794,6 +3005,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
         System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PostSequencesAsyncWithHttpInfo (CampaignSequence body);
+        /// <summary>
+        /// Update attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>Task of AttemptLimits</returns>
+        System.Threading.Tasks.Task<AttemptLimits> PutAttemptlimitsAttemptlimitsIdAsync (string attemptLimitsId, AttemptLimits body);
+
+        /// <summary>
+        /// Update attempt limits
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>Task of ApiResponse (AttemptLimits)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> PutAttemptlimitsAttemptlimitsIdAsyncWithHttpInfo (string attemptLimitsId, AttemptLimits body);
         /// <summary>
         /// Update callable time set
         /// </summary>
@@ -3160,6 +3394,159 @@ namespace ININ.PureCloudApi.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Delete attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>string</returns>
+        public string DeleteAttemptlimitsAttemptlimitsId (string attemptLimitsId)
+        {
+             ApiResponse<string> localVarResponse = DeleteAttemptlimitsAttemptlimitsIdWithHttpInfo(attemptLimitsId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteAttemptlimitsAttemptlimitsIdWithHttpInfo (string attemptLimitsId)
+        {
+            // verify the required parameter 'attemptLimitsId' is set
+            if (attemptLimitsId == null)
+                throw new ApiException(400, "Missing required parameter 'attemptLimitsId' when calling OutboundApi->DeleteAttemptlimitsAttemptlimitsId");
+
+            var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (attemptLimitsId != null) localVarPathParams.Add("attemptLimitsId", Configuration.ApiClient.ParameterToString(attemptLimitsId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAttemptlimitsAttemptlimitsId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAttemptlimitsAttemptlimitsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Delete attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteAttemptlimitsAttemptlimitsIdAsync (string attemptLimitsId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteAttemptlimitsAttemptlimitsIdAsyncWithHttpInfo(attemptLimitsId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteAttemptlimitsAttemptlimitsIdAsyncWithHttpInfo (string attemptLimitsId)
+        {
+            // verify the required parameter 'attemptLimitsId' is set
+            if (attemptLimitsId == null)
+                throw new ApiException(400, "Missing required parameter 'attemptLimitsId' when calling OutboundApi->DeleteAttemptlimitsAttemptlimitsId");
+
+            var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (attemptLimitsId != null) localVarPathParams.Add("attemptLimitsId", Configuration.ApiClient.ParameterToString(attemptLimitsId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAttemptlimitsAttemptlimitsId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAttemptlimitsAttemptlimitsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
         }
 
         /// <summary>
@@ -4854,6 +5241,336 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Query attempt limits list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>AttemptLimitsEntityListing</returns>
+        public AttemptLimitsEntityListing GetAttemptlimits (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<AttemptLimitsEntityListing> localVarResponse = GetAttemptlimitsWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query attempt limits list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of AttemptLimitsEntityListing</returns>
+        public ApiResponse< AttemptLimitsEntityListing > GetAttemptlimitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/attemptlimits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttemptlimits: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttemptlimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AttemptLimitsEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AttemptLimitsEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttemptLimitsEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Query attempt limits list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of AttemptLimitsEntityListing</returns>
+        public async System.Threading.Tasks.Task<AttemptLimitsEntityListing> GetAttemptlimitsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<AttemptLimitsEntityListing> localVarResponse = await GetAttemptlimitsAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query attempt limits list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (AttemptLimitsEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AttemptLimitsEntityListing>> GetAttemptlimitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/attemptlimits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttemptlimits: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttemptlimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AttemptLimitsEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AttemptLimitsEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttemptLimitsEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>AttemptLimits</returns>
+        public AttemptLimits GetAttemptlimitsAttemptlimitsId (string attemptLimitsId)
+        {
+             ApiResponse<AttemptLimits> localVarResponse = GetAttemptlimitsAttemptlimitsIdWithHttpInfo(attemptLimitsId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>ApiResponse of AttemptLimits</returns>
+        public ApiResponse< AttemptLimits > GetAttemptlimitsAttemptlimitsIdWithHttpInfo (string attemptLimitsId)
+        {
+            // verify the required parameter 'attemptLimitsId' is set
+            if (attemptLimitsId == null)
+                throw new ApiException(400, "Missing required parameter 'attemptLimitsId' when calling OutboundApi->GetAttemptlimitsAttemptlimitsId");
+
+            var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (attemptLimitsId != null) localVarPathParams.Add("attemptLimitsId", Configuration.ApiClient.ParameterToString(attemptLimitsId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttemptlimitsAttemptlimitsId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttemptlimitsAttemptlimitsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AttemptLimits>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AttemptLimits) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttemptLimits)));
+            
+        }
+
+        /// <summary>
+        /// Get attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>Task of AttemptLimits</returns>
+        public async System.Threading.Tasks.Task<AttemptLimits> GetAttemptlimitsAttemptlimitsIdAsync (string attemptLimitsId)
+        {
+             ApiResponse<AttemptLimits> localVarResponse = await GetAttemptlimitsAttemptlimitsIdAsyncWithHttpInfo(attemptLimitsId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <returns>Task of ApiResponse (AttemptLimits)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> GetAttemptlimitsAttemptlimitsIdAsyncWithHttpInfo (string attemptLimitsId)
+        {
+            // verify the required parameter 'attemptLimitsId' is set
+            if (attemptLimitsId == null)
+                throw new ApiException(400, "Missing required parameter 'attemptLimitsId' when calling OutboundApi->GetAttemptlimitsAttemptlimitsId");
+
+            var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (attemptLimitsId != null) localVarPathParams.Add("attemptLimitsId", Configuration.ApiClient.ParameterToString(attemptLimitsId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttemptlimitsAttemptlimitsId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttemptlimitsAttemptlimitsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AttemptLimits>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AttemptLimits) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttemptLimits)));
             
         }
 
@@ -9376,6 +10093,173 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Create attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>AttemptLimits</returns>
+        public AttemptLimits PostAttemptlimits (AttemptLimits body)
+        {
+             ApiResponse<AttemptLimits> localVarResponse = PostAttemptlimitsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>ApiResponse of AttemptLimits</returns>
+        public ApiResponse< AttemptLimits > PostAttemptlimitsWithHttpInfo (AttemptLimits body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostAttemptlimits");
+
+            var localVarPath = "/api/v2/outbound/attemptlimits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAttemptlimits: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAttemptlimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AttemptLimits>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AttemptLimits) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttemptLimits)));
+            
+        }
+
+        /// <summary>
+        /// Create attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>Task of AttemptLimits</returns>
+        public async System.Threading.Tasks.Task<AttemptLimits> PostAttemptlimitsAsync (AttemptLimits body)
+        {
+             ApiResponse<AttemptLimits> localVarResponse = await PostAttemptlimitsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>Task of ApiResponse (AttemptLimits)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> PostAttemptlimitsAsyncWithHttpInfo (AttemptLimits body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostAttemptlimits");
+
+            var localVarPath = "/api/v2/outbound/attemptlimits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAttemptlimits: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAttemptlimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AttemptLimits>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AttemptLimits) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttemptLimits)));
+            
+        }
+
+        /// <summary>
         /// Retrieves audits for dialer. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11903,6 +12787,185 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignSequence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignSequence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignSequence)));
+            
+        }
+
+        /// <summary>
+        /// Update attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>AttemptLimits</returns>
+        public AttemptLimits PutAttemptlimitsAttemptlimitsId (string attemptLimitsId, AttemptLimits body)
+        {
+             ApiResponse<AttemptLimits> localVarResponse = PutAttemptlimitsAttemptlimitsIdWithHttpInfo(attemptLimitsId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>ApiResponse of AttemptLimits</returns>
+        public ApiResponse< AttemptLimits > PutAttemptlimitsAttemptlimitsIdWithHttpInfo (string attemptLimitsId, AttemptLimits body)
+        {
+            // verify the required parameter 'attemptLimitsId' is set
+            if (attemptLimitsId == null)
+                throw new ApiException(400, "Missing required parameter 'attemptLimitsId' when calling OutboundApi->PutAttemptlimitsAttemptlimitsId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutAttemptlimitsAttemptlimitsId");
+
+            var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (attemptLimitsId != null) localVarPathParams.Add("attemptLimitsId", Configuration.ApiClient.ParameterToString(attemptLimitsId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAttemptlimitsAttemptlimitsId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAttemptlimitsAttemptlimitsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AttemptLimits>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AttemptLimits) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttemptLimits)));
+            
+        }
+
+        /// <summary>
+        /// Update attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>Task of AttemptLimits</returns>
+        public async System.Threading.Tasks.Task<AttemptLimits> PutAttemptlimitsAttemptlimitsIdAsync (string attemptLimitsId, AttemptLimits body)
+        {
+             ApiResponse<AttemptLimits> localVarResponse = await PutAttemptlimitsAttemptlimitsIdAsyncWithHttpInfo(attemptLimitsId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update attempt limits 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attemptLimitsId">Attempt limits ID</param>
+        /// <param name="body">AttemptLimits</param>
+        /// <returns>Task of ApiResponse (AttemptLimits)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> PutAttemptlimitsAttemptlimitsIdAsyncWithHttpInfo (string attemptLimitsId, AttemptLimits body)
+        {
+            // verify the required parameter 'attemptLimitsId' is set
+            if (attemptLimitsId == null)
+                throw new ApiException(400, "Missing required parameter 'attemptLimitsId' when calling OutboundApi->PutAttemptlimitsAttemptlimitsId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutAttemptlimitsAttemptlimitsId");
+
+            var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (attemptLimitsId != null) localVarPathParams.Add("attemptLimitsId", Configuration.ApiClient.ParameterToString(attemptLimitsId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAttemptlimitsAttemptlimitsId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAttemptlimitsAttemptlimitsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AttemptLimits>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AttemptLimits) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttemptLimits)));
             
         }
 

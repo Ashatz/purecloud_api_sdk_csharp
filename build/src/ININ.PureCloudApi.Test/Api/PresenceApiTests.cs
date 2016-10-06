@@ -73,7 +73,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetPresenceId'
             string presenceId = null; // TODO: replace null with proper value
-            var response = instance.GetPresenceId(presenceId);
+            string localeCode = null; // TODO: replace null with proper value
+            var response = instance.GetPresenceId(presenceId, localeCode);
             Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
         }
         
@@ -87,7 +88,8 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             string deleted = null; // TODO: replace null with proper value
-            var response = instance.GetPresencedefinitions(pageNumber, pageSize, deleted);
+            string localeCode = null; // TODO: replace null with proper value
+            var response = instance.GetPresencedefinitions(pageNumber, pageSize, deleted, localeCode);
             Assert.IsInstanceOf<OrganizationPresenceEntityListing> (response, "response is OrganizationPresenceEntityListing");
         }
         

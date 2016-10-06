@@ -11,7 +11,7 @@ title: ConversationNotificationWrapup
 | **Notes** | **string** |  | [optional] |
 | **Tags** | **List&lt;string&gt;** |  | [optional] |
 | **DurationSeconds** | **int?** |  | [optional] |
-| **EndTime** | **int?** |  | [optional] |
+| **EndTime** | **DateTime?** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

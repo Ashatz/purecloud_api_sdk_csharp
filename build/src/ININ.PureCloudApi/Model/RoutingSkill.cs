@@ -59,10 +59,23 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingSkill" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected RoutingSkill() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RoutingSkill" /> class.
+        /// </summary>
+        /// <param name="Name">The name of the skill. (required).</param>
         public RoutingSkill(string Name = null)
         {
-            this.Name = Name;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for RoutingSkill and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
         }
         
         /// <summary>
@@ -72,8 +85,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the skill.
         /// </summary>
+        /// <value>The name of the skill.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

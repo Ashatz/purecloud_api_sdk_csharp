@@ -266,12 +266,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Script">The Engage script that should be used by this participant..</param>
         /// <param name="WrapupTimeoutMs">The amount of time the participant has to complete wrap-up..</param>
         /// <param name="WrapupSkipped">Value is true when the participant has skipped wrap-up. (default to false).</param>
+        /// <param name="Provider">The source provider for the communication..</param>
+        /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
+        /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
         /// <param name="CobrowseSessionId">The co-browse session ID..</param>
         /// <param name="CobrowseRole">This value identifies the role of the co-browse client within the co-browse session (a client is a sharer or a viewer)..</param>
         /// <param name="Controlling">ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages)..</param>
         /// <param name="ViewerUrl">The URL that can be used to open co-browse session in web browser..</param>
         /// <param name="ProviderEventTime">The time when the provider event which triggered this conversation update happened in the corrected provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public CobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null)
+        public CobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -318,6 +321,9 @@ namespace ININ.PureCloudApi.Model
             {
                 this.WrapupSkipped = WrapupSkipped;
             }
+            this.Provider = Provider;
+            this.ExternalContact = ExternalContact;
+            this.ExternalOrganization = ExternalOrganization;
             this.CobrowseSessionId = CobrowseSessionId;
             this.CobrowseRole = CobrowseRole;
             this.Controlling = Controlling;
@@ -434,6 +440,24 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
         /// <summary>
+        /// The source provider for the communication.
+        /// </summary>
+        /// <value>The source provider for the communication.</value>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
+        /// If this participant represents an external contact, then this will be the reference for the external contact.
+        /// </summary>
+        /// <value>If this participant represents an external contact, then this will be the reference for the external contact.</value>
+        [DataMember(Name="externalContact", EmitDefaultValue=false)]
+        public UriReference ExternalContact { get; set; }
+        /// <summary>
+        /// If this participant represents an external org, then this will be the reference for the external org.
+        /// </summary>
+        /// <value>If this participant represents an external org, then this will be the reference for the external org.</value>
+        [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
+        public UriReference ExternalOrganization { get; set; }
+        /// <summary>
         /// The co-browse session ID.
         /// </summary>
         /// <value>The co-browse session ID.</value>
@@ -492,6 +516,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Script: ").Append(Script).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  CobrowseSessionId: ").Append(CobrowseSessionId).Append("\n");
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
             sb.Append("  Controlling: ").Append(Controlling).Append("\n");
@@ -639,6 +666,21 @@ namespace ININ.PureCloudApi.Model
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
+                    this.ExternalContact == other.ExternalContact ||
+                    this.ExternalContact != null &&
+                    this.ExternalContact.Equals(other.ExternalContact)
+                ) &&
+                (
+                    this.ExternalOrganization == other.ExternalOrganization ||
+                    this.ExternalOrganization != null &&
+                    this.ExternalOrganization.Equals(other.ExternalOrganization)
+                ) &&
+                (
                     this.CobrowseSessionId == other.CobrowseSessionId ||
                     this.CobrowseSessionId != null &&
                     this.CobrowseSessionId.Equals(other.CobrowseSessionId)
@@ -718,6 +760,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ExternalContact != null)
+                    hash = hash * 59 + this.ExternalContact.GetHashCode();
+                if (this.ExternalOrganization != null)
+                    hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.CobrowseSessionId != null)
                     hash = hash * 59 + this.CobrowseSessionId.GetHashCode();
                 if (this.CobrowseRole != null)

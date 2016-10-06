@@ -709,8 +709,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>DomainEdgeSoftwareVersionDto</returns>
-        DomainEdgeSoftwareVersionDto GetProvidersEdgesEdgeIdSoftwareversions (string edgeId);
+        /// <returns>DomainEdgeSoftwareVersionDtoEntityListing</returns>
+        DomainEdgeSoftwareVersionDtoEntityListing GetProvidersEdgesEdgeIdSoftwareversions (string edgeId);
 
         /// <summary>
         /// Gets all the available software versions for this edge.
@@ -720,8 +720,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>ApiResponse of DomainEdgeSoftwareVersionDto</returns>
-        ApiResponse<DomainEdgeSoftwareVersionDto> GetProvidersEdgesEdgeIdSoftwareversionsWithHttpInfo (string edgeId);
+        /// <returns>ApiResponse of DomainEdgeSoftwareVersionDtoEntityListing</returns>
+        ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing> GetProvidersEdgesEdgeIdSoftwareversionsWithHttpInfo (string edgeId);
         /// <summary>
         /// Get the list of edge groups.
         /// </summary>
@@ -3272,8 +3272,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of DomainEdgeSoftwareVersionDto</returns>
-        System.Threading.Tasks.Task<DomainEdgeSoftwareVersionDto> GetProvidersEdgesEdgeIdSoftwareversionsAsync (string edgeId);
+        /// <returns>Task of DomainEdgeSoftwareVersionDtoEntityListing</returns>
+        System.Threading.Tasks.Task<DomainEdgeSoftwareVersionDtoEntityListing> GetProvidersEdgesEdgeIdSoftwareversionsAsync (string edgeId);
 
         /// <summary>
         /// Gets all the available software versions for this edge.
@@ -3283,8 +3283,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of ApiResponse (DomainEdgeSoftwareVersionDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDto>> GetProvidersEdgesEdgeIdSoftwareversionsAsyncWithHttpInfo (string edgeId);
+        /// <returns>Task of ApiResponse (DomainEdgeSoftwareVersionDtoEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing>> GetProvidersEdgesEdgeIdSoftwareversionsAsyncWithHttpInfo (string edgeId);
         /// <summary>
         /// Get the list of edge groups.
         /// </summary>
@@ -10082,10 +10082,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>DomainEdgeSoftwareVersionDto</returns>
-        public DomainEdgeSoftwareVersionDto GetProvidersEdgesEdgeIdSoftwareversions (string edgeId)
+        /// <returns>DomainEdgeSoftwareVersionDtoEntityListing</returns>
+        public DomainEdgeSoftwareVersionDtoEntityListing GetProvidersEdgesEdgeIdSoftwareversions (string edgeId)
         {
-             ApiResponse<DomainEdgeSoftwareVersionDto> localVarResponse = GetProvidersEdgesEdgeIdSoftwareversionsWithHttpInfo(edgeId);
+             ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing> localVarResponse = GetProvidersEdgesEdgeIdSoftwareversionsWithHttpInfo(edgeId);
              return localVarResponse.Data;
         }
 
@@ -10094,8 +10094,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>ApiResponse of DomainEdgeSoftwareVersionDto</returns>
-        public ApiResponse< DomainEdgeSoftwareVersionDto > GetProvidersEdgesEdgeIdSoftwareversionsWithHttpInfo (string edgeId)
+        /// <returns>ApiResponse of DomainEdgeSoftwareVersionDtoEntityListing</returns>
+        public ApiResponse< DomainEdgeSoftwareVersionDtoEntityListing > GetProvidersEdgesEdgeIdSoftwareversionsWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -10147,9 +10147,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesEdgeIdSoftwareversions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DomainEdgeSoftwareVersionDto>(localVarStatusCode,
+            return new ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DomainEdgeSoftwareVersionDto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEdgeSoftwareVersionDto)));
+                (DomainEdgeSoftwareVersionDtoEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEdgeSoftwareVersionDtoEntityListing)));
             
         }
 
@@ -10158,10 +10158,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of DomainEdgeSoftwareVersionDto</returns>
-        public async System.Threading.Tasks.Task<DomainEdgeSoftwareVersionDto> GetProvidersEdgesEdgeIdSoftwareversionsAsync (string edgeId)
+        /// <returns>Task of DomainEdgeSoftwareVersionDtoEntityListing</returns>
+        public async System.Threading.Tasks.Task<DomainEdgeSoftwareVersionDtoEntityListing> GetProvidersEdgesEdgeIdSoftwareversionsAsync (string edgeId)
         {
-             ApiResponse<DomainEdgeSoftwareVersionDto> localVarResponse = await GetProvidersEdgesEdgeIdSoftwareversionsAsyncWithHttpInfo(edgeId);
+             ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing> localVarResponse = await GetProvidersEdgesEdgeIdSoftwareversionsAsyncWithHttpInfo(edgeId);
              return localVarResponse.Data;
 
         }
@@ -10171,8 +10171,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of ApiResponse (DomainEdgeSoftwareVersionDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDto>> GetProvidersEdgesEdgeIdSoftwareversionsAsyncWithHttpInfo (string edgeId)
+        /// <returns>Task of ApiResponse (DomainEdgeSoftwareVersionDtoEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing>> GetProvidersEdgesEdgeIdSoftwareversionsAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -10224,9 +10224,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesEdgeIdSoftwareversions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DomainEdgeSoftwareVersionDto>(localVarStatusCode,
+            return new ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DomainEdgeSoftwareVersionDto) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEdgeSoftwareVersionDto)));
+                (DomainEdgeSoftwareVersionDtoEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEdgeSoftwareVersionDtoEntityListing)));
             
         }
 

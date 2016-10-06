@@ -9,9 +9,9 @@ title: OutOfOfficeNotification
 |------------ | ------------- | ------------- | -------------|
 | **User** | [**OutOfOfficeNotificationUser**](OutOfOfficeNotificationUser.html) |  | [optional] |
 | **Active** | **bool?** |  | [optional] |
-| **StartDate** | **int?** |  | [optional] |
-| **EndDate** | **int?** |  | [optional] |
-| **ModifiedDate** | **int?** |  | [optional] |
+| **StartDate** | **DateTime?** |  | [optional] |
+| **EndDate** | **DateTime?** |  | [optional] |
+| **ModifiedDate** | **DateTime?** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -136,7 +136,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Group" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The group name. (required).</param>
         /// <param name="Description">Description.</param>
         /// <param name="Type">Type of group. (required).</param>
         /// <param name="Images">Images.</param>
@@ -145,6 +145,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Visibility">Who can view this group (required).</param>
         public Group(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<Contact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null)
         {
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for Group and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             // to ensure "Type" is required (not null)
             if (Type == null)
             {
@@ -172,7 +181,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Visibility = Visibility;
             }
-            this.Name = Name;
             this.Description = Description;
             this.Images = Images;
             this.Addresses = Addresses;
@@ -185,8 +193,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The group name.
         /// </summary>
+        /// <value>The group name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
