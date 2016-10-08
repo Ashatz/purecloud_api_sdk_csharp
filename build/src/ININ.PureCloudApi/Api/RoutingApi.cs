@@ -563,9 +563,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <returns>WrapupCodeEntityListing</returns>
-        WrapupCodeEntityListing GetQueuesQueueIdWrapupcodes (string queueId, string codeId);
+        WrapupCodeEntityListing GetQueuesQueueIdWrapupcodes (string queueId);
 
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -575,9 +574,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
-        ApiResponse<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId);
+        ApiResponse<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId);
         /// <summary>
         /// Get the list of routing skills.
         /// </summary>
@@ -881,10 +879,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
-        List<WrapupCode> PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body);
+        List<WrapupCode> PostQueuesQueueIdWrapupcodes (string queueId, List<WrapupCode> body);
 
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -894,10 +891,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
-        ApiResponse<List<WrapupCode>> PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body);
+        ApiResponse<List<WrapupCode>> PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, List<WrapupCode> body);
         /// <summary>
         /// Create Skill
         /// </summary>
@@ -1631,9 +1627,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
-        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesAsync (string queueId, string codeId);
+        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesAsync (string queueId);
 
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -1643,9 +1638,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId);
         /// <summary>
         /// Get the list of routing skills.
         /// </summary>
@@ -1949,10 +1943,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
-        System.Threading.Tasks.Task<List<WrapupCode>> PostQueuesQueueIdWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body);
+        System.Threading.Tasks.Task<List<WrapupCode>> PostQueuesQueueIdWrapupcodesAsync (string queueId, List<WrapupCode> body);
 
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -1962,10 +1955,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body);
+        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, List<WrapupCode> body);
         /// <summary>
         /// Create Skill
         /// </summary>
@@ -5942,11 +5934,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <returns>WrapupCodeEntityListing</returns>
-        public WrapupCodeEntityListing GetQueuesQueueIdWrapupcodes (string queueId, string codeId)
+        public WrapupCodeEntityListing GetQueuesQueueIdWrapupcodes (string queueId)
         {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetQueuesQueueIdWrapupcodesWithHttpInfo(queueId, codeId);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetQueuesQueueIdWrapupcodesWithHttpInfo(queueId);
              return localVarResponse.Data;
         }
 
@@ -5955,16 +5946,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
-        public ApiResponse< WrapupCodeEntityListing > GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId)
+        public ApiResponse< WrapupCodeEntityListing > GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdWrapupcodes");
-            // verify the required parameter 'codeId' is set
-            if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetQueuesQueueIdWrapupcodes");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5992,7 +5979,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6024,11 +6010,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
-        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesAsync (string queueId, string codeId)
+        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetQueuesQueueIdWrapupcodesAsync (string queueId)
         {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo(queueId, codeId);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo(queueId);
              return localVarResponse.Data;
 
         }
@@ -6038,16 +6023,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdWrapupcodes");
-            // verify the required parameter 'codeId' is set
-            if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetQueuesQueueIdWrapupcodes");
 
             var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6075,7 +6056,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8272,12 +8252,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
-        public List<WrapupCode> PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
+        public List<WrapupCode> PostQueuesQueueIdWrapupcodes (string queueId, List<WrapupCode> body)
         {
-             ApiResponse<List<WrapupCode>> localVarResponse = PostQueuesQueueIdWrapupcodesWithHttpInfo(queueId, codeId, body);
+             ApiResponse<List<WrapupCode>> localVarResponse = PostQueuesQueueIdWrapupcodesWithHttpInfo(queueId, body);
              return localVarResponse.Data;
         }
 
@@ -8286,17 +8265,13 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
-        public ApiResponse< List<WrapupCode> > PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body)
+        public ApiResponse< List<WrapupCode> > PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, List<WrapupCode> body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
-            // verify the required parameter 'codeId' is set
-            if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
@@ -8327,7 +8302,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -8367,12 +8341,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WrapupCode>> PostQueuesQueueIdWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body)
+        public async System.Threading.Tasks.Task<List<WrapupCode>> PostQueuesQueueIdWrapupcodesAsync (string queueId, List<WrapupCode> body)
         {
-             ApiResponse<List<WrapupCode>> localVarResponse = await PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo(queueId, codeId, body);
+             ApiResponse<List<WrapupCode>> localVarResponse = await PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo(queueId, body);
              return localVarResponse.Data;
 
         }
@@ -8382,17 +8355,13 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
-        /// <param name="codeId">Code ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, List<WrapupCode> body)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
-            // verify the required parameter 'codeId' is set
-            if (codeId == null)
-                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
@@ -8423,7 +8392,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (codeId != null) localVarPathParams.Add("codeId", Configuration.ApiClient.ParameterToString(codeId)); // path parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter

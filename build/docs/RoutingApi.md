@@ -1394,7 +1394,7 @@ namespace Example
 
 <a name="getqueuesqueueidwrapupcodes"></a>
 
-## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetQueuesQueueIdWrapupcodes (string queueId, string codeId)
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetQueuesQueueIdWrapupcodes (string queueId)
 
 Get the wrap-up codes for a queue
 
@@ -1420,12 +1420,11 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
-            var codeId = codeId_example;  // string | Code ID
 
             try
             {
                 // Get the wrap-up codes for a queue
-                WrapupCodeEntityListing result = apiInstance.GetQueuesQueueIdWrapupcodes(queueId, codeId);
+                WrapupCodeEntityListing result = apiInstance.GetQueuesQueueIdWrapupcodes(queueId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1443,7 +1442,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **codeId** | **string**| Code ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2199,7 +2197,7 @@ namespace Example
 
 <a name="postqueuesqueueidwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) PostQueuesQueueIdWrapupcodes (string queueId, string codeId, List<WrapupCode> body)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) PostQueuesQueueIdWrapupcodes (string queueId, List<WrapupCode> body)
 
 Add up to 100 wrap-up codes to a queue
 
@@ -2225,13 +2223,12 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
-            var codeId = codeId_example;  // string | Code ID
             var body = new List<WrapupCode>(); // List<WrapupCode> | List of wrapup codes
 
             try
             {
                 // Add up to 100 wrap-up codes to a queue
-                List&lt;WrapupCode&gt; result = apiInstance.PostQueuesQueueIdWrapupcodes(queueId, codeId, body);
+                List&lt;WrapupCode&gt; result = apiInstance.PostQueuesQueueIdWrapupcodes(queueId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2249,7 +2246,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **codeId** | **string**| Code ID |  |
 | **body** | [**List<WrapupCode>**](WrapupCode.html)| List of wrapup codes |  |
 {: class="table table-striped"}
 

@@ -51,6 +51,22 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
+        /// Test the property 'Array'
+        /// </summary>
+        [Test]
+        public void ArrayTest()
+        {
+            // TODO: unit test for the property 'Array'
+        }
+        /// <summary>
+        /// Test the property '_Null'
+        /// </summary>
+        [Test]
+        public void _NullTest()
+        {
+            // TODO: unit test for the property '_Null'
+        }
+        /// <summary>
         /// Test the property 'NodeType'
         /// </summary>
         [Test]
@@ -91,22 +107,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property '_Float'
         }
         /// <summary>
-        /// Test the property 'ValueNode'
-        /// </summary>
-        [Test]
-        public void ValueNodeTest()
-        {
-            // TODO: unit test for the property 'ValueNode'
-        }
-        /// <summary>
-        /// Test the property 'ContainerNode'
-        /// </summary>
-        [Test]
-        public void ContainerNodeTest()
-        {
-            // TODO: unit test for the property 'ContainerNode'
-        }
-        /// <summary>
         /// Test the property 'MissingNode'
         /// </summary>
         [Test]
@@ -131,20 +131,20 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'IntegralNumber'
         }
         /// <summary>
-        /// Test the property 'FloatingPointNumber'
-        /// </summary>
-        [Test]
-        public void FloatingPointNumberTest()
-        {
-            // TODO: unit test for the property 'FloatingPointNumber'
-        }
-        /// <summary>
         /// Test the property '_Short'
         /// </summary>
         [Test]
         public void _ShortTest()
         {
             // TODO: unit test for the property '_Short'
+        }
+        /// <summary>
+        /// Test the property 'FloatingPointNumber'
+        /// </summary>
+        [Test]
+        public void FloatingPointNumberTest()
+        {
+            // TODO: unit test for the property 'FloatingPointNumber'
         }
         /// <summary>
         /// Test the property '_Int'
@@ -203,20 +203,20 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Binary'
         }
         /// <summary>
-        /// Test the property 'Array'
+        /// Test the property 'ValueNode'
         /// </summary>
         [Test]
-        public void ArrayTest()
+        public void ValueNodeTest()
         {
-            // TODO: unit test for the property 'Array'
+            // TODO: unit test for the property 'ValueNode'
         }
         /// <summary>
-        /// Test the property '_Null'
+        /// Test the property 'ContainerNode'
         /// </summary>
         [Test]
-        public void _NullTest()
+        public void ContainerNodeTest()
         {
-            // TODO: unit test for the property '_Null'
+            // TODO: unit test for the property 'ContainerNode'
         }
 
     }

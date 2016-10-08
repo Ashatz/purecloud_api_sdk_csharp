@@ -366,8 +366,7 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetQueuesQueueIdWrapupcodes'
             string queueId = null; // TODO: replace null with proper value
-            string codeId = null; // TODO: replace null with proper value
-            var response = instance.GetQueuesQueueIdWrapupcodes(queueId, codeId);
+            var response = instance.GetQueuesQueueIdWrapupcodes(queueId);
             Assert.IsInstanceOf<WrapupCodeEntityListing> (response, "response is WrapupCodeEntityListing");
         }
         
@@ -546,9 +545,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostQueuesQueueIdWrapupcodes'
             string queueId = null; // TODO: replace null with proper value
-            string codeId = null; // TODO: replace null with proper value
             List<WrapupCode> body = null; // TODO: replace null with proper value
-            var response = instance.PostQueuesQueueIdWrapupcodes(queueId, codeId, body);
+            var response = instance.PostQueuesQueueIdWrapupcodes(queueId, body);
             Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
         }
         
