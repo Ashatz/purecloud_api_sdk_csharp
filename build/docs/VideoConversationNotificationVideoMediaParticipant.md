@@ -28,12 +28,12 @@ title: VideoConversationNotificationVideoMediaParticipant
 | **Script** | [**VideoConversationNotificationUriReference**](VideoConversationNotificationUriReference.html) |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
+| **Provider** | **string** |  | [optional] |
 | **AudioMuted** | **bool?** |  | [optional] |
 | **VideoMuted** | **bool?** |  | [optional] |
 | **SharingScreen** | **bool?** |  | [optional] |
 | **PeerCount** | **int?** |  | [optional] |
 | **Context** | **string** |  | [optional] |
-| **Provider** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

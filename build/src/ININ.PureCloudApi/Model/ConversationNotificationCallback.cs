@@ -244,12 +244,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CallbackUserName">CallbackUserName.</param>
         /// <param name="ScriptId">ScriptId.</param>
         /// <param name="SkipEnabled">SkipEnabled.</param>
+        /// <param name="Provider">Provider.</param>
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, ConversationNotificationDialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, ConversationNotificationDialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -262,6 +263,7 @@ namespace ININ.PureCloudApi.Model
             this.CallbackUserName = CallbackUserName;
             this.ScriptId = ScriptId;
             this.SkipEnabled = SkipEnabled;
+            this.Provider = Provider;
             this.TimeoutSeconds = TimeoutSeconds;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
@@ -310,6 +312,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
         public bool? SkipEnabled { get; set; }
         /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
         /// Gets or Sets TimeoutSeconds
         /// </summary>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
@@ -353,6 +360,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
@@ -450,6 +458,11 @@ namespace ININ.PureCloudApi.Model
                     this.SkipEnabled.Equals(other.SkipEnabled)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
                     this.TimeoutSeconds == other.TimeoutSeconds ||
                     this.TimeoutSeconds != null &&
                     this.TimeoutSeconds.Equals(other.TimeoutSeconds)
@@ -509,6 +522,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ScriptId.GetHashCode();
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.TimeoutSeconds != null)
                     hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
                 if (this.ConnectedTime != null)

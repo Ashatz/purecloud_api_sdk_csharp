@@ -15,8 +15,8 @@ title: QualityAudit
 | **Entity** | [**AuditEntity**](AuditEntity.html) |  | [optional] |
 | **Action** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
-| **EntityType** | **string** |  | [optional] |
 | **Changes** | [**List&lt;Change&gt;**](Change.html) |  | [optional] |
+| **EntityType** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

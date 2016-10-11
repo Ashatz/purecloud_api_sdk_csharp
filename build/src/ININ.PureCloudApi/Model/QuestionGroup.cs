@@ -29,7 +29,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Weight">Weight.</param>
         /// <param name="ManualWeight">ManualWeight (default to false).</param>
         /// <param name="Questions">Questions.</param>
-        public QuestionGroup(string Id = null, string Name = null, string Type = null, bool? DefaultAnswersToHighest = null, bool? DefaultAnswersToNA = null, bool? NaEnabled = null, float? Weight = null, bool? ManualWeight = null, List<Dictionary<string, Object>> Questions = null)
+        /// <param name="VisibilityCondition">VisibilityCondition.</param>
+        public QuestionGroup(string Id = null, string Name = null, string Type = null, bool? DefaultAnswersToHighest = null, bool? DefaultAnswersToNA = null, bool? NaEnabled = null, float? Weight = null, bool? ManualWeight = null, List<Dictionary<string, Object>> Questions = null, VisibilityCondition VisibilityCondition = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -72,6 +73,7 @@ namespace ININ.PureCloudApi.Model
                 this.ManualWeight = ManualWeight;
             }
             this.Questions = Questions;
+            this.VisibilityCondition = VisibilityCondition;
         }
         
         /// <summary>
@@ -120,6 +122,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="questions", EmitDefaultValue=false)]
         public List<Dictionary<string, Object>> Questions { get; set; }
         /// <summary>
+        /// Gets or Sets VisibilityCondition
+        /// </summary>
+        [DataMember(Name="visibilityCondition", EmitDefaultValue=false)]
+        public VisibilityCondition VisibilityCondition { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -136,6 +143,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Weight: ").Append(Weight).Append("\n");
             sb.Append("  ManualWeight: ").Append(ManualWeight).Append("\n");
             sb.Append("  Questions: ").Append(Questions).Append("\n");
+            sb.Append("  VisibilityCondition: ").Append(VisibilityCondition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -216,6 +224,11 @@ namespace ININ.PureCloudApi.Model
                     this.Questions == other.Questions ||
                     this.Questions != null &&
                     this.Questions.SequenceEqual(other.Questions)
+                ) &&
+                (
+                    this.VisibilityCondition == other.VisibilityCondition ||
+                    this.VisibilityCondition != null &&
+                    this.VisibilityCondition.Equals(other.VisibilityCondition)
                 );
         }
 
@@ -248,6 +261,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ManualWeight.GetHashCode();
                 if (this.Questions != null)
                     hash = hash * 59 + this.Questions.GetHashCode();
+                if (this.VisibilityCondition != null)
+                    hash = hash * 59 + this.VisibilityCondition.GetHashCode();
                 return hash;
             }
         }

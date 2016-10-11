@@ -234,92 +234,6 @@ namespace ININ.PureCloudApi.Model
             Spam
         }
         /// <summary>
-        /// Gets or Sets Provider
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum ProviderEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum PurecloudWebrtc for "PureCloud WebRTC"
-            /// </summary>
-            [EnumMember(Value = "PureCloud WebRTC")]
-            PurecloudWebrtc,
-            
-            /// <summary>
-            /// Enum PurecloudEmail for "PureCloud Email"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Email")]
-            PurecloudEmail,
-            
-            /// <summary>
-            /// Enum PurecloudWebchat for "PureCloud Webchat"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Webchat")]
-            PurecloudWebchat,
-            
-            /// <summary>
-            /// Enum PurecloudCobrowse for "PureCloud Co-browse"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Co-browse")]
-            PurecloudCobrowse,
-            
-            /// <summary>
-            /// Enum PurecloudVr for "PureCloud VR"
-            /// </summary>
-            [EnumMember(Value = "PureCloud VR")]
-            PurecloudVr,
-            
-            /// <summary>
-            /// Enum PurecloudCallback for "PureCloud Callback"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Callback")]
-            PurecloudCallback,
-            
-            /// <summary>
-            /// Enum PurecloudSocialChannelManagement for "PureCloud Social Channel Management"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Social Channel Management")]
-            PurecloudSocialChannelManagement,
-            
-            /// <summary>
-            /// Enum PurecloudFax for "PureCloud Fax"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Fax")]
-            PurecloudFax,
-            
-            /// <summary>
-            /// Enum Edge for "Edge"
-            /// </summary>
-            [EnumMember(Value = "Edge")]
-            Edge,
-            
-            /// <summary>
-            /// Enum Twillio for "Twillio"
-            /// </summary>
-            [EnumMember(Value = "Twillio")]
-            Twillio,
-            
-            /// <summary>
-            /// Enum Bifrost for "Bifrost"
-            /// </summary>
-            [EnumMember(Value = "Bifrost")]
-            Bifrost,
-            
-            /// <summary>
-            /// Enum Unknown for "Unknown"
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown
-        }
-        /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
@@ -334,11 +248,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
-        /// <summary>
-        /// Gets or Sets Provider
-        /// </summary>
-        [DataMember(Name="provider", EmitDefaultValue=false)]
-        public ProviderEnum? Provider { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="VideoConversationNotificationVideoMediaParticipant" /> class.
         /// </summary>
@@ -363,13 +272,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Script">Script.</param>
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
+        /// <param name="Provider">Provider.</param>
         /// <param name="AudioMuted">AudioMuted.</param>
         /// <param name="VideoMuted">VideoMuted.</param>
         /// <param name="SharingScreen">SharingScreen.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Context">Context.</param>
-        /// <param name="Provider">Provider.</param>
-        public VideoConversationNotificationVideoMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, VideoConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, VideoConversationNotificationErrorInfo ErrorInfo = null, VideoConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, string Context = null, ProviderEnum? Provider = null)
+        public VideoConversationNotificationVideoMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, VideoConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, VideoConversationNotificationErrorInfo ErrorInfo = null, VideoConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, string Context = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -392,12 +301,12 @@ namespace ININ.PureCloudApi.Model
             this.Script = Script;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
+            this.Provider = Provider;
             this.AudioMuted = AudioMuted;
             this.VideoMuted = VideoMuted;
             this.SharingScreen = SharingScreen;
             this.PeerCount = PeerCount;
             this.Context = Context;
-            this.Provider = Provider;
         }
         
         /// <summary>
@@ -491,6 +400,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
         /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
         /// Gets or Sets AudioMuted
         /// </summary>
         [DataMember(Name="audioMuted", EmitDefaultValue=false)]
@@ -544,12 +458,12 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Script: ").Append(Script).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
             sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
             sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
-            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -692,6 +606,11 @@ namespace ININ.PureCloudApi.Model
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
                     this.AudioMuted == other.AudioMuted ||
                     this.AudioMuted != null &&
                     this.AudioMuted.Equals(other.AudioMuted)
@@ -715,11 +634,6 @@ namespace ININ.PureCloudApi.Model
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.Equals(other.Context)
-                ) &&
-                (
-                    this.Provider == other.Provider ||
-                    this.Provider != null &&
-                    this.Provider.Equals(other.Provider)
                 );
         }
 
@@ -776,6 +690,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.AudioMuted != null)
                     hash = hash * 59 + this.AudioMuted.GetHashCode();
                 if (this.VideoMuted != null)
@@ -786,8 +702,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PeerCount.GetHashCode();
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
-                if (this.Provider != null)
-                    hash = hash * 59 + this.Provider.GetHashCode();
                 return hash;
             }
         }

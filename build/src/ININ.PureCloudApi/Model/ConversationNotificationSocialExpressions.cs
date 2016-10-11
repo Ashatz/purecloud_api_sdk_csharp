@@ -204,12 +204,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PreviewText">PreviewText.</param>
         /// <param name="RecordingId">RecordingId.</param>
         /// <param name="Held">Held.</param>
+        /// <param name="Provider">Provider.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="StartHoldTime">StartHoldTime.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationSocialExpressions(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationSocialExpressions(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, bool? Held = null, string Provider = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -219,6 +220,7 @@ namespace ININ.PureCloudApi.Model
             this.PreviewText = PreviewText;
             this.RecordingId = RecordingId;
             this.Held = Held;
+            this.Provider = Provider;
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
             this.ConnectedTime = ConnectedTime;
@@ -262,6 +264,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
         /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
@@ -297,6 +304,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PreviewText: ").Append(PreviewText).Append("\n");
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
@@ -379,6 +387,11 @@ namespace ININ.PureCloudApi.Model
                     this.Held.Equals(other.Held)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
@@ -432,6 +445,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.RecordingId.GetHashCode();
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
                 if (this.StartHoldTime != null)

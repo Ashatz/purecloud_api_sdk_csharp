@@ -12,10 +12,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGroupId**](GroupsApi.html#getgroupid) | **GET** /api/v2/groups/{groupId} | Get group |
 | [**GetGroupIdMembers**](GroupsApi.html#getgroupidmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
 | [**GetGroups**](GroupsApi.html#getgroups) | **GET** /api/v2/groups | Get a group list |
-| [**GetSearch**](GroupsApi.html#getsearch) | **GET** /api/v2/groups/search | Search using q64 |
+| [**GetSearch**](GroupsApi.html#getsearch) | **GET** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
 | [**PostGroupIdMembers**](GroupsApi.html#postgroupidmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
 | [**PostGroups**](GroupsApi.html#postgroups) | **POST** /api/v2/groups | Create a group |
-| [**PostSearch**](GroupsApi.html#postsearch) | **POST** /api/v2/groups/search | Search |
+| [**PostSearch**](GroupsApi.html#postsearch) | **POST** /api/v2/groups/search | Search groups |
 | [**PutGroupId**](GroupsApi.html#putgroupid) | **PUT** /api/v2/groups/{groupId} | Update group |
 {: class="table table-striped"}
 
@@ -314,7 +314,7 @@ namespace Example
 
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetSearch (string q64, List<string> expand = null)
 
-Search using q64
+Search groups using the q64 value returned from a previous search
 
 
 
@@ -342,7 +342,7 @@ namespace Example
 
             try
             {
-                // Search using q64
+                // Search groups using the q64 value returned from a previous search
                 GroupsSearchResponse result = apiInstance.GetSearch(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -485,7 +485,7 @@ namespace Example
 
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (GroupSearchRequest body)
 
-Search
+Search groups
 
 
 
@@ -512,7 +512,7 @@ namespace Example
 
             try
             {
-                // Search
+                // Search groups
                 GroupsSearchResponse result = apiInstance.PostSearch(body);
                 Debug.WriteLine(result);
             }

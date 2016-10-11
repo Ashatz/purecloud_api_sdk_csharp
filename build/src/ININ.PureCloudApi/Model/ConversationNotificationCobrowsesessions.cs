@@ -193,11 +193,12 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CobrowseRole">CobrowseRole.</param>
         /// <param name="Controlling">Controlling.</param>
         /// <param name="ViewerUrl">ViewerUrl.</param>
+        /// <param name="Provider">Provider.</param>
         /// <param name="ProviderEventTime">ProviderEventTime.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationCobrowsesessions(StateEnum? State = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, ConversationNotificationAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationCobrowsesessions(StateEnum? State = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, ConversationNotificationAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, string Provider = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.DisconnectType = DisconnectType;
@@ -208,6 +209,7 @@ namespace ININ.PureCloudApi.Model
             this.CobrowseRole = CobrowseRole;
             this.Controlling = Controlling;
             this.ViewerUrl = ViewerUrl;
+            this.Provider = Provider;
             this.ProviderEventTime = ProviderEventTime;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
@@ -250,6 +252,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="viewerUrl", EmitDefaultValue=false)]
         public string ViewerUrl { get; set; }
         /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
         /// Gets or Sets ProviderEventTime
         /// </summary>
         [DataMember(Name="providerEventTime", EmitDefaultValue=false)]
@@ -286,6 +293,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
             sb.Append("  Controlling: ").Append(Controlling).Append("\n");
             sb.Append("  ViewerUrl: ").Append(ViewerUrl).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ProviderEventTime: ").Append(ProviderEventTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
@@ -372,6 +380,11 @@ namespace ININ.PureCloudApi.Model
                     this.ViewerUrl.Equals(other.ViewerUrl)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
                     this.ProviderEventTime == other.ProviderEventTime ||
                     this.ProviderEventTime != null &&
                     this.ProviderEventTime.Equals(other.ProviderEventTime)
@@ -422,6 +435,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Controlling.GetHashCode();
                 if (this.ViewerUrl != null)
                     hash = hash * 59 + this.ViewerUrl.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.ProviderEventTime != null)
                     hash = hash * 59 + this.ProviderEventTime.GetHashCode();
                 if (this.ConnectedTime != null)

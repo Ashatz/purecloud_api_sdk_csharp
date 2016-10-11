@@ -20,71 +20,133 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupsSearchResponse" /> class.
         /// </summary>
-        /// <param name="Total">Total.</param>
-        /// <param name="PageCount">PageCount.</param>
-        /// <param name="PageSize">PageSize.</param>
-        /// <param name="PageNumber">PageNumber.</param>
-        /// <param name="PreviousPage">PreviousPage.</param>
-        /// <param name="CurrentPage">CurrentPage.</param>
-        /// <param name="NextPage">NextPage.</param>
-        /// <param name="Types">Types.</param>
-        /// <param name="Results">Results.</param>
+        [JsonConstructorAttribute]
+        protected GroupsSearchResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GroupsSearchResponse" /> class.
+        /// </summary>
+        /// <param name="Total">The total number of results found (required).</param>
+        /// <param name="PageCount">The total number of pages (required).</param>
+        /// <param name="PageSize">The current page size (required).</param>
+        /// <param name="PageNumber">The current page number (required).</param>
+        /// <param name="PreviousPage">Q64 value for the previous page of results.</param>
+        /// <param name="CurrentPage">Q64 value for the current page of results.</param>
+        /// <param name="NextPage">Q64 value for the next page of results.</param>
+        /// <param name="Types">Resource types the search was performed against (required).</param>
+        /// <param name="Results">Search results (required).</param>
         public GroupsSearchResponse(long? Total = null, int? PageCount = null, int? PageSize = null, int? PageNumber = null, string PreviousPage = null, string CurrentPage = null, string NextPage = null, List<string> Types = null, List<Group> Results = null)
         {
-            this.Total = Total;
-            this.PageCount = PageCount;
-            this.PageSize = PageSize;
-            this.PageNumber = PageNumber;
+            // to ensure "Total" is required (not null)
+            if (Total == null)
+            {
+                throw new InvalidDataException("Total is a required property for GroupsSearchResponse and cannot be null");
+            }
+            else
+            {
+                this.Total = Total;
+            }
+            // to ensure "PageCount" is required (not null)
+            if (PageCount == null)
+            {
+                throw new InvalidDataException("PageCount is a required property for GroupsSearchResponse and cannot be null");
+            }
+            else
+            {
+                this.PageCount = PageCount;
+            }
+            // to ensure "PageSize" is required (not null)
+            if (PageSize == null)
+            {
+                throw new InvalidDataException("PageSize is a required property for GroupsSearchResponse and cannot be null");
+            }
+            else
+            {
+                this.PageSize = PageSize;
+            }
+            // to ensure "PageNumber" is required (not null)
+            if (PageNumber == null)
+            {
+                throw new InvalidDataException("PageNumber is a required property for GroupsSearchResponse and cannot be null");
+            }
+            else
+            {
+                this.PageNumber = PageNumber;
+            }
+            // to ensure "Types" is required (not null)
+            if (Types == null)
+            {
+                throw new InvalidDataException("Types is a required property for GroupsSearchResponse and cannot be null");
+            }
+            else
+            {
+                this.Types = Types;
+            }
+            // to ensure "Results" is required (not null)
+            if (Results == null)
+            {
+                throw new InvalidDataException("Results is a required property for GroupsSearchResponse and cannot be null");
+            }
+            else
+            {
+                this.Results = Results;
+            }
             this.PreviousPage = PreviousPage;
             this.CurrentPage = CurrentPage;
             this.NextPage = NextPage;
-            this.Types = Types;
-            this.Results = Results;
         }
         
         /// <summary>
-        /// Gets or Sets Total
+        /// The total number of results found
         /// </summary>
+        /// <value>The total number of results found</value>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
         /// <summary>
-        /// Gets or Sets PageCount
+        /// The total number of pages
         /// </summary>
+        /// <value>The total number of pages</value>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
         /// <summary>
-        /// Gets or Sets PageSize
+        /// The current page size
         /// </summary>
+        /// <value>The current page size</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
         /// <summary>
-        /// Gets or Sets PageNumber
+        /// The current page number
         /// </summary>
+        /// <value>The current page number</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
         /// <summary>
-        /// Gets or Sets PreviousPage
+        /// Q64 value for the previous page of results
         /// </summary>
+        /// <value>Q64 value for the previous page of results</value>
         [DataMember(Name="previousPage", EmitDefaultValue=false)]
         public string PreviousPage { get; set; }
         /// <summary>
-        /// Gets or Sets CurrentPage
+        /// Q64 value for the current page of results
         /// </summary>
+        /// <value>Q64 value for the current page of results</value>
         [DataMember(Name="currentPage", EmitDefaultValue=false)]
         public string CurrentPage { get; set; }
         /// <summary>
-        /// Gets or Sets NextPage
+        /// Q64 value for the next page of results
         /// </summary>
+        /// <value>Q64 value for the next page of results</value>
         [DataMember(Name="nextPage", EmitDefaultValue=false)]
         public string NextPage { get; set; }
         /// <summary>
-        /// Gets or Sets Types
+        /// Resource types the search was performed against
         /// </summary>
+        /// <value>Resource types the search was performed against</value>
         [DataMember(Name="types", EmitDefaultValue=false)]
         public List<string> Types { get; set; }
         /// <summary>
-        /// Gets or Sets Results
+        /// Search results
         /// </summary>
+        /// <value>Search results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<Group> Results { get; set; }
         /// <summary>

@@ -61,7 +61,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of List&lt;Location&gt;</returns>
         ApiResponse<List<Location>> GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
-        /// Search using q64
+        /// Search locations using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -73,7 +73,7 @@ namespace ININ.PureCloudApi.Api
         LocationsSearchResponse GetSearch (string q64, List<string> expand = null);
 
         /// <summary>
-        /// Search using q64
+        /// Search locations using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -84,7 +84,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
         ApiResponse<LocationsSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
-        /// Search
+        /// Search locations
         /// </summary>
         /// <remarks>
         /// 
@@ -95,7 +95,7 @@ namespace ININ.PureCloudApi.Api
         LocationsSearchResponse PostSearch (LocationSearchRequest body);
 
         /// <summary>
-        /// Search
+        /// Search locations
         /// </summary>
         /// <remarks>
         /// 
@@ -153,7 +153,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (List&lt;Location&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Location>>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
-        /// Search using q64
+        /// Search locations using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -165,7 +165,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<LocationsSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
 
         /// <summary>
-        /// Search using q64
+        /// Search locations using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -176,7 +176,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
-        /// Search
+        /// Search locations
         /// </summary>
         /// <remarks>
         /// 
@@ -187,7 +187,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<LocationsSearchResponse> PostSearchAsync (LocationSearchRequest body);
 
         /// <summary>
-        /// Search
+        /// Search locations
         /// </summary>
         /// <remarks>
         /// 
@@ -599,7 +599,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search locations using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -612,7 +612,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search locations using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -678,7 +678,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search locations using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -692,7 +692,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search locations using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -758,7 +758,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search locations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -770,7 +770,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search locations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -841,7 +841,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search locations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -854,7 +854,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search locations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>

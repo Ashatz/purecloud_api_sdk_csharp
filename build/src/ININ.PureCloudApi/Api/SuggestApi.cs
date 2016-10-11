@@ -15,7 +15,7 @@ namespace ININ.PureCloudApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Search using q64
+        /// Search using the q64 value returned from a previous search.
         /// </summary>
         /// <remarks>
         /// 
@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Api
         JsonNodeSearchResponse GetSearch (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
-        /// Search using q64
+        /// Search using the q64 value returned from a previous search.
         /// </summary>
         /// <remarks>
         /// 
@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         ApiResponse<JsonNodeSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
         /// <summary>
-        /// Suggest using q64
+        /// Suggest resources using the q64 value returned from a previous suggest query.
         /// </summary>
         /// <remarks>
         /// 
@@ -52,7 +52,7 @@ namespace ININ.PureCloudApi.Api
         JsonNodeSearchResponse GetSuggest (string q64, bool? profile = null);
 
         /// <summary>
-        /// Suggest using q64
+        /// Suggest resources using the q64 value returned from a previous suggest query.
         /// </summary>
         /// <remarks>
         /// 
@@ -63,7 +63,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         ApiResponse<JsonNodeSearchResponse> GetSuggestWithHttpInfo (string q64, bool? profile = null);
         /// <summary>
-        /// Search
+        /// Search resources.
         /// </summary>
         /// <remarks>
         /// 
@@ -75,7 +75,7 @@ namespace ININ.PureCloudApi.Api
         JsonNodeSearchResponse PostSearch (SearchRequest body, bool? profile = null);
 
         /// <summary>
-        /// Search
+        /// Search resources.
         /// </summary>
         /// <remarks>
         /// 
@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         ApiResponse<JsonNodeSearchResponse> PostSearchWithHttpInfo (SearchRequest body, bool? profile = null);
         /// <summary>
-        /// Suggest
+        /// Suggest resources.
         /// </summary>
         /// <remarks>
         /// 
@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Api
         JsonNodeSearchResponse PostSuggest (SuggestSearchRequest body, bool? profile = null);
 
         /// <summary>
-        /// Suggest
+        /// Suggest resources.
         /// </summary>
         /// <remarks>
         /// 
@@ -111,7 +111,7 @@ namespace ININ.PureCloudApi.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Search using q64
+        /// Search using the q64 value returned from a previous search.
         /// </summary>
         /// <remarks>
         /// 
@@ -124,7 +124,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchAsync (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
-        /// Search using q64
+        /// Search using the q64 value returned from a previous search.
         /// </summary>
         /// <remarks>
         /// 
@@ -136,7 +136,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
         /// <summary>
-        /// Suggest using q64
+        /// Suggest resources using the q64 value returned from a previous suggest query.
         /// </summary>
         /// <remarks>
         /// 
@@ -148,7 +148,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64, bool? profile = null);
 
         /// <summary>
-        /// Suggest using q64
+        /// Suggest resources using the q64 value returned from a previous suggest query.
         /// </summary>
         /// <remarks>
         /// 
@@ -159,7 +159,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64, bool? profile = null);
         /// <summary>
-        /// Search
+        /// Search resources.
         /// </summary>
         /// <remarks>
         /// 
@@ -171,7 +171,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearchAsync (SearchRequest body, bool? profile = null);
 
         /// <summary>
-        /// Search
+        /// Search resources.
         /// </summary>
         /// <remarks>
         /// 
@@ -182,7 +182,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchAsyncWithHttpInfo (SearchRequest body, bool? profile = null);
         /// <summary>
-        /// Suggest
+        /// Suggest resources.
         /// </summary>
         /// <remarks>
         /// 
@@ -194,7 +194,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSuggestAsync (SuggestSearchRequest body, bool? profile = null);
 
         /// <summary>
-        /// Suggest
+        /// Suggest resources.
         /// </summary>
         /// <remarks>
         /// 
@@ -295,7 +295,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search using the q64 value returned from a previous search. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -309,7 +309,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search using the q64 value returned from a previous search. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -377,7 +377,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search using the q64 value returned from a previous search. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -392,7 +392,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search using the q64 value returned from a previous search. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -460,7 +460,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Suggest using q64 
+        /// Suggest resources using the q64 value returned from a previous suggest query. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -473,7 +473,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Suggest using q64 
+        /// Suggest resources using the q64 value returned from a previous suggest query. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -539,7 +539,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Suggest using q64 
+        /// Suggest resources using the q64 value returned from a previous suggest query. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -553,7 +553,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Suggest using q64 
+        /// Suggest resources using the q64 value returned from a previous suggest query. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -619,7 +619,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search resources. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -632,7 +632,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search resources. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -705,7 +705,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search resources. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -719,7 +719,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search resources. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -792,7 +792,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Suggest 
+        /// Suggest resources. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -805,7 +805,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Suggest 
+        /// Suggest resources. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -878,7 +878,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Suggest 
+        /// Suggest resources. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -892,7 +892,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Suggest 
+        /// Suggest resources. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>

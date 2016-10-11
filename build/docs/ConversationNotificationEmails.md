@@ -11,6 +11,7 @@ title: ConversationNotificationEmails
 | **State** | **string** |  | [optional] |
 | **Held** | **bool?** |  | [optional] |
 | **Subject** | **string** |  | [optional] |
+| **Provider** | **string** |  | [optional] |
 | **MessagesSent** | **int?** |  | [optional] |
 | **ErrorInfo** | [**ConversationNotificationErrorDetails**](ConversationNotificationErrorDetails.html) |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |

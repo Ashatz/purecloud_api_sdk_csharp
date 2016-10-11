@@ -219,6 +219,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'WrapupSkipped'
         }
         /// <summary>
+        /// Test the property 'Provider'
+        /// </summary>
+        [Test]
+        public void ProviderTest()
+        {
+            // TODO: unit test for the property 'Provider'
+        }
+        /// <summary>
         /// Test the property 'AudioMuted'
         /// </summary>
         [Test]
@@ -257,14 +265,6 @@ namespace ININ.PureCloudApi.Test
         public void ContextTest()
         {
             // TODO: unit test for the property 'Context'
-        }
-        /// <summary>
-        /// Test the property 'Provider'
-        /// </summary>
-        [Test]
-        public void ProviderTest()
-        {
-            // TODO: unit test for the property 'Provider'
         }
 
     }

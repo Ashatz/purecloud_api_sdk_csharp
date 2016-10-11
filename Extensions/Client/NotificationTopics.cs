@@ -19,6 +19,8 @@ namespace ININ.PureCloudApi.Client
               {"v2.routing.queues.{id}.conversations.cobrowseSessions", typeof(CobrowseConversationNotification)},
               {"v2.routing.queues.{id}.conversations.emails", typeof(EmailConversationNotification)},
               {"v2.routing.queues.{id}.conversations.screenshares", typeof(ScreenShareConversationNotification)},
+              {"v2.routing.queues.{id}.conversations.socialexpressions", typeof(ConversationNotification)},
+              {"v2.routing.queues.{id}.conversations.videos", typeof(ConversationNotification)},
               {"v2.users.{id}.alerting.heartbeat.alerts", typeof(HeartBeatAlertNotification)},
               {"v2.users.{id}.alerting.heartbeat.rules", typeof(HeartBeatRuleNotification)},
               {"v2.users.{id}.alerting.interactionstats.alerts", typeof(InteractionStatAlertNotification)},

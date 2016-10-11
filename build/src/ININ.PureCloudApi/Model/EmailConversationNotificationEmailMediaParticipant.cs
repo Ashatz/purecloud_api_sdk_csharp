@@ -272,9 +272,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Script">Script.</param>
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
+        /// <param name="Provider">Provider.</param>
         /// <param name="Subject">Subject.</param>
         /// <param name="MessagesSent">MessagesSent.</param>
-        public EmailConversationNotificationEmailMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, EmailConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, EmailConversationNotificationErrorInfo ErrorInfo = null, EmailConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Subject = null, int? MessagesSent = null)
+        public EmailConversationNotificationEmailMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, EmailConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, EmailConversationNotificationErrorInfo ErrorInfo = null, EmailConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, string Subject = null, int? MessagesSent = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -297,6 +298,7 @@ namespace ININ.PureCloudApi.Model
             this.Script = Script;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
+            this.Provider = Provider;
             this.Subject = Subject;
             this.MessagesSent = MessagesSent;
         }
@@ -392,6 +394,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
         /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
         /// Gets or Sets Subject
         /// </summary>
         [DataMember(Name="subject", EmitDefaultValue=false)]
@@ -430,6 +437,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Script: ").Append(Script).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  MessagesSent: ").Append(MessagesSent).Append("\n");
             sb.Append("}\n");
@@ -574,6 +582,11 @@ namespace ININ.PureCloudApi.Model
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
@@ -638,6 +651,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
                 if (this.MessagesSent != null)

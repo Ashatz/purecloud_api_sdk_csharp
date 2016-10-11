@@ -99,7 +99,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ContactSort">information determining the order in which the contacts will be dialed.</param>
         /// <param name="NoAnswerTimeout">for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds.</param>
         /// <param name="CallAnalysisLanguage">The language the edge will use to analyse the call.</param>
-        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null)
+        /// <param name="Priority">The priority of this campaign relative to other campaigns.</param>
+        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null)
         {
             // to ensure "ContactList" is required (not null)
             if (ContactList == null)
@@ -196,6 +197,7 @@ namespace ININ.PureCloudApi.Model
             this.ContactSort = ContactSort;
             this.NoAnswerTimeout = NoAnswerTimeout;
             this.CallAnalysisLanguage = CallAnalysisLanguage;
+            this.Priority = Priority;
         }
         
         /// <summary>
@@ -348,6 +350,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="callAnalysisLanguage", EmitDefaultValue=false)]
         public string CallAnalysisLanguage { get; set; }
         /// <summary>
+        /// The priority of this campaign relative to other campaigns
+        /// </summary>
+        /// <value>The priority of this campaign relative to other campaigns</value>
+        [DataMember(Name="priority", EmitDefaultValue=false)]
+        public int? Priority { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -387,6 +395,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ContactSort: ").Append(ContactSort).Append("\n");
             sb.Append("  NoAnswerTimeout: ").Append(NoAnswerTimeout).Append("\n");
             sb.Append("  CallAnalysisLanguage: ").Append(CallAnalysisLanguage).Append("\n");
+            sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -555,6 +564,11 @@ namespace ININ.PureCloudApi.Model
                     this.CallAnalysisLanguage.Equals(other.CallAnalysisLanguage)
                 ) &&
                 (
+                    this.Priority == other.Priority ||
+                    this.Priority != null &&
+                    this.Priority.Equals(other.Priority)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -624,6 +638,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.NoAnswerTimeout.GetHashCode();
                 if (this.CallAnalysisLanguage != null)
                     hash = hash * 59 + this.CallAnalysisLanguage.GetHashCode();
+                if (this.Priority != null)
+                    hash = hash * 59 + this.Priority.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

@@ -28,6 +28,7 @@ title: EmailConversationNotificationEmailMediaParticipant
 | **Script** | [**EmailConversationNotificationUriReference**](EmailConversationNotificationUriReference.html) |  | [optional] |
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
+| **Provider** | **string** |  | [optional] |
 | **Subject** | **string** |  | [optional] |
 | **MessagesSent** | **int?** |  | [optional] |
 {: class="table table-striped"}

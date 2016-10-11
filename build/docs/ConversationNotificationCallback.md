@@ -18,6 +18,7 @@ title: ConversationNotificationCallback
 | **CallbackUserName** | **string** |  | [optional] |
 | **ScriptId** | **string** |  | [optional] |
 | **SkipEnabled** | **bool?** |  | [optional] |
+| **Provider** | **string** |  | [optional] |
 | **TimeoutSeconds** | **int?** |  | [optional] |
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |

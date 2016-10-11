@@ -25,6 +25,7 @@ title: Call
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DisconnectReasons** | [**List&lt;DisconnectReason&gt;**](DisconnectReason.html) | List of reasons that this call was disconnected. This will be set once the call disconnects. | [optional] |
 | **FaxStatus** | [**FaxStatus**](FaxStatus.html) | Extra information on fax transmission. | [optional] |
+| **Provider** | **string** | The source provider for the call. | [optional] |
 {: class="table table-striped"}
 
 

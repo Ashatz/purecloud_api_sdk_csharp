@@ -9,6 +9,7 @@ title: ConversationNotificationChat
 |------------ | ------------- | ------------- | -------------|
 | **State** | **string** |  | [optional] |
 | **Id** | **string** |  | [optional] |
+| **Provider** | **string** |  | [optional] |
 | **RoomId** | **string** |  | [optional] |
 | **Held** | **bool?** |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |

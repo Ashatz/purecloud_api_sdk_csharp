@@ -201,17 +201,19 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Id">Id.</param>
         /// <param name="Context">Context.</param>
         /// <param name="Sharing">Sharing.</param>
+        /// <param name="Provider">Provider.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationScreenShares(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationScreenShares(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Self = Self;
             this.Id = Id;
             this.Context = Context;
             this.Sharing = Sharing;
+            this.Provider = Provider;
             this.DisconnectType = DisconnectType;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
@@ -238,6 +240,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="sharing", EmitDefaultValue=false)]
         public bool? Sharing { get; set; }
+        /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
@@ -266,6 +273,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  Sharing: ").Append(Sharing).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
@@ -332,6 +340,11 @@ namespace ININ.PureCloudApi.Model
                     this.Sharing.Equals(other.Sharing)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
@@ -374,6 +387,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Context.GetHashCode();
                 if (this.Sharing != null)
                     hash = hash * 59 + this.Sharing.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
                 if (this.ConnectedTime != null)

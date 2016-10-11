@@ -308,7 +308,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectReasons">List of reasons that this call was disconnected. This will be set once the call disconnects..</param>
         /// <param name="FaxStatus">Extra information on fax transmission..</param>
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null)
+        /// <param name="Provider">The source provider for the call..</param>
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null)
         {
             this.State = State;
             this.Id = Id;
@@ -360,6 +361,7 @@ namespace ININ.PureCloudApi.Model
             this.DisconnectedTime = DisconnectedTime;
             this.DisconnectReasons = DisconnectReasons;
             this.FaxStatus = FaxStatus;
+            this.Provider = Provider;
         }
         
         /// <summary>
@@ -446,6 +448,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="faxStatus", EmitDefaultValue=false)]
         public FaxStatus FaxStatus { get; set; }
         /// <summary>
+        /// The source provider for the call.
+        /// </summary>
+        /// <value>The source provider for the call.</value>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -471,6 +479,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -596,6 +605,11 @@ namespace ININ.PureCloudApi.Model
                     this.FaxStatus == other.FaxStatus ||
                     this.FaxStatus != null &&
                     this.FaxStatus.Equals(other.FaxStatus)
+                ) &&
+                (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
                 );
         }
 
@@ -646,6 +660,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DisconnectReasons.GetHashCode();
                 if (this.FaxStatus != null)
                     hash = hash * 59 + this.FaxStatus.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 return hash;
             }
         }

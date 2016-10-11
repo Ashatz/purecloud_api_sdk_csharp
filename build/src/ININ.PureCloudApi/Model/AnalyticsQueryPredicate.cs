@@ -300,6 +300,12 @@ namespace ININ.PureCloudApi.Model
             Addressto,
             
             /// <summary>
+            /// Enum Subject for "subject"
+            /// </summary>
+            [EnumMember(Value = "subject")]
+            Subject,
+            
+            /// <summary>
             /// Enum Peerid for "peerId"
             /// </summary>
             [EnumMember(Value = "peerId")]

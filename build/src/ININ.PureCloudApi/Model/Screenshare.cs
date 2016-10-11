@@ -208,7 +208,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public Screenshare(StateEnum? State = null, string Id = null, string Context = null, bool? Sharing = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null)
+        /// <param name="Provider">The source provider for the screen share..</param>
+        public Screenshare(StateEnum? State = null, string Id = null, string Context = null, bool? Sharing = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null)
         {
             this.State = State;
             this.Id = Id;
@@ -226,6 +227,7 @@ namespace ININ.PureCloudApi.Model
             this.DisconnectType = DisconnectType;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
+            this.Provider = Provider;
         }
         
         /// <summary>
@@ -265,6 +267,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
         /// <summary>
+        /// The source provider for the screen share.
+        /// </summary>
+        /// <value>The source provider for the screen share.</value>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -280,6 +288,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -355,6 +364,11 @@ namespace ININ.PureCloudApi.Model
                     this.DisconnectedTime == other.DisconnectedTime ||
                     this.DisconnectedTime != null &&
                     this.DisconnectedTime.Equals(other.DisconnectedTime)
+                ) &&
+                (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
                 );
         }
 
@@ -385,6 +399,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 return hash;
             }
         }

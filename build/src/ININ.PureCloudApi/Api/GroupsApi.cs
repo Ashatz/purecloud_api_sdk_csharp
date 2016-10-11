@@ -132,7 +132,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of GroupEntityListing</returns>
         ApiResponse<GroupEntityListing> GetGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
-        /// Search using q64
+        /// Search groups using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -144,7 +144,7 @@ namespace ININ.PureCloudApi.Api
         GroupsSearchResponse GetSearch (string q64, List<string> expand = null);
 
         /// <summary>
-        /// Search using q64
+        /// Search groups using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -199,7 +199,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Group</returns>
         ApiResponse<Group> PostGroupsWithHttpInfo (Group body);
         /// <summary>
-        /// Search
+        /// Search groups
         /// </summary>
         /// <remarks>
         /// 
@@ -210,7 +210,7 @@ namespace ININ.PureCloudApi.Api
         GroupsSearchResponse PostSearch (GroupSearchRequest body);
 
         /// <summary>
-        /// Search
+        /// Search groups
         /// </summary>
         /// <remarks>
         /// 
@@ -362,7 +362,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (GroupEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
-        /// Search using q64
+        /// Search groups using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -374,7 +374,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<GroupsSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
 
         /// <summary>
-        /// Search using q64
+        /// Search groups using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -429,7 +429,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (Group body);
         /// <summary>
-        /// Search
+        /// Search groups
         /// </summary>
         /// <remarks>
         /// 
@@ -440,7 +440,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (GroupSearchRequest body);
 
         /// <summary>
-        /// Search
+        /// Search groups
         /// </summary>
         /// <remarks>
         /// 
@@ -1362,7 +1362,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search groups using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -1375,7 +1375,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search groups using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -1441,7 +1441,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search groups using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -1455,7 +1455,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search groups using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -1865,7 +1865,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search groups 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -1877,7 +1877,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search groups 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -1948,7 +1948,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search groups 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -1961,7 +1961,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search groups 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>

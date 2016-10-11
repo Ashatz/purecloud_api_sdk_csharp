@@ -9,8 +9,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**GetLocationId**](LocationsApi.html#getlocationid) | **GET** /api/v2/locations/{locationId} | Get Location by ID. |
 | [**GetLocations**](LocationsApi.html#getlocations) | **GET** /api/v2/locations | Get a list of all locations. |
-| [**GetSearch**](LocationsApi.html#getsearch) | **GET** /api/v2/locations/search | Search using q64 |
-| [**PostSearch**](LocationsApi.html#postsearch) | **POST** /api/v2/locations/search | Search |
+| [**GetSearch**](LocationsApi.html#getsearch) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
+| [**PostSearch**](LocationsApi.html#postsearch) | **POST** /api/v2/locations/search | Search locations |
 {: class="table table-striped"}
 
 <a name="getlocationid"></a>
@@ -133,7 +133,7 @@ namespace Example
 
 ## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetSearch (string q64, List<string> expand = null)
 
-Search using q64
+Search locations using the q64 value returned from a previous search
 
 
 
@@ -161,7 +161,7 @@ namespace Example
 
             try
             {
-                // Search using q64
+                // Search locations using the q64 value returned from a previous search
                 LocationsSearchResponse result = apiInstance.GetSearch(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -191,7 +191,7 @@ namespace Example
 
 ## [**LocationsSearchResponse**](LocationsSearchResponse.html) PostSearch (LocationSearchRequest body)
 
-Search
+Search locations
 
 
 
@@ -218,7 +218,7 @@ namespace Example
 
             try
             {
-                // Search
+                // Search locations
                 LocationsSearchResponse result = apiInstance.PostSearch(body);
                 Debug.WriteLine(result);
             }

@@ -33,6 +33,7 @@ title: Campaign
 | **ContactSort** | [**ContactSort**](ContactSort.html) | information determining the order in which the contacts will be dialed | [optional] |
 | **NoAnswerTimeout** | **int?** | for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds | [optional] |
 | **CallAnalysisLanguage** | **string** | The language the edge will use to analyse the call | [optional] |
+| **Priority** | **int?** | The priority of this campaign relative to other campaigns | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

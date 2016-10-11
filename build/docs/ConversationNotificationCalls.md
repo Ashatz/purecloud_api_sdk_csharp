@@ -21,6 +21,7 @@ title: ConversationNotificationCalls
 | **DocumentId** | **string** |  | [optional] |
 | **Self** | [**ConversationNotificationSelf**](ConversationNotificationSelf.html) |  | [optional] |
 | **Other** | [**ConversationNotificationAddress**](ConversationNotificationAddress.html) |  | [optional] |
+| **Provider** | **string** |  | [optional] |
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectReasons** | [**List&lt;ConversationNotificationDisconnectReasons&gt;**](ConversationNotificationDisconnectReasons.html) |  | [optional] |

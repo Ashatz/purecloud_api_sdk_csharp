@@ -296,12 +296,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DocumentId">DocumentId.</param>
         /// <param name="Self">Self.</param>
         /// <param name="Other">Other.</param>
+        /// <param name="Provider">Provider.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="DisconnectReasons">DisconnectReasons.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationNotificationErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationNotificationSelf Self = null, ConversationNotificationAddress Other = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationNotificationDisconnectReasons> DisconnectReasons = null, ConversationNotificationFaxStatus FaxStatus = null, Object AdditionalProperties = null)
+        public ConversationNotificationCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationNotificationErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationNotificationSelf Self = null, ConversationNotificationAddress Other = null, string Provider = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationNotificationDisconnectReasons> DisconnectReasons = null, ConversationNotificationFaxStatus FaxStatus = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.State = State;
@@ -317,6 +318,7 @@ namespace ININ.PureCloudApi.Model
             this.DocumentId = DocumentId;
             this.Self = Self;
             this.Other = Other;
+            this.Provider = Provider;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.DisconnectReasons = DisconnectReasons;
@@ -375,6 +377,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="other", EmitDefaultValue=false)]
         public ConversationNotificationAddress Other { get; set; }
         /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
@@ -421,6 +428,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Other: ").Append(Other).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
@@ -533,6 +541,11 @@ namespace ININ.PureCloudApi.Model
                     this.Other.Equals(other.Other)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
@@ -598,6 +611,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Self.GetHashCode();
                 if (this.Other != null)
                     hash = hash * 59 + this.Other.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
                 if (this.DisconnectedTime != null)

@@ -198,6 +198,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="State">State.</param>
         /// <param name="Id">Id.</param>
+        /// <param name="Provider">Provider.</param>
         /// <param name="RoomId">RoomId.</param>
         /// <param name="Held">Held.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
@@ -205,10 +206,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationChats(StateEnum? State = null, string Id = null, string RoomId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationChats(StateEnum? State = null, string Id = null, string Provider = null, string RoomId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
+            this.Provider = Provider;
             this.RoomId = RoomId;
             this.Held = Held;
             this.DisconnectType = DisconnectType;
@@ -223,6 +225,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
         /// <summary>
         /// Gets or Sets RoomId
         /// </summary>
@@ -263,6 +270,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ConversationNotificationChats {\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
@@ -317,6 +325,11 @@ namespace ININ.PureCloudApi.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
@@ -368,6 +381,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.State.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
                 if (this.Held != null)

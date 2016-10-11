@@ -176,6 +176,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="Held">Held.</param>
         /// <param name="Subject">Subject.</param>
+        /// <param name="Provider">Provider.</param>
         /// <param name="MessagesSent">MessagesSent.</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
@@ -183,12 +184,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationEmails(string Id = null, StateEnum? State = null, bool? Held = null, string Subject = null, int? MessagesSent = null, ConversationNotificationErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationEmails(string Id = null, StateEnum? State = null, bool? Held = null, string Subject = null, string Provider = null, int? MessagesSent = null, ConversationNotificationErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.State = State;
             this.Held = Held;
             this.Subject = Subject;
+            this.Provider = Provider;
             this.MessagesSent = MessagesSent;
             this.ErrorInfo = ErrorInfo;
             this.DisconnectType = DisconnectType;
@@ -213,6 +215,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
+        /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
         /// <summary>
         /// Gets or Sets MessagesSent
         /// </summary>
@@ -255,6 +262,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  MessagesSent: ").Append(MessagesSent).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
@@ -319,6 +327,11 @@ namespace ININ.PureCloudApi.Model
                     this.Subject.Equals(other.Subject)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
                     this.MessagesSent == other.MessagesSent ||
                     this.MessagesSent != null &&
                     this.MessagesSent.Equals(other.MessagesSent)
@@ -374,6 +387,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Held.GetHashCode();
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.MessagesSent != null)
                     hash = hash * 59 + this.MessagesSent.GetHashCode();
                 if (this.ErrorInfo != null)

@@ -259,6 +259,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CallAnalysisLanguage'
         }
         /// <summary>
+        /// Test the property 'Priority'
+        /// </summary>
+        [Test]
+        public void PriorityTest()
+        {
+            // TODO: unit test for the property 'Priority'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

@@ -115,6 +115,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Held'
         }
         /// <summary>
+        /// Test the property 'Provider'
+        /// </summary>
+        [Test]
+        public void ProviderTest()
+        {
+            // TODO: unit test for the property 'Provider'
+        }
+        /// <summary>
         /// Test the property 'DisconnectType'
         /// </summary>
         [Test]

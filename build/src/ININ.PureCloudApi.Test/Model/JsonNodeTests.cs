@@ -107,6 +107,30 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property '_Float'
         }
         /// <summary>
+        /// Test the property 'FloatingPointNumber'
+        /// </summary>
+        [Test]
+        public void FloatingPointNumberTest()
+        {
+            // TODO: unit test for the property 'FloatingPointNumber'
+        }
+        /// <summary>
+        /// Test the property 'ValueNode'
+        /// </summary>
+        [Test]
+        public void ValueNodeTest()
+        {
+            // TODO: unit test for the property 'ValueNode'
+        }
+        /// <summary>
+        /// Test the property 'ContainerNode'
+        /// </summary>
+        [Test]
+        public void ContainerNodeTest()
+        {
+            // TODO: unit test for the property 'ContainerNode'
+        }
+        /// <summary>
         /// Test the property 'MissingNode'
         /// </summary>
         [Test]
@@ -137,14 +161,6 @@ namespace ININ.PureCloudApi.Test
         public void _ShortTest()
         {
             // TODO: unit test for the property '_Short'
-        }
-        /// <summary>
-        /// Test the property 'FloatingPointNumber'
-        /// </summary>
-        [Test]
-        public void FloatingPointNumberTest()
-        {
-            // TODO: unit test for the property 'FloatingPointNumber'
         }
         /// <summary>
         /// Test the property '_Int'
@@ -201,22 +217,6 @@ namespace ININ.PureCloudApi.Test
         public void BinaryTest()
         {
             // TODO: unit test for the property 'Binary'
-        }
-        /// <summary>
-        /// Test the property 'ValueNode'
-        /// </summary>
-        [Test]
-        public void ValueNodeTest()
-        {
-            // TODO: unit test for the property 'ValueNode'
-        }
-        /// <summary>
-        /// Test the property 'ContainerNode'
-        /// </summary>
-        [Test]
-        public void ContainerNodeTest()
-        {
-            // TODO: unit test for the property 'ContainerNode'
         }
 
     }

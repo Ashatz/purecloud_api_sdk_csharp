@@ -80,92 +80,6 @@ namespace ININ.PureCloudApi.Model
             None
         }
         /// <summary>
-        /// Gets or Sets Provider
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum ProviderEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum PurecloudWebrtc for "PureCloud WebRTC"
-            /// </summary>
-            [EnumMember(Value = "PureCloud WebRTC")]
-            PurecloudWebrtc,
-            
-            /// <summary>
-            /// Enum PurecloudEmail for "PureCloud Email"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Email")]
-            PurecloudEmail,
-            
-            /// <summary>
-            /// Enum PurecloudWebchat for "PureCloud Webchat"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Webchat")]
-            PurecloudWebchat,
-            
-            /// <summary>
-            /// Enum PurecloudCobrowse for "PureCloud Co-browse"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Co-browse")]
-            PurecloudCobrowse,
-            
-            /// <summary>
-            /// Enum PurecloudVr for "PureCloud VR"
-            /// </summary>
-            [EnumMember(Value = "PureCloud VR")]
-            PurecloudVr,
-            
-            /// <summary>
-            /// Enum PurecloudCallback for "PureCloud Callback"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Callback")]
-            PurecloudCallback,
-            
-            /// <summary>
-            /// Enum PurecloudSocialChannelManagement for "PureCloud Social Channel Management"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Social Channel Management")]
-            PurecloudSocialChannelManagement,
-            
-            /// <summary>
-            /// Enum PurecloudFax for "PureCloud Fax"
-            /// </summary>
-            [EnumMember(Value = "PureCloud Fax")]
-            PurecloudFax,
-            
-            /// <summary>
-            /// Enum Edge for "Edge"
-            /// </summary>
-            [EnumMember(Value = "Edge")]
-            Edge,
-            
-            /// <summary>
-            /// Enum Twillio for "Twillio"
-            /// </summary>
-            [EnumMember(Value = "Twillio")]
-            Twillio,
-            
-            /// <summary>
-            /// Enum Bifrost for "Bifrost"
-            /// </summary>
-            [EnumMember(Value = "Bifrost")]
-            Bifrost,
-            
-            /// <summary>
-            /// Enum Unknown for "Unknown"
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown
-        }
-        /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
@@ -275,11 +189,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
-        /// Gets or Sets Provider
-        /// </summary>
-        [DataMember(Name="provider", EmitDefaultValue=false)]
-        public ProviderEnum? Provider { get; set; }
-        /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
@@ -299,7 +208,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationVideo(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, ProviderEnum? Provider = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationVideo(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, string Provider = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Self = Self;
@@ -345,6 +254,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
         public bool? SharingScreen { get; set; }
+        /// <summary>
+        /// Gets or Sets Provider
+        /// </summary>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>

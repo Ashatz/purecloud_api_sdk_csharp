@@ -12,6 +12,7 @@ title: ConversationNotificationScreenShares
 | **Id** | **string** |  | [optional] |
 | **Context** | **string** |  | [optional] |
 | **Sharing** | **bool?** |  | [optional] |
+| **Provider** | **string** |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |
