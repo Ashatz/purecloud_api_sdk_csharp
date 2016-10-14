@@ -3,80 +3,89 @@ title: ConversationsApi
 ---
 ## ININ.PureCloudApi.Api.ConversationsApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteCallParticipantConsult**](ConversationsApi.html#deletecallparticipantconsult) | **DELETE** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Cancel the transfer |
-| [**DeleteConversationParticipantCodesAddCommunicationCode**](ConversationsApi.html#deleteconversationparticipantcodesaddcommunicationcode) | **DELETE** /api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode} | Delete a code used to add a communication to this participant |
-| [**DeleteEmailMessagesDraftAttachment**](ConversationsApi.html#deleteemailmessagesdraftattachment) | **DELETE** /api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
-| [**GetCall**](ConversationsApi.html#getcall) | **GET** /api/v2/conversations/calls/{callId} | Get call conversation |
-| [**GetCallParticipantWrapup**](ConversationsApi.html#getcallparticipantwrapup) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetCallParticipantWrapupcodes**](ConversationsApi.html#getcallparticipantwrapupcodes) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetCallback**](ConversationsApi.html#getcallback) | **GET** /api/v2/conversations/callbacks/{callbackId} | Get callback conversation |
-| [**GetCallbackParticipantWrapup**](ConversationsApi.html#getcallbackparticipantwrapup) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetCallbackParticipantWrapupcodes**](ConversationsApi.html#getcallbackparticipantwrapupcodes) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**DeleteCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.html#deletecallscallidparticipantsparticipantidconsult) | **DELETE** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Cancel the transfer |
+| [**DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode**](ConversationsApi.html#deleteconversationidparticipantsparticipantidcodesaddcommunicationcode) | **DELETE** /api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode} | Delete a code used to add a communication to this participant |
+| [**DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId**](ConversationsApi.html#deleteemailsemailidmessagesdraftattachmentsattachmentid) | **DELETE** /api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
 | [**GetCallbacks**](ConversationsApi.html#getcallbacks) | **GET** /api/v2/conversations/callbacks | Get callback conversations |
+| [**GetCallbacksCallbackId**](ConversationsApi.html#getcallbackscallbackid) | **GET** /api/v2/conversations/callbacks/{callbackId} | Get callback conversation |
+| [**GetCallbacksCallbackIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getcallbackscallbackidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getcallbackscallbackidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetCalls**](ConversationsApi.html#getcalls) | **GET** /api/v2/conversations/calls | Get recent conversations |
+| [**GetCallsCallId**](ConversationsApi.html#getcallscallid) | **GET** /api/v2/conversations/calls/{callId} | Get call conversation |
+| [**GetCallsCallIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getcallscallidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetCallsCallIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getcallscallidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetCallsHistory**](ConversationsApi.html#getcallshistory) | **GET** /api/v2/conversations/calls/history | Get call history |
 | [**GetCallsMaximumconferenceparties**](ConversationsApi.html#getcallsmaximumconferenceparties) | **GET** /api/v2/conversations/calls/maximumconferenceparties | Get the maximum number of participants that this user can have on a conference |
-| [**GetChat**](ConversationsApi.html#getchat) | **GET** /api/v2/conversations/chats/{chatId} | Get chat conversation |
-| [**GetChatParticipantWrapup**](ConversationsApi.html#getchatparticipantwrapup) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetChatParticipantWrapupcodes**](ConversationsApi.html#getchatparticipantwrapupcodes) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetChats**](ConversationsApi.html#getchats) | **GET** /api/v2/conversations/chats | Get recent chat conversations |
-| [**GetConversation**](ConversationsApi.html#getconversation) | **GET** /api/v2/conversations/{conversationId} | Get conversation |
-| [**GetConversationDetails**](ConversationsApi.html#getconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
-| [**GetConversationParticipantWrapup**](ConversationsApi.html#getconversationparticipantwrapup) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationParticipantWrapupcodes**](ConversationsApi.html#getconversationparticipantwrapupcodes) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetChatsChatId**](ConversationsApi.html#getchatschatid) | **GET** /api/v2/conversations/chats/{chatId} | Get chat conversation |
+| [**GetChatsChatIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getchatschatidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetChatsChatIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getchatschatidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetCobrowsesessions**](ConversationsApi.html#getcobrowsesessions) | **GET** /api/v2/conversations/cobrowsesessions | Get recent cobrowse conversations |
+| [**GetCobrowsesessionsCobrowseId**](ConversationsApi.html#getcobrowsesessionscobrowseid) | **GET** /api/v2/conversations/cobrowsesessions/{cobrowseId} | Get cobrowse conversation |
+| [**GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getcobrowsesessionscobrowseidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getcobrowsesessionscobrowseidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationId**](ConversationsApi.html#getconversationid) | **GET** /api/v2/conversations/{conversationId} | Get conversation |
+| [**GetConversationIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getconversationidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getconversationidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversations**](ConversationsApi.html#getconversations) | **GET** /api/v2/conversations | Get conversations |
-| [**GetEmail**](ConversationsApi.html#getemail) | **GET** /api/v2/conversations/emails/{emailId} | Get email conversation |
-| [**GetEmailMessage**](ConversationsApi.html#getemailmessage) | **GET** /api/v2/conversations/emails/{emailId}/messages/{messageId} | Get conversation message |
-| [**GetEmailMessages**](ConversationsApi.html#getemailmessages) | **GET** /api/v2/conversations/emails/{emailId}/messages | Get conversation messages |
-| [**GetEmailMessagesDraft**](ConversationsApi.html#getemailmessagesdraft) | **GET** /api/v2/conversations/emails/{emailId}/messages/draft | Get conversation draft reply |
-| [**GetEmailParticipantWrapup**](ConversationsApi.html#getemailparticipantwrapup) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetEmailParticipantWrapupcodes**](ConversationsApi.html#getemailparticipantwrapupcodes) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsConversationIdDetails**](ConversationsApi.html#getconversationsconversationiddetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetEmails**](ConversationsApi.html#getemails) | **GET** /api/v2/conversations/emails | Get recent email conversations |
-| [**PatchCall**](ConversationsApi.html#patchcall) | **PATCH** /api/v2/conversations/calls/{callId} | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
-| [**PatchCallParticipant**](ConversationsApi.html#patchcallparticipant) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId} | Update conversation participant |
-| [**PatchCallParticipantAttributes**](ConversationsApi.html#patchcallparticipantattributes) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchCallParticipantCommunication**](ConversationsApi.html#patchcallparticipantcommunication) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchCallParticipantConsult**](ConversationsApi.html#patchcallparticipantconsult) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Change who can speak |
-| [**PatchCallback**](ConversationsApi.html#patchcallback) | **PATCH** /api/v2/conversations/callbacks/{callbackId} | Update a conversation by disconnecting all of the participants |
-| [**PatchCallbackParticipant**](ConversationsApi.html#patchcallbackparticipant) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId} | Update conversation participant |
-| [**PatchCallbackParticipantAttributes**](ConversationsApi.html#patchcallbackparticipantattributes) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchCallbackParticipantCommunication**](ConversationsApi.html#patchcallbackparticipantcommunication) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchChat**](ConversationsApi.html#patchchat) | **PATCH** /api/v2/conversations/chats/{chatId} | Update a conversation by disconnecting all of the participants |
-| [**PatchChatParticipant**](ConversationsApi.html#patchchatparticipant) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId} | Update conversation participant |
-| [**PatchChatParticipantAttributes**](ConversationsApi.html#patchchatparticipantattributes) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchChatParticipantCommunication**](ConversationsApi.html#patchchatparticipantcommunication) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
-| [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchEmail**](ConversationsApi.html#patchemail) | **PATCH** /api/v2/conversations/emails/{emailId} | Update a conversation by disconnecting all of the participants |
-| [**PatchEmailParticipant**](ConversationsApi.html#patchemailparticipant) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId} | Update conversation participant |
-| [**PatchEmailParticipantAttributes**](ConversationsApi.html#patchemailparticipantattributes) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PostCall**](ConversationsApi.html#postcall) | **POST** /api/v2/conversations/calls/{callId} | Add a new call to a conversation |
-| [**PostCallParticipantConsult**](ConversationsApi.html#postcallparticipantconsult) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Initiate and update consult transfer |
-| [**PostCallParticipantMonitor**](ConversationsApi.html#postcallparticipantmonitor) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
-| [**PostCallParticipantReplace**](ConversationsApi.html#postcallparticipantreplace) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostCallParticipants**](ConversationsApi.html#postcallparticipants) | **POST** /api/v2/conversations/calls/{callId}/participants | Add participants to a conversation |
-| [**PostCallbackParticipantReplace**](ConversationsApi.html#postcallbackparticipantreplace) | **POST** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**GetEmailsEmailId**](ConversationsApi.html#getemailsemailid) | **GET** /api/v2/conversations/emails/{emailId} | Get email conversation |
+| [**GetEmailsEmailIdMessages**](ConversationsApi.html#getemailsemailidmessages) | **GET** /api/v2/conversations/emails/{emailId}/messages | Get conversation messages |
+| [**GetEmailsEmailIdMessagesDraft**](ConversationsApi.html#getemailsemailidmessagesdraft) | **GET** /api/v2/conversations/emails/{emailId}/messages/draft | Get conversation draft reply |
+| [**GetEmailsEmailIdMessagesMessageId**](ConversationsApi.html#getemailsemailidmessagesmessageid) | **GET** /api/v2/conversations/emails/{emailId}/messages/{messageId} | Get conversation message |
+| [**GetEmailsEmailIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getemailsemailidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetEmailsEmailIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getemailsemailidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**PatchCallbacksCallbackId**](ConversationsApi.html#patchcallbackscallbackid) | **PATCH** /api/v2/conversations/callbacks/{callbackId} | Update a conversation by disconnecting all of the participants |
+| [**PatchCallbacksCallbackIdParticipantsParticipantId**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantid) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId} | Update conversation participant |
+| [**PatchCallbacksCallbackIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchcallbackscallbackidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchCallsCallId**](ConversationsApi.html#patchcallscallid) | **PATCH** /api/v2/conversations/calls/{callId} | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
+| [**PatchCallsCallIdParticipantsParticipantId**](ConversationsApi.html#patchcallscallidparticipantsparticipantid) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId} | Update conversation participant |
+| [**PatchCallsCallIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchcallscallidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchcallscallidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.html#patchcallscallidparticipantsparticipantidconsult) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Change who can speak |
+| [**PatchChatsChatId**](ConversationsApi.html#patchchatschatid) | **PATCH** /api/v2/conversations/chats/{chatId} | Update a conversation by disconnecting all of the participants |
+| [**PatchChatsChatIdParticipantsParticipantId**](ConversationsApi.html#patchchatschatidparticipantsparticipantid) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId} | Update conversation participant |
+| [**PatchChatsChatIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchchatschatidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchchatschatidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchCobrowsesessionsCobrowseId**](ConversationsApi.html#patchcobrowsesessionscobrowseid) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId} | Update a conversation by disconnecting all of the participants |
+| [**PatchCobrowsesessionsCobrowseIdParticipantsParticipantId**](ConversationsApi.html#patchcobrowsesessionscobrowseidparticipantsparticipantid) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId} | Update conversation participant |
+| [**PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchcobrowsesessionscobrowseidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchcobrowsesessionscobrowseidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationIdParticipantsParticipantId**](ConversationsApi.html#patchconversationidparticipantsparticipantid) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
+| [**PatchConversationIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchconversationidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchEmailsEmailId**](ConversationsApi.html#patchemailsemailid) | **PATCH** /api/v2/conversations/emails/{emailId} | Update a conversation by disconnecting all of the participants |
+| [**PatchEmailsEmailIdParticipantsParticipantId**](ConversationsApi.html#patchemailsemailidparticipantsparticipantid) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId} | Update conversation participant |
+| [**PatchEmailsEmailIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchemailsemailidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PostCallbacks**](ConversationsApi.html#postcallbacks) | **POST** /api/v2/conversations/callbacks | Create a Callback |
+| [**PostCallbacksCallbackIdParticipantsParticipantIdReplace**](ConversationsApi.html#postcallbackscallbackidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostCalls**](ConversationsApi.html#postcalls) | **POST** /api/v2/conversations/calls | Create a call conversation |
-| [**PostChatParticipantReplace**](ConversationsApi.html#postchatparticipantreplace) | **POST** /api/v2/conversations/chats/{chatId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationDetailsProperties**](ConversationsApi.html#postconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
-| [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
-| [**PostConversationParticipantReplace**](ConversationsApi.html#postconversationparticipantreplace) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostCallsCallId**](ConversationsApi.html#postcallscallid) | **POST** /api/v2/conversations/calls/{callId} | Add a new call to a conversation |
+| [**PostCallsCallIdParticipants**](ConversationsApi.html#postcallscallidparticipants) | **POST** /api/v2/conversations/calls/{callId}/participants | Add participants to a conversation |
+| [**PostCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.html#postcallscallidparticipantsparticipantidconsult) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Initiate and update consult transfer |
+| [**PostCallsCallIdParticipantsParticipantIdMonitor**](ConversationsApi.html#postcallscallidparticipantsparticipantidmonitor) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
+| [**PostCallsCallIdParticipantsParticipantIdReplace**](ConversationsApi.html#postcallscallidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostChatsChatIdParticipantsParticipantIdReplace**](ConversationsApi.html#postchatschatidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/chats/{chatId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace**](ConversationsApi.html#postcobrowsesessionscobrowseidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationIdParticipantsParticipantIdCallbacks**](ConversationsApi.html#postconversationidparticipantsparticipantidcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
+| [**PostConversationIdParticipantsParticipantIdReplace**](ConversationsApi.html#postconversationidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsAggregatesQuery**](ConversationsApi.html#postconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
+| [**PostConversationsConversationIdDetailsProperties**](ConversationsApi.html#postconversationsconversationiddetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
 | [**PostConversationsDetailsQuery**](ConversationsApi.html#postconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
-| [**PostEmailMessages**](ConversationsApi.html#postemailmessages) | **POST** /api/v2/conversations/emails/{emailId}/messages | Send an email reply |
-| [**PostEmailParticipantReplace**](ConversationsApi.html#postemailparticipantreplace) | **POST** /api/v2/conversations/emails/{emailId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostEmailsEmailIdMessages**](ConversationsApi.html#postemailsemailidmessages) | **POST** /api/v2/conversations/emails/{emailId}/messages | Send an email reply |
+| [**PostEmailsEmailIdParticipantsParticipantIdReplace**](ConversationsApi.html#postemailsemailidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/emails/{emailId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostFaxes**](ConversationsApi.html#postfaxes) | **POST** /api/v2/conversations/faxes | Create Fax Conversation |
-| [**PutEmailMessagesDraft**](ConversationsApi.html#putemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{emailId}/messages/draft | Update conversation draft reply |
+| [**PutEmailsEmailIdMessagesDraft**](ConversationsApi.html#putemailsemailidmessagesdraft) | **PUT** /api/v2/conversations/emails/{emailId}/messages/draft | Update conversation draft reply |
 {: class="table table-striped"}
 
-<a name="deletecallparticipantconsult"></a>
+<a name="deletecallscallidparticipantsparticipantidconsult"></a>
 
-## **string** DeleteCallParticipantConsult (string callId, string participantId)
+## **string** DeleteCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId)
 
 Cancel the transfer
 
@@ -92,7 +101,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteCallParticipantConsultExample
+    public class DeleteCallsCallIdParticipantsParticipantIdConsultExample
     {
         public void main()
         {
@@ -107,12 +116,12 @@ namespace Example
             try
             {
                 // Cancel the transfer
-                string result = apiInstance.DeleteCallParticipantConsult(callId, participantId);
+                string result = apiInstance.DeleteCallsCallIdParticipantsParticipantIdConsult(callId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.DeleteCallParticipantConsult: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.DeleteCallsCallIdParticipantsParticipantIdConsult: " + e.Message );
             }
         }
     }
@@ -132,9 +141,9 @@ namespace Example
 
 **string**
 
-<a name="deleteconversationparticipantcodesaddcommunicationcode"></a>
+<a name="deleteconversationidparticipantsparticipantidcodesaddcommunicationcode"></a>
 
-## void DeleteConversationParticipantCodesAddCommunicationCode (string conversationId, string participantId, string addCommunicationCode)
+## void DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode (string conversationId, string participantId, string addCommunicationCode)
 
 Delete a code used to add a communication to this participant
 
@@ -150,7 +159,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteConversationParticipantCodesAddCommunicationCodeExample
+    public class DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcodeExample
     {
         public void main()
         {
@@ -166,11 +175,11 @@ namespace Example
             try
             {
                 // Delete a code used to add a communication to this participant
-                apiInstance.DeleteConversationParticipantCodesAddCommunicationCode(conversationId, participantId, addCommunicationCode);
+                apiInstance.DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode(conversationId, participantId, addCommunicationCode);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.DeleteConversationParticipantCodesAddCommunicationCode: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode: " + e.Message );
             }
         }
     }
@@ -191,9 +200,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="deleteemailmessagesdraftattachment"></a>
+<a name="deleteemailsemailidmessagesdraftattachmentsattachmentid"></a>
 
-## **string** DeleteEmailMessagesDraftAttachment (string emailId, string attachmentId)
+## **string** DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId (string emailId, string attachmentId)
 
 Delete attachment from draft
 
@@ -209,7 +218,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteEmailMessagesDraftAttachmentExample
+    public class DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentIdExample
     {
         public void main()
         {
@@ -224,12 +233,12 @@ namespace Example
             try
             {
                 // Delete attachment from draft
-                string result = apiInstance.DeleteEmailMessagesDraftAttachment(emailId, attachmentId);
+                string result = apiInstance.DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId(emailId, attachmentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.DeleteEmailMessagesDraftAttachment: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId: " + e.Message );
             }
         }
     }
@@ -248,354 +257,6 @@ namespace Example
 ### Return type
 
 **string**
-
-<a name="getcall"></a>
-
-## [**CallConversation**](CallConversation.html) GetCall (string callId)
-
-Get call conversation
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetCallExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-
-            try
-            {
-                // Get call conversation
-                CallConversation result = apiInstance.GetCall(callId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetCall: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**CallConversation**](CallConversation.html)
-
-<a name="getcallparticipantwrapup"></a>
-
-## [**Wrapup**](Wrapup.html) GetCallParticipantWrapup (string callId, string participantId, bool? provisional = null)
-
-Get the wrap-up for this conversation participant. 
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetCallParticipantWrapupExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var participantId = participantId_example;  // string | participantId
-            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
-
-            try
-            {
-                // Get the wrap-up for this conversation participant. 
-                Wrapup result = apiInstance.GetCallParticipantWrapup(callId, participantId, provisional);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetCallParticipantWrapup: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **participantId** | **string**| participantId |  |
-| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-[**Wrapup**](Wrapup.html)
-
-<a name="getcallparticipantwrapupcodes"></a>
-
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetCallParticipantWrapupcodes (string callId, string participantId)
-
-Get list of wrapup codes for this conversation participant
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetCallParticipantWrapupcodesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var participantId = participantId_example;  // string | participantId
-
-            try
-            {
-                // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetCallParticipantWrapupcodes(callId, participantId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetCallParticipantWrapupcodes: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**List<WrapupCode>**](WrapupCode.html)
-
-<a name="getcallback"></a>
-
-## [**CallbackConversation**](CallbackConversation.html) GetCallback (string callbackId)
-
-Get callback conversation
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetCallbackExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
-
-            try
-            {
-                // Get callback conversation
-                CallbackConversation result = apiInstance.GetCallback(callbackId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetCallback: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**CallbackConversation**](CallbackConversation.html)
-
-<a name="getcallbackparticipantwrapup"></a>
-
-## [**Wrapup**](Wrapup.html) GetCallbackParticipantWrapup (string callbackId, string participantId, bool? provisional = null)
-
-Get the wrap-up for this conversation participant. 
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetCallbackParticipantWrapupExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
-            var participantId = participantId_example;  // string | participantId
-            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
-
-            try
-            {
-                // Get the wrap-up for this conversation participant. 
-                Wrapup result = apiInstance.GetCallbackParticipantWrapup(callbackId, participantId, provisional);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetCallbackParticipantWrapup: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
-| **participantId** | **string**| participantId |  |
-| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-[**Wrapup**](Wrapup.html)
-
-<a name="getcallbackparticipantwrapupcodes"></a>
-
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetCallbackParticipantWrapupcodes (string callbackId, string participantId)
-
-Get list of wrapup codes for this conversation participant
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetCallbackParticipantWrapupcodesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
-            var participantId = participantId_example;  // string | participantId
-
-            try
-            {
-                // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetCallbackParticipantWrapupcodes(callbackId, participantId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetCallbackParticipantWrapupcodes: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
-| **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**List<WrapupCode>**](WrapupCode.html)
 
 <a name="getcallbacks"></a>
 
@@ -648,6 +309,180 @@ This endpoint does require any parameters.
 
 [**CallbackConversationEntityListing**](CallbackConversationEntityListing.html)
 
+<a name="getcallbackscallbackid"></a>
+
+## [**CallbackConversation**](CallbackConversation.html) GetCallbacksCallbackId (string callbackId)
+
+Get callback conversation
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCallbacksCallbackIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callbackId = callbackId_example;  // string | callbackId
+
+            try
+            {
+                // Get callback conversation
+                CallbackConversation result = apiInstance.GetCallbacksCallbackId(callbackId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCallbacksCallbackId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callbackId** | **string**| callbackId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CallbackConversation**](CallbackConversation.html)
+
+<a name="getcallbackscallbackidparticipantsparticipantidwrapup"></a>
+
+## [**Wrapup**](Wrapup.html) GetCallbacksCallbackIdParticipantsParticipantIdWrapup (string callbackId, string participantId, bool? provisional = null)
+
+Get the wrap-up for this conversation participant. 
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCallbacksCallbackIdParticipantsParticipantIdWrapupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callbackId = callbackId_example;  // string | callbackId
+            var participantId = participantId_example;  // string | participantId
+            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+
+            try
+            {
+                // Get the wrap-up for this conversation participant. 
+                Wrapup result = apiInstance.GetCallbacksCallbackIdParticipantsParticipantIdWrapup(callbackId, participantId, provisional);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCallbacksCallbackIdParticipantsParticipantIdWrapup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callbackId** | **string**| callbackId |  |
+| **participantId** | **string**| participantId |  |
+| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**Wrapup**](Wrapup.html)
+
+<a name="getcallbackscallbackidparticipantsparticipantidwrapupcodes"></a>
+
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes (string callbackId, string participantId)
+
+Get list of wrapup codes for this conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callbackId = callbackId_example;  // string | callbackId
+            var participantId = participantId_example;  // string | participantId
+
+            try
+            {
+                // Get list of wrapup codes for this conversation participant
+                List&lt;WrapupCode&gt; result = apiInstance.GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes(callbackId, participantId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCallbacksCallbackIdParticipantsParticipantIdWrapupcodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callbackId** | **string**| callbackId |  |
+| **participantId** | **string**| participantId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<WrapupCode>**](WrapupCode.html)
+
 <a name="getcalls"></a>
 
 ## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetCalls ()
@@ -698,6 +533,180 @@ This endpoint does require any parameters.
 ### Return type
 
 [**CallConversationEntityListing**](CallConversationEntityListing.html)
+
+<a name="getcallscallid"></a>
+
+## [**CallConversation**](CallConversation.html) GetCallsCallId (string callId)
+
+Get call conversation
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCallsCallIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+
+            try
+            {
+                // Get call conversation
+                CallConversation result = apiInstance.GetCallsCallId(callId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCallsCallId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CallConversation**](CallConversation.html)
+
+<a name="getcallscallidparticipantsparticipantidwrapup"></a>
+
+## [**Wrapup**](Wrapup.html) GetCallsCallIdParticipantsParticipantIdWrapup (string callId, string participantId, bool? provisional = null)
+
+Get the wrap-up for this conversation participant. 
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCallsCallIdParticipantsParticipantIdWrapupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
+            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+
+            try
+            {
+                // Get the wrap-up for this conversation participant. 
+                Wrapup result = apiInstance.GetCallsCallIdParticipantsParticipantIdWrapup(callId, participantId, provisional);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCallsCallIdParticipantsParticipantIdWrapup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
+| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**Wrapup**](Wrapup.html)
+
+<a name="getcallscallidparticipantsparticipantidwrapupcodes"></a>
+
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetCallsCallIdParticipantsParticipantIdWrapupcodes (string callId, string participantId)
+
+Get list of wrapup codes for this conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCallsCallIdParticipantsParticipantIdWrapupcodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
+
+            try
+            {
+                // Get list of wrapup codes for this conversation participant
+                List&lt;WrapupCode&gt; result = apiInstance.GetCallsCallIdParticipantsParticipantIdWrapupcodes(callId, participantId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCallsCallIdParticipantsParticipantIdWrapupcodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<WrapupCode>**](WrapupCode.html)
 
 <a name="getcallshistory"></a>
 
@@ -810,180 +819,6 @@ This endpoint does require any parameters.
 
 [**MaxParticipants**](MaxParticipants.html)
 
-<a name="getchat"></a>
-
-## [**ChatConversation**](ChatConversation.html) GetChat (string chatId)
-
-Get chat conversation
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetChatExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
-
-            try
-            {
-                // Get chat conversation
-                ChatConversation result = apiInstance.GetChat(chatId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetChat: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ChatConversation**](ChatConversation.html)
-
-<a name="getchatparticipantwrapup"></a>
-
-## [**Wrapup**](Wrapup.html) GetChatParticipantWrapup (string chatId, string participantId, bool? provisional = null)
-
-Get the wrap-up for this conversation participant. 
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetChatParticipantWrapupExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
-            var participantId = participantId_example;  // string | participantId
-            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
-
-            try
-            {
-                // Get the wrap-up for this conversation participant. 
-                Wrapup result = apiInstance.GetChatParticipantWrapup(chatId, participantId, provisional);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetChatParticipantWrapup: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
-| **participantId** | **string**| participantId |  |
-| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-[**Wrapup**](Wrapup.html)
-
-<a name="getchatparticipantwrapupcodes"></a>
-
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetChatParticipantWrapupcodes (string chatId, string participantId)
-
-Get list of wrapup codes for this conversation participant
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetChatParticipantWrapupcodesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
-            var participantId = participantId_example;  // string | participantId
-
-            try
-            {
-                // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetChatParticipantWrapupcodes(chatId, participantId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetChatParticipantWrapupcodes: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
-| **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**List<WrapupCode>**](WrapupCode.html)
-
 <a name="getchats"></a>
 
 ## [**ChatConversationEntityListing**](ChatConversationEntityListing.html) GetChats ()
@@ -1035,9 +870,408 @@ This endpoint does require any parameters.
 
 [**ChatConversationEntityListing**](ChatConversationEntityListing.html)
 
-<a name="getconversation"></a>
+<a name="getchatschatid"></a>
 
-## [**Conversation**](Conversation.html) GetConversation (string conversationId)
+## [**ChatConversation**](ChatConversation.html) GetChatsChatId (string chatId)
+
+Get chat conversation
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetChatsChatIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var chatId = chatId_example;  // string | chatId
+
+            try
+            {
+                // Get chat conversation
+                ChatConversation result = apiInstance.GetChatsChatId(chatId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetChatsChatId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **chatId** | **string**| chatId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ChatConversation**](ChatConversation.html)
+
+<a name="getchatschatidparticipantsparticipantidwrapup"></a>
+
+## [**Wrapup**](Wrapup.html) GetChatsChatIdParticipantsParticipantIdWrapup (string chatId, string participantId, bool? provisional = null)
+
+Get the wrap-up for this conversation participant. 
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetChatsChatIdParticipantsParticipantIdWrapupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var chatId = chatId_example;  // string | chatId
+            var participantId = participantId_example;  // string | participantId
+            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+
+            try
+            {
+                // Get the wrap-up for this conversation participant. 
+                Wrapup result = apiInstance.GetChatsChatIdParticipantsParticipantIdWrapup(chatId, participantId, provisional);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetChatsChatIdParticipantsParticipantIdWrapup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **chatId** | **string**| chatId |  |
+| **participantId** | **string**| participantId |  |
+| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**Wrapup**](Wrapup.html)
+
+<a name="getchatschatidparticipantsparticipantidwrapupcodes"></a>
+
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetChatsChatIdParticipantsParticipantIdWrapupcodes (string chatId, string participantId)
+
+Get list of wrapup codes for this conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetChatsChatIdParticipantsParticipantIdWrapupcodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var chatId = chatId_example;  // string | chatId
+            var participantId = participantId_example;  // string | participantId
+
+            try
+            {
+                // Get list of wrapup codes for this conversation participant
+                List&lt;WrapupCode&gt; result = apiInstance.GetChatsChatIdParticipantsParticipantIdWrapupcodes(chatId, participantId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetChatsChatIdParticipantsParticipantIdWrapupcodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **chatId** | **string**| chatId |  |
+| **participantId** | **string**| participantId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<WrapupCode>**](WrapupCode.html)
+
+<a name="getcobrowsesessions"></a>
+
+## [**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html) GetCobrowsesessions ()
+
+Get recent cobrowse conversations
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCobrowsesessionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+
+            try
+            {
+                // Get recent cobrowse conversations
+                CobrowseConversationEntityListing result = apiInstance.GetCobrowsesessions();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCobrowsesessions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html)
+
+<a name="getcobrowsesessionscobrowseid"></a>
+
+## [**CobrowseConversation**](CobrowseConversation.html) GetCobrowsesessionsCobrowseId (string cobrowseId)
+
+Get cobrowse conversation
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCobrowsesessionsCobrowseIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+
+            try
+            {
+                // Get cobrowse conversation
+                CobrowseConversation result = apiInstance.GetCobrowsesessionsCobrowseId(cobrowseId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCobrowsesessionsCobrowseId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CobrowseConversation**](CobrowseConversation.html)
+
+<a name="getcobrowsesessionscobrowseidparticipantsparticipantidwrapup"></a>
+
+## [**Wrapup**](Wrapup.html) GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup (string cobrowseId, string participantId, bool? provisional = null)
+
+Get the wrap-up for this conversation participant. 
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+
+            try
+            {
+                // Get the wrap-up for this conversation participant. 
+                Wrapup result = apiInstance.GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup(cobrowseId, participantId, provisional);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**Wrapup**](Wrapup.html)
+
+<a name="getcobrowsesessionscobrowseidparticipantsparticipantidwrapupcodes"></a>
+
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes (string cobrowseId, string participantId)
+
+Get list of wrapup codes for this conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+
+            try
+            {
+                // Get list of wrapup codes for this conversation participant
+                List&lt;WrapupCode&gt; result = apiInstance.GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes(cobrowseId, participantId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetCobrowsesessionsCobrowseIdParticipantsParticipantIdWrapupcodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<WrapupCode>**](WrapupCode.html)
+
+<a name="getconversationid"></a>
+
+## [**Conversation**](Conversation.html) GetConversationId (string conversationId)
 
 Get conversation
 
@@ -1053,7 +1287,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetConversationExample
+    public class GetConversationIdExample
     {
         public void main()
         {
@@ -1067,12 +1301,12 @@ namespace Example
             try
             {
                 // Get conversation
-                Conversation result = apiInstance.GetConversation(conversationId);
+                Conversation result = apiInstance.GetConversationId(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.GetConversation: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.GetConversationId: " + e.Message );
             }
         }
     }
@@ -1091,65 +1325,9 @@ namespace Example
 
 [**Conversation**](Conversation.html)
 
-<a name="getconversationdetails"></a>
+<a name="getconversationidparticipantsparticipantidwrapup"></a>
 
-## [**AnalyticsConversation**](AnalyticsConversation.html) GetConversationDetails (string conversationId)
-
-Get a conversation by id
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetConversationDetailsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var conversationId = conversationId_example;  // string | conversationId
-
-            try
-            {
-                // Get a conversation by id
-                AnalyticsConversation result = apiInstance.GetConversationDetails(conversationId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetConversationDetails: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**AnalyticsConversation**](AnalyticsConversation.html)
-
-<a name="getconversationparticipantwrapup"></a>
-
-## [**WrapupCode**](WrapupCode.html) GetConversationParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## [**WrapupCode**](WrapupCode.html) GetConversationIdParticipantsParticipantIdWrapup (string conversationId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
 
@@ -1165,7 +1343,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetConversationParticipantWrapupExample
+    public class GetConversationIdParticipantsParticipantIdWrapupExample
     {
         public void main()
         {
@@ -1181,12 +1359,12 @@ namespace Example
             try
             {
                 // Get the wrap-up for this conversation participant. 
-                WrapupCode result = apiInstance.GetConversationParticipantWrapup(conversationId, participantId, provisional);
+                WrapupCode result = apiInstance.GetConversationIdParticipantsParticipantIdWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.GetConversationParticipantWrapup: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.GetConversationIdParticipantsParticipantIdWrapup: " + e.Message );
             }
         }
     }
@@ -1207,9 +1385,9 @@ namespace Example
 
 [**WrapupCode**](WrapupCode.html)
 
-<a name="getconversationparticipantwrapupcodes"></a>
+<a name="getconversationidparticipantsparticipantidwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationParticipantWrapupcodes (string conversationId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationIdParticipantsParticipantIdWrapupcodes (string conversationId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -1225,7 +1403,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetConversationParticipantWrapupcodesExample
+    public class GetConversationIdParticipantsParticipantIdWrapupcodesExample
     {
         public void main()
         {
@@ -1240,12 +1418,12 @@ namespace Example
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationParticipantWrapupcodes(conversationId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetConversationIdParticipantsParticipantIdWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.GetConversationParticipantWrapupcodes: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.GetConversationIdParticipantsParticipantIdWrapupcodes: " + e.Message );
             }
         }
     }
@@ -1321,67 +1499,11 @@ namespace Example
 
 [**ConversationEntityListing**](ConversationEntityListing.html)
 
-<a name="getemail"></a>
+<a name="getconversationsconversationiddetails"></a>
 
-## [**EmailConversation**](EmailConversation.html) GetEmail (string emailId)
+## [**AnalyticsConversation**](AnalyticsConversation.html) GetConversationsConversationIdDetails (string conversationId)
 
-Get email conversation
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetEmailExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
-
-            try
-            {
-                // Get email conversation
-                EmailConversation result = apiInstance.GetEmail(emailId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetEmail: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**EmailConversation**](EmailConversation.html)
-
-<a name="getemailmessage"></a>
-
-## [**EmailMessage**](EmailMessage.html) GetEmailMessage (string emailId, string messageId)
-
-Get conversation message
+Get a conversation by id
 
 
 
@@ -1395,7 +1517,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetEmailMessageExample
+    public class GetConversationsConversationIdDetailsExample
     {
         public void main()
         {
@@ -1404,18 +1526,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
-            var messageId = messageId_example;  // string | messageId
+            var conversationId = conversationId_example;  // string | conversationId
 
             try
             {
-                // Get conversation message
-                EmailMessage result = apiInstance.GetEmailMessage(emailId, messageId);
+                // Get a conversation by id
+                AnalyticsConversation result = apiInstance.GetConversationsConversationIdDetails(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.GetEmailMessage: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsConversationIdDetails: " + e.Message );
             }
         }
     }
@@ -1427,243 +1548,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
-| **messageId** | **string**| messageId |  |
+| **conversationId** | **string**| conversationId |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.html)
-
-<a name="getemailmessages"></a>
-
-## [**EmailMessageListing**](EmailMessageListing.html) GetEmailMessages (string emailId)
-
-Get conversation messages
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetEmailMessagesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
-
-            try
-            {
-                // Get conversation messages
-                EmailMessageListing result = apiInstance.GetEmailMessages(emailId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetEmailMessages: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**EmailMessageListing**](EmailMessageListing.html)
-
-<a name="getemailmessagesdraft"></a>
-
-## [**EmailMessage**](EmailMessage.html) GetEmailMessagesDraft (string emailId)
-
-Get conversation draft reply
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetEmailMessagesDraftExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
-
-            try
-            {
-                // Get conversation draft reply
-                EmailMessage result = apiInstance.GetEmailMessagesDraft(emailId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetEmailMessagesDraft: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**EmailMessage**](EmailMessage.html)
-
-<a name="getemailparticipantwrapup"></a>
-
-## [**Wrapup**](Wrapup.html) GetEmailParticipantWrapup (string emailId, string participantId, bool? provisional = null)
-
-Get the wrap-up for this conversation participant. 
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetEmailParticipantWrapupExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
-            var participantId = participantId_example;  // string | participantId
-            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
-
-            try
-            {
-                // Get the wrap-up for this conversation participant. 
-                Wrapup result = apiInstance.GetEmailParticipantWrapup(emailId, participantId, provisional);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetEmailParticipantWrapup: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
-| **participantId** | **string**| participantId |  |
-| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-[**Wrapup**](Wrapup.html)
-
-<a name="getemailparticipantwrapupcodes"></a>
-
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetEmailParticipantWrapupcodes (string emailId, string participantId)
-
-Get list of wrapup codes for this conversation participant
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetEmailParticipantWrapupcodesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
-            var participantId = participantId_example;  // string | participantId
-
-            try
-            {
-                // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetEmailParticipantWrapupcodes(emailId, participantId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetEmailParticipantWrapupcodes: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
-| **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**List<WrapupCode>**](WrapupCode.html)
+[**AnalyticsConversation**](AnalyticsConversation.html)
 
 <a name="getemails"></a>
 
@@ -1716,11 +1606,11 @@ This endpoint does require any parameters.
 
 [**EmailConversationEntityListing**](EmailConversationEntityListing.html)
 
-<a name="patchcall"></a>
+<a name="getemailsemailid"></a>
 
-## [**Conversation**](Conversation.html) PatchCall (string callId, Conversation body)
+## [**EmailConversation**](EmailConversation.html) GetEmailsEmailId (string emailId)
 
-Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+Get email conversation
 
 
 
@@ -1734,7 +1624,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchCallExample
+    public class GetEmailsEmailIdExample
     {
         public void main()
         {
@@ -1743,18 +1633,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var body = new Conversation(); // Conversation | Conversation
+            var emailId = emailId_example;  // string | emailId
 
             try
             {
-                // Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
-                Conversation result = apiInstance.PatchCall(callId, body);
+                // Get email conversation
+                EmailConversation result = apiInstance.GetEmailsEmailId(emailId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchCall: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.GetEmailsEmailId: " + e.Message );
             }
         }
     }
@@ -1766,19 +1655,18 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation |  |
+| **emailId** | **string**| emailId |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**Conversation**](Conversation.html)
+[**EmailConversation**](EmailConversation.html)
 
-<a name="patchcallparticipant"></a>
+<a name="getemailsemailidmessages"></a>
 
-## void PatchCallParticipant (string callId, string participantId, MediaParticipantRequest body)
+## [**EmailMessageListing**](EmailMessageListing.html) GetEmailsEmailIdMessages (string emailId)
 
-Update conversation participant
+Get conversation messages
 
 
 
@@ -1792,7 +1680,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchCallParticipantExample
+    public class GetEmailsEmailIdMessagesExample
     {
         public void main()
         {
@@ -1801,198 +1689,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var participantId = participantId_example;  // string | participantId
-            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant request
+            var emailId = emailId_example;  // string | emailId
 
             try
             {
-                // Update conversation participant
-                apiInstance.PatchCallParticipant(callId, participantId, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.PatchCallParticipant: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **participantId** | **string**| participantId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant request |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="patchcallparticipantattributes"></a>
-
-## void PatchCallParticipantAttributes (string callId, string participantId, ParticipantAttributes body)
-
-Update the attributes on a conversation participant.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PatchCallParticipantAttributesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var participantId = participantId_example;  // string | participantId
-            var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
-
-            try
-            {
-                // Update the attributes on a conversation participant.
-                apiInstance.PatchCallParticipantAttributes(callId, participantId, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.PatchCallParticipantAttributes: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **participantId** | **string**| participantId |  |
-| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="patchcallparticipantcommunication"></a>
-
-## void PatchCallParticipantCommunication (string callId, string participantId, string communicationId, MediaParticipantRequest body)
-
-Update conversation participant's communication by disconnecting it.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PatchCallParticipantCommunicationExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var participantId = participantId_example;  // string | participantId
-            var communicationId = communicationId_example;  // string | communicationId
-            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
-
-            try
-            {
-                // Update conversation participant's communication by disconnecting it.
-                apiInstance.PatchCallParticipantCommunication(callId, participantId, communicationId, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.PatchCallParticipantCommunication: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **participantId** | **string**| participantId |  |
-| **communicationId** | **string**| communicationId |  |
-| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="patchcallparticipantconsult"></a>
-
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PatchCallParticipantConsult (string callId, string participantId, ConsultTransferUpdate body)
-
-Change who can speak
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PatchCallParticipantConsultExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var participantId = participantId_example;  // string | participantId
-            var body = new ConsultTransferUpdate(); // ConsultTransferUpdate | new speak to
-
-            try
-            {
-                // Change who can speak
-                ConsultTransferResponse result = apiInstance.PatchCallParticipantConsult(callId, participantId, body);
+                // Get conversation messages
+                EmailMessageListing result = apiInstance.GetEmailsEmailIdMessages(emailId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchCallParticipantConsult: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.GetEmailsEmailIdMessages: " + e.Message );
             }
         }
     }
@@ -2004,18 +1711,248 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **participantId** | **string**| participantId |  |
-| **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate.html)| new speak to |  |
+| **emailId** | **string**| emailId |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**ConsultTransferResponse**](ConsultTransferResponse.html)
+[**EmailMessageListing**](EmailMessageListing.html)
 
-<a name="patchcallback"></a>
+<a name="getemailsemailidmessagesdraft"></a>
 
-## [**Conversation**](Conversation.html) PatchCallback (string callbackId, Conversation body)
+## [**EmailMessage**](EmailMessage.html) GetEmailsEmailIdMessagesDraft (string emailId)
+
+Get conversation draft reply
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetEmailsEmailIdMessagesDraftExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var emailId = emailId_example;  // string | emailId
+
+            try
+            {
+                // Get conversation draft reply
+                EmailMessage result = apiInstance.GetEmailsEmailIdMessagesDraft(emailId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetEmailsEmailIdMessagesDraft: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailId** | **string**| emailId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailMessage**](EmailMessage.html)
+
+<a name="getemailsemailidmessagesmessageid"></a>
+
+## [**EmailMessage**](EmailMessage.html) GetEmailsEmailIdMessagesMessageId (string emailId, string messageId)
+
+Get conversation message
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetEmailsEmailIdMessagesMessageIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var emailId = emailId_example;  // string | emailId
+            var messageId = messageId_example;  // string | messageId
+
+            try
+            {
+                // Get conversation message
+                EmailMessage result = apiInstance.GetEmailsEmailIdMessagesMessageId(emailId, messageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetEmailsEmailIdMessagesMessageId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailId** | **string**| emailId |  |
+| **messageId** | **string**| messageId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailMessage**](EmailMessage.html)
+
+<a name="getemailsemailidparticipantsparticipantidwrapup"></a>
+
+## [**Wrapup**](Wrapup.html) GetEmailsEmailIdParticipantsParticipantIdWrapup (string emailId, string participantId, bool? provisional = null)
+
+Get the wrap-up for this conversation participant. 
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetEmailsEmailIdParticipantsParticipantIdWrapupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var emailId = emailId_example;  // string | emailId
+            var participantId = participantId_example;  // string | participantId
+            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+
+            try
+            {
+                // Get the wrap-up for this conversation participant. 
+                Wrapup result = apiInstance.GetEmailsEmailIdParticipantsParticipantIdWrapup(emailId, participantId, provisional);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetEmailsEmailIdParticipantsParticipantIdWrapup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailId** | **string**| emailId |  |
+| **participantId** | **string**| participantId |  |
+| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**Wrapup**](Wrapup.html)
+
+<a name="getemailsemailidparticipantsparticipantidwrapupcodes"></a>
+
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetEmailsEmailIdParticipantsParticipantIdWrapupcodes (string emailId, string participantId)
+
+Get list of wrapup codes for this conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetEmailsEmailIdParticipantsParticipantIdWrapupcodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var emailId = emailId_example;  // string | emailId
+            var participantId = participantId_example;  // string | participantId
+
+            try
+            {
+                // Get list of wrapup codes for this conversation participant
+                List&lt;WrapupCode&gt; result = apiInstance.GetEmailsEmailIdParticipantsParticipantIdWrapupcodes(emailId, participantId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetEmailsEmailIdParticipantsParticipantIdWrapupcodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailId** | **string**| emailId |  |
+| **participantId** | **string**| participantId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<WrapupCode>**](WrapupCode.html)
+
+<a name="patchcallbackscallbackid"></a>
+
+## [**Conversation**](Conversation.html) PatchCallbacksCallbackId (string callbackId, Conversation body)
 
 Update a conversation by disconnecting all of the participants
 
@@ -2031,7 +1968,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchCallbackExample
+    public class PatchCallbacksCallbackIdExample
     {
         public void main()
         {
@@ -2046,12 +1983,12 @@ namespace Example
             try
             {
                 // Update a conversation by disconnecting all of the participants
-                Conversation result = apiInstance.PatchCallback(callbackId, body);
+                Conversation result = apiInstance.PatchCallbacksCallbackId(callbackId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchCallback: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchCallbacksCallbackId: " + e.Message );
             }
         }
     }
@@ -2071,9 +2008,9 @@ namespace Example
 
 [**Conversation**](Conversation.html)
 
-<a name="patchcallbackparticipant"></a>
+<a name="patchcallbackscallbackidparticipantsparticipantid"></a>
 
-## void PatchCallbackParticipant (string callbackId, string participantId, MediaParticipantRequest body)
+## void PatchCallbacksCallbackIdParticipantsParticipantId (string callbackId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -2089,7 +2026,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchCallbackParticipantExample
+    public class PatchCallbacksCallbackIdParticipantsParticipantIdExample
     {
         public void main()
         {
@@ -2105,11 +2042,11 @@ namespace Example
             try
             {
                 // Update conversation participant
-                apiInstance.PatchCallbackParticipant(callbackId, participantId, body);
+                apiInstance.PatchCallbacksCallbackIdParticipantsParticipantId(callbackId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchCallbackParticipant: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchCallbacksCallbackIdParticipantsParticipantId: " + e.Message );
             }
         }
     }
@@ -2130,9 +2067,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="patchcallbackparticipantattributes"></a>
+<a name="patchcallbackscallbackidparticipantsparticipantidattributes"></a>
 
-## void PatchCallbackParticipantAttributes (string callbackId, string participantId, ParticipantAttributes body)
+## void PatchCallbacksCallbackIdParticipantsParticipantIdAttributes (string callbackId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -2148,7 +2085,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchCallbackParticipantAttributesExample
+    public class PatchCallbacksCallbackIdParticipantsParticipantIdAttributesExample
     {
         public void main()
         {
@@ -2164,11 +2101,11 @@ namespace Example
             try
             {
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchCallbackParticipantAttributes(callbackId, participantId, body);
+                apiInstance.PatchCallbacksCallbackIdParticipantsParticipantIdAttributes(callbackId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchCallbackParticipantAttributes: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchCallbacksCallbackIdParticipantsParticipantIdAttributes: " + e.Message );
             }
         }
     }
@@ -2189,9 +2126,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="patchcallbackparticipantcommunication"></a>
+<a name="patchcallbackscallbackidparticipantsparticipantidcommunicationscommunicationid"></a>
 
-## void PatchCallbackParticipantCommunication (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
+## void PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -2207,7 +2144,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchCallbackParticipantCommunicationExample
+    public class PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdExample
     {
         public void main()
         {
@@ -2224,11 +2161,11 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                apiInstance.PatchCallbackParticipantCommunication(callbackId, participantId, communicationId, body);
+                apiInstance.PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId(callbackId, participantId, communicationId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchCallbackParticipantCommunication: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId: " + e.Message );
             }
         }
     }
@@ -2250,9 +2187,306 @@ namespace Example
 
 void (empty response body)
 
-<a name="patchchat"></a>
+<a name="patchcallscallid"></a>
 
-## [**Conversation**](Conversation.html) PatchChat (string chatId, Conversation body)
+## [**Conversation**](Conversation.html) PatchCallsCallId (string callId, Conversation body)
+
+Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCallsCallIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var body = new Conversation(); // Conversation | Conversation
+
+            try
+            {
+                // Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+                Conversation result = apiInstance.PatchCallsCallId(callId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCallsCallId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **body** | [**Conversation**](Conversation.html)| Conversation |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Conversation**](Conversation.html)
+
+<a name="patchcallscallidparticipantsparticipantid"></a>
+
+## void PatchCallsCallIdParticipantsParticipantId (string callId, string participantId, MediaParticipantRequest body)
+
+Update conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCallsCallIdParticipantsParticipantIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant request
+
+            try
+            {
+                // Update conversation participant
+                apiInstance.PatchCallsCallIdParticipantsParticipantId(callId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCallsCallIdParticipantsParticipantId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchcallscallidparticipantsparticipantidattributes"></a>
+
+## void PatchCallsCallIdParticipantsParticipantIdAttributes (string callId, string participantId, ParticipantAttributes body)
+
+Update the attributes on a conversation participant.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCallsCallIdParticipantsParticipantIdAttributesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
+
+            try
+            {
+                // Update the attributes on a conversation participant.
+                apiInstance.PatchCallsCallIdParticipantsParticipantIdAttributes(callId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCallsCallIdParticipantsParticipantIdAttributes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchcallscallidparticipantsparticipantidcommunicationscommunicationid"></a>
+
+## void PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId (string callId, string participantId, string communicationId, MediaParticipantRequest body)
+
+Update conversation participant's communication by disconnecting it.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
+            var communicationId = communicationId_example;  // string | communicationId
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+
+            try
+            {
+                // Update conversation participant's communication by disconnecting it.
+                apiInstance.PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId(callId, participantId, communicationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchcallscallidparticipantsparticipantidconsult"></a>
+
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) PatchCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransferUpdate body)
+
+Change who can speak
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCallsCallIdParticipantsParticipantIdConsultExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ConsultTransferUpdate(); // ConsultTransferUpdate | new speak to
+
+            try
+            {
+                // Change who can speak
+                ConsultTransferResponse result = apiInstance.PatchCallsCallIdParticipantsParticipantIdConsult(callId, participantId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCallsCallIdParticipantsParticipantIdConsult: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate.html)| new speak to |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="patchchatschatid"></a>
+
+## [**Conversation**](Conversation.html) PatchChatsChatId (string chatId, Conversation body)
 
 Update a conversation by disconnecting all of the participants
 
@@ -2268,7 +2502,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchChatExample
+    public class PatchChatsChatIdExample
     {
         public void main()
         {
@@ -2283,12 +2517,12 @@ namespace Example
             try
             {
                 // Update a conversation by disconnecting all of the participants
-                Conversation result = apiInstance.PatchChat(chatId, body);
+                Conversation result = apiInstance.PatchChatsChatId(chatId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchChat: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchChatsChatId: " + e.Message );
             }
         }
     }
@@ -2308,9 +2542,9 @@ namespace Example
 
 [**Conversation**](Conversation.html)
 
-<a name="patchchatparticipant"></a>
+<a name="patchchatschatidparticipantsparticipantid"></a>
 
-## void PatchChatParticipant (string chatId, string participantId, MediaParticipantRequest body)
+## void PatchChatsChatIdParticipantsParticipantId (string chatId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -2326,7 +2560,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchChatParticipantExample
+    public class PatchChatsChatIdParticipantsParticipantIdExample
     {
         public void main()
         {
@@ -2342,11 +2576,11 @@ namespace Example
             try
             {
                 // Update conversation participant
-                apiInstance.PatchChatParticipant(chatId, participantId, body);
+                apiInstance.PatchChatsChatIdParticipantsParticipantId(chatId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchChatParticipant: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchChatsChatIdParticipantsParticipantId: " + e.Message );
             }
         }
     }
@@ -2367,9 +2601,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="patchchatparticipantattributes"></a>
+<a name="patchchatschatidparticipantsparticipantidattributes"></a>
 
-## void PatchChatParticipantAttributes (string chatId, string participantId, ParticipantAttributes body)
+## void PatchChatsChatIdParticipantsParticipantIdAttributes (string chatId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -2385,7 +2619,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchChatParticipantAttributesExample
+    public class PatchChatsChatIdParticipantsParticipantIdAttributesExample
     {
         public void main()
         {
@@ -2401,11 +2635,11 @@ namespace Example
             try
             {
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchChatParticipantAttributes(chatId, participantId, body);
+                apiInstance.PatchChatsChatIdParticipantsParticipantIdAttributes(chatId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchChatParticipantAttributes: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchChatsChatIdParticipantsParticipantIdAttributes: " + e.Message );
             }
         }
     }
@@ -2426,9 +2660,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="patchchatparticipantcommunication"></a>
+<a name="patchchatschatidparticipantsparticipantidcommunicationscommunicationid"></a>
 
-## void PatchChatParticipantCommunication (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
+## void PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -2444,7 +2678,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchChatParticipantCommunicationExample
+    public class PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdExample
     {
         public void main()
         {
@@ -2461,11 +2695,11 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                apiInstance.PatchChatParticipantCommunication(chatId, participantId, communicationId, body);
+                apiInstance.PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId(chatId, participantId, communicationId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchChatParticipantCommunication: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId: " + e.Message );
             }
         }
     }
@@ -2487,9 +2721,246 @@ namespace Example
 
 void (empty response body)
 
-<a name="patchconversationparticipant"></a>
+<a name="patchcobrowsesessionscobrowseid"></a>
 
-## void PatchConversationParticipant (string conversationId, string participantId, MediaParticipantRequest body)
+## [**Conversation**](Conversation.html) PatchCobrowsesessionsCobrowseId (string cobrowseId, Conversation body)
+
+Update a conversation by disconnecting all of the participants
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCobrowsesessionsCobrowseIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var body = new Conversation(); // Conversation | Conversation
+
+            try
+            {
+                // Update a conversation by disconnecting all of the participants
+                Conversation result = apiInstance.PatchCobrowsesessionsCobrowseId(cobrowseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCobrowsesessionsCobrowseId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **body** | [**Conversation**](Conversation.html)| Conversation |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Conversation**](Conversation.html)
+
+<a name="patchcobrowsesessionscobrowseidparticipantsparticipantid"></a>
+
+## void PatchCobrowsesessionsCobrowseIdParticipantsParticipantId (string cobrowseId, string participantId, MediaParticipantRequest body = null)
+
+Update conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
+
+            try
+            {
+                // Update conversation participant
+                apiInstance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantId(cobrowseId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCobrowsesessionsCobrowseIdParticipantsParticipantId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchcobrowsesessionscobrowseidparticipantsparticipantidattributes"></a>
+
+## void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes (string cobrowseId, string participantId, ParticipantAttributes body = null)
+
+Update the attributes on a conversation participant.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
+
+            try
+            {
+                // Update the attributes on a conversation participant.
+                apiInstance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes(cobrowseId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdAttributes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchcobrowsesessionscobrowseidparticipantsparticipantidcommunicationscommunicationid"></a>
+
+## void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+
+Update conversation participant's communication by disconnecting it.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+            var communicationId = communicationId_example;  // string | communicationId
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+
+            try
+            {
+                // Update conversation participant's communication by disconnecting it.
+                apiInstance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId(cobrowseId, participantId, communicationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchconversationidparticipantsparticipantid"></a>
+
+## void PatchConversationIdParticipantsParticipantId (string conversationId, string participantId, MediaParticipantRequest body)
 
 Update a participant.
 
@@ -2505,7 +2976,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchConversationParticipantExample
+    public class PatchConversationIdParticipantsParticipantIdExample
     {
         public void main()
         {
@@ -2521,11 +2992,11 @@ namespace Example
             try
             {
                 // Update a participant.
-                apiInstance.PatchConversationParticipant(conversationId, participantId, body);
+                apiInstance.PatchConversationIdParticipantsParticipantId(conversationId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchConversationParticipant: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationIdParticipantsParticipantId: " + e.Message );
             }
         }
     }
@@ -2546,9 +3017,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="patchconversationparticipantattributes"></a>
+<a name="patchconversationidparticipantsparticipantidattributes"></a>
 
-## void PatchConversationParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
+## void PatchConversationIdParticipantsParticipantIdAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -2564,7 +3035,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchConversationParticipantAttributesExample
+    public class PatchConversationIdParticipantsParticipantIdAttributesExample
     {
         public void main()
         {
@@ -2580,11 +3051,11 @@ namespace Example
             try
             {
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationParticipantAttributes(conversationId, participantId, body);
+                apiInstance.PatchConversationIdParticipantsParticipantIdAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchConversationParticipantAttributes: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationIdParticipantsParticipantIdAttributes: " + e.Message );
             }
         }
     }
@@ -2605,9 +3076,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="patchemail"></a>
+<a name="patchemailsemailid"></a>
 
-## [**Conversation**](Conversation.html) PatchEmail (string emailId, Conversation body)
+## [**Conversation**](Conversation.html) PatchEmailsEmailId (string emailId, Conversation body)
 
 Update a conversation by disconnecting all of the participants
 
@@ -2623,7 +3094,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchEmailExample
+    public class PatchEmailsEmailIdExample
     {
         public void main()
         {
@@ -2638,12 +3109,12 @@ namespace Example
             try
             {
                 // Update a conversation by disconnecting all of the participants
-                Conversation result = apiInstance.PatchEmail(emailId, body);
+                Conversation result = apiInstance.PatchEmailsEmailId(emailId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchEmail: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchEmailsEmailId: " + e.Message );
             }
         }
     }
@@ -2663,9 +3134,9 @@ namespace Example
 
 [**Conversation**](Conversation.html)
 
-<a name="patchemailparticipant"></a>
+<a name="patchemailsemailidparticipantsparticipantid"></a>
 
-## void PatchEmailParticipant (string emailId, string participantId, MediaParticipantRequest body)
+## void PatchEmailsEmailIdParticipantsParticipantId (string emailId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -2681,7 +3152,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchEmailParticipantExample
+    public class PatchEmailsEmailIdParticipantsParticipantIdExample
     {
         public void main()
         {
@@ -2697,11 +3168,11 @@ namespace Example
             try
             {
                 // Update conversation participant
-                apiInstance.PatchEmailParticipant(emailId, participantId, body);
+                apiInstance.PatchEmailsEmailIdParticipantsParticipantId(emailId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchEmailParticipant: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchEmailsEmailIdParticipantsParticipantId: " + e.Message );
             }
         }
     }
@@ -2722,9 +3193,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="patchemailparticipantattributes"></a>
+<a name="patchemailsemailidparticipantsparticipantidattributes"></a>
 
-## void PatchEmailParticipantAttributes (string emailId, string participantId, ParticipantAttributes body)
+## void PatchEmailsEmailIdParticipantsParticipantIdAttributes (string emailId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -2740,7 +3211,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchEmailParticipantAttributesExample
+    public class PatchEmailsEmailIdParticipantsParticipantIdAttributesExample
     {
         public void main()
         {
@@ -2756,11 +3227,11 @@ namespace Example
             try
             {
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchEmailParticipantAttributes(emailId, participantId, body);
+                apiInstance.PatchEmailsEmailIdParticipantsParticipantIdAttributes(emailId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PatchEmailParticipantAttributes: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PatchEmailsEmailIdParticipantsParticipantIdAttributes: " + e.Message );
             }
         }
     }
@@ -2775,357 +3246,6 @@ namespace Example
 | **emailId** | **string**| emailId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="postcall"></a>
-
-## [**Conversation**](Conversation.html) PostCall (string callId, CallCommand body)
-
-Add a new call to a conversation
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostCallExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var body = new CallCommand(); // CallCommand | Conversation
-
-            try
-            {
-                // Add a new call to a conversation
-                Conversation result = apiInstance.PostCall(callId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.PostCall: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **body** | [**CallCommand**](CallCommand.html)| Conversation |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Conversation**](Conversation.html)
-
-<a name="postcallparticipantconsult"></a>
-
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostCallParticipantConsult (string callId, string participantId, ConsultTransfer body)
-
-Initiate and update consult transfer
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostCallParticipantConsultExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var participantId = participantId_example;  // string | participantId
-            var body = new ConsultTransfer(); // ConsultTransfer | Destination address & initial speak to
-
-            try
-            {
-                // Initiate and update consult transfer
-                ConsultTransferResponse result = apiInstance.PostCallParticipantConsult(callId, participantId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.PostCallParticipantConsult: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **participantId** | **string**| participantId |  |
-| **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address &amp; initial speak to |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ConsultTransferResponse**](ConsultTransferResponse.html)
-
-<a name="postcallparticipantmonitor"></a>
-
-## void PostCallParticipantMonitor (string callId, string participantId)
-
-Listen in on the conversation from the point of view of a given participant.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostCallParticipantMonitorExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var participantId = participantId_example;  // string | participantId
-
-            try
-            {
-                // Listen in on the conversation from the point of view of a given participant.
-                apiInstance.PostCallParticipantMonitor(callId, participantId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.PostCallParticipantMonitor: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="postcallparticipantreplace"></a>
-
-## void PostCallParticipantReplace (string callId, string participantId, TransferRequest body)
-
-Replace this participant with the specified user and/or address
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostCallParticipantReplaceExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var participantId = participantId_example;  // string | participantId
-            var body = new TransferRequest(); // TransferRequest | Transfer request
-
-            try
-            {
-                // Replace this participant with the specified user and/or address
-                apiInstance.PostCallParticipantReplace(callId, participantId, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.PostCallParticipantReplace: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **participantId** | **string**| participantId |  |
-| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="postcallparticipants"></a>
-
-## [**Conversation**](Conversation.html) PostCallParticipants (string callId, Conversation body)
-
-Add participants to a conversation
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostCallParticipantsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
-            var body = new Conversation(); // Conversation | Conversation
-
-            try
-            {
-                // Add participants to a conversation
-                Conversation result = apiInstance.PostCallParticipants(callId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.PostCallParticipants: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
-| **body** | [**Conversation**](Conversation.html)| Conversation |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Conversation**](Conversation.html)
-
-<a name="postcallbackparticipantreplace"></a>
-
-## void PostCallbackParticipantReplace (string callbackId, string participantId, TransferRequest body)
-
-Replace this participant with the specified user and/or address
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostCallbackParticipantReplaceExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
-            var participantId = participantId_example;  // string | participantId
-            var body = new TransferRequest(); // TransferRequest | Transfer request
-
-            try
-            {
-                // Replace this participant with the specified user and/or address
-                apiInstance.PostCallbackParticipantReplace(callbackId, participantId, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.PostCallbackParticipantReplace: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
-| **participantId** | **string**| participantId |  |
-| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3188,6 +3308,65 @@ namespace Example
 
 [**CreateCallbackResponse**](CreateCallbackResponse.html)
 
+<a name="postcallbackscallbackidparticipantsparticipantidreplace"></a>
+
+## void PostCallbacksCallbackIdParticipantsParticipantIdReplace (string callbackId, string participantId, TransferRequest body)
+
+Replace this participant with the specified user and/or address
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCallbacksCallbackIdParticipantsParticipantIdReplaceExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callbackId = callbackId_example;  // string | callbackId
+            var participantId = participantId_example;  // string | participantId
+            var body = new TransferRequest(); // TransferRequest | Transfer request
+
+            try
+            {
+                // Replace this participant with the specified user and/or address
+                apiInstance.PostCallbacksCallbackIdParticipantsParticipantIdReplace(callbackId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostCallbacksCallbackIdParticipantsParticipantIdReplace: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callbackId** | **string**| callbackId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postcalls"></a>
 
 ## [**CreateCallResponse**](CreateCallResponse.html) PostCalls (CreateCallRequest body)
@@ -3244,9 +3423,242 @@ namespace Example
 
 [**CreateCallResponse**](CreateCallResponse.html)
 
-<a name="postchatparticipantreplace"></a>
+<a name="postcallscallid"></a>
 
-## void PostChatParticipantReplace (string chatId, string participantId, TransferRequest body)
+## [**Conversation**](Conversation.html) PostCallsCallId (string callId, CallCommand body)
+
+Add a new call to a conversation
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCallsCallIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var body = new CallCommand(); // CallCommand | Conversation
+
+            try
+            {
+                // Add a new call to a conversation
+                Conversation result = apiInstance.PostCallsCallId(callId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostCallsCallId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **body** | [**CallCommand**](CallCommand.html)| Conversation |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Conversation**](Conversation.html)
+
+<a name="postcallscallidparticipants"></a>
+
+## [**Conversation**](Conversation.html) PostCallsCallIdParticipants (string callId, Conversation body)
+
+Add participants to a conversation
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCallsCallIdParticipantsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var body = new Conversation(); // Conversation | Conversation
+
+            try
+            {
+                // Add participants to a conversation
+                Conversation result = apiInstance.PostCallsCallIdParticipants(callId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostCallsCallIdParticipants: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **body** | [**Conversation**](Conversation.html)| Conversation |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Conversation**](Conversation.html)
+
+<a name="postcallscallidparticipantsparticipantidconsult"></a>
+
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostCallsCallIdParticipantsParticipantIdConsult (string callId, string participantId, ConsultTransfer body)
+
+Initiate and update consult transfer
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCallsCallIdParticipantsParticipantIdConsultExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ConsultTransfer(); // ConsultTransfer | Destination address & initial speak to
+
+            try
+            {
+                // Initiate and update consult transfer
+                ConsultTransferResponse result = apiInstance.PostCallsCallIdParticipantsParticipantIdConsult(callId, participantId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostCallsCallIdParticipantsParticipantIdConsult: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address &amp; initial speak to |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse.html)
+
+<a name="postcallscallidparticipantsparticipantidmonitor"></a>
+
+## void PostCallsCallIdParticipantsParticipantIdMonitor (string callId, string participantId)
+
+Listen in on the conversation from the point of view of a given participant.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCallsCallIdParticipantsParticipantIdMonitorExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
+
+            try
+            {
+                // Listen in on the conversation from the point of view of a given participant.
+                apiInstance.PostCallsCallIdParticipantsParticipantIdMonitor(callId, participantId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostCallsCallIdParticipantsParticipantIdMonitor: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postcallscallidparticipantsparticipantidreplace"></a>
+
+## void PostCallsCallIdParticipantsParticipantIdReplace (string callId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -3262,7 +3674,66 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostChatParticipantReplaceExample
+    public class PostCallsCallIdParticipantsParticipantIdReplaceExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var callId = callId_example;  // string | callId
+            var participantId = participantId_example;  // string | participantId
+            var body = new TransferRequest(); // TransferRequest | Transfer request
+
+            try
+            {
+                // Replace this participant with the specified user and/or address
+                apiInstance.PostCallsCallIdParticipantsParticipantIdReplace(callId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostCallsCallIdParticipantsParticipantIdReplace: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **callId** | **string**| callId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postchatschatidparticipantsparticipantidreplace"></a>
+
+## void PostChatsChatIdParticipantsParticipantIdReplace (string chatId, string participantId, TransferRequest body)
+
+Replace this participant with the specified user and/or address
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostChatsChatIdParticipantsParticipantIdReplaceExample
     {
         public void main()
         {
@@ -3278,11 +3749,11 @@ namespace Example
             try
             {
                 // Replace this participant with the specified user and/or address
-                apiInstance.PostChatParticipantReplace(chatId, participantId, body);
+                apiInstance.PostChatsChatIdParticipantsParticipantIdReplace(chatId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PostChatParticipantReplace: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PostChatsChatIdParticipantsParticipantIdReplace: " + e.Message );
             }
         }
     }
@@ -3303,11 +3774,11 @@ namespace Example
 
 void (empty response body)
 
-<a name="postconversationdetailsproperties"></a>
+<a name="postcobrowsesessionscobrowseidparticipantsparticipantidreplace"></a>
 
-## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
+## void PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace (string cobrowseId, string participantId, TransferRequest body = null)
 
-Index conversation properties
+Replace this participant with the specified user and/or address
 
 
 
@@ -3321,7 +3792,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostConversationDetailsPropertiesExample
+    public class PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplaceExample
     {
         public void main()
         {
@@ -3330,18 +3801,18 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var conversationId = conversationId_example;  // string | conversationId
-            var body = new PropertyIndexRequest(); // PropertyIndexRequest | request
+            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var participantId = participantId_example;  // string | participantId
+            var body = new TransferRequest(); // TransferRequest |  (optional) 
 
             try
             {
-                // Index conversation properties
-                PropertyIndexRequest result = apiInstance.PostConversationDetailsProperties(conversationId, body);
-                Debug.WriteLine(result);
+                // Replace this participant with the specified user and/or address
+                apiInstance.PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace(cobrowseId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PostConversationDetailsProperties: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PostCobrowsesessionsCobrowseIdParticipantsParticipantIdReplace: " + e.Message );
             }
         }
     }
@@ -3353,17 +3824,18 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**| conversationId |  |
-| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request |  |
+| **cobrowseId** | **string**| cobrowseId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PropertyIndexRequest**](PropertyIndexRequest.html)
+void (empty response body)
 
-<a name="postconversationparticipantcallbacks"></a>
+<a name="postconversationidparticipantsparticipantidcallbacks"></a>
 
-## void PostConversationParticipantCallbacks (string conversationId, string participantId, CreateCallbackCommand body = null)
+## void PostConversationIdParticipantsParticipantIdCallbacks (string conversationId, string participantId, CreateCallbackCommand body = null)
 
 Create a new callback for the specified participant on the conversation.
 
@@ -3379,7 +3851,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostConversationParticipantCallbacksExample
+    public class PostConversationIdParticipantsParticipantIdCallbacksExample
     {
         public void main()
         {
@@ -3395,11 +3867,11 @@ namespace Example
             try
             {
                 // Create a new callback for the specified participant on the conversation.
-                apiInstance.PostConversationParticipantCallbacks(conversationId, participantId, body);
+                apiInstance.PostConversationIdParticipantsParticipantIdCallbacks(conversationId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PostConversationParticipantCallbacks: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PostConversationIdParticipantsParticipantIdCallbacks: " + e.Message );
             }
         }
     }
@@ -3420,9 +3892,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="postconversationparticipantreplace"></a>
+<a name="postconversationidparticipantsparticipantidreplace"></a>
 
-## void PostConversationParticipantReplace (string conversationId, string participantId, TransferRequest body)
+## void PostConversationIdParticipantsParticipantIdReplace (string conversationId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -3438,7 +3910,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostConversationParticipantReplaceExample
+    public class PostConversationIdParticipantsParticipantIdReplaceExample
     {
         public void main()
         {
@@ -3454,11 +3926,11 @@ namespace Example
             try
             {
                 // Replace this participant with the specified user and/or address
-                apiInstance.PostConversationParticipantReplace(conversationId, participantId, body);
+                apiInstance.PostConversationIdParticipantsParticipantIdReplace(conversationId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PostConversationParticipantReplace: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PostConversationIdParticipantsParticipantIdReplace: " + e.Message );
             }
         }
     }
@@ -3535,6 +4007,64 @@ namespace Example
 
 [**AggregateQueryResponse**](AggregateQueryResponse.html)
 
+<a name="postconversationsconversationiddetailsproperties"></a>
+
+## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body)
+
+Index conversation properties
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostConversationsConversationIdDetailsPropertiesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new PropertyIndexRequest(); // PropertyIndexRequest | request
+
+            try
+            {
+                // Index conversation properties
+                PropertyIndexRequest result = apiInstance.PostConversationsConversationIdDetailsProperties(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsConversationIdDetailsProperties: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**PropertyIndexRequest**](PropertyIndexRequest.html)| request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PropertyIndexRequest**](PropertyIndexRequest.html)
+
 <a name="postconversationsdetailsquery"></a>
 
 ## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) PostConversationsDetailsQuery (ConversationQuery body)
@@ -3591,9 +4121,9 @@ namespace Example
 
 [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html)
 
-<a name="postemailmessages"></a>
+<a name="postemailsemailidmessages"></a>
 
-## [**EmailMessage**](EmailMessage.html) PostEmailMessages (string emailId, EmailMessage body)
+## [**EmailMessage**](EmailMessage.html) PostEmailsEmailIdMessages (string emailId, EmailMessage body)
 
 Send an email reply
 
@@ -3609,7 +4139,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostEmailMessagesExample
+    public class PostEmailsEmailIdMessagesExample
     {
         public void main()
         {
@@ -3624,12 +4154,12 @@ namespace Example
             try
             {
                 // Send an email reply
-                EmailMessage result = apiInstance.PostEmailMessages(emailId, body);
+                EmailMessage result = apiInstance.PostEmailsEmailIdMessages(emailId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PostEmailMessages: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PostEmailsEmailIdMessages: " + e.Message );
             }
         }
     }
@@ -3649,9 +4179,9 @@ namespace Example
 
 [**EmailMessage**](EmailMessage.html)
 
-<a name="postemailparticipantreplace"></a>
+<a name="postemailsemailidparticipantsparticipantidreplace"></a>
 
-## void PostEmailParticipantReplace (string emailId, string participantId, TransferRequest body)
+## void PostEmailsEmailIdParticipantsParticipantIdReplace (string emailId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -3667,7 +4197,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostEmailParticipantReplaceExample
+    public class PostEmailsEmailIdParticipantsParticipantIdReplaceExample
     {
         public void main()
         {
@@ -3683,11 +4213,11 @@ namespace Example
             try
             {
                 // Replace this participant with the specified user and/or address
-                apiInstance.PostEmailParticipantReplace(emailId, participantId, body);
+                apiInstance.PostEmailsEmailIdParticipantsParticipantIdReplace(emailId, participantId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PostEmailParticipantReplace: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PostEmailsEmailIdParticipantsParticipantIdReplace: " + e.Message );
             }
         }
     }
@@ -3764,9 +4294,9 @@ namespace Example
 
 [**FaxSendResponse**](FaxSendResponse.html)
 
-<a name="putemailmessagesdraft"></a>
+<a name="putemailsemailidmessagesdraft"></a>
 
-## [**EmailMessage**](EmailMessage.html) PutEmailMessagesDraft (string emailId, EmailMessage body)
+## [**EmailMessage**](EmailMessage.html) PutEmailsEmailIdMessagesDraft (string emailId, EmailMessage body)
 
 Update conversation draft reply
 
@@ -3782,7 +4312,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutEmailMessagesDraftExample
+    public class PutEmailsEmailIdMessagesDraftExample
     {
         public void main()
         {
@@ -3797,12 +4327,12 @@ namespace Example
             try
             {
                 // Update conversation draft reply
-                EmailMessage result = apiInstance.PutEmailMessagesDraft(emailId, body);
+                EmailMessage result = apiInstance.PutEmailsEmailIdMessagesDraft(emailId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConversationsApi.PutEmailMessagesDraft: " + e.Message );
+                Debug.Print("Exception when calling ConversationsApi.PutEmailsEmailIdMessagesDraft: " + e.Message );
             }
         }
     }

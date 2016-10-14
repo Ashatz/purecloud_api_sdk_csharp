@@ -3,21 +3,21 @@ title: SuggestApi
 ---
 ## ININ.PureCloudApi.Api.SuggestApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetSearch**](SuggestApi.html#getsearch) | **GET** /api/v2/search | Search using q64 |
-| [**GetSuggest**](SuggestApi.html#getsuggest) | **GET** /api/v2/search/suggest | Suggest using q64 |
-| [**PostSearch**](SuggestApi.html#postsearch) | **POST** /api/v2/search | Search |
-| [**PostSuggest**](SuggestApi.html#postsuggest) | **POST** /api/v2/search/suggest | Suggest |
+| [**GetSearch**](SuggestApi.html#getsearch) | **GET** /api/v2/search | Search using the q64 value returned from a previous search. |
+| [**GetSuggest**](SuggestApi.html#getsuggest) | **GET** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
+| [**PostSearch**](SuggestApi.html#postsearch) | **POST** /api/v2/search | Search resources. |
+| [**PostSuggest**](SuggestApi.html#postsuggest) | **POST** /api/v2/search/suggest | Suggest resources. |
 {: class="table table-striped"}
 
 <a name="getsearch"></a>
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch (string q64, List<string> expand = null, bool? profile = null)
 
-Search using q64
+Search using the q64 value returned from a previous search.
 
 
 
@@ -46,7 +46,7 @@ namespace Example
 
             try
             {
-                // Search using q64
+                // Search using the q64 value returned from a previous search.
                 JsonNodeSearchResponse result = apiInstance.GetSearch(q64, expand, profile);
                 Debug.WriteLine(result);
             }
@@ -77,7 +77,7 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64, bool? profile = null)
 
-Suggest using q64
+Suggest resources using the q64 value returned from a previous suggest query.
 
 
 
@@ -105,7 +105,7 @@ namespace Example
 
             try
             {
-                // Suggest using q64
+                // Suggest resources using the q64 value returned from a previous suggest query.
                 JsonNodeSearchResponse result = apiInstance.GetSuggest(q64, profile);
                 Debug.WriteLine(result);
             }
@@ -135,7 +135,7 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearch (SearchRequest body, bool? profile = null)
 
-Search
+Search resources.
 
 
 
@@ -163,7 +163,7 @@ namespace Example
 
             try
             {
-                // Search
+                // Search resources.
                 JsonNodeSearchResponse result = apiInstance.PostSearch(body, profile);
                 Debug.WriteLine(result);
             }
@@ -193,7 +193,7 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSuggest (SuggestSearchRequest body, bool? profile = null)
 
-Suggest
+Suggest resources.
 
 
 
@@ -221,7 +221,7 @@ namespace Example
 
             try
             {
-                // Suggest
+                // Suggest resources.
                 JsonNodeSearchResponse result = apiInstance.PostSuggest(body, profile);
                 Debug.WriteLine(result);
             }

@@ -54,54 +54,42 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteCalibration
+        /// Test DeleteCalibrationsCalibrationId
         /// </summary>
         [Test]
-        public void DeleteCalibrationTest()
+        public void DeleteCalibrationsCalibrationIdTest()
         {
-            // TODO: add unit test for the method 'DeleteCalibration'
+            // TODO: add unit test for the method 'DeleteCalibrationsCalibrationId'
             string calibrationId = null; // TODO: replace null with proper value
             string calibratorId = null; // TODO: replace null with proper value
-            var response = instance.DeleteCalibration(calibrationId, calibratorId);
+            var response = instance.DeleteCalibrationsCalibrationId(calibrationId, calibratorId);
             Assert.IsInstanceOf<Calibration> (response, "response is Calibration");
         }
         
         /// <summary>
-        /// Test DeleteConversationEvaluation
+        /// Test DeleteConversationsConversationIdEvaluationsEvaluationId
         /// </summary>
         [Test]
-        public void DeleteConversationEvaluationTest()
+        public void DeleteConversationsConversationIdEvaluationsEvaluationIdTest()
         {
-            // TODO: add unit test for the method 'DeleteConversationEvaluation'
+            // TODO: add unit test for the method 'DeleteConversationsConversationIdEvaluationsEvaluationId'
             string conversationId = null; // TODO: replace null with proper value
             string evaluationId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            var response = instance.DeleteConversationEvaluation(conversationId, evaluationId, expand);
+            var response = instance.DeleteConversationsConversationIdEvaluationsEvaluationId(conversationId, evaluationId, expand);
             Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation");
         }
         
         /// <summary>
-        /// Test DeleteForm
+        /// Test DeleteFormsFormId
         /// </summary>
         [Test]
-        public void DeleteFormTest()
+        public void DeleteFormsFormIdTest()
         {
-            // TODO: add unit test for the method 'DeleteForm'
+            // TODO: add unit test for the method 'DeleteFormsFormId'
             string formId = null; // TODO: replace null with proper value
-            var response = instance.DeleteForm(formId);
+            var response = instance.DeleteFormsFormId(formId);
             Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
-        /// Test DeleteKeywordset
-        /// </summary>
-        [Test]
-        public void DeleteKeywordsetTest()
-        {
-            // TODO: add unit test for the method 'DeleteKeywordset'
-            string keywordSetId = null; // TODO: replace null with proper value
-            instance.DeleteKeywordset(keywordSetId);
-            
         }
         
         /// <summary>
@@ -114,6 +102,18 @@ namespace ININ.PureCloudApi.Test
             string ids = null; // TODO: replace null with proper value
             var response = instance.DeleteKeywordsets(ids);
             Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test DeleteKeywordsetsKeywordsetId
+        /// </summary>
+        [Test]
+        public void DeleteKeywordsetsKeywordsetIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteKeywordsetsKeywordsetId'
+            string keywordSetId = null; // TODO: replace null with proper value
+            instance.DeleteKeywordsetsKeywordsetId(keywordSetId);
+            
         }
         
         /// <summary>
@@ -140,19 +140,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetCalibration
-        /// </summary>
-        [Test]
-        public void GetCalibrationTest()
-        {
-            // TODO: add unit test for the method 'GetCalibration'
-            string calibrationId = null; // TODO: replace null with proper value
-            string calibratorId = null; // TODO: replace null with proper value
-            var response = instance.GetCalibration(calibrationId, calibratorId);
-            Assert.IsInstanceOf<Calibration> (response, "response is Calibration");
-        }
-        
-        /// <summary>
         /// Test GetCalibrations
         /// </summary>
         [Test]
@@ -174,12 +161,25 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetConversationAudits
+        /// Test GetCalibrationsCalibrationId
         /// </summary>
         [Test]
-        public void GetConversationAuditsTest()
+        public void GetCalibrationsCalibrationIdTest()
         {
-            // TODO: add unit test for the method 'GetConversationAudits'
+            // TODO: add unit test for the method 'GetCalibrationsCalibrationId'
+            string calibrationId = null; // TODO: replace null with proper value
+            string calibratorId = null; // TODO: replace null with proper value
+            var response = instance.GetCalibrationsCalibrationId(calibrationId, calibratorId);
+            Assert.IsInstanceOf<Calibration> (response, "response is Calibration");
+        }
+        
+        /// <summary>
+        /// Test GetConversationsConversationIdAudits
+        /// </summary>
+        [Test]
+        public void GetConversationsConversationIdAuditsTest()
+        {
+            // TODO: add unit test for the method 'GetConversationsConversationIdAudits'
             string conversationId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
@@ -189,21 +189,21 @@ namespace ININ.PureCloudApi.Test
             string previousPage = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
             string entityType = null; // TODO: replace null with proper value
-            var response = instance.GetConversationAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
+            var response = instance.GetConversationsConversationIdAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
             Assert.IsInstanceOf<QualityAuditPage> (response, "response is QualityAuditPage");
         }
         
         /// <summary>
-        /// Test GetConversationEvaluation
+        /// Test GetConversationsConversationIdEvaluationsEvaluationId
         /// </summary>
         [Test]
-        public void GetConversationEvaluationTest()
+        public void GetConversationsConversationIdEvaluationsEvaluationIdTest()
         {
-            // TODO: add unit test for the method 'GetConversationEvaluation'
+            // TODO: add unit test for the method 'GetConversationsConversationIdEvaluationsEvaluationId'
             string conversationId = null; // TODO: replace null with proper value
             string evaluationId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            var response = instance.GetConversationEvaluation(conversationId, evaluationId, expand);
+            var response = instance.GetConversationsConversationIdEvaluationsEvaluationId(conversationId, evaluationId, expand);
             Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation");
         }
         
@@ -258,32 +258,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetForm
-        /// </summary>
-        [Test]
-        public void GetFormTest()
-        {
-            // TODO: add unit test for the method 'GetForm'
-            string formId = null; // TODO: replace null with proper value
-            var response = instance.GetForm(formId);
-            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
-        }
-        
-        /// <summary>
-        /// Test GetFormVersions
-        /// </summary>
-        [Test]
-        public void GetFormVersionsTest()
-        {
-            // TODO: add unit test for the method 'GetFormVersions'
-            string formId = null; // TODO: replace null with proper value
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            var response = instance.GetFormVersions(formId, pageSize, pageNumber);
-            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing");
-        }
-        
-        /// <summary>
         /// Test GetForms
         /// </summary>
         [Test]
@@ -302,15 +276,29 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetKeywordset
+        /// Test GetFormsFormId
         /// </summary>
         [Test]
-        public void GetKeywordsetTest()
+        public void GetFormsFormIdTest()
         {
-            // TODO: add unit test for the method 'GetKeywordset'
-            string keywordSetId = null; // TODO: replace null with proper value
-            var response = instance.GetKeywordset(keywordSetId);
-            Assert.IsInstanceOf<KeywordSet> (response, "response is KeywordSet");
+            // TODO: add unit test for the method 'GetFormsFormId'
+            string formId = null; // TODO: replace null with proper value
+            var response = instance.GetFormsFormId(formId);
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
+        }
+        
+        /// <summary>
+        /// Test GetFormsFormIdVersions
+        /// </summary>
+        [Test]
+        public void GetFormsFormIdVersionsTest()
+        {
+            // TODO: add unit test for the method 'GetFormsFormIdVersions'
+            string formId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.GetFormsFormIdVersions(formId, pageSize, pageNumber);
+            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing");
         }
         
         /// <summary>
@@ -332,15 +320,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetPublishedform
+        /// Test GetKeywordsetsKeywordsetId
         /// </summary>
         [Test]
-        public void GetPublishedformTest()
+        public void GetKeywordsetsKeywordsetIdTest()
         {
-            // TODO: add unit test for the method 'GetPublishedform'
-            string formId = null; // TODO: replace null with proper value
-            var response = instance.GetPublishedform(formId);
-            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
+            // TODO: add unit test for the method 'GetKeywordsetsKeywordsetId'
+            string keywordSetId = null; // TODO: replace null with proper value
+            var response = instance.GetKeywordsetsKeywordsetId(keywordSetId);
+            Assert.IsInstanceOf<KeywordSet> (response, "response is KeywordSet");
         }
         
         /// <summary>
@@ -358,29 +346,41 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetPublishedformsFormId
+        /// </summary>
+        [Test]
+        public void GetPublishedformsFormIdTest()
+        {
+            // TODO: add unit test for the method 'GetPublishedformsFormId'
+            string formId = null; // TODO: replace null with proper value
+            var response = instance.GetPublishedformsFormId(formId);
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
+        }
+        
+        /// <summary>
         /// Test PostCalibrations
         /// </summary>
         [Test]
         public void PostCalibrationsTest()
         {
             // TODO: add unit test for the method 'PostCalibrations'
-            Calibration body = null; // TODO: replace null with proper value
+            CalibrationCreate body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
             var response = instance.PostCalibrations(body, expand);
             Assert.IsInstanceOf<Calibration> (response, "response is Calibration");
         }
         
         /// <summary>
-        /// Test PostConversationEvaluations
+        /// Test PostConversationsConversationIdEvaluations
         /// </summary>
         [Test]
-        public void PostConversationEvaluationsTest()
+        public void PostConversationsConversationIdEvaluationsTest()
         {
-            // TODO: add unit test for the method 'PostConversationEvaluations'
+            // TODO: add unit test for the method 'PostConversationsConversationIdEvaluations'
             string conversationId = null; // TODO: replace null with proper value
             Evaluation body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            var response = instance.PostConversationEvaluations(conversationId, body, expand);
+            var response = instance.PostConversationsConversationIdEvaluations(conversationId, body, expand);
             Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation");
         }
         
@@ -458,56 +458,56 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutCalibration
+        /// Test PutCalibrationsCalibrationId
         /// </summary>
         [Test]
-        public void PutCalibrationTest()
+        public void PutCalibrationsCalibrationIdTest()
         {
-            // TODO: add unit test for the method 'PutCalibration'
+            // TODO: add unit test for the method 'PutCalibrationsCalibrationId'
             string calibrationId = null; // TODO: replace null with proper value
             Calibration body = null; // TODO: replace null with proper value
-            var response = instance.PutCalibration(calibrationId, body);
+            var response = instance.PutCalibrationsCalibrationId(calibrationId, body);
             Assert.IsInstanceOf<Calibration> (response, "response is Calibration");
         }
         
         /// <summary>
-        /// Test PutConversationEvaluation
+        /// Test PutConversationsConversationIdEvaluationsEvaluationId
         /// </summary>
         [Test]
-        public void PutConversationEvaluationTest()
+        public void PutConversationsConversationIdEvaluationsEvaluationIdTest()
         {
-            // TODO: add unit test for the method 'PutConversationEvaluation'
+            // TODO: add unit test for the method 'PutConversationsConversationIdEvaluationsEvaluationId'
             string conversationId = null; // TODO: replace null with proper value
             string evaluationId = null; // TODO: replace null with proper value
             Evaluation body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            var response = instance.PutConversationEvaluation(conversationId, evaluationId, body, expand);
+            var response = instance.PutConversationsConversationIdEvaluationsEvaluationId(conversationId, evaluationId, body, expand);
             Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation");
         }
         
         /// <summary>
-        /// Test PutForm
+        /// Test PutFormsFormId
         /// </summary>
         [Test]
-        public void PutFormTest()
+        public void PutFormsFormIdTest()
         {
-            // TODO: add unit test for the method 'PutForm'
+            // TODO: add unit test for the method 'PutFormsFormId'
             string formId = null; // TODO: replace null with proper value
             EvaluationForm body = null; // TODO: replace null with proper value
-            var response = instance.PutForm(formId, body);
+            var response = instance.PutFormsFormId(formId, body);
             Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm");
         }
         
         /// <summary>
-        /// Test PutKeywordset
+        /// Test PutKeywordsetsKeywordsetId
         /// </summary>
         [Test]
-        public void PutKeywordsetTest()
+        public void PutKeywordsetsKeywordsetIdTest()
         {
-            // TODO: add unit test for the method 'PutKeywordset'
+            // TODO: add unit test for the method 'PutKeywordsetsKeywordsetId'
             string keywordSetId = null; // TODO: replace null with proper value
             KeywordSet body = null; // TODO: replace null with proper value
-            var response = instance.PutKeywordset(keywordSetId, body);
+            var response = instance.PutKeywordsetsKeywordsetId(keywordSetId, body);
             Assert.IsInstanceOf<KeywordSet> (response, "response is KeywordSet");
         }
         

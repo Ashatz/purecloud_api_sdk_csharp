@@ -7,7 +7,7 @@ title: MaxParticipants
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_MaxParticipants** | **int?** |  | [optional] |
+| **_MaxParticipants** | **int?** | The maximum number of participants that are allowed on a conversation. | [optional] |
 {: class="table table-striped"}
 
 

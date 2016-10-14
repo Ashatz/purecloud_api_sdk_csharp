@@ -54,27 +54,15 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteClient
+        /// Test DeleteClientsClientId
         /// </summary>
         [Test]
-        public void DeleteClientTest()
+        public void DeleteClientsClientIdTest()
         {
-            // TODO: add unit test for the method 'DeleteClient'
+            // TODO: add unit test for the method 'DeleteClientsClientId'
             string clientId = null; // TODO: replace null with proper value
-            instance.DeleteClient(clientId);
+            instance.DeleteClientsClientId(clientId);
             
-        }
-        
-        /// <summary>
-        /// Test GetClient
-        /// </summary>
-        [Test]
-        public void GetClientTest()
-        {
-            // TODO: add unit test for the method 'GetClient'
-            string clientId = null; // TODO: replace null with proper value
-            var response = instance.GetClient(clientId);
-            Assert.IsInstanceOf<OAuthClient> (response, "response is OAuthClient");
         }
         
         /// <summary>
@@ -89,15 +77,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostClientSecret
+        /// Test GetClientsClientId
         /// </summary>
         [Test]
-        public void PostClientSecretTest()
+        public void GetClientsClientIdTest()
         {
-            // TODO: add unit test for the method 'PostClientSecret'
+            // TODO: add unit test for the method 'GetClientsClientId'
             string clientId = null; // TODO: replace null with proper value
-            instance.PostClientSecret(clientId);
-            
+            var response = instance.GetClientsClientId(clientId);
+            Assert.IsInstanceOf<OAuthClient> (response, "response is OAuthClient");
         }
         
         /// <summary>
@@ -113,15 +101,27 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutClient
+        /// Test PostClientsClientIdSecret
         /// </summary>
         [Test]
-        public void PutClientTest()
+        public void PostClientsClientIdSecretTest()
         {
-            // TODO: add unit test for the method 'PutClient'
+            // TODO: add unit test for the method 'PostClientsClientIdSecret'
+            string clientId = null; // TODO: replace null with proper value
+            instance.PostClientsClientIdSecret(clientId);
+            
+        }
+        
+        /// <summary>
+        /// Test PutClientsClientId
+        /// </summary>
+        [Test]
+        public void PutClientsClientIdTest()
+        {
+            // TODO: add unit test for the method 'PutClientsClientId'
             string clientId = null; // TODO: replace null with proper value
             OAuthClient body = null; // TODO: replace null with proper value
-            var response = instance.PutClient(clientId, body);
+            var response = instance.PutClientsClientId(clientId, body);
             Assert.IsInstanceOf<OAuthClient> (response, "response is OAuthClient");
         }
         

@@ -54,26 +54,26 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteLibrary
+        /// Test DeleteLibrariesLibraryId
         /// </summary>
         [Test]
-        public void DeleteLibraryTest()
+        public void DeleteLibrariesLibraryIdTest()
         {
-            // TODO: add unit test for the method 'DeleteLibrary'
+            // TODO: add unit test for the method 'DeleteLibrariesLibraryId'
             string libraryId = null; // TODO: replace null with proper value
-            instance.DeleteLibrary(libraryId);
+            instance.DeleteLibrariesLibraryId(libraryId);
             
         }
         
         /// <summary>
-        /// Test DeleteResponse
+        /// Test DeleteResponsesResponseId
         /// </summary>
         [Test]
-        public void DeleteResponseTest()
+        public void DeleteResponsesResponseIdTest()
         {
-            // TODO: add unit test for the method 'DeleteResponse'
+            // TODO: add unit test for the method 'DeleteResponsesResponseId'
             string responseId = null; // TODO: replace null with proper value
-            instance.DeleteResponse(responseId);
+            instance.DeleteResponsesResponseId(responseId);
             
         }
         
@@ -91,27 +91,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetLibrary
+        /// Test GetLibrariesLibraryId
         /// </summary>
         [Test]
-        public void GetLibraryTest()
+        public void GetLibrariesLibraryIdTest()
         {
-            // TODO: add unit test for the method 'GetLibrary'
+            // TODO: add unit test for the method 'GetLibrariesLibraryId'
             string libraryId = null; // TODO: replace null with proper value
-            var response = instance.GetLibrary(libraryId);
+            var response = instance.GetLibrariesLibraryId(libraryId);
             Assert.IsInstanceOf<Library> (response, "response is Library");
-        }
-        
-        /// <summary>
-        /// Test GetResponse
-        /// </summary>
-        [Test]
-        public void GetResponseTest()
-        {
-            // TODO: add unit test for the method 'GetResponse'
-            string responseId = null; // TODO: replace null with proper value
-            var response = instance.GetResponse(responseId);
-            Assert.IsInstanceOf<Response> (response, "response is Response");
         }
         
         /// <summary>
@@ -126,6 +114,18 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             var response = instance.GetResponses(libraryId, pageNumber, pageSize);
             Assert.IsInstanceOf<ResponseEntityListing> (response, "response is ResponseEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetResponsesResponseId
+        /// </summary>
+        [Test]
+        public void GetResponsesResponseIdTest()
+        {
+            // TODO: add unit test for the method 'GetResponsesResponseId'
+            string responseId = null; // TODO: replace null with proper value
+            var response = instance.GetResponsesResponseId(responseId);
+            Assert.IsInstanceOf<Response> (response, "response is Response");
         }
         
         /// <summary>
@@ -165,28 +165,28 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutLibrary
+        /// Test PutLibrariesLibraryId
         /// </summary>
         [Test]
-        public void PutLibraryTest()
+        public void PutLibrariesLibraryIdTest()
         {
-            // TODO: add unit test for the method 'PutLibrary'
+            // TODO: add unit test for the method 'PutLibrariesLibraryId'
             string libraryId = null; // TODO: replace null with proper value
             Library body = null; // TODO: replace null with proper value
-            var response = instance.PutLibrary(libraryId, body);
+            var response = instance.PutLibrariesLibraryId(libraryId, body);
             Assert.IsInstanceOf<Library> (response, "response is Library");
         }
         
         /// <summary>
-        /// Test PutResponse
+        /// Test PutResponsesResponseId
         /// </summary>
         [Test]
-        public void PutResponseTest()
+        public void PutResponsesResponseIdTest()
         {
-            // TODO: add unit test for the method 'PutResponse'
+            // TODO: add unit test for the method 'PutResponsesResponseId'
             string responseId = null; // TODO: replace null with proper value
             Response body = null; // TODO: replace null with proper value
-            var response = instance.PutResponse(responseId, body);
+            var response = instance.PutResponsesResponseId(responseId, body);
             Assert.IsInstanceOf<Response> (response, "response is Response");
         }
         

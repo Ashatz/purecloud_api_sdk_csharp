@@ -251,6 +251,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Locations'
         }
         /// <summary>
+        /// Test the property 'OrgAuthorization'
+        /// </summary>
+        [Test]
+        public void OrgAuthorizationTest()
+        {
+            // TODO: unit test for the property 'OrgAuthorization'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

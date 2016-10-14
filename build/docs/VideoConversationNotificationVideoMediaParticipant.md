@@ -29,8 +29,6 @@ title: VideoConversationNotificationVideoMediaParticipant
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
-| **ExternalContact** | [**VideoConversationNotificationUriReference**](VideoConversationNotificationUriReference.html) |  | [optional] |
-| **ExternalOrganization** | [**VideoConversationNotificationUriReference**](VideoConversationNotificationUriReference.html) |  | [optional] |
 | **AudioMuted** | **bool?** |  | [optional] |
 | **VideoMuted** | **bool?** |  | [optional] |
 | **SharingScreen** | **bool?** |  | [optional] |

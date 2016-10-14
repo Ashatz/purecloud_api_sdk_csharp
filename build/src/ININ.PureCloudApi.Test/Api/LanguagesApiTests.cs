@@ -54,26 +54,26 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteLanguage
+        /// Test DeleteLanguageId
         /// </summary>
         [Test]
-        public void DeleteLanguageTest()
+        public void DeleteLanguageIdTest()
         {
-            // TODO: add unit test for the method 'DeleteLanguage'
+            // TODO: add unit test for the method 'DeleteLanguageId'
             string languageId = null; // TODO: replace null with proper value
-            instance.DeleteLanguage(languageId);
+            instance.DeleteLanguageId(languageId);
             
         }
         
         /// <summary>
-        /// Test GetLanguage
+        /// Test GetLanguageId
         /// </summary>
         [Test]
-        public void GetLanguageTest()
+        public void GetLanguageIdTest()
         {
-            // TODO: add unit test for the method 'GetLanguage'
+            // TODO: add unit test for the method 'GetLanguageId'
             string languageId = null; // TODO: replace null with proper value
-            var response = instance.GetLanguage(languageId);
+            var response = instance.GetLanguageId(languageId);
             Assert.IsInstanceOf<Language> (response, "response is Language");
         }
         
@@ -105,15 +105,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutLanguage
+        /// Test PutLanguageId
         /// </summary>
         [Test]
-        public void PutLanguageTest()
+        public void PutLanguageIdTest()
         {
-            // TODO: add unit test for the method 'PutLanguage'
+            // TODO: add unit test for the method 'PutLanguageId'
             string languageId = null; // TODO: replace null with proper value
             Language body = null; // TODO: replace null with proper value
-            var response = instance.PutLanguage(languageId, body);
+            var response = instance.PutLanguageId(languageId, body);
             Assert.IsInstanceOf<Language> (response, "response is Language");
         }
         

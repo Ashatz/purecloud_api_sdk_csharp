@@ -7,10 +7,10 @@ title: PermissionCollectionEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Entities** | [**List&lt;DomainPermissionCollection&gt;**](DomainPermissionCollection.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;DomainPermissionCollection&gt;**](DomainPermissionCollection.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |

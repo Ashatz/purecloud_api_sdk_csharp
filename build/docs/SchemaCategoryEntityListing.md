@@ -7,10 +7,10 @@ title: SchemaCategoryEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Entities** | [**List&lt;SchemaCategory&gt;**](SchemaCategory.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;SchemaCategory&gt;**](SchemaCategory.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |

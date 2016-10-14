@@ -323,6 +323,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Managed'
         }
         /// <summary>
+        /// Test the property 'EdgeDeploymentType'
+        /// </summary>
+        [Test]
+        public void EdgeDeploymentTypeTest()
+        {
+            // TODO: unit test for the property 'EdgeDeploymentType'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

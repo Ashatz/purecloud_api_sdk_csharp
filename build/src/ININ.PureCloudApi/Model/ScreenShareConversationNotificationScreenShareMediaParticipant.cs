@@ -273,12 +273,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
         /// <param name="Provider">Provider.</param>
-        /// <param name="ExternalContact">ExternalContact.</param>
-        /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Context">Context.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Sharing">Sharing.</param>
-        public ScreenShareConversationNotificationScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, ScreenShareConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ScreenShareConversationNotificationErrorInfo ErrorInfo = null, ScreenShareConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ScreenShareConversationNotificationUriReference ExternalContact = null, ScreenShareConversationNotificationUriReference ExternalOrganization = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
+        public ScreenShareConversationNotificationScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, ScreenShareConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ScreenShareConversationNotificationErrorInfo ErrorInfo = null, ScreenShareConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -302,8 +300,6 @@ namespace ININ.PureCloudApi.Model
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
             this.Provider = Provider;
-            this.ExternalContact = ExternalContact;
-            this.ExternalOrganization = ExternalOrganization;
             this.Context = Context;
             this.PeerCount = PeerCount;
             this.Sharing = Sharing;
@@ -405,16 +401,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         /// <summary>
-        /// Gets or Sets ExternalContact
-        /// </summary>
-        [DataMember(Name="externalContact", EmitDefaultValue=false)]
-        public ScreenShareConversationNotificationUriReference ExternalContact { get; set; }
-        /// <summary>
-        /// Gets or Sets ExternalOrganization
-        /// </summary>
-        [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
-        public ScreenShareConversationNotificationUriReference ExternalOrganization { get; set; }
-        /// <summary>
         /// Gets or Sets Context
         /// </summary>
         [DataMember(Name="context", EmitDefaultValue=false)]
@@ -459,8 +445,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
-            sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
             sb.Append("  Sharing: ").Append(Sharing).Append("\n");
@@ -611,16 +595,6 @@ namespace ININ.PureCloudApi.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
-                    this.ExternalContact == other.ExternalContact ||
-                    this.ExternalContact != null &&
-                    this.ExternalContact.Equals(other.ExternalContact)
-                ) &&
-                (
-                    this.ExternalOrganization == other.ExternalOrganization ||
-                    this.ExternalOrganization != null &&
-                    this.ExternalOrganization.Equals(other.ExternalOrganization)
-                ) &&
-                (
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.Equals(other.Context)
@@ -692,10 +666,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                if (this.ExternalContact != null)
-                    hash = hash * 59 + this.ExternalContact.GetHashCode();
-                if (this.ExternalOrganization != null)
-                    hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
                 if (this.PeerCount != null)

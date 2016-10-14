@@ -7,10 +7,10 @@ title: DIDEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Entities** | [**List&lt;DID&gt;**](DID.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;DID&gt;**](DID.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |

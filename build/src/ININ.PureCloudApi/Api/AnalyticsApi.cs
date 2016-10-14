@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>string</returns>
-        string DeleteReportingSchedule (string scheduleId);
+        string DeleteReportingSchedulesScheduleId (string scheduleId);
 
         /// <summary>
         /// Delete a scheduled report job.
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteReportingScheduleWithHttpInfo (string scheduleId);
+        ApiResponse<string> DeleteReportingSchedulesScheduleIdWithHttpInfo (string scheduleId);
         /// <summary>
         /// Get a conversation by id
         /// </summary>
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>AnalyticsConversation</returns>
-        AnalyticsConversation GetConversationDetails (string conversationId);
+        AnalyticsConversation GetConversationsConversationIdDetails (string conversationId);
 
         /// <summary>
         /// Get a conversation by id
@@ -55,7 +55,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>ApiResponse of AnalyticsConversation</returns>
-        ApiResponse<AnalyticsConversation> GetConversationDetailsWithHttpInfo (string conversationId);
+        ApiResponse<AnalyticsConversation> GetConversationsConversationIdDetailsWithHttpInfo (string conversationId);
         /// <summary>
         /// Get list of reporting metadata.
         /// </summary>
@@ -124,96 +124,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
         ApiResponse<List<string>> GetReportingReportformatsWithHttpInfo ();
         /// <summary>
-        /// Get a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportSchedule</returns>
-        ReportSchedule GetReportingSchedule (string scheduleId);
-
-        /// <summary>
-        /// Get a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportSchedule</returns>
-        ApiResponse<ReportSchedule> GetReportingScheduleWithHttpInfo (string scheduleId);
-        /// <summary>
-        /// Get list of completed scheduled report jobs.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>ReportRunEntryEntityDomainListing</returns>
-        ReportRunEntryEntityDomainListing GetReportingScheduleHistory (string scheduleId, int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>ApiResponse of ReportRunEntryEntityDomainListing</returns>
-        ApiResponse<ReportRunEntryEntityDomainListing> GetReportingScheduleHistoryWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null);
-        /// <summary>
-        /// Get most recently completed scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportRunEntry</returns>
-        ReportRunEntry GetReportingScheduleHistoryLatest (string scheduleId);
-
-        /// <summary>
-        /// Get most recently completed scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportRunEntry</returns>
-        ApiResponse<ReportRunEntry> GetReportingScheduleHistoryLatestWithHttpInfo (string scheduleId);
-        /// <summary>
-        /// A completed scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// A completed scheduled report job.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportRunEntry</returns>
-        ReportRunEntry GetReportingScheduleHistoryRunId (string runId, string scheduleId);
-
-        /// <summary>
-        /// A completed scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// A completed scheduled report job.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportRunEntry</returns>
-        ApiResponse<ReportRunEntry> GetReportingScheduleHistoryRunIdWithHttpInfo (string runId, string scheduleId);
-        /// <summary>
         /// Get a list of scheduled report jobs
         /// </summary>
         /// <remarks>
@@ -237,6 +147,96 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of ReportScheduleEntityListing</returns>
         ApiResponse<ReportScheduleEntityListing> GetReportingSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null);
         /// <summary>
+        /// Get a scheduled report job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ReportSchedule</returns>
+        ReportSchedule GetReportingSchedulesScheduleId (string scheduleId);
+
+        /// <summary>
+        /// Get a scheduled report job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ApiResponse of ReportSchedule</returns>
+        ApiResponse<ReportSchedule> GetReportingSchedulesScheduleIdWithHttpInfo (string scheduleId);
+        /// <summary>
+        /// Get list of completed scheduled report jobs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <returns>ReportRunEntryEntityDomainListing</returns>
+        ReportRunEntryEntityDomainListing GetReportingSchedulesScheduleIdHistory (string scheduleId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get list of completed scheduled report jobs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <returns>ApiResponse of ReportRunEntryEntityDomainListing</returns>
+        ApiResponse<ReportRunEntryEntityDomainListing> GetReportingSchedulesScheduleIdHistoryWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null);
+        /// <summary>
+        /// Get most recently completed scheduled report job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ReportRunEntry</returns>
+        ReportRunEntry GetReportingSchedulesScheduleIdHistoryLatest (string scheduleId);
+
+        /// <summary>
+        /// Get most recently completed scheduled report job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ApiResponse of ReportRunEntry</returns>
+        ApiResponse<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryLatestWithHttpInfo (string scheduleId);
+        /// <summary>
+        /// A completed scheduled report job
+        /// </summary>
+        /// <remarks>
+        /// A completed scheduled report job.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="runId">Run ID</param>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ReportRunEntry</returns>
+        ReportRunEntry GetReportingSchedulesScheduleIdHistoryRunId (string runId, string scheduleId);
+
+        /// <summary>
+        /// A completed scheduled report job
+        /// </summary>
+        /// <remarks>
+        /// A completed scheduled report job.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="runId">Run ID</param>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ApiResponse of ReportRunEntry</returns>
+        ApiResponse<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryRunIdWithHttpInfo (string runId, string scheduleId);
+        /// <summary>
         /// Get a list of report time periods.
         /// </summary>
         /// <remarks>
@@ -255,29 +255,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
         ApiResponse<List<string>> GetReportingTimeperiodsWithHttpInfo ();
-        /// <summary>
-        /// Index conversation properties
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request</param>
-        /// <returns>PropertyIndexRequest</returns>
-        PropertyIndexRequest PostConversationDetailsProperties (string conversationId, PropertyIndexRequest body);
-
-        /// <summary>
-        /// Index conversation properties
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request</param>
-        /// <returns>ApiResponse of PropertyIndexRequest</returns>
-        ApiResponse<PropertyIndexRequest> PostConversationDetailsPropertiesWithHttpInfo (string conversationId, PropertyIndexRequest body);
         /// <summary>
         /// Query for conversation aggregates
         /// </summary>
@@ -299,6 +276,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AggregateQueryResponse</returns>
         ApiResponse<AggregateQueryResponse> PostConversationsAggregatesQueryWithHttpInfo (AggregationQuery body);
+        /// <summary>
+        /// Index conversation properties
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request</param>
+        /// <returns>PropertyIndexRequest</returns>
+        PropertyIndexRequest PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body);
+
+        /// <summary>
+        /// Index conversation properties
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request</param>
+        /// <returns>ApiResponse of PropertyIndexRequest</returns>
+        ApiResponse<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesWithHttpInfo (string conversationId, PropertyIndexRequest body);
         /// <summary>
         /// Query for conversation details
         /// </summary>
@@ -363,27 +363,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of QualifierMappingObservationQueryResponse</returns>
         ApiResponse<QualifierMappingObservationQueryResponse> PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body);
         /// <summary>
-        /// Place a scheduled report immediately into the reporting queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>RunNowResponse</returns>
-        RunNowResponse PostReportingScheduleRunreport (string scheduleId);
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of RunNowResponse</returns>
-        ApiResponse<RunNowResponse> PostReportingScheduleRunreportWithHttpInfo (string scheduleId);
-        /// <summary>
         /// Create a scheduled report job
         /// </summary>
         /// <remarks>
@@ -404,6 +383,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
         ApiResponse<ReportSchedule> PostReportingSchedulesWithHttpInfo (ReportSchedule body);
+        /// <summary>
+        /// Place a scheduled report immediately into the reporting queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>RunNowResponse</returns>
+        RunNowResponse PostReportingSchedulesScheduleIdRunreport (string scheduleId);
+
+        /// <summary>
+        /// Place a scheduled report immediately into the reporting queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ApiResponse of RunNowResponse</returns>
+        ApiResponse<RunNowResponse> PostReportingSchedulesScheduleIdRunreportWithHttpInfo (string scheduleId);
         /// <summary>
         /// Query for user aggregates
         /// </summary>
@@ -456,7 +456,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        ReportSchedule PutReportingSchedule (string scheduleId, ReportSchedule body);
+        ReportSchedule PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body);
 
         /// <summary>
         /// Update a scheduled report job.
@@ -468,7 +468,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        ApiResponse<ReportSchedule> PutReportingScheduleWithHttpInfo (string scheduleId, ReportSchedule body);
+        ApiResponse<ReportSchedule> PutReportingSchedulesScheduleIdWithHttpInfo (string scheduleId, ReportSchedule body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -480,7 +480,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteReportingScheduleAsync (string scheduleId);
+        System.Threading.Tasks.Task<string> DeleteReportingSchedulesScheduleIdAsync (string scheduleId);
 
         /// <summary>
         /// Delete a scheduled report job.
@@ -491,7 +491,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteReportingScheduleAsyncWithHttpInfo (string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId);
         /// <summary>
         /// Get a conversation by id
         /// </summary>
@@ -501,7 +501,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of AnalyticsConversation</returns>
-        System.Threading.Tasks.Task<AnalyticsConversation> GetConversationDetailsAsync (string conversationId);
+        System.Threading.Tasks.Task<AnalyticsConversation> GetConversationsConversationIdDetailsAsync (string conversationId);
 
         /// <summary>
         /// Get a conversation by id
@@ -512,7 +512,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of ApiResponse (AnalyticsConversation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversation>> GetConversationDetailsAsyncWithHttpInfo (string conversationId);
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsConversation>> GetConversationsConversationIdDetailsAsyncWithHttpInfo (string conversationId);
         /// <summary>
         /// Get list of reporting metadata.
         /// </summary>
@@ -581,96 +581,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<string>>> GetReportingReportformatsAsyncWithHttpInfo ();
         /// <summary>
-        /// Get a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportSchedule</returns>
-        System.Threading.Tasks.Task<ReportSchedule> GetReportingScheduleAsync (string scheduleId);
-
-        /// <summary>
-        /// Get a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> GetReportingScheduleAsyncWithHttpInfo (string scheduleId);
-        /// <summary>
-        /// Get list of completed scheduled report jobs.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>Task of ReportRunEntryEntityDomainListing</returns>
-        System.Threading.Tasks.Task<ReportRunEntryEntityDomainListing> GetReportingScheduleHistoryAsync (string scheduleId, int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>Task of ApiResponse (ReportRunEntryEntityDomainListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportRunEntryEntityDomainListing>> GetReportingScheduleHistoryAsyncWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null);
-        /// <summary>
-        /// Get most recently completed scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportRunEntry</returns>
-        System.Threading.Tasks.Task<ReportRunEntry> GetReportingScheduleHistoryLatestAsync (string scheduleId);
-
-        /// <summary>
-        /// Get most recently completed scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingScheduleHistoryLatestAsyncWithHttpInfo (string scheduleId);
-        /// <summary>
-        /// A completed scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// A completed scheduled report job.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportRunEntry</returns>
-        System.Threading.Tasks.Task<ReportRunEntry> GetReportingScheduleHistoryRunIdAsync (string runId, string scheduleId);
-
-        /// <summary>
-        /// A completed scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// A completed scheduled report job.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingScheduleHistoryRunIdAsyncWithHttpInfo (string runId, string scheduleId);
-        /// <summary>
         /// Get a list of scheduled report jobs
         /// </summary>
         /// <remarks>
@@ -694,6 +604,96 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (ReportScheduleEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ReportScheduleEntityListing>> GetReportingSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
         /// <summary>
+        /// Get a scheduled report job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ReportSchedule</returns>
+        System.Threading.Tasks.Task<ReportSchedule> GetReportingSchedulesScheduleIdAsync (string scheduleId);
+
+        /// <summary>
+        /// Get a scheduled report job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ApiResponse (ReportSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> GetReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId);
+        /// <summary>
+        /// Get list of completed scheduled report jobs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <returns>Task of ReportRunEntryEntityDomainListing</returns>
+        System.Threading.Tasks.Task<ReportRunEntryEntityDomainListing> GetReportingSchedulesScheduleIdHistoryAsync (string scheduleId, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get list of completed scheduled report jobs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (ReportRunEntryEntityDomainListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReportRunEntryEntityDomainListing>> GetReportingSchedulesScheduleIdHistoryAsyncWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null);
+        /// <summary>
+        /// Get most recently completed scheduled report job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ReportRunEntry</returns>
+        System.Threading.Tasks.Task<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryLatestAsync (string scheduleId);
+
+        /// <summary>
+        /// Get most recently completed scheduled report job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingSchedulesScheduleIdHistoryLatestAsyncWithHttpInfo (string scheduleId);
+        /// <summary>
+        /// A completed scheduled report job
+        /// </summary>
+        /// <remarks>
+        /// A completed scheduled report job.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="runId">Run ID</param>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ReportRunEntry</returns>
+        System.Threading.Tasks.Task<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryRunIdAsync (string runId, string scheduleId);
+
+        /// <summary>
+        /// A completed scheduled report job
+        /// </summary>
+        /// <remarks>
+        /// A completed scheduled report job.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="runId">Run ID</param>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingSchedulesScheduleIdHistoryRunIdAsyncWithHttpInfo (string runId, string scheduleId);
+        /// <summary>
         /// Get a list of report time periods.
         /// </summary>
         /// <remarks>
@@ -712,29 +712,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<string>>> GetReportingTimeperiodsAsyncWithHttpInfo ();
-        /// <summary>
-        /// Index conversation properties
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request</param>
-        /// <returns>Task of PropertyIndexRequest</returns>
-        System.Threading.Tasks.Task<PropertyIndexRequest> PostConversationDetailsPropertiesAsync (string conversationId, PropertyIndexRequest body);
-
-        /// <summary>
-        /// Index conversation properties
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request</param>
-        /// <returns>Task of ApiResponse (PropertyIndexRequest)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PropertyIndexRequest>> PostConversationDetailsPropertiesAsyncWithHttpInfo (string conversationId, PropertyIndexRequest body);
         /// <summary>
         /// Query for conversation aggregates
         /// </summary>
@@ -756,6 +733,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AggregateQueryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AggregateQueryResponse>> PostConversationsAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        /// <summary>
+        /// Index conversation properties
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request</param>
+        /// <returns>Task of PropertyIndexRequest</returns>
+        System.Threading.Tasks.Task<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesAsync (string conversationId, PropertyIndexRequest body);
+
+        /// <summary>
+        /// Index conversation properties
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request</param>
+        /// <returns>Task of ApiResponse (PropertyIndexRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PropertyIndexRequest>> PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo (string conversationId, PropertyIndexRequest body);
         /// <summary>
         /// Query for conversation details
         /// </summary>
@@ -820,27 +820,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (QualifierMappingObservationQueryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<QualifierMappingObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body);
         /// <summary>
-        /// Place a scheduled report immediately into the reporting queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of RunNowResponse</returns>
-        System.Threading.Tasks.Task<RunNowResponse> PostReportingScheduleRunreportAsync (string scheduleId);
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (RunNowResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostReportingScheduleRunreportAsyncWithHttpInfo (string scheduleId);
-        /// <summary>
         /// Create a scheduled report job
         /// </summary>
         /// <remarks>
@@ -861,6 +840,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
         System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostReportingSchedulesAsyncWithHttpInfo (ReportSchedule body);
+        /// <summary>
+        /// Place a scheduled report immediately into the reporting queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of RunNowResponse</returns>
+        System.Threading.Tasks.Task<RunNowResponse> PostReportingSchedulesScheduleIdRunreportAsync (string scheduleId);
+
+        /// <summary>
+        /// Place a scheduled report immediately into the reporting queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ApiResponse (RunNowResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostReportingSchedulesScheduleIdRunreportAsyncWithHttpInfo (string scheduleId);
         /// <summary>
         /// Query for user aggregates
         /// </summary>
@@ -913,7 +913,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        System.Threading.Tasks.Task<ReportSchedule> PutReportingScheduleAsync (string scheduleId, ReportSchedule body);
+        System.Threading.Tasks.Task<ReportSchedule> PutReportingSchedulesScheduleIdAsync (string scheduleId, ReportSchedule body);
 
         /// <summary>
         /// Update a scheduled report job.
@@ -925,7 +925,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingScheduleAsyncWithHttpInfo (string scheduleId, ReportSchedule body);
+        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId, ReportSchedule body);
         #endregion Asynchronous Operations
     }
 
@@ -1022,9 +1022,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>string</returns>
-        public string DeleteReportingSchedule (string scheduleId)
+        public string DeleteReportingSchedulesScheduleId (string scheduleId)
         {
-             ApiResponse<string> localVarResponse = DeleteReportingScheduleWithHttpInfo(scheduleId);
+             ApiResponse<string> localVarResponse = DeleteReportingSchedulesScheduleIdWithHttpInfo(scheduleId);
              return localVarResponse.Data;
         }
 
@@ -1034,11 +1034,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteReportingScheduleWithHttpInfo (string scheduleId)
+        public ApiResponse< string > DeleteReportingSchedulesScheduleIdWithHttpInfo (string scheduleId)
         {
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->DeleteReportingSchedule");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->DeleteReportingSchedulesScheduleId");
 
             var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1081,15 +1081,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteReportingSchedulesScheduleId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteReportingSchedulesScheduleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
@@ -1100,9 +1098,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteReportingScheduleAsync (string scheduleId)
+        public async System.Threading.Tasks.Task<string> DeleteReportingSchedulesScheduleIdAsync (string scheduleId)
         {
-             ApiResponse<string> localVarResponse = await DeleteReportingScheduleAsyncWithHttpInfo(scheduleId);
+             ApiResponse<string> localVarResponse = await DeleteReportingSchedulesScheduleIdAsyncWithHttpInfo(scheduleId);
              return localVarResponse.Data;
 
         }
@@ -1113,11 +1111,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteReportingScheduleAsyncWithHttpInfo (string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId)
         {
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->DeleteReportingSchedule");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->DeleteReportingSchedulesScheduleId");
 
             var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1160,15 +1158,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteReportingSchedulesScheduleId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteReportingSchedulesScheduleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
@@ -1179,9 +1175,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>AnalyticsConversation</returns>
-        public AnalyticsConversation GetConversationDetails (string conversationId)
+        public AnalyticsConversation GetConversationsConversationIdDetails (string conversationId)
         {
-             ApiResponse<AnalyticsConversation> localVarResponse = GetConversationDetailsWithHttpInfo(conversationId);
+             ApiResponse<AnalyticsConversation> localVarResponse = GetConversationsConversationIdDetailsWithHttpInfo(conversationId);
              return localVarResponse.Data;
         }
 
@@ -1191,11 +1187,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>ApiResponse of AnalyticsConversation</returns>
-        public ApiResponse< AnalyticsConversation > GetConversationDetailsWithHttpInfo (string conversationId)
+        public ApiResponse< AnalyticsConversation > GetConversationsConversationIdDetailsWithHttpInfo (string conversationId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling AnalyticsApi->GetConversationDetails");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling AnalyticsApi->GetConversationsConversationIdDetails");
 
             var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1238,15 +1234,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdDetails: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationDetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdDetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AnalyticsConversation>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AnalyticsConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversation)));
             
         }
@@ -1257,9 +1251,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of AnalyticsConversation</returns>
-        public async System.Threading.Tasks.Task<AnalyticsConversation> GetConversationDetailsAsync (string conversationId)
+        public async System.Threading.Tasks.Task<AnalyticsConversation> GetConversationsConversationIdDetailsAsync (string conversationId)
         {
-             ApiResponse<AnalyticsConversation> localVarResponse = await GetConversationDetailsAsyncWithHttpInfo(conversationId);
+             ApiResponse<AnalyticsConversation> localVarResponse = await GetConversationsConversationIdDetailsAsyncWithHttpInfo(conversationId);
              return localVarResponse.Data;
 
         }
@@ -1270,11 +1264,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <returns>Task of ApiResponse (AnalyticsConversation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversation>> GetConversationDetailsAsyncWithHttpInfo (string conversationId)
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversation>> GetConversationsConversationIdDetailsAsyncWithHttpInfo (string conversationId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling AnalyticsApi->GetConversationDetails");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling AnalyticsApi->GetConversationsConversationIdDetails");
 
             var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1317,15 +1311,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdDetails: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationDetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdDetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AnalyticsConversation>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AnalyticsConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversation)));
             
         }
@@ -1398,15 +1390,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingMetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingMetadata: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetReportingMetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ReportMetaDataEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReportMetaDataEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportMetaDataEntityListing)));
             
         }
@@ -1480,15 +1470,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingMetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingMetadata: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetReportingMetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ReportMetaDataEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReportMetaDataEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportMetaDataEntityListing)));
             
         }
@@ -1561,15 +1549,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingReportIdMetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingReportIdMetadata: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetReportingReportIdMetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ReportMetaData>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReportMetaData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportMetaData)));
             
         }
@@ -1643,15 +1629,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingReportIdMetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingReportIdMetadata: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetReportingReportIdMetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ReportMetaData>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReportMetaData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportMetaData)));
             
         }
@@ -1715,15 +1699,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingReportformats: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingReportformats: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetReportingReportformats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<string>>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<string>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
             
         }
@@ -1788,668 +1770,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingReportformats: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingReportformats: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetReportingReportformats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<string>>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<string>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
-            
-        }
-
-        /// <summary>
-        /// Get a scheduled report job. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportSchedule</returns>
-        public ReportSchedule GetReportingSchedule (string scheduleId)
-        {
-             ApiResponse<ReportSchedule> localVarResponse = GetReportingScheduleWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a scheduled report job. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportSchedule</returns>
-        public ApiResponse< ReportSchedule > GetReportingScheduleWithHttpInfo (string scheduleId)
-        {
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedule");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
-                (ReportSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)));
-            
-        }
-
-        /// <summary>
-        /// Get a scheduled report job. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportSchedule</returns>
-        public async System.Threading.Tasks.Task<ReportSchedule> GetReportingScheduleAsync (string scheduleId)
-        {
-             ApiResponse<ReportSchedule> localVarResponse = await GetReportingScheduleAsyncWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a scheduled report job. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> GetReportingScheduleAsyncWithHttpInfo (string scheduleId)
-        {
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedule");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
-                (ReportSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)));
-            
-        }
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>ReportRunEntryEntityDomainListing</returns>
-        public ReportRunEntryEntityDomainListing GetReportingScheduleHistory (string scheduleId, int? pageNumber = null, int? pageSize = null)
-        {
-             ApiResponse<ReportRunEntryEntityDomainListing> localVarResponse = GetReportingScheduleHistoryWithHttpInfo(scheduleId, pageNumber, pageSize);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>ApiResponse of ReportRunEntryEntityDomainListing</returns>
-        public ApiResponse< ReportRunEntryEntityDomainListing > GetReportingScheduleHistoryWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null)
-        {
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingScheduleHistory");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntryEntityDomainListing>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntryEntityDomainListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntryEntityDomainListing)));
-            
-        }
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>Task of ReportRunEntryEntityDomainListing</returns>
-        public async System.Threading.Tasks.Task<ReportRunEntryEntityDomainListing> GetReportingScheduleHistoryAsync (string scheduleId, int? pageNumber = null, int? pageSize = null)
-        {
-             ApiResponse<ReportRunEntryEntityDomainListing> localVarResponse = await GetReportingScheduleHistoryAsyncWithHttpInfo(scheduleId, pageNumber, pageSize);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>Task of ApiResponse (ReportRunEntryEntityDomainListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntryEntityDomainListing>> GetReportingScheduleHistoryAsyncWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null)
-        {
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingScheduleHistory");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntryEntityDomainListing>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntryEntityDomainListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntryEntityDomainListing)));
-            
-        }
-
-        /// <summary>
-        /// Get most recently completed scheduled report job. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportRunEntry</returns>
-        public ReportRunEntry GetReportingScheduleHistoryLatest (string scheduleId)
-        {
-             ApiResponse<ReportRunEntry> localVarResponse = GetReportingScheduleHistoryLatestWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get most recently completed scheduled report job. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportRunEntry</returns>
-        public ApiResponse< ReportRunEntry > GetReportingScheduleHistoryLatestWithHttpInfo (string scheduleId)
-        {
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingScheduleHistoryLatest");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/latest";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistoryLatest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistoryLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)));
-            
-        }
-
-        /// <summary>
-        /// Get most recently completed scheduled report job. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportRunEntry</returns>
-        public async System.Threading.Tasks.Task<ReportRunEntry> GetReportingScheduleHistoryLatestAsync (string scheduleId)
-        {
-             ApiResponse<ReportRunEntry> localVarResponse = await GetReportingScheduleHistoryLatestAsyncWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get most recently completed scheduled report job. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingScheduleHistoryLatestAsyncWithHttpInfo (string scheduleId)
-        {
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingScheduleHistoryLatest");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/latest";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistoryLatest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistoryLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)));
-            
-        }
-
-        /// <summary>
-        /// A completed scheduled report job A completed scheduled report job.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportRunEntry</returns>
-        public ReportRunEntry GetReportingScheduleHistoryRunId (string runId, string scheduleId)
-        {
-             ApiResponse<ReportRunEntry> localVarResponse = GetReportingScheduleHistoryRunIdWithHttpInfo(runId, scheduleId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// A completed scheduled report job A completed scheduled report job.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportRunEntry</returns>
-        public ApiResponse< ReportRunEntry > GetReportingScheduleHistoryRunIdWithHttpInfo (string runId, string scheduleId)
-        {
-            // verify the required parameter 'runId' is set
-            if (runId == null)
-                throw new ApiException(400, "Missing required parameter 'runId' when calling AnalyticsApi->GetReportingScheduleHistoryRunId");
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingScheduleHistoryRunId");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (runId != null) localVarPathParams.Add("runId", Configuration.ApiClient.ParameterToString(runId)); // path parameter
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistoryRunId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistoryRunId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)));
-            
-        }
-
-        /// <summary>
-        /// A completed scheduled report job A completed scheduled report job.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportRunEntry</returns>
-        public async System.Threading.Tasks.Task<ReportRunEntry> GetReportingScheduleHistoryRunIdAsync (string runId, string scheduleId)
-        {
-             ApiResponse<ReportRunEntry> localVarResponse = await GetReportingScheduleHistoryRunIdAsyncWithHttpInfo(runId, scheduleId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// A completed scheduled report job A completed scheduled report job.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingScheduleHistoryRunIdAsyncWithHttpInfo (string runId, string scheduleId)
-        {
-            // verify the required parameter 'runId' is set
-            if (runId == null)
-                throw new ApiException(400, "Missing required parameter 'runId' when calling AnalyticsApi->GetReportingScheduleHistoryRunId");
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingScheduleHistoryRunId");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (runId != null) localVarPathParams.Add("runId", Configuration.ApiClient.ParameterToString(runId)); // path parameter
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistoryRunId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingScheduleHistoryRunId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)));
             
         }
 
@@ -2518,15 +1846,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedules: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ReportScheduleEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReportScheduleEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportScheduleEntityListing)));
             
         }
@@ -2597,16 +1923,650 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedules: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ReportScheduleEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReportScheduleEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportScheduleEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get a scheduled report job. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ReportSchedule</returns>
+        public ReportSchedule GetReportingSchedulesScheduleId (string scheduleId)
+        {
+             ApiResponse<ReportSchedule> localVarResponse = GetReportingSchedulesScheduleIdWithHttpInfo(scheduleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a scheduled report job. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ApiResponse of ReportSchedule</returns>
+        public ApiResponse< ReportSchedule > GetReportingSchedulesScheduleIdWithHttpInfo (string scheduleId)
+        {
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleId");
+
+            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)));
+            
+        }
+
+        /// <summary>
+        /// Get a scheduled report job. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ReportSchedule</returns>
+        public async System.Threading.Tasks.Task<ReportSchedule> GetReportingSchedulesScheduleIdAsync (string scheduleId)
+        {
+             ApiResponse<ReportSchedule> localVarResponse = await GetReportingSchedulesScheduleIdAsyncWithHttpInfo(scheduleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a scheduled report job. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ApiResponse (ReportSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> GetReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId)
+        {
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleId");
+
+            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)));
+            
+        }
+
+        /// <summary>
+        /// Get list of completed scheduled report jobs. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <returns>ReportRunEntryEntityDomainListing</returns>
+        public ReportRunEntryEntityDomainListing GetReportingSchedulesScheduleIdHistory (string scheduleId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<ReportRunEntryEntityDomainListing> localVarResponse = GetReportingSchedulesScheduleIdHistoryWithHttpInfo(scheduleId, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of completed scheduled report jobs. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <returns>ApiResponse of ReportRunEntryEntityDomainListing</returns>
+        public ApiResponse< ReportRunEntryEntityDomainListing > GetReportingSchedulesScheduleIdHistoryWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null)
+        {
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistory");
+
+            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistory: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportRunEntryEntityDomainListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportRunEntryEntityDomainListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntryEntityDomainListing)));
+            
+        }
+
+        /// <summary>
+        /// Get list of completed scheduled report jobs. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <returns>Task of ReportRunEntryEntityDomainListing</returns>
+        public async System.Threading.Tasks.Task<ReportRunEntryEntityDomainListing> GetReportingSchedulesScheduleIdHistoryAsync (string scheduleId, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<ReportRunEntryEntityDomainListing> localVarResponse = await GetReportingSchedulesScheduleIdHistoryAsyncWithHttpInfo(scheduleId, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of completed scheduled report jobs. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (ReportRunEntryEntityDomainListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntryEntityDomainListing>> GetReportingSchedulesScheduleIdHistoryAsyncWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null)
+        {
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistory");
+
+            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistory: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportRunEntryEntityDomainListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportRunEntryEntityDomainListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntryEntityDomainListing)));
+            
+        }
+
+        /// <summary>
+        /// Get most recently completed scheduled report job. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ReportRunEntry</returns>
+        public ReportRunEntry GetReportingSchedulesScheduleIdHistoryLatest (string scheduleId)
+        {
+             ApiResponse<ReportRunEntry> localVarResponse = GetReportingSchedulesScheduleIdHistoryLatestWithHttpInfo(scheduleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get most recently completed scheduled report job. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ApiResponse of ReportRunEntry</returns>
+        public ApiResponse< ReportRunEntry > GetReportingSchedulesScheduleIdHistoryLatestWithHttpInfo (string scheduleId)
+        {
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistoryLatest");
+
+            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistoryLatest: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistoryLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportRunEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)));
+            
+        }
+
+        /// <summary>
+        /// Get most recently completed scheduled report job. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ReportRunEntry</returns>
+        public async System.Threading.Tasks.Task<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryLatestAsync (string scheduleId)
+        {
+             ApiResponse<ReportRunEntry> localVarResponse = await GetReportingSchedulesScheduleIdHistoryLatestAsyncWithHttpInfo(scheduleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get most recently completed scheduled report job. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingSchedulesScheduleIdHistoryLatestAsyncWithHttpInfo (string scheduleId)
+        {
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistoryLatest");
+
+            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistoryLatest: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistoryLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportRunEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)));
+            
+        }
+
+        /// <summary>
+        /// A completed scheduled report job A completed scheduled report job.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="runId">Run ID</param>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ReportRunEntry</returns>
+        public ReportRunEntry GetReportingSchedulesScheduleIdHistoryRunId (string runId, string scheduleId)
+        {
+             ApiResponse<ReportRunEntry> localVarResponse = GetReportingSchedulesScheduleIdHistoryRunIdWithHttpInfo(runId, scheduleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// A completed scheduled report job A completed scheduled report job.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="runId">Run ID</param>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ApiResponse of ReportRunEntry</returns>
+        public ApiResponse< ReportRunEntry > GetReportingSchedulesScheduleIdHistoryRunIdWithHttpInfo (string runId, string scheduleId)
+        {
+            // verify the required parameter 'runId' is set
+            if (runId == null)
+                throw new ApiException(400, "Missing required parameter 'runId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistoryRunId");
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistoryRunId");
+
+            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (runId != null) localVarPathParams.Add("runId", Configuration.ApiClient.ParameterToString(runId)); // path parameter
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistoryRunId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistoryRunId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportRunEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)));
+            
+        }
+
+        /// <summary>
+        /// A completed scheduled report job A completed scheduled report job.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="runId">Run ID</param>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ReportRunEntry</returns>
+        public async System.Threading.Tasks.Task<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryRunIdAsync (string runId, string scheduleId)
+        {
+             ApiResponse<ReportRunEntry> localVarResponse = await GetReportingSchedulesScheduleIdHistoryRunIdAsyncWithHttpInfo(runId, scheduleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// A completed scheduled report job A completed scheduled report job.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="runId">Run ID</param>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingSchedulesScheduleIdHistoryRunIdAsyncWithHttpInfo (string runId, string scheduleId)
+        {
+            // verify the required parameter 'runId' is set
+            if (runId == null)
+                throw new ApiException(400, "Missing required parameter 'runId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistoryRunId");
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistoryRunId");
+
+            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (runId != null) localVarPathParams.Add("runId", Configuration.ApiClient.ParameterToString(runId)); // path parameter
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistoryRunId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingSchedulesScheduleIdHistoryRunId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportRunEntry) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)));
             
         }
 
@@ -2669,15 +2629,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingTimeperiods: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingTimeperiods: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetReportingTimeperiods: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<string>>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<string>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
             
         }
@@ -2742,199 +2700,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetReportingTimeperiods: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetReportingTimeperiods: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetReportingTimeperiods: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<string>>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<string>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
-            
-        }
-
-        /// <summary>
-        /// Index conversation properties 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request</param>
-        /// <returns>PropertyIndexRequest</returns>
-        public PropertyIndexRequest PostConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
-        {
-             ApiResponse<PropertyIndexRequest> localVarResponse = PostConversationDetailsPropertiesWithHttpInfo(conversationId, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Index conversation properties 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request</param>
-        /// <returns>ApiResponse of PropertyIndexRequest</returns>
-        public ApiResponse< PropertyIndexRequest > PostConversationDetailsPropertiesWithHttpInfo (string conversationId, PropertyIndexRequest body)
-        {
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling AnalyticsApi->PostConversationDetailsProperties");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostConversationDetailsProperties");
-
-            var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details/properties";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationDetailsProperties: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationDetailsProperties: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PropertyIndexRequest>(localVarStatusCode,
-                localVarHeaders,
-                (PropertyIndexRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PropertyIndexRequest)));
-            
-        }
-
-        /// <summary>
-        /// Index conversation properties 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request</param>
-        /// <returns>Task of PropertyIndexRequest</returns>
-        public async System.Threading.Tasks.Task<PropertyIndexRequest> PostConversationDetailsPropertiesAsync (string conversationId, PropertyIndexRequest body)
-        {
-             ApiResponse<PropertyIndexRequest> localVarResponse = await PostConversationDetailsPropertiesAsyncWithHttpInfo(conversationId, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Index conversation properties 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="body">request</param>
-        /// <returns>Task of ApiResponse (PropertyIndexRequest)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PropertyIndexRequest>> PostConversationDetailsPropertiesAsyncWithHttpInfo (string conversationId, PropertyIndexRequest body)
-        {
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling AnalyticsApi->PostConversationDetailsProperties");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostConversationDetailsProperties");
-
-            var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details/properties";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationDetailsProperties: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationDetailsProperties: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PropertyIndexRequest>(localVarStatusCode,
-                localVarHeaders,
-                (PropertyIndexRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PropertyIndexRequest)));
             
         }
 
@@ -3010,15 +2783,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AggregateQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)));
             
         }
@@ -3096,16 +2867,193 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AggregateQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)));
+            
+        }
+
+        /// <summary>
+        /// Index conversation properties 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request</param>
+        /// <returns>PropertyIndexRequest</returns>
+        public PropertyIndexRequest PostConversationsConversationIdDetailsProperties (string conversationId, PropertyIndexRequest body)
+        {
+             ApiResponse<PropertyIndexRequest> localVarResponse = PostConversationsConversationIdDetailsPropertiesWithHttpInfo(conversationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Index conversation properties 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request</param>
+        /// <returns>ApiResponse of PropertyIndexRequest</returns>
+        public ApiResponse< PropertyIndexRequest > PostConversationsConversationIdDetailsPropertiesWithHttpInfo (string conversationId, PropertyIndexRequest body)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling AnalyticsApi->PostConversationsConversationIdDetailsProperties");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostConversationsConversationIdDetailsProperties");
+
+            var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details/properties";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDetailsProperties: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDetailsProperties: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PropertyIndexRequest>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PropertyIndexRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PropertyIndexRequest)));
+            
+        }
+
+        /// <summary>
+        /// Index conversation properties 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request</param>
+        /// <returns>Task of PropertyIndexRequest</returns>
+        public async System.Threading.Tasks.Task<PropertyIndexRequest> PostConversationsConversationIdDetailsPropertiesAsync (string conversationId, PropertyIndexRequest body)
+        {
+             ApiResponse<PropertyIndexRequest> localVarResponse = await PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo(conversationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Index conversation properties 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">request</param>
+        /// <returns>Task of ApiResponse (PropertyIndexRequest)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PropertyIndexRequest>> PostConversationsConversationIdDetailsPropertiesAsyncWithHttpInfo (string conversationId, PropertyIndexRequest body)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling AnalyticsApi->PostConversationsConversationIdDetailsProperties");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostConversationsConversationIdDetailsProperties");
+
+            var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details/properties";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDetailsProperties: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdDetailsProperties: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PropertyIndexRequest>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PropertyIndexRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PropertyIndexRequest)));
             
         }
 
@@ -3181,15 +3129,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationsDetailsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsDetailsQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsDetailsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AnalyticsConversationQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AnalyticsConversationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationQueryResponse)));
             
         }
@@ -3267,15 +3213,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationsDetailsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsDetailsQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsDetailsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AnalyticsConversationQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AnalyticsConversationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationQueryResponse)));
             
         }
@@ -3352,15 +3296,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AggregateQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)));
             
         }
@@ -3438,15 +3380,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AggregateQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)));
             
         }
@@ -3523,15 +3463,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<QualifierMappingObservationQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QualifierMappingObservationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualifierMappingObservationQueryResponse)));
             
         }
@@ -3609,173 +3547,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<QualifierMappingObservationQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QualifierMappingObservationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualifierMappingObservationQueryResponse)));
-            
-        }
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>RunNowResponse</returns>
-        public RunNowResponse PostReportingScheduleRunreport (string scheduleId)
-        {
-             ApiResponse<RunNowResponse> localVarResponse = PostReportingScheduleRunreportWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of RunNowResponse</returns>
-        public ApiResponse< RunNowResponse > PostReportingScheduleRunreportWithHttpInfo (string scheduleId)
-        {
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PostReportingScheduleRunreport");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/runreport";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostReportingScheduleRunreport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostReportingScheduleRunreport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<RunNowResponse>(localVarStatusCode,
-                localVarHeaders,
-                (RunNowResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RunNowResponse)));
-            
-        }
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of RunNowResponse</returns>
-        public async System.Threading.Tasks.Task<RunNowResponse> PostReportingScheduleRunreportAsync (string scheduleId)
-        {
-             ApiResponse<RunNowResponse> localVarResponse = await PostReportingScheduleRunreportAsyncWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (RunNowResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostReportingScheduleRunreportAsyncWithHttpInfo (string scheduleId)
-        {
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PostReportingScheduleRunreport");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/runreport";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostReportingScheduleRunreport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostReportingScheduleRunreport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<RunNowResponse>(localVarStatusCode,
-                localVarHeaders,
-                (RunNowResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RunNowResponse)));
             
         }
 
@@ -3851,15 +3630,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostReportingSchedules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostReportingSchedules: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostReportingSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReportSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)));
             
         }
@@ -3937,16 +3714,167 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostReportingSchedules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostReportingSchedules: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostReportingSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReportSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)));
+            
+        }
+
+        /// <summary>
+        /// Place a scheduled report immediately into the reporting queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>RunNowResponse</returns>
+        public RunNowResponse PostReportingSchedulesScheduleIdRunreport (string scheduleId)
+        {
+             ApiResponse<RunNowResponse> localVarResponse = PostReportingSchedulesScheduleIdRunreportWithHttpInfo(scheduleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Place a scheduled report immediately into the reporting queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>ApiResponse of RunNowResponse</returns>
+        public ApiResponse< RunNowResponse > PostReportingSchedulesScheduleIdRunreportWithHttpInfo (string scheduleId)
+        {
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PostReportingSchedulesScheduleIdRunreport");
+
+            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/runreport";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostReportingSchedulesScheduleIdRunreport: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostReportingSchedulesScheduleIdRunreport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RunNowResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RunNowResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RunNowResponse)));
+            
+        }
+
+        /// <summary>
+        /// Place a scheduled report immediately into the reporting queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of RunNowResponse</returns>
+        public async System.Threading.Tasks.Task<RunNowResponse> PostReportingSchedulesScheduleIdRunreportAsync (string scheduleId)
+        {
+             ApiResponse<RunNowResponse> localVarResponse = await PostReportingSchedulesScheduleIdRunreportAsyncWithHttpInfo(scheduleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Place a scheduled report immediately into the reporting queue 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduleId">Schedule ID</param>
+        /// <returns>Task of ApiResponse (RunNowResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostReportingSchedulesScheduleIdRunreportAsyncWithHttpInfo (string scheduleId)
+        {
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PostReportingSchedulesScheduleIdRunreport");
+
+            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/runreport";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostReportingSchedulesScheduleIdRunreport: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostReportingSchedulesScheduleIdRunreport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RunNowResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RunNowResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RunNowResponse)));
             
         }
 
@@ -4022,15 +3950,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostUsersAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostUsersAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PresenceQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PresenceQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PresenceQueryResponse)));
             
         }
@@ -4108,15 +4034,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostUsersAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostUsersAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PresenceQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PresenceQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PresenceQueryResponse)));
             
         }
@@ -4193,15 +4117,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostUsersObservationsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersObservationsQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostUsersObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ObservationQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ObservationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ObservationQueryResponse)));
             
         }
@@ -4279,15 +4201,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostUsersObservationsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersObservationsQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostUsersObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ObservationQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ObservationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ObservationQueryResponse)));
             
         }
@@ -4299,9 +4219,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        public ReportSchedule PutReportingSchedule (string scheduleId, ReportSchedule body)
+        public ReportSchedule PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body)
         {
-             ApiResponse<ReportSchedule> localVarResponse = PutReportingScheduleWithHttpInfo(scheduleId, body);
+             ApiResponse<ReportSchedule> localVarResponse = PutReportingSchedulesScheduleIdWithHttpInfo(scheduleId, body);
              return localVarResponse.Data;
         }
 
@@ -4312,14 +4232,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        public ApiResponse< ReportSchedule > PutReportingScheduleWithHttpInfo (string scheduleId, ReportSchedule body)
+        public ApiResponse< ReportSchedule > PutReportingSchedulesScheduleIdWithHttpInfo (string scheduleId, ReportSchedule body)
         {
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PutReportingSchedule");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PutReportingSchedulesScheduleId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PutReportingSchedule");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PutReportingSchedulesScheduleId");
 
             var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4370,15 +4290,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutReportingSchedulesScheduleId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutReportingSchedulesScheduleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReportSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)));
             
         }
@@ -4390,9 +4308,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        public async System.Threading.Tasks.Task<ReportSchedule> PutReportingScheduleAsync (string scheduleId, ReportSchedule body)
+        public async System.Threading.Tasks.Task<ReportSchedule> PutReportingSchedulesScheduleIdAsync (string scheduleId, ReportSchedule body)
         {
-             ApiResponse<ReportSchedule> localVarResponse = await PutReportingScheduleAsyncWithHttpInfo(scheduleId, body);
+             ApiResponse<ReportSchedule> localVarResponse = await PutReportingSchedulesScheduleIdAsyncWithHttpInfo(scheduleId, body);
              return localVarResponse.Data;
 
         }
@@ -4404,14 +4322,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingScheduleAsyncWithHttpInfo (string scheduleId, ReportSchedule body)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId, ReportSchedule body)
         {
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PutReportingSchedule");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PutReportingSchedulesScheduleId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PutReportingSchedule");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PutReportingSchedulesScheduleId");
 
             var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4462,15 +4380,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutReportingSchedulesScheduleId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutReportingSchedulesScheduleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReportSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)));
             
         }

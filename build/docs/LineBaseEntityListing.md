@@ -7,10 +7,10 @@ title: LineBaseEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Entities** | [**List&lt;LineBase&gt;**](LineBase.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;LineBase&gt;**](LineBase.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |

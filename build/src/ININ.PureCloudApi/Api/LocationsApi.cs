@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Location</returns>
-        Location GetLocation (string locationId);
+        Location GetLocationId (string locationId);
 
         /// <summary>
         /// Get Location by ID.
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>ApiResponse of Location</returns>
-        ApiResponse<Location> GetLocationWithHttpInfo (string locationId);
+        ApiResponse<Location> GetLocationIdWithHttpInfo (string locationId);
         /// <summary>
         /// Get a list of all locations.
         /// </summary>
@@ -61,7 +61,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of List&lt;Location&gt;</returns>
         ApiResponse<List<Location>> GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
-        /// Search using q64
+        /// Search locations using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -73,7 +73,7 @@ namespace ININ.PureCloudApi.Api
         LocationsSearchResponse GetSearch (string q64, List<string> expand = null);
 
         /// <summary>
-        /// Search using q64
+        /// Search locations using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -84,7 +84,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
         ApiResponse<LocationsSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
-        /// Search
+        /// Search locations
         /// </summary>
         /// <remarks>
         /// 
@@ -95,7 +95,7 @@ namespace ININ.PureCloudApi.Api
         LocationsSearchResponse PostSearch (LocationSearchRequest body);
 
         /// <summary>
-        /// Search
+        /// Search locations
         /// </summary>
         /// <remarks>
         /// 
@@ -115,7 +115,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of Location</returns>
-        System.Threading.Tasks.Task<Location> GetLocationAsync (string locationId);
+        System.Threading.Tasks.Task<Location> GetLocationIdAsync (string locationId);
 
         /// <summary>
         /// Get Location by ID.
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationAsyncWithHttpInfo (string locationId);
+        System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationIdAsyncWithHttpInfo (string locationId);
         /// <summary>
         /// Get a list of all locations.
         /// </summary>
@@ -153,7 +153,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (List&lt;Location&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Location>>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
-        /// Search using q64
+        /// Search locations using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -165,7 +165,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<LocationsSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
 
         /// <summary>
-        /// Search using q64
+        /// Search locations using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -176,7 +176,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
-        /// Search
+        /// Search locations
         /// </summary>
         /// <remarks>
         /// 
@@ -187,7 +187,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<LocationsSearchResponse> PostSearchAsync (LocationSearchRequest body);
 
         /// <summary>
-        /// Search
+        /// Search locations
         /// </summary>
         /// <remarks>
         /// 
@@ -292,9 +292,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Location</returns>
-        public Location GetLocation (string locationId)
+        public Location GetLocationId (string locationId)
         {
-             ApiResponse<Location> localVarResponse = GetLocationWithHttpInfo(locationId);
+             ApiResponse<Location> localVarResponse = GetLocationIdWithHttpInfo(locationId);
              return localVarResponse.Data;
         }
 
@@ -304,11 +304,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>ApiResponse of Location</returns>
-        public ApiResponse< Location > GetLocationWithHttpInfo (string locationId)
+        public ApiResponse< Location > GetLocationIdWithHttpInfo (string locationId)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
-                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocation");
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocationId");
 
             var localVarPath = "/api/v2/locations/{locationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -351,15 +351,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLocation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetLocationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetLocation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetLocationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Location>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Location) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Location)));
             
         }
@@ -370,9 +368,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of Location</returns>
-        public async System.Threading.Tasks.Task<Location> GetLocationAsync (string locationId)
+        public async System.Threading.Tasks.Task<Location> GetLocationIdAsync (string locationId)
         {
-             ApiResponse<Location> localVarResponse = await GetLocationAsyncWithHttpInfo(locationId);
+             ApiResponse<Location> localVarResponse = await GetLocationIdAsyncWithHttpInfo(locationId);
              return localVarResponse.Data;
 
         }
@@ -383,11 +381,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationAsyncWithHttpInfo (string locationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationIdAsyncWithHttpInfo (string locationId)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
-                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocation");
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocationId");
 
             var localVarPath = "/api/v2/locations/{locationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -430,15 +428,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLocation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetLocationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetLocation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetLocationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Location>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Location) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Location)));
             
         }
@@ -511,15 +507,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLocations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetLocations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLocations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<Location>>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<Location>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Location>)));
             
         }
@@ -593,21 +587,19 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLocations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetLocations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLocations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<Location>>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<Location>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Location>)));
             
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search locations using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -620,7 +612,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search locations using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -674,21 +666,19 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LocationsSearchResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (LocationsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)));
             
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search locations using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -702,7 +692,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search locations using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -756,21 +746,19 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LocationsSearchResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (LocationsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)));
             
         }
 
         /// <summary>
-        /// Search 
+        /// Search locations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -782,7 +770,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search locations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -841,21 +829,19 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LocationsSearchResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (LocationsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)));
             
         }
 
         /// <summary>
-        /// Search 
+        /// Search locations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -868,7 +854,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search locations 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -927,15 +913,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LocationsSearchResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (LocationsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationsSearchResponse)));
             
         }

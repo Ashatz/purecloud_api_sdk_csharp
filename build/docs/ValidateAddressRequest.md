@@ -7,7 +7,7 @@ title: ValidateAddressRequest
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Address** | [**StreetAddress**](StreetAddress.html) | The address that is to be validated. | |
+| **Address** | [**StreetAddress**](StreetAddress.html) | Address schema | [optional] |
 {: class="table table-striped"}
 
 

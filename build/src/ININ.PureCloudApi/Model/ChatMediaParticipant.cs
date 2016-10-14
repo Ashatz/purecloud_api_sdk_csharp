@@ -183,6 +183,18 @@ namespace ININ.PureCloudApi.Model
             TransferForward,
             
             /// <summary>
+            /// Enum TransferNoAnswer for "TRANSFER_NO_ANSWER"
+            /// </summary>
+            [EnumMember(Value = "TRANSFER_NO_ANSWER")]
+            TransferNoAnswer,
+            
+            /// <summary>
+            /// Enum TransferNotAvailable for "TRANSFER_NOT_AVAILABLE"
+            /// </summary>
+            [EnumMember(Value = "TRANSFER_NOT_AVAILABLE")]
+            TransferNotAvailable,
+            
+            /// <summary>
             /// Enum TransportFailure for "TRANSPORT_FAILURE"
             /// </summary>
             [EnumMember(Value = "TRANSPORT_FAILURE")]
@@ -236,9 +248,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Id">The unique participant ID..</param>
         /// <param name="Name">The display friendly name of the participant..</param>
         /// <param name="Address">The participant address..</param>
-        /// <param name="StartTime">The time when this participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ConnectedTime">The time when this participant went connected on the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="EndTime">The time when this participant when disconnected on the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="StartTime">The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConnectedTime">The time when this participant went connected for this media (eg: video connected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndTime">The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="StartHoldTime">The time when this participant&#39;s hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Purpose">The participant&#39;s purpose.  Values can be: &#39;agent&#39;, &#39;user&#39;, &#39;customer&#39;, &#39;external&#39;, &#39;acd&#39;, &#39;ivr.</param>
         /// <param name="State">The participant&#39;s state.  Values can be: &#39;alerting&#39;, &#39;connected&#39;, &#39;disconnected&#39;, &#39;dialing&#39;, &#39;contacting.</param>
@@ -254,8 +266,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Script">The Engage script that should be used by this participant..</param>
         /// <param name="WrapupTimeoutMs">The amount of time the participant has to complete wrap-up..</param>
         /// <param name="WrapupSkipped">Value is true when the participant has skipped wrap-up. (default to false).</param>
+        /// <param name="Provider">The source provider for the communication..</param>
+        /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
+        /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
         /// <param name="RoomId">The ID of the chat room..</param>
-        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string RoomId = null)
+        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, string RoomId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -302,6 +317,9 @@ namespace ININ.PureCloudApi.Model
             {
                 this.WrapupSkipped = WrapupSkipped;
             }
+            this.Provider = Provider;
+            this.ExternalContact = ExternalContact;
+            this.ExternalOrganization = ExternalOrganization;
             this.RoomId = RoomId;
         }
         
@@ -324,21 +342,21 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
         /// <summary>
-        /// The time when this participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The time when this participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
         /// <summary>
-        /// The time when this participant went connected on the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time when this participant went connected for this media (eg: video connected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The time when this participant went connected on the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time when this participant went connected for this media (eg: video connected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         /// <summary>
-        /// The time when this participant when disconnected on the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The time when this participant when disconnected on the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
         /// <summary>
@@ -414,6 +432,24 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
         /// <summary>
+        /// The source provider for the communication.
+        /// </summary>
+        /// <value>The source provider for the communication.</value>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+        /// <summary>
+        /// If this participant represents an external contact, then this will be the reference for the external contact.
+        /// </summary>
+        /// <value>If this participant represents an external contact, then this will be the reference for the external contact.</value>
+        [DataMember(Name="externalContact", EmitDefaultValue=false)]
+        public UriReference ExternalContact { get; set; }
+        /// <summary>
+        /// If this participant represents an external org, then this will be the reference for the external org.
+        /// </summary>
+        /// <value>If this participant represents an external org, then this will be the reference for the external org.</value>
+        [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
+        public UriReference ExternalOrganization { get; set; }
+        /// <summary>
         /// The ID of the chat room.
         /// </summary>
         /// <value>The ID of the chat room.</value>
@@ -448,6 +484,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Script: ").Append(Script).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -591,6 +630,21 @@ namespace ININ.PureCloudApi.Model
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
                 ) &&
                 (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
+                ) &&
+                (
+                    this.ExternalContact == other.ExternalContact ||
+                    this.ExternalContact != null &&
+                    this.ExternalContact.Equals(other.ExternalContact)
+                ) &&
+                (
+                    this.ExternalOrganization == other.ExternalOrganization ||
+                    this.ExternalOrganization != null &&
+                    this.ExternalOrganization.Equals(other.ExternalOrganization)
+                ) &&
+                (
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
@@ -650,6 +704,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ExternalContact != null)
+                    hash = hash * 59 + this.ExternalContact.GetHashCode();
+                if (this.ExternalOrganization != null)
+                    hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
                 return hash;

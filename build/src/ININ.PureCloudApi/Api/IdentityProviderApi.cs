@@ -53,25 +53,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteCicWithHttpInfo ();
         /// <summary>
-        /// Delete an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void DeleteIdentityprovider ();
-
-        /// <summary>
-        /// Delete an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteIdentityproviderWithHttpInfo ();
-        /// <summary>
         /// Delete Okta Identity Provider
         /// </summary>
         /// <remarks>
@@ -109,6 +90,25 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOneloginWithHttpInfo ();
+        /// <summary>
+        /// Delete an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        void DeleteProviderId ();
+
+        /// <summary>
+        /// Delete an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteProviderIdWithHttpInfo ();
         /// <summary>
         /// Delete PureCloud Identity Provider
         /// </summary>
@@ -186,25 +186,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of CustomerInteractionCenter</returns>
         ApiResponse<CustomerInteractionCenter> GetCicWithHttpInfo ();
         /// <summary>
-        /// Get an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>OAuthProvider</returns>
-        OAuthProvider GetIdentityprovider ();
-
-        /// <summary>
-        /// Get an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of OAuthProvider</returns>
-        ApiResponse<OAuthProvider> GetIdentityproviderWithHttpInfo ();
-        /// <summary>
         /// The list of identity providers
         /// </summary>
         /// <remarks>
@@ -261,6 +242,25 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OneLogin</returns>
         ApiResponse<OneLogin> GetOneloginWithHttpInfo ();
+        /// <summary>
+        /// Get an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>OAuthProvider</returns>
+        OAuthProvider GetProviderId ();
+
+        /// <summary>
+        /// Get an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of OAuthProvider</returns>
+        ApiResponse<OAuthProvider> GetProviderIdWithHttpInfo ();
         /// <summary>
         /// Get PureCloud Identity Provider
         /// </summary>
@@ -342,27 +342,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PutCicWithHttpInfo (CustomerInteractionCenter body);
         /// <summary>
-        /// Update an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider</param>
-        /// <returns></returns>
-        void PutIdentityprovider (OAuthProvider body);
-
-        /// <summary>
-        /// Update an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutIdentityproviderWithHttpInfo (OAuthProvider body);
-        /// <summary>
         /// Update/Create Okta Identity Provider
         /// </summary>
         /// <remarks>
@@ -404,6 +383,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PutOneloginWithHttpInfo (OneLogin body);
+        /// <summary>
+        /// Update an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns></returns>
+        void PutProviderId (OAuthProvider body);
+
+        /// <summary>
+        /// Update an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PutProviderIdWithHttpInfo (OAuthProvider body);
         /// <summary>
         /// Update/Create PureCloud Identity Provider
         /// </summary>
@@ -487,25 +487,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCicAsyncWithHttpInfo ();
         /// <summary>
-        /// Delete an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteIdentityproviderAsync ();
-
-        /// <summary>
-        /// Delete an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityproviderAsyncWithHttpInfo ();
-        /// <summary>
         /// Delete Okta Identity Provider
         /// </summary>
         /// <remarks>
@@ -543,6 +524,25 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOneloginAsyncWithHttpInfo ();
+        /// <summary>
+        /// Delete an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteProviderIdAsync ();
+
+        /// <summary>
+        /// Delete an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteProviderIdAsyncWithHttpInfo ();
         /// <summary>
         /// Delete PureCloud Identity Provider
         /// </summary>
@@ -620,25 +620,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (CustomerInteractionCenter)</returns>
         System.Threading.Tasks.Task<ApiResponse<CustomerInteractionCenter>> GetCicAsyncWithHttpInfo ();
         /// <summary>
-        /// Get an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of OAuthProvider</returns>
-        System.Threading.Tasks.Task<OAuthProvider> GetIdentityproviderAsync ();
-
-        /// <summary>
-        /// Get an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> GetIdentityproviderAsyncWithHttpInfo ();
-        /// <summary>
         /// The list of identity providers
         /// </summary>
         /// <remarks>
@@ -695,6 +676,25 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OneLogin)</returns>
         System.Threading.Tasks.Task<ApiResponse<OneLogin>> GetOneloginAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of OAuthProvider</returns>
+        System.Threading.Tasks.Task<OAuthProvider> GetProviderIdAsync ();
+
+        /// <summary>
+        /// Get an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> GetProviderIdAsyncWithHttpInfo ();
         /// <summary>
         /// Get PureCloud Identity Provider
         /// </summary>
@@ -776,27 +776,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PutCicAsyncWithHttpInfo (CustomerInteractionCenter body);
         /// <summary>
-        /// Update an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutIdentityproviderAsync (OAuthProvider body);
-
-        /// <summary>
-        /// Update an identity provider
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutIdentityproviderAsyncWithHttpInfo (OAuthProvider body);
-        /// <summary>
         /// Update/Create Okta Identity Provider
         /// </summary>
         /// <remarks>
@@ -838,6 +817,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PutOneloginAsyncWithHttpInfo (OneLogin body);
+        /// <summary>
+        /// Update an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PutProviderIdAsync (OAuthProvider body);
+
+        /// <summary>
+        /// Update an identity provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutProviderIdAsyncWithHttpInfo (OAuthProvider body);
         /// <summary>
         /// Update/Create PureCloud Identity Provider
         /// </summary>
@@ -1028,16 +1028,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteAdfs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAdfs: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAdfs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1100,16 +1098,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteAdfs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAdfs: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAdfs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1171,16 +1167,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteCic: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCic: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1243,159 +1237,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteCic: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCic: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null);
-        }
-
-        /// <summary>
-        /// Delete an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void DeleteIdentityprovider ()
-        {
-             DeleteIdentityproviderWithHttpInfo();
-        }
-
-        /// <summary>
-        /// Delete an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteIdentityproviderWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/identityproviders/{providerId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null);
-        }
-
-        /// <summary>
-        /// Delete an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteIdentityproviderAsync ()
-        {
-             await DeleteIdentityproviderAsyncWithHttpInfo();
-
-        }
-
-        /// <summary>
-        /// Delete an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityproviderAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/identityproviders/{providerId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1457,16 +1306,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteOkta: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOkta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOkta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1529,16 +1376,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteOkta: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOkta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOkta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1600,16 +1445,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteOnelogin: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOnelogin: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOnelogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1672,16 +1515,153 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteOnelogin: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOnelogin: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOnelogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        public void DeleteProviderId ()
+        {
+             DeleteProviderIdWithHttpInfo();
+        }
+
+        /// <summary>
+        /// Delete an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteProviderIdWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProviderId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProviderId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteProviderIdAsync ()
+        {
+             await DeleteProviderIdAsyncWithHttpInfo();
+
+        }
+
+        /// <summary>
+        /// Delete an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteProviderIdAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProviderId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProviderId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1743,16 +1723,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeletePurecloud: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeletePurecloud: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeletePurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1815,16 +1793,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeletePurecloud: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeletePurecloud: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeletePurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1886,16 +1862,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteSalesforce: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSalesforce: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteSalesforce: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1958,16 +1932,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteSalesforce: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSalesforce: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteSalesforce: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -2030,15 +2002,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAdfs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetAdfs: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAdfs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ADFS>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ADFS) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ADFS)));
             
         }
@@ -2103,15 +2073,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAdfs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetAdfs: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAdfs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ADFS>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ADFS) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ADFS)));
             
         }
@@ -2175,15 +2143,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetCic: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetCic: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetCic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CustomerInteractionCenter>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CustomerInteractionCenter) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CustomerInteractionCenter)));
             
         }
@@ -2248,161 +2214,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetCic: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetCic: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetCic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CustomerInteractionCenter>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CustomerInteractionCenter) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CustomerInteractionCenter)));
-            
-        }
-
-        /// <summary>
-        /// Get an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>OAuthProvider</returns>
-        public OAuthProvider GetIdentityprovider ()
-        {
-             ApiResponse<OAuthProvider> localVarResponse = GetIdentityproviderWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of OAuthProvider</returns>
-        public ApiResponse< OAuthProvider > GetIdentityproviderWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/identityproviders/{providerId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
-                localVarHeaders,
-                (OAuthProvider) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)));
-            
-        }
-
-        /// <summary>
-        /// Get an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of OAuthProvider</returns>
-        public async System.Threading.Tasks.Task<OAuthProvider> GetIdentityproviderAsync ()
-        {
-             ApiResponse<OAuthProvider> localVarResponse = await GetIdentityproviderAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> GetIdentityproviderAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/v2/identityproviders/{providerId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
-                localVarHeaders,
-                (OAuthProvider) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)));
             
         }
 
@@ -2465,15 +2284,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetIdentityproviders: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetIdentityproviders: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetIdentityproviders: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OAuthProviderEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (OAuthProviderEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProviderEntityListing)));
             
         }
@@ -2538,15 +2355,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetIdentityproviders: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetIdentityproviders: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetIdentityproviders: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OAuthProviderEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (OAuthProviderEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProviderEntityListing)));
             
         }
@@ -2610,15 +2425,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetOkta: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetOkta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOkta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Okta>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Okta) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Okta)));
             
         }
@@ -2683,15 +2496,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetOkta: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetOkta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOkta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Okta>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Okta) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Okta)));
             
         }
@@ -2755,15 +2566,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetOnelogin: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetOnelogin: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOnelogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OneLogin>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (OneLogin) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OneLogin)));
             
         }
@@ -2828,16 +2637,155 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetOnelogin: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetOnelogin: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOnelogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OneLogin>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (OneLogin) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OneLogin)));
+            
+        }
+
+        /// <summary>
+        /// Get an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>OAuthProvider</returns>
+        public OAuthProvider GetProviderId ()
+        {
+             ApiResponse<OAuthProvider> localVarResponse = GetProviderIdWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of OAuthProvider</returns>
+        public ApiResponse< OAuthProvider > GetProviderIdWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProviderId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProviderId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OAuthProvider) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)));
+            
+        }
+
+        /// <summary>
+        /// Get an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of OAuthProvider</returns>
+        public async System.Threading.Tasks.Task<OAuthProvider> GetProviderIdAsync ()
+        {
+             ApiResponse<OAuthProvider> localVarResponse = await GetProviderIdAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> GetProviderIdAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProviderId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProviderId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OAuthProvider) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)));
             
         }
 
@@ -2900,15 +2848,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetPurecloud: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetPurecloud: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetPurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PureCloud>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PureCloud) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PureCloud)));
             
         }
@@ -2973,15 +2919,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetPurecloud: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetPurecloud: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetPurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PureCloud>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PureCloud) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PureCloud)));
             
         }
@@ -3045,15 +2989,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSalesforce: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetSalesforce: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSalesforce: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Salesforce>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Salesforce) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Salesforce)));
             
         }
@@ -3118,15 +3060,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSalesforce: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetSalesforce: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSalesforce: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Salesforce>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Salesforce) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Salesforce)));
             
         }
@@ -3202,16 +3142,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutAdfs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutAdfs: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutAdfs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -3287,16 +3225,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutAdfs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutAdfs: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutAdfs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -3371,16 +3307,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutCic: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutCic: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutCic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -3456,185 +3390,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutCic: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutCic: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutCic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null);
-        }
-
-        /// <summary>
-        /// Update an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider</param>
-        /// <returns></returns>
-        public void PutIdentityprovider (OAuthProvider body)
-        {
-             PutIdentityproviderWithHttpInfo(body);
-        }
-
-        /// <summary>
-        /// Update an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutIdentityproviderWithHttpInfo (OAuthProvider body)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovider");
-
-            var localVarPath = "/api/v2/identityproviders/{providerId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null);
-        }
-
-        /// <summary>
-        /// Update an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutIdentityproviderAsync (OAuthProvider body)
-        {
-             await PutIdentityproviderAsyncWithHttpInfo(body);
-
-        }
-
-        /// <summary>
-        /// Update an identity provider 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutIdentityproviderAsyncWithHttpInfo (OAuthProvider body)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovider");
-
-            var localVarPath = "/api/v2/identityproviders/{providerId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -3709,16 +3472,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutOkta: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutOkta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutOkta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -3794,16 +3555,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutOkta: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutOkta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutOkta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -3878,16 +3637,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutOnelogin: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutOnelogin: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutOnelogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -3963,16 +3720,179 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutOnelogin: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutOnelogin: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutOnelogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns></returns>
+        public void PutProviderId (OAuthProvider body)
+        {
+             PutProviderIdWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Update an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PutProviderIdWithHttpInfo (OAuthProvider body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutProviderId");
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutProviderId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutProviderId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PutProviderIdAsync (OAuthProvider body)
+        {
+             await PutProviderIdAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Update an identity provider 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutProviderIdAsyncWithHttpInfo (OAuthProvider body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutProviderId");
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutProviderId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutProviderId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -4047,16 +3967,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutPurecloud: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutPurecloud: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutPurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -4132,16 +4050,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutPurecloud: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutPurecloud: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutPurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -4216,16 +4132,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutSalesforce: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutSalesforce: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutSalesforce: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -4301,16 +4215,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutSalesforce: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutSalesforce: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutSalesforce: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 

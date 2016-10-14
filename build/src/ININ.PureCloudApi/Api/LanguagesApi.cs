@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns></returns>
-        void DeleteLanguage (string languageId);
+        void DeleteLanguageId (string languageId);
 
         /// <summary>
         /// Delete Language
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteLanguageWithHttpInfo (string languageId);
+        ApiResponse<Object> DeleteLanguageIdWithHttpInfo (string languageId);
         /// <summary>
         /// Get language
         /// </summary>
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Language</returns>
-        Language GetLanguage (string languageId);
+        Language GetLanguageId (string languageId);
 
         /// <summary>
         /// Get language
@@ -55,7 +55,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Language</returns>
-        ApiResponse<Language> GetLanguageWithHttpInfo (string languageId);
+        ApiResponse<Language> GetLanguageIdWithHttpInfo (string languageId);
         /// <summary>
         /// Get the list of supported languages.
         /// </summary>
@@ -114,7 +114,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="languageId">Language ID</param>
         /// <param name="body">Language</param>
         /// <returns>Language</returns>
-        Language PutLanguage (string languageId, Language body);
+        Language PutLanguageId (string languageId, Language body);
 
         /// <summary>
         /// Update Language
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="languageId">Language ID</param>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of Language</returns>
-        ApiResponse<Language> PutLanguageWithHttpInfo (string languageId, Language body);
+        ApiResponse<Language> PutLanguageIdWithHttpInfo (string languageId, Language body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -138,7 +138,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteLanguageAsync (string languageId);
+        System.Threading.Tasks.Task DeleteLanguageIdAsync (string languageId);
 
         /// <summary>
         /// Delete Language
@@ -149,7 +149,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageAsyncWithHttpInfo (string languageId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageIdAsyncWithHttpInfo (string languageId);
         /// <summary>
         /// Get language
         /// </summary>
@@ -159,7 +159,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of Language</returns>
-        System.Threading.Tasks.Task<Language> GetLanguageAsync (string languageId);
+        System.Threading.Tasks.Task<Language> GetLanguageIdAsync (string languageId);
 
         /// <summary>
         /// Get language
@@ -170,7 +170,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse (Language)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguageAsyncWithHttpInfo (string languageId);
+        System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguageIdAsyncWithHttpInfo (string languageId);
         /// <summary>
         /// Get the list of supported languages.
         /// </summary>
@@ -229,7 +229,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="languageId">Language ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of Language</returns>
-        System.Threading.Tasks.Task<Language> PutLanguageAsync (string languageId, Language body);
+        System.Threading.Tasks.Task<Language> PutLanguageIdAsync (string languageId, Language body);
 
         /// <summary>
         /// Update Language
@@ -241,7 +241,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="languageId">Language ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (Language)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Language>> PutLanguageAsyncWithHttpInfo (string languageId, Language body);
+        System.Threading.Tasks.Task<ApiResponse<Language>> PutLanguageIdAsyncWithHttpInfo (string languageId, Language body);
         #endregion Asynchronous Operations
     }
 
@@ -338,9 +338,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns></returns>
-        public void DeleteLanguage (string languageId)
+        public void DeleteLanguageId (string languageId)
         {
-             DeleteLanguageWithHttpInfo(languageId);
+             DeleteLanguageIdWithHttpInfo(languageId);
         }
 
         /// <summary>
@@ -349,11 +349,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteLanguageWithHttpInfo (string languageId)
+        public ApiResponse<Object> DeleteLanguageIdWithHttpInfo (string languageId)
         {
             // verify the required parameter 'languageId' is set
             if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->DeleteLanguage");
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->DeleteLanguageId");
 
             var localVarPath = "/api/v2/languages/{languageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -396,16 +396,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -415,9 +413,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteLanguageAsync (string languageId)
+        public async System.Threading.Tasks.Task DeleteLanguageIdAsync (string languageId)
         {
-             await DeleteLanguageAsyncWithHttpInfo(languageId);
+             await DeleteLanguageIdAsyncWithHttpInfo(languageId);
 
         }
 
@@ -427,11 +425,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageAsyncWithHttpInfo (string languageId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageIdAsyncWithHttpInfo (string languageId)
         {
             // verify the required parameter 'languageId' is set
             if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->DeleteLanguage");
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->DeleteLanguageId");
 
             var localVarPath = "/api/v2/languages/{languageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -474,16 +472,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -493,9 +489,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Language</returns>
-        public Language GetLanguage (string languageId)
+        public Language GetLanguageId (string languageId)
         {
-             ApiResponse<Language> localVarResponse = GetLanguageWithHttpInfo(languageId);
+             ApiResponse<Language> localVarResponse = GetLanguageIdWithHttpInfo(languageId);
              return localVarResponse.Data;
         }
 
@@ -505,11 +501,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Language</returns>
-        public ApiResponse< Language > GetLanguageWithHttpInfo (string languageId)
+        public ApiResponse< Language > GetLanguageIdWithHttpInfo (string languageId)
         {
             // verify the required parameter 'languageId' is set
             if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->GetLanguage");
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->GetLanguageId");
 
             var localVarPath = "/api/v2/languages/{languageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -552,15 +548,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetLanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Language>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Language) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)));
             
         }
@@ -571,9 +565,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of Language</returns>
-        public async System.Threading.Tasks.Task<Language> GetLanguageAsync (string languageId)
+        public async System.Threading.Tasks.Task<Language> GetLanguageIdAsync (string languageId)
         {
-             ApiResponse<Language> localVarResponse = await GetLanguageAsyncWithHttpInfo(languageId);
+             ApiResponse<Language> localVarResponse = await GetLanguageIdAsyncWithHttpInfo(languageId);
              return localVarResponse.Data;
 
         }
@@ -584,11 +578,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse (Language)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguageAsyncWithHttpInfo (string languageId)
+        public async System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguageIdAsyncWithHttpInfo (string languageId)
         {
             // verify the required parameter 'languageId' is set
             if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->GetLanguage");
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->GetLanguageId");
 
             var localVarPath = "/api/v2/languages/{languageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -631,15 +625,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetLanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Language>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Language) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)));
             
         }
@@ -715,15 +707,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguages: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LanguageEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (LanguageEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LanguageEntityListing)));
             
         }
@@ -800,15 +790,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguages: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<LanguageEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (LanguageEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LanguageEntityListing)));
             
         }
@@ -885,15 +873,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostLanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguages: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostLanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Language>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Language) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)));
             
         }
@@ -971,15 +957,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostLanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguages: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostLanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Language>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Language) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)));
             
         }
@@ -991,9 +975,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="languageId">Language ID</param>
         /// <param name="body">Language</param>
         /// <returns>Language</returns>
-        public Language PutLanguage (string languageId, Language body)
+        public Language PutLanguageId (string languageId, Language body)
         {
-             ApiResponse<Language> localVarResponse = PutLanguageWithHttpInfo(languageId, body);
+             ApiResponse<Language> localVarResponse = PutLanguageIdWithHttpInfo(languageId, body);
              return localVarResponse.Data;
         }
 
@@ -1004,14 +988,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="languageId">Language ID</param>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of Language</returns>
-        public ApiResponse< Language > PutLanguageWithHttpInfo (string languageId, Language body)
+        public ApiResponse< Language > PutLanguageIdWithHttpInfo (string languageId, Language body)
         {
             // verify the required parameter 'languageId' is set
             if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->PutLanguage");
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->PutLanguageId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling LanguagesApi->PutLanguage");
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguagesApi->PutLanguageId");
 
             var localVarPath = "/api/v2/languages/{languageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1062,15 +1046,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutLanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutLanguageId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutLanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Language>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Language) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)));
             
         }
@@ -1082,9 +1064,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="languageId">Language ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of Language</returns>
-        public async System.Threading.Tasks.Task<Language> PutLanguageAsync (string languageId, Language body)
+        public async System.Threading.Tasks.Task<Language> PutLanguageIdAsync (string languageId, Language body)
         {
-             ApiResponse<Language> localVarResponse = await PutLanguageAsyncWithHttpInfo(languageId, body);
+             ApiResponse<Language> localVarResponse = await PutLanguageIdAsyncWithHttpInfo(languageId, body);
              return localVarResponse.Data;
 
         }
@@ -1096,14 +1078,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="languageId">Language ID</param>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (Language)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Language>> PutLanguageAsyncWithHttpInfo (string languageId, Language body)
+        public async System.Threading.Tasks.Task<ApiResponse<Language>> PutLanguageIdAsyncWithHttpInfo (string languageId, Language body)
         {
             // verify the required parameter 'languageId' is set
             if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->PutLanguage");
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->PutLanguageId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling LanguagesApi->PutLanguage");
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguagesApi->PutLanguageId");
 
             var localVarPath = "/api/v2/languages/{languageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1154,15 +1136,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutLanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutLanguageId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutLanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Language>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Language) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)));
             
         }

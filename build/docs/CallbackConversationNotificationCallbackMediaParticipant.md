@@ -29,8 +29,6 @@ title: CallbackConversationNotificationCallbackMediaParticipant
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
-| **ExternalContact** | [**CallbackConversationNotificationUriReference**](CallbackConversationNotificationUriReference.html) |  | [optional] |
-| **ExternalOrganization** | [**CallbackConversationNotificationUriReference**](CallbackConversationNotificationUriReference.html) |  | [optional] |
 | **OutboundPreview** | [**ConversationNotificationDialerPreview**](ConversationNotificationDialerPreview.html) |  | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
 | **CallbackUserName** | **string** |  | [optional] |

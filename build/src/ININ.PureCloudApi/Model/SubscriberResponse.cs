@@ -20,22 +20,37 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriberResponse" /> class.
         /// </summary>
-        /// <param name="MessageReturned">MessageReturned.</param>
-        /// <param name="Status">Status.</param>
+        [JsonConstructorAttribute]
+        protected SubscriberResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SubscriberResponse" /> class.
+        /// </summary>
+        /// <param name="MessageReturned">Suggested valid addresses.</param>
+        /// <param name="Status">http status (required).</param>
         public SubscriberResponse(List<string> MessageReturned = null, string Status = null)
         {
+            // to ensure "Status" is required (not null)
+            if (Status == null)
+            {
+                throw new InvalidDataException("Status is a required property for SubscriberResponse and cannot be null");
+            }
+            else
+            {
+                this.Status = Status;
+            }
             this.MessageReturned = MessageReturned;
-            this.Status = Status;
         }
         
         /// <summary>
-        /// Gets or Sets MessageReturned
+        /// Suggested valid addresses
         /// </summary>
+        /// <value>Suggested valid addresses</value>
         [DataMember(Name="messageReturned", EmitDefaultValue=false)]
         public List<string> MessageReturned { get; set; }
         /// <summary>
-        /// Gets or Sets Status
+        /// http status
         /// </summary>
+        /// <value>http status</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
         /// <summary>

@@ -3,46 +3,46 @@ title: QualityApi
 ---
 ## ININ.PureCloudApi.Api.QualityApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteCalibration**](QualityApi.html#deletecalibration) | **DELETE** /api/v2/quality/calibrations/{calibrationId} | Delete a calibration by id. |
-| [**DeleteConversationEvaluation**](QualityApi.html#deleteconversationevaluation) | **DELETE** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Delete an evaluation |
-| [**DeleteForm**](QualityApi.html#deleteform) | **DELETE** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
-| [**DeleteKeywordset**](QualityApi.html#deletekeywordset) | **DELETE** /api/v2/quality/keywordsets/{keywordSetId} | Delete a keywordSet by id. |
+| [**DeleteCalibrationsCalibrationId**](QualityApi.html#deletecalibrationscalibrationid) | **DELETE** /api/v2/quality/calibrations/{calibrationId} | Delete a calibration by id. |
+| [**DeleteConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#deleteconversationsconversationidevaluationsevaluationid) | **DELETE** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Delete an evaluation |
+| [**DeleteFormsFormId**](QualityApi.html#deleteformsformid) | **DELETE** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
 | [**DeleteKeywordsets**](QualityApi.html#deletekeywordsets) | **DELETE** /api/v2/quality/keywordsets | Delete keyword sets |
+| [**DeleteKeywordsetsKeywordsetId**](QualityApi.html#deletekeywordsetskeywordsetid) | **DELETE** /api/v2/quality/keywordsets/{keywordSetId} | Delete a keywordSet by id. |
 | [**GetAgentsActivity**](QualityApi.html#getagentsactivity) | **GET** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
-| [**GetCalibration**](QualityApi.html#getcalibration) | **GET** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id. |
 | [**GetCalibrations**](QualityApi.html#getcalibrations) | **GET** /api/v2/quality/calibrations | Get the list of calibrations |
-| [**GetConversationAudits**](QualityApi.html#getconversationaudits) | **GET** /api/v2/quality/conversations/{conversationId}/audits | Get audits for conversation or recording |
-| [**GetConversationEvaluation**](QualityApi.html#getconversationevaluation) | **GET** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
+| [**GetCalibrationsCalibrationId**](QualityApi.html#getcalibrationscalibrationid) | **GET** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id. |
+| [**GetConversationsConversationIdAudits**](QualityApi.html#getconversationsconversationidaudits) | **GET** /api/v2/quality/conversations/{conversationId}/audits | Get audits for conversation or recording |
+| [**GetConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#getconversationsconversationidevaluationsevaluationid) | **GET** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
 | [**GetEvaluationsQuery**](QualityApi.html#getevaluationsquery) | **GET** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
 | [**GetEvaluatorsActivity**](QualityApi.html#getevaluatorsactivity) | **GET** /api/v2/quality/evaluators/activity | Get an evaluator activity |
-| [**GetForm**](QualityApi.html#getform) | **GET** /api/v2/quality/forms/{formId} | Get an evaluation form |
-| [**GetFormVersions**](QualityApi.html#getformversions) | **GET** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
 | [**GetForms**](QualityApi.html#getforms) | **GET** /api/v2/quality/forms | Get the list of evaluation forms |
-| [**GetKeywordset**](QualityApi.html#getkeywordset) | **GET** /api/v2/quality/keywordsets/{keywordSetId} | Get a keywordSet by id. |
+| [**GetFormsFormId**](QualityApi.html#getformsformid) | **GET** /api/v2/quality/forms/{formId} | Get an evaluation form |
+| [**GetFormsFormIdVersions**](QualityApi.html#getformsformidversions) | **GET** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
 | [**GetKeywordsets**](QualityApi.html#getkeywordsets) | **GET** /api/v2/quality/keywordsets | Get the list of keyword sets |
-| [**GetPublishedform**](QualityApi.html#getpublishedform) | **GET** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
+| [**GetKeywordsetsKeywordsetId**](QualityApi.html#getkeywordsetskeywordsetid) | **GET** /api/v2/quality/keywordsets/{keywordSetId} | Get a keywordSet by id. |
 | [**GetPublishedforms**](QualityApi.html#getpublishedforms) | **GET** /api/v2/quality/publishedforms | Get the published evaluation forms. |
+| [**GetPublishedformsFormId**](QualityApi.html#getpublishedformsformid) | **GET** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
 | [**PostCalibrations**](QualityApi.html#postcalibrations) | **POST** /api/v2/quality/calibrations | Create a calibration |
-| [**PostConversationEvaluations**](QualityApi.html#postconversationevaluations) | **POST** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
+| [**PostConversationsConversationIdEvaluations**](QualityApi.html#postconversationsconversationidevaluations) | **POST** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
 | [**PostEvaluationsAggregatesQuery**](QualityApi.html#postevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
 | [**PostEvaluationsScoring**](QualityApi.html#postevaluationsscoring) | **POST** /api/v2/quality/evaluations/scoring | Score evaluation |
 | [**PostForms**](QualityApi.html#postforms) | **POST** /api/v2/quality/forms | Create an evaluation form. |
 | [**PostKeywordsets**](QualityApi.html#postkeywordsets) | **POST** /api/v2/quality/keywordsets | Create a Keyword Set |
 | [**PostPublishedforms**](QualityApi.html#postpublishedforms) | **POST** /api/v2/quality/publishedforms | Publish an evaluation form. |
 | [**PostSpotability**](QualityApi.html#postspotability) | **POST** /api/v2/quality/spotability | Retrieve the spotability statistic |
-| [**PutCalibration**](QualityApi.html#putcalibration) | **PUT** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
-| [**PutConversationEvaluation**](QualityApi.html#putconversationevaluation) | **PUT** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
-| [**PutForm**](QualityApi.html#putform) | **PUT** /api/v2/quality/forms/{formId} | Update an evaluation form. |
-| [**PutKeywordset**](QualityApi.html#putkeywordset) | **PUT** /api/v2/quality/keywordsets/{keywordSetId} | Update a keywordSet to the specified keywordSet via PUT. |
+| [**PutCalibrationsCalibrationId**](QualityApi.html#putcalibrationscalibrationid) | **PUT** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
+| [**PutConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#putconversationsconversationidevaluationsevaluationid) | **PUT** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
+| [**PutFormsFormId**](QualityApi.html#putformsformid) | **PUT** /api/v2/quality/forms/{formId} | Update an evaluation form. |
+| [**PutKeywordsetsKeywordsetId**](QualityApi.html#putkeywordsetskeywordsetid) | **PUT** /api/v2/quality/keywordsets/{keywordSetId} | Update a keywordSet to the specified keywordSet via PUT. |
 {: class="table table-striped"}
 
-<a name="deletecalibration"></a>
+<a name="deletecalibrationscalibrationid"></a>
 
-## [**Calibration**](Calibration.html) DeleteCalibration (string calibrationId, string calibratorId)
+## [**Calibration**](Calibration.html) DeleteCalibrationsCalibrationId (string calibrationId, string calibratorId)
 
 Delete a calibration by id.
 
@@ -58,7 +58,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteCalibrationExample
+    public class DeleteCalibrationsCalibrationIdExample
     {
         public void main()
         {
@@ -73,12 +73,12 @@ namespace Example
             try
             {
                 // Delete a calibration by id.
-                Calibration result = apiInstance.DeleteCalibration(calibrationId, calibratorId);
+                Calibration result = apiInstance.DeleteCalibrationsCalibrationId(calibrationId, calibratorId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.DeleteCalibration: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.DeleteCalibrationsCalibrationId: " + e.Message );
             }
         }
     }
@@ -98,9 +98,9 @@ namespace Example
 
 [**Calibration**](Calibration.html)
 
-<a name="deleteconversationevaluation"></a>
+<a name="deleteconversationsconversationidevaluationsevaluationid"></a>
 
-## [**Evaluation**](Evaluation.html) DeleteConversationEvaluation (string conversationId, string evaluationId, string expand = null)
+## [**Evaluation**](Evaluation.html) DeleteConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null)
 
 Delete an evaluation
 
@@ -116,7 +116,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteConversationEvaluationExample
+    public class DeleteConversationsConversationIdEvaluationsEvaluationIdExample
     {
         public void main()
         {
@@ -132,12 +132,12 @@ namespace Example
             try
             {
                 // Delete an evaluation
-                Evaluation result = apiInstance.DeleteConversationEvaluation(conversationId, evaluationId, expand);
+                Evaluation result = apiInstance.DeleteConversationsConversationIdEvaluationsEvaluationId(conversationId, evaluationId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.DeleteConversationEvaluation: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.DeleteConversationsConversationIdEvaluationsEvaluationId: " + e.Message );
             }
         }
     }
@@ -158,9 +158,9 @@ namespace Example
 
 [**Evaluation**](Evaluation.html)
 
-<a name="deleteform"></a>
+<a name="deleteformsformid"></a>
 
-## **string** DeleteForm (string formId)
+## **string** DeleteFormsFormId (string formId)
 
 Delete an evaluation form.
 
@@ -176,7 +176,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteFormExample
+    public class DeleteFormsFormIdExample
     {
         public void main()
         {
@@ -190,12 +190,12 @@ namespace Example
             try
             {
                 // Delete an evaluation form.
-                string result = apiInstance.DeleteForm(formId);
+                string result = apiInstance.DeleteFormsFormId(formId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.DeleteForm: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.DeleteFormsFormId: " + e.Message );
             }
         }
     }
@@ -213,61 +213,6 @@ namespace Example
 ### Return type
 
 **string**
-
-<a name="deletekeywordset"></a>
-
-## void DeleteKeywordset (string keywordSetId)
-
-Delete a keywordSet by id.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class DeleteKeywordsetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new QualityApi();
-            var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
-
-            try
-            {
-                // Delete a keywordSet by id.
-                apiInstance.DeleteKeywordset(keywordSetId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.DeleteKeywordset: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **keywordSetId** | **string**| KeywordSet ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
 
 <a name="deletekeywordsets"></a>
 
@@ -324,6 +269,61 @@ namespace Example
 ### Return type
 
 **string**
+
+<a name="deletekeywordsetskeywordsetid"></a>
+
+## void DeleteKeywordsetsKeywordsetId (string keywordSetId)
+
+Delete a keywordSet by id.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteKeywordsetsKeywordsetIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new QualityApi();
+            var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
+
+            try
+            {
+                // Delete a keywordSet by id.
+                apiInstance.DeleteKeywordsetsKeywordsetId(keywordSetId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.DeleteKeywordsetsKeywordsetId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **keywordSetId** | **string**| KeywordSet ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="getagentsactivity"></a>
 
@@ -403,64 +403,6 @@ namespace Example
 
 [**AgentActivityEntityListing**](AgentActivityEntityListing.html)
 
-<a name="getcalibration"></a>
-
-## [**Calibration**](Calibration.html) GetCalibration (string calibrationId, string calibratorId)
-
-Get a calibration by id.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetCalibrationExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new QualityApi();
-            var calibrationId = calibrationId_example;  // string | Calibration ID
-            var calibratorId = calibratorId_example;  // string | calibratorId
-
-            try
-            {
-                // Get a calibration by id.
-                Calibration result = apiInstance.GetCalibration(calibrationId, calibratorId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.GetCalibration: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **calibrationId** | **string**| Calibration ID |  |
-| **calibratorId** | **string**| calibratorId |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Calibration**](Calibration.html)
-
 <a name="getcalibrations"></a>
 
 ## [**CalibrationEntityListing**](CalibrationEntityListing.html) GetCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
@@ -535,9 +477,67 @@ namespace Example
 
 [**CalibrationEntityListing**](CalibrationEntityListing.html)
 
-<a name="getconversationaudits"></a>
+<a name="getcalibrationscalibrationid"></a>
 
-## [**QualityAuditPage**](QualityAuditPage.html) GetConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+## [**Calibration**](Calibration.html) GetCalibrationsCalibrationId (string calibrationId, string calibratorId)
+
+Get a calibration by id.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCalibrationsCalibrationIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new QualityApi();
+            var calibrationId = calibrationId_example;  // string | Calibration ID
+            var calibratorId = calibratorId_example;  // string | calibratorId
+
+            try
+            {
+                // Get a calibration by id.
+                Calibration result = apiInstance.GetCalibrationsCalibrationId(calibrationId, calibratorId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetCalibrationsCalibrationId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **calibrationId** | **string**| Calibration ID |  |
+| **calibratorId** | **string**| calibratorId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Calibration**](Calibration.html)
+
+<a name="getconversationsconversationidaudits"></a>
+
+## [**QualityAuditPage**](QualityAuditPage.html) GetConversationsConversationIdAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
 
 Get audits for conversation or recording
 
@@ -553,7 +553,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetConversationAuditsExample
+    public class GetConversationsConversationIdAuditsExample
     {
         public void main()
         {
@@ -575,12 +575,12 @@ namespace Example
             try
             {
                 // Get audits for conversation or recording
-                QualityAuditPage result = apiInstance.GetConversationAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
+                QualityAuditPage result = apiInstance.GetConversationsConversationIdAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.GetConversationAudits: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.GetConversationsConversationIdAudits: " + e.Message );
             }
         }
     }
@@ -607,9 +607,9 @@ namespace Example
 
 [**QualityAuditPage**](QualityAuditPage.html)
 
-<a name="getconversationevaluation"></a>
+<a name="getconversationsconversationidevaluationsevaluationid"></a>
 
-## [**Evaluation**](Evaluation.html) GetConversationEvaluation (string conversationId, string evaluationId, string expand = null)
+## [**Evaluation**](Evaluation.html) GetConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null)
 
 Get an evaluation
 
@@ -625,7 +625,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetConversationEvaluationExample
+    public class GetConversationsConversationIdEvaluationsEvaluationIdExample
     {
         public void main()
         {
@@ -641,12 +641,12 @@ namespace Example
             try
             {
                 // Get an evaluation
-                Evaluation result = apiInstance.GetConversationEvaluation(conversationId, evaluationId, expand);
+                Evaluation result = apiInstance.GetConversationsConversationIdEvaluationsEvaluationId(conversationId, evaluationId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.GetConversationEvaluation: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.GetConversationsConversationIdEvaluationsEvaluationId: " + e.Message );
             }
         }
     }
@@ -831,122 +831,6 @@ namespace Example
 
 [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html)
 
-<a name="getform"></a>
-
-## [**EvaluationForm**](EvaluationForm.html) GetForm (string formId)
-
-Get an evaluation form
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetFormExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new QualityApi();
-            var formId = formId_example;  // string | Form ID
-
-            try
-            {
-                // Get an evaluation form
-                EvaluationForm result = apiInstance.GetForm(formId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.GetForm: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **formId** | **string**| Form ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**EvaluationForm**](EvaluationForm.html)
-
-<a name="getformversions"></a>
-
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
-
-Gets all the revisions for a specific evaluation.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetFormVersionsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new QualityApi();
-            var formId = formId_example;  // string | Form ID
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            {
-                // Gets all the revisions for a specific evaluation.
-                EvaluationFormEntityListing result = apiInstance.GetFormVersions(formId, pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling QualityApi.GetFormVersions: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **formId** | **string**| Form ID |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
-
-### Return type
-
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
-
 <a name="getforms"></a>
 
 ## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
@@ -1015,11 +899,11 @@ namespace Example
 
 [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
 
-<a name="getkeywordset"></a>
+<a name="getformsformid"></a>
 
-## [**KeywordSet**](KeywordSet.html) GetKeywordset (string keywordSetId)
+## [**EvaluationForm**](EvaluationForm.html) GetFormsFormId (string formId)
 
-Get a keywordSet by id.
+Get an evaluation form
 
 
 
@@ -1033,7 +917,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetKeywordsetExample
+    public class GetFormsFormIdExample
     {
         public void main()
         {
@@ -1042,17 +926,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
+            var formId = formId_example;  // string | Form ID
 
             try
             {
-                // Get a keywordSet by id.
-                KeywordSet result = apiInstance.GetKeywordset(keywordSetId);
+                // Get an evaluation form
+                EvaluationForm result = apiInstance.GetFormsFormId(formId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.GetKeywordset: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.GetFormsFormId: " + e.Message );
             }
         }
     }
@@ -1064,12 +948,72 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **keywordSetId** | **string**| KeywordSet ID |  |
+| **formId** | **string**| Form ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**KeywordSet**](KeywordSet.html)
+[**EvaluationForm**](EvaluationForm.html)
+
+<a name="getformsformidversions"></a>
+
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetFormsFormIdVersions (string formId, int? pageSize = null, int? pageNumber = null)
+
+Gets all the revisions for a specific evaluation.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetFormsFormIdVersionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new QualityApi();
+            var formId = formId_example;  // string | Form ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Gets all the revisions for a specific evaluation.
+                EvaluationFormEntityListing result = apiInstance.GetFormsFormIdVersions(formId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetFormsFormIdVersions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
 
 <a name="getkeywordsets"></a>
 
@@ -1139,11 +1083,11 @@ namespace Example
 
 [**KeywordSetEntityListing**](KeywordSetEntityListing.html)
 
-<a name="getpublishedform"></a>
+<a name="getkeywordsetskeywordsetid"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) GetPublishedform (string formId)
+## [**KeywordSet**](KeywordSet.html) GetKeywordsetsKeywordsetId (string keywordSetId)
 
-Get the published evaluation forms.
+Get a keywordSet by id.
 
 
 
@@ -1157,7 +1101,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetPublishedformExample
+    public class GetKeywordsetsKeywordsetIdExample
     {
         public void main()
         {
@@ -1166,17 +1110,17 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var formId = formId_example;  // string | Form ID
+            var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
 
             try
             {
-                // Get the published evaluation forms.
-                EvaluationForm result = apiInstance.GetPublishedform(formId);
+                // Get a keywordSet by id.
+                KeywordSet result = apiInstance.GetKeywordsetsKeywordsetId(keywordSetId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.GetPublishedform: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.GetKeywordsetsKeywordsetId: " + e.Message );
             }
         }
     }
@@ -1188,12 +1132,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **formId** | **string**| Form ID |  |
+| **keywordSetId** | **string**| KeywordSet ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**KeywordSet**](KeywordSet.html)
 
 <a name="getpublishedforms"></a>
 
@@ -1255,9 +1199,65 @@ namespace Example
 
 [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
 
+<a name="getpublishedformsformid"></a>
+
+## [**EvaluationForm**](EvaluationForm.html) GetPublishedformsFormId (string formId)
+
+Get the published evaluation forms.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetPublishedformsFormIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new QualityApi();
+            var formId = formId_example;  // string | Form ID
+
+            try
+            {
+                // Get the published evaluation forms.
+                EvaluationForm result = apiInstance.GetPublishedformsFormId(formId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetPublishedformsFormId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
 <a name="postcalibrations"></a>
 
-## [**Calibration**](Calibration.html) PostCalibrations (Calibration body, string expand = null)
+## [**Calibration**](Calibration.html) PostCalibrations (CalibrationCreate body, string expand = null)
 
 Create a calibration
 
@@ -1282,7 +1282,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new QualityApi();
-            var body = new Calibration(); // Calibration | calibration
+            var body = new CalibrationCreate(); // CalibrationCreate | calibration
             var expand = expand_example;  // string | calibratorId (optional) 
 
             try
@@ -1305,7 +1305,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Calibration**](Calibration.html)| calibration |  |
+| **body** | [**CalibrationCreate**](CalibrationCreate.html)| calibration |  |
 | **expand** | **string**| calibratorId | [optional]  |
 {: class="table table-striped"}
 
@@ -1313,9 +1313,9 @@ namespace Example
 
 [**Calibration**](Calibration.html)
 
-<a name="postconversationevaluations"></a>
+<a name="postconversationsconversationidevaluations"></a>
 
-## [**Evaluation**](Evaluation.html) PostConversationEvaluations (string conversationId, Evaluation body, string expand = null)
+## [**Evaluation**](Evaluation.html) PostConversationsConversationIdEvaluations (string conversationId, Evaluation body, string expand = null)
 
 Create an evaluation
 
@@ -1331,7 +1331,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostConversationEvaluationsExample
+    public class PostConversationsConversationIdEvaluationsExample
     {
         public void main()
         {
@@ -1347,12 +1347,12 @@ namespace Example
             try
             {
                 // Create an evaluation
-                Evaluation result = apiInstance.PostConversationEvaluations(conversationId, body, expand);
+                Evaluation result = apiInstance.PostConversationsConversationIdEvaluations(conversationId, body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.PostConversationEvaluations: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.PostConversationsConversationIdEvaluations: " + e.Message );
             }
         }
     }
@@ -1711,9 +1711,9 @@ namespace Example
 
 [**KeywordSet**](KeywordSet.html)
 
-<a name="putcalibration"></a>
+<a name="putcalibrationscalibrationid"></a>
 
-## [**Calibration**](Calibration.html) PutCalibration (string calibrationId, Calibration body)
+## [**Calibration**](Calibration.html) PutCalibrationsCalibrationId (string calibrationId, Calibration body)
 
 Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
 
@@ -1729,7 +1729,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutCalibrationExample
+    public class PutCalibrationsCalibrationIdExample
     {
         public void main()
         {
@@ -1744,12 +1744,12 @@ namespace Example
             try
             {
                 // Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
-                Calibration result = apiInstance.PutCalibration(calibrationId, body);
+                Calibration result = apiInstance.PutCalibrationsCalibrationId(calibrationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.PutCalibration: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.PutCalibrationsCalibrationId: " + e.Message );
             }
         }
     }
@@ -1769,9 +1769,9 @@ namespace Example
 
 [**Calibration**](Calibration.html)
 
-<a name="putconversationevaluation"></a>
+<a name="putconversationsconversationidevaluationsevaluationid"></a>
 
-## [**Evaluation**](Evaluation.html) PutConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null)
+## [**Evaluation**](Evaluation.html) PutConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, Evaluation body, string expand = null)
 
 Update an evaluation
 
@@ -1787,7 +1787,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutConversationEvaluationExample
+    public class PutConversationsConversationIdEvaluationsEvaluationIdExample
     {
         public void main()
         {
@@ -1804,12 +1804,12 @@ namespace Example
             try
             {
                 // Update an evaluation
-                Evaluation result = apiInstance.PutConversationEvaluation(conversationId, evaluationId, body, expand);
+                Evaluation result = apiInstance.PutConversationsConversationIdEvaluationsEvaluationId(conversationId, evaluationId, body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.PutConversationEvaluation: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.PutConversationsConversationIdEvaluationsEvaluationId: " + e.Message );
             }
         }
     }
@@ -1831,9 +1831,9 @@ namespace Example
 
 [**Evaluation**](Evaluation.html)
 
-<a name="putform"></a>
+<a name="putformsformid"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PutForm (string formId, EvaluationForm body)
+## [**EvaluationForm**](EvaluationForm.html) PutFormsFormId (string formId, EvaluationForm body)
 
 Update an evaluation form.
 
@@ -1849,7 +1849,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutFormExample
+    public class PutFormsFormIdExample
     {
         public void main()
         {
@@ -1864,12 +1864,12 @@ namespace Example
             try
             {
                 // Update an evaluation form.
-                EvaluationForm result = apiInstance.PutForm(formId, body);
+                EvaluationForm result = apiInstance.PutFormsFormId(formId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.PutForm: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.PutFormsFormId: " + e.Message );
             }
         }
     }
@@ -1889,9 +1889,9 @@ namespace Example
 
 [**EvaluationForm**](EvaluationForm.html)
 
-<a name="putkeywordset"></a>
+<a name="putkeywordsetskeywordsetid"></a>
 
-## [**KeywordSet**](KeywordSet.html) PutKeywordset (string keywordSetId, KeywordSet body)
+## [**KeywordSet**](KeywordSet.html) PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body)
 
 Update a keywordSet to the specified keywordSet via PUT.
 
@@ -1907,7 +1907,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutKeywordsetExample
+    public class PutKeywordsetsKeywordsetIdExample
     {
         public void main()
         {
@@ -1922,12 +1922,12 @@ namespace Example
             try
             {
                 // Update a keywordSet to the specified keywordSet via PUT.
-                KeywordSet result = apiInstance.PutKeywordset(keywordSetId, body);
+                KeywordSet result = apiInstance.PutKeywordsetsKeywordsetId(keywordSetId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.PutKeywordset: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.PutKeywordsetsKeywordsetId: " + e.Message );
             }
         }
     }

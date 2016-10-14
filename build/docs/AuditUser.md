@@ -7,9 +7,9 @@ title: AuditUser
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
-| **Name** | **string** |  | [optional] |
-| **Display** | **string** |  | [optional] |
+| **Id** | **string** | The ID (UUID) of the user who initiated the action of this AuditMessage. | |
+| **Name** | **string** | The full username of the user who initiated the action of this AuditMessage. | [optional] |
+| **Display** | **string** | The display name of the user who initiated the action of this AuditMessage. | [optional] |
 {: class="table table-striped"}
 
 

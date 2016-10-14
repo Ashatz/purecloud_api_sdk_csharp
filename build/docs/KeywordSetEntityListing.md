@@ -7,10 +7,10 @@ title: KeywordSetEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Entities** | [**List&lt;KeywordSet&gt;**](KeywordSet.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;KeywordSet&gt;**](KeywordSet.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |

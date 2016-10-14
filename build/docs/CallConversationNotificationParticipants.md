@@ -29,8 +29,6 @@ title: CallConversationNotificationParticipants
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
-| **ExternalContact** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
-| **ExternalOrganization** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **Muted** | **bool?** |  | [optional] |
 | **Confined** | **bool?** |  | [optional] |
 | **Recording** | **bool?** |  | [optional] |

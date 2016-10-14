@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class GroupSearchCriteria :  IEquatable<GroupSearchCriteria>
     {
         /// <summary>
-        /// Gets or Sets _Operator
+        /// How to apply this search criteria against other criteria
         /// </summary>
+        /// <value>How to apply this search criteria against other criteria</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OperatorEnum
         {
@@ -107,8 +108,9 @@ namespace ININ.PureCloudApi.Model
             RequiredFields
         }
         /// <summary>
-        /// Gets or Sets _Operator
+        /// How to apply this search criteria against other criteria
         /// </summary>
+        /// <value>How to apply this search criteria against other criteria</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
         /// <summary>
@@ -125,13 +127,13 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupSearchCriteria" /> class.
         /// </summary>
-        /// <param name="EndValue">EndValue.</param>
-        /// <param name="Values">Values.</param>
-        /// <param name="StartValue">StartValue.</param>
-        /// <param name="Fields">Fields.</param>
-        /// <param name="Value">Value.</param>
-        /// <param name="_Operator">_Operator.</param>
-        /// <param name="Group">Group.</param>
+        /// <param name="EndValue">The end value of the range. This field is used for range search types..</param>
+        /// <param name="Values">A list of values for the search to match against.</param>
+        /// <param name="StartValue">The start value of the range. This field is used for range search types..</param>
+        /// <param name="Fields">Field names to search against.</param>
+        /// <param name="Value">A value for the search to match against.</param>
+        /// <param name="_Operator">How to apply this search criteria against other criteria.</param>
+        /// <param name="Group">Groups multiple conditions.</param>
         /// <param name="Type">Search Type (required).</param>
         public GroupSearchCriteria(string EndValue = null, List<string> Values = null, string StartValue = null, List<string> Fields = null, string Value = null, OperatorEnum? _Operator = null, List<GroupSearchCriteria> Group = null, TypeEnum? Type = null)
         {
@@ -154,33 +156,39 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets EndValue
+        /// The end value of the range. This field is used for range search types.
         /// </summary>
+        /// <value>The end value of the range. This field is used for range search types.</value>
         [DataMember(Name="endValue", EmitDefaultValue=false)]
         public string EndValue { get; set; }
         /// <summary>
-        /// Gets or Sets Values
+        /// A list of values for the search to match against
         /// </summary>
+        /// <value>A list of values for the search to match against</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
         /// <summary>
-        /// Gets or Sets StartValue
+        /// The start value of the range. This field is used for range search types.
         /// </summary>
+        /// <value>The start value of the range. This field is used for range search types.</value>
         [DataMember(Name="startValue", EmitDefaultValue=false)]
         public string StartValue { get; set; }
         /// <summary>
-        /// Gets or Sets Fields
+        /// Field names to search against
         /// </summary>
+        /// <value>Field names to search against</value>
         [DataMember(Name="fields", EmitDefaultValue=false)]
         public List<string> Fields { get; set; }
         /// <summary>
-        /// Gets or Sets Value
+        /// A value for the search to match against
         /// </summary>
+        /// <value>A value for the search to match against</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         /// <summary>
-        /// Gets or Sets Group
+        /// Groups multiple conditions
         /// </summary>
+        /// <value>Groups multiple conditions</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public List<GroupSearchCriteria> Group { get; set; }
         /// <summary>

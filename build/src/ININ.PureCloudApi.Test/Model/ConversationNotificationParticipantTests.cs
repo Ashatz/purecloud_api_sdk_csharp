@@ -91,14 +91,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'ExternalContactId'
         }
         /// <summary>
-        /// Test the property 'ExternalOrganizationId'
-        /// </summary>
-        [Test]
-        public void ExternalOrganizationIdTest()
-        {
-            // TODO: unit test for the property 'ExternalOrganizationId'
-        }
-        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]

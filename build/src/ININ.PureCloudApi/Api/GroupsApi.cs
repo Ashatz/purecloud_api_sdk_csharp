@@ -15,6 +15,27 @@ namespace ININ.PureCloudApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Delete group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>string</returns>
+        string DeleteGroupId (string groupId);
+
+        /// <summary>
+        /// Delete group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteGroupIdWithHttpInfo (string groupId);
+        /// <summary>
         /// Remove members
         /// </summary>
         /// <remarks>
@@ -24,7 +45,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns></returns>
-        void DeleteGroupMembers (string groupId, string ids);
+        void DeleteGroupIdMembers (string groupId, string ids);
 
         /// <summary>
         /// Remove members
@@ -36,7 +57,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteGroupMembersWithHttpInfo (string groupId, string ids);
+        ApiResponse<Object> DeleteGroupIdMembersWithHttpInfo (string groupId, string ids);
         /// <summary>
         /// Get group
         /// </summary>
@@ -46,7 +67,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Group</returns>
-        Group GetGroup (string groupId);
+        Group GetGroupId (string groupId);
 
         /// <summary>
         /// Get group
@@ -57,7 +78,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of Group</returns>
-        ApiResponse<Group> GetGroupWithHttpInfo (string groupId);
+        ApiResponse<Group> GetGroupIdWithHttpInfo (string groupId);
         /// <summary>
         /// Get group members
         /// </summary>
@@ -70,7 +91,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserEntityListing</returns>
-        UserEntityListing GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        UserEntityListing GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Get group members
@@ -84,7 +105,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
-        ApiResponse<UserEntityListing> GetGroupMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        ApiResponse<UserEntityListing> GetGroupIdMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
         /// Get a group list
         /// </summary>
@@ -111,7 +132,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of GroupEntityListing</returns>
         ApiResponse<GroupEntityListing> GetGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
-        /// Search using q64
+        /// Search groups using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -123,7 +144,7 @@ namespace ININ.PureCloudApi.Api
         GroupsSearchResponse GetSearch (string q64, List<string> expand = null);
 
         /// <summary>
-        /// Search using q64
+        /// Search groups using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -143,7 +164,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns></returns>
-        void PostGroupMembers (string groupId, GroupMembersUpdate body);
+        void PostGroupIdMembers (string groupId, GroupMembersUpdate body);
 
         /// <summary>
         /// Add members
@@ -155,7 +176,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostGroupMembersWithHttpInfo (string groupId, GroupMembersUpdate body);
+        ApiResponse<Object> PostGroupIdMembersWithHttpInfo (string groupId, GroupMembersUpdate body);
         /// <summary>
         /// Create a group
         /// </summary>
@@ -178,7 +199,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Group</returns>
         ApiResponse<Group> PostGroupsWithHttpInfo (Group body);
         /// <summary>
-        /// Search
+        /// Search groups
         /// </summary>
         /// <remarks>
         /// 
@@ -189,7 +210,7 @@ namespace ININ.PureCloudApi.Api
         GroupsSearchResponse PostSearch (GroupSearchRequest body);
 
         /// <summary>
-        /// Search
+        /// Search groups
         /// </summary>
         /// <remarks>
         /// 
@@ -198,8 +219,52 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
         ApiResponse<GroupsSearchResponse> PostSearchWithHttpInfo (GroupSearchRequest body);
+        /// <summary>
+        /// Update group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Group (optional)</param>
+        /// <returns>Group</returns>
+        Group PutGroupId (string groupId, GroupUpdate body = null);
+
+        /// <summary>
+        /// Update group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Group (optional)</param>
+        /// <returns>ApiResponse of Group</returns>
+        ApiResponse<Group> PutGroupIdWithHttpInfo (string groupId, GroupUpdate body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Delete group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteGroupIdAsync (string groupId);
+
+        /// <summary>
+        /// Delete group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteGroupIdAsyncWithHttpInfo (string groupId);
         /// <summary>
         /// Remove members
         /// </summary>
@@ -210,7 +275,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteGroupMembersAsync (string groupId, string ids);
+        System.Threading.Tasks.Task DeleteGroupIdMembersAsync (string groupId, string ids);
 
         /// <summary>
         /// Remove members
@@ -222,7 +287,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupMembersAsyncWithHttpInfo (string groupId, string ids);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupIdMembersAsyncWithHttpInfo (string groupId, string ids);
         /// <summary>
         /// Get group
         /// </summary>
@@ -232,7 +297,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of Group</returns>
-        System.Threading.Tasks.Task<Group> GetGroupAsync (string groupId);
+        System.Threading.Tasks.Task<Group> GetGroupIdAsync (string groupId);
 
         /// <summary>
         /// Get group
@@ -243,7 +308,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (Group)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupAsyncWithHttpInfo (string groupId);
+        System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupIdAsyncWithHttpInfo (string groupId);
         /// <summary>
         /// Get group members
         /// </summary>
@@ -256,7 +321,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserEntityListing</returns>
-        System.Threading.Tasks.Task<UserEntityListing> GetGroupMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<UserEntityListing> GetGroupIdMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Get group members
@@ -270,7 +335,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupIdMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
         /// Get a group list
         /// </summary>
@@ -297,7 +362,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (GroupEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
-        /// Search using q64
+        /// Search groups using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -309,7 +374,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<GroupsSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
 
         /// <summary>
-        /// Search using q64
+        /// Search groups using the q64 value returned from a previous search
         /// </summary>
         /// <remarks>
         /// 
@@ -329,7 +394,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostGroupMembersAsync (string groupId, GroupMembersUpdate body);
+        System.Threading.Tasks.Task PostGroupIdMembersAsync (string groupId, GroupMembersUpdate body);
 
         /// <summary>
         /// Add members
@@ -341,7 +406,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupIdMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body);
         /// <summary>
         /// Create a group
         /// </summary>
@@ -364,7 +429,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (Group body);
         /// <summary>
-        /// Search
+        /// Search groups
         /// </summary>
         /// <remarks>
         /// 
@@ -375,7 +440,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<GroupsSearchResponse> PostSearchAsync (GroupSearchRequest body);
 
         /// <summary>
-        /// Search
+        /// Search groups
         /// </summary>
         /// <remarks>
         /// 
@@ -384,6 +449,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostSearchAsyncWithHttpInfo (GroupSearchRequest body);
+        /// <summary>
+        /// Update group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Group (optional)</param>
+        /// <returns>Task of Group</returns>
+        System.Threading.Tasks.Task<Group> PutGroupIdAsync (string groupId, GroupUpdate body = null);
+
+        /// <summary>
+        /// Update group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Group (optional)</param>
+        /// <returns>Task of ApiResponse (Group)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Group>> PutGroupIdAsyncWithHttpInfo (string groupId, GroupUpdate body = null);
         #endregion Asynchronous Operations
     }
 
@@ -475,15 +563,168 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Delete group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>string</returns>
+        public string DeleteGroupId (string groupId)
+        {
+             ApiResponse<string> localVarResponse = DeleteGroupIdWithHttpInfo(groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteGroupIdWithHttpInfo (string groupId)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupId");
+
+            var localVarPath = "/api/v2/groups/{groupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Delete group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteGroupIdAsync (string groupId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteGroupIdAsyncWithHttpInfo(groupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteGroupIdAsyncWithHttpInfo (string groupId)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupId");
+
+            var localVarPath = "/api/v2/groups/{groupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
         /// Remove members 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns></returns>
-        public void DeleteGroupMembers (string groupId, string ids)
+        public void DeleteGroupIdMembers (string groupId, string ids)
         {
-             DeleteGroupMembersWithHttpInfo(groupId, ids);
+             DeleteGroupIdMembersWithHttpInfo(groupId, ids);
         }
 
         /// <summary>
@@ -493,14 +734,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteGroupMembersWithHttpInfo (string groupId, string ids)
+        public ApiResponse<Object> DeleteGroupIdMembersWithHttpInfo (string groupId, string ids)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupMembers");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupIdMembers");
             // verify the required parameter 'ids' is set
             if (ids == null)
-                throw new ApiException(400, "Missing required parameter 'ids' when calling GroupsApi->DeleteGroupMembers");
+                throw new ApiException(400, "Missing required parameter 'ids' when calling GroupsApi->DeleteGroupIdMembers");
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -544,16 +785,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupIdMembers: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -564,9 +803,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteGroupMembersAsync (string groupId, string ids)
+        public async System.Threading.Tasks.Task DeleteGroupIdMembersAsync (string groupId, string ids)
         {
-             await DeleteGroupMembersAsyncWithHttpInfo(groupId, ids);
+             await DeleteGroupIdMembersAsyncWithHttpInfo(groupId, ids);
 
         }
 
@@ -577,14 +816,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupMembersAsyncWithHttpInfo (string groupId, string ids)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupIdMembersAsyncWithHttpInfo (string groupId, string ids)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupMembers");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupIdMembers");
             // verify the required parameter 'ids' is set
             if (ids == null)
-                throw new ApiException(400, "Missing required parameter 'ids' when calling GroupsApi->DeleteGroupMembers");
+                throw new ApiException(400, "Missing required parameter 'ids' when calling GroupsApi->DeleteGroupIdMembers");
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -628,16 +867,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupIdMembers: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteGroupIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -647,9 +884,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Group</returns>
-        public Group GetGroup (string groupId)
+        public Group GetGroupId (string groupId)
         {
-             ApiResponse<Group> localVarResponse = GetGroupWithHttpInfo(groupId);
+             ApiResponse<Group> localVarResponse = GetGroupIdWithHttpInfo(groupId);
              return localVarResponse.Data;
         }
 
@@ -659,11 +896,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of Group</returns>
-        public ApiResponse< Group > GetGroupWithHttpInfo (string groupId)
+        public ApiResponse< Group > GetGroupIdWithHttpInfo (string groupId)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroup");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupId");
 
             var localVarPath = "/api/v2/groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -706,15 +943,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Group>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Group) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
             
         }
@@ -725,9 +960,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of Group</returns>
-        public async System.Threading.Tasks.Task<Group> GetGroupAsync (string groupId)
+        public async System.Threading.Tasks.Task<Group> GetGroupIdAsync (string groupId)
         {
-             ApiResponse<Group> localVarResponse = await GetGroupAsyncWithHttpInfo(groupId);
+             ApiResponse<Group> localVarResponse = await GetGroupIdAsyncWithHttpInfo(groupId);
              return localVarResponse.Data;
 
         }
@@ -738,11 +973,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (Group)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupAsyncWithHttpInfo (string groupId)
+        public async System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupIdAsyncWithHttpInfo (string groupId)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroup");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupId");
 
             var localVarPath = "/api/v2/groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -785,15 +1020,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Group>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Group) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
             
         }
@@ -807,9 +1040,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>UserEntityListing</returns>
-        public UserEntityListing GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public UserEntityListing GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = GetGroupMembersWithHttpInfo(groupId, pageSize, pageNumber, sortOrder);
+             ApiResponse<UserEntityListing> localVarResponse = GetGroupIdMembersWithHttpInfo(groupId, pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -822,11 +1055,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
-        public ApiResponse< UserEntityListing > GetGroupMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public ApiResponse< UserEntityListing > GetGroupIdMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupMembers");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupIdMembers");
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -872,15 +1105,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetGroupMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdMembers: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetGroupMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (UserEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
             
         }
@@ -894,9 +1125,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of UserEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserEntityListing> GetGroupMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<UserEntityListing> GetGroupIdMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = await GetGroupMembersAsyncWithHttpInfo(groupId, pageSize, pageNumber, sortOrder);
+             ApiResponse<UserEntityListing> localVarResponse = await GetGroupIdMembersAsyncWithHttpInfo(groupId, pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -910,11 +1141,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupIdMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupMembers");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupIdMembers");
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -960,15 +1191,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetGroupMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdMembers: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetGroupMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (UserEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
             
         }
@@ -1041,15 +1270,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetGroups: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetGroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<GroupEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupEntityListing)));
             
         }
@@ -1123,21 +1350,19 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetGroups: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetGroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<GroupEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupEntityListing)));
             
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search groups using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -1150,7 +1375,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search groups using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -1204,21 +1429,19 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<GroupsSearchResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)));
             
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search groups using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -1232,7 +1455,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search using q64 
+        /// Search groups using the q64 value returned from a previous search 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
@@ -1286,15 +1509,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<GroupsSearchResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)));
             
         }
@@ -1306,9 +1527,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns></returns>
-        public void PostGroupMembers (string groupId, GroupMembersUpdate body)
+        public void PostGroupIdMembers (string groupId, GroupMembersUpdate body)
         {
-             PostGroupMembersWithHttpInfo(groupId, body);
+             PostGroupIdMembersWithHttpInfo(groupId, body);
         }
 
         /// <summary>
@@ -1318,14 +1539,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostGroupMembersWithHttpInfo (string groupId, GroupMembersUpdate body)
+        public ApiResponse<Object> PostGroupIdMembersWithHttpInfo (string groupId, GroupMembersUpdate body)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PostGroupMembers");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PostGroupIdMembers");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupMembers");
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupIdMembers");
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1376,16 +1597,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostGroupMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupIdMembers: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostGroupMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1396,9 +1615,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostGroupMembersAsync (string groupId, GroupMembersUpdate body)
+        public async System.Threading.Tasks.Task PostGroupIdMembersAsync (string groupId, GroupMembersUpdate body)
         {
-             await PostGroupMembersAsyncWithHttpInfo(groupId, body);
+             await PostGroupIdMembersAsyncWithHttpInfo(groupId, body);
 
         }
 
@@ -1409,14 +1628,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupIdMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PostGroupMembers");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PostGroupIdMembers");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupMembers");
+                throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupIdMembers");
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1467,16 +1686,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostGroupMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupIdMembers: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostGroupMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
 
@@ -1552,15 +1769,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostGroups: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostGroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Group>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Group) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
             
         }
@@ -1638,21 +1853,19 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostGroups: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostGroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Group>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Group) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
             
         }
 
         /// <summary>
-        /// Search 
+        /// Search groups 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -1664,7 +1877,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search groups 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -1723,21 +1936,19 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<GroupsSearchResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)));
             
         }
 
         /// <summary>
-        /// Search 
+        /// Search groups 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -1750,7 +1961,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Search 
+        /// Search groups 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
@@ -1809,16 +2020,187 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<GroupsSearchResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupsSearchResponse)));
+            
+        }
+
+        /// <summary>
+        /// Update group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Group (optional)</param>
+        /// <returns>Group</returns>
+        public Group PutGroupId (string groupId, GroupUpdate body = null)
+        {
+             ApiResponse<Group> localVarResponse = PutGroupIdWithHttpInfo(groupId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Group (optional)</param>
+        /// <returns>ApiResponse of Group</returns>
+        public ApiResponse< Group > PutGroupIdWithHttpInfo (string groupId, GroupUpdate body = null)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PutGroupId");
+
+            var localVarPath = "/api/v2/groups/{groupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Group>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Group) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
+            
+        }
+
+        /// <summary>
+        /// Update group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Group (optional)</param>
+        /// <returns>Task of Group</returns>
+        public async System.Threading.Tasks.Task<Group> PutGroupIdAsync (string groupId, GroupUpdate body = null)
+        {
+             ApiResponse<Group> localVarResponse = await PutGroupIdAsyncWithHttpInfo(groupId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">Group (optional)</param>
+        /// <returns>Task of ApiResponse (Group)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Group>> PutGroupIdAsyncWithHttpInfo (string groupId, GroupUpdate body = null)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PutGroupId");
+
+            var localVarPath = "/api/v2/groups/{groupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Group>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Group) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Group)));
             
         }
 

@@ -83,6 +83,22 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Level'
         }
         /// <summary>
+        /// Test the property 'Timestamp'
+        /// </summary>
+        [Test]
+        public void TimestampTest()
+        {
+            // TODO: unit test for the property 'Timestamp'
+        }
+        /// <summary>
+        /// Test the property 'Entity'
+        /// </summary>
+        [Test]
+        public void EntityTest()
+        {
+            // TODO: unit test for the property 'Entity'
+        }
+        /// <summary>
         /// Test the property 'Action'
         /// </summary>
         [Test]
@@ -113,22 +129,6 @@ namespace ININ.PureCloudApi.Test
         public void EntityTypeTest()
         {
             // TODO: unit test for the property 'EntityType'
-        }
-        /// <summary>
-        /// Test the property 'Entity'
-        /// </summary>
-        [Test]
-        public void EntityTest()
-        {
-            // TODO: unit test for the property 'Entity'
-        }
-        /// <summary>
-        /// Test the property 'Timestamp'
-        /// </summary>
-        [Test]
-        public void TimestampTest()
-        {
-            // TODO: unit test for the property 'Timestamp'
         }
         /// <summary>
         /// Test the property 'SelfUri'

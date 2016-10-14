@@ -76,17 +76,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test DeleteIdentityprovider
-        /// </summary>
-        [Test]
-        public void DeleteIdentityproviderTest()
-        {
-            // TODO: add unit test for the method 'DeleteIdentityprovider'
-            instance.DeleteIdentityprovider();
-            
-        }
-        
-        /// <summary>
         /// Test DeleteOkta
         /// </summary>
         [Test]
@@ -105,6 +94,17 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteOnelogin'
             instance.DeleteOnelogin();
+            
+        }
+        
+        /// <summary>
+        /// Test DeleteProviderId
+        /// </summary>
+        [Test]
+        public void DeleteProviderIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteProviderId'
+            instance.DeleteProviderId();
             
         }
         
@@ -153,17 +153,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetIdentityprovider
-        /// </summary>
-        [Test]
-        public void GetIdentityproviderTest()
-        {
-            // TODO: add unit test for the method 'GetIdentityprovider'
-            var response = instance.GetIdentityprovider();
-            Assert.IsInstanceOf<OAuthProvider> (response, "response is OAuthProvider");
-        }
-        
-        /// <summary>
         /// Test GetIdentityproviders
         /// </summary>
         [Test]
@@ -194,6 +183,17 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetOnelogin'
             var response = instance.GetOnelogin();
             Assert.IsInstanceOf<OneLogin> (response, "response is OneLogin");
+        }
+        
+        /// <summary>
+        /// Test GetProviderId
+        /// </summary>
+        [Test]
+        public void GetProviderIdTest()
+        {
+            // TODO: add unit test for the method 'GetProviderId'
+            var response = instance.GetProviderId();
+            Assert.IsInstanceOf<OAuthProvider> (response, "response is OAuthProvider");
         }
         
         /// <summary>
@@ -243,18 +243,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutIdentityprovider
-        /// </summary>
-        [Test]
-        public void PutIdentityproviderTest()
-        {
-            // TODO: add unit test for the method 'PutIdentityprovider'
-            OAuthProvider body = null; // TODO: replace null with proper value
-            instance.PutIdentityprovider(body);
-            
-        }
-        
-        /// <summary>
         /// Test PutOkta
         /// </summary>
         [Test]
@@ -275,6 +263,18 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutOnelogin'
             OneLogin body = null; // TODO: replace null with proper value
             instance.PutOnelogin(body);
+            
+        }
+        
+        /// <summary>
+        /// Test PutProviderId
+        /// </summary>
+        [Test]
+        public void PutProviderIdTest()
+        {
+            // TODO: add unit test for the method 'PutProviderId'
+            OAuthProvider body = null; // TODO: replace null with proper value
+            instance.PutProviderId(body);
             
         }
         

@@ -7,7 +7,7 @@ title: CallCommand
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **CallNumber** | **string** |  | [optional] |
+| **CallNumber** | **string** | The phone number to dial for this call. | |
 {: class="table table-striped"}
 
 

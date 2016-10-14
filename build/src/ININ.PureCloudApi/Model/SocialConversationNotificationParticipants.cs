@@ -273,13 +273,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
         /// <param name="Provider">Provider.</param>
-        /// <param name="ExternalContact">ExternalContact.</param>
-        /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="SocialMediaId">SocialMediaId.</param>
         /// <param name="SocialMediaHub">SocialMediaHub.</param>
         /// <param name="SocialUserName">SocialUserName.</param>
         /// <param name="PreviewText">PreviewText.</param>
-        public SocialConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, SocialConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, SocialConversationNotificationErrorInfo ErrorInfo = null, SocialConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, SocialConversationNotificationUriReference ExternalContact = null, SocialConversationNotificationUriReference ExternalOrganization = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
+        public SocialConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, SocialConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, SocialConversationNotificationErrorInfo ErrorInfo = null, SocialConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -303,8 +301,6 @@ namespace ININ.PureCloudApi.Model
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
             this.Provider = Provider;
-            this.ExternalContact = ExternalContact;
-            this.ExternalOrganization = ExternalOrganization;
             this.SocialMediaId = SocialMediaId;
             this.SocialMediaHub = SocialMediaHub;
             this.SocialUserName = SocialUserName;
@@ -407,16 +403,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         /// <summary>
-        /// Gets or Sets ExternalContact
-        /// </summary>
-        [DataMember(Name="externalContact", EmitDefaultValue=false)]
-        public SocialConversationNotificationUriReference ExternalContact { get; set; }
-        /// <summary>
-        /// Gets or Sets ExternalOrganization
-        /// </summary>
-        [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
-        public SocialConversationNotificationUriReference ExternalOrganization { get; set; }
-        /// <summary>
         /// Gets or Sets SocialMediaId
         /// </summary>
         [DataMember(Name="socialMediaId", EmitDefaultValue=false)]
@@ -466,8 +452,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
-            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
-            sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  SocialMediaId: ").Append(SocialMediaId).Append("\n");
             sb.Append("  SocialMediaHub: ").Append(SocialMediaHub).Append("\n");
             sb.Append("  SocialUserName: ").Append(SocialUserName).Append("\n");
@@ -619,16 +603,6 @@ namespace ININ.PureCloudApi.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
-                    this.ExternalContact == other.ExternalContact ||
-                    this.ExternalContact != null &&
-                    this.ExternalContact.Equals(other.ExternalContact)
-                ) &&
-                (
-                    this.ExternalOrganization == other.ExternalOrganization ||
-                    this.ExternalOrganization != null &&
-                    this.ExternalOrganization.Equals(other.ExternalOrganization)
-                ) &&
-                (
                     this.SocialMediaId == other.SocialMediaId ||
                     this.SocialMediaId != null &&
                     this.SocialMediaId.Equals(other.SocialMediaId)
@@ -705,10 +679,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
-                if (this.ExternalContact != null)
-                    hash = hash * 59 + this.ExternalContact.GetHashCode();
-                if (this.ExternalOrganization != null)
-                    hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.SocialMediaId != null)
                     hash = hash * 59 + this.SocialMediaId.GetHashCode();
                 if (this.SocialMediaHub != null)

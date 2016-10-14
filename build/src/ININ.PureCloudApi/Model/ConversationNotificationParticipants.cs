@@ -25,7 +25,6 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EndTime">EndTime.</param>
         /// <param name="UserId">UserId.</param>
         /// <param name="ExternalContactId">ExternalContactId.</param>
-        /// <param name="ExternalOrganizationId">ExternalOrganizationId.</param>
         /// <param name="Name">Name.</param>
         /// <param name="QueueId">QueueId.</param>
         /// <param name="GroupId">GroupId.</param>
@@ -48,14 +47,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationParticipants(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationScreenShares> ScreenShares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
+        public ConversationNotificationParticipants(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationScreenShares> ScreenShares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
             this.EndTime = EndTime;
             this.UserId = UserId;
             this.ExternalContactId = ExternalContactId;
-            this.ExternalOrganizationId = ExternalOrganizationId;
             this.Name = Name;
             this.QueueId = QueueId;
             this.GroupId = GroupId;
@@ -105,11 +103,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
-        /// <summary>
-        /// Gets or Sets ExternalOrganizationId
-        /// </summary>
-        [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
-        public string ExternalOrganizationId { get; set; }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
@@ -233,7 +226,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
-            sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
@@ -316,11 +308,6 @@ namespace ININ.PureCloudApi.Model
                     this.ExternalContactId == other.ExternalContactId ||
                     this.ExternalContactId != null &&
                     this.ExternalContactId.Equals(other.ExternalContactId)
-                ) &&
-                (
-                    this.ExternalOrganizationId == other.ExternalOrganizationId ||
-                    this.ExternalOrganizationId != null &&
-                    this.ExternalOrganizationId.Equals(other.ExternalOrganizationId)
                 ) &&
                 (
                     this.Name == other.Name ||
@@ -455,8 +442,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.UserId.GetHashCode();
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                if (this.ExternalOrganizationId != null)
-                    hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.QueueId != null)

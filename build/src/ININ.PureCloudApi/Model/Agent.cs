@@ -20,15 +20,16 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Agent" /> class.
         /// </summary>
-        /// <param name="Stage">Stage.</param>
+        /// <param name="Stage">The current stage for this agent.</param>
         public Agent(string Stage = null)
         {
             this.Stage = Stage;
         }
         
         /// <summary>
-        /// Gets or Sets Stage
+        /// The current stage for this agent
         /// </summary>
+        /// <value>The current stage for this agent</value>
         [DataMember(Name="stage", EmitDefaultValue=false)]
         public string Stage { get; set; }
         /// <summary>

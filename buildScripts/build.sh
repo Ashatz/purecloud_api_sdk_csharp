@@ -38,7 +38,7 @@ zip -r ${WORKSPACE}/doc.zip docs/*
 cd $REPO
 if [ -f "$REPO/newVersion.md" ]
 then
-echo "Adding to commit"
+	echo "Adding to commit"
 	git add .
 	git commit -am $PACKAGE_VERSION
 else

@@ -3,21 +3,21 @@ title: AttributesApi
 ---
 ## ININ.PureCloudApi.Api.AttributesApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteAttribute**](AttributesApi.html#deleteattribute) | **DELETE** /api/v2/attributes/{attributeId} | Delete an existing Attribute. |
-| [**GetAttribute**](AttributesApi.html#getattribute) | **GET** /api/v2/attributes/{attributeId} | Get details about an existing attribute. |
+| [**DeleteAttributeId**](AttributesApi.html#deleteattributeid) | **DELETE** /api/v2/attributes/{attributeId} | Delete an existing Attribute. |
+| [**GetAttributeId**](AttributesApi.html#getattributeid) | **GET** /api/v2/attributes/{attributeId} | Get details about an existing attribute. |
 | [**GetAttributes**](AttributesApi.html#getattributes) | **GET** /api/v2/attributes | Gets a list of existing attributes. |
 | [**PostAttributes**](AttributesApi.html#postattributes) | **POST** /api/v2/attributes | Create an attribute. |
 | [**PostQuery**](AttributesApi.html#postquery) | **POST** /api/v2/attributes/query | Query attributes |
-| [**PutAttribute**](AttributesApi.html#putattribute) | **PUT** /api/v2/attributes/{attributeId} | Update an existing attribute. |
+| [**PutAttributeId**](AttributesApi.html#putattributeid) | **PUT** /api/v2/attributes/{attributeId} | Update an existing attribute. |
 {: class="table table-striped"}
 
-<a name="deleteattribute"></a>
+<a name="deleteattributeid"></a>
 
-## void DeleteAttribute (string attributeId)
+## void DeleteAttributeId (string attributeId)
 
 Delete an existing Attribute.
 
@@ -33,7 +33,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteAttributeExample
+    public class DeleteAttributeIdExample
     {
         public void main()
         {
@@ -47,11 +47,11 @@ namespace Example
             try
             {
                 // Delete an existing Attribute.
-                apiInstance.DeleteAttribute(attributeId);
+                apiInstance.DeleteAttributeId(attributeId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AttributesApi.DeleteAttribute: " + e.Message );
+                Debug.Print("Exception when calling AttributesApi.DeleteAttributeId: " + e.Message );
             }
         }
     }
@@ -70,9 +70,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="getattribute"></a>
+<a name="getattributeid"></a>
 
-## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) GetAttribute (string attributeId)
+## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) GetAttributeId (string attributeId)
 
 Get details about an existing attribute.
 
@@ -88,7 +88,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetAttributeExample
+    public class GetAttributeIdExample
     {
         public void main()
         {
@@ -102,12 +102,12 @@ namespace Example
             try
             {
                 // Get details about an existing attribute.
-                ININ.PureCloudApi.Model.Attribute result = apiInstance.GetAttribute(attributeId);
+                ININ.PureCloudApi.Model.Attribute result = apiInstance.GetAttributeId(attributeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AttributesApi.GetAttribute: " + e.Message );
+                Debug.Print("Exception when calling AttributesApi.GetAttributeId: " + e.Message );
             }
         }
     }
@@ -296,9 +296,9 @@ namespace Example
 
 [**AttributeEntityListing**](AttributeEntityListing.html)
 
-<a name="putattribute"></a>
+<a name="putattributeid"></a>
 
-## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) PutAttribute (string attributeId, ININ.PureCloudApi.Model.Attribute body)
+## [**ININ.PureCloudApi.Model.Attribute**](Attribute.html) PutAttributeId (string attributeId, ININ.PureCloudApi.Model.Attribute body)
 
 Update an existing attribute.
 
@@ -314,7 +314,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutAttributeExample
+    public class PutAttributeIdExample
     {
         public void main()
         {
@@ -329,12 +329,12 @@ namespace Example
             try
             {
                 // Update an existing attribute.
-                ININ.PureCloudApi.Model.Attribute result = apiInstance.PutAttribute(attributeId, body);
+                ININ.PureCloudApi.Model.Attribute result = apiInstance.PutAttributeId(attributeId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AttributesApi.PutAttribute: " + e.Message );
+                Debug.Print("Exception when calling AttributesApi.PutAttributeId: " + e.Message );
             }
         }
     }

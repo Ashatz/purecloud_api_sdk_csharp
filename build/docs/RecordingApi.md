@@ -3,36 +3,37 @@ title: RecordingApi
 ---
 ## ININ.PureCloudApi.Api.RecordingApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteConversationRecordingAnnotation**](RecordingApi.html#deleteconversationrecordingannotation) | **DELETE** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
+| [**DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#deleteconversationidrecordingsrecordingidannotationsannotationid) | **DELETE** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
 | [**DeleteMediaretentionpolicies**](RecordingApi.html#deletemediaretentionpolicies) | **DELETE** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
-| [**DeleteMediaretentionpolicy**](RecordingApi.html#deletemediaretentionpolicy) | **DELETE** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
-| [**DeleteOrphanrecording**](RecordingApi.html#deleteorphanrecording) | **DELETE** /api/v2/orphanrecordings/{orphanId} |  deletes a single orphan recording |
-| [**GetConversationRecording**](RecordingApi.html#getconversationrecording) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
-| [**GetConversationRecordingAnnotation**](RecordingApi.html#getconversationrecordingannotation) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
-| [**GetConversationRecordingAnnotations**](RecordingApi.html#getconversationrecordingannotations) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
-| [**GetConversationRecordings**](RecordingApi.html#getconversationrecordings) | **GET** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
+| [**DeleteMediaretentionpoliciesPolicyId**](RecordingApi.html#deletemediaretentionpoliciespolicyid) | **DELETE** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
+| [**DeleteOrphanId**](RecordingApi.html#deleteorphanid) | **DELETE** /api/v2/orphanrecordings/{orphanId} |  deletes a single orphan recording |
+| [**GetConversationIdRecordings**](RecordingApi.html#getconversationidrecordings) | **GET** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
+| [**GetConversationIdRecordingsRecordingId**](RecordingApi.html#getconversationidrecordingsrecordingid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
+| [**GetConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#getconversationidrecordingsrecordingidannotations) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
+| [**GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#getconversationidrecordingsrecordingidannotationsannotationid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
 | [**GetMediaretentionpolicies**](RecordingApi.html#getmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
-| [**GetMediaretentionpolicy**](RecordingApi.html#getmediaretentionpolicy) | **GET** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
-| [**GetOrphanrecording**](RecordingApi.html#getorphanrecording) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
+| [**GetMediaretentionpoliciesPolicyId**](RecordingApi.html#getmediaretentionpoliciespolicyid) | **GET** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
+| [**GetOrphanId**](RecordingApi.html#getorphanid) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
 | [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **GET** /api/v2/orphanrecordings | Gets all orphan recordings |
 | [**GetSettings**](RecordingApi.html#getsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
 | [**GetsScreensessions**](RecordingApi.html#getsscreensessions) | **GET** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
-| [**PatchMediaretentionpolicy**](RecordingApi.html#patchmediaretentionpolicy) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
-| [**PostConversationRecordingAnnotations**](RecordingApi.html#postconversationrecordingannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
+| [**PatchMediaretentionpoliciesPolicyId**](RecordingApi.html#patchmediaretentionpoliciespolicyid) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
+| [**PatchsScreensessionsRecordingsessionId**](RecordingApi.html#patchsscreensessionsrecordingsessionid) | **PATCH** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
+| [**PostConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#postconversationidrecordingsrecordingidannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
 | [**PostMediaretentionpolicies**](RecordingApi.html#postmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
-| [**PutConversationRecording**](RecordingApi.html#putconversationrecording) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
-| [**PutConversationRecordingAnnotation**](RecordingApi.html#putconversationrecordingannotation) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
-| [**PutMediaretentionpolicy**](RecordingApi.html#putmediaretentionpolicy) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
+| [**PutConversationIdRecordingsRecordingId**](RecordingApi.html#putconversationidrecordingsrecordingid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
+| [**PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#putconversationidrecordingsrecordingidannotationsannotationid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
+| [**PutMediaretentionpoliciesPolicyId**](RecordingApi.html#putmediaretentionpoliciespolicyid) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
 | [**PutSettings**](RecordingApi.html#putsettings) | **PUT** /api/v2/recording/settings | Update the Recording Settings for the Organization |
 {: class="table table-striped"}
 
-<a name="deleteconversationrecordingannotation"></a>
+<a name="deleteconversationidrecordingsrecordingidannotationsannotationid"></a>
 
-## void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
+## void DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId)
 
 Delete annotation
 
@@ -48,7 +49,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteConversationRecordingAnnotationExample
+    public class DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdExample
     {
         public void main()
         {
@@ -64,11 +65,11 @@ namespace Example
             try
             {
                 // Delete annotation
-                apiInstance.DeleteConversationRecordingAnnotation(conversationId, recordingId, annotationId);
+                apiInstance.DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId(conversationId, recordingId, annotationId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.DeleteConversationRecordingAnnotation: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + e.Message );
             }
         }
     }
@@ -145,9 +146,9 @@ namespace Example
 
 **string**
 
-<a name="deletemediaretentionpolicy"></a>
+<a name="deletemediaretentionpoliciespolicyid"></a>
 
-## **string** DeleteMediaretentionpolicy (string policyId)
+## **string** DeleteMediaretentionpoliciesPolicyId (string policyId)
 
 Delete a media retention policy
 
@@ -163,7 +164,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteMediaretentionpolicyExample
+    public class DeleteMediaretentionpoliciesPolicyIdExample
     {
         public void main()
         {
@@ -177,12 +178,12 @@ namespace Example
             try
             {
                 // Delete a media retention policy
-                string result = apiInstance.DeleteMediaretentionpolicy(policyId);
+                string result = apiInstance.DeleteMediaretentionpoliciesPolicyId(policyId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.DeleteMediaretentionpolicy: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.DeleteMediaretentionpoliciesPolicyId: " + e.Message );
             }
         }
     }
@@ -201,9 +202,9 @@ namespace Example
 
 **string**
 
-<a name="deleteorphanrecording"></a>
+<a name="deleteorphanid"></a>
 
-## [**OrphanRecording**](OrphanRecording.html) DeleteOrphanrecording (string orphanId)
+## [**OrphanRecording**](OrphanRecording.html) DeleteOrphanId (string orphanId)
 
  deletes a single orphan recording
 
@@ -219,7 +220,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteOrphanrecordingExample
+    public class DeleteOrphanIdExample
     {
         public void main()
         {
@@ -233,12 +234,12 @@ namespace Example
             try
             {
                 //  deletes a single orphan recording
-                OrphanRecording result = apiInstance.DeleteOrphanrecording(orphanId);
+                OrphanRecording result = apiInstance.DeleteOrphanId(orphanId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.DeleteOrphanrecording: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.DeleteOrphanId: " + e.Message );
             }
         }
     }
@@ -257,9 +258,69 @@ namespace Example
 
 [**OrphanRecording**](OrphanRecording.html)
 
-<a name="getconversationrecording"></a>
+<a name="getconversationidrecordings"></a>
 
-## void GetConversationRecording (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+## [**List&lt;Recording&gt;**](Recording.html) GetConversationIdRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
+
+Get all of a Conversation's Recordings.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetConversationIdRecordingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. (optional)  (default to 5000)
+            var formatId = formatId_example;  // string | The desired media format (optional)  (default to WEBM)
+
+            try
+            {
+                // Get all of a Conversation's Recordings.
+                List&lt;Recording&gt; result = apiInstance.GetConversationIdRecordings(conversationId, maxWaitMs, formatId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetConversationIdRecordings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. | [optional] [default to 5000] |
+| **formatId** | **string**| The desired media format | [optional] [default to WEBM] |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<Recording>**](Recording.html)
+
+<a name="getconversationidrecordingsrecordingid"></a>
+
+## void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
 
 Gets a specific recording.
 
@@ -275,7 +336,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetConversationRecordingExample
+    public class GetConversationIdRecordingsRecordingIdExample
     {
         public void main()
         {
@@ -293,11 +354,11 @@ namespace Example
             try
             {
                 // Gets a specific recording.
-                apiInstance.GetConversationRecording(conversationId, recordingId, formatId, download, fileName);
+                apiInstance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, formatId, download, fileName);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.GetConversationRecording: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.GetConversationIdRecordingsRecordingId: " + e.Message );
             }
         }
     }
@@ -320,69 +381,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="getconversationrecordingannotation"></a>
+<a name="getconversationidrecordingsrecordingidannotations"></a>
 
-## [**Annotation**](Annotation.html) GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
-
-Get annotation
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetConversationRecordingAnnotationExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new RecordingApi();
-            var conversationId = conversationId_example;  // string | Conversation ID
-            var recordingId = recordingId_example;  // string | Recording ID
-            var annotationId = annotationId_example;  // string | Annotation ID
-
-            try
-            {
-                // Get annotation
-                Annotation result = apiInstance.GetConversationRecordingAnnotation(conversationId, recordingId, annotationId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RecordingApi.GetConversationRecordingAnnotation: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**| Conversation ID |  |
-| **recordingId** | **string**| Recording ID |  |
-| **annotationId** | **string**| Annotation ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Annotation**](Annotation.html)
-
-<a name="getconversationrecordingannotations"></a>
-
-## [**List&lt;Annotation&gt;**](Annotation.html) GetConversationRecordingAnnotations (string conversationId, string recordingId)
+## [**List&lt;Annotation&gt;**](Annotation.html) GetConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId)
 
 Get annotations for recording
 
@@ -398,7 +399,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetConversationRecordingAnnotationsExample
+    public class GetConversationIdRecordingsRecordingIdAnnotationsExample
     {
         public void main()
         {
@@ -413,12 +414,12 @@ namespace Example
             try
             {
                 // Get annotations for recording
-                List&lt;Annotation&gt; result = apiInstance.GetConversationRecordingAnnotations(conversationId, recordingId);
+                List&lt;Annotation&gt; result = apiInstance.GetConversationIdRecordingsRecordingIdAnnotations(conversationId, recordingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.GetConversationRecordingAnnotations: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.GetConversationIdRecordingsRecordingIdAnnotations: " + e.Message );
             }
         }
     }
@@ -438,11 +439,11 @@ namespace Example
 
 [**List<Annotation>**](Annotation.html)
 
-<a name="getconversationrecordings"></a>
+<a name="getconversationidrecordingsrecordingidannotationsannotationid"></a>
 
-## [**List&lt;Recording&gt;**](Recording.html) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
+## [**Annotation**](Annotation.html) GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId)
 
-Get all of a Conversation's Recordings.
+Get annotation
 
 
 
@@ -456,7 +457,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetConversationRecordingsExample
+    public class GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdExample
     {
         public void main()
         {
@@ -466,18 +467,18 @@ namespace Example
 
             var apiInstance = new RecordingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
-            var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. (optional)  (default to 5000)
-            var formatId = formatId_example;  // string | The desired media format (optional)  (default to WEBM)
+            var recordingId = recordingId_example;  // string | Recording ID
+            var annotationId = annotationId_example;  // string | Annotation ID
 
             try
             {
-                // Get all of a Conversation's Recordings.
-                List&lt;Recording&gt; result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId);
+                // Get annotation
+                Annotation result = apiInstance.GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId(conversationId, recordingId, annotationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.GetConversationRecordings: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + e.Message );
             }
         }
     }
@@ -490,13 +491,13 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-| **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. | [optional] [default to 5000] |
-| **formatId** | **string**| The desired media format | [optional] [default to WEBM] |
+| **recordingId** | **string**| Recording ID |  |
+| **annotationId** | **string**| Annotation ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**List<Recording>**](Recording.html)
+[**Annotation**](Annotation.html)
 
 <a name="getmediaretentionpolicies"></a>
 
@@ -572,9 +573,9 @@ namespace Example
 
 [**PolicyEntityListing**](PolicyEntityListing.html)
 
-<a name="getmediaretentionpolicy"></a>
+<a name="getmediaretentionpoliciespolicyid"></a>
 
-## [**Policy**](Policy.html) GetMediaretentionpolicy (string policyId)
+## [**Policy**](Policy.html) GetMediaretentionpoliciesPolicyId (string policyId)
 
 Get a media retention policy
 
@@ -590,7 +591,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetMediaretentionpolicyExample
+    public class GetMediaretentionpoliciesPolicyIdExample
     {
         public void main()
         {
@@ -604,12 +605,12 @@ namespace Example
             try
             {
                 // Get a media retention policy
-                Policy result = apiInstance.GetMediaretentionpolicy(policyId);
+                Policy result = apiInstance.GetMediaretentionpoliciesPolicyId(policyId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.GetMediaretentionpolicy: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.GetMediaretentionpoliciesPolicyId: " + e.Message );
             }
         }
     }
@@ -628,9 +629,9 @@ namespace Example
 
 [**Policy**](Policy.html)
 
-<a name="getorphanrecording"></a>
+<a name="getorphanid"></a>
 
-## [**OrphanRecording**](OrphanRecording.html) GetOrphanrecording (string orphanId)
+## [**OrphanRecording**](OrphanRecording.html) GetOrphanId (string orphanId)
 
 Gets a single orphan recording
 
@@ -646,7 +647,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetOrphanrecordingExample
+    public class GetOrphanIdExample
     {
         public void main()
         {
@@ -660,12 +661,12 @@ namespace Example
             try
             {
                 // Gets a single orphan recording
-                OrphanRecording result = apiInstance.GetOrphanrecording(orphanId);
+                OrphanRecording result = apiInstance.GetOrphanId(orphanId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.GetOrphanrecording: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.GetOrphanId: " + e.Message );
             }
         }
     }
@@ -864,9 +865,9 @@ namespace Example
 
 [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html)
 
-<a name="patchmediaretentionpolicy"></a>
+<a name="patchmediaretentionpoliciespolicyid"></a>
 
-## [**Policy**](Policy.html) PatchMediaretentionpolicy (string policyId, Policy body)
+## [**Policy**](Policy.html) PatchMediaretentionpoliciesPolicyId (string policyId, Policy body)
 
 Patch a media retention policy
 
@@ -882,7 +883,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PatchMediaretentionpolicyExample
+    public class PatchMediaretentionpoliciesPolicyIdExample
     {
         public void main()
         {
@@ -897,12 +898,12 @@ namespace Example
             try
             {
                 // Patch a media retention policy
-                Policy result = apiInstance.PatchMediaretentionpolicy(policyId, body);
+                Policy result = apiInstance.PatchMediaretentionpoliciesPolicyId(policyId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.PatchMediaretentionpolicy: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.PatchMediaretentionpoliciesPolicyId: " + e.Message );
             }
         }
     }
@@ -922,9 +923,66 @@ namespace Example
 
 [**Policy**](Policy.html)
 
-<a name="postconversationrecordingannotations"></a>
+<a name="patchsscreensessionsrecordingsessionid"></a>
 
-## [**Annotation**](Annotation.html) PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body)
+## void PatchsScreensessionsRecordingsessionId (string recordingSessionId, ScreenRecordingSessionRequest body = null)
+
+Update a screen recording session
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchsScreensessionsRecordingsessionIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var recordingSessionId = recordingSessionId_example;  // string | Screen recording session ID
+            var body = new ScreenRecordingSessionRequest(); // ScreenRecordingSessionRequest |  (optional) 
+
+            try
+            {
+                // Update a screen recording session
+                apiInstance.PatchsScreensessionsRecordingsessionId(recordingSessionId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PatchsScreensessionsRecordingsessionId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **recordingSessionId** | **string**| Screen recording session ID |  |
+| **body** | [**ScreenRecordingSessionRequest**](ScreenRecordingSessionRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postconversationidrecordingsrecordingidannotations"></a>
+
+## [**Annotation**](Annotation.html) PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body)
 
 Create annotation
 
@@ -940,7 +998,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostConversationRecordingAnnotationsExample
+    public class PostConversationIdRecordingsRecordingIdAnnotationsExample
     {
         public void main()
         {
@@ -956,12 +1014,12 @@ namespace Example
             try
             {
                 // Create annotation
-                Annotation result = apiInstance.PostConversationRecordingAnnotations(conversationId, recordingId, body);
+                Annotation result = apiInstance.PostConversationIdRecordingsRecordingIdAnnotations(conversationId, recordingId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.PostConversationRecordingAnnotations: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.PostConversationIdRecordingsRecordingIdAnnotations: " + e.Message );
             }
         }
     }
@@ -984,7 +1042,7 @@ namespace Example
 
 <a name="postmediaretentionpolicies"></a>
 
-## [**Policy**](Policy.html) PostMediaretentionpolicies (Policy body)
+## [**Policy**](Policy.html) PostMediaretentionpolicies (PolicyCreate body)
 
 Create media retention policy
 
@@ -1009,7 +1067,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new RecordingApi();
-            var body = new Policy(); // Policy | Policy
+            var body = new PolicyCreate(); // PolicyCreate | Policy
 
             try
             {
@@ -1031,20 +1089,20 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Policy**](Policy.html)| Policy |  |
+| **body** | [**PolicyCreate**](PolicyCreate.html)| Policy |  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**Policy**](Policy.html)
 
-<a name="putconversationrecording"></a>
+<a name="putconversationidrecordingsrecordingid"></a>
 
-## void PutConversationRecording (string conversationId, string recordingId, Recording body)
+## void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body)
 
 Updates the retention records on a recording.
 
-Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter 'restoreDays' is deprecated and will be removed in the next major version release. If 'restoreDays' is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays=10 would instead set the archiveDate's time stamp in the PUT body to 10 days in the future.
+Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
 
 ### Example
 ~~~csharp
@@ -1056,7 +1114,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutConversationRecordingExample
+    public class PutConversationIdRecordingsRecordingIdExample
     {
         public void main()
         {
@@ -1072,11 +1130,11 @@ namespace Example
             try
             {
                 // Updates the retention records on a recording.
-                apiInstance.PutConversationRecording(conversationId, recordingId, body);
+                apiInstance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.PutConversationRecording: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.PutConversationIdRecordingsRecordingId: " + e.Message );
             }
         }
     }
@@ -1097,9 +1155,9 @@ namespace Example
 
 void (empty response body)
 
-<a name="putconversationrecordingannotation"></a>
+<a name="putconversationidrecordingsrecordingidannotationsannotationid"></a>
 
-## [**Annotation**](Annotation.html) PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body)
+## [**Annotation**](Annotation.html) PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body)
 
 Update annotation
 
@@ -1115,7 +1173,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutConversationRecordingAnnotationExample
+    public class PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdExample
     {
         public void main()
         {
@@ -1132,12 +1190,12 @@ namespace Example
             try
             {
                 // Update annotation
-                Annotation result = apiInstance.PutConversationRecordingAnnotation(conversationId, recordingId, annotationId, body);
+                Annotation result = apiInstance.PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId(conversationId, recordingId, annotationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.PutConversationRecordingAnnotation: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + e.Message );
             }
         }
     }
@@ -1159,9 +1217,9 @@ namespace Example
 
 [**Annotation**](Annotation.html)
 
-<a name="putmediaretentionpolicy"></a>
+<a name="putmediaretentionpoliciespolicyid"></a>
 
-## [**Policy**](Policy.html) PutMediaretentionpolicy (string policyId, Policy body)
+## [**Policy**](Policy.html) PutMediaretentionpoliciesPolicyId (string policyId, Policy body)
 
 Update a media retention policy
 
@@ -1177,7 +1235,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutMediaretentionpolicyExample
+    public class PutMediaretentionpoliciesPolicyIdExample
     {
         public void main()
         {
@@ -1192,12 +1250,12 @@ namespace Example
             try
             {
                 // Update a media retention policy
-                Policy result = apiInstance.PutMediaretentionpolicy(policyId, body);
+                Policy result = apiInstance.PutMediaretentionpoliciesPolicyId(policyId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RecordingApi.PutMediaretentionpolicy: " + e.Message );
+                Debug.Print("Exception when calling RecordingApi.PutMediaretentionpoliciesPolicyId: " + e.Message );
             }
         }
     }

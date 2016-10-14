@@ -51,6 +51,14 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
+        /// Test the property 'AttemptLimits'
+        /// </summary>
+        [Test]
+        public void AttemptLimitsTest()
+        {
+            // TODO: unit test for the property 'AttemptLimits'
+        }
+        /// <summary>
         /// Test the property 'DncLists'
         /// </summary>
         [Test]

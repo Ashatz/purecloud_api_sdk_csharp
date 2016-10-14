@@ -7,8 +7,8 @@ title: FacetInfo
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** |  | [optional] |
-| **Entries** | [**List&lt;Entry&gt;**](Entry.html) |  | [optional] |
+| **Name** | **string** | The name of the field that was faceted on. | [optional] |
+| **Entries** | [**List&lt;Entry&gt;**](Entry.html) | The entries resulting from this facet. | [optional] |
 {: class="table table-striped"}
 
 

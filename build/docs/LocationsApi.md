@@ -3,19 +3,19 @@ title: LocationsApi
 ---
 ## ININ.PureCloudApi.Api.LocationsApi
 
-All URIs are relative to *https://api.inindca.com*
+All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetLocation**](LocationsApi.html#getlocation) | **GET** /api/v2/locations/{locationId} | Get Location by ID. |
+| [**GetLocationId**](LocationsApi.html#getlocationid) | **GET** /api/v2/locations/{locationId} | Get Location by ID. |
 | [**GetLocations**](LocationsApi.html#getlocations) | **GET** /api/v2/locations | Get a list of all locations. |
-| [**GetSearch**](LocationsApi.html#getsearch) | **GET** /api/v2/locations/search | Search using q64 |
-| [**PostSearch**](LocationsApi.html#postsearch) | **POST** /api/v2/locations/search | Search |
+| [**GetSearch**](LocationsApi.html#getsearch) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
+| [**PostSearch**](LocationsApi.html#postsearch) | **POST** /api/v2/locations/search | Search locations |
 {: class="table table-striped"}
 
-<a name="getlocation"></a>
+<a name="getlocationid"></a>
 
-## [**Location**](Location.html) GetLocation (string locationId)
+## [**Location**](Location.html) GetLocationId (string locationId)
 
 Get Location by ID.
 
@@ -31,7 +31,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetLocationExample
+    public class GetLocationIdExample
     {
         public void main()
         {
@@ -45,12 +45,12 @@ namespace Example
             try
             {
                 // Get Location by ID.
-                Location result = apiInstance.GetLocation(locationId);
+                Location result = apiInstance.GetLocationId(locationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LocationsApi.GetLocation: " + e.Message );
+                Debug.Print("Exception when calling LocationsApi.GetLocationId: " + e.Message );
             }
         }
     }
@@ -133,7 +133,7 @@ namespace Example
 
 ## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetSearch (string q64, List<string> expand = null)
 
-Search using q64
+Search locations using the q64 value returned from a previous search
 
 
 
@@ -161,7 +161,7 @@ namespace Example
 
             try
             {
-                // Search using q64
+                // Search locations using the q64 value returned from a previous search
                 LocationsSearchResponse result = apiInstance.GetSearch(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -191,7 +191,7 @@ namespace Example
 
 ## [**LocationsSearchResponse**](LocationsSearchResponse.html) PostSearch (LocationSearchRequest body)
 
-Search
+Search locations
 
 
 
@@ -218,7 +218,7 @@ namespace Example
 
             try
             {
-                // Search
+                // Search locations
                 LocationsSearchResponse result = apiInstance.PostSearch(body);
                 Debug.WriteLine(result);
             }

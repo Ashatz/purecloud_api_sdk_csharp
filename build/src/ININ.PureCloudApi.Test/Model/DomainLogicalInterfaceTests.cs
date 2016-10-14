@@ -187,44 +187,20 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'PhysicalAdapterId'
         }
         /// <summary>
-        /// Test the property 'IpAddress'
-        /// </summary>
-        [Test]
-        public void IpAddressTest()
-        {
-            // TODO: unit test for the property 'IpAddress'
-        }
-        /// <summary>
-        /// Test the property 'Gateway'
-        /// </summary>
-        [Test]
-        public void GatewayTest()
-        {
-            // TODO: unit test for the property 'Gateway'
-        }
-        /// <summary>
-        /// Test the property 'PrimaryDns'
-        /// </summary>
-        [Test]
-        public void PrimaryDnsTest()
-        {
-            // TODO: unit test for the property 'PrimaryDns'
-        }
-        /// <summary>
-        /// Test the property 'SecondaryDns'
-        /// </summary>
-        [Test]
-        public void SecondaryDnsTest()
-        {
-            // TODO: unit test for the property 'SecondaryDns'
-        }
-        /// <summary>
         /// Test the property 'IfStatus'
         /// </summary>
         [Test]
         public void IfStatusTest()
         {
             // TODO: unit test for the property 'IfStatus'
+        }
+        /// <summary>
+        /// Test the property 'InterfaceType'
+        /// </summary>
+        [Test]
+        public void InterfaceTypeTest()
+        {
+            // TODO: unit test for the property 'InterfaceType'
         }
         /// <summary>
         /// Test the property 'Routes'

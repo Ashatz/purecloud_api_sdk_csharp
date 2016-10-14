@@ -20,12 +20,25 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TagValue" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected TagValue() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TagValue" /> class.
+        /// </summary>
+        /// <param name="Name">The workspace tag name. (required).</param>
         /// <param name="InUse">InUse (default to false).</param>
         /// <param name="Acl">Acl.</param>
         public TagValue(string Name = null, bool? InUse = null, List<string> Acl = null)
         {
-            this.Name = Name;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for TagValue and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             // use default value if no "InUse" provided
             if (InUse == null)
             {
@@ -45,8 +58,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The workspace tag name.
         /// </summary>
+        /// <value>The workspace tag name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

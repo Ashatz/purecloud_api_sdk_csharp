@@ -25,8 +25,8 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SuggestSearchRequest" /> class.
         /// </summary>
-        /// <param name="Types">Resource Domain type (required).</param>
-        /// <param name="Query">Query.</param>
+        /// <param name="Types">Resource domain type to search (required).</param>
+        /// <param name="Query">Suggest query (required).</param>
         public SuggestSearchRequest(List<string> Types = null, List<SuggestSearchCriteria> Query = null)
         {
             // to ensure "Types" is required (not null)
@@ -38,18 +38,27 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Types = Types;
             }
-            this.Query = Query;
+            // to ensure "Query" is required (not null)
+            if (Query == null)
+            {
+                throw new InvalidDataException("Query is a required property for SuggestSearchRequest and cannot be null");
+            }
+            else
+            {
+                this.Query = Query;
+            }
         }
         
         /// <summary>
-        /// Resource Domain type
+        /// Resource domain type to search
         /// </summary>
-        /// <value>Resource Domain type</value>
+        /// <value>Resource domain type to search</value>
         [DataMember(Name="types", EmitDefaultValue=false)]
         public List<string> Types { get; set; }
         /// <summary>
-        /// Gets or Sets Query
+        /// Suggest query
         /// </summary>
+        /// <value>Suggest query</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public List<SuggestSearchCriteria> Query { get; set; }
         /// <summary>

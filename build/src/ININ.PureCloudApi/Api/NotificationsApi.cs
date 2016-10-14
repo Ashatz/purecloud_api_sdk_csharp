@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>string</returns>
-        string DeleteChannelSubscriptions (string channelId);
+        string DeleteChannelsChannelIdSubscriptions (string channelId);
 
         /// <summary>
         /// Remove all subscriptions
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteChannelSubscriptionsWithHttpInfo (string channelId);
+        ApiResponse<string> DeleteChannelsChannelIdSubscriptionsWithHttpInfo (string channelId);
         /// <summary>
         /// Get available notification topics.
         /// </summary>
@@ -57,27 +57,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of AvailableTopicEntityListing</returns>
         ApiResponse<AvailableTopicEntityListing> GetAvailabletopicsWithHttpInfo (List<string> expand = null);
         /// <summary>
-        /// The list of all subscriptions for this channel
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="channelId">Channel ID</param>
-        /// <returns>ChannelTopicEntityListing</returns>
-        ChannelTopicEntityListing GetChannelSubscriptions (string channelId);
-
-        /// <summary>
-        /// The list of all subscriptions for this channel
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="channelId">Channel ID</param>
-        /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        ApiResponse<ChannelTopicEntityListing> GetChannelSubscriptionsWithHttpInfo (string channelId);
-        /// <summary>
         /// The list of existing channels
         /// </summary>
         /// <remarks>
@@ -97,28 +76,26 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of ChannelEntityListing</returns>
         ApiResponse<ChannelEntityListing> GetChannelsWithHttpInfo ();
         /// <summary>
-        /// Add a list of subscriptions to the existing list of subscriptions
+        /// The list of all subscriptions for this channel
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <param name="body">Topic</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        ChannelTopicEntityListing PostChannelSubscriptions (string channelId, List<ChannelTopic> body);
+        ChannelTopicEntityListing GetChannelsChannelIdSubscriptions (string channelId);
 
         /// <summary>
-        /// Add a list of subscriptions to the existing list of subscriptions
+        /// The list of all subscriptions for this channel
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <param name="body">Topic</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        ApiResponse<ChannelTopicEntityListing> PostChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body);
+        ApiResponse<ChannelTopicEntityListing> GetChannelsChannelIdSubscriptionsWithHttpInfo (string channelId);
         /// <summary>
         /// Create a new channel
         /// </summary>
@@ -139,6 +116,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Channel</returns>
         ApiResponse<Channel> PostChannelsWithHttpInfo ();
         /// <summary>
+        /// Add a list of subscriptions to the existing list of subscriptions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <param name="body">Topic</param>
+        /// <returns>ChannelTopicEntityListing</returns>
+        ChannelTopicEntityListing PostChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body);
+
+        /// <summary>
+        /// Add a list of subscriptions to the existing list of subscriptions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <param name="body">Topic</param>
+        /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
+        ApiResponse<ChannelTopicEntityListing> PostChannelsChannelIdSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body);
+        /// <summary>
         /// Replace the current list of subscriptions with a new list.
         /// </summary>
         /// <remarks>
@@ -148,7 +148,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        ChannelTopicEntityListing PutChannelSubscriptions (string channelId, List<ChannelTopic> body);
+        ChannelTopicEntityListing PutChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body);
 
         /// <summary>
         /// Replace the current list of subscriptions with a new list.
@@ -160,7 +160,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        ApiResponse<ChannelTopicEntityListing> PutChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body);
+        ApiResponse<ChannelTopicEntityListing> PutChannelsChannelIdSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -172,7 +172,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteChannelSubscriptionsAsync (string channelId);
+        System.Threading.Tasks.Task<string> DeleteChannelsChannelIdSubscriptionsAsync (string channelId);
 
         /// <summary>
         /// Remove all subscriptions
@@ -183,7 +183,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteChannelSubscriptionsAsyncWithHttpInfo (string channelId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId);
         /// <summary>
         /// Get available notification topics.
         /// </summary>
@@ -206,27 +206,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetAvailabletopicsAsyncWithHttpInfo (List<string> expand = null);
         /// <summary>
-        /// The list of all subscriptions for this channel
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="channelId">Channel ID</param>
-        /// <returns>Task of ChannelTopicEntityListing</returns>
-        System.Threading.Tasks.Task<ChannelTopicEntityListing> GetChannelSubscriptionsAsync (string channelId);
-
-        /// <summary>
-        /// The list of all subscriptions for this channel
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="channelId">Channel ID</param>
-        /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetChannelSubscriptionsAsyncWithHttpInfo (string channelId);
-        /// <summary>
         /// The list of existing channels
         /// </summary>
         /// <remarks>
@@ -246,28 +225,26 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (ChannelEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetChannelsAsyncWithHttpInfo ();
         /// <summary>
-        /// Add a list of subscriptions to the existing list of subscriptions
+        /// The list of all subscriptions for this channel
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <param name="body">Topic</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        System.Threading.Tasks.Task<ChannelTopicEntityListing> PostChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body);
+        System.Threading.Tasks.Task<ChannelTopicEntityListing> GetChannelsChannelIdSubscriptionsAsync (string channelId);
 
         /// <summary>
-        /// Add a list of subscriptions to the existing list of subscriptions
+        /// The list of all subscriptions for this channel
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <param name="body">Topic</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body);
+        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId);
         /// <summary>
         /// Create a new channel
         /// </summary>
@@ -288,6 +265,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Channel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Channel>> PostChannelsAsyncWithHttpInfo ();
         /// <summary>
+        /// Add a list of subscriptions to the existing list of subscriptions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <param name="body">Topic</param>
+        /// <returns>Task of ChannelTopicEntityListing</returns>
+        System.Threading.Tasks.Task<ChannelTopicEntityListing> PostChannelsChannelIdSubscriptionsAsync (string channelId, List<ChannelTopic> body);
+
+        /// <summary>
+        /// Add a list of subscriptions to the existing list of subscriptions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <param name="body">Topic</param>
+        /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body);
+        /// <summary>
         /// Replace the current list of subscriptions with a new list.
         /// </summary>
         /// <remarks>
@@ -297,7 +297,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        System.Threading.Tasks.Task<ChannelTopicEntityListing> PutChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body);
+        System.Threading.Tasks.Task<ChannelTopicEntityListing> PutChannelsChannelIdSubscriptionsAsync (string channelId, List<ChannelTopic> body);
 
         /// <summary>
         /// Replace the current list of subscriptions with a new list.
@@ -309,7 +309,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body);
+        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body);
         #endregion Asynchronous Operations
     }
 
@@ -406,9 +406,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>string</returns>
-        public string DeleteChannelSubscriptions (string channelId)
+        public string DeleteChannelsChannelIdSubscriptions (string channelId)
         {
-             ApiResponse<string> localVarResponse = DeleteChannelSubscriptionsWithHttpInfo(channelId);
+             ApiResponse<string> localVarResponse = DeleteChannelsChannelIdSubscriptionsWithHttpInfo(channelId);
              return localVarResponse.Data;
         }
 
@@ -418,11 +418,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteChannelSubscriptionsWithHttpInfo (string channelId)
+        public ApiResponse< string > DeleteChannelsChannelIdSubscriptionsWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteChannelsChannelIdSubscriptions");
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -465,15 +465,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteChannelSubscriptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChannelsChannelIdSubscriptions: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteChannelSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChannelsChannelIdSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
@@ -484,9 +482,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteChannelSubscriptionsAsync (string channelId)
+        public async System.Threading.Tasks.Task<string> DeleteChannelsChannelIdSubscriptionsAsync (string channelId)
         {
-             ApiResponse<string> localVarResponse = await DeleteChannelSubscriptionsAsyncWithHttpInfo(channelId);
+             ApiResponse<string> localVarResponse = await DeleteChannelsChannelIdSubscriptionsAsyncWithHttpInfo(channelId);
              return localVarResponse.Data;
 
         }
@@ -497,11 +495,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteChannelSubscriptionsAsyncWithHttpInfo (string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteChannelsChannelIdSubscriptions");
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -544,15 +542,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteChannelSubscriptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChannelsChannelIdSubscriptions: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteChannelSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChannelsChannelIdSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
@@ -619,15 +615,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAvailabletopics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetAvailabletopics: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAvailabletopics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AvailableTopicEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AvailableTopicEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AvailableTopicEntityListing)));
             
         }
@@ -695,173 +689,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAvailabletopics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetAvailabletopics: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAvailabletopics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AvailableTopicEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AvailableTopicEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AvailableTopicEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// The list of all subscriptions for this channel 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="channelId">Channel ID</param>
-        /// <returns>ChannelTopicEntityListing</returns>
-        public ChannelTopicEntityListing GetChannelSubscriptions (string channelId)
-        {
-             ApiResponse<ChannelTopicEntityListing> localVarResponse = GetChannelSubscriptionsWithHttpInfo(channelId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// The list of all subscriptions for this channel 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="channelId">Channel ID</param>
-        /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        public ApiResponse< ChannelTopicEntityListing > GetChannelSubscriptionsWithHttpInfo (string channelId)
-        {
-            // verify the required parameter 'channelId' is set
-            if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetChannelSubscriptions");
-
-            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetChannelSubscriptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetChannelSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ChannelTopicEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (ChannelTopicEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelTopicEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// The list of all subscriptions for this channel 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="channelId">Channel ID</param>
-        /// <returns>Task of ChannelTopicEntityListing</returns>
-        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> GetChannelSubscriptionsAsync (string channelId)
-        {
-             ApiResponse<ChannelTopicEntityListing> localVarResponse = await GetChannelSubscriptionsAsyncWithHttpInfo(channelId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// The list of all subscriptions for this channel 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="channelId">Channel ID</param>
-        /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetChannelSubscriptionsAsyncWithHttpInfo (string channelId)
-        {
-            // verify the required parameter 'channelId' is set
-            if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetChannelSubscriptions");
-
-            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetChannelSubscriptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetChannelSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ChannelTopicEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (ChannelTopicEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelTopicEntityListing)));
             
         }
 
@@ -924,15 +759,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetChannels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetChannels: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetChannels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ChannelEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ChannelEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelEntityListing)));
             
         }
@@ -997,47 +830,40 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetChannels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetChannels: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetChannels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ChannelEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ChannelEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelEntityListing)));
             
         }
 
         /// <summary>
-        /// Add a list of subscriptions to the existing list of subscriptions 
+        /// The list of all subscriptions for this channel 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <param name="body">Topic</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        public ChannelTopicEntityListing PostChannelSubscriptions (string channelId, List<ChannelTopic> body)
+        public ChannelTopicEntityListing GetChannelsChannelIdSubscriptions (string channelId)
         {
-             ApiResponse<ChannelTopicEntityListing> localVarResponse = PostChannelSubscriptionsWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> localVarResponse = GetChannelsChannelIdSubscriptionsWithHttpInfo(channelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Add a list of subscriptions to the existing list of subscriptions 
+        /// The list of all subscriptions for this channel 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <param name="body">Topic</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        public ApiResponse< ChannelTopicEntityListing > PostChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body)
+        public ApiResponse< ChannelTopicEntityListing > GetChannelsChannelIdSubscriptionsWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostChannelSubscriptions");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PostChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetChannelsChannelIdSubscriptions");
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1065,14 +891,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1083,53 +901,46 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostChannelSubscriptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetChannelsChannelIdSubscriptions: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostChannelSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetChannelsChannelIdSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ChannelTopicEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ChannelTopicEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelTopicEntityListing)));
             
         }
 
         /// <summary>
-        /// Add a list of subscriptions to the existing list of subscriptions 
+        /// The list of all subscriptions for this channel 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <param name="body">Topic</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PostChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body)
+        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> GetChannelsChannelIdSubscriptionsAsync (string channelId)
         {
-             ApiResponse<ChannelTopicEntityListing> localVarResponse = await PostChannelSubscriptionsAsyncWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> localVarResponse = await GetChannelsChannelIdSubscriptionsAsyncWithHttpInfo(channelId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Add a list of subscriptions to the existing list of subscriptions 
+        /// The list of all subscriptions for this channel 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
-        /// <param name="body">Topic</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostChannelSubscriptions");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PostChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetChannelsChannelIdSubscriptions");
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1157,14 +968,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1175,20 +978,18 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostChannelSubscriptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetChannelsChannelIdSubscriptions: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostChannelSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetChannelsChannelIdSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ChannelTopicEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ChannelTopicEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelTopicEntityListing)));
             
         }
@@ -1252,15 +1053,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostChannels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostChannels: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostChannels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Channel>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Channel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Channel)));
             
         }
@@ -1325,16 +1124,193 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostChannels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostChannels: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostChannels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Channel>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Channel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Channel)));
+            
+        }
+
+        /// <summary>
+        /// Add a list of subscriptions to the existing list of subscriptions 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <param name="body">Topic</param>
+        /// <returns>ChannelTopicEntityListing</returns>
+        public ChannelTopicEntityListing PostChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body)
+        {
+             ApiResponse<ChannelTopicEntityListing> localVarResponse = PostChannelsChannelIdSubscriptionsWithHttpInfo(channelId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a list of subscriptions to the existing list of subscriptions 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <param name="body">Topic</param>
+        /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
+        public ApiResponse< ChannelTopicEntityListing > PostChannelsChannelIdSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body)
+        {
+            // verify the required parameter 'channelId' is set
+            if (channelId == null)
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostChannelsChannelIdSubscriptions");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PostChannelsChannelIdSubscriptions");
+
+            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostChannelsChannelIdSubscriptions: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostChannelsChannelIdSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChannelTopicEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ChannelTopicEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelTopicEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Add a list of subscriptions to the existing list of subscriptions 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <param name="body">Topic</param>
+        /// <returns>Task of ChannelTopicEntityListing</returns>
+        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PostChannelsChannelIdSubscriptionsAsync (string channelId, List<ChannelTopic> body)
+        {
+             ApiResponse<ChannelTopicEntityListing> localVarResponse = await PostChannelsChannelIdSubscriptionsAsyncWithHttpInfo(channelId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a list of subscriptions to the existing list of subscriptions 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="channelId">Channel ID</param>
+        /// <param name="body">Topic</param>
+        /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body)
+        {
+            // verify the required parameter 'channelId' is set
+            if (channelId == null)
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostChannelsChannelIdSubscriptions");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PostChannelsChannelIdSubscriptions");
+
+            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostChannelsChannelIdSubscriptions: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostChannelsChannelIdSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChannelTopicEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ChannelTopicEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelTopicEntityListing)));
             
         }
 
@@ -1345,9 +1321,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        public ChannelTopicEntityListing PutChannelSubscriptions (string channelId, List<ChannelTopic> body)
+        public ChannelTopicEntityListing PutChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body)
         {
-             ApiResponse<ChannelTopicEntityListing> localVarResponse = PutChannelSubscriptionsWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> localVarResponse = PutChannelsChannelIdSubscriptionsWithHttpInfo(channelId, body);
              return localVarResponse.Data;
         }
 
@@ -1358,14 +1334,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        public ApiResponse< ChannelTopicEntityListing > PutChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body)
+        public ApiResponse< ChannelTopicEntityListing > PutChannelsChannelIdSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutChannelsChannelIdSubscriptions");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PutChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PutChannelsChannelIdSubscriptions");
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1416,15 +1392,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutChannelSubscriptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutChannelsChannelIdSubscriptions: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutChannelSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutChannelsChannelIdSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ChannelTopicEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ChannelTopicEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelTopicEntityListing)));
             
         }
@@ -1436,9 +1410,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PutChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body)
+        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PutChannelsChannelIdSubscriptionsAsync (string channelId, List<ChannelTopic> body)
         {
-             ApiResponse<ChannelTopicEntityListing> localVarResponse = await PutChannelSubscriptionsAsyncWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> localVarResponse = await PutChannelsChannelIdSubscriptionsAsyncWithHttpInfo(channelId, body);
              return localVarResponse.Data;
 
         }
@@ -1450,14 +1424,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body)
         {
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutChannelsChannelIdSubscriptions");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PutChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PutChannelsChannelIdSubscriptions");
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1508,15 +1482,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutChannelSubscriptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutChannelsChannelIdSubscriptions: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutChannelSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutChannelsChannelIdSubscriptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ChannelTopicEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ChannelTopicEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChannelTopicEntityListing)));
             
         }

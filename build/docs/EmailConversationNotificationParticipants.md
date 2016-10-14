@@ -29,8 +29,6 @@ title: EmailConversationNotificationParticipants
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
-| **ExternalContact** | [**EmailConversationNotificationUriReference**](EmailConversationNotificationUriReference.html) |  | [optional] |
-| **ExternalOrganization** | [**EmailConversationNotificationUriReference**](EmailConversationNotificationUriReference.html) |  | [optional] |
 | **Subject** | **string** |  | [optional] |
 | **MessagesSent** | **int?** |  | [optional] |
 {: class="table table-striped"}

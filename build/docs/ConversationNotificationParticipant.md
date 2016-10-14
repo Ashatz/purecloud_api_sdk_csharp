@@ -12,7 +12,6 @@ title: ConversationNotificationParticipant
 | **EndTime** | **DateTime?** |  | [optional] |
 | **UserId** | **string** |  | [optional] |
 | **ExternalContactId** | **string** |  | [optional] |
-| **ExternalOrganizationId** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
 | **QueueId** | **string** |  | [optional] |
 | **GroupId** | **string** |  | [optional] |

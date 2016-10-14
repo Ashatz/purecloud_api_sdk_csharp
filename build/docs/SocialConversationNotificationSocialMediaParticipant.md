@@ -29,8 +29,6 @@ title: SocialConversationNotificationSocialMediaParticipant
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
-| **ExternalContact** | [**SocialConversationNotificationUriReference**](SocialConversationNotificationUriReference.html) |  | [optional] |
-| **ExternalOrganization** | [**SocialConversationNotificationUriReference**](SocialConversationNotificationUriReference.html) |  | [optional] |
 | **SocialMediaId** | **string** |  | [optional] |
 | **SocialMediaHub** | **string** |  | [optional] |
 | **SocialUserName** | **string** |  | [optional] |

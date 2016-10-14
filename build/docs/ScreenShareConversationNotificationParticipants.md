@@ -29,8 +29,6 @@ title: ScreenShareConversationNotificationParticipants
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
-| **ExternalContact** | [**ScreenShareConversationNotificationUriReference**](ScreenShareConversationNotificationUriReference.html) |  | [optional] |
-| **ExternalOrganization** | [**ScreenShareConversationNotificationUriReference**](ScreenShareConversationNotificationUriReference.html) |  | [optional] |
 | **Context** | **string** |  | [optional] |
 | **PeerCount** | **int?** |  | [optional] |
 | **Sharing** | **bool?** |  | [optional] |

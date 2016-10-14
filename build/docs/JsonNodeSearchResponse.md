@@ -7,15 +7,15 @@ title: JsonNodeSearchResponse
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Total** | **long?** |  | [optional] |
-| **PageCount** | **int?** |  | [optional] |
-| **PageSize** | **int?** |  | [optional] |
-| **PageNumber** | **int?** |  | [optional] |
-| **PreviousPage** | **string** |  | [optional] |
-| **CurrentPage** | **string** |  | [optional] |
-| **NextPage** | **string** |  | [optional] |
-| **Types** | **List&lt;string&gt;** |  | [optional] |
-| **Results** | [**JsonNode**](JsonNode.html) |  | [optional] |
+| **Total** | **long?** | The total number of results found | |
+| **PageCount** | **int?** | The total number of pages | |
+| **PageSize** | **int?** | The current page size | |
+| **PageNumber** | **int?** | The current page number | |
+| **PreviousPage** | **string** | Q64 value for the previous page of results | [optional] |
+| **CurrentPage** | **string** | Q64 value for the current page of results | [optional] |
+| **NextPage** | **string** | Q64 value for the next page of results | [optional] |
+| **Types** | **List&lt;string&gt;** | Resource types the search was performed against | |
+| **Results** | [**JsonNode**](JsonNode.html) | Search results | |
 | **Aggregations** | [**JsonNode**](JsonNode.html) |  | [optional] |
 {: class="table table-striped"}
 

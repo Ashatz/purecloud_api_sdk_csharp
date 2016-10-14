@@ -194,6 +194,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'FaxStatus'
         }
+        /// <summary>
+        /// Test the property 'Provider'
+        /// </summary>
+        [Test]
+        public void ProviderTest()
+        {
+            // TODO: unit test for the property 'Provider'
+        }
 
     }
 

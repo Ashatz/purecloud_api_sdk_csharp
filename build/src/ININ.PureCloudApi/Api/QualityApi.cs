@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Calibration</returns>
-        Calibration DeleteCalibration (string calibrationId, string calibratorId);
+        Calibration DeleteCalibrationsCalibrationId (string calibrationId, string calibratorId);
 
         /// <summary>
         /// Delete a calibration by id.
@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> DeleteCalibrationWithHttpInfo (string calibrationId, string calibratorId);
+        ApiResponse<Calibration> DeleteCalibrationsCalibrationIdWithHttpInfo (string calibrationId, string calibratorId);
         /// <summary>
         /// Delete an evaluation
         /// </summary>
@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
-        Evaluation DeleteConversationEvaluation (string conversationId, string evaluationId, string expand = null);
+        Evaluation DeleteConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Delete an evaluation
@@ -61,7 +61,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> DeleteConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        ApiResponse<Evaluation> DeleteConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null);
         /// <summary>
         /// Delete an evaluation form.
         /// </summary>
@@ -71,7 +71,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <returns>string</returns>
-        string DeleteForm (string formId);
+        string DeleteFormsFormId (string formId);
 
         /// <summary>
         /// Delete an evaluation form.
@@ -82,28 +82,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteFormWithHttpInfo (string formId);
-        /// <summary>
-        /// Delete a keywordSet by id.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns></returns>
-        void DeleteKeywordset (string keywordSetId);
-
-        /// <summary>
-        /// Delete a keywordSet by id.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteKeywordsetWithHttpInfo (string keywordSetId);
+        ApiResponse<string> DeleteFormsFormIdWithHttpInfo (string formId);
         /// <summary>
         /// Delete keyword sets
         /// </summary>
@@ -125,6 +104,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteKeywordsetsWithHttpInfo (string ids);
+        /// <summary>
+        /// Delete a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns></returns>
+        void DeleteKeywordsetsKeywordsetId (string keywordSetId);
+
+        /// <summary>
+        /// Delete a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId);
         /// <summary>
         /// Gets a list of Agent Activities
         /// </summary>
@@ -169,29 +169,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
         ApiResponse<AgentActivityEntityListing> GetAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
         /// <summary>
-        /// Get a calibration by id.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
-        /// <returns>Calibration</returns>
-        Calibration GetCalibration (string calibrationId, string calibratorId);
-
-        /// <summary>
-        /// Get a calibration by id.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
-        /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> GetCalibrationWithHttpInfo (string calibrationId, string calibratorId);
-        /// <summary>
         /// Get the list of calibrations
         /// </summary>
         /// <remarks>
@@ -231,6 +208,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of CalibrationEntityListing</returns>
         ApiResponse<CalibrationEntityListing> GetCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
         /// <summary>
+        /// Get a calibration by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calibrationId">Calibration ID</param>
+        /// <param name="calibratorId">calibratorId</param>
+        /// <returns>Calibration</returns>
+        Calibration GetCalibrationsCalibrationId (string calibrationId, string calibratorId);
+
+        /// <summary>
+        /// Get a calibration by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calibrationId">Calibration ID</param>
+        /// <param name="calibratorId">calibratorId</param>
+        /// <returns>ApiResponse of Calibration</returns>
+        ApiResponse<Calibration> GetCalibrationsCalibrationIdWithHttpInfo (string calibrationId, string calibratorId);
+        /// <summary>
         /// Get audits for conversation or recording
         /// </summary>
         /// <remarks>
@@ -247,7 +247,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>QualityAuditPage</returns>
-        QualityAuditPage GetConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        QualityAuditPage GetConversationsConversationIdAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
 
         /// <summary>
         /// Get audits for conversation or recording
@@ -266,7 +266,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>ApiResponse of QualityAuditPage</returns>
-        ApiResponse<QualityAuditPage> GetConversationAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        ApiResponse<QualityAuditPage> GetConversationsConversationIdAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
         /// <summary>
         /// Get an evaluation
         /// </summary>
@@ -278,7 +278,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Evaluation</returns>
-        Evaluation GetConversationEvaluation (string conversationId, string evaluationId, string expand = null);
+        Evaluation GetConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Get an evaluation
@@ -291,7 +291,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> GetConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        ApiResponse<Evaluation> GetConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null);
         /// <summary>
         /// Queries Evaluations and returns a paged list
         /// </summary>
@@ -387,52 +387,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
         ApiResponse<EvaluatorActivityEntityListing> GetEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null);
         /// <summary>
-        /// Get an evaluation form
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
-        EvaluationForm GetForm (string formId);
-
-        /// <summary>
-        /// Get an evaluation form
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> GetFormWithHttpInfo (string formId);
-        /// <summary>
-        /// Gets all the revisions for a specific evaluation.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetFormVersions (string formId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Gets all the revisions for a specific evaluation.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
         /// Get the list of evaluation forms
         /// </summary>
         /// <remarks>
@@ -466,26 +420,51 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
         ApiResponse<EvaluationFormEntityListing> GetFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
         /// <summary>
-        /// Get a keywordSet by id.
+        /// Get an evaluation form
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>KeywordSet</returns>
-        KeywordSet GetKeywordset (string keywordSetId);
+        /// <param name="formId">Form ID</param>
+        /// <returns>EvaluationForm</returns>
+        EvaluationForm GetFormsFormId (string formId);
 
         /// <summary>
-        /// Get a keywordSet by id.
+        /// Get an evaluation form
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>ApiResponse of KeywordSet</returns>
-        ApiResponse<KeywordSet> GetKeywordsetWithHttpInfo (string keywordSetId);
+        /// <param name="formId">Form ID</param>
+        /// <returns>ApiResponse of EvaluationForm</returns>
+        ApiResponse<EvaluationForm> GetFormsFormIdWithHttpInfo (string formId);
+        /// <summary>
+        /// Gets all the revisions for a specific evaluation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>EvaluationFormEntityListing</returns>
+        EvaluationFormEntityListing GetFormsFormIdVersions (string formId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Gets all the revisions for a specific evaluation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        ApiResponse<EvaluationFormEntityListing> GetFormsFormIdVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
         /// <summary>
         /// Get the list of keyword sets
         /// </summary>
@@ -520,26 +499,26 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of KeywordSetEntityListing</returns>
         ApiResponse<KeywordSetEntityListing> GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null);
         /// <summary>
-        /// Get the published evaluation forms.
+        /// Get a keywordSet by id.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
-        EvaluationForm GetPublishedform (string formId);
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>KeywordSet</returns>
+        KeywordSet GetKeywordsetsKeywordsetId (string keywordSetId);
 
         /// <summary>
-        /// Get the published evaluation forms.
+        /// Get a keywordSet by id.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> GetPublishedformWithHttpInfo (string formId);
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>ApiResponse of KeywordSet</returns>
+        ApiResponse<KeywordSet> GetKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId);
         /// <summary>
         /// Get the published evaluation forms.
         /// </summary>
@@ -566,6 +545,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
         ApiResponse<EvaluationFormEntityListing> GetPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
         /// <summary>
+        /// Get the published evaluation forms.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <returns>EvaluationForm</returns>
+        EvaluationForm GetPublishedformsFormId (string formId);
+
+        /// <summary>
+        /// Get the published evaluation forms.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <returns>ApiResponse of EvaluationForm</returns>
+        ApiResponse<EvaluationForm> GetPublishedformsFormIdWithHttpInfo (string formId);
+        /// <summary>
         /// Create a calibration
         /// </summary>
         /// <remarks>
@@ -575,7 +575,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Calibration</returns>
-        Calibration PostCalibrations (Calibration body, string expand = null);
+        Calibration PostCalibrations (CalibrationCreate body, string expand = null);
 
         /// <summary>
         /// Create a calibration
@@ -587,7 +587,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> PostCalibrationsWithHttpInfo (Calibration body, string expand = null);
+        ApiResponse<Calibration> PostCalibrationsWithHttpInfo (CalibrationCreate body, string expand = null);
         /// <summary>
         /// Create an evaluation
         /// </summary>
@@ -599,7 +599,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
-        Evaluation PostConversationEvaluations (string conversationId, Evaluation body, string expand = null);
+        Evaluation PostConversationsConversationIdEvaluations (string conversationId, Evaluation body, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -612,7 +612,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> PostConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body, string expand = null);
+        ApiResponse<Evaluation> PostConversationsConversationIdEvaluationsWithHttpInfo (string conversationId, Evaluation body, string expand = null);
         /// <summary>
         /// Query for evaluation aggregates
         /// </summary>
@@ -751,7 +751,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Calibration</returns>
-        Calibration PutCalibration (string calibrationId, Calibration body);
+        Calibration PutCalibrationsCalibrationId (string calibrationId, Calibration body);
 
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -763,7 +763,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> PutCalibrationWithHttpInfo (string calibrationId, Calibration body);
+        ApiResponse<Calibration> PutCalibrationsCalibrationIdWithHttpInfo (string calibrationId, Calibration body);
         /// <summary>
         /// Update an evaluation
         /// </summary>
@@ -776,7 +776,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
-        Evaluation PutConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null);
+        Evaluation PutConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, Evaluation body, string expand = null);
 
         /// <summary>
         /// Update an evaluation
@@ -790,7 +790,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> PutConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null);
+        ApiResponse<Evaluation> PutConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null);
         /// <summary>
         /// Update an evaluation form.
         /// </summary>
@@ -801,7 +801,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm PutForm (string formId, EvaluationForm body);
+        EvaluationForm PutFormsFormId (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update an evaluation form.
@@ -813,7 +813,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> PutFormWithHttpInfo (string formId, EvaluationForm body);
+        ApiResponse<EvaluationForm> PutFormsFormIdWithHttpInfo (string formId, EvaluationForm body);
         /// <summary>
         /// Update a keywordSet to the specified keywordSet via PUT.
         /// </summary>
@@ -824,7 +824,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="keywordSetId">KeywordSet ID</param>
         /// <param name="body">keywordSet</param>
         /// <returns>KeywordSet</returns>
-        KeywordSet PutKeywordset (string keywordSetId, KeywordSet body);
+        KeywordSet PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body);
 
         /// <summary>
         /// Update a keywordSet to the specified keywordSet via PUT.
@@ -836,7 +836,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="keywordSetId">KeywordSet ID</param>
         /// <param name="body">keywordSet</param>
         /// <returns>ApiResponse of KeywordSet</returns>
-        ApiResponse<KeywordSet> PutKeywordsetWithHttpInfo (string keywordSetId, KeywordSet body);
+        ApiResponse<KeywordSet> PutKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId, KeywordSet body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -849,7 +849,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> DeleteCalibrationAsync (string calibrationId, string calibratorId);
+        System.Threading.Tasks.Task<Calibration> DeleteCalibrationsCalibrationIdAsync (string calibrationId, string calibratorId);
 
         /// <summary>
         /// Delete a calibration by id.
@@ -861,7 +861,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> DeleteCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> DeleteCalibrationsCalibrationIdAsyncWithHttpInfo (string calibrationId, string calibratorId);
         /// <summary>
         /// Delete an evaluation
         /// </summary>
@@ -873,7 +873,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> DeleteConversationEvaluationAsync (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> DeleteConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Delete an evaluation
@@ -886,7 +886,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
         /// <summary>
         /// Delete an evaluation form.
         /// </summary>
@@ -896,7 +896,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteFormAsync (string formId);
+        System.Threading.Tasks.Task<string> DeleteFormsFormIdAsync (string formId);
 
         /// <summary>
         /// Delete an evaluation form.
@@ -907,28 +907,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteFormAsyncWithHttpInfo (string formId);
-        /// <summary>
-        /// Delete a keywordSet by id.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteKeywordsetAsync (string keywordSetId);
-
-        /// <summary>
-        /// Delete a keywordSet by id.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKeywordsetAsyncWithHttpInfo (string keywordSetId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteFormsFormIdAsyncWithHttpInfo (string formId);
         /// <summary>
         /// Delete keyword sets
         /// </summary>
@@ -950,6 +929,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteKeywordsetsAsyncWithHttpInfo (string ids);
+        /// <summary>
+        /// Delete a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteKeywordsetsKeywordsetIdAsync (string keywordSetId);
+
+        /// <summary>
+        /// Delete a keywordSet by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId);
         /// <summary>
         /// Gets a list of Agent Activities
         /// </summary>
@@ -994,29 +994,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
         /// <summary>
-        /// Get a calibration by id.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
-        /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> GetCalibrationAsync (string calibrationId, string calibratorId);
-
-        /// <summary>
-        /// Get a calibration by id.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
-        /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> GetCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId);
-        /// <summary>
         /// Get the list of calibrations
         /// </summary>
         /// <remarks>
@@ -1056,6 +1033,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (CalibrationEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
         /// <summary>
+        /// Get a calibration by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calibrationId">Calibration ID</param>
+        /// <param name="calibratorId">calibratorId</param>
+        /// <returns>Task of Calibration</returns>
+        System.Threading.Tasks.Task<Calibration> GetCalibrationsCalibrationIdAsync (string calibrationId, string calibratorId);
+
+        /// <summary>
+        /// Get a calibration by id.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calibrationId">Calibration ID</param>
+        /// <param name="calibratorId">calibratorId</param>
+        /// <returns>Task of ApiResponse (Calibration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> GetCalibrationsCalibrationIdAsyncWithHttpInfo (string calibrationId, string calibratorId);
+        /// <summary>
         /// Get audits for conversation or recording
         /// </summary>
         /// <remarks>
@@ -1072,7 +1072,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>Task of QualityAuditPage</returns>
-        System.Threading.Tasks.Task<QualityAuditPage> GetConversationAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        System.Threading.Tasks.Task<QualityAuditPage> GetConversationsConversationIdAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
 
         /// <summary>
         /// Get audits for conversation or recording
@@ -1091,7 +1091,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>Task of ApiResponse (QualityAuditPage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetConversationAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetConversationsConversationIdAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
         /// <summary>
         /// Get an evaluation
         /// </summary>
@@ -1103,7 +1103,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> GetConversationEvaluationAsync (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> GetConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Get an evaluation
@@ -1116,7 +1116,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
         /// <summary>
         /// Queries Evaluations and returns a paged list
         /// </summary>
@@ -1212,52 +1212,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null);
         /// <summary>
-        /// Get an evaluation form
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> GetFormAsync (string formId);
-
-        /// <summary>
-        /// Get an evaluation form
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetFormAsyncWithHttpInfo (string formId);
-        /// <summary>
-        /// Gets all the revisions for a specific evaluation.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Gets all the revisions for a specific evaluation.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
-        /// <summary>
         /// Get the list of evaluation forms
         /// </summary>
         /// <remarks>
@@ -1291,26 +1245,51 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null);
         /// <summary>
-        /// Get a keywordSet by id.
+        /// Get an evaluation form
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>Task of KeywordSet</returns>
-        System.Threading.Tasks.Task<KeywordSet> GetKeywordsetAsync (string keywordSetId);
+        /// <param name="formId">Form ID</param>
+        /// <returns>Task of EvaluationForm</returns>
+        System.Threading.Tasks.Task<EvaluationForm> GetFormsFormIdAsync (string formId);
 
         /// <summary>
-        /// Get a keywordSet by id.
+        /// Get an evaluation form
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>Task of ApiResponse (KeywordSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> GetKeywordsetAsyncWithHttpInfo (string keywordSetId);
+        /// <param name="formId">Form ID</param>
+        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetFormsFormIdAsyncWithHttpInfo (string formId);
+        /// <summary>
+        /// Gets all the revisions for a specific evaluation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of EvaluationFormEntityListing</returns>
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormsFormIdVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Gets all the revisions for a specific evaluation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormsFormIdVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
         /// <summary>
         /// Get the list of keyword sets
         /// </summary>
@@ -1345,26 +1324,26 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null);
         /// <summary>
-        /// Get the published evaluation forms.
+        /// Get a keywordSet by id.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> GetPublishedformAsync (string formId);
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of KeywordSet</returns>
+        System.Threading.Tasks.Task<KeywordSet> GetKeywordsetsKeywordsetIdAsync (string keywordSetId);
 
         /// <summary>
-        /// Get the published evaluation forms.
+        /// Get a keywordSet by id.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetPublishedformAsyncWithHttpInfo (string formId);
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of ApiResponse (KeywordSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> GetKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId);
         /// <summary>
         /// Get the published evaluation forms.
         /// </summary>
@@ -1391,6 +1370,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
         /// <summary>
+        /// Get the published evaluation forms.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <returns>Task of EvaluationForm</returns>
+        System.Threading.Tasks.Task<EvaluationForm> GetPublishedformsFormIdAsync (string formId);
+
+        /// <summary>
+        /// Get the published evaluation forms.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetPublishedformsFormIdAsyncWithHttpInfo (string formId);
+        /// <summary>
         /// Create a calibration
         /// </summary>
         /// <remarks>
@@ -1400,7 +1400,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (Calibration body, string expand = null);
+        System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (CalibrationCreate body, string expand = null);
 
         /// <summary>
         /// Create a calibration
@@ -1412,7 +1412,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (Calibration body, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (CalibrationCreate body, string expand = null);
         /// <summary>
         /// Create an evaluation
         /// </summary>
@@ -1424,7 +1424,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> PostConversationEvaluationsAsync (string conversationId, Evaluation body, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> PostConversationsConversationIdEvaluationsAsync (string conversationId, Evaluation body, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -1437,7 +1437,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostConversationsConversationIdEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body, string expand = null);
         /// <summary>
         /// Query for evaluation aggregates
         /// </summary>
@@ -1576,7 +1576,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> PutCalibrationAsync (string calibrationId, Calibration body);
+        System.Threading.Tasks.Task<Calibration> PutCalibrationsCalibrationIdAsync (string calibrationId, Calibration body);
 
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -1588,7 +1588,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> PutCalibrationAsyncWithHttpInfo (string calibrationId, Calibration body);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> PutCalibrationsCalibrationIdAsyncWithHttpInfo (string calibrationId, Calibration body);
         /// <summary>
         /// Update an evaluation
         /// </summary>
@@ -1601,7 +1601,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> PutConversationEvaluationAsync (string conversationId, string evaluationId, Evaluation body, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> PutConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, Evaluation body, string expand = null);
 
         /// <summary>
         /// Update an evaluation
@@ -1615,7 +1615,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PutConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PutConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null);
         /// <summary>
         /// Update an evaluation form.
         /// </summary>
@@ -1626,7 +1626,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> PutFormAsync (string formId, EvaluationForm body);
+        System.Threading.Tasks.Task<EvaluationForm> PutFormsFormIdAsync (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update an evaluation form.
@@ -1638,7 +1638,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormAsyncWithHttpInfo (string formId, EvaluationForm body);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormsFormIdAsyncWithHttpInfo (string formId, EvaluationForm body);
         /// <summary>
         /// Update a keywordSet to the specified keywordSet via PUT.
         /// </summary>
@@ -1649,7 +1649,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="keywordSetId">KeywordSet ID</param>
         /// <param name="body">keywordSet</param>
         /// <returns>Task of KeywordSet</returns>
-        System.Threading.Tasks.Task<KeywordSet> PutKeywordsetAsync (string keywordSetId, KeywordSet body);
+        System.Threading.Tasks.Task<KeywordSet> PutKeywordsetsKeywordsetIdAsync (string keywordSetId, KeywordSet body);
 
         /// <summary>
         /// Update a keywordSet to the specified keywordSet via PUT.
@@ -1661,7 +1661,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="keywordSetId">KeywordSet ID</param>
         /// <param name="body">keywordSet</param>
         /// <returns>Task of ApiResponse (KeywordSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutKeywordsetAsyncWithHttpInfo (string keywordSetId, KeywordSet body);
+        System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId, KeywordSet body);
         #endregion Asynchronous Operations
     }
 
@@ -1759,9 +1759,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Calibration</returns>
-        public Calibration DeleteCalibration (string calibrationId, string calibratorId)
+        public Calibration DeleteCalibrationsCalibrationId (string calibrationId, string calibratorId)
         {
-             ApiResponse<Calibration> localVarResponse = DeleteCalibrationWithHttpInfo(calibrationId, calibratorId);
+             ApiResponse<Calibration> localVarResponse = DeleteCalibrationsCalibrationIdWithHttpInfo(calibrationId, calibratorId);
              return localVarResponse.Data;
         }
 
@@ -1772,14 +1772,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > DeleteCalibrationWithHttpInfo (string calibrationId, string calibratorId)
+        public ApiResponse< Calibration > DeleteCalibrationsCalibrationIdWithHttpInfo (string calibrationId, string calibratorId)
         {
             // verify the required parameter 'calibrationId' is set
             if (calibrationId == null)
-                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->DeleteCalibration");
+                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->DeleteCalibrationsCalibrationId");
             // verify the required parameter 'calibratorId' is set
             if (calibratorId == null)
-                throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->DeleteCalibration");
+                throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->DeleteCalibrationsCalibrationId");
 
             var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1823,15 +1823,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteCalibration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCalibrationsCalibrationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteCalibration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCalibrationsCalibrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Calibration>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Calibration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Calibration)));
             
         }
@@ -1843,9 +1841,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> DeleteCalibrationAsync (string calibrationId, string calibratorId)
+        public async System.Threading.Tasks.Task<Calibration> DeleteCalibrationsCalibrationIdAsync (string calibrationId, string calibratorId)
         {
-             ApiResponse<Calibration> localVarResponse = await DeleteCalibrationAsyncWithHttpInfo(calibrationId, calibratorId);
+             ApiResponse<Calibration> localVarResponse = await DeleteCalibrationsCalibrationIdAsyncWithHttpInfo(calibrationId, calibratorId);
              return localVarResponse.Data;
 
         }
@@ -1857,14 +1855,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> DeleteCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> DeleteCalibrationsCalibrationIdAsyncWithHttpInfo (string calibrationId, string calibratorId)
         {
             // verify the required parameter 'calibrationId' is set
             if (calibrationId == null)
-                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->DeleteCalibration");
+                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->DeleteCalibrationsCalibrationId");
             // verify the required parameter 'calibratorId' is set
             if (calibratorId == null)
-                throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->DeleteCalibration");
+                throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->DeleteCalibrationsCalibrationId");
 
             var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1908,15 +1906,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteCalibration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCalibrationsCalibrationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteCalibration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCalibrationsCalibrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Calibration>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Calibration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Calibration)));
             
         }
@@ -1929,9 +1925,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
-        public Evaluation DeleteConversationEvaluation (string conversationId, string evaluationId, string expand = null)
+        public Evaluation DeleteConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> localVarResponse = DeleteConversationEvaluationWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> localVarResponse = DeleteConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo(conversationId, evaluationId, expand);
              return localVarResponse.Data;
         }
 
@@ -1943,14 +1939,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > DeleteConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public ApiResponse< Evaluation > DeleteConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->DeleteConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->DeleteConversationsConversationIdEvaluationsEvaluationId");
             // verify the required parameter 'evaluationId' is set
             if (evaluationId == null)
-                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->DeleteConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->DeleteConversationsConversationIdEvaluationsEvaluationId");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1995,15 +1991,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationEvaluation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Evaluation>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Evaluation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Evaluation)));
             
         }
@@ -2016,9 +2010,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> DeleteConversationEvaluationAsync (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> DeleteConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> localVarResponse = await DeleteConversationEvaluationAsyncWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> localVarResponse = await DeleteConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo(conversationId, evaluationId, expand);
              return localVarResponse.Data;
 
         }
@@ -2031,14 +2025,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->DeleteConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->DeleteConversationsConversationIdEvaluationsEvaluationId");
             // verify the required parameter 'evaluationId' is set
             if (evaluationId == null)
-                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->DeleteConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->DeleteConversationsConversationIdEvaluationsEvaluationId");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2083,15 +2077,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationEvaluation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Evaluation>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Evaluation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Evaluation)));
             
         }
@@ -2102,9 +2094,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <returns>string</returns>
-        public string DeleteForm (string formId)
+        public string DeleteFormsFormId (string formId)
         {
-             ApiResponse<string> localVarResponse = DeleteFormWithHttpInfo(formId);
+             ApiResponse<string> localVarResponse = DeleteFormsFormIdWithHttpInfo(formId);
              return localVarResponse.Data;
         }
 
@@ -2114,11 +2106,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteFormWithHttpInfo (string formId)
+        public ApiResponse< string > DeleteFormsFormIdWithHttpInfo (string formId)
         {
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->DeleteForm");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->DeleteFormsFormId");
 
             var localVarPath = "/api/v2/quality/forms/{formId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2161,15 +2153,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteForm: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFormsFormId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFormsFormId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
@@ -2180,9 +2170,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteFormAsync (string formId)
+        public async System.Threading.Tasks.Task<string> DeleteFormsFormIdAsync (string formId)
         {
-             ApiResponse<string> localVarResponse = await DeleteFormAsyncWithHttpInfo(formId);
+             ApiResponse<string> localVarResponse = await DeleteFormsFormIdAsyncWithHttpInfo(formId);
              return localVarResponse.Data;
 
         }
@@ -2193,11 +2183,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteFormAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteFormsFormIdAsyncWithHttpInfo (string formId)
         {
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->DeleteForm");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->DeleteFormsFormId");
 
             var localVarPath = "/api/v2/quality/forms/{formId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2240,172 +2230,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteForm: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFormsFormId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFormsFormId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
-        }
-
-        /// <summary>
-        /// Delete a keywordSet by id. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns></returns>
-        public void DeleteKeywordset (string keywordSetId)
-        {
-             DeleteKeywordsetWithHttpInfo(keywordSetId);
-        }
-
-        /// <summary>
-        /// Delete a keywordSet by id. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteKeywordsetWithHttpInfo (string keywordSetId)
-        {
-            // verify the required parameter 'keywordSetId' is set
-            if (keywordSetId == null)
-                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->DeleteKeywordset");
-
-            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null);
-        }
-
-        /// <summary>
-        /// Delete a keywordSet by id. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteKeywordsetAsync (string keywordSetId)
-        {
-             await DeleteKeywordsetAsyncWithHttpInfo(keywordSetId);
-
-        }
-
-        /// <summary>
-        /// Delete a keywordSet by id. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKeywordsetAsyncWithHttpInfo (string keywordSetId)
-        {
-            // verify the required parameter 'keywordSetId' is set
-            if (keywordSetId == null)
-                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->DeleteKeywordset");
-
-            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null);
         }
 
         /// <summary>
@@ -2473,15 +2306,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
@@ -2552,17 +2383,166 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+        }
+
+        /// <summary>
+        /// Delete a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns></returns>
+        public void DeleteKeywordsetsKeywordsetId (string keywordSetId)
+        {
+             DeleteKeywordsetsKeywordsetIdWithHttpInfo(keywordSetId);
+        }
+
+        /// <summary>
+        /// Delete a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId)
+        {
+            // verify the required parameter 'keywordSetId' is set
+            if (keywordSetId == null)
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->DeleteKeywordsetsKeywordsetId");
+
+            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteKeywordsetsKeywordsetIdAsync (string keywordSetId)
+        {
+             await DeleteKeywordsetsKeywordsetIdAsyncWithHttpInfo(keywordSetId);
+
+        }
+
+        /// <summary>
+        /// Delete a keywordSet by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId)
+        {
+            // verify the required parameter 'keywordSetId' is set
+            if (keywordSetId == null)
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->DeleteKeywordsetsKeywordsetId");
+
+            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
@@ -2660,15 +2640,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAgentsActivity: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetAgentsActivity: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAgentsActivity: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AgentActivityEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AgentActivityEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentActivityEntityListing)));
             
         }
@@ -2769,185 +2747,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAgentsActivity: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetAgentsActivity: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAgentsActivity: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AgentActivityEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AgentActivityEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentActivityEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get a calibration by id. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
-        /// <returns>Calibration</returns>
-        public Calibration GetCalibration (string calibrationId, string calibratorId)
-        {
-             ApiResponse<Calibration> localVarResponse = GetCalibrationWithHttpInfo(calibrationId, calibratorId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a calibration by id. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
-        /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > GetCalibrationWithHttpInfo (string calibrationId, string calibratorId)
-        {
-            // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null)
-                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->GetCalibration");
-            // verify the required parameter 'calibratorId' is set
-            if (calibratorId == null)
-                throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->GetCalibration");
-
-            var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (calibrationId != null) localVarPathParams.Add("calibrationId", Configuration.ApiClient.ParameterToString(calibrationId)); // path parameter
-            if (calibratorId != null) localVarQueryParams.Add("calibratorId", Configuration.ApiClient.ParameterToString(calibratorId)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetCalibration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetCalibration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Calibration>(localVarStatusCode,
-                localVarHeaders,
-                (Calibration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Calibration)));
-            
-        }
-
-        /// <summary>
-        /// Get a calibration by id. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
-        /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> GetCalibrationAsync (string calibrationId, string calibratorId)
-        {
-             ApiResponse<Calibration> localVarResponse = await GetCalibrationAsyncWithHttpInfo(calibrationId, calibratorId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a calibration by id. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
-        /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> GetCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId)
-        {
-            // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null)
-                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->GetCalibration");
-            // verify the required parameter 'calibratorId' is set
-            if (calibratorId == null)
-                throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->GetCalibration");
-
-            var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (calibrationId != null) localVarPathParams.Add("calibrationId", Configuration.ApiClient.ParameterToString(calibrationId)); // path parameter
-            if (calibratorId != null) localVarQueryParams.Add("calibratorId", Configuration.ApiClient.ParameterToString(calibratorId)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetCalibration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetCalibration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Calibration>(localVarStatusCode,
-                localVarHeaders,
-                (Calibration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Calibration)));
             
         }
 
@@ -3043,15 +2850,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetCalibrations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetCalibrations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetCalibrations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CalibrationEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CalibrationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CalibrationEntityListing)));
             
         }
@@ -3149,16 +2954,179 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetCalibrations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetCalibrations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetCalibrations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CalibrationEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CalibrationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CalibrationEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get a calibration by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calibrationId">Calibration ID</param>
+        /// <param name="calibratorId">calibratorId</param>
+        /// <returns>Calibration</returns>
+        public Calibration GetCalibrationsCalibrationId (string calibrationId, string calibratorId)
+        {
+             ApiResponse<Calibration> localVarResponse = GetCalibrationsCalibrationIdWithHttpInfo(calibrationId, calibratorId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a calibration by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calibrationId">Calibration ID</param>
+        /// <param name="calibratorId">calibratorId</param>
+        /// <returns>ApiResponse of Calibration</returns>
+        public ApiResponse< Calibration > GetCalibrationsCalibrationIdWithHttpInfo (string calibrationId, string calibratorId)
+        {
+            // verify the required parameter 'calibrationId' is set
+            if (calibrationId == null)
+                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->GetCalibrationsCalibrationId");
+            // verify the required parameter 'calibratorId' is set
+            if (calibratorId == null)
+                throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->GetCalibrationsCalibrationId");
+
+            var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (calibrationId != null) localVarPathParams.Add("calibrationId", Configuration.ApiClient.ParameterToString(calibrationId)); // path parameter
+            if (calibratorId != null) localVarQueryParams.Add("calibratorId", Configuration.ApiClient.ParameterToString(calibratorId)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCalibrationsCalibrationId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCalibrationsCalibrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Calibration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Calibration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Calibration)));
+            
+        }
+
+        /// <summary>
+        /// Get a calibration by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calibrationId">Calibration ID</param>
+        /// <param name="calibratorId">calibratorId</param>
+        /// <returns>Task of Calibration</returns>
+        public async System.Threading.Tasks.Task<Calibration> GetCalibrationsCalibrationIdAsync (string calibrationId, string calibratorId)
+        {
+             ApiResponse<Calibration> localVarResponse = await GetCalibrationsCalibrationIdAsyncWithHttpInfo(calibrationId, calibratorId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a calibration by id. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="calibrationId">Calibration ID</param>
+        /// <param name="calibratorId">calibratorId</param>
+        /// <returns>Task of ApiResponse (Calibration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> GetCalibrationsCalibrationIdAsyncWithHttpInfo (string calibrationId, string calibratorId)
+        {
+            // verify the required parameter 'calibrationId' is set
+            if (calibrationId == null)
+                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->GetCalibrationsCalibrationId");
+            // verify the required parameter 'calibratorId' is set
+            if (calibratorId == null)
+                throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->GetCalibrationsCalibrationId");
+
+            var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (calibrationId != null) localVarPathParams.Add("calibrationId", Configuration.ApiClient.ParameterToString(calibrationId)); // path parameter
+            if (calibratorId != null) localVarQueryParams.Add("calibratorId", Configuration.ApiClient.ParameterToString(calibratorId)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCalibrationsCalibrationId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCalibrationsCalibrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Calibration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Calibration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Calibration)));
             
         }
 
@@ -3176,9 +3144,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>QualityAuditPage</returns>
-        public QualityAuditPage GetConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public QualityAuditPage GetConversationsConversationIdAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
-             ApiResponse<QualityAuditPage> localVarResponse = GetConversationAuditsWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
+             ApiResponse<QualityAuditPage> localVarResponse = GetConversationsConversationIdAuditsWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
              return localVarResponse.Data;
         }
 
@@ -3196,11 +3164,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>ApiResponse of QualityAuditPage</returns>
-        public ApiResponse< QualityAuditPage > GetConversationAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public ApiResponse< QualityAuditPage > GetConversationsConversationIdAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationAudits");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationsConversationIdAudits");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/audits";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3251,15 +3219,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationAudits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdAudits: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<QualityAuditPage>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QualityAuditPage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualityAuditPage)));
             
         }
@@ -3278,9 +3244,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>Task of QualityAuditPage</returns>
-        public async System.Threading.Tasks.Task<QualityAuditPage> GetConversationAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public async System.Threading.Tasks.Task<QualityAuditPage> GetConversationsConversationIdAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
-             ApiResponse<QualityAuditPage> localVarResponse = await GetConversationAuditsAsyncWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
+             ApiResponse<QualityAuditPage> localVarResponse = await GetConversationsConversationIdAuditsAsyncWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
              return localVarResponse.Data;
 
         }
@@ -3299,11 +3265,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
         /// <returns>Task of ApiResponse (QualityAuditPage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetConversationAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetConversationsConversationIdAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationAudits");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationsConversationIdAudits");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/audits";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3354,15 +3320,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationAudits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdAudits: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdAudits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<QualityAuditPage>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (QualityAuditPage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QualityAuditPage)));
             
         }
@@ -3375,9 +3339,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Evaluation</returns>
-        public Evaluation GetConversationEvaluation (string conversationId, string evaluationId, string expand = null)
+        public Evaluation GetConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> localVarResponse = GetConversationEvaluationWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> localVarResponse = GetConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo(conversationId, evaluationId, expand);
              return localVarResponse.Data;
         }
 
@@ -3389,14 +3353,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > GetConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public ApiResponse< Evaluation > GetConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationsConversationIdEvaluationsEvaluationId");
             // verify the required parameter 'evaluationId' is set
             if (evaluationId == null)
-                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->GetConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->GetConversationsConversationIdEvaluationsEvaluationId");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3441,15 +3405,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationEvaluation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Evaluation>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Evaluation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Evaluation)));
             
         }
@@ -3462,9 +3424,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> GetConversationEvaluationAsync (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> GetConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> localVarResponse = await GetConversationEvaluationAsyncWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> localVarResponse = await GetConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo(conversationId, evaluationId, expand);
              return localVarResponse.Data;
 
         }
@@ -3477,14 +3439,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationsConversationIdEvaluationsEvaluationId");
             // verify the required parameter 'evaluationId' is set
             if (evaluationId == null)
-                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->GetConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->GetConversationsConversationIdEvaluationsEvaluationId");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3529,15 +3491,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationEvaluation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Evaluation>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Evaluation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Evaluation)));
             
         }
@@ -3652,15 +3612,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEvaluationsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetEvaluationsQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetEvaluationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationEntityListing)));
             
         }
@@ -3776,15 +3734,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEvaluationsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetEvaluationsQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetEvaluationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationEntityListing)));
             
         }
@@ -3881,15 +3837,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEvaluatorsActivity: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetEvaluatorsActivity: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetEvaluatorsActivity: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluatorActivityEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluatorActivityEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluatorActivityEntityListing)));
             
         }
@@ -3987,342 +3941,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetEvaluatorsActivity: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetEvaluatorsActivity: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetEvaluatorsActivity: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluatorActivityEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluatorActivityEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluatorActivityEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Get an evaluation form 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
-        public EvaluationForm GetForm (string formId)
-        {
-             ApiResponse<EvaluationForm> localVarResponse = GetFormWithHttpInfo(formId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get an evaluation form 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > GetFormWithHttpInfo (string formId)
-        {
-            // verify the required parameter 'formId' is set
-            if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetForm");
-
-            var localVarPath = "/api/v2/quality/forms/{formId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetForm: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
-                localVarHeaders,
-                (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
-            
-        }
-
-        /// <summary>
-        /// Get an evaluation form 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> GetFormAsync (string formId)
-        {
-             ApiResponse<EvaluationForm> localVarResponse = await GetFormAsyncWithHttpInfo(formId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get an evaluation form 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetFormAsyncWithHttpInfo (string formId)
-        {
-            // verify the required parameter 'formId' is set
-            if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetForm");
-
-            var localVarPath = "/api/v2/quality/forms/{formId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetForm: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
-                localVarHeaders,
-                (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
-            
-        }
-
-        /// <summary>
-        /// Gets all the revisions for a specific evaluation. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetFormVersionsWithHttpInfo(formId, pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Gets all the revisions for a specific evaluation. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'formId' is set
-            if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetFormVersions");
-
-            var localVarPath = "/api/v2/quality/forms/{formId}/versions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetFormVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetFormVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (EvaluationFormEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)));
-            
-        }
-
-        /// <summary>
-        /// Gets all the revisions for a specific evaluation. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetFormVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Gets all the revisions for a specific evaluation. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
-        {
-            // verify the required parameter 'formId' is set
-            if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetFormVersions");
-
-            var localVarPath = "/api/v2/quality/forms/{formId}/versions";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetFormVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetFormVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (EvaluationFormEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)));
             
         }
 
@@ -4406,15 +4032,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetForms: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetForms: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetForms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationFormEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)));
             
         }
@@ -4500,44 +4124,42 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetForms: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetForms: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetForms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationFormEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)));
             
         }
 
         /// <summary>
-        /// Get a keywordSet by id. 
+        /// Get an evaluation form 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>KeywordSet</returns>
-        public KeywordSet GetKeywordset (string keywordSetId)
+        /// <param name="formId">Form ID</param>
+        /// <returns>EvaluationForm</returns>
+        public EvaluationForm GetFormsFormId (string formId)
         {
-             ApiResponse<KeywordSet> localVarResponse = GetKeywordsetWithHttpInfo(keywordSetId);
+             ApiResponse<EvaluationForm> localVarResponse = GetFormsFormIdWithHttpInfo(formId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get a keywordSet by id. 
+        /// Get an evaluation form 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>ApiResponse of KeywordSet</returns>
-        public ApiResponse< KeywordSet > GetKeywordsetWithHttpInfo (string keywordSetId)
+        /// <param name="formId">Form ID</param>
+        /// <returns>ApiResponse of EvaluationForm</returns>
+        public ApiResponse< EvaluationForm > GetFormsFormIdWithHttpInfo (string formId)
         {
-            // verify the required parameter 'keywordSetId' is set
-            if (keywordSetId == null)
-                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->GetKeywordset");
+            // verify the required parameter 'formId' is set
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetFormsFormId");
 
-            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
+            var localVarPath = "/api/v2/quality/forms/{formId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4562,7 +4184,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
+            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4578,45 +4200,43 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetKeywordset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetFormsFormId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetKeywordset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetFormsFormId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<KeywordSet>(localVarStatusCode,
-                localVarHeaders,
-                (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
+            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
             
         }
 
         /// <summary>
-        /// Get a keywordSet by id. 
+        /// Get an evaluation form 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>Task of KeywordSet</returns>
-        public async System.Threading.Tasks.Task<KeywordSet> GetKeywordsetAsync (string keywordSetId)
+        /// <param name="formId">Form ID</param>
+        /// <returns>Task of EvaluationForm</returns>
+        public async System.Threading.Tasks.Task<EvaluationForm> GetFormsFormIdAsync (string formId)
         {
-             ApiResponse<KeywordSet> localVarResponse = await GetKeywordsetAsyncWithHttpInfo(keywordSetId);
+             ApiResponse<EvaluationForm> localVarResponse = await GetFormsFormIdAsyncWithHttpInfo(formId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get a keywordSet by id. 
+        /// Get an evaluation form 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="keywordSetId">KeywordSet ID</param>
-        /// <returns>Task of ApiResponse (KeywordSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> GetKeywordsetAsyncWithHttpInfo (string keywordSetId)
+        /// <param name="formId">Form ID</param>
+        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetFormsFormIdAsyncWithHttpInfo (string formId)
         {
-            // verify the required parameter 'keywordSetId' is set
-            if (keywordSetId == null)
-                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->GetKeywordset");
+            // verify the required parameter 'formId' is set
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetFormsFormId");
 
-            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
+            var localVarPath = "/api/v2/quality/forms/{formId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4641,7 +4261,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
+            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4657,16 +4277,179 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFormsFormId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFormsFormId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
+            
+        }
+
+        /// <summary>
+        /// Gets all the revisions for a specific evaluation. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>EvaluationFormEntityListing</returns>
+        public EvaluationFormEntityListing GetFormsFormIdVersions (string formId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetFormsFormIdVersionsWithHttpInfo(formId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets all the revisions for a specific evaluation. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        public ApiResponse< EvaluationFormEntityListing > GetFormsFormIdVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'formId' is set
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetFormsFormIdVersions");
+
+            var localVarPath = "/api/v2/quality/forms/{formId}/versions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetKeywordset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetFormsFormIdVersions: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetKeywordset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetFormsFormIdVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<KeywordSet>(localVarStatusCode,
-                localVarHeaders,
-                (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
+            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EvaluationFormEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Gets all the revisions for a specific evaluation. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of EvaluationFormEntityListing</returns>
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormsFormIdVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetFormsFormIdVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets all the revisions for a specific evaluation. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormsFormIdVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'formId' is set
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetFormsFormIdVersions");
+
+            var localVarPath = "/api/v2/quality/forms/{formId}/versions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFormsFormIdVersions: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFormsFormIdVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EvaluationFormEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)));
             
         }
 
@@ -4750,15 +4533,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<KeywordSetEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (KeywordSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSetEntityListing)));
             
         }
@@ -4844,44 +4625,42 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<KeywordSetEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (KeywordSetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSetEntityListing)));
             
         }
 
         /// <summary>
-        /// Get the published evaluation forms. 
+        /// Get a keywordSet by id. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
-        public EvaluationForm GetPublishedform (string formId)
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>KeywordSet</returns>
+        public KeywordSet GetKeywordsetsKeywordsetId (string keywordSetId)
         {
-             ApiResponse<EvaluationForm> localVarResponse = GetPublishedformWithHttpInfo(formId);
+             ApiResponse<KeywordSet> localVarResponse = GetKeywordsetsKeywordsetIdWithHttpInfo(keywordSetId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get the published evaluation forms. 
+        /// Get a keywordSet by id. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > GetPublishedformWithHttpInfo (string formId)
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>ApiResponse of KeywordSet</returns>
+        public ApiResponse< KeywordSet > GetKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId)
         {
-            // verify the required parameter 'formId' is set
-            if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetPublishedform");
+            // verify the required parameter 'keywordSetId' is set
+            if (keywordSetId == null)
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->GetKeywordsetsKeywordsetId");
 
-            var localVarPath = "/api/v2/quality/publishedforms/{formId}";
+            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4906,7 +4685,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
+            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4922,45 +4701,43 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetPublishedform: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetPublishedform: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
-                localVarHeaders,
-                (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
+            return new ApiResponse<KeywordSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
             
         }
 
         /// <summary>
-        /// Get the published evaluation forms. 
+        /// Get a keywordSet by id. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> GetPublishedformAsync (string formId)
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of KeywordSet</returns>
+        public async System.Threading.Tasks.Task<KeywordSet> GetKeywordsetsKeywordsetIdAsync (string keywordSetId)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await GetPublishedformAsyncWithHttpInfo(formId);
+             ApiResponse<KeywordSet> localVarResponse = await GetKeywordsetsKeywordsetIdAsyncWithHttpInfo(keywordSetId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get the published evaluation forms. 
+        /// Get a keywordSet by id. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetPublishedformAsyncWithHttpInfo (string formId)
+        /// <param name="keywordSetId">KeywordSet ID</param>
+        /// <returns>Task of ApiResponse (KeywordSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> GetKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId)
         {
-            // verify the required parameter 'formId' is set
-            if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetPublishedform");
+            // verify the required parameter 'keywordSetId' is set
+            if (keywordSetId == null)
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->GetKeywordsetsKeywordsetId");
 
-            var localVarPath = "/api/v2/quality/publishedforms/{formId}";
+            var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4985,7 +4762,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
+            if (keywordSetId != null) localVarPathParams.Add("keywordSetId", Configuration.ApiClient.ParameterToString(keywordSetId)); // path parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5001,16 +4778,14 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetPublishedform: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetPublishedform: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
-                localVarHeaders,
-                (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
+            return new ApiResponse<KeywordSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
             
         }
 
@@ -5082,15 +4857,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetPublishedforms: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetPublishedforms: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetPublishedforms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationFormEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)));
             
         }
@@ -5164,16 +4937,167 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetPublishedforms: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetPublishedforms: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetPublishedforms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationFormEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the published evaluation forms. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <returns>EvaluationForm</returns>
+        public EvaluationForm GetPublishedformsFormId (string formId)
+        {
+             ApiResponse<EvaluationForm> localVarResponse = GetPublishedformsFormIdWithHttpInfo(formId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the published evaluation forms. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <returns>ApiResponse of EvaluationForm</returns>
+        public ApiResponse< EvaluationForm > GetPublishedformsFormIdWithHttpInfo (string formId)
+        {
+            // verify the required parameter 'formId' is set
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetPublishedformsFormId");
+
+            var localVarPath = "/api/v2/quality/publishedforms/{formId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetPublishedformsFormId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetPublishedformsFormId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
+            
+        }
+
+        /// <summary>
+        /// Get the published evaluation forms. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <returns>Task of EvaluationForm</returns>
+        public async System.Threading.Tasks.Task<EvaluationForm> GetPublishedformsFormIdAsync (string formId)
+        {
+             ApiResponse<EvaluationForm> localVarResponse = await GetPublishedformsFormIdAsyncWithHttpInfo(formId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the published evaluation forms. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="formId">Form ID</param>
+        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetPublishedformsFormIdAsyncWithHttpInfo (string formId)
+        {
+            // verify the required parameter 'formId' is set
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetPublishedformsFormId");
+
+            var localVarPath = "/api/v2/quality/publishedforms/{formId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (formId != null) localVarPathParams.Add("formId", Configuration.ApiClient.ParameterToString(formId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetPublishedformsFormId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetPublishedformsFormId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
             
         }
 
@@ -5184,7 +5108,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Calibration</returns>
-        public Calibration PostCalibrations (Calibration body, string expand = null)
+        public Calibration PostCalibrations (CalibrationCreate body, string expand = null)
         {
              ApiResponse<Calibration> localVarResponse = PostCalibrationsWithHttpInfo(body, expand);
              return localVarResponse.Data;
@@ -5197,7 +5121,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > PostCalibrationsWithHttpInfo (Calibration body, string expand = null)
+        public ApiResponse< Calibration > PostCalibrationsWithHttpInfo (CalibrationCreate body, string expand = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5252,15 +5176,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostCalibrations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostCalibrations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostCalibrations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Calibration>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Calibration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Calibration)));
             
         }
@@ -5272,7 +5194,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (Calibration body, string expand = null)
+        public async System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (CalibrationCreate body, string expand = null)
         {
              ApiResponse<Calibration> localVarResponse = await PostCalibrationsAsyncWithHttpInfo(body, expand);
              return localVarResponse.Data;
@@ -5286,7 +5208,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId (optional)</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (Calibration body, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (CalibrationCreate body, string expand = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5341,15 +5263,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostCalibrations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostCalibrations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostCalibrations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Calibration>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Calibration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Calibration)));
             
         }
@@ -5362,9 +5282,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
-        public Evaluation PostConversationEvaluations (string conversationId, Evaluation body, string expand = null)
+        public Evaluation PostConversationsConversationIdEvaluations (string conversationId, Evaluation body, string expand = null)
         {
-             ApiResponse<Evaluation> localVarResponse = PostConversationEvaluationsWithHttpInfo(conversationId, body, expand);
+             ApiResponse<Evaluation> localVarResponse = PostConversationsConversationIdEvaluationsWithHttpInfo(conversationId, body, expand);
              return localVarResponse.Data;
         }
 
@@ -5376,14 +5296,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > PostConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body, string expand = null)
+        public ApiResponse< Evaluation > PostConversationsConversationIdEvaluationsWithHttpInfo (string conversationId, Evaluation body, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PostConversationEvaluations");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PostConversationsConversationIdEvaluations");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostConversationEvaluations");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostConversationsConversationIdEvaluations");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5435,15 +5355,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationEvaluations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdEvaluations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Evaluation>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Evaluation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Evaluation)));
             
         }
@@ -5456,9 +5374,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> PostConversationEvaluationsAsync (string conversationId, Evaluation body, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> PostConversationsConversationIdEvaluationsAsync (string conversationId, Evaluation body, string expand = null)
         {
-             ApiResponse<Evaluation> localVarResponse = await PostConversationEvaluationsAsyncWithHttpInfo(conversationId, body, expand);
+             ApiResponse<Evaluation> localVarResponse = await PostConversationsConversationIdEvaluationsAsyncWithHttpInfo(conversationId, body, expand);
              return localVarResponse.Data;
 
         }
@@ -5471,14 +5389,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostConversationsConversationIdEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PostConversationEvaluations");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PostConversationsConversationIdEvaluations");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostConversationEvaluations");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostConversationsConversationIdEvaluations");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5530,15 +5448,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationEvaluations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdEvaluations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsConversationIdEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Evaluation>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Evaluation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Evaluation)));
             
         }
@@ -5615,15 +5531,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AggregateQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)));
             
         }
@@ -5701,15 +5615,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AggregateQueryResponse>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AggregateQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AggregateQueryResponse)));
             
         }
@@ -5786,15 +5698,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsScoring: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsScoring: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsScoring: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationScoringSet>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationScoringSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationScoringSet)));
             
         }
@@ -5872,15 +5782,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsScoring: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsScoring: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostEvaluationsScoring: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationScoringSet>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationScoringSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationScoringSet)));
             
         }
@@ -5957,15 +5865,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostForms: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostForms: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostForms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
             
         }
@@ -6043,15 +5949,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostForms: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostForms: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostForms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
             
         }
@@ -6131,15 +6035,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostKeywordsets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<KeywordSet>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
             
         }
@@ -6220,15 +6122,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostKeywordsets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostKeywordsets: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<KeywordSet>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
             
         }
@@ -6305,15 +6205,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostPublishedforms: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostPublishedforms: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostPublishedforms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
             
         }
@@ -6391,15 +6289,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostPublishedforms: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostPublishedforms: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostPublishedforms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
             
         }
@@ -6473,15 +6369,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostSpotability: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostSpotability: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostSpotability: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<KeywordSet>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
             
         }
@@ -6556,15 +6450,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostSpotability: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PostSpotability: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostSpotability: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<KeywordSet>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
             
         }
@@ -6576,9 +6468,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Calibration</returns>
-        public Calibration PutCalibration (string calibrationId, Calibration body)
+        public Calibration PutCalibrationsCalibrationId (string calibrationId, Calibration body)
         {
-             ApiResponse<Calibration> localVarResponse = PutCalibrationWithHttpInfo(calibrationId, body);
+             ApiResponse<Calibration> localVarResponse = PutCalibrationsCalibrationIdWithHttpInfo(calibrationId, body);
              return localVarResponse.Data;
         }
 
@@ -6589,14 +6481,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > PutCalibrationWithHttpInfo (string calibrationId, Calibration body)
+        public ApiResponse< Calibration > PutCalibrationsCalibrationIdWithHttpInfo (string calibrationId, Calibration body)
         {
             // verify the required parameter 'calibrationId' is set
             if (calibrationId == null)
-                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->PutCalibration");
+                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->PutCalibrationsCalibrationId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutCalibration");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutCalibrationsCalibrationId");
 
             var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6647,15 +6539,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutCalibration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutCalibrationsCalibrationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutCalibration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutCalibrationsCalibrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Calibration>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Calibration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Calibration)));
             
         }
@@ -6667,9 +6557,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> PutCalibrationAsync (string calibrationId, Calibration body)
+        public async System.Threading.Tasks.Task<Calibration> PutCalibrationsCalibrationIdAsync (string calibrationId, Calibration body)
         {
-             ApiResponse<Calibration> localVarResponse = await PutCalibrationAsyncWithHttpInfo(calibrationId, body);
+             ApiResponse<Calibration> localVarResponse = await PutCalibrationsCalibrationIdAsyncWithHttpInfo(calibrationId, body);
              return localVarResponse.Data;
 
         }
@@ -6681,14 +6571,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PutCalibrationAsyncWithHttpInfo (string calibrationId, Calibration body)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PutCalibrationsCalibrationIdAsyncWithHttpInfo (string calibrationId, Calibration body)
         {
             // verify the required parameter 'calibrationId' is set
             if (calibrationId == null)
-                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->PutCalibration");
+                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->PutCalibrationsCalibrationId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutCalibration");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutCalibrationsCalibrationId");
 
             var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6739,15 +6629,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutCalibration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutCalibrationsCalibrationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutCalibration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutCalibrationsCalibrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Calibration>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Calibration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Calibration)));
             
         }
@@ -6761,9 +6649,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
-        public Evaluation PutConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null)
+        public Evaluation PutConversationsConversationIdEvaluationsEvaluationId (string conversationId, string evaluationId, Evaluation body, string expand = null)
         {
-             ApiResponse<Evaluation> localVarResponse = PutConversationEvaluationWithHttpInfo(conversationId, evaluationId, body, expand);
+             ApiResponse<Evaluation> localVarResponse = PutConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo(conversationId, evaluationId, body, expand);
              return localVarResponse.Data;
         }
 
@@ -6776,17 +6664,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > PutConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null)
+        public ApiResponse< Evaluation > PutConversationsConversationIdEvaluationsEvaluationIdWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PutConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PutConversationsConversationIdEvaluationsEvaluationId");
             // verify the required parameter 'evaluationId' is set
             if (evaluationId == null)
-                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->PutConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->PutConversationsConversationIdEvaluationsEvaluationId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutConversationsConversationIdEvaluationsEvaluationId");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6839,15 +6727,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationEvaluation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Evaluation>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Evaluation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Evaluation)));
             
         }
@@ -6861,9 +6747,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> PutConversationEvaluationAsync (string conversationId, string evaluationId, Evaluation body, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> PutConversationsConversationIdEvaluationsEvaluationIdAsync (string conversationId, string evaluationId, Evaluation body, string expand = null)
         {
-             ApiResponse<Evaluation> localVarResponse = await PutConversationEvaluationAsyncWithHttpInfo(conversationId, evaluationId, body, expand);
+             ApiResponse<Evaluation> localVarResponse = await PutConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo(conversationId, evaluationId, body, expand);
              return localVarResponse.Data;
 
         }
@@ -6877,17 +6763,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PutConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PutConversationsConversationIdEvaluationsEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PutConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PutConversationsConversationIdEvaluationsEvaluationId");
             // verify the required parameter 'evaluationId' is set
             if (evaluationId == null)
-                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->PutConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->PutConversationsConversationIdEvaluationsEvaluationId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutConversationEvaluation");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutConversationsConversationIdEvaluationsEvaluationId");
 
             var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6940,15 +6826,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationEvaluation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsConversationIdEvaluationsEvaluationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Evaluation>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Evaluation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Evaluation)));
             
         }
@@ -6960,9 +6844,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm PutForm (string formId, EvaluationForm body)
+        public EvaluationForm PutFormsFormId (string formId, EvaluationForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = PutFormWithHttpInfo(formId, body);
+             ApiResponse<EvaluationForm> localVarResponse = PutFormsFormIdWithHttpInfo(formId, body);
              return localVarResponse.Data;
         }
 
@@ -6973,14 +6857,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > PutFormWithHttpInfo (string formId, EvaluationForm body)
+        public ApiResponse< EvaluationForm > PutFormsFormIdWithHttpInfo (string formId, EvaluationForm body)
         {
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->PutForm");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->PutFormsFormId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutForm");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutFormsFormId");
 
             var localVarPath = "/api/v2/quality/forms/{formId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7031,15 +6915,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutForm: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutFormsFormId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutFormsFormId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
             
         }
@@ -7051,9 +6933,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> PutFormAsync (string formId, EvaluationForm body)
+        public async System.Threading.Tasks.Task<EvaluationForm> PutFormsFormIdAsync (string formId, EvaluationForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await PutFormAsyncWithHttpInfo(formId, body);
+             ApiResponse<EvaluationForm> localVarResponse = await PutFormsFormIdAsyncWithHttpInfo(formId, body);
              return localVarResponse.Data;
 
         }
@@ -7065,14 +6947,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormAsyncWithHttpInfo (string formId, EvaluationForm body)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormsFormIdAsyncWithHttpInfo (string formId, EvaluationForm body)
         {
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->PutForm");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->PutFormsFormId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutForm");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutFormsFormId");
 
             var localVarPath = "/api/v2/quality/forms/{formId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7123,15 +7005,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutForm: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutFormsFormId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutFormsFormId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
             
         }
@@ -7143,9 +7023,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="keywordSetId">KeywordSet ID</param>
         /// <param name="body">keywordSet</param>
         /// <returns>KeywordSet</returns>
-        public KeywordSet PutKeywordset (string keywordSetId, KeywordSet body)
+        public KeywordSet PutKeywordsetsKeywordsetId (string keywordSetId, KeywordSet body)
         {
-             ApiResponse<KeywordSet> localVarResponse = PutKeywordsetWithHttpInfo(keywordSetId, body);
+             ApiResponse<KeywordSet> localVarResponse = PutKeywordsetsKeywordsetIdWithHttpInfo(keywordSetId, body);
              return localVarResponse.Data;
         }
 
@@ -7156,14 +7036,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="keywordSetId">KeywordSet ID</param>
         /// <param name="body">keywordSet</param>
         /// <returns>ApiResponse of KeywordSet</returns>
-        public ApiResponse< KeywordSet > PutKeywordsetWithHttpInfo (string keywordSetId, KeywordSet body)
+        public ApiResponse< KeywordSet > PutKeywordsetsKeywordsetIdWithHttpInfo (string keywordSetId, KeywordSet body)
         {
             // verify the required parameter 'keywordSetId' is set
             if (keywordSetId == null)
-                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->PutKeywordset");
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->PutKeywordsetsKeywordsetId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutKeywordset");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutKeywordsetsKeywordsetId");
 
             var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7214,15 +7094,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutKeywordset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutKeywordset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<KeywordSet>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
             
         }
@@ -7234,9 +7112,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="keywordSetId">KeywordSet ID</param>
         /// <param name="body">keywordSet</param>
         /// <returns>Task of KeywordSet</returns>
-        public async System.Threading.Tasks.Task<KeywordSet> PutKeywordsetAsync (string keywordSetId, KeywordSet body)
+        public async System.Threading.Tasks.Task<KeywordSet> PutKeywordsetsKeywordsetIdAsync (string keywordSetId, KeywordSet body)
         {
-             ApiResponse<KeywordSet> localVarResponse = await PutKeywordsetAsyncWithHttpInfo(keywordSetId, body);
+             ApiResponse<KeywordSet> localVarResponse = await PutKeywordsetsKeywordsetIdAsyncWithHttpInfo(keywordSetId, body);
              return localVarResponse.Data;
 
         }
@@ -7248,14 +7126,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="keywordSetId">KeywordSet ID</param>
         /// <param name="body">keywordSet</param>
         /// <returns>Task of ApiResponse (KeywordSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutKeywordsetAsyncWithHttpInfo (string keywordSetId, KeywordSet body)
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSet>> PutKeywordsetsKeywordsetIdAsyncWithHttpInfo (string keywordSetId, KeywordSet body)
         {
             // verify the required parameter 'keywordSetId' is set
             if (keywordSetId == null)
-                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->PutKeywordset");
+                throw new ApiException(400, "Missing required parameter 'keywordSetId' when calling QualityApi->PutKeywordsetsKeywordsetId");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutKeywordset");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutKeywordsetsKeywordsetId");
 
             var localVarPath = "/api/v2/quality/keywordsets/{keywordSetId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7306,15 +7184,13 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutKeywordset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutKeywordsetsKeywordsetId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutKeywordset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutKeywordsetsKeywordsetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<KeywordSet>(localVarStatusCode,
-                localVarHeaders,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (KeywordSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeywordSet)));
             
         }

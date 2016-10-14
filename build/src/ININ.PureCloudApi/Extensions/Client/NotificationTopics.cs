@@ -37,7 +37,6 @@ namespace ININ.PureCloudApi.Client
               {"v2.users.{id}.conversationsummary", typeof(UserConversationSummaryNotification)},
               {"v2.users.{id}.outofoffice", typeof(OutOfOfficeNotification)},
               {"v2.users.{id}.presence", typeof(UserPresenceNotification)},
-              {"v2.users.{id}.voicemail.messages", typeof(VoicemailMessageNotification)},
             };
         }
     }
