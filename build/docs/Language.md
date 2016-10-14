@@ -8,7 +8,7 @@ title: Language
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** | The language name. | |
+| **Name** | **string** |  | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **State** | **string** |  | [optional] |
 | **Version** | **string** |  | [optional] |

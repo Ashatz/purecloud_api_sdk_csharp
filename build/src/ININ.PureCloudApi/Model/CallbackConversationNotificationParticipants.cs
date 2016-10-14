@@ -273,13 +273,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
         /// <param name="Provider">Provider.</param>
+        /// <param name="ExternalContact">ExternalContact.</param>
+        /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="OutboundPreview">OutboundPreview.</param>
         /// <param name="CallbackNumbers">CallbackNumbers.</param>
         /// <param name="CallbackUserName">CallbackUserName.</param>
         /// <param name="SkipEnabled">SkipEnabled.</param>
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
-        public CallbackConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, CallbackConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, CallbackConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ConversationNotificationDialerPreview OutboundPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null)
+        public CallbackConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, CallbackConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, CallbackConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallbackConversationNotificationUriReference ExternalContact = null, CallbackConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationDialerPreview OutboundPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -303,6 +305,8 @@ namespace ININ.PureCloudApi.Model
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
             this.Provider = Provider;
+            this.ExternalContact = ExternalContact;
+            this.ExternalOrganization = ExternalOrganization;
             this.OutboundPreview = OutboundPreview;
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackUserName = CallbackUserName;
@@ -407,6 +411,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         /// <summary>
+        /// Gets or Sets ExternalContact
+        /// </summary>
+        [DataMember(Name="externalContact", EmitDefaultValue=false)]
+        public CallbackConversationNotificationUriReference ExternalContact { get; set; }
+        /// <summary>
+        /// Gets or Sets ExternalOrganization
+        /// </summary>
+        [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
+        public CallbackConversationNotificationUriReference ExternalOrganization { get; set; }
+        /// <summary>
         /// Gets or Sets OutboundPreview
         /// </summary>
         [DataMember(Name="outboundPreview", EmitDefaultValue=false)]
@@ -466,6 +480,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  OutboundPreview: ").Append(OutboundPreview).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
@@ -619,6 +635,16 @@ namespace ININ.PureCloudApi.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.ExternalContact == other.ExternalContact ||
+                    this.ExternalContact != null &&
+                    this.ExternalContact.Equals(other.ExternalContact)
+                ) &&
+                (
+                    this.ExternalOrganization == other.ExternalOrganization ||
+                    this.ExternalOrganization != null &&
+                    this.ExternalOrganization.Equals(other.ExternalOrganization)
+                ) &&
+                (
                     this.OutboundPreview == other.OutboundPreview ||
                     this.OutboundPreview != null &&
                     this.OutboundPreview.Equals(other.OutboundPreview)
@@ -705,6 +731,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ExternalContact != null)
+                    hash = hash * 59 + this.ExternalContact.GetHashCode();
+                if (this.ExternalOrganization != null)
+                    hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.OutboundPreview != null)
                     hash = hash * 59 + this.OutboundPreview.GetHashCode();
                 if (this.CallbackNumbers != null)

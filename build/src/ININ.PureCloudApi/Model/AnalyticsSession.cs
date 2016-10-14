@@ -53,13 +53,7 @@ namespace ININ.PureCloudApi.Model
             /// Enum Callback for "callback"
             /// </summary>
             [EnumMember(Value = "callback")]
-            Callback,
-            
-            /// <summary>
-            /// Enum Cobrowse for "cobrowse"
-            /// </summary>
-            [EnumMember(Value = "cobrowse")]
-            Cobrowse
+            Callback
         }
         /// <summary>
         /// Gets or Sets Direction

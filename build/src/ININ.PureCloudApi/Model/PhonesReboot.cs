@@ -20,8 +20,8 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhonesReboot" /> class.
         /// </summary>
-        /// <param name="PhoneIds">The list of phone Ids to reboot..</param>
-        /// <param name="SiteId">ID of the site for which to reboot all phones at that site. no.active.edge and phone.cannot.resolve errors are ignored..</param>
+        /// <param name="PhoneIds">PhoneIds.</param>
+        /// <param name="SiteId">SiteId.</param>
         public PhonesReboot(List<string> PhoneIds = null, string SiteId = null)
         {
             this.PhoneIds = PhoneIds;
@@ -29,15 +29,13 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// The list of phone Ids to reboot.
+        /// Gets or Sets PhoneIds
         /// </summary>
-        /// <value>The list of phone Ids to reboot.</value>
         [DataMember(Name="phoneIds", EmitDefaultValue=false)]
         public List<string> PhoneIds { get; set; }
         /// <summary>
-        /// ID of the site for which to reboot all phones at that site. no.active.edge and phone.cannot.resolve errors are ignored.
+        /// Gets or Sets SiteId
         /// </summary>
-        /// <value>ID of the site for which to reboot all phones at that site. no.active.edge and phone.cannot.resolve errors are ignored.</value>
         [DataMember(Name="siteId", EmitDefaultValue=false)]
         public string SiteId { get; set; }
         /// <summary>

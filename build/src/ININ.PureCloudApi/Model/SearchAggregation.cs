@@ -18,9 +18,8 @@ namespace ININ.PureCloudApi.Model
     public partial class SearchAggregation :  IEquatable<SearchAggregation>
     {
         /// <summary>
-        /// The type of aggregation to perform
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>The type of aggregation to perform</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
@@ -107,20 +106,19 @@ namespace ININ.PureCloudApi.Model
             CountAsc
         }
         /// <summary>
-        /// The type of aggregation to perform
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>The type of aggregation to perform</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchAggregation" /> class.
         /// </summary>
-        /// <param name="Field">The field used for aggregation.</param>
-        /// <param name="Name">The name of the aggregation. The response aggregation uses this name..</param>
-        /// <param name="Type">The type of aggregation to perform.</param>
-        /// <param name="Value">A value to use for aggregation.</param>
-        /// <param name="Size">The number aggregations results to return out of the entire result set.</param>
-        /// <param name="Order">The order in which aggregation results are sorted.</param>
+        /// <param name="Field">Field.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="Value">Value.</param>
+        /// <param name="Size">Size.</param>
+        /// <param name="Order">Order.</param>
         public SearchAggregation(string Field = null, string Name = null, TypeEnum? Type = null, string Value = null, int? Size = null, List<OrderEnum> Order = null)
         {
             this.Field = Field;
@@ -132,33 +130,28 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// The field used for aggregation
+        /// Gets or Sets Field
         /// </summary>
-        /// <value>The field used for aggregation</value>
         [DataMember(Name="field", EmitDefaultValue=false)]
         public string Field { get; set; }
         /// <summary>
-        /// The name of the aggregation. The response aggregation uses this name.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The name of the aggregation. The response aggregation uses this name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// A value to use for aggregation
+        /// Gets or Sets Value
         /// </summary>
-        /// <value>A value to use for aggregation</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         /// <summary>
-        /// The number aggregations results to return out of the entire result set
+        /// Gets or Sets Size
         /// </summary>
-        /// <value>The number aggregations results to return out of the entire result set</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public int? Size { get; set; }
         /// <summary>
-        /// The order in which aggregation results are sorted
+        /// Gets or Sets Order
         /// </summary>
-        /// <value>The order in which aggregation results are sorted</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public List<OrderEnum> Order { get; set; }
         /// <summary>

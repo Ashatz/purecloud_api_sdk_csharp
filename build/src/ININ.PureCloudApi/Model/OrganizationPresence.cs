@@ -20,13 +20,8 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationPresence" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected OrganizationPresence() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationPresence" /> class.
-        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="LanguageLabels">The label used for the system presence in each specified language (required).</param>
+        /// <param name="LanguageLabels">LanguageLabels.</param>
         /// <param name="SystemPresence">SystemPresence.</param>
         /// <param name="Deactivated">Deactivated (default to false).</param>
         /// <param name="Primary">Primary (default to false).</param>
@@ -36,16 +31,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, string SystemPresence = null, bool? Deactivated = null, bool? Primary = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
         {
-            // to ensure "LanguageLabels" is required (not null)
-            if (LanguageLabels == null)
-            {
-                throw new InvalidDataException("LanguageLabels is a required property for OrganizationPresence and cannot be null");
-            }
-            else
-            {
-                this.LanguageLabels = LanguageLabels;
-            }
             this.Name = Name;
+            this.LanguageLabels = LanguageLabels;
             this.SystemPresence = SystemPresence;
             // use default value if no "Deactivated" provided
             if (Deactivated == null)
@@ -83,9 +70,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// The label used for the system presence in each specified language
+        /// Gets or Sets LanguageLabels
         /// </summary>
-        /// <value>The label used for the system presence in each specified language</value>
         [DataMember(Name="languageLabels", EmitDefaultValue=false)]
         public Dictionary<string, string> LanguageLabels { get; set; }
         /// <summary>

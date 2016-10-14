@@ -54,16 +54,16 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId
+        /// Test DeleteConversationRecordingAnnotation
         /// </summary>
         [Test]
-        public void DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdTest()
+        public void DeleteConversationRecordingAnnotationTest()
         {
-            // TODO: add unit test for the method 'DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId'
+            // TODO: add unit test for the method 'DeleteConversationRecordingAnnotation'
             string conversationId = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
             string annotationId = null; // TODO: replace null with proper value
-            instance.DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId(conversationId, recordingId, annotationId);
+            instance.DeleteConversationRecordingAnnotation(conversationId, recordingId, annotationId);
             
         }
         
@@ -80,84 +80,84 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test DeleteMediaretentionpoliciesPolicyId
+        /// Test DeleteMediaretentionpolicy
         /// </summary>
         [Test]
-        public void DeleteMediaretentionpoliciesPolicyIdTest()
+        public void DeleteMediaretentionpolicyTest()
         {
-            // TODO: add unit test for the method 'DeleteMediaretentionpoliciesPolicyId'
+            // TODO: add unit test for the method 'DeleteMediaretentionpolicy'
             string policyId = null; // TODO: replace null with proper value
-            var response = instance.DeleteMediaretentionpoliciesPolicyId(policyId);
+            var response = instance.DeleteMediaretentionpolicy(policyId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteOrphanId
+        /// Test DeleteOrphanrecording
         /// </summary>
         [Test]
-        public void DeleteOrphanIdTest()
+        public void DeleteOrphanrecordingTest()
         {
-            // TODO: add unit test for the method 'DeleteOrphanId'
+            // TODO: add unit test for the method 'DeleteOrphanrecording'
             string orphanId = null; // TODO: replace null with proper value
-            var response = instance.DeleteOrphanId(orphanId);
+            var response = instance.DeleteOrphanrecording(orphanId);
             Assert.IsInstanceOf<OrphanRecording> (response, "response is OrphanRecording");
         }
         
         /// <summary>
-        /// Test GetConversationIdRecordings
+        /// Test GetConversationRecording
         /// </summary>
         [Test]
-        public void GetConversationIdRecordingsTest()
+        public void GetConversationRecordingTest()
         {
-            // TODO: add unit test for the method 'GetConversationIdRecordings'
-            string conversationId = null; // TODO: replace null with proper value
-            int? maxWaitMs = null; // TODO: replace null with proper value
-            string formatId = null; // TODO: replace null with proper value
-            var response = instance.GetConversationIdRecordings(conversationId, maxWaitMs, formatId);
-            Assert.IsInstanceOf<List<Recording>> (response, "response is List<Recording>");
-        }
-        
-        /// <summary>
-        /// Test GetConversationIdRecordingsRecordingId
-        /// </summary>
-        [Test]
-        public void GetConversationIdRecordingsRecordingIdTest()
-        {
-            // TODO: add unit test for the method 'GetConversationIdRecordingsRecordingId'
+            // TODO: add unit test for the method 'GetConversationRecording'
             string conversationId = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
             string formatId = null; // TODO: replace null with proper value
             bool? download = null; // TODO: replace null with proper value
             string fileName = null; // TODO: replace null with proper value
-            instance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, formatId, download, fileName);
+            instance.GetConversationRecording(conversationId, recordingId, formatId, download, fileName);
             
         }
         
         /// <summary>
-        /// Test GetConversationIdRecordingsRecordingIdAnnotations
+        /// Test GetConversationRecordingAnnotation
         /// </summary>
         [Test]
-        public void GetConversationIdRecordingsRecordingIdAnnotationsTest()
+        public void GetConversationRecordingAnnotationTest()
         {
-            // TODO: add unit test for the method 'GetConversationIdRecordingsRecordingIdAnnotations'
+            // TODO: add unit test for the method 'GetConversationRecordingAnnotation'
             string conversationId = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
-            var response = instance.GetConversationIdRecordingsRecordingIdAnnotations(conversationId, recordingId);
+            string annotationId = null; // TODO: replace null with proper value
+            var response = instance.GetConversationRecordingAnnotation(conversationId, recordingId, annotationId);
+            Assert.IsInstanceOf<Annotation> (response, "response is Annotation");
+        }
+        
+        /// <summary>
+        /// Test GetConversationRecordingAnnotations
+        /// </summary>
+        [Test]
+        public void GetConversationRecordingAnnotationsTest()
+        {
+            // TODO: add unit test for the method 'GetConversationRecordingAnnotations'
+            string conversationId = null; // TODO: replace null with proper value
+            string recordingId = null; // TODO: replace null with proper value
+            var response = instance.GetConversationRecordingAnnotations(conversationId, recordingId);
             Assert.IsInstanceOf<List<Annotation>> (response, "response is List<Annotation>");
         }
         
         /// <summary>
-        /// Test GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId
+        /// Test GetConversationRecordings
         /// </summary>
         [Test]
-        public void GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdTest()
+        public void GetConversationRecordingsTest()
         {
-            // TODO: add unit test for the method 'GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId'
+            // TODO: add unit test for the method 'GetConversationRecordings'
             string conversationId = null; // TODO: replace null with proper value
-            string recordingId = null; // TODO: replace null with proper value
-            string annotationId = null; // TODO: replace null with proper value
-            var response = instance.GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId(conversationId, recordingId, annotationId);
-            Assert.IsInstanceOf<Annotation> (response, "response is Annotation");
+            int? maxWaitMs = null; // TODO: replace null with proper value
+            string formatId = null; // TODO: replace null with proper value
+            var response = instance.GetConversationRecordings(conversationId, maxWaitMs, formatId);
+            Assert.IsInstanceOf<List<Recording>> (response, "response is List<Recording>");
         }
         
         /// <summary>
@@ -182,26 +182,26 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetMediaretentionpoliciesPolicyId
+        /// Test GetMediaretentionpolicy
         /// </summary>
         [Test]
-        public void GetMediaretentionpoliciesPolicyIdTest()
+        public void GetMediaretentionpolicyTest()
         {
-            // TODO: add unit test for the method 'GetMediaretentionpoliciesPolicyId'
+            // TODO: add unit test for the method 'GetMediaretentionpolicy'
             string policyId = null; // TODO: replace null with proper value
-            var response = instance.GetMediaretentionpoliciesPolicyId(policyId);
+            var response = instance.GetMediaretentionpolicy(policyId);
             Assert.IsInstanceOf<Policy> (response, "response is Policy");
         }
         
         /// <summary>
-        /// Test GetOrphanId
+        /// Test GetOrphanrecording
         /// </summary>
         [Test]
-        public void GetOrphanIdTest()
+        public void GetOrphanrecordingTest()
         {
-            // TODO: add unit test for the method 'GetOrphanId'
+            // TODO: add unit test for the method 'GetOrphanrecording'
             string orphanId = null; // TODO: replace null with proper value
-            var response = instance.GetOrphanId(orphanId);
+            var response = instance.GetOrphanrecording(orphanId);
             Assert.IsInstanceOf<OrphanRecording> (response, "response is OrphanRecording");
         }
         
@@ -248,42 +248,29 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PatchMediaretentionpoliciesPolicyId
+        /// Test PatchMediaretentionpolicy
         /// </summary>
         [Test]
-        public void PatchMediaretentionpoliciesPolicyIdTest()
+        public void PatchMediaretentionpolicyTest()
         {
-            // TODO: add unit test for the method 'PatchMediaretentionpoliciesPolicyId'
+            // TODO: add unit test for the method 'PatchMediaretentionpolicy'
             string policyId = null; // TODO: replace null with proper value
             Policy body = null; // TODO: replace null with proper value
-            var response = instance.PatchMediaretentionpoliciesPolicyId(policyId, body);
+            var response = instance.PatchMediaretentionpolicy(policyId, body);
             Assert.IsInstanceOf<Policy> (response, "response is Policy");
         }
         
         /// <summary>
-        /// Test PatchsScreensessionsRecordingsessionId
+        /// Test PostConversationRecordingAnnotations
         /// </summary>
         [Test]
-        public void PatchsScreensessionsRecordingsessionIdTest()
+        public void PostConversationRecordingAnnotationsTest()
         {
-            // TODO: add unit test for the method 'PatchsScreensessionsRecordingsessionId'
-            string recordingSessionId = null; // TODO: replace null with proper value
-            ScreenRecordingSessionRequest body = null; // TODO: replace null with proper value
-            instance.PatchsScreensessionsRecordingsessionId(recordingSessionId, body);
-            
-        }
-        
-        /// <summary>
-        /// Test PostConversationIdRecordingsRecordingIdAnnotations
-        /// </summary>
-        [Test]
-        public void PostConversationIdRecordingsRecordingIdAnnotationsTest()
-        {
-            // TODO: add unit test for the method 'PostConversationIdRecordingsRecordingIdAnnotations'
+            // TODO: add unit test for the method 'PostConversationRecordingAnnotations'
             string conversationId = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
             Annotation body = null; // TODO: replace null with proper value
-            var response = instance.PostConversationIdRecordingsRecordingIdAnnotations(conversationId, recordingId, body);
+            var response = instance.PostConversationRecordingAnnotations(conversationId, recordingId, body);
             Assert.IsInstanceOf<Annotation> (response, "response is Annotation");
         }
         
@@ -294,50 +281,50 @@ namespace ININ.PureCloudApi.Test
         public void PostMediaretentionpoliciesTest()
         {
             // TODO: add unit test for the method 'PostMediaretentionpolicies'
-            PolicyCreate body = null; // TODO: replace null with proper value
+            Policy body = null; // TODO: replace null with proper value
             var response = instance.PostMediaretentionpolicies(body);
             Assert.IsInstanceOf<Policy> (response, "response is Policy");
         }
         
         /// <summary>
-        /// Test PutConversationIdRecordingsRecordingId
+        /// Test PutConversationRecording
         /// </summary>
         [Test]
-        public void PutConversationIdRecordingsRecordingIdTest()
+        public void PutConversationRecordingTest()
         {
-            // TODO: add unit test for the method 'PutConversationIdRecordingsRecordingId'
+            // TODO: add unit test for the method 'PutConversationRecording'
             string conversationId = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
             Recording body = null; // TODO: replace null with proper value
-            instance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body);
+            instance.PutConversationRecording(conversationId, recordingId, body);
             
         }
         
         /// <summary>
-        /// Test PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId
+        /// Test PutConversationRecordingAnnotation
         /// </summary>
         [Test]
-        public void PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdTest()
+        public void PutConversationRecordingAnnotationTest()
         {
-            // TODO: add unit test for the method 'PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId'
+            // TODO: add unit test for the method 'PutConversationRecordingAnnotation'
             string conversationId = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
             string annotationId = null; // TODO: replace null with proper value
             Annotation body = null; // TODO: replace null with proper value
-            var response = instance.PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId(conversationId, recordingId, annotationId, body);
+            var response = instance.PutConversationRecordingAnnotation(conversationId, recordingId, annotationId, body);
             Assert.IsInstanceOf<Annotation> (response, "response is Annotation");
         }
         
         /// <summary>
-        /// Test PutMediaretentionpoliciesPolicyId
+        /// Test PutMediaretentionpolicy
         /// </summary>
         [Test]
-        public void PutMediaretentionpoliciesPolicyIdTest()
+        public void PutMediaretentionpolicyTest()
         {
-            // TODO: add unit test for the method 'PutMediaretentionpoliciesPolicyId'
+            // TODO: add unit test for the method 'PutMediaretentionpolicy'
             string policyId = null; // TODO: replace null with proper value
             Policy body = null; // TODO: replace null with proper value
-            var response = instance.PutMediaretentionpoliciesPolicyId(policyId, body);
+            var response = instance.PutMediaretentionpolicy(policyId, body);
             Assert.IsInstanceOf<Policy> (response, "response is Policy");
         }
         

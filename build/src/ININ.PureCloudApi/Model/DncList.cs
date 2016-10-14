@@ -64,21 +64,23 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DncList" /> class.
         /// </summary>
-        /// <param name="Name">The name of the list. (required).</param>
+        /// <param name="Name">Name.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        /// <param name="PhoneNumberColumns">the name of the columns containing the numbers not to be called (required).</param>
         /// <param name="ImportStatus">the status of the import process.</param>
         /// <param name="DncCodes">the list of dnc.com codes to be treated as DNC.</param>
-        public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, List<string> DncCodes = null)
+        public DncList(string Name = null, int? Version = null, List<string> PhoneNumberColumns = null, ImportStatus ImportStatus = null, List<string> DncCodes = null)
         {
-            // to ensure "Name" is required (not null)
-            if (Name == null)
+            // to ensure "PhoneNumberColumns" is required (not null)
+            if (PhoneNumberColumns == null)
             {
-                throw new InvalidDataException("Name is a required property for DncList and cannot be null");
+                throw new InvalidDataException("PhoneNumberColumns is a required property for DncList and cannot be null");
             }
             else
             {
-                this.Name = Name;
+                this.PhoneNumberColumns = PhoneNumberColumns;
             }
+            this.Name = Name;
             this.Version = Version;
             this.ImportStatus = ImportStatus;
             this.DncCodes = DncCodes;
@@ -91,9 +93,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// The name of the list.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The name of the list.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
@@ -114,6 +115,12 @@ namespace ININ.PureCloudApi.Model
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        /// <summary>
+        /// the name of the columns containing the numbers not to be called
+        /// </summary>
+        /// <value>the name of the columns containing the numbers not to be called</value>
+        [DataMember(Name="phoneNumberColumns", EmitDefaultValue=false)]
+        public List<string> PhoneNumberColumns { get; set; }
         /// <summary>
         /// the status of the import process
         /// </summary>
@@ -163,6 +170,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  DncSourceType: ").Append(DncSourceType).Append("\n");
@@ -232,6 +240,11 @@ namespace ININ.PureCloudApi.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
+                    this.PhoneNumberColumns == other.PhoneNumberColumns ||
+                    this.PhoneNumberColumns != null &&
+                    this.PhoneNumberColumns.SequenceEqual(other.PhoneNumberColumns)
+                ) &&
+                (
                     this.ImportStatus == other.ImportStatus ||
                     this.ImportStatus != null &&
                     this.ImportStatus.Equals(other.ImportStatus)
@@ -289,6 +302,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                if (this.PhoneNumberColumns != null)
+                    hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();
                 if (this.Size != null)

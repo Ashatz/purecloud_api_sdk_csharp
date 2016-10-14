@@ -107,30 +107,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'AlternateSpellings'
         }
         /// <summary>
-        /// Test the property 'Pronunciations'
-        /// </summary>
-        [Test]
-        public void PronunciationsTest()
-        {
-            // TODO: unit test for the property 'Pronunciations'
-        }
-        /// <summary>
-        /// Test the property 'AntiWords'
-        /// </summary>
-        [Test]
-        public void AntiWordsTest()
-        {
-            // TODO: unit test for the property 'AntiWords'
-        }
-        /// <summary>
-        /// Test the property 'AntiPronunciations'
-        /// </summary>
-        [Test]
-        public void AntiPronunciationsTest()
-        {
-            // TODO: unit test for the property 'AntiPronunciations'
-        }
-        /// <summary>
         /// Test the property 'SpotabilityIndex'
         /// </summary>
         [Test]

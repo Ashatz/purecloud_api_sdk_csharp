@@ -20,13 +20,8 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentUpdate" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected DocumentUpdate() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentUpdate" /> class.
-        /// </summary>
         /// <param name="ChangeNumber">ChangeNumber.</param>
-        /// <param name="Name">The name of the document (required).</param>
+        /// <param name="Name">Name.</param>
         /// <param name="Read">Read (default to false).</param>
         /// <param name="AddTags">AddTags.</param>
         /// <param name="RemoveTags">RemoveTags.</param>
@@ -36,16 +31,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RemoveAttributes">RemoveAttributes.</param>
         public DocumentUpdate(int? ChangeNumber = null, string Name = null, bool? Read = null, List<string> AddTags = null, List<string> RemoveTags = null, List<string> AddTagIds = null, List<string> RemoveTagIds = null, List<DocumentAttribute> UpdateAttributes = null, List<string> RemoveAttributes = null)
         {
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for DocumentUpdate and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
             this.ChangeNumber = ChangeNumber;
+            this.Name = Name;
             // use default value if no "Read" provided
             if (Read == null)
             {
@@ -69,9 +56,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
         public int? ChangeNumber { get; set; }
         /// <summary>
-        /// The name of the document
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The name of the document</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

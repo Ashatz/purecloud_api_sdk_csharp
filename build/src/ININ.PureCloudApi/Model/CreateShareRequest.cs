@@ -18,9 +18,8 @@ namespace ININ.PureCloudApi.Model
     public partial class CreateShareRequest :  IEquatable<CreateShareRequest>
     {
         /// <summary>
-        /// The share entity type
+        /// Gets or Sets SharedEntityType
         /// </summary>
-        /// <value>The share entity type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SharedEntityTypeEnum
         {
@@ -71,9 +70,8 @@ namespace ININ.PureCloudApi.Model
             Public
         }
         /// <summary>
-        /// The share entity type
+        /// Gets or Sets SharedEntityType
         /// </summary>
-        /// <value>The share entity type</value>
         [DataMember(Name="sharedEntityType", EmitDefaultValue=false)]
         public SharedEntityTypeEnum? SharedEntityType { get; set; }
         /// <summary>
@@ -84,51 +82,28 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateShareRequest" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected CreateShareRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CreateShareRequest" /> class.
-        /// </summary>
-        /// <param name="SharedEntityType">The share entity type (required).</param>
-        /// <param name="SharedEntity">The entity that will be shared (required).</param>
+        /// <param name="SharedEntityType">SharedEntityType.</param>
+        /// <param name="SharedEntity">SharedEntity.</param>
         /// <param name="MemberType">MemberType.</param>
-        /// <param name="Member">The member that will have access to this share. Only required if a list of members is not provided..</param>
+        /// <param name="Member">Member.</param>
         /// <param name="Members">Members.</param>
         public CreateShareRequest(SharedEntityTypeEnum? SharedEntityType = null, SharedEntity SharedEntity = null, MemberTypeEnum? MemberType = null, SharedEntity Member = null, List<CreateShareRequestMember> Members = null)
         {
-            // to ensure "SharedEntityType" is required (not null)
-            if (SharedEntityType == null)
-            {
-                throw new InvalidDataException("SharedEntityType is a required property for CreateShareRequest and cannot be null");
-            }
-            else
-            {
-                this.SharedEntityType = SharedEntityType;
-            }
-            // to ensure "SharedEntity" is required (not null)
-            if (SharedEntity == null)
-            {
-                throw new InvalidDataException("SharedEntity is a required property for CreateShareRequest and cannot be null");
-            }
-            else
-            {
-                this.SharedEntity = SharedEntity;
-            }
+            this.SharedEntityType = SharedEntityType;
+            this.SharedEntity = SharedEntity;
             this.MemberType = MemberType;
             this.Member = Member;
             this.Members = Members;
         }
         
         /// <summary>
-        /// The entity that will be shared
+        /// Gets or Sets SharedEntity
         /// </summary>
-        /// <value>The entity that will be shared</value>
         [DataMember(Name="sharedEntity", EmitDefaultValue=false)]
         public SharedEntity SharedEntity { get; set; }
         /// <summary>
-        /// The member that will have access to this share. Only required if a list of members is not provided.
+        /// Gets or Sets Member
         /// </summary>
-        /// <value>The member that will have access to this share. Only required if a list of members is not provided.</value>
         [DataMember(Name="member", EmitDefaultValue=false)]
         public SharedEntity Member { get; set; }
         /// <summary>

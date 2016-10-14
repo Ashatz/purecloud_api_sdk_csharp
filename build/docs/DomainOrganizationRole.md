@@ -16,7 +16,6 @@ title: DomainOrganizationRole
 | **UserCount** | **int?** |  | [optional] |
 | **RoleNeedsUpdate** | **bool?** |  | [optional] [default to false]|
 | **_Default** | **bool?** |  | [optional] [default to false]|
-| **_Base** | **bool?** |  | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

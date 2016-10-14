@@ -18,9 +18,8 @@ namespace ININ.PureCloudApi.Model
     public partial class AcwSettings :  IEquatable<AcwSettings>
     {
         /// <summary>
-        /// This field controls how the UI prompts the agent for a wrapup.
+        /// Gets or Sets WrapupPrompt
         /// </summary>
-        /// <value>This field controls how the UI prompts the agent for a wrapup.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum WrapupPromptEnum
         {
@@ -57,16 +56,15 @@ namespace ININ.PureCloudApi.Model
             MandatoryForcedTimeout
         }
         /// <summary>
-        /// This field controls how the UI prompts the agent for a wrapup.
+        /// Gets or Sets WrapupPrompt
         /// </summary>
-        /// <value>This field controls how the UI prompts the agent for a wrapup.</value>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public WrapupPromptEnum? WrapupPrompt { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AcwSettings" /> class.
         /// </summary>
-        /// <param name="WrapupPrompt">This field controls how the UI prompts the agent for a wrapup..</param>
-        /// <param name="TimeoutMs">The amount of time the agent can stay in ACW (Min: 1 sec, Max: 1 day).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT..</param>
+        /// <param name="WrapupPrompt">WrapupPrompt.</param>
+        /// <param name="TimeoutMs">TimeoutMs.</param>
         public AcwSettings(WrapupPromptEnum? WrapupPrompt = null, int? TimeoutMs = null)
         {
             this.WrapupPrompt = WrapupPrompt;
@@ -74,9 +72,8 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// The amount of time the agent can stay in ACW (Min: 1 sec, Max: 1 day).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT.
+        /// Gets or Sets TimeoutMs
         /// </summary>
-        /// <value>The amount of time the agent can stay in ACW (Min: 1 sec, Max: 1 day).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT.</value>
         [DataMember(Name="timeoutMs", EmitDefaultValue=false)]
         public int? TimeoutMs { get; set; }
         /// <summary>

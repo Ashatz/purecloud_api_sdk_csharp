@@ -51,22 +51,6 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Test]
-        public void IdTest()
-        {
-            // TODO: unit test for the property 'Id'
-        }
-        /// <summary>
-        /// Test the property 'Name'
-        /// </summary>
-        [Test]
-        public void NameTest()
-        {
-            // TODO: unit test for the property 'Name'
-        }
-        /// <summary>
         /// Test the property 'User'
         /// </summary>
         [Test]
@@ -97,14 +81,6 @@ namespace ININ.PureCloudApi.Test
         public void StartTimeTest()
         {
             // TODO: unit test for the property 'StartTime'
-        }
-        /// <summary>
-        /// Test the property 'SelfUri'
-        /// </summary>
-        [Test]
-        public void SelfUriTest()
-        {
-            // TODO: unit test for the property 'SelfUri'
         }
 
     }

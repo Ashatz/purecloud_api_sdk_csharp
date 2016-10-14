@@ -20,74 +20,25 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditMessage" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected AuditMessage() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AuditMessage" /> class.
-        /// </summary>
-        /// <param name="Id">AuditMessage ID. (required).</param>
+        /// <param name="Id">Id.</param>
         /// <param name="User">User.</param>
-        /// <param name="CorrelationId">Correlation ID..</param>
-        /// <param name="TransactionId">Transaction ID..</param>
-        /// <param name="TransactionInitiator">Whether or not this audit can be considered the initiator of the transaction it is a part of. (default to false).</param>
-        /// <param name="Application">The application through which the action of this AuditMessage was initiated..</param>
-        /// <param name="ServiceName">The name of the service which sent this AuditMessage. (required).</param>
-        /// <param name="Level">The level of this audit. USER or SYSTEM. (required).</param>
-        /// <param name="Timestamp">The time at which the action of this AuditMessage was initiated..</param>
-        /// <param name="ReceivedTimestamp">The time at which this AuditMessage was received. (required).</param>
-        /// <param name="Status">The status of the action of this AuditMessage (required).</param>
-        /// <param name="ActionContext">The context of a system-level action.</param>
-        /// <param name="Action">A string representing the action that took place.</param>
-        /// <param name="Changes">Details about any changes that occurred in this audit.</param>
+        /// <param name="CorrelationId">CorrelationId.</param>
+        /// <param name="TransactionId">TransactionId.</param>
+        /// <param name="TransactionInitiator">TransactionInitiator (default to false).</param>
+        /// <param name="Application">Application.</param>
+        /// <param name="ServiceName">ServiceName.</param>
+        /// <param name="Level">Level.</param>
+        /// <param name="Timestamp">Timestamp.</param>
+        /// <param name="ReceivedTimestamp">ReceivedTimestamp.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="ActionContext">ActionContext.</param>
+        /// <param name="Action">Action.</param>
+        /// <param name="Changes">Changes.</param>
         /// <param name="Entity">Entity.</param>
-        /// <param name="ServiceContext">The service-specific context associated with this AuditMessage..</param>
+        /// <param name="ServiceContext">ServiceContext.</param>
         public AuditMessage(string Id = null, AuditUser User = null, string CorrelationId = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, string Level = null, string Timestamp = null, string ReceivedTimestamp = null, string Status = null, string ActionContext = null, string Action = null, List<Change> Changes = null, AuditEntity Entity = null, ServiceContext ServiceContext = null)
         {
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for AuditMessage and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            // to ensure "ServiceName" is required (not null)
-            if (ServiceName == null)
-            {
-                throw new InvalidDataException("ServiceName is a required property for AuditMessage and cannot be null");
-            }
-            else
-            {
-                this.ServiceName = ServiceName;
-            }
-            // to ensure "Level" is required (not null)
-            if (Level == null)
-            {
-                throw new InvalidDataException("Level is a required property for AuditMessage and cannot be null");
-            }
-            else
-            {
-                this.Level = Level;
-            }
-            // to ensure "ReceivedTimestamp" is required (not null)
-            if (ReceivedTimestamp == null)
-            {
-                throw new InvalidDataException("ReceivedTimestamp is a required property for AuditMessage and cannot be null");
-            }
-            else
-            {
-                this.ReceivedTimestamp = ReceivedTimestamp;
-            }
-            // to ensure "Status" is required (not null)
-            if (Status == null)
-            {
-                throw new InvalidDataException("Status is a required property for AuditMessage and cannot be null");
-            }
-            else
-            {
-                this.Status = Status;
-            }
+            this.Id = Id;
             this.User = User;
             this.CorrelationId = CorrelationId;
             this.TransactionId = TransactionId;
@@ -101,7 +52,11 @@ namespace ININ.PureCloudApi.Model
                 this.TransactionInitiator = TransactionInitiator;
             }
             this.Application = Application;
+            this.ServiceName = ServiceName;
+            this.Level = Level;
             this.Timestamp = Timestamp;
+            this.ReceivedTimestamp = ReceivedTimestamp;
+            this.Status = Status;
             this.ActionContext = ActionContext;
             this.Action = Action;
             this.Changes = Changes;
@@ -110,9 +65,8 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// AuditMessage ID.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>AuditMessage ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         /// <summary>
@@ -121,75 +75,63 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="user", EmitDefaultValue=false)]
         public AuditUser User { get; set; }
         /// <summary>
-        /// Correlation ID.
+        /// Gets or Sets CorrelationId
         /// </summary>
-        /// <value>Correlation ID.</value>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
         /// <summary>
-        /// Transaction ID.
+        /// Gets or Sets TransactionId
         /// </summary>
-        /// <value>Transaction ID.</value>
         [DataMember(Name="transactionId", EmitDefaultValue=false)]
         public string TransactionId { get; set; }
         /// <summary>
-        /// Whether or not this audit can be considered the initiator of the transaction it is a part of.
+        /// Gets or Sets TransactionInitiator
         /// </summary>
-        /// <value>Whether or not this audit can be considered the initiator of the transaction it is a part of.</value>
         [DataMember(Name="transactionInitiator", EmitDefaultValue=false)]
         public bool? TransactionInitiator { get; set; }
         /// <summary>
-        /// The application through which the action of this AuditMessage was initiated.
+        /// Gets or Sets Application
         /// </summary>
-        /// <value>The application through which the action of this AuditMessage was initiated.</value>
         [DataMember(Name="application", EmitDefaultValue=false)]
         public string Application { get; set; }
         /// <summary>
-        /// The name of the service which sent this AuditMessage.
+        /// Gets or Sets ServiceName
         /// </summary>
-        /// <value>The name of the service which sent this AuditMessage.</value>
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public string ServiceName { get; set; }
         /// <summary>
-        /// The level of this audit. USER or SYSTEM.
+        /// Gets or Sets Level
         /// </summary>
-        /// <value>The level of this audit. USER or SYSTEM.</value>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public string Level { get; set; }
         /// <summary>
-        /// The time at which the action of this AuditMessage was initiated.
+        /// Gets or Sets Timestamp
         /// </summary>
-        /// <value>The time at which the action of this AuditMessage was initiated.</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public string Timestamp { get; set; }
         /// <summary>
-        /// The time at which this AuditMessage was received.
+        /// Gets or Sets ReceivedTimestamp
         /// </summary>
-        /// <value>The time at which this AuditMessage was received.</value>
         [DataMember(Name="receivedTimestamp", EmitDefaultValue=false)]
         public string ReceivedTimestamp { get; set; }
         /// <summary>
-        /// The status of the action of this AuditMessage
+        /// Gets or Sets Status
         /// </summary>
-        /// <value>The status of the action of this AuditMessage</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
         /// <summary>
-        /// The context of a system-level action
+        /// Gets or Sets ActionContext
         /// </summary>
-        /// <value>The context of a system-level action</value>
         [DataMember(Name="actionContext", EmitDefaultValue=false)]
         public string ActionContext { get; set; }
         /// <summary>
-        /// A string representing the action that took place
+        /// Gets or Sets Action
         /// </summary>
-        /// <value>A string representing the action that took place</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
         /// <summary>
-        /// Details about any changes that occurred in this audit
+        /// Gets or Sets Changes
         /// </summary>
-        /// <value>Details about any changes that occurred in this audit</value>
         [DataMember(Name="changes", EmitDefaultValue=false)]
         public List<Change> Changes { get; set; }
         /// <summary>
@@ -198,9 +140,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditEntity Entity { get; set; }
         /// <summary>
-        /// The service-specific context associated with this AuditMessage.
+        /// Gets or Sets ServiceContext
         /// </summary>
-        /// <value>The service-specific context associated with this AuditMessage.</value>
         [DataMember(Name="serviceContext", EmitDefaultValue=false)]
         public ServiceContext ServiceContext { get; set; }
         /// <summary>

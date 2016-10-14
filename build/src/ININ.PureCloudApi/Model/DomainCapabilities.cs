@@ -20,11 +20,10 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainCapabilities" /> class.
         /// </summary>
-        /// <param name="Enabled">True if this address family on the interface is enabled. (default to false).</param>
-        /// <param name="Dhcp">True if this address family on the interface is using DHCP. (default to false).</param>
-        /// <param name="Metric">The metric being used for the address family on this interface. Lower values will have a higher priority. If autoMetric is true, this value will be the automatically calculated metric. To set this value be sure autoMetric is false. If no value is returned, metric configuration is not supported on this Edge..</param>
-        /// <param name="AutoMetric">True if the metric is being calculated automatically for the address family on this interface. (default to false).</param>
-        public DomainCapabilities(bool? Enabled = null, bool? Dhcp = null, int? Metric = null, bool? AutoMetric = null)
+        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Dhcp">Dhcp (default to false).</param>
+        /// <param name="Metric">Metric.</param>
+        public DomainCapabilities(bool? Enabled = null, bool? Dhcp = null, int? Metric = null)
         {
             // use default value if no "Enabled" provided
             if (Enabled == null)
@@ -45,47 +44,23 @@ namespace ININ.PureCloudApi.Model
                 this.Dhcp = Dhcp;
             }
             this.Metric = Metric;
-            // use default value if no "AutoMetric" provided
-            if (AutoMetric == null)
-            {
-                this.AutoMetric = false;
-            }
-            else
-            {
-                this.AutoMetric = AutoMetric;
-            }
         }
         
         /// <summary>
-        /// True if this address family on the interface is enabled.
+        /// Gets or Sets Enabled
         /// </summary>
-        /// <value>True if this address family on the interface is enabled.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
         /// <summary>
-        /// True if this address family on the interface is using DHCP.
+        /// Gets or Sets Dhcp
         /// </summary>
-        /// <value>True if this address family on the interface is using DHCP.</value>
         [DataMember(Name="dhcp", EmitDefaultValue=false)]
         public bool? Dhcp { get; set; }
         /// <summary>
-        /// The metric being used for the address family on this interface. Lower values will have a higher priority. If autoMetric is true, this value will be the automatically calculated metric. To set this value be sure autoMetric is false. If no value is returned, metric configuration is not supported on this Edge.
+        /// Gets or Sets Metric
         /// </summary>
-        /// <value>The metric being used for the address family on this interface. Lower values will have a higher priority. If autoMetric is true, this value will be the automatically calculated metric. To set this value be sure autoMetric is false. If no value is returned, metric configuration is not supported on this Edge.</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public int? Metric { get; set; }
-        /// <summary>
-        /// True if the metric is being calculated automatically for the address family on this interface.
-        /// </summary>
-        /// <value>True if the metric is being calculated automatically for the address family on this interface.</value>
-        [DataMember(Name="autoMetric", EmitDefaultValue=false)]
-        public bool? AutoMetric { get; set; }
-        /// <summary>
-        /// True if metric configuration is supported.
-        /// </summary>
-        /// <value>True if metric configuration is supported.</value>
-        [DataMember(Name="supportsMetric", EmitDefaultValue=false)]
-        public bool? SupportsMetric { get; private set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -97,8 +72,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Dhcp: ").Append(Dhcp).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
-            sb.Append("  AutoMetric: ").Append(AutoMetric).Append("\n");
-            sb.Append("  SupportsMetric: ").Append(SupportsMetric).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,16 +122,6 @@ namespace ININ.PureCloudApi.Model
                     this.Metric == other.Metric ||
                     this.Metric != null &&
                     this.Metric.Equals(other.Metric)
-                ) &&
-                (
-                    this.AutoMetric == other.AutoMetric ||
-                    this.AutoMetric != null &&
-                    this.AutoMetric.Equals(other.AutoMetric)
-                ) &&
-                (
-                    this.SupportsMetric == other.SupportsMetric ||
-                    this.SupportsMetric != null &&
-                    this.SupportsMetric.Equals(other.SupportsMetric)
                 );
         }
 
@@ -179,10 +142,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Dhcp.GetHashCode();
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
-                if (this.AutoMetric != null)
-                    hash = hash * 59 + this.AutoMetric.GetHashCode();
-                if (this.SupportsMetric != null)
-                    hash = hash * 59 + this.SupportsMetric.GetHashCode();
                 return hash;
             }
         }

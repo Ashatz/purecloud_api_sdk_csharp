@@ -7,10 +7,10 @@ title: AuditFilter
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** | The name of the field by which to filter. | |
-| **Type** | **string** | The type of the filter, DATE or STRING. | |
-| **_Operator** | **string** | The operation that the filter performs. | |
-| **Values** | **List&lt;string&gt;** | The values to make the filter comparison against. | |
+| **Name** | **string** |  | [optional] |
+| **Type** | **string** |  | [optional] |
+| **_Operator** | **string** |  | [optional] |
+| **Values** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

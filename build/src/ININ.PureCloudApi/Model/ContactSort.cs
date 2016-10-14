@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="FieldName">FieldName.</param>
         /// <param name="Direction">Direction.</param>
-        /// <param name="Numeric">Whether that column contains numeric data (default to false).</param>
+        /// <param name="Numeric">Numeric (default to false).</param>
         public ContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null)
         {
             this.FieldName = FieldName;
@@ -75,9 +75,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
         /// <summary>
-        /// Whether that column contains numeric data
+        /// Gets or Sets Numeric
         /// </summary>
-        /// <value>Whether that column contains numeric data</value>
         [DataMember(Name="numeric", EmitDefaultValue=false)]
         public bool? Numeric { get; set; }
         /// <summary>

@@ -122,14 +122,6 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'Questions'
         }
-        /// <summary>
-        /// Test the property 'VisibilityCondition'
-        /// </summary>
-        [Test]
-        public void VisibilityConditionTest()
-        {
-            // TODO: unit test for the property 'VisibilityCondition'
-        }
 
     }
 

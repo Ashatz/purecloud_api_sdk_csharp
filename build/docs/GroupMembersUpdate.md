@@ -7,8 +7,8 @@ title: GroupMembersUpdate
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **MemberIds** | **List&lt;string&gt;** | A list of the ids of the members to add. | |
-| **Version** | **int?** | The current group version. | |
+| **MemberIds** | **List&lt;string&gt;** |  | [optional] |
+| **Version** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
 

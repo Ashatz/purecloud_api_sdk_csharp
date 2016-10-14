@@ -20,69 +20,45 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Segment" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Segment() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Segment" /> class.
-        /// </summary>
-        /// <param name="StartTime">The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        /// <param name="EndTime">The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
-        /// <param name="Type">The activity taking place for the participant in the segment..</param>
-        /// <param name="HowEnded">A description of the event that ended the segment..</param>
-        /// <param name="DisconnectType">A description of the event that disconnected the segment.</param>
+        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="HowEnded">HowEnded.</param>
+        /// <param name="DisconnectType">DisconnectType.</param>
         public Segment(DateTime? StartTime = null, DateTime? EndTime = null, string Type = null, string HowEnded = null, string DisconnectType = null)
         {
-            // to ensure "StartTime" is required (not null)
-            if (StartTime == null)
-            {
-                throw new InvalidDataException("StartTime is a required property for Segment and cannot be null");
-            }
-            else
-            {
-                this.StartTime = StartTime;
-            }
-            // to ensure "EndTime" is required (not null)
-            if (EndTime == null)
-            {
-                throw new InvalidDataException("EndTime is a required property for Segment and cannot be null");
-            }
-            else
-            {
-                this.EndTime = EndTime;
-            }
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
             this.Type = Type;
             this.HowEnded = HowEnded;
             this.DisconnectType = DisconnectType;
         }
         
         /// <summary>
-        /// The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
         /// <summary>
-        /// The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
         /// <summary>
-        /// The activity taking place for the participant in the segment.
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>The activity taking place for the participant in the segment.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         /// <summary>
-        /// A description of the event that ended the segment.
+        /// Gets or Sets HowEnded
         /// </summary>
-        /// <value>A description of the event that ended the segment.</value>
         [DataMember(Name="howEnded", EmitDefaultValue=false)]
         public string HowEnded { get; set; }
         /// <summary>
-        /// A description of the event that disconnected the segment
+        /// Gets or Sets DisconnectType
         /// </summary>
-        /// <value>A description of the event that disconnected the segment</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public string DisconnectType { get; set; }
         /// <summary>

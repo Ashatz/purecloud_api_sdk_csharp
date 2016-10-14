@@ -20,10 +20,10 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditSearchResult" /> class.
         /// </summary>
-        /// <param name="PageNumber">Which page was returned..</param>
-        /// <param name="PageSize">The number of results in a page..</param>
-        /// <param name="Total">The total number of results..</param>
-        /// <param name="PageCount">The number of pages of results..</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="Total">Total.</param>
+        /// <param name="PageCount">PageCount.</param>
         /// <param name="FacetInfo">FacetInfo.</param>
         /// <param name="AuditMessages">AuditMessages.</param>
         public AuditSearchResult(int? PageNumber = null, int? PageSize = null, int? Total = null, int? PageCount = null, List<FacetInfo> FacetInfo = null, List<AuditMessage> AuditMessages = null)
@@ -37,27 +37,23 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Which page was returned.
+        /// Gets or Sets PageNumber
         /// </summary>
-        /// <value>Which page was returned.</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
         /// <summary>
-        /// The number of results in a page.
+        /// Gets or Sets PageSize
         /// </summary>
-        /// <value>The number of results in a page.</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
         /// <summary>
-        /// The total number of results.
+        /// Gets or Sets Total
         /// </summary>
-        /// <value>The total number of results.</value>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public int? Total { get; set; }
         /// <summary>
-        /// The number of pages of results.
+        /// Gets or Sets PageCount
         /// </summary>
-        /// <value>The number of pages of results.</value>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
         /// <summary>

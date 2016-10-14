@@ -20,9 +20,9 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobRequest" /> class.
         /// </summary>
-        /// <param name="Path">A relative directory to the root Edge log folder to query from..</param>
-        /// <param name="Query">The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter..</param>
-        /// <param name="Recurse">Boolean whether or not to recurse into directories. (default to false).</param>
+        /// <param name="Path">Path.</param>
+        /// <param name="Query">Query.</param>
+        /// <param name="Recurse">Recurse (default to false).</param>
         public EdgeLogsJobRequest(string Path = null, string Query = null, bool? Recurse = null)
         {
             this.Path = Path;
@@ -39,21 +39,18 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// A relative directory to the root Edge log folder to query from.
+        /// Gets or Sets Path
         /// </summary>
-        /// <value>A relative directory to the root Edge log folder to query from.</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
         /// <summary>
-        /// The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter.
+        /// Gets or Sets Query
         /// </summary>
-        /// <value>The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter.</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public string Query { get; set; }
         /// <summary>
-        /// Boolean whether or not to recurse into directories.
+        /// Gets or Sets Recurse
         /// </summary>
-        /// <value>Boolean whether or not to recurse into directories.</value>
         [DataMember(Name="recurse", EmitDefaultValue=false)]
         public bool? Recurse { get; set; }
         /// <summary>

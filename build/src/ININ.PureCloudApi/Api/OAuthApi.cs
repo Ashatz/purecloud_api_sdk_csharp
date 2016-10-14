@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns></returns>
-        void DeleteClientsClientId (string clientId);
+        void DeleteClient (string clientId);
 
         /// <summary>
         /// Delete OAuth Client
@@ -34,7 +34,28 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteClientsClientIdWithHttpInfo (string clientId);
+        ApiResponse<Object> DeleteClientWithHttpInfo (string clientId);
+        /// <summary>
+        /// Get OAuth Client
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">Client ID</param>
+        /// <returns>OAuthClient</returns>
+        OAuthClient GetClient (string clientId);
+
+        /// <summary>
+        /// Get OAuth Client
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">Client ID</param>
+        /// <returns>ApiResponse of OAuthClient</returns>
+        ApiResponse<OAuthClient> GetClientWithHttpInfo (string clientId);
         /// <summary>
         /// The list of OAuth clients
         /// </summary>
@@ -55,26 +76,26 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of OAuthClientEntityListing</returns>
         ApiResponse<OAuthClientEntityListing> GetClientsWithHttpInfo ();
         /// <summary>
-        /// Get OAuth Client
+        /// Regenerate Client Secret
         /// </summary>
         /// <remarks>
-        /// 
+        /// This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <returns>OAuthClient</returns>
-        OAuthClient GetClientsClientId (string clientId);
+        /// <returns></returns>
+        void PostClientSecret (string clientId);
 
         /// <summary>
-        /// Get OAuth Client
+        /// Regenerate Client Secret
         /// </summary>
         /// <remarks>
-        /// 
+        /// This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <returns>ApiResponse of OAuthClient</returns>
-        ApiResponse<OAuthClient> GetClientsClientIdWithHttpInfo (string clientId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostClientSecretWithHttpInfo (string clientId);
         /// <summary>
         /// Create OAuth client
         /// </summary>
@@ -97,27 +118,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of OAuthClient</returns>
         ApiResponse<OAuthClient> PostClientsWithHttpInfo (OAuthClient body);
         /// <summary>
-        /// Regenerate Client Secret
-        /// </summary>
-        /// <remarks>
-        /// This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client ID</param>
-        /// <returns></returns>
-        void PostClientsClientIdSecret (string clientId);
-
-        /// <summary>
-        /// Regenerate Client Secret
-        /// </summary>
-        /// <remarks>
-        /// This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostClientsClientIdSecretWithHttpInfo (string clientId);
-        /// <summary>
         /// Update OAuth Client
         /// </summary>
         /// <remarks>
@@ -127,7 +127,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        OAuthClient PutClientsClientId (string clientId, OAuthClient body);
+        OAuthClient PutClient (string clientId, OAuthClient body);
 
         /// <summary>
         /// Update OAuth Client
@@ -139,7 +139,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        ApiResponse<OAuthClient> PutClientsClientIdWithHttpInfo (string clientId, OAuthClient body);
+        ApiResponse<OAuthClient> PutClientWithHttpInfo (string clientId, OAuthClient body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -151,7 +151,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteClientsClientIdAsync (string clientId);
+        System.Threading.Tasks.Task DeleteClientAsync (string clientId);
 
         /// <summary>
         /// Delete OAuth Client
@@ -162,7 +162,28 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteClientsClientIdAsyncWithHttpInfo (string clientId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteClientAsyncWithHttpInfo (string clientId);
+        /// <summary>
+        /// Get OAuth Client
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">Client ID</param>
+        /// <returns>Task of OAuthClient</returns>
+        System.Threading.Tasks.Task<OAuthClient> GetClientAsync (string clientId);
+
+        /// <summary>
+        /// Get OAuth Client
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">Client ID</param>
+        /// <returns>Task of ApiResponse (OAuthClient)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> GetClientAsyncWithHttpInfo (string clientId);
         /// <summary>
         /// The list of OAuth clients
         /// </summary>
@@ -183,26 +204,26 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (OAuthClientEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthClientEntityListing>> GetClientsAsyncWithHttpInfo ();
         /// <summary>
-        /// Get OAuth Client
+        /// Regenerate Client Secret
         /// </summary>
         /// <remarks>
-        /// 
+        /// This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <returns>Task of OAuthClient</returns>
-        System.Threading.Tasks.Task<OAuthClient> GetClientsClientIdAsync (string clientId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostClientSecretAsync (string clientId);
 
         /// <summary>
-        /// Get OAuth Client
+        /// Regenerate Client Secret
         /// </summary>
         /// <remarks>
-        /// 
+        /// This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> GetClientsClientIdAsyncWithHttpInfo (string clientId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostClientSecretAsyncWithHttpInfo (string clientId);
         /// <summary>
         /// Create OAuth client
         /// </summary>
@@ -225,27 +246,6 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PostClientsAsyncWithHttpInfo (OAuthClient body);
         /// <summary>
-        /// Regenerate Client Secret
-        /// </summary>
-        /// <remarks>
-        /// This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client ID</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostClientsClientIdSecretAsync (string clientId);
-
-        /// <summary>
-        /// Regenerate Client Secret
-        /// </summary>
-        /// <remarks>
-        /// This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client ID</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostClientsClientIdSecretAsyncWithHttpInfo (string clientId);
-        /// <summary>
         /// Update OAuth Client
         /// </summary>
         /// <remarks>
@@ -255,7 +255,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        System.Threading.Tasks.Task<OAuthClient> PutClientsClientIdAsync (string clientId, OAuthClient body);
+        System.Threading.Tasks.Task<OAuthClient> PutClientAsync (string clientId, OAuthClient body);
 
         /// <summary>
         /// Update OAuth Client
@@ -267,7 +267,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutClientsClientIdAsyncWithHttpInfo (string clientId, OAuthClient body);
+        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutClientAsyncWithHttpInfo (string clientId, OAuthClient body);
         #endregion Asynchronous Operations
     }
 
@@ -364,9 +364,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns></returns>
-        public void DeleteClientsClientId (string clientId)
+        public void DeleteClient (string clientId)
         {
-             DeleteClientsClientIdWithHttpInfo(clientId);
+             DeleteClientWithHttpInfo(clientId);
         }
 
         /// <summary>
@@ -375,11 +375,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteClientsClientIdWithHttpInfo (string clientId)
+        public ApiResponse<Object> DeleteClientWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->DeleteClientsClientId");
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->DeleteClient");
 
             var localVarPath = "/api/v2/oauth/clients/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -422,14 +422,16 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteClientsClientId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteClient: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteClientsClientId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteClient: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
         }
 
@@ -439,9 +441,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteClientsClientIdAsync (string clientId)
+        public async System.Threading.Tasks.Task DeleteClientAsync (string clientId)
         {
-             await DeleteClientsClientIdAsyncWithHttpInfo(clientId);
+             await DeleteClientAsyncWithHttpInfo(clientId);
 
         }
 
@@ -451,11 +453,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteClientsClientIdAsyncWithHttpInfo (string clientId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteClientAsyncWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->DeleteClientsClientId");
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->DeleteClient");
 
             var localVarPath = "/api/v2/oauth/clients/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -498,15 +500,174 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteClientsClientId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteClient: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteClientsClientId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteClient: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
+        }
+
+        /// <summary>
+        /// Get OAuth Client 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">Client ID</param>
+        /// <returns>OAuthClient</returns>
+        public OAuthClient GetClient (string clientId)
+        {
+             ApiResponse<OAuthClient> localVarResponse = GetClientWithHttpInfo(clientId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get OAuth Client 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">Client ID</param>
+        /// <returns>ApiResponse of OAuthClient</returns>
+        public ApiResponse< OAuthClient > GetClientWithHttpInfo (string clientId)
+        {
+            // verify the required parameter 'clientId' is set
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetClient");
+
+            var localVarPath = "/api/v2/oauth/clients/{clientId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetClient: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetClient: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthClient>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClient)));
+            
+        }
+
+        /// <summary>
+        /// Get OAuth Client 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">Client ID</param>
+        /// <returns>Task of OAuthClient</returns>
+        public async System.Threading.Tasks.Task<OAuthClient> GetClientAsync (string clientId)
+        {
+             ApiResponse<OAuthClient> localVarResponse = await GetClientAsyncWithHttpInfo(clientId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get OAuth Client 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">Client ID</param>
+        /// <returns>Task of ApiResponse (OAuthClient)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> GetClientAsyncWithHttpInfo (string clientId)
+        {
+            // verify the required parameter 'clientId' is set
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetClient");
+
+            var localVarPath = "/api/v2/oauth/clients/{clientId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetClient: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetClient: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthClient>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClient)));
+            
         }
 
         /// <summary>
@@ -568,13 +729,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetClients: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetClients: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetClients: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OAuthClientEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OAuthClientEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClientEntityListing)));
             
         }
@@ -639,42 +802,43 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetClients: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetClients: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetClients: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OAuthClientEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OAuthClientEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClientEntityListing)));
             
         }
 
         /// <summary>
-        /// Get OAuth Client 
+        /// Regenerate Client Secret This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <returns>OAuthClient</returns>
-        public OAuthClient GetClientsClientId (string clientId)
+        /// <returns></returns>
+        public void PostClientSecret (string clientId)
         {
-             ApiResponse<OAuthClient> localVarResponse = GetClientsClientIdWithHttpInfo(clientId);
-             return localVarResponse.Data;
+             PostClientSecretWithHttpInfo(clientId);
         }
 
         /// <summary>
-        /// Get OAuth Client 
+        /// Regenerate Client Secret This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <returns>ApiResponse of OAuthClient</returns>
-        public ApiResponse< OAuthClient > GetClientsClientIdWithHttpInfo (string clientId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostClientSecretWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetClientsClientId");
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PostClientSecret");
 
-            var localVarPath = "/api/v2/oauth/clients/{clientId}";
+            var localVarPath = "/api/v2/oauth/clients/{clientId}/secret";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -710,48 +874,49 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetClientsClientId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostClientSecret: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetClientsClientId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostClientSecret: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthClient>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClient)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
-        /// Get OAuth Client 
+        /// Regenerate Client Secret This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <returns>Task of OAuthClient</returns>
-        public async System.Threading.Tasks.Task<OAuthClient> GetClientsClientIdAsync (string clientId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostClientSecretAsync (string clientId)
         {
-             ApiResponse<OAuthClient> localVarResponse = await GetClientsClientIdAsyncWithHttpInfo(clientId);
-             return localVarResponse.Data;
+             await PostClientSecretAsyncWithHttpInfo(clientId);
 
         }
 
         /// <summary>
-        /// Get OAuth Client 
+        /// Regenerate Client Secret This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
-        /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> GetClientsClientIdAsyncWithHttpInfo (string clientId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostClientSecretAsyncWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetClientsClientId");
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PostClientSecret");
 
-            var localVarPath = "/api/v2/oauth/clients/{clientId}";
+            var localVarPath = "/api/v2/oauth/clients/{clientId}/secret";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -787,20 +952,22 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetClientsClientId: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetClientsClientId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
 
-            return new ApiResponse<OAuthClient>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClient)));
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostClientSecret: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostClientSecret: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -875,13 +1042,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostClients: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostClients: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostClients: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OAuthClient>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClient)));
             
         }
@@ -959,166 +1128,17 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostClients: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostClients: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostClients: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OAuthClient>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClient)));
             
-        }
-
-        /// <summary>
-        /// Regenerate Client Secret This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client ID</param>
-        /// <returns></returns>
-        public void PostClientsClientIdSecret (string clientId)
-        {
-             PostClientsClientIdSecretWithHttpInfo(clientId);
-        }
-
-        /// <summary>
-        /// Regenerate Client Secret This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostClientsClientIdSecretWithHttpInfo (string clientId)
-        {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PostClientsClientIdSecret");
-
-            var localVarPath = "/api/v2/oauth/clients/{clientId}/secret";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostClientsClientIdSecret: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostClientsClientIdSecret: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Regenerate Client Secret This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client ID</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostClientsClientIdSecretAsync (string clientId)
-        {
-             await PostClientsClientIdSecretAsyncWithHttpInfo(clientId);
-
-        }
-
-        /// <summary>
-        /// Regenerate Client Secret This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="clientId">Client ID</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostClientsClientIdSecretAsyncWithHttpInfo (string clientId)
-        {
-            // verify the required parameter 'clientId' is set
-            if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PostClientsClientIdSecret");
-
-            var localVarPath = "/api/v2/oauth/clients/{clientId}/secret";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostClientsClientIdSecret: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostClientsClientIdSecret: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
         }
 
         /// <summary>
@@ -1128,9 +1148,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        public OAuthClient PutClientsClientId (string clientId, OAuthClient body)
+        public OAuthClient PutClient (string clientId, OAuthClient body)
         {
-             ApiResponse<OAuthClient> localVarResponse = PutClientsClientIdWithHttpInfo(clientId, body);
+             ApiResponse<OAuthClient> localVarResponse = PutClientWithHttpInfo(clientId, body);
              return localVarResponse.Data;
         }
 
@@ -1141,14 +1161,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        public ApiResponse< OAuthClient > PutClientsClientIdWithHttpInfo (string clientId, OAuthClient body)
+        public ApiResponse< OAuthClient > PutClientWithHttpInfo (string clientId, OAuthClient body)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PutClientsClientId");
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PutClient");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PutClientsClientId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PutClient");
 
             var localVarPath = "/api/v2/oauth/clients/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1199,13 +1219,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutClientsClientId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutClient: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutClientsClientId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutClient: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OAuthClient>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClient)));
             
         }
@@ -1217,9 +1239,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        public async System.Threading.Tasks.Task<OAuthClient> PutClientsClientIdAsync (string clientId, OAuthClient body)
+        public async System.Threading.Tasks.Task<OAuthClient> PutClientAsync (string clientId, OAuthClient body)
         {
-             ApiResponse<OAuthClient> localVarResponse = await PutClientsClientIdAsyncWithHttpInfo(clientId, body);
+             ApiResponse<OAuthClient> localVarResponse = await PutClientAsyncWithHttpInfo(clientId, body);
              return localVarResponse.Data;
 
         }
@@ -1231,14 +1253,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutClientsClientIdAsyncWithHttpInfo (string clientId, OAuthClient body)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> PutClientAsyncWithHttpInfo (string clientId, OAuthClient body)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PutClientsClientId");
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PutClient");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PutClientsClientId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PutClient");
 
             var localVarPath = "/api/v2/oauth/clients/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1289,13 +1311,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutClientsClientId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutClient: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutClientsClientId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutClient: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OAuthClient>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OAuthClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthClient)));
             
         }

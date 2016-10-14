@@ -219,30 +219,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'WrapupSkipped'
         }
         /// <summary>
-        /// Test the property 'Provider'
-        /// </summary>
-        [Test]
-        public void ProviderTest()
-        {
-            // TODO: unit test for the property 'Provider'
-        }
-        /// <summary>
-        /// Test the property 'ExternalContact'
-        /// </summary>
-        [Test]
-        public void ExternalContactTest()
-        {
-            // TODO: unit test for the property 'ExternalContact'
-        }
-        /// <summary>
-        /// Test the property 'ExternalOrganization'
-        /// </summary>
-        [Test]
-        public void ExternalOrganizationTest()
-        {
-            // TODO: unit test for the property 'ExternalOrganization'
-        }
-        /// <summary>
         /// Test the property 'OutboundPreview'
         /// </summary>
         [Test]

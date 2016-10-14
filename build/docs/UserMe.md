@@ -32,7 +32,6 @@ title: UserMe
 | **Organization** | [**Organization**](Organization.html) | Organization details for this user. | [optional] |
 | **PresenceDefinitions** | [**List&lt;OrganizationPresence&gt;**](OrganizationPresence.html) | The first 100 presence definitions for user&#39;s organization. | [optional] |
 | **Locations** | [**List&lt;Location&gt;**](Location.html) | The first 100 locations for user&#39;s organization | [optional] |
-| **OrgAuthorization** | [**List&lt;DomainOrganizationRole&gt;**](DomainOrganizationRole.html) | The first 100 organization roles, with applicable permission policies, for user&#39;s organization. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

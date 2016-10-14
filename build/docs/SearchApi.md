@@ -3,27 +3,27 @@ title: SearchApi
 ---
 ## ININ.PureCloudApi.Api.SearchApi
 
-All URIs are relative to *https://api.mypurecloud.com*
+All URIs are relative to *https://api.inindca.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**GetSearch**](SearchApi.html#getsearch) | **GET** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
-| [**GetSearch_0**](SearchApi.html#getsearch_0) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
-| [**GetSearch_1**](SearchApi.html#getsearch_1) | **GET** /api/v2/search | Search using the q64 value returned from a previous search. |
-| [**GetSearch_2**](SearchApi.html#getsearch_2) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
-| [**GetSuggest**](SearchApi.html#getsuggest) | **GET** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
-| [**PostSearch**](SearchApi.html#postsearch) | **POST** /api/v2/groups/search | Search groups |
-| [**PostSearch_0**](SearchApi.html#postsearch_0) | **POST** /api/v2/locations/search | Search locations |
-| [**PostSearch_1**](SearchApi.html#postsearch_1) | **POST** /api/v2/search | Search resources. |
-| [**PostSearch_2**](SearchApi.html#postsearch_2) | **POST** /api/v2/users/search | Search users |
-| [**PostSuggest**](SearchApi.html#postsuggest) | **POST** /api/v2/search/suggest | Suggest resources. |
+| [**GetSearch**](SearchApi.html#getsearch) | **GET** /api/v2/groups/search | Search using q64 |
+| [**GetSearch_0**](SearchApi.html#getsearch_0) | **GET** /api/v2/locations/search | Search using q64 |
+| [**GetSearch_1**](SearchApi.html#getsearch_1) | **GET** /api/v2/search | Search using q64 |
+| [**GetSearch_2**](SearchApi.html#getsearch_2) | **GET** /api/v2/users/search | Search using q64 |
+| [**GetSuggest**](SearchApi.html#getsuggest) | **GET** /api/v2/search/suggest | Suggest using q64 |
+| [**PostSearch**](SearchApi.html#postsearch) | **POST** /api/v2/groups/search | Search |
+| [**PostSearch_0**](SearchApi.html#postsearch_0) | **POST** /api/v2/locations/search | Search |
+| [**PostSearch_1**](SearchApi.html#postsearch_1) | **POST** /api/v2/search | Search |
+| [**PostSearch_2**](SearchApi.html#postsearch_2) | **POST** /api/v2/users/search | Search |
+| [**PostSuggest**](SearchApi.html#postsuggest) | **POST** /api/v2/search/suggest | Suggest |
 {: class="table table-striped"}
 
 <a name="getsearch"></a>
 
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetSearch (string q64, List<string> expand = null)
 
-Search groups using the q64 value returned from a previous search
+Search using q64
 
 
 
@@ -51,7 +51,7 @@ namespace Example
 
             try
             {
-                // Search groups using the q64 value returned from a previous search
+                // Search using q64
                 GroupsSearchResponse result = apiInstance.GetSearch(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -81,7 +81,7 @@ namespace Example
 
 ## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetSearch_0 (string q64, List<string> expand = null)
 
-Search locations using the q64 value returned from a previous search
+Search using q64
 
 
 
@@ -109,7 +109,7 @@ namespace Example
 
             try
             {
-                // Search locations using the q64 value returned from a previous search
+                // Search using q64
                 LocationsSearchResponse result = apiInstance.GetSearch_0(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -139,7 +139,7 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch_1 (string q64, List<string> expand = null, bool? profile = null)
 
-Search using the q64 value returned from a previous search.
+Search using q64
 
 
 
@@ -168,7 +168,7 @@ namespace Example
 
             try
             {
-                // Search using the q64 value returned from a previous search.
+                // Search using q64
                 JsonNodeSearchResponse result = apiInstance.GetSearch_1(q64, expand, profile);
                 Debug.WriteLine(result);
             }
@@ -199,7 +199,7 @@ namespace Example
 
 ## [**UsersSearchResponse**](UsersSearchResponse.html) GetSearch_2 (string q64, List<string> expand = null)
 
-Search users using the q64 value returned from a previous search
+Search using q64
 
 
 
@@ -227,7 +227,7 @@ namespace Example
 
             try
             {
-                // Search users using the q64 value returned from a previous search
+                // Search using q64
                 UsersSearchResponse result = apiInstance.GetSearch_2(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -257,7 +257,7 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64, bool? profile = null)
 
-Suggest resources using the q64 value returned from a previous suggest query.
+Suggest using q64
 
 
 
@@ -285,7 +285,7 @@ namespace Example
 
             try
             {
-                // Suggest resources using the q64 value returned from a previous suggest query.
+                // Suggest using q64
                 JsonNodeSearchResponse result = apiInstance.GetSuggest(q64, profile);
                 Debug.WriteLine(result);
             }
@@ -315,7 +315,7 @@ namespace Example
 
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostSearch (GroupSearchRequest body)
 
-Search groups
+Search
 
 
 
@@ -342,7 +342,7 @@ namespace Example
 
             try
             {
-                // Search groups
+                // Search
                 GroupsSearchResponse result = apiInstance.PostSearch(body);
                 Debug.WriteLine(result);
             }
@@ -371,7 +371,7 @@ namespace Example
 
 ## [**LocationsSearchResponse**](LocationsSearchResponse.html) PostSearch_0 (LocationSearchRequest body)
 
-Search locations
+Search
 
 
 
@@ -398,7 +398,7 @@ namespace Example
 
             try
             {
-                // Search locations
+                // Search
                 LocationsSearchResponse result = apiInstance.PostSearch_0(body);
                 Debug.WriteLine(result);
             }
@@ -427,7 +427,7 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearch_1 (SearchRequest body, bool? profile = null)
 
-Search resources.
+Search
 
 
 
@@ -455,7 +455,7 @@ namespace Example
 
             try
             {
-                // Search resources.
+                // Search
                 JsonNodeSearchResponse result = apiInstance.PostSearch_1(body, profile);
                 Debug.WriteLine(result);
             }
@@ -485,7 +485,7 @@ namespace Example
 
 ## [**UsersSearchResponse**](UsersSearchResponse.html) PostSearch_2 (UserSearchRequest body)
 
-Search users
+Search
 
 
 
@@ -512,7 +512,7 @@ namespace Example
 
             try
             {
-                // Search users
+                // Search
                 UsersSearchResponse result = apiInstance.PostSearch_2(body);
                 Debug.WriteLine(result);
             }
@@ -541,7 +541,7 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSuggest (SuggestSearchRequest body, bool? profile = null)
 
-Suggest resources.
+Suggest
 
 
 
@@ -569,7 +569,7 @@ namespace Example
 
             try
             {
-                // Suggest resources.
+                // Suggest
                 JsonNodeSearchResponse result = apiInstance.PostSuggest(body, profile);
                 Debug.WriteLine(result);
             }

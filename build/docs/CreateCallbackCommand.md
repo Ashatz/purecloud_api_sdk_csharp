@@ -16,7 +16,7 @@ title: CreateCallbackCommand
 | **CountryCode** | **string** | The country code to be associated with the callback numbers. | [optional] |
 | **IsAutomated** | **bool?** | Whether or not to automatically place a call for this callback. | [optional] [default to false]|
 | **AutomatedCallbackConfigId** | **string** | The id of the configuration to handle the response (e.g. live voice, machine) from automatically placing a call for a callback. | [optional] |
-| **Data** | **Dictionary&lt;string, string&gt;** | A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; } | [optional] |
+| **Data** | **Dictionary&lt;string, string&gt;** | A map of key-value pairs containing additional data that can be associated to the callback. These could be set up for instance to be used in a customized script shown during the call. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; } | [optional] |
 {: class="table table-striped"}
 
 

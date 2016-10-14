@@ -8,7 +8,7 @@ title: Group
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** | The group name. | |
+| **Name** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **DateModified** | **DateTime?** | Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **MemberCount** | **long?** | Number of members. | [optional] |

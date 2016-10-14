@@ -20,10 +20,10 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAuditRequest" /> class.
         /// </summary>
-        /// <param name="QueryPhrase">The word or words to search for..</param>
-        /// <param name="QueryFields">The fields in which to search for the queryPhrase..</param>
-        /// <param name="Facets">The fields to facet on..</param>
-        /// <param name="Filters">The fields to filter on..</param>
+        /// <param name="QueryPhrase">QueryPhrase.</param>
+        /// <param name="QueryFields">QueryFields.</param>
+        /// <param name="Facets">Facets.</param>
+        /// <param name="Filters">Filters.</param>
         public DialerAuditRequest(string QueryPhrase = null, List<string> QueryFields = null, List<AuditFacet> Facets = null, List<AuditFilter> Filters = null)
         {
             this.QueryPhrase = QueryPhrase;
@@ -33,27 +33,23 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// The word or words to search for.
+        /// Gets or Sets QueryPhrase
         /// </summary>
-        /// <value>The word or words to search for.</value>
         [DataMember(Name="queryPhrase", EmitDefaultValue=false)]
         public string QueryPhrase { get; set; }
         /// <summary>
-        /// The fields in which to search for the queryPhrase.
+        /// Gets or Sets QueryFields
         /// </summary>
-        /// <value>The fields in which to search for the queryPhrase.</value>
         [DataMember(Name="queryFields", EmitDefaultValue=false)]
         public List<string> QueryFields { get; set; }
         /// <summary>
-        /// The fields to facet on.
+        /// Gets or Sets Facets
         /// </summary>
-        /// <value>The fields to facet on.</value>
         [DataMember(Name="facets", EmitDefaultValue=false)]
         public List<AuditFacet> Facets { get; set; }
         /// <summary>
-        /// The fields to filter on.
+        /// Gets or Sets Filters
         /// </summary>
-        /// <value>The fields to filter on.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<AuditFilter> Filters { get; set; }
         /// <summary>

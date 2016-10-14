@@ -20,26 +20,13 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Library" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Library() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Library" /> class.
-        /// </summary>
-        /// <param name="Name">The library name. (required).</param>
+        /// <param name="Name">Name.</param>
         /// <param name="Version">Version.</param>
         /// <param name="CreatedBy">CreatedBy.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public Library(string Name = null, int? Version = null, User CreatedBy = null, DateTime? DateCreated = null)
         {
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for Library and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
+            this.Name = Name;
             this.Version = Version;
             this.CreatedBy = CreatedBy;
             this.DateCreated = DateCreated;
@@ -52,9 +39,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// The library name.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The library name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

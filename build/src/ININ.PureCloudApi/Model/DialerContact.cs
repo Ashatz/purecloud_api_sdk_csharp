@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="ContactListId">Identifier of the contact list containing this contact (required).</param>
-        /// <param name="Data">An ordered map of the contact&#39;s data attributes and values.</param>
+        /// <param name="Data">A map of the contact&#39;s data attributes and values.</param>
         /// <param name="CallRecords">A map of call records for the contact phone columns.</param>
         /// <param name="Callable">false if the contact is not to be called (default to false).</param>
         /// <param name="PhoneNumberStatus">A map of statuses for the contact phone columns.</param>
@@ -75,9 +75,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
         /// <summary>
-        /// An ordered map of the contact&#39;s data attributes and values
+        /// A map of the contact&#39;s data attributes and values
         /// </summary>
-        /// <value>An ordered map of the contact&#39;s data attributes and values</value>
+        /// <value>A map of the contact&#39;s data attributes and values</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public Dictionary<string, Object> Data { get; set; }
         /// <summary>

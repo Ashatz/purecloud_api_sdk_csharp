@@ -20,77 +20,36 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditFilter" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected AuditFilter() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AuditFilter" /> class.
-        /// </summary>
-        /// <param name="Name">The name of the field by which to filter. (required).</param>
-        /// <param name="Type">The type of the filter, DATE or STRING. (required).</param>
-        /// <param name="_Operator">The operation that the filter performs. (required).</param>
-        /// <param name="Values">The values to make the filter comparison against. (required).</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="_Operator">_Operator.</param>
+        /// <param name="Values">Values.</param>
         public AuditFilter(string Name = null, string Type = null, string _Operator = null, List<string> Values = null)
         {
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for AuditFilter and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for AuditFilter and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            // to ensure "_Operator" is required (not null)
-            if (_Operator == null)
-            {
-                throw new InvalidDataException("_Operator is a required property for AuditFilter and cannot be null");
-            }
-            else
-            {
-                this._Operator = _Operator;
-            }
-            // to ensure "Values" is required (not null)
-            if (Values == null)
-            {
-                throw new InvalidDataException("Values is a required property for AuditFilter and cannot be null");
-            }
-            else
-            {
-                this.Values = Values;
-            }
+            this.Name = Name;
+            this.Type = Type;
+            this._Operator = _Operator;
+            this.Values = Values;
         }
         
         /// <summary>
-        /// The name of the field by which to filter.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The name of the field by which to filter.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// The type of the filter, DATE or STRING.
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>The type of the filter, DATE or STRING.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         /// <summary>
-        /// The operation that the filter performs.
+        /// Gets or Sets _Operator
         /// </summary>
-        /// <value>The operation that the filter performs.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public string _Operator { get; set; }
         /// <summary>
-        /// The values to make the filter comparison against.
+        /// Gets or Sets Values
         /// </summary>
-        /// <value>The values to make the filter comparison against.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
         /// <summary>

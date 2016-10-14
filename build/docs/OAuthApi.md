@@ -3,21 +3,21 @@ title: OAuthApi
 ---
 ## ININ.PureCloudApi.Api.OAuthApi
 
-All URIs are relative to *https://api.mypurecloud.com*
+All URIs are relative to *https://api.inindca.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteClientsClientId**](OAuthApi.html#deleteclientsclientid) | **DELETE** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
+| [**DeleteClient**](OAuthApi.html#deleteclient) | **DELETE** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
+| [**GetClient**](OAuthApi.html#getclient) | **GET** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
 | [**GetClients**](OAuthApi.html#getclients) | **GET** /api/v2/oauth/clients | The list of OAuth clients |
-| [**GetClientsClientId**](OAuthApi.html#getclientsclientid) | **GET** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
+| [**PostClientSecret**](OAuthApi.html#postclientsecret) | **POST** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
 | [**PostClients**](OAuthApi.html#postclients) | **POST** /api/v2/oauth/clients | Create OAuth client |
-| [**PostClientsClientIdSecret**](OAuthApi.html#postclientsclientidsecret) | **POST** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
-| [**PutClientsClientId**](OAuthApi.html#putclientsclientid) | **PUT** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
+| [**PutClient**](OAuthApi.html#putclient) | **PUT** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
 {: class="table table-striped"}
 
-<a name="deleteclientsclientid"></a>
+<a name="deleteclient"></a>
 
-## void DeleteClientsClientId (string clientId)
+## void DeleteClient (string clientId)
 
 Delete OAuth Client
 
@@ -33,7 +33,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class DeleteClientsClientIdExample
+    public class DeleteClientExample
     {
         public void main()
         {
@@ -47,11 +47,11 @@ namespace Example
             try
             {
                 // Delete OAuth Client
-                apiInstance.DeleteClientsClientId(clientId);
+                apiInstance.DeleteClient(clientId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OAuthApi.DeleteClientsClientId: " + e.Message );
+                Debug.Print("Exception when calling OAuthApi.DeleteClient: " + e.Message );
             }
         }
     }
@@ -69,6 +69,62 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getclient"></a>
+
+## [**OAuthClient**](OAuthClient.html) GetClient (string clientId)
+
+Get OAuth Client
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetClientExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OAuthApi();
+            var clientId = clientId_example;  // string | Client ID
+
+            try
+            {
+                // Get OAuth Client
+                OAuthClient result = apiInstance.GetClient(clientId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OAuthApi.GetClient: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **clientId** | **string**| Client ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OAuthClient**](OAuthClient.html)
 
 <a name="getclients"></a>
 
@@ -121,13 +177,13 @@ This endpoint does require any parameters.
 
 [**OAuthClientEntityListing**](OAuthClientEntityListing.html)
 
-<a name="getclientsclientid"></a>
+<a name="postclientsecret"></a>
 
-## [**OAuthClient**](OAuthClient.html) GetClientsClientId (string clientId)
+## void PostClientSecret (string clientId)
 
-Get OAuth Client
+Regenerate Client Secret
 
-
+This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
 
 ### Example
 ~~~csharp
@@ -139,7 +195,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class GetClientsClientIdExample
+    public class PostClientSecretExample
     {
         public void main()
         {
@@ -152,13 +208,12 @@ namespace Example
 
             try
             {
-                // Get OAuth Client
-                OAuthClient result = apiInstance.GetClientsClientId(clientId);
-                Debug.WriteLine(result);
+                // Regenerate Client Secret
+                apiInstance.PostClientSecret(clientId);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OAuthApi.GetClientsClientId: " + e.Message );
+                Debug.Print("Exception when calling OAuthApi.PostClientSecret: " + e.Message );
             }
         }
     }
@@ -175,7 +230,7 @@ namespace Example
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.html)
+void (empty response body)
 
 <a name="postclients"></a>
 
@@ -233,64 +288,9 @@ namespace Example
 
 [**OAuthClient**](OAuthClient.html)
 
-<a name="postclientsclientidsecret"></a>
+<a name="putclient"></a>
 
-## void PostClientsClientIdSecret (string clientId)
-
-Regenerate Client Secret
-
-This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostClientsClientIdSecretExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new OAuthApi();
-            var clientId = clientId_example;  // string | Client ID
-
-            try
-            {
-                // Regenerate Client Secret
-                apiInstance.PostClientsClientIdSecret(clientId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OAuthApi.PostClientsClientIdSecret: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **clientId** | **string**| Client ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="putclientsclientid"></a>
-
-## [**OAuthClient**](OAuthClient.html) PutClientsClientId (string clientId, OAuthClient body)
+## [**OAuthClient**](OAuthClient.html) PutClient (string clientId, OAuthClient body)
 
 Update OAuth Client
 
@@ -306,7 +306,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PutClientsClientIdExample
+    public class PutClientExample
     {
         public void main()
         {
@@ -321,12 +321,12 @@ namespace Example
             try
             {
                 // Update OAuth Client
-                OAuthClient result = apiInstance.PutClientsClientId(clientId, body);
+                OAuthClient result = apiInstance.PutClient(clientId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OAuthApi.PutClientsClientId: " + e.Message );
+                Debug.Print("Exception when calling OAuthApi.PutClient: " + e.Message );
             }
         }
     }

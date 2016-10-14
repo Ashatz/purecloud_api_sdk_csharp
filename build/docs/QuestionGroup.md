@@ -16,7 +16,6 @@ title: QuestionGroup
 | **Weight** | **float?** |  | [optional] |
 | **ManualWeight** | **bool?** |  | [optional] [default to false]|
 | **Questions** | **List&lt;Dictionary&lt;string, Object&gt;&gt;** |  | [optional] |
-| **VisibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
 {: class="table table-striped"}
 
 

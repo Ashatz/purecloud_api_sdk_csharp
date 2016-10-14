@@ -7,7 +7,7 @@ title: StreetAddress
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Country** | **string** | 2 Letter Country code, like US or GB | |
+| **Country** | **string** |  | [optional] |
 | **A1** | **string** |  | [optional] |
 | **A3** | **string** |  | [optional] |
 | **RD** | **string** |  | [optional] |

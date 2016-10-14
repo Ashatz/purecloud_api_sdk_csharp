@@ -7,8 +7,8 @@ title: SubscriberResponse
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **MessageReturned** | **List&lt;string&gt;** | Suggested valid addresses | [optional] |
-| **Status** | **string** | http status | |
+| **MessageReturned** | **List&lt;string&gt;** |  | [optional] |
+| **Status** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -18,9 +18,8 @@ namespace ININ.PureCloudApi.Model
     public partial class Participant :  IEquatable<Participant>
     {
         /// <summary>
-        /// This field controls how the UI prompts the agent for a wrapup.
+        /// Gets or Sets WrapupPrompt
         /// </summary>
-        /// <value>This field controls how the UI prompts the agent for a wrapup.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum WrapupPromptEnum
         {
@@ -57,50 +56,46 @@ namespace ININ.PureCloudApi.Model
             ForcedTimeout
         }
         /// <summary>
-        /// This field controls how the UI prompts the agent for a wrapup.
+        /// Gets or Sets WrapupPrompt
         /// </summary>
-        /// <value>This field controls how the UI prompts the agent for a wrapup.</value>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public WrapupPromptEnum? WrapupPrompt { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Participant" /> class.
         /// </summary>
-        /// <param name="Id">A globally unique identifier for this conversation..</param>
-        /// <param name="StartTime">The timestamp when this participant joined the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="EndTime">The timestamp when this participant disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ConnectedTime">The timestamp when this participant was connected to the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Name">A human readable name identifying the participant..</param>
-        /// <param name="UserUri">If this participant represents a user, then this will be an URI that can be used to fetch the user..</param>
-        /// <param name="UserId">If this participant represents a user, then this will be the globally unique identifier for the user..</param>
-        /// <param name="ExternalContactId">If this participant represents an external contact, then this will be the globally unique identifier for the external contact..</param>
-        /// <param name="ExternalOrganizationId">If this participant represents an external org, then this will be the globally unique identifier for the external org..</param>
-        /// <param name="QueueId">If present, the queue id that the communication channel came in on..</param>
-        /// <param name="GroupId">If present, group of users the participant represents..</param>
-        /// <param name="QueueName">If present, the queue name that the communication channel came in on..</param>
-        /// <param name="Purpose">A well known string that specifies the purpose of this participant..</param>
-        /// <param name="ParticipantType">A well known string that specifies the type of this participant..</param>
-        /// <param name="ConsultParticipantId">If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred..</param>
-        /// <param name="Address">The address for the this participant. For a phone call this will be the ANI..</param>
-        /// <param name="Ani">The address for the this participant. For a phone call this will be the ANI..</param>
-        /// <param name="Dnis">The address for the this participant. For a phone call this will be the ANI..</param>
-        /// <param name="Locale">An ISO 639 language code specifying the locale for this participant.</param>
-        /// <param name="WrapupRequired">True iff this participant is required to enter wrapup for this conversation. (default to false).</param>
-        /// <param name="WrapupPrompt">This field controls how the UI prompts the agent for a wrapup..</param>
-        /// <param name="WrapupTimeoutMs">Specifies how long a timed ACW session will last..</param>
-        /// <param name="WrapupSkipped">The UI sets this field when the agent chooses to skip entering a wrapup for this participant. (default to false).</param>
-        /// <param name="Wrapup">Call wrap up or disposition data..</param>
-        /// <param name="MonitoredParticipantId">If this participant is a monitor, then this will be the id of the participant that is being monitored..</param>
-        /// <param name="Attributes">Additional participant attributes.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="UserUri">UserUri.</param>
+        /// <param name="UserId">UserId.</param>
+        /// <param name="ExternalContactId">ExternalContactId.</param>
+        /// <param name="QueueId">QueueId.</param>
+        /// <param name="GroupId">GroupId.</param>
+        /// <param name="QueueName">QueueName.</param>
+        /// <param name="Purpose">Purpose.</param>
+        /// <param name="ParticipantType">ParticipantType.</param>
+        /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
+        /// <param name="Address">Address.</param>
+        /// <param name="Ani">Ani.</param>
+        /// <param name="Dnis">Dnis.</param>
+        /// <param name="Locale">Locale.</param>
+        /// <param name="WrapupRequired">WrapupRequired (default to false).</param>
+        /// <param name="WrapupPrompt">WrapupPrompt.</param>
+        /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
+        /// <param name="WrapupSkipped">WrapupSkipped (default to false).</param>
+        /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
+        /// <param name="Attributes">Attributes.</param>
         /// <param name="Calls">Calls.</param>
         /// <param name="Callbacks">Callbacks.</param>
         /// <param name="Chats">Chats.</param>
-        /// <param name="Cobrowsesessions">Cobrowsesessions.</param>
         /// <param name="Emails">Emails.</param>
-        /// <param name="Screenshares">Screenshares.</param>
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="Evaluations">Evaluations.</param>
-        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
+        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Email> Emails = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -110,7 +105,6 @@ namespace ININ.PureCloudApi.Model
             this.UserUri = UserUri;
             this.UserId = UserId;
             this.ExternalContactId = ExternalContactId;
-            this.ExternalOrganizationId = ExternalOrganizationId;
             this.QueueId = QueueId;
             this.GroupId = GroupId;
             this.QueueName = QueueName;
@@ -147,162 +141,133 @@ namespace ININ.PureCloudApi.Model
             this.Calls = Calls;
             this.Callbacks = Callbacks;
             this.Chats = Chats;
-            this.Cobrowsesessions = Cobrowsesessions;
             this.Emails = Emails;
-            this.Screenshares = Screenshares;
             this.SocialExpressions = SocialExpressions;
             this.Videos = Videos;
             this.Evaluations = Evaluations;
         }
         
         /// <summary>
-        /// A globally unique identifier for this conversation.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>A globally unique identifier for this conversation.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         /// <summary>
-        /// The timestamp when this participant joined the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The timestamp when this participant joined the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
         /// <summary>
-        /// The timestamp when this participant disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The timestamp when this participant disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
         /// <summary>
-        /// The timestamp when this participant was connected to the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The timestamp when this participant was connected to the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         /// <summary>
-        /// A human readable name identifying the participant.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>A human readable name identifying the participant.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// If this participant represents a user, then this will be an URI that can be used to fetch the user.
+        /// Gets or Sets UserUri
         /// </summary>
-        /// <value>If this participant represents a user, then this will be an URI that can be used to fetch the user.</value>
         [DataMember(Name="userUri", EmitDefaultValue=false)]
         public string UserUri { get; set; }
         /// <summary>
-        /// If this participant represents a user, then this will be the globally unique identifier for the user.
+        /// Gets or Sets UserId
         /// </summary>
-        /// <value>If this participant represents a user, then this will be the globally unique identifier for the user.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
         /// <summary>
-        /// If this participant represents an external contact, then this will be the globally unique identifier for the external contact.
+        /// Gets or Sets ExternalContactId
         /// </summary>
-        /// <value>If this participant represents an external contact, then this will be the globally unique identifier for the external contact.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
         /// <summary>
-        /// If this participant represents an external org, then this will be the globally unique identifier for the external org.
+        /// Gets or Sets QueueId
         /// </summary>
-        /// <value>If this participant represents an external org, then this will be the globally unique identifier for the external org.</value>
-        [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
-        public string ExternalOrganizationId { get; set; }
-        /// <summary>
-        /// If present, the queue id that the communication channel came in on.
-        /// </summary>
-        /// <value>If present, the queue id that the communication channel came in on.</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
         /// <summary>
-        /// If present, group of users the participant represents.
+        /// Gets or Sets GroupId
         /// </summary>
-        /// <value>If present, group of users the participant represents.</value>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
         /// <summary>
-        /// If present, the queue name that the communication channel came in on.
+        /// Gets or Sets QueueName
         /// </summary>
-        /// <value>If present, the queue name that the communication channel came in on.</value>
         [DataMember(Name="queueName", EmitDefaultValue=false)]
         public string QueueName { get; set; }
         /// <summary>
-        /// A well known string that specifies the purpose of this participant.
+        /// Gets or Sets Purpose
         /// </summary>
-        /// <value>A well known string that specifies the purpose of this participant.</value>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
         /// <summary>
-        /// A well known string that specifies the type of this participant.
+        /// Gets or Sets ParticipantType
         /// </summary>
-        /// <value>A well known string that specifies the type of this participant.</value>
         [DataMember(Name="participantType", EmitDefaultValue=false)]
         public string ParticipantType { get; set; }
         /// <summary>
-        /// If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred.
+        /// Gets or Sets ConsultParticipantId
         /// </summary>
-        /// <value>If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred.</value>
         [DataMember(Name="consultParticipantId", EmitDefaultValue=false)]
         public string ConsultParticipantId { get; set; }
         /// <summary>
-        /// The address for the this participant. For a phone call this will be the ANI.
+        /// Gets or Sets Address
         /// </summary>
-        /// <value>The address for the this participant. For a phone call this will be the ANI.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
         /// <summary>
-        /// The address for the this participant. For a phone call this will be the ANI.
+        /// Gets or Sets Ani
         /// </summary>
-        /// <value>The address for the this participant. For a phone call this will be the ANI.</value>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
         /// <summary>
-        /// The address for the this participant. For a phone call this will be the ANI.
+        /// Gets or Sets Dnis
         /// </summary>
-        /// <value>The address for the this participant. For a phone call this will be the ANI.</value>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public string Dnis { get; set; }
         /// <summary>
-        /// An ISO 639 language code specifying the locale for this participant
+        /// Gets or Sets Locale
         /// </summary>
-        /// <value>An ISO 639 language code specifying the locale for this participant</value>
         [DataMember(Name="locale", EmitDefaultValue=false)]
         public string Locale { get; set; }
         /// <summary>
-        /// True iff this participant is required to enter wrapup for this conversation.
+        /// Gets or Sets WrapupRequired
         /// </summary>
-        /// <value>True iff this participant is required to enter wrapup for this conversation.</value>
         [DataMember(Name="wrapupRequired", EmitDefaultValue=false)]
         public bool? WrapupRequired { get; set; }
         /// <summary>
-        /// Specifies how long a timed ACW session will last.
+        /// Gets or Sets WrapupTimeoutMs
         /// </summary>
-        /// <value>Specifies how long a timed ACW session will last.</value>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
         public int? WrapupTimeoutMs { get; set; }
         /// <summary>
-        /// The UI sets this field when the agent chooses to skip entering a wrapup for this participant.
+        /// Gets or Sets WrapupSkipped
         /// </summary>
-        /// <value>The UI sets this field when the agent chooses to skip entering a wrapup for this participant.</value>
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
         /// <summary>
-        /// Call wrap up or disposition data.
+        /// Gets or Sets Wrapup
         /// </summary>
-        /// <value>Call wrap up or disposition data.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
         /// <summary>
-        /// If this participant is a monitor, then this will be the id of the participant that is being monitored.
+        /// Gets or Sets MonitoredParticipantId
         /// </summary>
-        /// <value>If this participant is a monitor, then this will be the id of the participant that is being monitored.</value>
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
         public string MonitoredParticipantId { get; set; }
         /// <summary>
-        /// Additional participant attributes
+        /// Gets or Sets Attributes
         /// </summary>
-        /// <value>Additional participant attributes</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
         /// <summary>
@@ -321,20 +286,10 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="chats", EmitDefaultValue=false)]
         public List<ConversationChat> Chats { get; set; }
         /// <summary>
-        /// Gets or Sets Cobrowsesessions
-        /// </summary>
-        [DataMember(Name="cobrowsesessions", EmitDefaultValue=false)]
-        public List<Cobrowsesession> Cobrowsesessions { get; set; }
-        /// <summary>
         /// Gets or Sets Emails
         /// </summary>
         [DataMember(Name="emails", EmitDefaultValue=false)]
         public List<Email> Emails { get; set; }
-        /// <summary>
-        /// Gets or Sets Screenshares
-        /// </summary>
-        [DataMember(Name="screenshares", EmitDefaultValue=false)]
-        public List<Screenshare> Screenshares { get; set; }
         /// <summary>
         /// Gets or Sets SocialExpressions
         /// </summary>
@@ -366,7 +321,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UserUri: ").Append(UserUri).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
-            sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  QueueName: ").Append(QueueName).Append("\n");
@@ -387,9 +341,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Calls: ").Append(Calls).Append("\n");
             sb.Append("  Callbacks: ").Append(Callbacks).Append("\n");
             sb.Append("  Chats: ").Append(Chats).Append("\n");
-            sb.Append("  Cobrowsesessions: ").Append(Cobrowsesessions).Append("\n");
             sb.Append("  Emails: ").Append(Emails).Append("\n");
-            sb.Append("  Screenshares: ").Append(Screenshares).Append("\n");
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
             sb.Append("  Videos: ").Append(Videos).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
@@ -468,11 +420,6 @@ namespace ININ.PureCloudApi.Model
                     this.ExternalContactId == other.ExternalContactId ||
                     this.ExternalContactId != null &&
                     this.ExternalContactId.Equals(other.ExternalContactId)
-                ) &&
-                (
-                    this.ExternalOrganizationId == other.ExternalOrganizationId ||
-                    this.ExternalOrganizationId != null &&
-                    this.ExternalOrganizationId.Equals(other.ExternalOrganizationId)
                 ) &&
                 (
                     this.QueueId == other.QueueId ||
@@ -575,19 +522,9 @@ namespace ININ.PureCloudApi.Model
                     this.Chats.SequenceEqual(other.Chats)
                 ) &&
                 (
-                    this.Cobrowsesessions == other.Cobrowsesessions ||
-                    this.Cobrowsesessions != null &&
-                    this.Cobrowsesessions.SequenceEqual(other.Cobrowsesessions)
-                ) &&
-                (
                     this.Emails == other.Emails ||
                     this.Emails != null &&
                     this.Emails.SequenceEqual(other.Emails)
-                ) &&
-                (
-                    this.Screenshares == other.Screenshares ||
-                    this.Screenshares != null &&
-                    this.Screenshares.SequenceEqual(other.Screenshares)
                 ) &&
                 (
                     this.SocialExpressions == other.SocialExpressions ||
@@ -633,8 +570,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.UserId.GetHashCode();
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
-                if (this.ExternalOrganizationId != null)
-                    hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
                 if (this.GroupId != null)
@@ -675,12 +610,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Callbacks.GetHashCode();
                 if (this.Chats != null)
                     hash = hash * 59 + this.Chats.GetHashCode();
-                if (this.Cobrowsesessions != null)
-                    hash = hash * 59 + this.Cobrowsesessions.GetHashCode();
                 if (this.Emails != null)
                     hash = hash * 59 + this.Emails.GetHashCode();
-                if (this.Screenshares != null)
-                    hash = hash * 59 + this.Screenshares.GetHashCode();
                 if (this.SocialExpressions != null)
                     hash = hash * 59 + this.SocialExpressions.GetHashCode();
                 if (this.Videos != null)

@@ -20,45 +20,29 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditUser" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected AuditUser() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AuditUser" /> class.
-        /// </summary>
-        /// <param name="Id">The ID (UUID) of the user who initiated the action of this AuditMessage. (required).</param>
-        /// <param name="Name">The full username of the user who initiated the action of this AuditMessage..</param>
-        /// <param name="Display">The display name of the user who initiated the action of this AuditMessage..</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Display">Display.</param>
         public AuditUser(string Id = null, string Name = null, string Display = null)
         {
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for AuditUser and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
+            this.Id = Id;
             this.Name = Name;
             this.Display = Display;
         }
         
         /// <summary>
-        /// The ID (UUID) of the user who initiated the action of this AuditMessage.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The ID (UUID) of the user who initiated the action of this AuditMessage.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         /// <summary>
-        /// The full username of the user who initiated the action of this AuditMessage.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The full username of the user who initiated the action of this AuditMessage.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// The display name of the user who initiated the action of this AuditMessage.
+        /// Gets or Sets Display
         /// </summary>
-        /// <value>The display name of the user who initiated the action of this AuditMessage.</value>
         [DataMember(Name="display", EmitDefaultValue=false)]
         public string Display { get; set; }
         /// <summary>

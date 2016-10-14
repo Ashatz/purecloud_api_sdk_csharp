@@ -20,29 +20,15 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallCommand" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected CallCommand() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CallCommand" /> class.
-        /// </summary>
-        /// <param name="CallNumber">The phone number to dial for this call. (required).</param>
+        /// <param name="CallNumber">CallNumber.</param>
         public CallCommand(string CallNumber = null)
         {
-            // to ensure "CallNumber" is required (not null)
-            if (CallNumber == null)
-            {
-                throw new InvalidDataException("CallNumber is a required property for CallCommand and cannot be null");
-            }
-            else
-            {
-                this.CallNumber = CallNumber;
-            }
+            this.CallNumber = CallNumber;
         }
         
         /// <summary>
-        /// The phone number to dial for this call.
+        /// Gets or Sets CallNumber
         /// </summary>
-        /// <value>The phone number to dial for this call.</value>
         [DataMember(Name="callNumber", EmitDefaultValue=false)]
         public string CallNumber { get; set; }
         /// <summary>

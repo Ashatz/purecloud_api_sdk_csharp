@@ -20,19 +20,14 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAddressResponse" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected ValidateAddressResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ValidateAddressResponse" /> class.
-        /// </summary>
-        /// <param name="Valid">Was the passed in address valid (required) (default to false).</param>
-        /// <param name="Response">Subscriber schema.</param>
+        /// <param name="Valid">Valid (default to false).</param>
+        /// <param name="Response">Response.</param>
         public ValidateAddressResponse(bool? Valid = null, SubscriberResponse Response = null)
         {
-            // to ensure "Valid" is required (not null)
+            // use default value if no "Valid" provided
             if (Valid == null)
             {
-                throw new InvalidDataException("Valid is a required property for ValidateAddressResponse and cannot be null");
+                this.Valid = false;
             }
             else
             {
@@ -42,15 +37,13 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Was the passed in address valid
+        /// Gets or Sets Valid
         /// </summary>
-        /// <value>Was the passed in address valid</value>
         [DataMember(Name="valid", EmitDefaultValue=false)]
         public bool? Valid { get; set; }
         /// <summary>
-        /// Subscriber schema
+        /// Gets or Sets Response
         /// </summary>
-        /// <value>Subscriber schema</value>
         [DataMember(Name="response", EmitDefaultValue=false)]
         public SubscriberResponse Response { get; set; }
         /// <summary>

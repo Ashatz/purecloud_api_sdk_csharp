@@ -20,45 +20,22 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditFacet" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected AuditFacet() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AuditFacet" /> class.
-        /// </summary>
-        /// <param name="Name">The name of the field on which to facet. (required).</param>
-        /// <param name="Type">The type of the facet, DATE or STRING. (required).</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
         public AuditFacet(string Name = null, string Type = null)
         {
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for AuditFacet and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for AuditFacet and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
+            this.Name = Name;
+            this.Type = Type;
         }
         
         /// <summary>
-        /// The name of the field on which to facet.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The name of the field on which to facet.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// The type of the facet, DATE or STRING.
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>The type of the facet, DATE or STRING.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         /// <summary>

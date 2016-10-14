@@ -20,47 +20,17 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationForm" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected EvaluationForm() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EvaluationForm" /> class.
-        /// </summary>
-        /// <param name="Name">The evaluation form name (required).</param>
-        /// <param name="Type">The form type (evaluation) (required).</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Published">Published (default to false).</param>
         /// <param name="ContextId">ContextId.</param>
-        /// <param name="QuestionGroups">A list of question groups (required).</param>
+        /// <param name="QuestionGroups">QuestionGroups.</param>
         /// <param name="PublishedVersions">PublishedVersions.</param>
         public EvaluationForm(string Name = null, string Type = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
         {
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for EvaluationForm and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for EvaluationForm and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            // to ensure "QuestionGroups" is required (not null)
-            if (QuestionGroups == null)
-            {
-                throw new InvalidDataException("QuestionGroups is a required property for EvaluationForm and cannot be null");
-            }
-            else
-            {
-                this.QuestionGroups = QuestionGroups;
-            }
+            this.Name = Name;
+            this.Type = Type;
             this.ModifiedDate = ModifiedDate;
             // use default value if no "Published" provided
             if (Published == null)
@@ -72,6 +42,7 @@ namespace ININ.PureCloudApi.Model
                 this.Published = Published;
             }
             this.ContextId = ContextId;
+            this.QuestionGroups = QuestionGroups;
             this.PublishedVersions = PublishedVersions;
         }
         
@@ -82,15 +53,13 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// The evaluation form name
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The evaluation form name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// The form type (evaluation)
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>The form type (evaluation)</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         /// <summary>
@@ -110,9 +79,8 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
         /// <summary>
-        /// A list of question groups
+        /// Gets or Sets QuestionGroups
         /// </summary>
-        /// <value>A list of question groups</value>
         [DataMember(Name="questionGroups", EmitDefaultValue=false)]
         public List<QuestionGroup> QuestionGroups { get; set; }
         /// <summary>

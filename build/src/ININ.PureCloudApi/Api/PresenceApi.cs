@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>OrganizationPresence</returns>
-        OrganizationPresence DeletePresenceId (string presenceId);
+        OrganizationPresence DeletePresencedefinition (string presenceId);
 
         /// <summary>
         /// Delete a Presence Definition
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        ApiResponse<OrganizationPresence> DeletePresenceIdWithHttpInfo (string presenceId);
+        ApiResponse<OrganizationPresence> DeletePresencedefinitionWithHttpInfo (string presenceId);
         /// <summary>
         /// Get a Presence Definition
         /// </summary>
@@ -43,9 +43,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresence</returns>
-        OrganizationPresence GetPresenceId (string presenceId, string localeCode = null);
+        OrganizationPresence GetPresencedefinition (string presenceId);
 
         /// <summary>
         /// Get a Presence Definition
@@ -55,9 +54,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        ApiResponse<OrganizationPresence> GetPresenceIdWithHttpInfo (string presenceId, string localeCode = null);
+        ApiResponse<OrganizationPresence> GetPresencedefinitionWithHttpInfo (string presenceId);
         /// <summary>
         /// Get an Organization&#39;s list of Presence Definitions
         /// </summary>
@@ -67,10 +65,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
-        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
+        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
         /// <returns>OrganizationPresenceEntityListing</returns>
-        OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
+        OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null);
 
         /// <summary>
         /// Get an Organization&#39;s list of Presence Definitions
@@ -81,10 +78,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
-        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
+        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
-        ApiResponse<OrganizationPresenceEntityListing> GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
+        ApiResponse<OrganizationPresenceEntityListing> GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null);
         /// <summary>
         /// Get the list of SystemPresences
         /// </summary>
@@ -114,7 +110,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Source</param>
         /// <returns>UserPresence</returns>
-        UserPresence GetUserIdPresencesSourceId (string userId, string sourceId);
+        UserPresence GetUserPresence (string userId, string sourceId);
 
         /// <summary>
         /// Get a user&#39;s Presence
@@ -126,7 +122,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Source</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        ApiResponse<UserPresence> GetUserIdPresencesSourceIdWithHttpInfo (string userId, string sourceId);
+        ApiResponse<UserPresence> GetUserPresenceWithHttpInfo (string userId, string sourceId);
         /// <summary>
         /// Patch a user&#39;s Presence
         /// </summary>
@@ -138,7 +134,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sourceId">Source</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
-        UserPresence PatchUserIdPresencesSourceId (string userId, string sourceId, UserPresence body);
+        UserPresence PatchUserPresence (string userId, string sourceId, UserPresence body);
 
         /// <summary>
         /// Patch a user&#39;s Presence
@@ -151,7 +147,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sourceId">Source</param>
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        ApiResponse<UserPresence> PatchUserIdPresencesSourceIdWithHttpInfo (string userId, string sourceId, UserPresence body);
+        ApiResponse<UserPresence> PatchUserPresenceWithHttpInfo (string userId, string sourceId, UserPresence body);
         /// <summary>
         /// Create a Presence Definition
         /// </summary>
@@ -183,7 +179,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>OrganizationPresence</returns>
-        OrganizationPresence PutPresenceId (string presenceId, OrganizationPresence body);
+        OrganizationPresence PutPresencedefinition (string presenceId, OrganizationPresence body);
 
         /// <summary>
         /// Update a Presence Definition
@@ -195,7 +191,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        ApiResponse<OrganizationPresence> PutPresenceIdWithHttpInfo (string presenceId, OrganizationPresence body);
+        ApiResponse<OrganizationPresence> PutPresencedefinitionWithHttpInfo (string presenceId, OrganizationPresence body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -207,7 +203,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of OrganizationPresence</returns>
-        System.Threading.Tasks.Task<OrganizationPresence> DeletePresenceIdAsync (string presenceId);
+        System.Threading.Tasks.Task<OrganizationPresence> DeletePresencedefinitionAsync (string presenceId);
 
         /// <summary>
         /// Delete a Presence Definition
@@ -218,7 +214,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresenceIdAsyncWithHttpInfo (string presenceId);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresencedefinitionAsyncWithHttpInfo (string presenceId);
         /// <summary>
         /// Get a Presence Definition
         /// </summary>
@@ -227,9 +223,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresence</returns>
-        System.Threading.Tasks.Task<OrganizationPresence> GetPresenceIdAsync (string presenceId, string localeCode = null);
+        System.Threading.Tasks.Task<OrganizationPresence> GetPresencedefinitionAsync (string presenceId);
 
         /// <summary>
         /// Get a Presence Definition
@@ -239,9 +234,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresenceIdAsyncWithHttpInfo (string presenceId, string localeCode = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresencedefinitionAsyncWithHttpInfo (string presenceId);
         /// <summary>
         /// Get an Organization&#39;s list of Presence Definitions
         /// </summary>
@@ -251,10 +245,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
-        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
+        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
         /// <returns>Task of OrganizationPresenceEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
+        System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null);
 
         /// <summary>
         /// Get an Organization&#39;s list of Presence Definitions
@@ -265,10 +258,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
-        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
+        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null);
         /// <summary>
         /// Get the list of SystemPresences
         /// </summary>
@@ -298,7 +290,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Source</param>
         /// <returns>Task of UserPresence</returns>
-        System.Threading.Tasks.Task<UserPresence> GetUserIdPresencesSourceIdAsync (string userId, string sourceId);
+        System.Threading.Tasks.Task<UserPresence> GetUserPresenceAsync (string userId, string sourceId);
 
         /// <summary>
         /// Get a user&#39;s Presence
@@ -310,7 +302,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Source</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserIdPresencesSourceIdAsyncWithHttpInfo (string userId, string sourceId);
+        System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresenceAsyncWithHttpInfo (string userId, string sourceId);
         /// <summary>
         /// Patch a user&#39;s Presence
         /// </summary>
@@ -322,7 +314,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sourceId">Source</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
-        System.Threading.Tasks.Task<UserPresence> PatchUserIdPresencesSourceIdAsync (string userId, string sourceId, UserPresence body);
+        System.Threading.Tasks.Task<UserPresence> PatchUserPresenceAsync (string userId, string sourceId, UserPresence body);
 
         /// <summary>
         /// Patch a user&#39;s Presence
@@ -335,7 +327,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sourceId">Source</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserIdPresencesSourceIdAsyncWithHttpInfo (string userId, string sourceId, UserPresence body);
+        System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresenceAsyncWithHttpInfo (string userId, string sourceId, UserPresence body);
         /// <summary>
         /// Create a Presence Definition
         /// </summary>
@@ -367,7 +359,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of OrganizationPresence</returns>
-        System.Threading.Tasks.Task<OrganizationPresence> PutPresenceIdAsync (string presenceId, OrganizationPresence body);
+        System.Threading.Tasks.Task<OrganizationPresence> PutPresencedefinitionAsync (string presenceId, OrganizationPresence body);
 
         /// <summary>
         /// Update a Presence Definition
@@ -379,7 +371,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresenceIdAsyncWithHttpInfo (string presenceId, OrganizationPresence body);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresencedefinitionAsyncWithHttpInfo (string presenceId, OrganizationPresence body);
         #endregion Asynchronous Operations
     }
 
@@ -476,9 +468,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>OrganizationPresence</returns>
-        public OrganizationPresence DeletePresenceId (string presenceId)
+        public OrganizationPresence DeletePresencedefinition (string presenceId)
         {
-             ApiResponse<OrganizationPresence> localVarResponse = DeletePresenceIdWithHttpInfo(presenceId);
+             ApiResponse<OrganizationPresence> localVarResponse = DeletePresencedefinitionWithHttpInfo(presenceId);
              return localVarResponse.Data;
         }
 
@@ -488,11 +480,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        public ApiResponse< OrganizationPresence > DeletePresenceIdWithHttpInfo (string presenceId)
+        public ApiResponse< OrganizationPresence > DeletePresencedefinitionWithHttpInfo (string presenceId)
         {
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
-                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->DeletePresenceId");
+                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->DeletePresencedefinition");
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -535,13 +527,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeletePresenceId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeletePresencedefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeletePresenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeletePresencedefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrganizationPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)));
             
         }
@@ -552,9 +546,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of OrganizationPresence</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresence> DeletePresenceIdAsync (string presenceId)
+        public async System.Threading.Tasks.Task<OrganizationPresence> DeletePresencedefinitionAsync (string presenceId)
         {
-             ApiResponse<OrganizationPresence> localVarResponse = await DeletePresenceIdAsyncWithHttpInfo(presenceId);
+             ApiResponse<OrganizationPresence> localVarResponse = await DeletePresencedefinitionAsyncWithHttpInfo(presenceId);
              return localVarResponse.Data;
 
         }
@@ -565,11 +559,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresenceIdAsyncWithHttpInfo (string presenceId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresencedefinitionAsyncWithHttpInfo (string presenceId)
         {
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
-                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->DeletePresenceId");
+                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->DeletePresencedefinition");
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -612,13 +606,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeletePresenceId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeletePresencedefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeletePresenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeletePresencedefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrganizationPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)));
             
         }
@@ -628,11 +624,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresence</returns>
-        public OrganizationPresence GetPresenceId (string presenceId, string localeCode = null)
+        public OrganizationPresence GetPresencedefinition (string presenceId)
         {
-             ApiResponse<OrganizationPresence> localVarResponse = GetPresenceIdWithHttpInfo(presenceId, localeCode);
+             ApiResponse<OrganizationPresence> localVarResponse = GetPresencedefinitionWithHttpInfo(presenceId);
              return localVarResponse.Data;
         }
 
@@ -641,13 +636,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        public ApiResponse< OrganizationPresence > GetPresenceIdWithHttpInfo (string presenceId, string localeCode = null)
+        public ApiResponse< OrganizationPresence > GetPresencedefinitionWithHttpInfo (string presenceId)
         {
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
-                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->GetPresenceId");
+                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->GetPresencedefinition");
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -675,7 +669,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId)); // path parameter
-            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -691,13 +684,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetPresenceId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresencedefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetPresenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresencedefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrganizationPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)));
             
         }
@@ -707,11 +702,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresence</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresence> GetPresenceIdAsync (string presenceId, string localeCode = null)
+        public async System.Threading.Tasks.Task<OrganizationPresence> GetPresencedefinitionAsync (string presenceId)
         {
-             ApiResponse<OrganizationPresence> localVarResponse = await GetPresenceIdAsyncWithHttpInfo(presenceId, localeCode);
+             ApiResponse<OrganizationPresence> localVarResponse = await GetPresencedefinitionAsyncWithHttpInfo(presenceId);
              return localVarResponse.Data;
 
         }
@@ -721,13 +715,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresenceIdAsyncWithHttpInfo (string presenceId, string localeCode = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresencedefinitionAsyncWithHttpInfo (string presenceId)
         {
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
-                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->GetPresenceId");
+                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->GetPresencedefinition");
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -755,7 +748,6 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId)); // path parameter
-            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -771,13 +763,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetPresenceId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresencedefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetPresenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresencedefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrganizationPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)));
             
         }
@@ -788,12 +782,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
-        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
+        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
         /// <returns>OrganizationPresenceEntityListing</returns>
-        public OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
+        public OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null)
         {
-             ApiResponse<OrganizationPresenceEntityListing> localVarResponse = GetPresencedefinitionsWithHttpInfo(pageNumber, pageSize, deleted, localeCode);
+             ApiResponse<OrganizationPresenceEntityListing> localVarResponse = GetPresencedefinitionsWithHttpInfo(pageNumber, pageSize, deleted);
              return localVarResponse.Data;
         }
 
@@ -803,10 +796,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
-        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
+        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
-        public ApiResponse< OrganizationPresenceEntityListing > GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
+        public ApiResponse< OrganizationPresenceEntityListing > GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null)
         {
 
             var localVarPath = "/api/v2/presencedefinitions";
@@ -837,7 +829,6 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -853,13 +844,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetPresencedefinitions: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresencedefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetPresencedefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrganizationPresenceEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresenceEntityListing)));
             
         }
@@ -870,12 +863,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
-        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
+        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
         /// <returns>Task of OrganizationPresenceEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
+        public async System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null)
         {
-             ApiResponse<OrganizationPresenceEntityListing> localVarResponse = await GetPresencedefinitionsAsyncWithHttpInfo(pageNumber, pageSize, deleted, localeCode);
+             ApiResponse<OrganizationPresenceEntityListing> localVarResponse = await GetPresencedefinitionsAsyncWithHttpInfo(pageNumber, pageSize, deleted);
              return localVarResponse.Data;
 
         }
@@ -886,10 +878,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to false)</param>
-        /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
+        /// <param name="deleted">Deleted query can be true, false or all (optional, default to false)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null)
         {
 
             var localVarPath = "/api/v2/presencedefinitions";
@@ -920,7 +911,6 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -936,13 +926,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetPresencedefinitions: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetPresencedefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetPresencedefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrganizationPresenceEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresenceEntityListing)));
             
         }
@@ -1006,13 +998,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<SystemPresence>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (List<SystemPresence>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SystemPresence>)));
             
         }
@@ -1077,13 +1071,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSystempresences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<SystemPresence>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (List<SystemPresence>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SystemPresence>)));
             
         }
@@ -1095,9 +1091,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Source</param>
         /// <returns>UserPresence</returns>
-        public UserPresence GetUserIdPresencesSourceId (string userId, string sourceId)
+        public UserPresence GetUserPresence (string userId, string sourceId)
         {
-             ApiResponse<UserPresence> localVarResponse = GetUserIdPresencesSourceIdWithHttpInfo(userId, sourceId);
+             ApiResponse<UserPresence> localVarResponse = GetUserPresenceWithHttpInfo(userId, sourceId);
              return localVarResponse.Data;
         }
 
@@ -1108,14 +1104,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Source</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        public ApiResponse< UserPresence > GetUserIdPresencesSourceIdWithHttpInfo (string userId, string sourceId)
+        public ApiResponse< UserPresence > GetUserPresenceWithHttpInfo (string userId, string sourceId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserIdPresencesSourceId");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresence");
             // verify the required parameter 'sourceId' is set
             if (sourceId == null)
-                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUserIdPresencesSourceId");
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUserPresence");
 
             var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1159,13 +1155,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSourceId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSourceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (UserPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserPresence)));
             
         }
@@ -1177,9 +1175,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Source</param>
         /// <returns>Task of UserPresence</returns>
-        public async System.Threading.Tasks.Task<UserPresence> GetUserIdPresencesSourceIdAsync (string userId, string sourceId)
+        public async System.Threading.Tasks.Task<UserPresence> GetUserPresenceAsync (string userId, string sourceId)
         {
-             ApiResponse<UserPresence> localVarResponse = await GetUserIdPresencesSourceIdAsyncWithHttpInfo(userId, sourceId);
+             ApiResponse<UserPresence> localVarResponse = await GetUserPresenceAsyncWithHttpInfo(userId, sourceId);
              return localVarResponse.Data;
 
         }
@@ -1191,14 +1189,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="sourceId">Source</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserIdPresencesSourceIdAsyncWithHttpInfo (string userId, string sourceId)
+        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresenceAsyncWithHttpInfo (string userId, string sourceId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserIdPresencesSourceId");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresence");
             // verify the required parameter 'sourceId' is set
             if (sourceId == null)
-                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUserIdPresencesSourceId");
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUserPresence");
 
             var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1242,13 +1240,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSourceId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserIdPresencesSourceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserPresence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (UserPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserPresence)));
             
         }
@@ -1261,9 +1261,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sourceId">Source</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
-        public UserPresence PatchUserIdPresencesSourceId (string userId, string sourceId, UserPresence body)
+        public UserPresence PatchUserPresence (string userId, string sourceId, UserPresence body)
         {
-             ApiResponse<UserPresence> localVarResponse = PatchUserIdPresencesSourceIdWithHttpInfo(userId, sourceId, body);
+             ApiResponse<UserPresence> localVarResponse = PatchUserPresenceWithHttpInfo(userId, sourceId, body);
              return localVarResponse.Data;
         }
 
@@ -1275,17 +1275,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sourceId">Source</param>
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        public ApiResponse< UserPresence > PatchUserIdPresencesSourceIdWithHttpInfo (string userId, string sourceId, UserPresence body)
+        public ApiResponse< UserPresence > PatchUserPresenceWithHttpInfo (string userId, string sourceId, UserPresence body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserIdPresencesSourceId");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserPresence");
             // verify the required parameter 'sourceId' is set
             if (sourceId == null)
-                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->PatchUserIdPresencesSourceId");
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->PatchUserPresence");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserIdPresencesSourceId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresence");
 
             var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1337,13 +1337,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSourceId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserPresence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSourceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserPresence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (UserPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserPresence)));
             
         }
@@ -1356,9 +1358,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sourceId">Source</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
-        public async System.Threading.Tasks.Task<UserPresence> PatchUserIdPresencesSourceIdAsync (string userId, string sourceId, UserPresence body)
+        public async System.Threading.Tasks.Task<UserPresence> PatchUserPresenceAsync (string userId, string sourceId, UserPresence body)
         {
-             ApiResponse<UserPresence> localVarResponse = await PatchUserIdPresencesSourceIdAsyncWithHttpInfo(userId, sourceId, body);
+             ApiResponse<UserPresence> localVarResponse = await PatchUserPresenceAsyncWithHttpInfo(userId, sourceId, body);
              return localVarResponse.Data;
 
         }
@@ -1371,17 +1373,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sourceId">Source</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserIdPresencesSourceIdAsyncWithHttpInfo (string userId, string sourceId, UserPresence body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresenceAsyncWithHttpInfo (string userId, string sourceId, UserPresence body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserIdPresencesSourceId");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserPresence");
             // verify the required parameter 'sourceId' is set
             if (sourceId == null)
-                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->PatchUserIdPresencesSourceId");
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->PatchUserPresence");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserIdPresencesSourceId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresence");
 
             var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1433,13 +1435,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSourceId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserPresence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUserIdPresencesSourceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserPresence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (UserPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserPresence)));
             
         }
@@ -1516,13 +1520,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostPresencedefinitions: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostPresencedefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostPresencedefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrganizationPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)));
             
         }
@@ -1600,13 +1606,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostPresencedefinitions: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostPresencedefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostPresencedefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrganizationPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)));
             
         }
@@ -1618,9 +1626,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>OrganizationPresence</returns>
-        public OrganizationPresence PutPresenceId (string presenceId, OrganizationPresence body)
+        public OrganizationPresence PutPresencedefinition (string presenceId, OrganizationPresence body)
         {
-             ApiResponse<OrganizationPresence> localVarResponse = PutPresenceIdWithHttpInfo(presenceId, body);
+             ApiResponse<OrganizationPresence> localVarResponse = PutPresencedefinitionWithHttpInfo(presenceId, body);
              return localVarResponse.Data;
         }
 
@@ -1631,14 +1639,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        public ApiResponse< OrganizationPresence > PutPresenceIdWithHttpInfo (string presenceId, OrganizationPresence body)
+        public ApiResponse< OrganizationPresence > PutPresencedefinitionWithHttpInfo (string presenceId, OrganizationPresence body)
         {
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
-                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->PutPresenceId");
+                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->PutPresencedefinition");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresencedefinition");
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1689,13 +1697,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutPresenceId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutPresencedefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutPresenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutPresencedefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrganizationPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)));
             
         }
@@ -1707,9 +1717,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of OrganizationPresence</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresence> PutPresenceIdAsync (string presenceId, OrganizationPresence body)
+        public async System.Threading.Tasks.Task<OrganizationPresence> PutPresencedefinitionAsync (string presenceId, OrganizationPresence body)
         {
-             ApiResponse<OrganizationPresence> localVarResponse = await PutPresenceIdAsyncWithHttpInfo(presenceId, body);
+             ApiResponse<OrganizationPresence> localVarResponse = await PutPresencedefinitionAsyncWithHttpInfo(presenceId, body);
              return localVarResponse.Data;
 
         }
@@ -1721,14 +1731,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresenceIdAsyncWithHttpInfo (string presenceId, OrganizationPresence body)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresencedefinitionAsyncWithHttpInfo (string presenceId, OrganizationPresence body)
         {
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
-                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->PutPresenceId");
+                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->PutPresencedefinition");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresencedefinition");
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1779,13 +1789,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutPresenceId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutPresencedefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutPresenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutPresencedefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrganizationPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)));
             
         }

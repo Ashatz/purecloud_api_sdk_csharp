@@ -8,7 +8,7 @@ title: Attribute
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** | The attribute name. | |
+| **Name** | **string** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **CreatedBy** | [**UriReference**](UriReference.html) |  | [optional] |

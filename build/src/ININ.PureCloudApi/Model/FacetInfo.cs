@@ -20,8 +20,8 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetInfo" /> class.
         /// </summary>
-        /// <param name="Name">The name of the field that was faceted on..</param>
-        /// <param name="Entries">The entries resulting from this facet..</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Entries">Entries.</param>
         public FacetInfo(string Name = null, List<Entry> Entries = null)
         {
             this.Name = Name;
@@ -29,15 +29,13 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// The name of the field that was faceted on.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The name of the field that was faceted on.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// The entries resulting from this facet.
+        /// Gets or Sets Entries
         /// </summary>
-        /// <value>The entries resulting from this facet.</value>
         [DataMember(Name="entries", EmitDefaultValue=false)]
         public List<Entry> Entries { get; set; }
         /// <summary>

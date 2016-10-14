@@ -20,53 +20,36 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditEntity" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected AuditEntity() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AuditEntity" /> class.
-        /// </summary>
-        /// <param name="Type">The type of the entity the action of this AuditEntity targeted. (required).</param>
-        /// <param name="Id">The id of the entity the action of this AuditEntity targeted..</param>
-        /// <param name="Name">The name of the entity the action of this AuditEntity targeted..</param>
-        /// <param name="SelfUri">The selfUri for this entity..</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="SelfUri">SelfUri.</param>
         public AuditEntity(string Type = null, string Id = null, string Name = null, string SelfUri = null)
         {
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for AuditEntity and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
+            this.Type = Type;
             this.Id = Id;
             this.Name = Name;
             this.SelfUri = SelfUri;
         }
         
         /// <summary>
-        /// The type of the entity the action of this AuditEntity targeted.
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>The type of the entity the action of this AuditEntity targeted.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         /// <summary>
-        /// The id of the entity the action of this AuditEntity targeted.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The id of the entity the action of this AuditEntity targeted.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         /// <summary>
-        /// The name of the entity the action of this AuditEntity targeted.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The name of the entity the action of this AuditEntity targeted.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// The selfUri for this entity.
+        /// Gets or Sets SelfUri
         /// </summary>
-        /// <value>The selfUri for this entity.</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
         /// <summary>

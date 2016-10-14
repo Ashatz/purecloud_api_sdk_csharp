@@ -20,53 +20,24 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundRoute" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected InboundRoute() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="InboundRoute" /> class.
-        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Pattern">The search pattern that the mailbox name should match. (required).</param>
+        /// <param name="Pattern">The search pattern that the mailbox name should match..</param>
         /// <param name="Queue">The queue to route the emails to..</param>
         /// <param name="Priority">The priority to use for routing..</param>
         /// <param name="Skills">The skills to use for routing..</param>
         /// <param name="Language">The language to use for routing..</param>
-        /// <param name="FromName">The sender name to use for outgoing replies. (required).</param>
-        /// <param name="FromEmail">The sender email to use for outgoing replies. (required).</param>
+        /// <param name="FromName">The sender name to use for outgoing replies..</param>
+        /// <param name="FromEmail">The sender email to use for outgoing replies..</param>
         public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null)
         {
-            // to ensure "Pattern" is required (not null)
-            if (Pattern == null)
-            {
-                throw new InvalidDataException("Pattern is a required property for InboundRoute and cannot be null");
-            }
-            else
-            {
-                this.Pattern = Pattern;
-            }
-            // to ensure "FromName" is required (not null)
-            if (FromName == null)
-            {
-                throw new InvalidDataException("FromName is a required property for InboundRoute and cannot be null");
-            }
-            else
-            {
-                this.FromName = FromName;
-            }
-            // to ensure "FromEmail" is required (not null)
-            if (FromEmail == null)
-            {
-                throw new InvalidDataException("FromEmail is a required property for InboundRoute and cannot be null");
-            }
-            else
-            {
-                this.FromEmail = FromEmail;
-            }
             this.Name = Name;
+            this.Pattern = Pattern;
             this.Queue = Queue;
             this.Priority = Priority;
             this.Skills = Skills;
             this.Language = Language;
+            this.FromName = FromName;
+            this.FromEmail = FromEmail;
         }
         
         /// <summary>

@@ -18,9 +18,8 @@ namespace ININ.PureCloudApi.Model
     public partial class SearchRequest :  IEquatable<SearchRequest>
     {
         /// <summary>
-        /// The sort order for results
+        /// Gets or Sets SortOrder
         /// </summary>
-        /// <value>The sort order for results</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SortOrderEnum
         {
@@ -51,9 +50,8 @@ namespace ININ.PureCloudApi.Model
             Score
         }
         /// <summary>
-        /// The sort order for results
+        /// Gets or Sets SortOrder
         /// </summary>
-        /// <value>The sort order for results</value>
         [DataMember(Name="sortOrder", EmitDefaultValue=false)]
         public SortOrderEnum? SortOrder { get; set; }
         /// <summary>
@@ -64,15 +62,15 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchRequest" /> class.
         /// </summary>
-        /// <param name="SortOrder">The sort order for results.</param>
-        /// <param name="SortBy">The field in the resource that you want to sort the results by.</param>
-        /// <param name="PageSize">The number of results per page.</param>
-        /// <param name="PageNumber">The page of resources you want to retrieve.</param>
-        /// <param name="ReturnFields">A List of strings containing the resource field paths that you want to return.</param>
-        /// <param name="Expand">Provides more details about a specified resource.</param>
-        /// <param name="Types">Resource domain type to search (required).</param>
-        /// <param name="Query">The search criteria.</param>
-        /// <param name="Aggregations">Aggregation criteria.</param>
+        /// <param name="SortOrder">SortOrder.</param>
+        /// <param name="SortBy">SortBy.</param>
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="ReturnFields">ReturnFields.</param>
+        /// <param name="Expand">Expand.</param>
+        /// <param name="Types">Resource Domain type (required).</param>
+        /// <param name="Query">Query.</param>
+        /// <param name="Aggregations">Aggregations.</param>
         public SearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<string> ReturnFields = null, List<string> Expand = null, List<string> Types = null, List<SearchCriteria> Query = null, List<SearchAggregation> Aggregations = null)
         {
             // to ensure "Types" is required (not null)
@@ -95,51 +93,44 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// The field in the resource that you want to sort the results by
+        /// Gets or Sets SortBy
         /// </summary>
-        /// <value>The field in the resource that you want to sort the results by</value>
         [DataMember(Name="sortBy", EmitDefaultValue=false)]
         public string SortBy { get; set; }
         /// <summary>
-        /// The number of results per page
+        /// Gets or Sets PageSize
         /// </summary>
-        /// <value>The number of results per page</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
         /// <summary>
-        /// The page of resources you want to retrieve
+        /// Gets or Sets PageNumber
         /// </summary>
-        /// <value>The page of resources you want to retrieve</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
         /// <summary>
-        /// A List of strings containing the resource field paths that you want to return
+        /// Gets or Sets ReturnFields
         /// </summary>
-        /// <value>A List of strings containing the resource field paths that you want to return</value>
         [DataMember(Name="returnFields", EmitDefaultValue=false)]
         public List<string> ReturnFields { get; set; }
         /// <summary>
-        /// Provides more details about a specified resource
+        /// Gets or Sets Expand
         /// </summary>
-        /// <value>Provides more details about a specified resource</value>
         [DataMember(Name="expand", EmitDefaultValue=false)]
         public List<string> Expand { get; set; }
         /// <summary>
-        /// Resource domain type to search
+        /// Resource Domain type
         /// </summary>
-        /// <value>Resource domain type to search</value>
+        /// <value>Resource Domain type</value>
         [DataMember(Name="types", EmitDefaultValue=false)]
         public List<string> Types { get; set; }
         /// <summary>
-        /// The search criteria
+        /// Gets or Sets Query
         /// </summary>
-        /// <value>The search criteria</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public List<SearchCriteria> Query { get; set; }
         /// <summary>
-        /// Aggregation criteria
+        /// Gets or Sets Aggregations
         /// </summary>
-        /// <value>Aggregation criteria</value>
         [DataMember(Name="aggregations", EmitDefaultValue=false)]
         public List<SearchAggregation> Aggregations { get; set; }
         /// <summary>

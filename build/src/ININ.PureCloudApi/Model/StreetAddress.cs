@@ -20,12 +20,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StreetAddress" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected StreetAddress() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StreetAddress" /> class.
-        /// </summary>
-        /// <param name="Country">2 Letter Country code, like US or GB (required).</param>
+        /// <param name="Country">Country.</param>
         /// <param name="A1">A1.</param>
         /// <param name="A3">A3.</param>
         /// <param name="RD">RD.</param>
@@ -35,15 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PC">PC.</param>
         public StreetAddress(string Country = null, string A1 = null, string A3 = null, string RD = null, string HNO = null, string LOC = null, string NAM = null, string PC = null)
         {
-            // to ensure "Country" is required (not null)
-            if (Country == null)
-            {
-                throw new InvalidDataException("Country is a required property for StreetAddress and cannot be null");
-            }
-            else
-            {
-                this.Country = Country;
-            }
+            this.Country = Country;
             this.A1 = A1;
             this.A3 = A3;
             this.RD = RD;
@@ -54,9 +41,8 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// 2 Letter Country code, like US or GB
+        /// Gets or Sets Country
         /// </summary>
-        /// <value>2 Letter Country code, like US or GB</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
         /// <summary>

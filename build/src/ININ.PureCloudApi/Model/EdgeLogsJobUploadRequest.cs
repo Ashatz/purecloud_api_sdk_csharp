@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobUploadRequest" /> class.
         /// </summary>
-        /// <param name="FileIds">A list of file ids to upload. (required).</param>
+        /// <param name="FileIds">The list of file id&#39;s being requested for download. (required).</param>
         public EdgeLogsJobUploadRequest(List<string> FileIds = null)
         {
             // to ensure "FileIds" is required (not null)
@@ -40,9 +40,9 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// A list of file ids to upload.
+        /// The list of file id&#39;s being requested for download.
         /// </summary>
-        /// <value>A list of file ids to upload.</value>
+        /// <value>The list of file id&#39;s being requested for download.</value>
         [DataMember(Name="fileIds", EmitDefaultValue=false)]
         public List<string> FileIds { get; set; }
         /// <summary>

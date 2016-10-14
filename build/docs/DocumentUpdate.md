@@ -8,7 +8,7 @@ title: DocumentUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ChangeNumber** | **int?** |  | [optional] |
-| **Name** | **string** | The name of the document | |
+| **Name** | **string** |  | [optional] |
 | **Read** | **bool?** |  | [optional] [default to false]|
 | **AddTags** | **List&lt;string&gt;** |  | [optional] |
 | **RemoveTags** | **List&lt;string&gt;** |  | [optional] |

@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns></returns>
-        void DeleteAttributeId (string attributeId);
+        void DeleteAttribute (string attributeId);
 
         /// <summary>
         /// Delete an existing Attribute.
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteAttributeIdWithHttpInfo (string attributeId);
+        ApiResponse<Object> DeleteAttributeWithHttpInfo (string attributeId);
         /// <summary>
         /// Get details about an existing attribute.
         /// </summary>
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
-        ININ.PureCloudApi.Model.Attribute GetAttributeId (string attributeId);
+        ININ.PureCloudApi.Model.Attribute GetAttribute (string attributeId);
 
         /// <summary>
         /// Get details about an existing attribute.
@@ -55,7 +55,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
-        ApiResponse<ININ.PureCloudApi.Model.Attribute> GetAttributeIdWithHttpInfo (string attributeId);
+        ApiResponse<ININ.PureCloudApi.Model.Attribute> GetAttributeWithHttpInfo (string attributeId);
         /// <summary>
         /// Gets a list of existing attributes.
         /// </summary>
@@ -131,7 +131,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
         /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
-        ININ.PureCloudApi.Model.Attribute PutAttributeId (string attributeId, ININ.PureCloudApi.Model.Attribute body);
+        ININ.PureCloudApi.Model.Attribute PutAttribute (string attributeId, ININ.PureCloudApi.Model.Attribute body);
 
         /// <summary>
         /// Update an existing attribute.
@@ -143,7 +143,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
         /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
-        ApiResponse<ININ.PureCloudApi.Model.Attribute> PutAttributeIdWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body);
+        ApiResponse<ININ.PureCloudApi.Model.Attribute> PutAttributeWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -155,7 +155,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteAttributeIdAsync (string attributeId);
+        System.Threading.Tasks.Task DeleteAttributeAsync (string attributeId);
 
         /// <summary>
         /// Delete an existing Attribute.
@@ -166,7 +166,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAttributeIdAsyncWithHttpInfo (string attributeId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAttributeAsyncWithHttpInfo (string attributeId);
         /// <summary>
         /// Get details about an existing attribute.
         /// </summary>
@@ -176,7 +176,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
-        System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> GetAttributeIdAsync (string attributeId);
+        System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> GetAttributeAsync (string attributeId);
 
         /// <summary>
         /// Get details about an existing attribute.
@@ -187,7 +187,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> GetAttributeIdAsyncWithHttpInfo (string attributeId);
+        System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> GetAttributeAsyncWithHttpInfo (string attributeId);
         /// <summary>
         /// Gets a list of existing attributes.
         /// </summary>
@@ -263,7 +263,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
         /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
-        System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PutAttributeIdAsync (string attributeId, ININ.PureCloudApi.Model.Attribute body);
+        System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PutAttributeAsync (string attributeId, ININ.PureCloudApi.Model.Attribute body);
 
         /// <summary>
         /// Update an existing attribute.
@@ -275,7 +275,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
         /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PutAttributeIdAsyncWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body);
+        System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PutAttributeAsyncWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body);
         #endregion Asynchronous Operations
     }
 
@@ -372,9 +372,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns></returns>
-        public void DeleteAttributeId (string attributeId)
+        public void DeleteAttribute (string attributeId)
         {
-             DeleteAttributeIdWithHttpInfo(attributeId);
+             DeleteAttributeWithHttpInfo(attributeId);
         }
 
         /// <summary>
@@ -383,11 +383,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteAttributeIdWithHttpInfo (string attributeId)
+        public ApiResponse<Object> DeleteAttributeWithHttpInfo (string attributeId)
         {
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
-                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->DeleteAttributeId");
+                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->DeleteAttribute");
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -430,14 +430,16 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteAttributeId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAttribute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteAttributeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAttribute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
         }
 
@@ -447,9 +449,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteAttributeIdAsync (string attributeId)
+        public async System.Threading.Tasks.Task DeleteAttributeAsync (string attributeId)
         {
-             await DeleteAttributeIdAsyncWithHttpInfo(attributeId);
+             await DeleteAttributeAsyncWithHttpInfo(attributeId);
 
         }
 
@@ -459,11 +461,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAttributeIdAsyncWithHttpInfo (string attributeId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAttributeAsyncWithHttpInfo (string attributeId)
         {
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
-                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->DeleteAttributeId");
+                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->DeleteAttribute");
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -506,14 +508,16 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteAttributeId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAttribute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteAttributeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAttribute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
         }
 
@@ -523,9 +527,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
-        public ININ.PureCloudApi.Model.Attribute GetAttributeId (string attributeId)
+        public ININ.PureCloudApi.Model.Attribute GetAttribute (string attributeId)
         {
-             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = GetAttributeIdWithHttpInfo(attributeId);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = GetAttributeWithHttpInfo(attributeId);
              return localVarResponse.Data;
         }
 
@@ -535,11 +539,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
-        public ApiResponse< ININ.PureCloudApi.Model.Attribute > GetAttributeIdWithHttpInfo (string attributeId)
+        public ApiResponse< ININ.PureCloudApi.Model.Attribute > GetAttributeWithHttpInfo (string attributeId)
         {
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
-                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->GetAttributeId");
+                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->GetAttribute");
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -582,13 +586,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAttributeId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetAttribute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAttributeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetAttribute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
@@ -599,9 +605,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
-        public async System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> GetAttributeIdAsync (string attributeId)
+        public async System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> GetAttributeAsync (string attributeId)
         {
-             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = await GetAttributeIdAsyncWithHttpInfo(attributeId);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = await GetAttributeAsyncWithHttpInfo(attributeId);
              return localVarResponse.Data;
 
         }
@@ -612,11 +618,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> GetAttributeIdAsyncWithHttpInfo (string attributeId)
+        public async System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> GetAttributeAsyncWithHttpInfo (string attributeId)
         {
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
-                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->GetAttributeId");
+                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->GetAttribute");
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -659,13 +665,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAttributeId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetAttribute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAttributeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetAttribute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
@@ -735,13 +743,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAttributes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AttributeEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (AttributeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttributeEntityListing)));
             
         }
@@ -812,13 +822,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAttributes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AttributeEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (AttributeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttributeEntityListing)));
             
         }
@@ -895,13 +907,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostAttributes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
@@ -979,13 +993,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostAttributes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostAttributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
@@ -1062,13 +1078,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostQuery: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AttributeEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (AttributeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttributeEntityListing)));
             
         }
@@ -1146,13 +1164,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostQuery: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AttributeEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (AttributeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttributeEntityListing)));
             
         }
@@ -1164,9 +1184,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
         /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
-        public ININ.PureCloudApi.Model.Attribute PutAttributeId (string attributeId, ININ.PureCloudApi.Model.Attribute body)
+        public ININ.PureCloudApi.Model.Attribute PutAttribute (string attributeId, ININ.PureCloudApi.Model.Attribute body)
         {
-             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = PutAttributeIdWithHttpInfo(attributeId, body);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = PutAttributeWithHttpInfo(attributeId, body);
              return localVarResponse.Data;
         }
 
@@ -1177,14 +1197,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
         /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
-        public ApiResponse< ININ.PureCloudApi.Model.Attribute > PutAttributeIdWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body)
+        public ApiResponse< ININ.PureCloudApi.Model.Attribute > PutAttributeWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body)
         {
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
-                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->PutAttributeId");
+                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->PutAttribute");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AttributesApi->PutAttributeId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AttributesApi->PutAttribute");
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1235,13 +1255,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutAttributeId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutAttribute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutAttributeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutAttribute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
@@ -1253,9 +1275,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
         /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
-        public async System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PutAttributeIdAsync (string attributeId, ININ.PureCloudApi.Model.Attribute body)
+        public async System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PutAttributeAsync (string attributeId, ININ.PureCloudApi.Model.Attribute body)
         {
-             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = await PutAttributeIdAsyncWithHttpInfo(attributeId, body);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = await PutAttributeAsyncWithHttpInfo(attributeId, body);
              return localVarResponse.Data;
 
         }
@@ -1267,14 +1289,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
         /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PutAttributeIdAsyncWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body)
+        public async System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PutAttributeAsyncWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body)
         {
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
-                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->PutAttributeId");
+                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->PutAttribute");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AttributesApi->PutAttributeId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling AttributesApi->PutAttribute");
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1325,13 +1347,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutAttributeId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutAttribute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutAttributeId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutAttribute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }

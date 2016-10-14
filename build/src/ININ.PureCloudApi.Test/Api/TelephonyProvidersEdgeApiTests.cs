@@ -54,160 +54,288 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteProvidersEdgesCertificateauthoritiesCertificateId
+        /// Test DeleteProvidersEdge
         /// </summary>
         [Test]
-        public void DeleteProvidersEdgesCertificateauthoritiesCertificateIdTest()
+        public void DeleteProvidersEdgeTest()
         {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesCertificateauthoritiesCertificateId'
-            string certificateId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesCertificateauthoritiesCertificateId(certificateId);
-            Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
-        /// Test DeleteProvidersEdgesDidpoolsDidpoolId
-        /// </summary>
-        [Test]
-        public void DeleteProvidersEdgesDidpoolsDidpoolIdTest()
-        {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesDidpoolsDidpoolId'
-            string didPoolId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesDidpoolsDidpoolId(didPoolId);
-            Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
-        /// Test DeleteProvidersEdgesEdgeId
-        /// </summary>
-        [Test]
-        public void DeleteProvidersEdgesEdgeIdTest()
-        {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesEdgeId'
+            // TODO: add unit test for the method 'DeleteProvidersEdge'
             string edgeId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesEdgeId(edgeId);
+            var response = instance.DeleteProvidersEdge(edgeId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteProvidersEdgesEdgeIdLogicalinterfacesInterfaceId
+        /// Test DeleteProvidersEdgeLogicalinterface
         /// </summary>
         [Test]
-        public void DeleteProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdTest()
+        public void DeleteProvidersEdgeLogicalinterfaceTest()
         {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesEdgeIdLogicalinterfacesInterfaceId'
+            // TODO: add unit test for the method 'DeleteProvidersEdgeLogicalinterface'
             string edgeId = null; // TODO: replace null with proper value
             string interfaceId = null; // TODO: replace null with proper value
-            instance.DeleteProvidersEdgesEdgeIdLogicalinterfacesInterfaceId(edgeId, interfaceId);
+            instance.DeleteProvidersEdgeLogicalinterface(edgeId, interfaceId);
             
         }
         
         /// <summary>
-        /// Test DeleteProvidersEdgesEdgeIdSoftwareupdate
+        /// Test DeleteProvidersEdgeSoftwareupdate
         /// </summary>
         [Test]
-        public void DeleteProvidersEdgesEdgeIdSoftwareupdateTest()
+        public void DeleteProvidersEdgeSoftwareupdateTest()
         {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesEdgeIdSoftwareupdate'
+            // TODO: add unit test for the method 'DeleteProvidersEdgeSoftwareupdate'
             string edgeId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesEdgeIdSoftwareupdate(edgeId);
+            var response = instance.DeleteProvidersEdgeSoftwareupdate(edgeId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteProvidersEdgesEdgegroupsEdgegroupId
+        /// Test DeleteProvidersEdgesCertificateauthority
         /// </summary>
         [Test]
-        public void DeleteProvidersEdgesEdgegroupsEdgegroupIdTest()
+        public void DeleteProvidersEdgesCertificateauthorityTest()
         {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesEdgegroupsEdgegroupId'
+            // TODO: add unit test for the method 'DeleteProvidersEdgesCertificateauthority'
+            string certificateId = null; // TODO: replace null with proper value
+            var response = instance.DeleteProvidersEdgesCertificateauthority(certificateId);
+            Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test DeleteProvidersEdgesDidpool
+        /// </summary>
+        [Test]
+        public void DeleteProvidersEdgesDidpoolTest()
+        {
+            // TODO: add unit test for the method 'DeleteProvidersEdgesDidpool'
+            string didPoolId = null; // TODO: replace null with proper value
+            var response = instance.DeleteProvidersEdgesDidpool(didPoolId);
+            Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test DeleteProvidersEdgesEdgegroup
+        /// </summary>
+        [Test]
+        public void DeleteProvidersEdgesEdgegroupTest()
+        {
+            // TODO: add unit test for the method 'DeleteProvidersEdgesEdgegroup'
             string edgeGroupId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesEdgegroupsEdgegroupId(edgeGroupId);
+            var response = instance.DeleteProvidersEdgesEdgegroup(edgeGroupId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteProvidersEdgesEndpointsEndpointId
+        /// Test DeleteProvidersEdgesEndpoint
         /// </summary>
         [Test]
-        public void DeleteProvidersEdgesEndpointsEndpointIdTest()
+        public void DeleteProvidersEdgesEndpointTest()
         {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesEndpointsEndpointId'
+            // TODO: add unit test for the method 'DeleteProvidersEdgesEndpoint'
             string endpointId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesEndpointsEndpointId(endpointId);
+            var response = instance.DeleteProvidersEdgesEndpoint(endpointId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteProvidersEdgesExtensionpoolsExtensionpoolId
+        /// Test DeleteProvidersEdgesExtensionpool
         /// </summary>
         [Test]
-        public void DeleteProvidersEdgesExtensionpoolsExtensionpoolIdTest()
+        public void DeleteProvidersEdgesExtensionpoolTest()
         {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesExtensionpoolsExtensionpoolId'
+            // TODO: add unit test for the method 'DeleteProvidersEdgesExtensionpool'
             string extensionPoolId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesExtensionpoolsExtensionpoolId(extensionPoolId);
+            var response = instance.DeleteProvidersEdgesExtensionpool(extensionPoolId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteProvidersEdgesOutboundroutesOutboundrouteId
+        /// Test DeleteProvidersEdgesOutboundroute
         /// </summary>
         [Test]
-        public void DeleteProvidersEdgesOutboundroutesOutboundrouteIdTest()
+        public void DeleteProvidersEdgesOutboundrouteTest()
         {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesOutboundroutesOutboundrouteId'
+            // TODO: add unit test for the method 'DeleteProvidersEdgesOutboundroute'
             string outboundRouteId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesOutboundroutesOutboundrouteId(outboundRouteId);
+            var response = instance.DeleteProvidersEdgesOutboundroute(outboundRouteId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteProvidersEdgesPhonebasesettingsPhonebaseId
+        /// Test DeleteProvidersEdgesPhone
         /// </summary>
         [Test]
-        public void DeleteProvidersEdgesPhonebasesettingsPhonebaseIdTest()
+        public void DeleteProvidersEdgesPhoneTest()
         {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesPhonebasesettingsPhonebaseId'
-            string phoneBaseId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesPhonebasesettingsPhonebaseId(phoneBaseId);
-            Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
-        /// Test DeleteProvidersEdgesPhonesPhoneId
-        /// </summary>
-        [Test]
-        public void DeleteProvidersEdgesPhonesPhoneIdTest()
-        {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesPhonesPhoneId'
+            // TODO: add unit test for the method 'DeleteProvidersEdgesPhone'
             string phoneId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesPhonesPhoneId(phoneId);
+            var response = instance.DeleteProvidersEdgesPhone(phoneId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteProvidersEdgesSitesSiteId
+        /// Test DeleteProvidersEdgesPhonebasesetting
         /// </summary>
         [Test]
-        public void DeleteProvidersEdgesSitesSiteIdTest()
+        public void DeleteProvidersEdgesPhonebasesettingTest()
         {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesSitesSiteId'
+            // TODO: add unit test for the method 'DeleteProvidersEdgesPhonebasesetting'
+            string phoneBaseId = null; // TODO: replace null with proper value
+            var response = instance.DeleteProvidersEdgesPhonebasesetting(phoneBaseId);
+            Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test DeleteProvidersEdgesSite
+        /// </summary>
+        [Test]
+        public void DeleteProvidersEdgesSiteTest()
+        {
+            // TODO: add unit test for the method 'DeleteProvidersEdgesSite'
             string siteId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesSitesSiteId(siteId);
+            var response = instance.DeleteProvidersEdgesSite(siteId);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
-        /// Test DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId
+        /// Test DeleteProvidersEdgesTrunkbasesetting
         /// </summary>
         [Test]
-        public void DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdTest()
+        public void DeleteProvidersEdgesTrunkbasesettingTest()
         {
-            // TODO: add unit test for the method 'DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId'
+            // TODO: add unit test for the method 'DeleteProvidersEdgesTrunkbasesetting'
             string trunkBaseSettingsId = null; // TODO: replace null with proper value
-            var response = instance.DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId(trunkBaseSettingsId);
+            var response = instance.DeleteProvidersEdgesTrunkbasesetting(trunkBaseSettingsId);
             Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdge
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgeTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdge'
+            string edgeId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdge(edgeId);
+            Assert.IsInstanceOf<Edge> (response, "response is Edge");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgeLine
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgeLineTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgeLine'
+            string edgeId = null; // TODO: replace null with proper value
+            string lineId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgeLine(edgeId, lineId);
+            Assert.IsInstanceOf<EdgeLine> (response, "response is EdgeLine");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgeLines
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgeLinesTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgeLines'
+            string edgeId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgeLines(edgeId, pageSize, pageNumber);
+            Assert.IsInstanceOf<EdgeLineEntityListing> (response, "response is EdgeLineEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgeLogicalinterface
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgeLogicalinterfaceTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgeLogicalinterface'
+            string edgeId = null; // TODO: replace null with proper value
+            string interfaceId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgeLogicalinterface(edgeId, interfaceId, expand);
+            Assert.IsInstanceOf<DomainLogicalInterface> (response, "response is DomainLogicalInterface");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgeLogicalinterfaces
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgeLogicalinterfacesTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgeLogicalinterfaces'
+            string edgeId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgeLogicalinterfaces(edgeId, expand);
+            Assert.IsInstanceOf<LogicalInterfaceEntityListing> (response, "response is LogicalInterfaceEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgeLogsJob
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgeLogsJobTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgeLogsJob'
+            string edgeId = null; // TODO: replace null with proper value
+            string jobId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgeLogsJob(edgeId, jobId);
+            Assert.IsInstanceOf<EdgeLogsJob> (response, "response is EdgeLogsJob");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgePhysicalinterface
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgePhysicalinterfaceTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgePhysicalinterface'
+            string edgeId = null; // TODO: replace null with proper value
+            string interfaceId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgePhysicalinterface(edgeId, interfaceId);
+            Assert.IsInstanceOf<DomainPhysicalInterface> (response, "response is DomainPhysicalInterface");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgePhysicalinterfaces
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgePhysicalinterfacesTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgePhysicalinterfaces'
+            string edgeId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgePhysicalinterfaces(edgeId);
+            Assert.IsInstanceOf<PhysicalInterfaceEntityListing> (response, "response is PhysicalInterfaceEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgeSoftwareupdate
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgeSoftwareupdateTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgeSoftwareupdate'
+            string edgeId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgeSoftwareupdate(edgeId);
+            Assert.IsInstanceOf<DomainEdgeSoftwareUpdateDto> (response, "response is DomainEdgeSoftwareUpdateDto");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgeSoftwareversions
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgeSoftwareversionsTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgeSoftwareversions'
+            string edgeId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgeSoftwareversions(edgeId);
+            Assert.IsInstanceOf<DomainEdgeSoftwareVersionDto> (response, "response is DomainEdgeSoftwareVersionDto");
         }
         
         /// <summary>
@@ -250,15 +378,39 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetProvidersEdgesCertificateauthoritiesCertificateId
+        /// Test GetProvidersEdgesCertificateauthority
         /// </summary>
         [Test]
-        public void GetProvidersEdgesCertificateauthoritiesCertificateIdTest()
+        public void GetProvidersEdgesCertificateauthorityTest()
         {
-            // TODO: add unit test for the method 'GetProvidersEdgesCertificateauthoritiesCertificateId'
+            // TODO: add unit test for the method 'GetProvidersEdgesCertificateauthority'
             string certificateId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesCertificateauthoritiesCertificateId(certificateId);
+            var response = instance.GetProvidersEdgesCertificateauthority(certificateId);
             Assert.IsInstanceOf<DomainCertificateAuthority> (response, "response is DomainCertificateAuthority");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesDid
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesDidTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesDid'
+            string didId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesDid(didId);
+            Assert.IsInstanceOf<DID> (response, "response is DID");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesDidpool
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesDidpoolTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesDidpool'
+            string didPoolId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesDidpool(didPoolId);
+            Assert.IsInstanceOf<DIDPool> (response, "response is DIDPool");
         }
         
         /// <summary>
@@ -273,18 +425,6 @@ namespace ININ.PureCloudApi.Test
             string sortBy = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesDidpools(pageSize, pageNumber, sortBy);
             Assert.IsInstanceOf<DIDPoolEntityListing> (response, "response is DIDPoolEntityListing");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesDidpoolsDidpoolId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesDidpoolsDidpoolIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesDidpoolsDidpoolId'
-            string didPoolId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesDidpoolsDidpoolId(didPoolId);
-            Assert.IsInstanceOf<DIDPool> (response, "response is DIDPool");
         }
         
         /// <summary>
@@ -304,155 +444,16 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetProvidersEdgesDidsDidId
+        /// Test GetProvidersEdgesEdgegroup
         /// </summary>
         [Test]
-        public void GetProvidersEdgesDidsDidIdTest()
+        public void GetProvidersEdgesEdgegroupTest()
         {
-            // TODO: add unit test for the method 'GetProvidersEdgesDidsDidId'
-            string didId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesDidsDidId(didId);
-            Assert.IsInstanceOf<DID> (response, "response is DID");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeId'
-            string edgeId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeId(edgeId);
-            Assert.IsInstanceOf<Edge> (response, "response is Edge");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeIdLines
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdLinesTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdLines'
-            string edgeId = null; // TODO: replace null with proper value
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdLines(edgeId, pageSize, pageNumber);
-            Assert.IsInstanceOf<EdgeLineEntityListing> (response, "response is EdgeLineEntityListing");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeIdLinesLineId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdLinesLineIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdLinesLineId'
-            string edgeId = null; // TODO: replace null with proper value
-            string lineId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdLinesLineId(edgeId, lineId);
-            Assert.IsInstanceOf<EdgeLine> (response, "response is EdgeLine");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeIdLogicalinterfaces
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdLogicalinterfacesTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdLogicalinterfaces'
-            string edgeId = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'GetProvidersEdgesEdgegroup'
+            string edgeGroupId = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdLogicalinterfaces(edgeId, expand);
-            Assert.IsInstanceOf<LogicalInterfaceEntityListing> (response, "response is LogicalInterfaceEntityListing");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId'
-            string edgeId = null; // TODO: replace null with proper value
-            string interfaceId = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId(edgeId, interfaceId, expand);
-            Assert.IsInstanceOf<DomainLogicalInterface> (response, "response is DomainLogicalInterface");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeIdLogsJobsJobId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdLogsJobsJobIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdLogsJobsJobId'
-            string edgeId = null; // TODO: replace null with proper value
-            string jobId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdLogsJobsJobId(edgeId, jobId);
-            Assert.IsInstanceOf<EdgeLogsJob> (response, "response is EdgeLogsJob");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeIdPhysicalinterfaces
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdPhysicalinterfacesTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdPhysicalinterfaces'
-            string edgeId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdPhysicalinterfaces(edgeId);
-            Assert.IsInstanceOf<PhysicalInterfaceEntityListing> (response, "response is PhysicalInterfaceEntityListing");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceId'
-            string edgeId = null; // TODO: replace null with proper value
-            string interfaceId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceId(edgeId, interfaceId);
-            Assert.IsInstanceOf<DomainPhysicalInterface> (response, "response is DomainPhysicalInterface");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeIdSetuppackage
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdSetuppackageTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdSetuppackage'
-            string edgeId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdSetuppackage(edgeId);
-            Assert.IsInstanceOf<VmPairingInfo> (response, "response is VmPairingInfo");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeIdSoftwareupdate
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdSoftwareupdateTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdSoftwareupdate'
-            string edgeId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdSoftwareupdate(edgeId);
-            Assert.IsInstanceOf<DomainEdgeSoftwareUpdateDto> (response, "response is DomainEdgeSoftwareUpdateDto");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesEdgeIdSoftwareversions
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgeIdSoftwareversionsTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdSoftwareversions'
-            string edgeId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeIdSoftwareversions(edgeId);
-            Assert.IsInstanceOf<DomainEdgeSoftwareVersionDtoEntityListing> (response, "response is DomainEdgeSoftwareVersionDtoEntityListing");
+            var response = instance.GetProvidersEdgesEdgegroup(edgeGroupId, expand);
+            Assert.IsInstanceOf<EdgeGroup> (response, "response is EdgeGroup");
         }
         
         /// <summary>
@@ -471,19 +472,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetProvidersEdgesEdgegroupsEdgegroupId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesEdgegroupsEdgegroupIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesEdgegroupsEdgegroupId'
-            string edgeGroupId = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgegroupsEdgegroupId(edgeGroupId, expand);
-            Assert.IsInstanceOf<EdgeGroup> (response, "response is EdgeGroup");
-        }
-        
-        /// <summary>
         /// Test GetProvidersEdgesEdgeversionreport
         /// </summary>
         [Test]
@@ -492,6 +480,18 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetProvidersEdgesEdgeversionreport'
             var response = instance.GetProvidersEdgesEdgeversionreport();
             Assert.IsInstanceOf<EdgeVersionReport> (response, "response is EdgeVersionReport");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesEndpoint
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesEndpointTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesEndpoint'
+            string endpointId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesEndpoint(endpointId);
+            Assert.IsInstanceOf<Endpoint> (response, "response is Endpoint");
         }
         
         /// <summary>
@@ -510,15 +510,27 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetProvidersEdgesEndpointsEndpointId
+        /// Test GetProvidersEdgesExtension
         /// </summary>
         [Test]
-        public void GetProvidersEdgesEndpointsEndpointIdTest()
+        public void GetProvidersEdgesExtensionTest()
         {
-            // TODO: add unit test for the method 'GetProvidersEdgesEndpointsEndpointId'
-            string endpointId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEndpointsEndpointId(endpointId);
-            Assert.IsInstanceOf<Endpoint> (response, "response is Endpoint");
+            // TODO: add unit test for the method 'GetProvidersEdgesExtension'
+            string extensionId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesExtension(extensionId);
+            Assert.IsInstanceOf<Extension> (response, "response is Extension");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesExtensionpool
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesExtensionpoolTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesExtensionpool'
+            string extensionPoolId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesExtensionpool(extensionPoolId);
+            Assert.IsInstanceOf<ExtensionPool> (response, "response is ExtensionPool");
         }
         
         /// <summary>
@@ -534,18 +546,6 @@ namespace ININ.PureCloudApi.Test
             string number = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesExtensionpools(pageSize, pageNumber, sortBy, number);
             Assert.IsInstanceOf<ExtensionPoolEntityListing> (response, "response is ExtensionPoolEntityListing");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesExtensionpoolsExtensionpoolId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesExtensionpoolsExtensionpoolIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesExtensionpoolsExtensionpoolId'
-            string extensionPoolId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesExtensionpoolsExtensionpoolId(extensionPoolId);
-            Assert.IsInstanceOf<ExtensionPool> (response, "response is ExtensionPool");
         }
         
         /// <summary>
@@ -565,15 +565,27 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetProvidersEdgesExtensionsExtensionId
+        /// Test GetProvidersEdgesLine
         /// </summary>
         [Test]
-        public void GetProvidersEdgesExtensionsExtensionIdTest()
+        public void GetProvidersEdgesLineTest()
         {
-            // TODO: add unit test for the method 'GetProvidersEdgesExtensionsExtensionId'
-            string extensionId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesExtensionsExtensionId(extensionId);
-            Assert.IsInstanceOf<Extension> (response, "response is Extension");
+            // TODO: add unit test for the method 'GetProvidersEdgesLine'
+            string lineId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesLine(lineId);
+            Assert.IsInstanceOf<Line> (response, "response is Line");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesLinebasesetting
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesLinebasesettingTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesLinebasesetting'
+            string lineBaseId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesLinebasesetting(lineBaseId);
+            Assert.IsInstanceOf<LineBase> (response, "response is LineBase");
         }
         
         /// <summary>
@@ -589,18 +601,6 @@ namespace ININ.PureCloudApi.Test
             string sortOrder = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesLinebasesettings(pageNumber, pageSize, sortBy, sortOrder);
             Assert.IsInstanceOf<LineBaseEntityListing> (response, "response is LineBaseEntityListing");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesLinebasesettingsLinebaseId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesLinebasesettingsLinebaseIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesLinebasesettingsLinebaseId'
-            string lineBaseId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesLinebasesettingsLinebaseId(lineBaseId);
-            Assert.IsInstanceOf<LineBase> (response, "response is LineBase");
         }
         
         /// <summary>
@@ -620,18 +620,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetProvidersEdgesLinesLineId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesLinesLineIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesLinesLineId'
-            string lineId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesLinesLineId(lineId);
-            Assert.IsInstanceOf<Line> (response, "response is Line");
-        }
-        
-        /// <summary>
         /// Test GetProvidersEdgesLinesTemplate
         /// </summary>
         [Test]
@@ -641,6 +629,18 @@ namespace ININ.PureCloudApi.Test
             string lineBaseSettingsId = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesLinesTemplate(lineBaseSettingsId);
             Assert.IsInstanceOf<Line> (response, "response is Line");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesOutboundroute
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesOutboundrouteTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesOutboundroute'
+            string outboundRouteId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesOutboundroute(outboundRouteId);
+            Assert.IsInstanceOf<OutboundRoute> (response, "response is OutboundRoute");
         }
         
         /// <summary>
@@ -660,15 +660,27 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetProvidersEdgesOutboundroutesOutboundrouteId
+        /// Test GetProvidersEdgesPhone
         /// </summary>
         [Test]
-        public void GetProvidersEdgesOutboundroutesOutboundrouteIdTest()
+        public void GetProvidersEdgesPhoneTest()
         {
-            // TODO: add unit test for the method 'GetProvidersEdgesOutboundroutesOutboundrouteId'
-            string outboundRouteId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesOutboundroutesOutboundrouteId(outboundRouteId);
-            Assert.IsInstanceOf<OutboundRoute> (response, "response is OutboundRoute");
+            // TODO: add unit test for the method 'GetProvidersEdgesPhone'
+            string phoneId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesPhone(phoneId);
+            Assert.IsInstanceOf<Phone> (response, "response is Phone");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesPhonebasesetting
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesPhonebasesettingTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesPhonebasesetting'
+            string phoneBaseId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesPhonebasesetting(phoneBaseId);
+            Assert.IsInstanceOf<PhoneBase> (response, "response is PhoneBase");
         }
         
         /// <summary>
@@ -697,18 +709,6 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesPhonebasesettingsAvailablemetabases(pageSize, pageNumber);
             Assert.IsInstanceOf<PhoneMetaBaseEntityListing> (response, "response is PhoneMetaBaseEntityListing");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesPhonebasesettingsPhonebaseId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesPhonebasesettingsPhonebaseIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesPhonebasesettingsPhonebaseId'
-            string phoneBaseId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesPhonebasesettingsPhonebaseId(phoneBaseId);
-            Assert.IsInstanceOf<PhoneBase> (response, "response is PhoneBase");
         }
         
         /// <summary>
@@ -749,18 +749,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetProvidersEdgesPhonesPhoneId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesPhonesPhoneIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesPhonesPhoneId'
-            string phoneId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesPhonesPhoneId(phoneId);
-            Assert.IsInstanceOf<Phone> (response, "response is Phone");
-        }
-        
-        /// <summary>
         /// Test GetProvidersEdgesPhonesTemplate
         /// </summary>
         [Test]
@@ -770,6 +758,56 @@ namespace ININ.PureCloudApi.Test
             string phoneBaseSettingsId = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesPhonesTemplate(phoneBaseSettingsId);
             Assert.IsInstanceOf<Phone> (response, "response is Phone");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesSite
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesSiteTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesSite'
+            string siteId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesSite(siteId);
+            Assert.IsInstanceOf<Site> (response, "response is Site");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesSiteNumberplan
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesSiteNumberplanTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesSiteNumberplan'
+            string siteId = null; // TODO: replace null with proper value
+            string numberPlanId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesSiteNumberplan(siteId, numberPlanId);
+            Assert.IsInstanceOf<NumberPlan> (response, "response is NumberPlan");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesSiteNumberplans
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesSiteNumberplansTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesSiteNumberplans'
+            string siteId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesSiteNumberplans(siteId);
+            Assert.IsInstanceOf<List<NumberPlan>> (response, "response is List<NumberPlan>");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesSiteNumberplansClassifications
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesSiteNumberplansClassificationsTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesSiteNumberplansClassifications'
+            string siteId = null; // TODO: replace null with proper value
+            string classification = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesSiteNumberplansClassifications(siteId, classification);
+            Assert.IsInstanceOf<List<string>> (response, "response is List<string>");
         }
         
         /// <summary>
@@ -790,56 +828,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetProvidersEdgesSitesSiteId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesSitesSiteIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesSitesSiteId'
-            string siteId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesSitesSiteId(siteId);
-            Assert.IsInstanceOf<Site> (response, "response is Site");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesSitesSiteIdNumberplans
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesSitesSiteIdNumberplansTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesSitesSiteIdNumberplans'
-            string siteId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesSitesSiteIdNumberplans(siteId);
-            Assert.IsInstanceOf<List<NumberPlan>> (response, "response is List<NumberPlan>");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesSitesSiteIdNumberplansClassifications
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesSitesSiteIdNumberplansClassificationsTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesSitesSiteIdNumberplansClassifications'
-            string siteId = null; // TODO: replace null with proper value
-            string classification = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesSitesSiteIdNumberplansClassifications(siteId, classification);
-            Assert.IsInstanceOf<List<string>> (response, "response is List<string>");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesSitesSiteIdNumberplansNumberplanId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesSitesSiteIdNumberplansNumberplanIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesSitesSiteIdNumberplansNumberplanId'
-            string siteId = null; // TODO: replace null with proper value
-            string numberPlanId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesSitesSiteIdNumberplansNumberplanId(siteId, numberPlanId);
-            Assert.IsInstanceOf<NumberPlan> (response, "response is NumberPlan");
-        }
-        
-        /// <summary>
         /// Test GetProvidersEdgesTimezones
         /// </summary>
         [Test]
@@ -850,6 +838,30 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesTimezones(pageSize, pageNumber);
             Assert.IsInstanceOf<TimeZoneEntityListing> (response, "response is TimeZoneEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesTrunk
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesTrunkTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesTrunk'
+            string trunkId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesTrunk(trunkId);
+            Assert.IsInstanceOf<Trunk> (response, "response is Trunk");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesTrunkbasesetting
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesTrunkbasesettingTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesTrunkbasesetting'
+            string trunkBaseSettingsId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesTrunkbasesetting(trunkBaseSettingsId);
+            Assert.IsInstanceOf<TrunkBase> (response, "response is TrunkBase");
         }
         
         /// <summary>
@@ -895,18 +907,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId'
-            string trunkBaseSettingsId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId(trunkBaseSettingsId);
-            Assert.IsInstanceOf<TrunkBase> (response, "response is TrunkBase");
-        }
-        
-        /// <summary>
         /// Test GetProvidersEdgesTrunks
         /// </summary>
         [Test]
@@ -922,18 +922,6 @@ namespace ININ.PureCloudApi.Test
             string trunkType = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesTrunks(pageNumber, pageSize, sortBy, sortOrder, edgeId, trunkBaseId, trunkType);
             Assert.IsInstanceOf<TrunkEntityListing> (response, "response is TrunkEntityListing");
-        }
-        
-        /// <summary>
-        /// Test GetProvidersEdgesTrunksTrunkId
-        /// </summary>
-        [Test]
-        public void GetProvidersEdgesTrunksTrunkIdTest()
-        {
-            // TODO: add unit test for the method 'GetProvidersEdgesTrunksTrunkId'
-            string trunkId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesTrunksTrunkId(trunkId);
-            Assert.IsInstanceOf<Trunk> (response, "response is Trunk");
         }
         
         /// <summary>
@@ -962,63 +950,140 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetSchemasEdgesVnextSchemacategory
+        /// Test GetSchemasEdgesVnextSchemaCategory
         /// </summary>
         [Test]
-        public void GetSchemasEdgesVnextSchemacategoryTest()
+        public void GetSchemasEdgesVnextSchemaCategoryTest()
         {
-            // TODO: add unit test for the method 'GetSchemasEdgesVnextSchemacategory'
+            // TODO: add unit test for the method 'GetSchemasEdgesVnextSchemaCategory'
             string schemaCategory = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            var response = instance.GetSchemasEdgesVnextSchemacategory(schemaCategory, pageSize, pageNumber);
+            var response = instance.GetSchemasEdgesVnextSchemaCategory(schemaCategory, pageSize, pageNumber);
             Assert.IsInstanceOf<SchemaReferenceEntityListing> (response, "response is SchemaReferenceEntityListing");
         }
         
         /// <summary>
-        /// Test GetSchemasEdgesVnextSchemacategorySchematype
+        /// Test GetSchemasEdgesVnextSchemaCategorySchemaType
         /// </summary>
         [Test]
-        public void GetSchemasEdgesVnextSchemacategorySchematypeTest()
+        public void GetSchemasEdgesVnextSchemaCategorySchemaTypeTest()
         {
-            // TODO: add unit test for the method 'GetSchemasEdgesVnextSchemacategorySchematype'
+            // TODO: add unit test for the method 'GetSchemasEdgesVnextSchemaCategorySchemaType'
             string schemaCategory = null; // TODO: replace null with proper value
             string schemaType = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            var response = instance.GetSchemasEdgesVnextSchemacategorySchematype(schemaCategory, schemaType, pageSize, pageNumber);
+            var response = instance.GetSchemasEdgesVnextSchemaCategorySchemaType(schemaCategory, schemaType, pageSize, pageNumber);
             Assert.IsInstanceOf<SchemaReferenceEntityListing> (response, "response is SchemaReferenceEntityListing");
         }
         
         /// <summary>
-        /// Test GetSchemasEdgesVnextSchemacategorySchematypeSchemaId
+        /// Test GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId
         /// </summary>
         [Test]
-        public void GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdTest()
+        public void GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdTest()
         {
-            // TODO: add unit test for the method 'GetSchemasEdgesVnextSchemacategorySchematypeSchemaId'
+            // TODO: add unit test for the method 'GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId'
             string schemaCategory = null; // TODO: replace null with proper value
             string schemaType = null; // TODO: replace null with proper value
             string schemaId = null; // TODO: replace null with proper value
-            var response = instance.GetSchemasEdgesVnextSchemacategorySchematypeSchemaId(schemaCategory, schemaType, schemaId);
+            var response = instance.GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId(schemaCategory, schemaType, schemaId);
             Assert.IsInstanceOf<Organization> (response, "response is Organization");
         }
         
         /// <summary>
-        /// Test GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId
+        /// Test GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId
         /// </summary>
         [Test]
-        public void GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdTest()
+        public void GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataIdTest()
         {
-            // TODO: add unit test for the method 'GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId'
+            // TODO: add unit test for the method 'GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId'
             string schemaCategory = null; // TODO: replace null with proper value
             string schemaType = null; // TODO: replace null with proper value
             string schemaId = null; // TODO: replace null with proper value
             string extensionType = null; // TODO: replace null with proper value
             string metadataId = null; // TODO: replace null with proper value
             string type = null; // TODO: replace null with proper value
-            var response = instance.GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);
+            var response = instance.GetSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);
             Assert.IsInstanceOf<Organization> (response, "response is Organization");
+        }
+        
+        /// <summary>
+        /// Test PostProvidersEdgeLogicalinterfaces
+        /// </summary>
+        [Test]
+        public void PostProvidersEdgeLogicalinterfacesTest()
+        {
+            // TODO: add unit test for the method 'PostProvidersEdgeLogicalinterfaces'
+            string edgeId = null; // TODO: replace null with proper value
+            DomainLogicalInterface body = null; // TODO: replace null with proper value
+            var response = instance.PostProvidersEdgeLogicalinterfaces(edgeId, body);
+            Assert.IsInstanceOf<DomainLogicalInterface> (response, "response is DomainLogicalInterface");
+        }
+        
+        /// <summary>
+        /// Test PostProvidersEdgeLogsJobUpload
+        /// </summary>
+        [Test]
+        public void PostProvidersEdgeLogsJobUploadTest()
+        {
+            // TODO: add unit test for the method 'PostProvidersEdgeLogsJobUpload'
+            string edgeId = null; // TODO: replace null with proper value
+            string jobId = null; // TODO: replace null with proper value
+            EdgeLogsJobUploadRequest body = null; // TODO: replace null with proper value
+            instance.PostProvidersEdgeLogsJobUpload(edgeId, jobId, body);
+            
+        }
+        
+        /// <summary>
+        /// Test PostProvidersEdgeLogsJobs
+        /// </summary>
+        [Test]
+        public void PostProvidersEdgeLogsJobsTest()
+        {
+            // TODO: add unit test for the method 'PostProvidersEdgeLogsJobs'
+            string edgeId = null; // TODO: replace null with proper value
+            EdgeLogsJobRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostProvidersEdgeLogsJobs(edgeId, body);
+            Assert.IsInstanceOf<EdgeLogsJobResponse> (response, "response is EdgeLogsJobResponse");
+        }
+        
+        /// <summary>
+        /// Test PostProvidersEdgeReboot
+        /// </summary>
+        [Test]
+        public void PostProvidersEdgeRebootTest()
+        {
+            // TODO: add unit test for the method 'PostProvidersEdgeReboot'
+            string edgeId = null; // TODO: replace null with proper value
+            var response = instance.PostProvidersEdgeReboot(edgeId);
+            Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test PostProvidersEdgeSoftwareupdate
+        /// </summary>
+        [Test]
+        public void PostProvidersEdgeSoftwareupdateTest()
+        {
+            // TODO: add unit test for the method 'PostProvidersEdgeSoftwareupdate'
+            string edgeId = null; // TODO: replace null with proper value
+            DomainEdgeSoftwareUpdateDto body = null; // TODO: replace null with proper value
+            var response = instance.PostProvidersEdgeSoftwareupdate(edgeId, body);
+            Assert.IsInstanceOf<DomainEdgeSoftwareUpdateDto> (response, "response is DomainEdgeSoftwareUpdateDto");
+        }
+        
+        /// <summary>
+        /// Test PostProvidersEdgeUnpair
+        /// </summary>
+        [Test]
+        public void PostProvidersEdgeUnpairTest()
+        {
+            // TODO: add unit test for the method 'PostProvidersEdgeUnpair'
+            string edgeId = null; // TODO: replace null with proper value
+            var response = instance.PostProvidersEdgeUnpair(edgeId);
+            Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>
@@ -1070,83 +1135,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostProvidersEdgesEdgeIdLogicalinterfaces
-        /// </summary>
-        [Test]
-        public void PostProvidersEdgesEdgeIdLogicalinterfacesTest()
-        {
-            // TODO: add unit test for the method 'PostProvidersEdgesEdgeIdLogicalinterfaces'
-            string edgeId = null; // TODO: replace null with proper value
-            DomainLogicalInterface body = null; // TODO: replace null with proper value
-            var response = instance.PostProvidersEdgesEdgeIdLogicalinterfaces(edgeId, body);
-            Assert.IsInstanceOf<DomainLogicalInterface> (response, "response is DomainLogicalInterface");
-        }
-        
-        /// <summary>
-        /// Test PostProvidersEdgesEdgeIdLogsJobs
-        /// </summary>
-        [Test]
-        public void PostProvidersEdgesEdgeIdLogsJobsTest()
-        {
-            // TODO: add unit test for the method 'PostProvidersEdgesEdgeIdLogsJobs'
-            string edgeId = null; // TODO: replace null with proper value
-            EdgeLogsJobRequest body = null; // TODO: replace null with proper value
-            var response = instance.PostProvidersEdgesEdgeIdLogsJobs(edgeId, body);
-            Assert.IsInstanceOf<EdgeLogsJobResponse> (response, "response is EdgeLogsJobResponse");
-        }
-        
-        /// <summary>
-        /// Test PostProvidersEdgesEdgeIdLogsJobsJobIdUpload
-        /// </summary>
-        [Test]
-        public void PostProvidersEdgesEdgeIdLogsJobsJobIdUploadTest()
-        {
-            // TODO: add unit test for the method 'PostProvidersEdgesEdgeIdLogsJobsJobIdUpload'
-            string edgeId = null; // TODO: replace null with proper value
-            string jobId = null; // TODO: replace null with proper value
-            EdgeLogsJobUploadRequest body = null; // TODO: replace null with proper value
-            instance.PostProvidersEdgesEdgeIdLogsJobsJobIdUpload(edgeId, jobId, body);
-            
-        }
-        
-        /// <summary>
-        /// Test PostProvidersEdgesEdgeIdReboot
-        /// </summary>
-        [Test]
-        public void PostProvidersEdgesEdgeIdRebootTest()
-        {
-            // TODO: add unit test for the method 'PostProvidersEdgesEdgeIdReboot'
-            string edgeId = null; // TODO: replace null with proper value
-            var response = instance.PostProvidersEdgesEdgeIdReboot(edgeId);
-            Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
-        /// Test PostProvidersEdgesEdgeIdSoftwareupdate
-        /// </summary>
-        [Test]
-        public void PostProvidersEdgesEdgeIdSoftwareupdateTest()
-        {
-            // TODO: add unit test for the method 'PostProvidersEdgesEdgeIdSoftwareupdate'
-            string edgeId = null; // TODO: replace null with proper value
-            DomainEdgeSoftwareUpdateDto body = null; // TODO: replace null with proper value
-            var response = instance.PostProvidersEdgesEdgeIdSoftwareupdate(edgeId, body);
-            Assert.IsInstanceOf<DomainEdgeSoftwareUpdateDto> (response, "response is DomainEdgeSoftwareUpdateDto");
-        }
-        
-        /// <summary>
-        /// Test PostProvidersEdgesEdgeIdUnpair
-        /// </summary>
-        [Test]
-        public void PostProvidersEdgesEdgeIdUnpairTest()
-        {
-            // TODO: add unit test for the method 'PostProvidersEdgesEdgeIdUnpair'
-            string edgeId = null; // TODO: replace null with proper value
-            var response = instance.PostProvidersEdgesEdgeIdUnpair(edgeId);
-            Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
         /// Test PostProvidersEdgesEdgegroups
         /// </summary>
         [Test]
@@ -1179,19 +1167,7 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostProvidersEdgesExtensionpools'
             ExtensionPool body = null; // TODO: replace null with proper value
             var response = instance.PostProvidersEdgesExtensionpools(body);
-            Assert.IsInstanceOf<ExtensionPool> (response, "response is ExtensionPool");
-        }
-        
-        /// <summary>
-        /// Test PostProvidersEdgesOfflineconfiguration
-        /// </summary>
-        [Test]
-        public void PostProvidersEdgesOfflineconfigurationTest()
-        {
-            // TODO: add unit test for the method 'PostProvidersEdgesOfflineconfiguration'
-            EdgeOfflineConfiguration body = null; // TODO: replace null with proper value
-            var response = instance.PostProvidersEdgesOfflineconfiguration(body);
-            Assert.IsInstanceOf<EdgeOfflineConfigurationResponse> (response, "response is EdgeOfflineConfigurationResponse");
+            Assert.IsInstanceOf<Extension> (response, "response is Extension");
         }
         
         /// <summary>
@@ -1204,6 +1180,18 @@ namespace ININ.PureCloudApi.Test
             OutboundRoute body = null; // TODO: replace null with proper value
             var response = instance.PostProvidersEdgesOutboundroutes(body);
             Assert.IsInstanceOf<OutboundRoute> (response, "response is OutboundRoute");
+        }
+        
+        /// <summary>
+        /// Test PostProvidersEdgesPhoneReboot
+        /// </summary>
+        [Test]
+        public void PostProvidersEdgesPhoneRebootTest()
+        {
+            // TODO: add unit test for the method 'PostProvidersEdgesPhoneReboot'
+            string phoneId = null; // TODO: replace null with proper value
+            instance.PostProvidersEdgesPhoneReboot(phoneId);
+            
         }
         
         /// <summary>
@@ -1231,18 +1219,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostProvidersEdgesPhonesPhoneIdReboot
-        /// </summary>
-        [Test]
-        public void PostProvidersEdgesPhonesPhoneIdRebootTest()
-        {
-            // TODO: add unit test for the method 'PostProvidersEdgesPhonesPhoneIdReboot'
-            string phoneId = null; // TODO: replace null with proper value
-            instance.PostProvidersEdgesPhonesPhoneIdReboot(phoneId);
-            
-        }
-        
-        /// <summary>
         /// Test PostProvidersEdgesPhonesReboot
         /// </summary>
         [Test]
@@ -1251,6 +1227,18 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostProvidersEdgesPhonesReboot'
             PhonesReboot body = null; // TODO: replace null with proper value
             instance.PostProvidersEdgesPhonesReboot(body);
+            
+        }
+        
+        /// <summary>
+        /// Test PostProvidersEdgesSiteRebalance
+        /// </summary>
+        [Test]
+        public void PostProvidersEdgesSiteRebalanceTest()
+        {
+            // TODO: add unit test for the method 'PostProvidersEdgesSiteRebalance'
+            string siteId = null; // TODO: replace null with proper value
+            instance.PostProvidersEdgesSiteRebalance(siteId);
             
         }
         
@@ -1267,18 +1255,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostProvidersEdgesSitesSiteIdRebalance
-        /// </summary>
-        [Test]
-        public void PostProvidersEdgesSitesSiteIdRebalanceTest()
-        {
-            // TODO: add unit test for the method 'PostProvidersEdgesSitesSiteIdRebalance'
-            string siteId = null; // TODO: replace null with proper value
-            instance.PostProvidersEdgesSitesSiteIdRebalance(siteId);
-            
-        }
-        
-        /// <summary>
         /// Test PostProvidersEdgesTrunkbasesettings
         /// </summary>
         [Test]
@@ -1291,212 +1267,212 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesCertificateauthoritiesCertificateId
+        /// Test PutProvidersEdge
         /// </summary>
         [Test]
-        public void PutProvidersEdgesCertificateauthoritiesCertificateIdTest()
+        public void PutProvidersEdgeTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesCertificateauthoritiesCertificateId'
-            string certificateId = null; // TODO: replace null with proper value
-            DomainCertificateAuthority body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesCertificateauthoritiesCertificateId(certificateId, body);
-            Assert.IsInstanceOf<DomainCertificateAuthority> (response, "response is DomainCertificateAuthority");
-        }
-        
-        /// <summary>
-        /// Test PutProvidersEdgesDidpoolsDidpoolId
-        /// </summary>
-        [Test]
-        public void PutProvidersEdgesDidpoolsDidpoolIdTest()
-        {
-            // TODO: add unit test for the method 'PutProvidersEdgesDidpoolsDidpoolId'
-            string didPoolId = null; // TODO: replace null with proper value
-            DIDPool body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesDidpoolsDidpoolId(didPoolId, body);
-            Assert.IsInstanceOf<DIDPool> (response, "response is DIDPool");
-        }
-        
-        /// <summary>
-        /// Test PutProvidersEdgesDidsDidId
-        /// </summary>
-        [Test]
-        public void PutProvidersEdgesDidsDidIdTest()
-        {
-            // TODO: add unit test for the method 'PutProvidersEdgesDidsDidId'
-            string didId = null; // TODO: replace null with proper value
-            DID body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesDidsDidId(didId, body);
-            Assert.IsInstanceOf<DID> (response, "response is DID");
-        }
-        
-        /// <summary>
-        /// Test PutProvidersEdgesEdgeId
-        /// </summary>
-        [Test]
-        public void PutProvidersEdgesEdgeIdTest()
-        {
-            // TODO: add unit test for the method 'PutProvidersEdgesEdgeId'
+            // TODO: add unit test for the method 'PutProvidersEdge'
             string edgeId = null; // TODO: replace null with proper value
             Edge body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesEdgeId(edgeId, body);
+            var response = instance.PutProvidersEdge(edgeId, body);
             Assert.IsInstanceOf<Edge> (response, "response is Edge");
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesEdgeIdLinesLineId
+        /// Test PutProvidersEdgeLine
         /// </summary>
         [Test]
-        public void PutProvidersEdgesEdgeIdLinesLineIdTest()
+        public void PutProvidersEdgeLineTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesEdgeIdLinesLineId'
+            // TODO: add unit test for the method 'PutProvidersEdgeLine'
             string edgeId = null; // TODO: replace null with proper value
             string lineId = null; // TODO: replace null with proper value
             EdgeLine body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesEdgeIdLinesLineId(edgeId, lineId, body);
+            var response = instance.PutProvidersEdgeLine(edgeId, lineId, body);
             Assert.IsInstanceOf<EdgeLine> (response, "response is EdgeLine");
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId
+        /// Test PutProvidersEdgeLogicalinterface
         /// </summary>
         [Test]
-        public void PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceIdTest()
+        public void PutProvidersEdgeLogicalinterfaceTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId'
+            // TODO: add unit test for the method 'PutProvidersEdgeLogicalinterface'
             string edgeId = null; // TODO: replace null with proper value
             string interfaceId = null; // TODO: replace null with proper value
             DomainLogicalInterface body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesEdgeIdLogicalinterfacesInterfaceId(edgeId, interfaceId, body);
+            var response = instance.PutProvidersEdgeLogicalinterface(edgeId, interfaceId, body);
             Assert.IsInstanceOf<DomainLogicalInterface> (response, "response is DomainLogicalInterface");
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesEdgegroupsEdgegroupId
+        /// Test PutProvidersEdgesCertificateauthority
         /// </summary>
         [Test]
-        public void PutProvidersEdgesEdgegroupsEdgegroupIdTest()
+        public void PutProvidersEdgesCertificateauthorityTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesEdgegroupsEdgegroupId'
+            // TODO: add unit test for the method 'PutProvidersEdgesCertificateauthority'
+            string certificateId = null; // TODO: replace null with proper value
+            DomainCertificateAuthority body = null; // TODO: replace null with proper value
+            var response = instance.PutProvidersEdgesCertificateauthority(certificateId, body);
+            Assert.IsInstanceOf<DomainCertificateAuthority> (response, "response is DomainCertificateAuthority");
+        }
+        
+        /// <summary>
+        /// Test PutProvidersEdgesDid
+        /// </summary>
+        [Test]
+        public void PutProvidersEdgesDidTest()
+        {
+            // TODO: add unit test for the method 'PutProvidersEdgesDid'
+            string didId = null; // TODO: replace null with proper value
+            DID body = null; // TODO: replace null with proper value
+            var response = instance.PutProvidersEdgesDid(didId, body);
+            Assert.IsInstanceOf<DID> (response, "response is DID");
+        }
+        
+        /// <summary>
+        /// Test PutProvidersEdgesDidpool
+        /// </summary>
+        [Test]
+        public void PutProvidersEdgesDidpoolTest()
+        {
+            // TODO: add unit test for the method 'PutProvidersEdgesDidpool'
+            string didPoolId = null; // TODO: replace null with proper value
+            DIDPool body = null; // TODO: replace null with proper value
+            var response = instance.PutProvidersEdgesDidpool(didPoolId, body);
+            Assert.IsInstanceOf<DIDPool> (response, "response is DIDPool");
+        }
+        
+        /// <summary>
+        /// Test PutProvidersEdgesEdgegroup
+        /// </summary>
+        [Test]
+        public void PutProvidersEdgesEdgegroupTest()
+        {
+            // TODO: add unit test for the method 'PutProvidersEdgesEdgegroup'
             string edgeGroupId = null; // TODO: replace null with proper value
             EdgeGroup body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesEdgegroupsEdgegroupId(edgeGroupId, body);
+            var response = instance.PutProvidersEdgesEdgegroup(edgeGroupId, body);
             Assert.IsInstanceOf<EdgeGroup> (response, "response is EdgeGroup");
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesEndpointsEndpointId
+        /// Test PutProvidersEdgesEndpoint
         /// </summary>
         [Test]
-        public void PutProvidersEdgesEndpointsEndpointIdTest()
+        public void PutProvidersEdgesEndpointTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesEndpointsEndpointId'
+            // TODO: add unit test for the method 'PutProvidersEdgesEndpoint'
             string endpointId = null; // TODO: replace null with proper value
             Endpoint body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesEndpointsEndpointId(endpointId, body);
+            var response = instance.PutProvidersEdgesEndpoint(endpointId, body);
             Assert.IsInstanceOf<Endpoint> (response, "response is Endpoint");
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesExtensionpoolsExtensionpoolId
+        /// Test PutProvidersEdgesExtension
         /// </summary>
         [Test]
-        public void PutProvidersEdgesExtensionpoolsExtensionpoolIdTest()
+        public void PutProvidersEdgesExtensionTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesExtensionpoolsExtensionpoolId'
-            string extensionPoolId = null; // TODO: replace null with proper value
-            ExtensionPool body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesExtensionpoolsExtensionpoolId(extensionPoolId, body);
-            Assert.IsInstanceOf<ExtensionPool> (response, "response is ExtensionPool");
-        }
-        
-        /// <summary>
-        /// Test PutProvidersEdgesExtensionsExtensionId
-        /// </summary>
-        [Test]
-        public void PutProvidersEdgesExtensionsExtensionIdTest()
-        {
-            // TODO: add unit test for the method 'PutProvidersEdgesExtensionsExtensionId'
+            // TODO: add unit test for the method 'PutProvidersEdgesExtension'
             string extensionId = null; // TODO: replace null with proper value
             Extension body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesExtensionsExtensionId(extensionId, body);
+            var response = instance.PutProvidersEdgesExtension(extensionId, body);
             Assert.IsInstanceOf<Extension> (response, "response is Extension");
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesOutboundroutesOutboundrouteId
+        /// Test PutProvidersEdgesExtensionpool
         /// </summary>
         [Test]
-        public void PutProvidersEdgesOutboundroutesOutboundrouteIdTest()
+        public void PutProvidersEdgesExtensionpoolTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesOutboundroutesOutboundrouteId'
+            // TODO: add unit test for the method 'PutProvidersEdgesExtensionpool'
+            string extensionPoolId = null; // TODO: replace null with proper value
+            ExtensionPool body = null; // TODO: replace null with proper value
+            var response = instance.PutProvidersEdgesExtensionpool(extensionPoolId, body);
+            Assert.IsInstanceOf<ExtensionPool> (response, "response is ExtensionPool");
+        }
+        
+        /// <summary>
+        /// Test PutProvidersEdgesOutboundroute
+        /// </summary>
+        [Test]
+        public void PutProvidersEdgesOutboundrouteTest()
+        {
+            // TODO: add unit test for the method 'PutProvidersEdgesOutboundroute'
             string outboundRouteId = null; // TODO: replace null with proper value
             OutboundRoute body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesOutboundroutesOutboundrouteId(outboundRouteId, body);
+            var response = instance.PutProvidersEdgesOutboundroute(outboundRouteId, body);
             Assert.IsInstanceOf<OutboundRoute> (response, "response is OutboundRoute");
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesPhonebasesettingsPhonebaseId
+        /// Test PutProvidersEdgesPhone
         /// </summary>
         [Test]
-        public void PutProvidersEdgesPhonebasesettingsPhonebaseIdTest()
+        public void PutProvidersEdgesPhoneTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesPhonebasesettingsPhonebaseId'
-            string phoneBaseId = null; // TODO: replace null with proper value
-            PhoneBase body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesPhonebasesettingsPhonebaseId(phoneBaseId, body);
-            Assert.IsInstanceOf<PhoneBase> (response, "response is PhoneBase");
-        }
-        
-        /// <summary>
-        /// Test PutProvidersEdgesPhonesPhoneId
-        /// </summary>
-        [Test]
-        public void PutProvidersEdgesPhonesPhoneIdTest()
-        {
-            // TODO: add unit test for the method 'PutProvidersEdgesPhonesPhoneId'
+            // TODO: add unit test for the method 'PutProvidersEdgesPhone'
             string phoneId = null; // TODO: replace null with proper value
             Phone body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesPhonesPhoneId(phoneId, body);
+            var response = instance.PutProvidersEdgesPhone(phoneId, body);
             Assert.IsInstanceOf<Phone> (response, "response is Phone");
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesSitesSiteId
+        /// Test PutProvidersEdgesPhonebasesetting
         /// </summary>
         [Test]
-        public void PutProvidersEdgesSitesSiteIdTest()
+        public void PutProvidersEdgesPhonebasesettingTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesSitesSiteId'
+            // TODO: add unit test for the method 'PutProvidersEdgesPhonebasesetting'
+            string phoneBaseId = null; // TODO: replace null with proper value
+            PhoneBase body = null; // TODO: replace null with proper value
+            var response = instance.PutProvidersEdgesPhonebasesetting(phoneBaseId, body);
+            Assert.IsInstanceOf<PhoneBase> (response, "response is PhoneBase");
+        }
+        
+        /// <summary>
+        /// Test PutProvidersEdgesSite
+        /// </summary>
+        [Test]
+        public void PutProvidersEdgesSiteTest()
+        {
+            // TODO: add unit test for the method 'PutProvidersEdgesSite'
             string siteId = null; // TODO: replace null with proper value
             Site body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesSitesSiteId(siteId, body);
+            var response = instance.PutProvidersEdgesSite(siteId, body);
             Assert.IsInstanceOf<Site> (response, "response is Site");
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesSitesSiteIdNumberplans
+        /// Test PutProvidersEdgesSiteNumberplans
         /// </summary>
         [Test]
-        public void PutProvidersEdgesSitesSiteIdNumberplansTest()
+        public void PutProvidersEdgesSiteNumberplansTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesSitesSiteIdNumberplans'
+            // TODO: add unit test for the method 'PutProvidersEdgesSiteNumberplans'
             string siteId = null; // TODO: replace null with proper value
             List<NumberPlan> body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesSitesSiteIdNumberplans(siteId, body);
+            var response = instance.PutProvidersEdgesSiteNumberplans(siteId, body);
             Assert.IsInstanceOf<List<NumberPlan>> (response, "response is List<NumberPlan>");
         }
         
         /// <summary>
-        /// Test PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId
+        /// Test PutProvidersEdgesTrunkbasesetting
         /// </summary>
         [Test]
-        public void PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdTest()
+        public void PutProvidersEdgesTrunkbasesettingTest()
         {
-            // TODO: add unit test for the method 'PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId'
+            // TODO: add unit test for the method 'PutProvidersEdgesTrunkbasesetting'
             string trunkBaseSettingsId = null; // TODO: replace null with proper value
             TrunkBase body = null; // TODO: replace null with proper value
-            var response = instance.PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId(trunkBaseSettingsId, body);
+            var response = instance.PutProvidersEdgesTrunkbasesetting(trunkBaseSettingsId, body);
             Assert.IsInstanceOf<TrunkBase> (response, "response is TrunkBase");
         }
         

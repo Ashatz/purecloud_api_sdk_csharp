@@ -51,14 +51,6 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
-        /// Test the property 'Entities'
-        /// </summary>
-        [Test]
-        public void EntitiesTest()
-        {
-            // TODO: unit test for the property 'Entities'
-        }
-        /// <summary>
         /// Test the property 'PageSize'
         /// </summary>
         [Test]
@@ -81,6 +73,14 @@ namespace ININ.PureCloudApi.Test
         public void TotalTest()
         {
             // TODO: unit test for the property 'Total'
+        }
+        /// <summary>
+        /// Test the property 'Entities'
+        /// </summary>
+        [Test]
+        public void EntitiesTest()
+        {
+            // TODO: unit test for the property 'Entities'
         }
         /// <summary>
         /// Test the property 'SelfUri'

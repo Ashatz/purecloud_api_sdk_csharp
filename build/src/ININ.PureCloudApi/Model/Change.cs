@@ -21,9 +21,9 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="Change" /> class.
         /// </summary>
         /// <param name="Entity">Entity.</param>
-        /// <param name="Property">The property that was changed.</param>
-        /// <param name="OldValues">The old values which were modified and/or removed by this action..</param>
-        /// <param name="NewValues">The new values which were modified and/or added by this action..</param>
+        /// <param name="Property">Property.</param>
+        /// <param name="OldValues">OldValues.</param>
+        /// <param name="NewValues">NewValues.</param>
         public Change(AuditEntity Entity = null, string Property = null, List<string> OldValues = null, List<string> NewValues = null)
         {
             this.Entity = Entity;
@@ -38,21 +38,18 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditEntity Entity { get; set; }
         /// <summary>
-        /// The property that was changed
+        /// Gets or Sets Property
         /// </summary>
-        /// <value>The property that was changed</value>
         [DataMember(Name="property", EmitDefaultValue=false)]
         public string Property { get; set; }
         /// <summary>
-        /// The old values which were modified and/or removed by this action.
+        /// Gets or Sets OldValues
         /// </summary>
-        /// <value>The old values which were modified and/or removed by this action.</value>
         [DataMember(Name="oldValues", EmitDefaultValue=false)]
         public List<string> OldValues { get; set; }
         /// <summary>
-        /// The new values which were modified and/or added by this action.
+        /// Gets or Sets NewValues
         /// </summary>
-        /// <value>The new values which were modified and/or added by this action.</value>
         [DataMember(Name="newValues", EmitDefaultValue=false)]
         public List<string> NewValues { get; set; }
         /// <summary>

@@ -20,8 +20,8 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Entry" /> class.
         /// </summary>
-        /// <param name="Value">A value included in this facet..</param>
-        /// <param name="Count">The number of results with this value..</param>
+        /// <param name="Value">Value.</param>
+        /// <param name="Count">Count.</param>
         public Entry(string Value = null, int? Count = null)
         {
             this.Value = Value;
@@ -29,15 +29,13 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// A value included in this facet.
+        /// Gets or Sets Value
         /// </summary>
-        /// <value>A value included in this facet.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         /// <summary>
-        /// The number of results with this value.
+        /// Gets or Sets Count
         /// </summary>
-        /// <value>The number of results with this value.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
         /// <summary>

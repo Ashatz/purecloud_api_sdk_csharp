@@ -20,16 +20,15 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceContext" /> class.
         /// </summary>
-        /// <param name="Name">Unused field for the purpose of ensuring a Swagger definition is created for a class with only @JsonIgnore members..</param>
+        /// <param name="Name">Name.</param>
         public ServiceContext(string Name = null)
         {
             this.Name = Name;
         }
         
         /// <summary>
-        /// Unused field for the purpose of ensuring a Swagger definition is created for a class with only @JsonIgnore members.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Unused field for the purpose of ensuring a Swagger definition is created for a class with only @JsonIgnore members.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

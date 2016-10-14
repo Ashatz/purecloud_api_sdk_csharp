@@ -54,26 +54,26 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteRolesRoleId
+        /// Test DeleteRole
         /// </summary>
         [Test]
-        public void DeleteRolesRoleIdTest()
+        public void DeleteRoleTest()
         {
-            // TODO: add unit test for the method 'DeleteRolesRoleId'
+            // TODO: add unit test for the method 'DeleteRole'
             string roleId = null; // TODO: replace null with proper value
-            instance.DeleteRolesRoleId(roleId);
+            instance.DeleteRole(roleId);
             
         }
         
         /// <summary>
-        /// Test DeleteUserIdRoles
+        /// Test DeleteUserRoles
         /// </summary>
         [Test]
-        public void DeleteUserIdRolesTest()
+        public void DeleteUserRolesTest()
         {
-            // TODO: add unit test for the method 'DeleteUserIdRoles'
+            // TODO: add unit test for the method 'DeleteUserRoles'
             string userId = null; // TODO: replace null with proper value
-            instance.DeleteUserIdRoles(userId);
+            instance.DeleteUserRoles(userId);
             
         }
         
@@ -102,6 +102,31 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetRole
+        /// </summary>
+        [Test]
+        public void GetRoleTest()
+        {
+            // TODO: add unit test for the method 'GetRole'
+            string roleId = null; // TODO: replace null with proper value
+            var response = instance.GetRole(roleId);
+            Assert.IsInstanceOf<DomainOrganizationRole> (response, "response is DomainOrganizationRole");
+        }
+        
+        /// <summary>
+        /// Test GetRoleComparedefaultRightRoleId
+        /// </summary>
+        [Test]
+        public void GetRoleComparedefaultRightRoleIdTest()
+        {
+            // TODO: add unit test for the method 'GetRoleComparedefaultRightRoleId'
+            string leftRoleId = null; // TODO: replace null with proper value
+            string rightRoleId = null; // TODO: replace null with proper value
+            var response = instance.GetRoleComparedefaultRightRoleId(leftRoleId, rightRoleId);
+            Assert.IsInstanceOf<DomainOrgRoleDifference> (response, "response is DomainOrgRoleDifference");
+        }
+        
+        /// <summary>
         /// Test GetRoles
         /// </summary>
         [Test]
@@ -121,53 +146,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetRolesLeftroleIdComparedefaultRightroleId
+        /// Test GetUserRoles
         /// </summary>
         [Test]
-        public void GetRolesLeftroleIdComparedefaultRightroleIdTest()
+        public void GetUserRolesTest()
         {
-            // TODO: add unit test for the method 'GetRolesLeftroleIdComparedefaultRightroleId'
-            string leftRoleId = null; // TODO: replace null with proper value
-            string rightRoleId = null; // TODO: replace null with proper value
-            var response = instance.GetRolesLeftroleIdComparedefaultRightroleId(leftRoleId, rightRoleId);
-            Assert.IsInstanceOf<DomainOrgRoleDifference> (response, "response is DomainOrgRoleDifference");
-        }
-        
-        /// <summary>
-        /// Test GetRolesRoleId
-        /// </summary>
-        [Test]
-        public void GetRolesRoleIdTest()
-        {
-            // TODO: add unit test for the method 'GetRolesRoleId'
-            string roleId = null; // TODO: replace null with proper value
-            var response = instance.GetRolesRoleId(roleId);
-            Assert.IsInstanceOf<DomainOrganizationRole> (response, "response is DomainOrganizationRole");
-        }
-        
-        /// <summary>
-        /// Test GetUserIdRoles
-        /// </summary>
-        [Test]
-        public void GetUserIdRolesTest()
-        {
-            // TODO: add unit test for the method 'GetUserIdRoles'
+            // TODO: add unit test for the method 'GetUserRoles'
             string userId = null; // TODO: replace null with proper value
-            var response = instance.GetUserIdRoles(userId);
+            var response = instance.GetUserRoles(userId);
             Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization");
         }
         
         /// <summary>
-        /// Test PatchRolesRoleId
+        /// Test PatchRole
         /// </summary>
         [Test]
-        public void PatchRolesRoleIdTest()
+        public void PatchRoleTest()
         {
-            // TODO: add unit test for the method 'PatchRolesRoleId'
+            // TODO: add unit test for the method 'PatchRole'
             string roleId = null; // TODO: replace null with proper value
             DomainOrganizationRole body = null; // TODO: replace null with proper value
-            var response = instance.PatchRolesRoleId(roleId, body);
+            var response = instance.PatchRole(roleId, body);
             Assert.IsInstanceOf<DomainOrganizationRole> (response, "response is DomainOrganizationRole");
+        }
+        
+        /// <summary>
+        /// Test PostRoleComparedefaultRightRoleId
+        /// </summary>
+        [Test]
+        public void PostRoleComparedefaultRightRoleIdTest()
+        {
+            // TODO: add unit test for the method 'PostRoleComparedefaultRightRoleId'
+            string leftRoleId = null; // TODO: replace null with proper value
+            string rightRoleId = null; // TODO: replace null with proper value
+            DomainOrganizationRole body = null; // TODO: replace null with proper value
+            var response = instance.PostRoleComparedefaultRightRoleId(leftRoleId, rightRoleId, body);
+            Assert.IsInstanceOf<DomainOrgRoleDifference> (response, "response is DomainOrgRoleDifference");
         }
         
         /// <summary>
@@ -177,7 +191,7 @@ namespace ININ.PureCloudApi.Test
         public void PostRolesTest()
         {
             // TODO: add unit test for the method 'PostRoles'
-            DomainOrganizationRoleCreate body = null; // TODO: replace null with proper value
+            DomainOrganizationRole body = null; // TODO: replace null with proper value
             var response = instance.PostRoles(body);
             Assert.IsInstanceOf<DomainOrganizationRole> (response, "response is DomainOrganizationRole");
         }
@@ -195,17 +209,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostRolesLeftroleIdComparedefaultRightroleId
+        /// Test PutRole
         /// </summary>
         [Test]
-        public void PostRolesLeftroleIdComparedefaultRightroleIdTest()
+        public void PutRoleTest()
         {
-            // TODO: add unit test for the method 'PostRolesLeftroleIdComparedefaultRightroleId'
-            string leftRoleId = null; // TODO: replace null with proper value
-            string rightRoleId = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PutRole'
+            string roleId = null; // TODO: replace null with proper value
             DomainOrganizationRole body = null; // TODO: replace null with proper value
-            var response = instance.PostRolesLeftroleIdComparedefaultRightroleId(leftRoleId, rightRoleId, body);
-            Assert.IsInstanceOf<DomainOrgRoleDifference> (response, "response is DomainOrgRoleDifference");
+            var response = instance.PutRole(roleId, body);
+            Assert.IsInstanceOf<DomainOrganizationRole> (response, "response is DomainOrganizationRole");
+        }
+        
+        /// <summary>
+        /// Test PutRoleUsersAdd
+        /// </summary>
+        [Test]
+        public void PutRoleUsersAddTest()
+        {
+            // TODO: add unit test for the method 'PutRoleUsersAdd'
+            string roleId = null; // TODO: replace null with proper value
+            List<string> body = null; // TODO: replace null with proper value
+            var response = instance.PutRoleUsersAdd(roleId, body);
+            Assert.IsInstanceOf<List<string>> (response, "response is List<string>");
+        }
+        
+        /// <summary>
+        /// Test PutRoleUsersRemove
+        /// </summary>
+        [Test]
+        public void PutRoleUsersRemoveTest()
+        {
+            // TODO: add unit test for the method 'PutRoleUsersRemove'
+            string roleId = null; // TODO: replace null with proper value
+            List<string> body = null; // TODO: replace null with proper value
+            var response = instance.PutRoleUsersRemove(roleId, body);
+            Assert.IsInstanceOf<List<string>> (response, "response is List<string>");
         }
         
         /// <summary>
@@ -221,54 +260,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutRolesRoleId
+        /// Test PutUserRoles
         /// </summary>
         [Test]
-        public void PutRolesRoleIdTest()
+        public void PutUserRolesTest()
         {
-            // TODO: add unit test for the method 'PutRolesRoleId'
-            string roleId = null; // TODO: replace null with proper value
-            DomainOrganizationRole body = null; // TODO: replace null with proper value
-            var response = instance.PutRolesRoleId(roleId, body);
-            Assert.IsInstanceOf<DomainOrganizationRole> (response, "response is DomainOrganizationRole");
-        }
-        
-        /// <summary>
-        /// Test PutRolesRoleIdUsersAdd
-        /// </summary>
-        [Test]
-        public void PutRolesRoleIdUsersAddTest()
-        {
-            // TODO: add unit test for the method 'PutRolesRoleIdUsersAdd'
-            string roleId = null; // TODO: replace null with proper value
-            List<string> body = null; // TODO: replace null with proper value
-            var response = instance.PutRolesRoleIdUsersAdd(roleId, body);
-            Assert.IsInstanceOf<List<string>> (response, "response is List<string>");
-        }
-        
-        /// <summary>
-        /// Test PutRolesRoleIdUsersRemove
-        /// </summary>
-        [Test]
-        public void PutRolesRoleIdUsersRemoveTest()
-        {
-            // TODO: add unit test for the method 'PutRolesRoleIdUsersRemove'
-            string roleId = null; // TODO: replace null with proper value
-            List<string> body = null; // TODO: replace null with proper value
-            var response = instance.PutRolesRoleIdUsersRemove(roleId, body);
-            Assert.IsInstanceOf<List<string>> (response, "response is List<string>");
-        }
-        
-        /// <summary>
-        /// Test PutUserIdRoles
-        /// </summary>
-        [Test]
-        public void PutUserIdRolesTest()
-        {
-            // TODO: add unit test for the method 'PutUserIdRoles'
+            // TODO: add unit test for the method 'PutUserRoles'
             string userId = null; // TODO: replace null with proper value
             List<string> body = null; // TODO: replace null with proper value
-            var response = instance.PutUserIdRoles(userId, body);
+            var response = instance.PutUserRoles(userId, body);
             Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization");
         }
         

@@ -18,9 +18,8 @@ namespace ININ.PureCloudApi.Model
     public partial class ConversationChat :  IEquatable<ConversationChat>
     {
         /// <summary>
-        /// The connection state of this communication.
+        /// Gets or Sets State
         /// </summary>
-        /// <value>The connection state of this communication.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StateEnum
         {
@@ -81,9 +80,8 @@ namespace ININ.PureCloudApi.Model
             None
         }
         /// <summary>
-        /// The direction of the chat
+        /// Gets or Sets Direction
         /// </summary>
-        /// <value>The direction of the chat</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DirectionEnum
         {
@@ -108,9 +106,8 @@ namespace ININ.PureCloudApi.Model
             Outbound
         }
         /// <summary>
-        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
+        /// Gets or Sets DisconnectType
         /// </summary>
-        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DisconnectTypeEnum
         {
@@ -183,39 +180,35 @@ namespace ININ.PureCloudApi.Model
             Other
         }
         /// <summary>
-        /// The connection state of this communication.
+        /// Gets or Sets State
         /// </summary>
-        /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
-        /// The direction of the chat
+        /// Gets or Sets Direction
         /// </summary>
-        /// <value>The direction of the chat</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
         /// <summary>
-        /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
+        /// Gets or Sets DisconnectType
         /// </summary>
-        /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationChat" /> class.
         /// </summary>
-        /// <param name="State">The connection state of this communication..</param>
-        /// <param name="Id">A globally unique identifier for this communication..</param>
-        /// <param name="RoomId">The room id for the chat..</param>
-        /// <param name="RecordingId">A globally unique identifier for the recording associated with this chat..</param>
-        /// <param name="Segments">The time line of the participant&#39;s chat, divided into activity segments..</param>
-        /// <param name="Held">True if this call is held and the person on this side hears silence. (default to false).</param>
-        /// <param name="Direction">The direction of the chat.</param>
-        /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
-        /// <param name="StartHoldTime">The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Provider">The source provider for the email..</param>
-        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null)
+        /// <param name="State">State.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="RoomId">RoomId.</param>
+        /// <param name="RecordingId">RecordingId.</param>
+        /// <param name="Segments">Segments.</param>
+        /// <param name="Held">Held (default to false).</param>
+        /// <param name="Direction">Direction.</param>
+        /// <param name="DisconnectType">DisconnectType.</param>
+        /// <param name="StartHoldTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DisconnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null)
         {
             this.State = State;
             this.Id = Id;
@@ -236,63 +229,51 @@ namespace ININ.PureCloudApi.Model
             this.StartHoldTime = StartHoldTime;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
-            this.Provider = Provider;
         }
         
         /// <summary>
-        /// A globally unique identifier for this communication.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         /// <summary>
-        /// The room id for the chat.
+        /// Gets or Sets RoomId
         /// </summary>
-        /// <value>The room id for the chat.</value>
         [DataMember(Name="roomId", EmitDefaultValue=false)]
         public string RoomId { get; set; }
         /// <summary>
-        /// A globally unique identifier for the recording associated with this chat.
+        /// Gets or Sets RecordingId
         /// </summary>
-        /// <value>A globally unique identifier for the recording associated with this chat.</value>
         [DataMember(Name="recordingId", EmitDefaultValue=false)]
         public string RecordingId { get; set; }
         /// <summary>
-        /// The time line of the participant&#39;s chat, divided into activity segments.
+        /// Gets or Sets Segments
         /// </summary>
-        /// <value>The time line of the participant&#39;s chat, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
         /// <summary>
-        /// True if this call is held and the person on this side hears silence.
+        /// Gets or Sets Held
         /// </summary>
-        /// <value>True if this call is held and the person on this side hears silence.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
         /// <summary>
-        /// The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
         /// <summary>
-        /// The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
         /// <summary>
-        /// The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
-        /// <summary>
-        /// The source provider for the email.
-        /// </summary>
-        /// <value>The source provider for the email.</value>
-        [DataMember(Name="provider", EmitDefaultValue=false)]
-        public string Provider { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -312,7 +293,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
-            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -403,11 +383,6 @@ namespace ININ.PureCloudApi.Model
                     this.DisconnectedTime == other.DisconnectedTime ||
                     this.DisconnectedTime != null &&
                     this.DisconnectedTime.Equals(other.DisconnectedTime)
-                ) &&
-                (
-                    this.Provider == other.Provider ||
-                    this.Provider != null &&
-                    this.Provider.Equals(other.Provider)
                 );
         }
 
@@ -444,8 +419,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
-                if (this.Provider != null)
-                    hash = hash * 59 + this.Provider.GetHashCode();
                 return hash;
             }
         }

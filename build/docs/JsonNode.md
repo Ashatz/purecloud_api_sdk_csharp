@@ -9,24 +9,24 @@ title: JsonNode
 |------------ | ------------- | ------------- | -------------|
 | **Array** | **bool?** |  | [optional] [default to false]|
 | **_Null** | **bool?** |  | [optional] [default to false]|
-| **NodeType** | **string** |  | [optional] |
-| **_Object** | **bool?** |  | [optional] [default to false]|
-| **Boolean** | **bool?** |  | [optional] [default to false]|
-| **Number** | **bool?** |  | [optional] [default to false]|
-| **_Float** | **bool?** |  | [optional] [default to false]|
-| **FloatingPointNumber** | **bool?** |  | [optional] [default to false]|
 | **ValueNode** | **bool?** |  | [optional] [default to false]|
 | **ContainerNode** | **bool?** |  | [optional] [default to false]|
 | **MissingNode** | **bool?** |  | [optional] [default to false]|
+| **_Object** | **bool?** |  | [optional] [default to false]|
+| **NodeType** | **string** |  | [optional] |
 | **Pojo** | **bool?** |  | [optional] [default to false]|
+| **Number** | **bool?** |  | [optional] [default to false]|
 | **IntegralNumber** | **bool?** |  | [optional] [default to false]|
+| **FloatingPointNumber** | **bool?** |  | [optional] [default to false]|
 | **_Short** | **bool?** |  | [optional] [default to false]|
 | **_Int** | **bool?** |  | [optional] [default to false]|
 | **_Long** | **bool?** |  | [optional] [default to false]|
+| **_Float** | **bool?** |  | [optional] [default to false]|
 | **_Double** | **bool?** |  | [optional] [default to false]|
 | **BigDecimal** | **bool?** |  | [optional] [default to false]|
 | **BigInteger** | **bool?** |  | [optional] [default to false]|
 | **Textual** | **bool?** |  | [optional] [default to false]|
+| **Boolean** | **bool?** |  | [optional] [default to false]|
 | **Binary** | **bool?** |  | [optional] [default to false]|
 {: class="table table-striped"}
 

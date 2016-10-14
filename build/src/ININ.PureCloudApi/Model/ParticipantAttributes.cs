@@ -20,16 +20,15 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ParticipantAttributes" /> class.
         /// </summary>
-        /// <param name="Attributes">The map of attribute keys to values..</param>
+        /// <param name="Attributes">Attributes.</param>
         public ParticipantAttributes(Dictionary<string, string> Attributes = null)
         {
             this.Attributes = Attributes;
         }
         
         /// <summary>
-        /// The map of attribute keys to values.
+        /// Gets or Sets Attributes
         /// </summary>
-        /// <value>The map of attribute keys to values.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
         /// <summary>

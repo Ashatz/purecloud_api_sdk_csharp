@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ININ.PureCloudApi.Client
 {
@@ -16,8 +17,14 @@ namespace ININ.PureCloudApi.Client
         /// <summary>
         /// Gets or sets the error content (body json object)
         /// </summary>
-        /// <value>The error content (Http response body).</value>
+        /// <value>The error content (HTTP response body).</value>
         public dynamic ErrorContent { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the HTTP headers
+        /// </summary>
+        /// <value>HTTP headers</value>
+        public IDictionary<string, string> Headers { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiException"/> class.
@@ -40,10 +47,12 @@ namespace ININ.PureCloudApi.Client
         /// <param name="errorCode">HTTP status code.</param>
         /// <param name="message">Error message.</param>
         /// <param name="errorContent">Error content.</param>
-        public ApiException(int errorCode, string message, dynamic errorContent = null) : base(message)
+        /// <param name="headers">HTTP headers.</param>
+        public ApiException(int errorCode, string message, dynamic errorContent = null, IDictionary<string, string> headers = null) : base(message)
         {
             this.ErrorCode = errorCode;
             this.ErrorContent = errorContent;
+            this.Headers = headers;
         }
     }
 

@@ -20,49 +20,26 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentUpload" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected DocumentUpload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentUpload" /> class.
-        /// </summary>
-        /// <param name="Name">The name of the document (required).</param>
-        /// <param name="Workspace">The workspace the document will be uploaded to (required).</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Workspace">Workspace.</param>
         /// <param name="Tags">Tags.</param>
         /// <param name="TagIds">TagIds.</param>
         public DocumentUpload(string Name = null, UriReference Workspace = null, List<string> Tags = null, List<string> TagIds = null)
         {
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for DocumentUpload and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            // to ensure "Workspace" is required (not null)
-            if (Workspace == null)
-            {
-                throw new InvalidDataException("Workspace is a required property for DocumentUpload and cannot be null");
-            }
-            else
-            {
-                this.Workspace = Workspace;
-            }
+            this.Name = Name;
+            this.Workspace = Workspace;
             this.Tags = Tags;
             this.TagIds = TagIds;
         }
         
         /// <summary>
-        /// The name of the document
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The name of the document</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// The workspace the document will be uploaded to
+        /// Gets or Sets Workspace
         /// </summary>
-        /// <value>The workspace the document will be uploaded to</value>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public UriReference Workspace { get; set; }
         /// <summary>

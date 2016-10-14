@@ -20,24 +20,16 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" /> class.
         /// </summary>
-        /// <param name="AttemptLimits">Attempt limits for the campaign&#39;s contact list.</param>
         /// <param name="DncLists">Do not call lists for the campaign.</param>
         /// <param name="CallableTimeSet">Callable time sets for the campaign.</param>
         /// <param name="RuleSets">Rule sets for the campaign.</param>
-        public CallableContactsDiagnostic(UriReference AttemptLimits = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, List<UriReference> RuleSets = null)
+        public CallableContactsDiagnostic(List<UriReference> DncLists = null, UriReference CallableTimeSet = null, List<UriReference> RuleSets = null)
         {
-            this.AttemptLimits = AttemptLimits;
             this.DncLists = DncLists;
             this.CallableTimeSet = CallableTimeSet;
             this.RuleSets = RuleSets;
         }
         
-        /// <summary>
-        /// Attempt limits for the campaign&#39;s contact list
-        /// </summary>
-        /// <value>Attempt limits for the campaign&#39;s contact list</value>
-        [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
-        public UriReference AttemptLimits { get; set; }
         /// <summary>
         /// Do not call lists for the campaign
         /// </summary>
@@ -64,7 +56,6 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallableContactsDiagnostic {\n");
-            sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
             sb.Append("  DncLists: ").Append(DncLists).Append("\n");
             sb.Append("  CallableTimeSet: ").Append(CallableTimeSet).Append("\n");
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
@@ -105,11 +96,6 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.AttemptLimits == other.AttemptLimits ||
-                    this.AttemptLimits != null &&
-                    this.AttemptLimits.Equals(other.AttemptLimits)
-                ) &&
-                (
                     this.DncLists == other.DncLists ||
                     this.DncLists != null &&
                     this.DncLists.SequenceEqual(other.DncLists)
@@ -137,8 +123,6 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.AttemptLimits != null)
-                    hash = hash * 59 + this.AttemptLimits.GetHashCode();
                 if (this.DncLists != null)
                     hash = hash * 59 + this.DncLists.GetHashCode();
                 if (this.CallableTimeSet != null)

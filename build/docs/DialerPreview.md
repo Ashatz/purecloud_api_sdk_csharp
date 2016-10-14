@@ -8,10 +8,10 @@ title: DialerPreview
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **ContactId** | **string** | The contact associated with this preview data pop | [optional] |
-| **ContactListId** | **string** | The contactList associated with this preview data pop. | [optional] |
-| **CampaignId** | **string** | The campaignId associated with this preview data pop. | [optional] |
-| **PhoneNumberColumns** | [**List&lt;PhoneNumberColumn&gt;**](PhoneNumberColumn.html) | The phone number columns associated with this campaign | [optional] |
+| **ContactId** | **string** |  | [optional] |
+| **ContactListId** | **string** |  | [optional] |
+| **CampaignId** | **string** |  | [optional] |
+| **PhoneNumberColumns** | [**List&lt;PhoneNumberColumn&gt;**](PhoneNumberColumn.html) |  | [optional] |
 {: class="table table-striped"}
 
 

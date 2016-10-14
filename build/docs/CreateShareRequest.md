@@ -7,10 +7,10 @@ title: CreateShareRequest
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **SharedEntityType** | **string** | The share entity type | |
-| **SharedEntity** | [**SharedEntity**](SharedEntity.html) | The entity that will be shared | |
+| **SharedEntityType** | **string** |  | [optional] |
+| **SharedEntity** | [**SharedEntity**](SharedEntity.html) |  | [optional] |
 | **MemberType** | **string** |  | [optional] |
-| **Member** | [**SharedEntity**](SharedEntity.html) | The member that will have access to this share. Only required if a list of members is not provided. | [optional] |
+| **Member** | [**SharedEntity**](SharedEntity.html) |  | [optional] |
 | **Members** | [**List&lt;CreateShareRequestMember&gt;**](CreateShareRequestMember.html) |  | [optional] |
 {: class="table table-striped"}
 

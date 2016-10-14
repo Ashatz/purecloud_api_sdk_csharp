@@ -18,9 +18,8 @@ namespace ININ.PureCloudApi.Model
     public partial class DisconnectReason :  IEquatable<DisconnectReason>
     {
         /// <summary>
-        /// Disconnect reason protocol type.
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>Disconnect reason protocol type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
@@ -45,17 +44,16 @@ namespace ININ.PureCloudApi.Model
             Sip
         }
         /// <summary>
-        /// Disconnect reason protocol type.
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>Disconnect reason protocol type.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="DisconnectReason" /> class.
         /// </summary>
-        /// <param name="Type">Disconnect reason protocol type..</param>
-        /// <param name="Code">Protocol specific reason code. See the Q.850 and SIP specs..</param>
-        /// <param name="Phrase">Human readable English description of the disconnect reason..</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="Code">Code.</param>
+        /// <param name="Phrase">Phrase.</param>
         public DisconnectReason(TypeEnum? Type = null, int? Code = null, string Phrase = null)
         {
             this.Type = Type;
@@ -64,15 +62,13 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Protocol specific reason code. See the Q.850 and SIP specs.
+        /// Gets or Sets Code
         /// </summary>
-        /// <value>Protocol specific reason code. See the Q.850 and SIP specs.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public int? Code { get; set; }
         /// <summary>
-        /// Human readable English description of the disconnect reason.
+        /// Gets or Sets Phrase
         /// </summary>
-        /// <value>Human readable English description of the disconnect reason.</value>
         [DataMember(Name="phrase", EmitDefaultValue=false)]
         public string Phrase { get; set; }
         /// <summary>

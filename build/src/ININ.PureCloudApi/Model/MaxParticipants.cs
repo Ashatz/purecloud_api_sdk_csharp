@@ -20,16 +20,15 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MaxParticipants" /> class.
         /// </summary>
-        /// <param name="_MaxParticipants">The maximum number of participants that are allowed on a conversation..</param>
+        /// <param name="_MaxParticipants">_MaxParticipants.</param>
         public MaxParticipants(int? _MaxParticipants = null)
         {
             this._MaxParticipants = _MaxParticipants;
         }
         
         /// <summary>
-        /// The maximum number of participants that are allowed on a conversation.
+        /// Gets or Sets _MaxParticipants
         /// </summary>
-        /// <value>The maximum number of participants that are allowed on a conversation.</value>
         [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
         public int? _MaxParticipants { get; set; }
         /// <summary>

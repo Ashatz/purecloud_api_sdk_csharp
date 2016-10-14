@@ -20,55 +20,26 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMessage" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected EmailMessage() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EmailMessage" /> class.
-        /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="To">The recipients of the email message. (required).</param>
+        /// <param name="To">The recipients of the email message..</param>
         /// <param name="Cc">The recipients that were copied on the email message..</param>
         /// <param name="Bcc">The recipients that were blind copied on the email message..</param>
-        /// <param name="From">The sender of the email message. (required).</param>
+        /// <param name="From">The sender of the email message..</param>
         /// <param name="Subject">The subject of the email message..</param>
         /// <param name="Attachments">The attachments of the email message..</param>
-        /// <param name="TextBody">The text body of the email message. (required).</param>
+        /// <param name="TextBody">The text body of the email message..</param>
         /// <param name="HtmlBody">The html body of the email message..</param>
         /// <param name="Time">The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null)
         {
-            // to ensure "To" is required (not null)
-            if (To == null)
-            {
-                throw new InvalidDataException("To is a required property for EmailMessage and cannot be null");
-            }
-            else
-            {
-                this.To = To;
-            }
-            // to ensure "From" is required (not null)
-            if (From == null)
-            {
-                throw new InvalidDataException("From is a required property for EmailMessage and cannot be null");
-            }
-            else
-            {
-                this.From = From;
-            }
-            // to ensure "TextBody" is required (not null)
-            if (TextBody == null)
-            {
-                throw new InvalidDataException("TextBody is a required property for EmailMessage and cannot be null");
-            }
-            else
-            {
-                this.TextBody = TextBody;
-            }
             this.Name = Name;
+            this.To = To;
             this.Cc = Cc;
             this.Bcc = Bcc;
+            this.From = From;
             this.Subject = Subject;
             this.Attachments = Attachments;
+            this.TextBody = TextBody;
             this.HtmlBody = HtmlBody;
             this.Time = Time;
         }

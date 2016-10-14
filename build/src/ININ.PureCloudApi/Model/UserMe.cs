@@ -87,8 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Organization">Organization details for this user..</param>
         /// <param name="PresenceDefinitions">The first 100 presence definitions for user&#39;s organization..</param>
         /// <param name="Locations">The first 100 locations for user&#39;s organization.</param>
-        /// <param name="OrgAuthorization">The first 100 organization roles, with applicable permission policies, for user&#39;s organization..</param>
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<Location> Locations = null, List<DomainOrganizationRole> OrgAuthorization = null)
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<Location> Locations = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -121,7 +120,6 @@ namespace ININ.PureCloudApi.Model
             this.Organization = Organization;
             this.PresenceDefinitions = PresenceDefinitions;
             this.Locations = Locations;
-            this.OrgAuthorization = OrgAuthorization;
         }
         
         /// <summary>
@@ -262,12 +260,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="locations", EmitDefaultValue=false)]
         public List<Location> Locations { get; set; }
         /// <summary>
-        /// The first 100 organization roles, with applicable permission policies, for user&#39;s organization.
-        /// </summary>
-        /// <value>The first 100 organization roles, with applicable permission policies, for user&#39;s organization.</value>
-        [DataMember(Name="orgAuthorization", EmitDefaultValue=false)]
-        public List<DomainOrganizationRole> OrgAuthorization { get; set; }
-        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -306,7 +298,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("  PresenceDefinitions: ").Append(PresenceDefinitions).Append("\n");
             sb.Append("  Locations: ").Append(Locations).Append("\n");
-            sb.Append("  OrgAuthorization: ").Append(OrgAuthorization).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -470,11 +461,6 @@ namespace ININ.PureCloudApi.Model
                     this.Locations.SequenceEqual(other.Locations)
                 ) &&
                 (
-                    this.OrgAuthorization == other.OrgAuthorization ||
-                    this.OrgAuthorization != null &&
-                    this.OrgAuthorization.SequenceEqual(other.OrgAuthorization)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -542,8 +528,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PresenceDefinitions.GetHashCode();
                 if (this.Locations != null)
                     hash = hash * 59 + this.Locations.GetHashCode();
-                if (this.OrgAuthorization != null)
-                    hash = hash * 59 + this.OrgAuthorization.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

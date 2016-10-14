@@ -74,22 +74,6 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'Metric'
         }
-        /// <summary>
-        /// Test the property 'AutoMetric'
-        /// </summary>
-        [Test]
-        public void AutoMetricTest()
-        {
-            // TODO: unit test for the property 'AutoMetric'
-        }
-        /// <summary>
-        /// Test the property 'SupportsMetric'
-        /// </summary>
-        [Test]
-        public void SupportsMetricTest()
-        {
-            // TODO: unit test for the property 'SupportsMetric'
-        }
 
     }
 

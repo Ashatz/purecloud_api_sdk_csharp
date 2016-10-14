@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns></returns>
-        void DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId);
+        void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Delete annotation
@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        ApiResponse<Object> DeleteConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId);
         /// <summary>
         /// Delete media retention policies
         /// </summary>
@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>string</returns>
-        string DeleteMediaretentionpoliciesPolicyId (string policyId);
+        string DeleteMediaretentionpolicy (string policyId);
 
         /// <summary>
         /// Delete a media retention policy
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId);
+        ApiResponse<string> DeleteMediaretentionpolicyWithHttpInfo (string policyId);
         /// <summary>
         ///  deletes a single orphan recording
         /// </summary>
@@ -90,7 +90,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
-        OrphanRecording DeleteOrphanId (string orphanId);
+        OrphanRecording DeleteOrphanrecording (string orphanId);
 
         /// <summary>
         ///  deletes a single orphan recording
@@ -101,32 +101,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
-        ApiResponse<OrphanRecording> DeleteOrphanIdWithHttpInfo (string orphanId);
-        /// <summary>
-        /// Get all of a Conversation&#39;s Recordings.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
-        /// <returns>List&lt;Recording&gt;</returns>
-        List<Recording> GetConversationIdRecordings (string conversationId, int? maxWaitMs = null, string formatId = null);
-
-        /// <summary>
-        /// Get all of a Conversation&#39;s Recordings.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
-        /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
-        ApiResponse<List<Recording>> GetConversationIdRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
+        ApiResponse<OrphanRecording> DeleteOrphanrecordingWithHttpInfo (string orphanId);
         /// <summary>
         /// Gets a specific recording.
         /// </summary>
@@ -140,7 +115,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns></returns>
-        void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
+        void GetConversationRecording (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -155,30 +130,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
-        /// <summary>
-        /// Get annotations for recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <returns>List&lt;Annotation&gt;</returns>
-        List<Annotation> GetConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId);
-
-        /// <summary>
-        /// Get annotations for recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
-        ApiResponse<List<Annotation>> GetConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId);
+        ApiResponse<Object> GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
         /// <summary>
         /// Get annotation
         /// </summary>
@@ -190,7 +142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Annotation</returns>
-        Annotation GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId);
+        Annotation GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Get annotation
@@ -203,7 +155,55 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        ApiResponse<Annotation> GetConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        /// <summary>
+        /// Get annotations for recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>List&lt;Annotation&gt;</returns>
+        List<Annotation> GetConversationRecordingAnnotations (string conversationId, string recordingId);
+
+        /// <summary>
+        /// Get annotations for recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
+        ApiResponse<List<Annotation>> GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId);
+        /// <summary>
+        /// Get all of a Conversation&#39;s Recordings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <returns>List&lt;Recording&gt;</returns>
+        List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null);
+
+        /// <summary>
+        /// Get all of a Conversation&#39;s Recordings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
+        ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
         /// </summary>
@@ -252,7 +252,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Policy</returns>
-        Policy GetMediaretentionpoliciesPolicyId (string policyId);
+        Policy GetMediaretentionpolicy (string policyId);
 
         /// <summary>
         /// Get a media retention policy
@@ -263,7 +263,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> GetMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId);
+        ApiResponse<Policy> GetMediaretentionpolicyWithHttpInfo (string policyId);
         /// <summary>
         /// Gets a single orphan recording
         /// </summary>
@@ -273,7 +273,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
-        OrphanRecording GetOrphanId (string orphanId);
+        OrphanRecording GetOrphanrecording (string orphanId);
 
         /// <summary>
         /// Gets a single orphan recording
@@ -284,7 +284,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
-        ApiResponse<OrphanRecording> GetOrphanIdWithHttpInfo (string orphanId);
+        ApiResponse<OrphanRecording> GetOrphanrecordingWithHttpInfo (string orphanId);
         /// <summary>
         /// Gets all orphan recordings
         /// </summary>
@@ -370,7 +370,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PatchMediaretentionpoliciesPolicyId (string policyId, Policy body);
+        Policy PatchMediaretentionpolicy (string policyId, Policy body);
 
         /// <summary>
         /// Patch a media retention policy
@@ -382,30 +382,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PatchMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body);
-        /// <summary>
-        /// Update a screen recording session
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recordingSessionId">Screen recording session ID</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns></returns>
-        void PatchsScreensessionsRecordingsessionId (string recordingSessionId, ScreenRecordingSessionRequest body = null);
-
-        /// <summary>
-        /// Update a screen recording session
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recordingSessionId">Screen recording session ID</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PatchsScreensessionsRecordingsessionIdWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null);
+        ApiResponse<Policy> PatchMediaretentionpolicyWithHttpInfo (string policyId, Policy body);
         /// <summary>
         /// Create annotation
         /// </summary>
@@ -417,7 +394,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        Annotation PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body);
+        Annotation PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body);
 
         /// <summary>
         /// Create annotation
@@ -430,7 +407,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> PostConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body);
+        ApiResponse<Annotation> PostConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body);
         /// <summary>
         /// Create media retention policy
         /// </summary>
@@ -440,7 +417,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PostMediaretentionpolicies (PolicyCreate body);
+        Policy PostMediaretentionpolicies (Policy body);
 
         /// <summary>
         /// Create media retention policy
@@ -451,32 +428,32 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PostMediaretentionpoliciesWithHttpInfo (PolicyCreate body);
+        ApiResponse<Policy> PostMediaretentionpoliciesWithHttpInfo (Policy body);
         /// <summary>
         /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays&#x3D;10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
         /// <returns></returns>
-        void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body);
+        void PutConversationRecording (string conversationId, string recordingId, Recording body);
 
         /// <summary>
         /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays&#x3D;10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body);
+        ApiResponse<Object> PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body);
         /// <summary>
         /// Update annotation
         /// </summary>
@@ -489,7 +466,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        Annotation PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body);
+        Annotation PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body);
 
         /// <summary>
         /// Update annotation
@@ -503,7 +480,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
+        ApiResponse<Annotation> PutConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
         /// <summary>
         /// Update a media retention policy
         /// </summary>
@@ -514,7 +491,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PutMediaretentionpoliciesPolicyId (string policyId, Policy body);
+        Policy PutMediaretentionpolicy (string policyId, Policy body);
 
         /// <summary>
         /// Update a media retention policy
@@ -526,7 +503,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PutMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body);
+        ApiResponse<Policy> PutMediaretentionpolicyWithHttpInfo (string policyId, Policy body);
         /// <summary>
         /// Update the Recording Settings for the Organization
         /// </summary>
@@ -561,7 +538,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsync (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task DeleteConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Delete annotation
@@ -574,7 +551,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
         /// <summary>
         /// Delete media retention policies
         /// </summary>
@@ -605,7 +582,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteMediaretentionpoliciesPolicyIdAsync (string policyId);
+        System.Threading.Tasks.Task<string> DeleteMediaretentionpolicyAsync (string policyId);
 
         /// <summary>
         /// Delete a media retention policy
@@ -616,7 +593,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpolicyAsyncWithHttpInfo (string policyId);
         /// <summary>
         ///  deletes a single orphan recording
         /// </summary>
@@ -626,7 +603,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanIdAsync (string orphanId);
+        System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanrecordingAsync (string orphanId);
 
         /// <summary>
         ///  deletes a single orphan recording
@@ -637,32 +614,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanIdAsyncWithHttpInfo (string orphanId);
-        /// <summary>
-        /// Get all of a Conversation&#39;s Recordings.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
-        /// <returns>Task of List&lt;Recording&gt;</returns>
-        System.Threading.Tasks.Task<List<Recording>> GetConversationIdRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null);
-
-        /// <summary>
-        /// Get all of a Conversation&#39;s Recordings.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
-        /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationIdRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId);
         /// <summary>
         /// Gets a specific recording.
         /// </summary>
@@ -676,7 +628,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
+        System.Threading.Tasks.Task GetConversationRecordingAsync (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -691,30 +643,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
-        /// <summary>
-        /// Get annotations for recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <returns>Task of List&lt;Annotation&gt;</returns>
-        System.Threading.Tasks.Task<List<Annotation>> GetConversationIdRecordingsRecordingIdAnnotationsAsync (string conversationId, string recordingId);
-
-        /// <summary>
-        /// Get annotations for recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
         /// <summary>
         /// Get annotation
         /// </summary>
@@ -726,7 +655,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsync (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task<Annotation> GetConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Get annotation
@@ -739,7 +668,55 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        /// <summary>
+        /// Get annotations for recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>Task of List&lt;Annotation&gt;</returns>
+        System.Threading.Tasks.Task<List<Annotation>> GetConversationRecordingAnnotationsAsync (string conversationId, string recordingId);
+
+        /// <summary>
+        /// Get annotations for recording
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
+        /// <summary>
+        /// Get all of a Conversation&#39;s Recordings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <returns>Task of List&lt;Recording&gt;</returns>
+        System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null);
+
+        /// <summary>
+        /// Get all of a Conversation&#39;s Recordings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
         /// </summary>
@@ -788,7 +765,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> GetMediaretentionpoliciesPolicyIdAsync (string policyId);
+        System.Threading.Tasks.Task<Policy> GetMediaretentionpolicyAsync (string policyId);
 
         /// <summary>
         /// Get a media retention policy
@@ -799,7 +776,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> GetMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> GetMediaretentionpolicyAsyncWithHttpInfo (string policyId);
         /// <summary>
         /// Gets a single orphan recording
         /// </summary>
@@ -809,7 +786,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        System.Threading.Tasks.Task<OrphanRecording> GetOrphanIdAsync (string orphanId);
+        System.Threading.Tasks.Task<OrphanRecording> GetOrphanrecordingAsync (string orphanId);
 
         /// <summary>
         /// Gets a single orphan recording
@@ -820,7 +797,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanIdAsyncWithHttpInfo (string orphanId);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanrecordingAsyncWithHttpInfo (string orphanId);
         /// <summary>
         /// Gets all orphan recordings
         /// </summary>
@@ -906,7 +883,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PatchMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body);
+        System.Threading.Tasks.Task<Policy> PatchMediaretentionpolicyAsync (string policyId, Policy body);
 
         /// <summary>
         /// Patch a media retention policy
@@ -918,30 +895,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body);
-        /// <summary>
-        /// Update a screen recording session
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recordingSessionId">Screen recording session ID</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PatchsScreensessionsRecordingsessionIdAsync (string recordingSessionId, ScreenRecordingSessionRequest body = null);
-
-        /// <summary>
-        /// Update a screen recording session
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recordingSessionId">Screen recording session ID</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchsScreensessionsRecordingsessionIdAsyncWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body);
         /// <summary>
         /// Create annotation
         /// </summary>
@@ -953,7 +907,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> PostConversationIdRecordingsRecordingIdAnnotationsAsync (string conversationId, string recordingId, Annotation body);
+        System.Threading.Tasks.Task<Annotation> PostConversationRecordingAnnotationsAsync (string conversationId, string recordingId, Annotation body);
 
         /// <summary>
         /// Create annotation
@@ -966,7 +920,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body);
         /// <summary>
         /// Create media retention policy
         /// </summary>
@@ -976,7 +930,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PostMediaretentionpoliciesAsync (PolicyCreate body);
+        System.Threading.Tasks.Task<Policy> PostMediaretentionpoliciesAsync (Policy body);
 
         /// <summary>
         /// Create media retention policy
@@ -987,32 +941,32 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (PolicyCreate body);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (Policy body);
         /// <summary>
         /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays&#x3D;10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, Recording body);
+        System.Threading.Tasks.Task PutConversationRecordingAsync (string conversationId, string recordingId, Recording body);
 
         /// <summary>
         /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays&#x3D;10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body);
         /// <summary>
         /// Update annotation
         /// </summary>
@@ -1025,7 +979,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsync (string conversationId, string recordingId, string annotationId, Annotation body);
+        System.Threading.Tasks.Task<Annotation> PutConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId, Annotation body);
 
         /// <summary>
         /// Update annotation
@@ -1039,7 +993,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
         /// <summary>
         /// Update a media retention policy
         /// </summary>
@@ -1050,7 +1004,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PutMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body);
+        System.Threading.Tasks.Task<Policy> PutMediaretentionpolicyAsync (string policyId, Policy body);
 
         /// <summary>
         /// Update a media retention policy
@@ -1062,7 +1016,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body);
         /// <summary>
         /// Update the Recording Settings for the Organization
         /// </summary>
@@ -1182,9 +1136,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns></returns>
-        public void DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId)
+        public void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
         {
-             DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo(conversationId, recordingId, annotationId);
+             DeleteConversationRecordingAnnotationWithHttpInfo(conversationId, recordingId, annotationId);
         }
 
         /// <summary>
@@ -1195,17 +1149,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public ApiResponse<Object> DeleteConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
-                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1250,14 +1204,16 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationRecordingAnnotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationRecordingAnnotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
         }
 
@@ -1269,9 +1225,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsync (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task DeleteConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId)
         {
-             await DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo(conversationId, recordingId, annotationId);
+             await DeleteConversationRecordingAnnotationAsyncWithHttpInfo(conversationId, recordingId, annotationId);
 
         }
 
@@ -1283,17 +1239,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
-                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1338,14 +1294,16 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationRecordingAnnotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationRecordingAnnotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
         }
 
@@ -1414,13 +1372,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
@@ -1491,13 +1451,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
@@ -1508,9 +1470,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>string</returns>
-        public string DeleteMediaretentionpoliciesPolicyId (string policyId)
+        public string DeleteMediaretentionpolicy (string policyId)
         {
-             ApiResponse<string> localVarResponse = DeleteMediaretentionpoliciesPolicyIdWithHttpInfo(policyId);
+             ApiResponse<string> localVarResponse = DeleteMediaretentionpolicyWithHttpInfo(policyId);
              return localVarResponse.Data;
         }
 
@@ -1520,11 +1482,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId)
+        public ApiResponse< string > DeleteMediaretentionpolicyWithHttpInfo (string policyId)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->DeleteMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->DeleteMediaretentionpolicy");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1567,13 +1529,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpoliciesPolicyId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpoliciesPolicyId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
@@ -1584,9 +1548,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteMediaretentionpoliciesPolicyIdAsync (string policyId)
+        public async System.Threading.Tasks.Task<string> DeleteMediaretentionpolicyAsync (string policyId)
         {
-             ApiResponse<string> localVarResponse = await DeleteMediaretentionpoliciesPolicyIdAsyncWithHttpInfo(policyId);
+             ApiResponse<string> localVarResponse = await DeleteMediaretentionpolicyAsyncWithHttpInfo(policyId);
              return localVarResponse.Data;
 
         }
@@ -1597,11 +1561,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpolicyAsyncWithHttpInfo (string policyId)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->DeleteMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->DeleteMediaretentionpolicy");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1644,13 +1608,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpoliciesPolicyId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpoliciesPolicyId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
@@ -1661,9 +1627,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
-        public OrphanRecording DeleteOrphanId (string orphanId)
+        public OrphanRecording DeleteOrphanrecording (string orphanId)
         {
-             ApiResponse<OrphanRecording> localVarResponse = DeleteOrphanIdWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> localVarResponse = DeleteOrphanrecordingWithHttpInfo(orphanId);
              return localVarResponse.Data;
         }
 
@@ -1673,11 +1639,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
-        public ApiResponse< OrphanRecording > DeleteOrphanIdWithHttpInfo (string orphanId)
+        public ApiResponse< OrphanRecording > DeleteOrphanrecordingWithHttpInfo (string orphanId)
         {
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
-                throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->DeleteOrphanId");
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->DeleteOrphanrecording");
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1720,13 +1686,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteOrphanId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrphanrecording: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteOrphanId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrphanrecording: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrphanRecording>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrphanRecording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecording)));
             
         }
@@ -1737,9 +1705,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        public async System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanIdAsync (string orphanId)
+        public async System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanrecordingAsync (string orphanId)
         {
-             ApiResponse<OrphanRecording> localVarResponse = await DeleteOrphanIdAsyncWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> localVarResponse = await DeleteOrphanrecordingAsyncWithHttpInfo(orphanId);
              return localVarResponse.Data;
 
         }
@@ -1750,11 +1718,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanIdAsyncWithHttpInfo (string orphanId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId)
         {
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
-                throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->DeleteOrphanId");
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->DeleteOrphanrecording");
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1797,179 +1765,16 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteOrphanId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrphanrecording: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteOrphanId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrphanrecording: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrphanRecording>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrphanRecording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecording)));
-            
-        }
-
-        /// <summary>
-        /// Get all of a Conversation&#39;s Recordings. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
-        /// <returns>List&lt;Recording&gt;</returns>
-        public List<Recording> GetConversationIdRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
-        {
-             ApiResponse<List<Recording>> localVarResponse = GetConversationIdRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get all of a Conversation&#39;s Recordings. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
-        /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
-        public ApiResponse< List<Recording> > GetConversationIdRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
-        {
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationIdRecordings");
-
-            var localVarPath = "/api/v2/conversations/{conversationId}/recordings";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
-            if (maxWaitMs != null) localVarQueryParams.Add("maxWaitMs", Configuration.ApiClient.ParameterToString(maxWaitMs)); // query parameter
-            if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordings: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<Recording>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Recording>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Recording>)));
-            
-        }
-
-        /// <summary>
-        /// Get all of a Conversation&#39;s Recordings. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
-        /// <returns>Task of List&lt;Recording&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Recording>> GetConversationIdRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null)
-        {
-             ApiResponse<List<Recording>> localVarResponse = await GetConversationIdRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get all of a Conversation&#39;s Recordings. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
-        /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationIdRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
-        {
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationIdRecordings");
-
-            var localVarPath = "/api/v2/conversations/{conversationId}/recordings";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
-            if (maxWaitMs != null) localVarQueryParams.Add("maxWaitMs", Configuration.ApiClient.ParameterToString(maxWaitMs)); // query parameter
-            if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordings: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<Recording>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Recording>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Recording>)));
             
         }
 
@@ -1983,9 +1788,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns></returns>
-        public void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+        public void GetConversationRecording (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
-             GetConversationIdRecordingsRecordingIdWithHttpInfo(conversationId, recordingId, formatId, download, fileName);
+             GetConversationRecordingWithHttpInfo(conversationId, recordingId, formatId, download, fileName);
         }
 
         /// <summary>
@@ -1998,14 +1803,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+        public ApiResponse<Object> GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationIdRecordingsRecordingId");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecording");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationIdRecordingsRecordingId");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecording");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2052,14 +1857,16 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecording: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecording: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
         }
 
@@ -2073,9 +1880,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+        public async System.Threading.Tasks.Task GetConversationRecordingAsync (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
-             await GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo(conversationId, recordingId, formatId, download, fileName);
+             await GetConversationRecordingAsyncWithHttpInfo(conversationId, recordingId, formatId, download, fileName);
 
         }
 
@@ -2089,14 +1896,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationIdRecordingsRecordingId");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecording");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationIdRecordingsRecordingId");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecording");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2143,180 +1950,17 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecording: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecording: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
-        }
-
-        /// <summary>
-        /// Get annotations for recording 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <returns>List&lt;Annotation&gt;</returns>
-        public List<Annotation> GetConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId)
-        {
-             ApiResponse<List<Annotation>> localVarResponse = GetConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo(conversationId, recordingId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get annotations for recording 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
-        public ApiResponse< List<Annotation> > GetConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId)
-        {
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotations");
-            // verify the required parameter 'recordingId' is set
-            if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotations");
-
-            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
-            if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingIdAnnotations: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingIdAnnotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<Annotation>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Annotation>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Annotation>)));
-            
-        }
-
-        /// <summary>
-        /// Get annotations for recording 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <returns>Task of List&lt;Annotation&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Annotation>> GetConversationIdRecordingsRecordingIdAnnotationsAsync (string conversationId, string recordingId)
-        {
-             ApiResponse<List<Annotation>> localVarResponse = await GetConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo(conversationId, recordingId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get annotations for recording 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId)
-        {
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotations");
-            // verify the required parameter 'recordingId' is set
-            if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotations");
-
-            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
-            if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingIdAnnotations: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingIdAnnotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<Annotation>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Annotation>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Annotation>)));
-            
         }
 
         /// <summary>
@@ -2327,9 +1971,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Annotation</returns>
-        public Annotation GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId)
+        public Annotation GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
         {
-             ApiResponse<Annotation> localVarResponse = GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo(conversationId, recordingId, annotationId);
+             ApiResponse<Annotation> localVarResponse = GetConversationRecordingAnnotationWithHttpInfo(conversationId, recordingId, annotationId);
              return localVarResponse.Data;
         }
 
@@ -2341,17 +1985,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public ApiResponse< Annotation > GetConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingAnnotation");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecordingAnnotation");
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
-                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->GetConversationRecordingAnnotation");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2396,13 +2040,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingAnnotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingAnnotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Annotation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Annotation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Annotation)));
             
         }
@@ -2415,9 +2061,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsync (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task<Annotation> GetConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId)
         {
-             ApiResponse<Annotation> localVarResponse = await GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo(conversationId, recordingId, annotationId);
+             ApiResponse<Annotation> localVarResponse = await GetConversationRecordingAnnotationAsyncWithHttpInfo(conversationId, recordingId, annotationId);
              return localVarResponse.Data;
 
         }
@@ -2430,17 +2076,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingAnnotation");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecordingAnnotation");
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
-                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->GetConversationRecordingAnnotation");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2485,14 +2131,354 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingAnnotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingAnnotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Annotation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Annotation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Annotation)));
+            
+        }
+
+        /// <summary>
+        /// Get annotations for recording 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>List&lt;Annotation&gt;</returns>
+        public List<Annotation> GetConversationRecordingAnnotations (string conversationId, string recordingId)
+        {
+             ApiResponse<List<Annotation>> localVarResponse = GetConversationRecordingAnnotationsWithHttpInfo(conversationId, recordingId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get annotations for recording 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
+        public ApiResponse< List<Annotation> > GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingAnnotations");
+            // verify the required parameter 'recordingId' is set
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecordingAnnotations");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingAnnotations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingAnnotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Annotation>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Annotation>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Annotation>)));
+            
+        }
+
+        /// <summary>
+        /// Get annotations for recording 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>Task of List&lt;Annotation&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Annotation>> GetConversationRecordingAnnotationsAsync (string conversationId, string recordingId)
+        {
+             ApiResponse<List<Annotation>> localVarResponse = await GetConversationRecordingAnnotationsAsyncWithHttpInfo(conversationId, recordingId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get annotations for recording 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingAnnotations");
+            // verify the required parameter 'recordingId' is set
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecordingAnnotations");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingAnnotations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingAnnotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Annotation>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Annotation>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Annotation>)));
+            
+        }
+
+        /// <summary>
+        /// Get all of a Conversation&#39;s Recordings. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <returns>List&lt;Recording&gt;</returns>
+        public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
+        {
+             ApiResponse<List<Recording>> localVarResponse = GetConversationRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all of a Conversation&#39;s Recordings. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
+        public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordings");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (maxWaitMs != null) localVarQueryParams.Add("maxWaitMs", Configuration.ApiClient.ParameterToString(maxWaitMs)); // query parameter
+            if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Recording>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Recording>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Recording>)));
+            
+        }
+
+        /// <summary>
+        /// Get all of a Conversation&#39;s Recordings. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <returns>Task of List&lt;Recording&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null)
+        {
+             ApiResponse<List<Recording>> localVarResponse = await GetConversationRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all of a Conversation&#39;s Recordings. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordings");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (maxWaitMs != null) localVarQueryParams.Add("maxWaitMs", Configuration.ApiClient.ParameterToString(maxWaitMs)); // query parameter
+            if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Recording>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Recording>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Recording>)));
             
         }
 
@@ -2585,13 +2571,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PolicyEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (PolicyEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PolicyEntityListing)));
             
         }
@@ -2686,13 +2674,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PolicyEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (PolicyEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PolicyEntityListing)));
             
         }
@@ -2703,9 +2693,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Policy</returns>
-        public Policy GetMediaretentionpoliciesPolicyId (string policyId)
+        public Policy GetMediaretentionpolicy (string policyId)
         {
-             ApiResponse<Policy> localVarResponse = GetMediaretentionpoliciesPolicyIdWithHttpInfo(policyId);
+             ApiResponse<Policy> localVarResponse = GetMediaretentionpolicyWithHttpInfo(policyId);
              return localVarResponse.Data;
         }
 
@@ -2715,11 +2705,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > GetMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId)
+        public ApiResponse< Policy > GetMediaretentionpolicyWithHttpInfo (string policyId)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->GetMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->GetMediaretentionpolicy");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2762,13 +2752,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpoliciesPolicyId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpoliciesPolicyId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Policy>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Policy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Policy)));
             
         }
@@ -2779,9 +2771,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> GetMediaretentionpoliciesPolicyIdAsync (string policyId)
+        public async System.Threading.Tasks.Task<Policy> GetMediaretentionpolicyAsync (string policyId)
         {
-             ApiResponse<Policy> localVarResponse = await GetMediaretentionpoliciesPolicyIdAsyncWithHttpInfo(policyId);
+             ApiResponse<Policy> localVarResponse = await GetMediaretentionpolicyAsyncWithHttpInfo(policyId);
              return localVarResponse.Data;
 
         }
@@ -2792,11 +2784,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> GetMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> GetMediaretentionpolicyAsyncWithHttpInfo (string policyId)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->GetMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->GetMediaretentionpolicy");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2839,13 +2831,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpoliciesPolicyId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpoliciesPolicyId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Policy>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Policy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Policy)));
             
         }
@@ -2856,9 +2850,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
-        public OrphanRecording GetOrphanId (string orphanId)
+        public OrphanRecording GetOrphanrecording (string orphanId)
         {
-             ApiResponse<OrphanRecording> localVarResponse = GetOrphanIdWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> localVarResponse = GetOrphanrecordingWithHttpInfo(orphanId);
              return localVarResponse.Data;
         }
 
@@ -2868,11 +2862,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
-        public ApiResponse< OrphanRecording > GetOrphanIdWithHttpInfo (string orphanId)
+        public ApiResponse< OrphanRecording > GetOrphanrecordingWithHttpInfo (string orphanId)
         {
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
-                throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->GetOrphanId");
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->GetOrphanrecording");
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2915,13 +2909,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetOrphanId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetOrphanrecording: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetOrphanId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetOrphanrecording: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrphanRecording>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrphanRecording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecording)));
             
         }
@@ -2932,9 +2928,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        public async System.Threading.Tasks.Task<OrphanRecording> GetOrphanIdAsync (string orphanId)
+        public async System.Threading.Tasks.Task<OrphanRecording> GetOrphanrecordingAsync (string orphanId)
         {
-             ApiResponse<OrphanRecording> localVarResponse = await GetOrphanIdAsyncWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> localVarResponse = await GetOrphanrecordingAsyncWithHttpInfo(orphanId);
              return localVarResponse.Data;
 
         }
@@ -2945,11 +2941,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanIdAsyncWithHttpInfo (string orphanId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanrecordingAsyncWithHttpInfo (string orphanId)
         {
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
-                throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->GetOrphanId");
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->GetOrphanrecording");
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2992,13 +2988,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetOrphanId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetOrphanrecording: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetOrphanId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetOrphanrecording: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrphanRecording>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrphanRecording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecording)));
             
         }
@@ -3080,13 +3078,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetOrphanrecordings: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetOrphanrecordings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrphanrecordings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrphanRecordingListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrphanRecordingListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecordingListing)));
             
         }
@@ -3169,13 +3169,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetOrphanrecordings: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetOrphanrecordings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrphanrecordings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OrphanRecordingListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (OrphanRecordingListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecordingListing)));
             
         }
@@ -3242,13 +3244,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSettings: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RecordingSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (RecordingSettings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingSettings)));
             
         }
@@ -3316,13 +3320,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetSettings: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RecordingSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (RecordingSettings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingSettings)));
             
         }
@@ -3392,13 +3398,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetsScreensessions: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetsScreensessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetsScreensessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ScreenRecordingSessionListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (ScreenRecordingSessionListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenRecordingSessionListing)));
             
         }
@@ -3469,13 +3477,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetsScreensessions: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetsScreensessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetsScreensessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ScreenRecordingSessionListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (ScreenRecordingSessionListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenRecordingSessionListing)));
             
         }
@@ -3487,9 +3497,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        public Policy PatchMediaretentionpoliciesPolicyId (string policyId, Policy body)
+        public Policy PatchMediaretentionpolicy (string policyId, Policy body)
         {
-             ApiResponse<Policy> localVarResponse = PatchMediaretentionpoliciesPolicyIdWithHttpInfo(policyId, body);
+             ApiResponse<Policy> localVarResponse = PatchMediaretentionpolicyWithHttpInfo(policyId, body);
              return localVarResponse.Data;
         }
 
@@ -3500,14 +3510,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PatchMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body)
+        public ApiResponse< Policy > PatchMediaretentionpolicyWithHttpInfo (string policyId, Policy body)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchMediaretentionpolicy");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PatchMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PatchMediaretentionpolicy");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3558,13 +3568,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchMediaretentionpoliciesPolicyId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchMediaretentionpoliciesPolicyId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PatchMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Policy>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Policy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Policy)));
             
         }
@@ -3576,9 +3588,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PatchMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body)
+        public async System.Threading.Tasks.Task<Policy> PatchMediaretentionpolicyAsync (string policyId, Policy body)
         {
-             ApiResponse<Policy> localVarResponse = await PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo(policyId, body);
+             ApiResponse<Policy> localVarResponse = await PatchMediaretentionpolicyAsyncWithHttpInfo(policyId, body);
              return localVarResponse.Data;
 
         }
@@ -3590,14 +3602,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchMediaretentionpolicy");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PatchMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PatchMediaretentionpolicy");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3648,186 +3660,17 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchMediaretentionpoliciesPolicyId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchMediaretentionpoliciesPolicyId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PatchMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Policy>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Policy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Policy)));
             
-        }
-
-        /// <summary>
-        /// Update a screen recording session 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recordingSessionId">Screen recording session ID</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns></returns>
-        public void PatchsScreensessionsRecordingsessionId (string recordingSessionId, ScreenRecordingSessionRequest body = null)
-        {
-             PatchsScreensessionsRecordingsessionIdWithHttpInfo(recordingSessionId, body);
-        }
-
-        /// <summary>
-        /// Update a screen recording session 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recordingSessionId">Screen recording session ID</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PatchsScreensessionsRecordingsessionIdWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null)
-        {
-            // verify the required parameter 'recordingSessionId' is set
-            if (recordingSessionId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingSessionId' when calling RecordingApi->PatchsScreensessionsRecordingsessionId");
-
-            var localVarPath = "/api/v2/recordings/screensessions/{recordingSessionId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (recordingSessionId != null) localVarPathParams.Add("recordingSessionId", Configuration.ApiClient.ParameterToString(recordingSessionId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchsScreensessionsRecordingsessionId: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchsScreensessionsRecordingsessionId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Update a screen recording session 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recordingSessionId">Screen recording session ID</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PatchsScreensessionsRecordingsessionIdAsync (string recordingSessionId, ScreenRecordingSessionRequest body = null)
-        {
-             await PatchsScreensessionsRecordingsessionIdAsyncWithHttpInfo(recordingSessionId, body);
-
-        }
-
-        /// <summary>
-        /// Update a screen recording session 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="recordingSessionId">Screen recording session ID</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchsScreensessionsRecordingsessionIdAsyncWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null)
-        {
-            // verify the required parameter 'recordingSessionId' is set
-            if (recordingSessionId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingSessionId' when calling RecordingApi->PatchsScreensessionsRecordingsessionId");
-
-            var localVarPath = "/api/v2/recordings/screensessions/{recordingSessionId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (recordingSessionId != null) localVarPathParams.Add("recordingSessionId", Configuration.ApiClient.ParameterToString(recordingSessionId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchsScreensessionsRecordingsessionId: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchsScreensessionsRecordingsessionId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
         }
 
         /// <summary>
@@ -3838,9 +3681,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        public Annotation PostConversationIdRecordingsRecordingIdAnnotations (string conversationId, string recordingId, Annotation body)
+        public Annotation PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body)
         {
-             ApiResponse<Annotation> localVarResponse = PostConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo(conversationId, recordingId, body);
+             ApiResponse<Annotation> localVarResponse = PostConversationRecordingAnnotationsWithHttpInfo(conversationId, recordingId, body);
              return localVarResponse.Data;
         }
 
@@ -3852,17 +3695,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > PostConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body)
+        public ApiResponse< Annotation > PostConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PostConversationRecordingAnnotations");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PostConversationRecordingAnnotations");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostConversationRecordingAnnotations");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3914,13 +3757,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdRecordingsRecordingIdAnnotations: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationRecordingAnnotations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdRecordingsRecordingIdAnnotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationRecordingAnnotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Annotation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Annotation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Annotation)));
             
         }
@@ -3933,9 +3778,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> PostConversationIdRecordingsRecordingIdAnnotationsAsync (string conversationId, string recordingId, Annotation body)
+        public async System.Threading.Tasks.Task<Annotation> PostConversationRecordingAnnotationsAsync (string conversationId, string recordingId, Annotation body)
         {
-             ApiResponse<Annotation> localVarResponse = await PostConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo(conversationId, recordingId, body);
+             ApiResponse<Annotation> localVarResponse = await PostConversationRecordingAnnotationsAsyncWithHttpInfo(conversationId, recordingId, body);
              return localVarResponse.Data;
 
         }
@@ -3948,17 +3793,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PostConversationRecordingAnnotations");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PostConversationRecordingAnnotations");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostConversationRecordingAnnotations");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4010,13 +3855,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdRecordingsRecordingIdAnnotations: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationRecordingAnnotations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationIdRecordingsRecordingIdAnnotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationRecordingAnnotations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Annotation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Annotation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Annotation)));
             
         }
@@ -4027,7 +3874,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        public Policy PostMediaretentionpolicies (PolicyCreate body)
+        public Policy PostMediaretentionpolicies (Policy body)
         {
              ApiResponse<Policy> localVarResponse = PostMediaretentionpoliciesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -4039,7 +3886,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PostMediaretentionpoliciesWithHttpInfo (PolicyCreate body)
+        public ApiResponse< Policy > PostMediaretentionpoliciesWithHttpInfo (Policy body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4093,13 +3940,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Policy>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Policy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Policy)));
             
         }
@@ -4110,7 +3959,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PostMediaretentionpoliciesAsync (PolicyCreate body)
+        public async System.Threading.Tasks.Task<Policy> PostMediaretentionpoliciesAsync (Policy body)
         {
              ApiResponse<Policy> localVarResponse = await PostMediaretentionpoliciesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -4123,7 +3972,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (PolicyCreate body)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (Policy body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4177,49 +4026,51 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostMediaretentionpolicies: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Policy>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Policy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Policy)));
             
         }
 
         /// <summary>
-        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays&#x3D;10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
         /// <returns></returns>
-        public void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body)
+        public void PutConversationRecording (string conversationId, string recordingId, Recording body)
         {
-             PutConversationIdRecordingsRecordingIdWithHttpInfo(conversationId, recordingId, body);
+             PutConversationRecordingWithHttpInfo(conversationId, recordingId, body);
         }
 
         /// <summary>
-        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays&#x3D;10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body)
+        public ApiResponse<Object> PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationIdRecordingsRecordingId");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationRecording");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationIdRecordingsRecordingId");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationRecording");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationIdRecordingsRecordingId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationRecording");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4271,50 +4122,52 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationIdRecordingsRecordingId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationRecording: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationIdRecordingsRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationRecording: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
         }
 
         /// <summary>
-        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays&#x3D;10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, Recording body)
+        public async System.Threading.Tasks.Task PutConversationRecordingAsync (string conversationId, string recordingId, Recording body)
         {
-             await PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo(conversationId, recordingId, body);
+             await PutConversationRecordingAsyncWithHttpInfo(conversationId, recordingId, body);
 
         }
 
         /// <summary>
-        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays&#x3D;10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationIdRecordingsRecordingId");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationRecording");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationIdRecordingsRecordingId");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationRecording");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationIdRecordingsRecordingId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationRecording");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4366,14 +4219,16 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationIdRecordingsRecordingId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationRecording: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationIdRecordingsRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationRecording: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
         }
 
@@ -4386,9 +4241,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        public Annotation PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body)
+        public Annotation PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body)
         {
-             ApiResponse<Annotation> localVarResponse = PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo(conversationId, recordingId, annotationId, body);
+             ApiResponse<Annotation> localVarResponse = PutConversationRecordingAnnotationWithHttpInfo(conversationId, recordingId, annotationId, body);
              return localVarResponse.Data;
         }
 
@@ -4401,20 +4256,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body)
+        public ApiResponse< Annotation > PutConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationRecordingAnnotation");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationRecordingAnnotation");
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
-                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->PutConversationRecordingAnnotation");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationRecordingAnnotation");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4467,13 +4322,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationRecordingAnnotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationRecordingAnnotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Annotation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Annotation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Annotation)));
             
         }
@@ -4487,9 +4344,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsync (string conversationId, string recordingId, string annotationId, Annotation body)
+        public async System.Threading.Tasks.Task<Annotation> PutConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId, Annotation body)
         {
-             ApiResponse<Annotation> localVarResponse = await PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo(conversationId, recordingId, annotationId, body);
+             ApiResponse<Annotation> localVarResponse = await PutConversationRecordingAnnotationAsyncWithHttpInfo(conversationId, recordingId, annotationId, body);
              return localVarResponse.Data;
 
         }
@@ -4503,20 +4360,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationRecordingAnnotation");
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationRecordingAnnotation");
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
-                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->PutConversationRecordingAnnotation");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationRecordingAnnotation");
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4569,13 +4426,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationRecordingAnnotation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationRecordingAnnotation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Annotation>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Annotation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Annotation)));
             
         }
@@ -4587,9 +4446,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        public Policy PutMediaretentionpoliciesPolicyId (string policyId, Policy body)
+        public Policy PutMediaretentionpolicy (string policyId, Policy body)
         {
-             ApiResponse<Policy> localVarResponse = PutMediaretentionpoliciesPolicyIdWithHttpInfo(policyId, body);
+             ApiResponse<Policy> localVarResponse = PutMediaretentionpolicyWithHttpInfo(policyId, body);
              return localVarResponse.Data;
         }
 
@@ -4600,14 +4459,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PutMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body)
+        public ApiResponse< Policy > PutMediaretentionpolicyWithHttpInfo (string policyId, Policy body)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutMediaretentionpolicy");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutMediaretentionpolicy");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4658,13 +4517,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutMediaretentionpoliciesPolicyId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutMediaretentionpoliciesPolicyId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Policy>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Policy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Policy)));
             
         }
@@ -4676,9 +4537,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PutMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body)
+        public async System.Threading.Tasks.Task<Policy> PutMediaretentionpolicyAsync (string policyId, Policy body)
         {
-             ApiResponse<Policy> localVarResponse = await PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo(policyId, body);
+             ApiResponse<Policy> localVarResponse = await PutMediaretentionpolicyAsyncWithHttpInfo(policyId, body);
              return localVarResponse.Data;
 
         }
@@ -4690,14 +4551,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutMediaretentionpolicy");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutMediaretentionpoliciesPolicyId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutMediaretentionpolicy");
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4748,13 +4609,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutMediaretentionpoliciesPolicyId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutMediaretentionpolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutMediaretentionpoliciesPolicyId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Policy>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (Policy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Policy)));
             
         }
@@ -4831,13 +4694,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutSettings: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RecordingSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (RecordingSettings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingSettings)));
             
         }
@@ -4915,13 +4780,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutSettings: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RecordingSettings>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (RecordingSettings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingSettings)));
             
         }

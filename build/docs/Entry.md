@@ -7,8 +7,8 @@ title: Entry
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Value** | **string** | A value included in this facet. | [optional] |
-| **Count** | **int?** | The number of results with this value. | [optional] |
+| **Value** | **string** |  | [optional] |
+| **Count** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
 

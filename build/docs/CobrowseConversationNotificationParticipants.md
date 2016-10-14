@@ -29,6 +29,8 @@ title: CobrowseConversationNotificationParticipants
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
+| **ExternalContact** | [**CobrowseConversationNotificationUriReference**](CobrowseConversationNotificationUriReference.html) |  | [optional] |
+| **ExternalOrganization** | [**CobrowseConversationNotificationUriReference**](CobrowseConversationNotificationUriReference.html) |  | [optional] |
 | **CobrowseSessionId** | **string** |  | [optional] |
 | **CobrowseRole** | **string** |  | [optional] |
 | **ViewerUrl** | **string** |  | [optional] |
