@@ -29,6 +29,8 @@ title: ChatConversationNotificationParticipants
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
+| **ExternalContact** | [**ChatConversationNotificationUriReference**](ChatConversationNotificationUriReference.html) |  | [optional] |
+| **ExternalOrganization** | [**ChatConversationNotificationUriReference**](ChatConversationNotificationUriReference.html) |  | [optional] |
 | **RoomId** | **string** |  | [optional] |
 {: class="table table-striped"}
 

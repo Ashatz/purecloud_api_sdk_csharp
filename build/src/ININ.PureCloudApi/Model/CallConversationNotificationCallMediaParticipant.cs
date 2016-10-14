@@ -310,6 +310,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
         /// <param name="Provider">Provider.</param>
+        /// <param name="ExternalContact">ExternalContact.</param>
+        /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Muted">Muted.</param>
         /// <param name="Confined">Confined.</param>
         /// <param name="Recording">Recording.</param>
@@ -321,7 +323,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
-        public CallConversationNotificationCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, CallConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallConversationNotificationErrorInfo ErrorInfo = null, CallConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, CallConversationNotificationUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, CallConversationNotificationFaxStatus FaxStatus = null)
+        public CallConversationNotificationCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, CallConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallConversationNotificationErrorInfo ErrorInfo = null, CallConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallConversationNotificationUriReference ExternalContact = null, CallConversationNotificationUriReference ExternalOrganization = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, CallConversationNotificationUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, CallConversationNotificationFaxStatus FaxStatus = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -345,6 +347,8 @@ namespace ININ.PureCloudApi.Model
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
             this.Provider = Provider;
+            this.ExternalContact = ExternalContact;
+            this.ExternalOrganization = ExternalOrganization;
             this.Muted = Muted;
             this.Confined = Confined;
             this.Recording = Recording;
@@ -454,6 +458,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         /// <summary>
+        /// Gets or Sets ExternalContact
+        /// </summary>
+        [DataMember(Name="externalContact", EmitDefaultValue=false)]
+        public CallConversationNotificationUriReference ExternalContact { get; set; }
+        /// <summary>
+        /// Gets or Sets ExternalOrganization
+        /// </summary>
+        [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
+        public CallConversationNotificationUriReference ExternalOrganization { get; set; }
+        /// <summary>
         /// Gets or Sets Muted
         /// </summary>
         [DataMember(Name="muted", EmitDefaultValue=false)]
@@ -533,6 +547,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Muted: ").Append(Muted).Append("\n");
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
@@ -691,6 +707,16 @@ namespace ININ.PureCloudApi.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.ExternalContact == other.ExternalContact ||
+                    this.ExternalContact != null &&
+                    this.ExternalContact.Equals(other.ExternalContact)
+                ) &&
+                (
+                    this.ExternalOrganization == other.ExternalOrganization ||
+                    this.ExternalOrganization != null &&
+                    this.ExternalOrganization.Equals(other.ExternalOrganization)
+                ) &&
+                (
                     this.Muted == other.Muted ||
                     this.Muted != null &&
                     this.Muted.Equals(other.Muted)
@@ -802,6 +828,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ExternalContact != null)
+                    hash = hash * 59 + this.ExternalContact.GetHashCode();
+                if (this.ExternalOrganization != null)
+                    hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();
                 if (this.Confined != null)
