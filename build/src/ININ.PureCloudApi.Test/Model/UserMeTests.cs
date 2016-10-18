@@ -259,6 +259,38 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'OrgAuthorization'
         }
         /// <summary>
+        /// Test the property 'Favorites'
+        /// </summary>
+        [Test]
+        public void FavoritesTest()
+        {
+            // TODO: unit test for the property 'Favorites'
+        }
+        /// <summary>
+        /// Test the property 'Superiors'
+        /// </summary>
+        [Test]
+        public void SuperiorsTest()
+        {
+            // TODO: unit test for the property 'Superiors'
+        }
+        /// <summary>
+        /// Test the property 'DirectReports'
+        /// </summary>
+        [Test]
+        public void DirectReportsTest()
+        {
+            // TODO: unit test for the property 'DirectReports'
+        }
+        /// <summary>
+        /// Test the property 'Adjacents'
+        /// </summary>
+        [Test]
+        public void AdjacentsTest()
+        {
+            // TODO: unit test for the property 'Adjacents'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

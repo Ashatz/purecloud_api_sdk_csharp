@@ -51,22 +51,6 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
-        /// Test the property 'Array'
-        /// </summary>
-        [Test]
-        public void ArrayTest()
-        {
-            // TODO: unit test for the property 'Array'
-        }
-        /// <summary>
-        /// Test the property '_Null'
-        /// </summary>
-        [Test]
-        public void _NullTest()
-        {
-            // TODO: unit test for the property '_Null'
-        }
-        /// <summary>
         /// Test the property 'NodeType'
         /// </summary>
         [Test]
@@ -107,14 +91,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property '_Float'
         }
         /// <summary>
-        /// Test the property 'FloatingPointNumber'
-        /// </summary>
-        [Test]
-        public void FloatingPointNumberTest()
-        {
-            // TODO: unit test for the property 'FloatingPointNumber'
-        }
-        /// <summary>
         /// Test the property 'ValueNode'
         /// </summary>
         [Test]
@@ -153,6 +129,14 @@ namespace ININ.PureCloudApi.Test
         public void IntegralNumberTest()
         {
             // TODO: unit test for the property 'IntegralNumber'
+        }
+        /// <summary>
+        /// Test the property 'FloatingPointNumber'
+        /// </summary>
+        [Test]
+        public void FloatingPointNumberTest()
+        {
+            // TODO: unit test for the property 'FloatingPointNumber'
         }
         /// <summary>
         /// Test the property '_Short'
@@ -217,6 +201,22 @@ namespace ININ.PureCloudApi.Test
         public void BinaryTest()
         {
             // TODO: unit test for the property 'Binary'
+        }
+        /// <summary>
+        /// Test the property 'Array'
+        /// </summary>
+        [Test]
+        public void ArrayTest()
+        {
+            // TODO: unit test for the property 'Array'
+        }
+        /// <summary>
+        /// Test the property '_Null'
+        /// </summary>
+        [Test]
+        public void _NullTest()
+        {
+            // TODO: unit test for the property '_Null'
         }
 
     }

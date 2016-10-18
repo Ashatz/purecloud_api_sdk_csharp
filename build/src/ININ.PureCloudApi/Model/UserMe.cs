@@ -88,7 +88,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PresenceDefinitions">The first 100 presence definitions for user&#39;s organization..</param>
         /// <param name="Locations">The first 100 locations for user&#39;s organization.</param>
         /// <param name="OrgAuthorization">The first 100 organization roles, with applicable permission policies, for user&#39;s organization..</param>
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<Location> Locations = null, List<DomainOrganizationRole> OrgAuthorization = null)
+        /// <param name="Favorites">The first 50 favorited users..</param>
+        /// <param name="Superiors">The first 50 superiors of this user..</param>
+        /// <param name="DirectReports">The first 50 direct reports to this user..</param>
+        /// <param name="Adjacents">The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands..</param>
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<Location> Locations = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -122,6 +126,10 @@ namespace ININ.PureCloudApi.Model
             this.PresenceDefinitions = PresenceDefinitions;
             this.Locations = Locations;
             this.OrgAuthorization = OrgAuthorization;
+            this.Favorites = Favorites;
+            this.Superiors = Superiors;
+            this.DirectReports = DirectReports;
+            this.Adjacents = Adjacents;
         }
         
         /// <summary>
@@ -268,6 +276,30 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="orgAuthorization", EmitDefaultValue=false)]
         public List<DomainOrganizationRole> OrgAuthorization { get; set; }
         /// <summary>
+        /// The first 50 favorited users.
+        /// </summary>
+        /// <value>The first 50 favorited users.</value>
+        [DataMember(Name="favorites", EmitDefaultValue=false)]
+        public List<User> Favorites { get; set; }
+        /// <summary>
+        /// The first 50 superiors of this user.
+        /// </summary>
+        /// <value>The first 50 superiors of this user.</value>
+        [DataMember(Name="superiors", EmitDefaultValue=false)]
+        public List<User> Superiors { get; set; }
+        /// <summary>
+        /// The first 50 direct reports to this user.
+        /// </summary>
+        /// <value>The first 50 direct reports to this user.</value>
+        [DataMember(Name="directReports", EmitDefaultValue=false)]
+        public List<User> DirectReports { get; set; }
+        /// <summary>
+        /// The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands.
+        /// </summary>
+        /// <value>The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands.</value>
+        [DataMember(Name="adjacents", EmitDefaultValue=false)]
+        public Adjacents Adjacents { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -307,6 +339,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PresenceDefinitions: ").Append(PresenceDefinitions).Append("\n");
             sb.Append("  Locations: ").Append(Locations).Append("\n");
             sb.Append("  OrgAuthorization: ").Append(OrgAuthorization).Append("\n");
+            sb.Append("  Favorites: ").Append(Favorites).Append("\n");
+            sb.Append("  Superiors: ").Append(Superiors).Append("\n");
+            sb.Append("  DirectReports: ").Append(DirectReports).Append("\n");
+            sb.Append("  Adjacents: ").Append(Adjacents).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -475,6 +511,26 @@ namespace ININ.PureCloudApi.Model
                     this.OrgAuthorization.SequenceEqual(other.OrgAuthorization)
                 ) &&
                 (
+                    this.Favorites == other.Favorites ||
+                    this.Favorites != null &&
+                    this.Favorites.SequenceEqual(other.Favorites)
+                ) &&
+                (
+                    this.Superiors == other.Superiors ||
+                    this.Superiors != null &&
+                    this.Superiors.SequenceEqual(other.Superiors)
+                ) &&
+                (
+                    this.DirectReports == other.DirectReports ||
+                    this.DirectReports != null &&
+                    this.DirectReports.SequenceEqual(other.DirectReports)
+                ) &&
+                (
+                    this.Adjacents == other.Adjacents ||
+                    this.Adjacents != null &&
+                    this.Adjacents.Equals(other.Adjacents)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -544,6 +600,14 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Locations.GetHashCode();
                 if (this.OrgAuthorization != null)
                     hash = hash * 59 + this.OrgAuthorization.GetHashCode();
+                if (this.Favorites != null)
+                    hash = hash * 59 + this.Favorites.GetHashCode();
+                if (this.Superiors != null)
+                    hash = hash * 59 + this.Superiors.GetHashCode();
+                if (this.DirectReports != null)
+                    hash = hash * 59 + this.DirectReports.GetHashCode();
+                if (this.Adjacents != null)
+                    hash = hash * 59 + this.Adjacents.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

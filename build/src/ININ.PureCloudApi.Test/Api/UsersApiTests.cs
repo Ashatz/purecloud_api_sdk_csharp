@@ -153,6 +153,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetUserIdAdjacents
+        /// </summary>
+        [Test]
+        public void GetUserIdAdjacentsTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdAdjacents'
+            string userId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            instance.GetUserIdAdjacents(userId, expand);
+            
+        }
+        
+        /// <summary>
         /// Test GetUserIdCallforwarding
         /// </summary>
         [Test]
@@ -162,6 +175,35 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             var response = instance.GetUserIdCallforwarding(userId);
             Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding");
+        }
+        
+        /// <summary>
+        /// Test GetUserIdDirectreports
+        /// </summary>
+        [Test]
+        public void GetUserIdDirectreportsTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdDirectreports'
+            string userId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            instance.GetUserIdDirectreports(userId, expand);
+            
+        }
+        
+        /// <summary>
+        /// Test GetUserIdFavorites
+        /// </summary>
+        [Test]
+        public void GetUserIdFavoritesTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdFavorites'
+            string userId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            instance.GetUserIdFavorites(userId, pageSize, pageNumber, sortOrder, expand);
+            
         }
         
         /// <summary>
@@ -265,6 +307,19 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             var response = instance.GetUserIdStation(userId);
             Assert.IsInstanceOf<UserStations> (response, "response is UserStations");
+        }
+        
+        /// <summary>
+        /// Test GetUserIdSuperiors
+        /// </summary>
+        [Test]
+        public void GetUserIdSuperiorsTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdSuperiors'
+            string userId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            instance.GetUserIdSuperiors(userId, expand);
+            
         }
         
         /// <summary>

@@ -33,6 +33,10 @@ title: UserMe
 | **PresenceDefinitions** | [**List&lt;OrganizationPresence&gt;**](OrganizationPresence.html) | The first 100 presence definitions for user&#39;s organization. | [optional] |
 | **Locations** | [**List&lt;Location&gt;**](Location.html) | The first 100 locations for user&#39;s organization | [optional] |
 | **OrgAuthorization** | [**List&lt;DomainOrganizationRole&gt;**](DomainOrganizationRole.html) | The first 100 organization roles, with applicable permission policies, for user&#39;s organization. | [optional] |
+| **Favorites** | [**List&lt;User&gt;**](User.html) | The first 50 favorited users. | [optional] |
+| **Superiors** | [**List&lt;User&gt;**](User.html) | The first 50 superiors of this user. | [optional] |
+| **DirectReports** | [**List&lt;User&gt;**](User.html) | The first 50 direct reports to this user. | [optional] |
+| **Adjacents** | [**Adjacents**](Adjacents.html) | The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 
