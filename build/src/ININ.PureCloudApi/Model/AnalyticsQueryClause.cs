@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class AnalyticsQueryClause :  IEquatable<AnalyticsQueryClause>
     {
         /// <summary>
-        /// Gets or Sets Type
+        /// Boolean operation to apply to the provided predicates
         /// </summary>
+        /// <value>Boolean operation to apply to the provided predicates</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         {
@@ -44,19 +45,41 @@ namespace ININ.PureCloudApi.Model
             Or
         }
         /// <summary>
-        /// Gets or Sets Type
+        /// Boolean operation to apply to the provided predicates
         /// </summary>
+        /// <value>Boolean operation to apply to the provided predicates</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsQueryClause" /> class.
         /// </summary>
-        /// <param name="Type">Type.</param>
-        /// <param name="Predicates">Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric..</param>
+        [JsonConstructorAttribute]
+        protected AnalyticsQueryClause() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AnalyticsQueryClause" /> class.
+        /// </summary>
+        /// <param name="Type">Boolean operation to apply to the provided predicates (required).</param>
+        /// <param name="Predicates">Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric. (required).</param>
         public AnalyticsQueryClause(TypeEnum? Type = null, List<AnalyticsQueryPredicate> Predicates = null)
         {
-            this.Type = Type;
-            this.Predicates = Predicates;
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for AnalyticsQueryClause and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
+            // to ensure "Predicates" is required (not null)
+            if (Predicates == null)
+            {
+                throw new InvalidDataException("Predicates is a required property for AnalyticsQueryClause and cannot be null");
+            }
+            else
+            {
+                this.Predicates = Predicates;
+            }
         }
         
         /// <summary>

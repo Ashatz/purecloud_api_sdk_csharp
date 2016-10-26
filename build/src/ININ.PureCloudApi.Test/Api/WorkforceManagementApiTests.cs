@@ -54,6 +54,31 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
+        /// Test DeleteLongtermforecastsForecastId
+        /// </summary>
+        [Test]
+        public void DeleteLongtermforecastsForecastIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteLongtermforecastsForecastId'
+            string forecastId = null; // TODO: replace null with proper value
+            instance.DeleteLongtermforecastsForecastId(forecastId);
+            
+        }
+        
+        /// <summary>
+        /// Test DeleteLongtermforecastsForecastIdModificationsForecastmodificationId
+        /// </summary>
+        [Test]
+        public void DeleteLongtermforecastsForecastIdModificationsForecastmodificationIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteLongtermforecastsForecastIdModificationsForecastmodificationId'
+            string forecastId = null; // TODO: replace null with proper value
+            string forecastModificationId = null; // TODO: replace null with proper value
+            instance.DeleteLongtermforecastsForecastIdModificationsForecastmodificationId(forecastId, forecastModificationId);
+            
+        }
+        
+        /// <summary>
         /// Test GetAdherence
         /// </summary>
         [Test]
@@ -63,6 +88,80 @@ namespace ININ.PureCloudApi.Test
             List<string> userId = null; // TODO: replace null with proper value
             var response = instance.GetAdherence(userId);
             Assert.IsInstanceOf<UserScheduleAdherence> (response, "response is UserScheduleAdherence");
+        }
+        
+        /// <summary>
+        /// Test GetLongtermforecastsForecastId
+        /// </summary>
+        [Test]
+        public void GetLongtermforecastsForecastIdTest()
+        {
+            // TODO: add unit test for the method 'GetLongtermforecastsForecastId'
+            string forecastId = null; // TODO: replace null with proper value
+            var response = instance.GetLongtermforecastsForecastId(forecastId);
+            Assert.IsInstanceOf<Forecast> (response, "response is Forecast");
+        }
+        
+        /// <summary>
+        /// Test GetLongtermforecastsForecastIdModifications
+        /// </summary>
+        [Test]
+        public void GetLongtermforecastsForecastIdModificationsTest()
+        {
+            // TODO: add unit test for the method 'GetLongtermforecastsForecastIdModifications'
+            string forecastId = null; // TODO: replace null with proper value
+            var response = instance.GetLongtermforecastsForecastIdModifications(forecastId);
+            Assert.IsInstanceOf<List<ForecastModification>> (response, "response is List<ForecastModification>");
+        }
+        
+        /// <summary>
+        /// Test PostLongtermforecasts
+        /// </summary>
+        [Test]
+        public void PostLongtermforecastsTest()
+        {
+            // TODO: add unit test for the method 'PostLongtermforecasts'
+            ForecastCreation body = null; // TODO: replace null with proper value
+            var response = instance.PostLongtermforecasts(body);
+            Assert.IsInstanceOf<ForecastCreationCompletion> (response, "response is ForecastCreationCompletion");
+        }
+        
+        /// <summary>
+        /// Test PostLongtermforecastsForecastIdModifications
+        /// </summary>
+        [Test]
+        public void PostLongtermforecastsForecastIdModificationsTest()
+        {
+            // TODO: add unit test for the method 'PostLongtermforecastsForecastIdModifications'
+            string forecastId = null; // TODO: replace null with proper value
+            ForecastModificationCreation body = null; // TODO: replace null with proper value
+            var response = instance.PostLongtermforecastsForecastIdModifications(forecastId, body);
+            Assert.IsInstanceOf<ForecastModificationCreation> (response, "response is ForecastModificationCreation");
+        }
+        
+        /// <summary>
+        /// Test PostLongtermforecastsSearch
+        /// </summary>
+        [Test]
+        public void PostLongtermforecastsSearchTest()
+        {
+            // TODO: add unit test for the method 'PostLongtermforecastsSearch'
+            ForecastSearchRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostLongtermforecastsSearch(body);
+            Assert.IsInstanceOf<ForecastMetadataEntityListing> (response, "response is ForecastMetadataEntityListing");
+        }
+        
+        /// <summary>
+        /// Test PutLongtermforecastsForecastIdModifications
+        /// </summary>
+        [Test]
+        public void PutLongtermforecastsForecastIdModificationsTest()
+        {
+            // TODO: add unit test for the method 'PutLongtermforecastsForecastIdModifications'
+            string forecastId = null; // TODO: replace null with proper value
+            ForecastModification body = null; // TODO: replace null with proper value
+            var response = instance.PutLongtermforecastsForecastIdModifications(forecastId, body);
+            Assert.IsInstanceOf<ForecastModification> (response, "response is ForecastModification");
         }
         
     }

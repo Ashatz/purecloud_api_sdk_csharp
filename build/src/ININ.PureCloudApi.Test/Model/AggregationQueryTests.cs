@@ -67,6 +67,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Granularity'
         }
         /// <summary>
+        /// Test the property 'TimeZone'
+        /// </summary>
+        [Test]
+        public void TimeZoneTest()
+        {
+            // TODO: unit test for the property 'TimeZone'
+        }
+        /// <summary>
         /// Test the property 'GroupBy'
         /// </summary>
         [Test]

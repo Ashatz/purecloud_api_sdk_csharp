@@ -865,7 +865,7 @@ namespace ININ.PureCloudApi.Test
             string sortOrder = null; // TODO: replace null with proper value
             bool? recordingEnabled = null; // TODO: replace null with proper value
             var response = instance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
-            Assert.IsInstanceOf<TrunkBase> (response, "response is TrunkBase");
+            Assert.IsInstanceOf<TrunkBaseEntityListing> (response, "response is TrunkBaseEntityListing");
         }
         
         /// <summary>

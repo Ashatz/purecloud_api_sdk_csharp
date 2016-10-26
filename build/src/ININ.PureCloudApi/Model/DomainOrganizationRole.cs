@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Permissions">Permissions.</param>
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
         /// <param name="UserCount">UserCount.</param>
-        /// <param name="RoleNeedsUpdate">RoleNeedsUpdate (default to false).</param>
+        /// <param name="RoleNeedsUpdate">Optional unless patch operation. (default to false).</param>
         /// <param name="_Base">_Base (default to false).</param>
         /// <param name="_Default">_Default (default to false).</param>
         public DomainOrganizationRole(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Base = null, bool? _Default = null)
@@ -103,8 +103,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="userCount", EmitDefaultValue=false)]
         public int? UserCount { get; set; }
         /// <summary>
-        /// Gets or Sets RoleNeedsUpdate
+        /// Optional unless patch operation.
         /// </summary>
+        /// <value>Optional unless patch operation.</value>
         [DataMember(Name="roleNeedsUpdate", EmitDefaultValue=false)]
         public bool? RoleNeedsUpdate { get; set; }
         /// <summary>

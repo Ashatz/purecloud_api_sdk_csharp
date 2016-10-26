@@ -83,6 +83,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'EdgesStatus'
         }
         /// <summary>
+        /// Test the property 'EventCreationTime'
+        /// </summary>
+        [Test]
+        public void EventCreationTimeTest()
+        {
+            // TODO: unit test for the property 'EventCreationTime'
+        }
+        /// <summary>
         /// Test the property 'Provision'
         /// </summary>
         [Test]

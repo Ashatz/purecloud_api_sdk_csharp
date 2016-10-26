@@ -180,6 +180,18 @@ namespace ININ.PureCloudApi.Model
             Conversationend,
             
             /// <summary>
+            /// Enum Externalcontactid for "externalContactId"
+            /// </summary>
+            [EnumMember(Value = "externalContactId")]
+            Externalcontactid,
+            
+            /// <summary>
+            /// Enum Externalorganizationid for "externalOrganizationId"
+            /// </summary>
+            [EnumMember(Value = "externalOrganizationId")]
+            Externalorganizationid,
+            
+            /// <summary>
             /// Enum Stationid for "stationId"
             /// </summary>
             [EnumMember(Value = "stationId")]

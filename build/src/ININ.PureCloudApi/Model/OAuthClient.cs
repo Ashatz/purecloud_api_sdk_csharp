@@ -82,8 +82,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RegisteredRedirectUri">List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback (required).</param>
         /// <param name="Secret">System created secret assigned to this client. Secrets are required for code authorization and client credential grants..</param>
         /// <param name="RoleIds">Roles assigned to this client. Roles only apply to clients using the client_credential grant.</param>
-        /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. .</param>
-        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null)
+        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -107,7 +106,6 @@ namespace ININ.PureCloudApi.Model
             this.Description = Description;
             this.Secret = Secret;
             this.RoleIds = RoleIds;
-            this.AuthorizedGrantType = AuthorizedGrantType;
         }
         
         /// <summary>

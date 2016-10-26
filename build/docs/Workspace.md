@@ -8,7 +8,7 @@ title: Workspace
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** |  | [optional] |
+| **Name** | **string** | The current name of the workspace. | |
 | **Type** | **string** |  | [optional] |
 | **IsCurrentUserWorkspace** | **bool?** |  | [optional] [default to false]|
 | **User** | [**UriReference**](UriReference.html) |  | [optional] |

@@ -20,12 +20,33 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PagingSpec" /> class.
         /// </summary>
-        /// <param name="PageSize">How many results per page.</param>
-        /// <param name="PageNumber">How many pages in.</param>
+        [JsonConstructorAttribute]
+        protected PagingSpec() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PagingSpec" /> class.
+        /// </summary>
+        /// <param name="PageSize">How many results per page (required).</param>
+        /// <param name="PageNumber">How many pages in (required).</param>
         public PagingSpec(int? PageSize = null, int? PageNumber = null)
         {
-            this.PageSize = PageSize;
-            this.PageNumber = PageNumber;
+            // to ensure "PageSize" is required (not null)
+            if (PageSize == null)
+            {
+                throw new InvalidDataException("PageSize is a required property for PagingSpec and cannot be null");
+            }
+            else
+            {
+                this.PageSize = PageSize;
+            }
+            // to ensure "PageNumber" is required (not null)
+            if (PageNumber == null)
+            {
+                throw new InvalidDataException("PageNumber is a required property for PagingSpec and cannot be null");
+            }
+            else
+            {
+                this.PageNumber = PageNumber;
+            }
         }
         
         /// <summary>

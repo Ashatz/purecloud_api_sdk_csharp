@@ -18,8 +18,9 @@ namespace ININ.PureCloudApi.Model
     public partial class WorkspaceMember :  IEquatable<WorkspaceMember>
     {
         /// <summary>
-        /// Gets or Sets MemberType
+        /// The workspace member type.
         /// </summary>
+        /// <value>The workspace member type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MemberTypeEnum
         {
@@ -44,25 +45,39 @@ namespace ININ.PureCloudApi.Model
             Group
         }
         /// <summary>
-        /// Gets or Sets MemberType
+        /// The workspace member type.
         /// </summary>
+        /// <value>The workspace member type.</value>
         [DataMember(Name="memberType", EmitDefaultValue=false)]
         public MemberTypeEnum? MemberType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceMember" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected WorkspaceMember() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WorkspaceMember" /> class.
+        /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Workspace">Workspace.</param>
-        /// <param name="MemberType">MemberType.</param>
+        /// <param name="MemberType">The workspace member type. (required).</param>
         /// <param name="Member">Member.</param>
         /// <param name="User">User.</param>
         /// <param name="Group">Group.</param>
         /// <param name="SecurityProfile">SecurityProfile.</param>
         public WorkspaceMember(string Name = null, UriReference Workspace = null, MemberTypeEnum? MemberType = null, UriReference Member = null, User User = null, Group Group = null, SecurityProfile SecurityProfile = null)
         {
+            // to ensure "MemberType" is required (not null)
+            if (MemberType == null)
+            {
+                throw new InvalidDataException("MemberType is a required property for WorkspaceMember and cannot be null");
+            }
+            else
+            {
+                this.MemberType = MemberType;
+            }
             this.Name = Name;
             this.Workspace = Workspace;
-            this.MemberType = MemberType;
             this.Member = Member;
             this.User = User;
             this.Group = Group;

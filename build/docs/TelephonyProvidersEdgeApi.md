@@ -3662,7 +3662,7 @@ namespace Example
 
 <a name="getprovidersedgestrunkbasesettings"></a>
 
-## [**TrunkBase**](TrunkBase.html) GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
+## [**TrunkBaseEntityListing**](TrunkBaseEntityListing.html) GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
 
 Get Trunk Base Settings listing
 
@@ -3696,7 +3696,7 @@ namespace Example
             try
             {
                 // Get Trunk Base Settings listing
-                TrunkBase result = apiInstance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
+                TrunkBaseEntityListing result = apiInstance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3722,7 +3722,7 @@ namespace Example
 
 ### Return type
 
-[**TrunkBase**](TrunkBase.html)
+[**TrunkBaseEntityListing**](TrunkBaseEntityListing.html)
 
 <a name="getprovidersedgestrunkbasesettingsavailablemetabases"></a>
 

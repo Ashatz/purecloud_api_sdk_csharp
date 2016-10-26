@@ -195,6 +195,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'SecondaryStatus'
         }
         /// <summary>
+        /// Test the property 'UserAgentInfo'
+        /// </summary>
+        [Test]
+        public void UserAgentInfoTest()
+        {
+            // TODO: unit test for the property 'UserAgentInfo'
+        }
+        /// <summary>
         /// Test the property 'Properties'
         /// </summary>
         [Test]

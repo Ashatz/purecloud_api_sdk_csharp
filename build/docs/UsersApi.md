@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserIdRoutingskillsSkillId**](UsersApi.html#deleteuseridroutingskillsskillid) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
 | [**DeleteUserIdStationAssociatedstation**](UsersApi.html#deleteuseridstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
 | [**DeleteUserIdStationDefaultstation**](UsersApi.html#deleteuseridstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
+| [**GetFieldconfig**](UsersApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetMe**](UsersApi.html#getme) | **GET** /api/v2/users/me | Get current user details. |
 | [**GetSearch**](UsersApi.html#getsearch) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
 | [**GetUserId**](UsersApi.html#getuserid) | **GET** /api/v2/users/{userId} | Get user. |
@@ -327,6 +328,62 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getfieldconfig"></a>
+
+## [**FieldConfig**](FieldConfig.html) GetFieldconfig (string type)
+
+Fetch field config for an entity type
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetFieldconfigExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UsersApi();
+            var type = type_example;  // string | Field type
+
+            try
+            {
+                // Fetch field config for an entity type
+                FieldConfig result = apiInstance.GetFieldconfig(type);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetFieldconfig: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **type** | **string**| Field type |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FieldConfig**](FieldConfig.html)
 
 <a name="getme"></a>
 

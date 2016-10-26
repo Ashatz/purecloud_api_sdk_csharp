@@ -59,7 +59,19 @@ namespace ININ.PureCloudApi.Model
             /// Enum Cobrowse for "cobrowse"
             /// </summary>
             [EnumMember(Value = "cobrowse")]
-            Cobrowse
+            Cobrowse,
+            
+            /// <summary>
+            /// Enum Video for "video"
+            /// </summary>
+            [EnumMember(Value = "video")]
+            Video,
+            
+            /// <summary>
+            /// Enum Screenshare for "screenShare"
+            /// </summary>
+            [EnumMember(Value = "screenShare")]
+            Screenshare
         }
         /// <summary>
         /// Gets or Sets Direction

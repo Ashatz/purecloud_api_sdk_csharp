@@ -25,11 +25,29 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PropertyIndexRequest" /> class.
         /// </summary>
-        /// <param name="SessionId">Attach properties to a segment in the indicated session. Also requires a timestamp..</param>
-        /// <param name="Timestamp">Attach properties to a segment covering a specific point in time. Also requries a sessionId..</param>
+        /// <param name="SessionId">Attach properties to a segment in the indicated session (required).</param>
+        /// <param name="TargetDate">Attach properties to a segment covering a specific point in time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         /// <param name="Properties">The list of properties to index (required).</param>
-        public PropertyIndexRequest(string SessionId = null, long? Timestamp = null, List<AnalyticsProperty> Properties = null)
+        public PropertyIndexRequest(string SessionId = null, DateTime? TargetDate = null, List<AnalyticsProperty> Properties = null)
         {
+            // to ensure "SessionId" is required (not null)
+            if (SessionId == null)
+            {
+                throw new InvalidDataException("SessionId is a required property for PropertyIndexRequest and cannot be null");
+            }
+            else
+            {
+                this.SessionId = SessionId;
+            }
+            // to ensure "TargetDate" is required (not null)
+            if (TargetDate == null)
+            {
+                throw new InvalidDataException("TargetDate is a required property for PropertyIndexRequest and cannot be null");
+            }
+            else
+            {
+                this.TargetDate = TargetDate;
+            }
             // to ensure "Properties" is required (not null)
             if (Properties == null)
             {
@@ -39,22 +57,20 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Properties = Properties;
             }
-            this.SessionId = SessionId;
-            this.Timestamp = Timestamp;
         }
         
         /// <summary>
-        /// Attach properties to a segment in the indicated session. Also requires a timestamp.
+        /// Attach properties to a segment in the indicated session
         /// </summary>
-        /// <value>Attach properties to a segment in the indicated session. Also requires a timestamp.</value>
+        /// <value>Attach properties to a segment in the indicated session</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
         /// <summary>
-        /// Attach properties to a segment covering a specific point in time. Also requries a sessionId.
+        /// Attach properties to a segment covering a specific point in time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Attach properties to a segment covering a specific point in time. Also requries a sessionId.</value>
-        [DataMember(Name="timestamp", EmitDefaultValue=false)]
-        public long? Timestamp { get; set; }
+        /// <value>Attach properties to a segment covering a specific point in time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="targetDate", EmitDefaultValue=false)]
+        public DateTime? TargetDate { get; set; }
         /// <summary>
         /// The list of properties to index
         /// </summary>
@@ -70,7 +86,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class PropertyIndexRequest {\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
-            sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
+            sb.Append("  TargetDate: ").Append(TargetDate).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -114,9 +130,9 @@ namespace ININ.PureCloudApi.Model
                     this.SessionId.Equals(other.SessionId)
                 ) &&
                 (
-                    this.Timestamp == other.Timestamp ||
-                    this.Timestamp != null &&
-                    this.Timestamp.Equals(other.Timestamp)
+                    this.TargetDate == other.TargetDate ||
+                    this.TargetDate != null &&
+                    this.TargetDate.Equals(other.TargetDate)
                 ) &&
                 (
                     this.Properties == other.Properties ||
@@ -138,8 +154,8 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
-                if (this.Timestamp != null)
-                    hash = hash * 59 + this.Timestamp.GetHashCode();
+                if (this.TargetDate != null)
+                    hash = hash * 59 + this.TargetDate.GetHashCode();
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
                 return hash;

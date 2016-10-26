@@ -79,10 +79,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Lines">Lines (required).</param>
         /// <param name="Status">The status of the phone and lines from the primary Edge..</param>
         /// <param name="SecondaryStatus">The status of the phone and lines from the secondary Edge..</param>
+        /// <param name="UserAgentInfo">User Agent Information for this phone. This includes model, firmware version, and manufacturer..</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="Capabilities">Capabilities.</param>
         /// <param name="WebRtcUser">This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones..</param>
-        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null)
+        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, UserAgentInfo UserAgentInfo = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -133,6 +134,7 @@ namespace ININ.PureCloudApi.Model
             this.PhoneMetaBase = PhoneMetaBase;
             this.Status = Status;
             this.SecondaryStatus = SecondaryStatus;
+            this.UserAgentInfo = UserAgentInfo;
             this.Properties = Properties;
             this.Capabilities = Capabilities;
             this.WebRtcUser = WebRtcUser;
@@ -233,6 +235,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="secondaryStatus", EmitDefaultValue=false)]
         public PhoneStatus SecondaryStatus { get; set; }
         /// <summary>
+        /// User Agent Information for this phone. This includes model, firmware version, and manufacturer.
+        /// </summary>
+        /// <value>User Agent Information for this phone. This includes model, firmware version, and manufacturer.</value>
+        [DataMember(Name="userAgentInfo", EmitDefaultValue=false)]
+        public UserAgentInfo UserAgentInfo { get; set; }
+        /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
@@ -280,6 +288,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Lines: ").Append(Lines).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  SecondaryStatus: ").Append(SecondaryStatus).Append("\n");
+            sb.Append("  UserAgentInfo: ").Append(UserAgentInfo).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("  Capabilities: ").Append(Capabilities).Append("\n");
             sb.Append("  WebRtcUser: ").Append(WebRtcUser).Append("\n");
@@ -411,6 +420,11 @@ namespace ININ.PureCloudApi.Model
                     this.SecondaryStatus.Equals(other.SecondaryStatus)
                 ) &&
                 (
+                    this.UserAgentInfo == other.UserAgentInfo ||
+                    this.UserAgentInfo != null &&
+                    this.UserAgentInfo.Equals(other.UserAgentInfo)
+                ) &&
+                (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.SequenceEqual(other.Properties)
@@ -479,6 +493,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Status.GetHashCode();
                 if (this.SecondaryStatus != null)
                     hash = hash * 59 + this.SecondaryStatus.GetHashCode();
+                if (this.UserAgentInfo != null)
+                    hash = hash * 59 + this.UserAgentInfo.GetHashCode();
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
                 if (this.Capabilities != null)

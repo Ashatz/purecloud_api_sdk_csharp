@@ -7,8 +7,8 @@ title: PagingSpec
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **PageSize** | **int?** | How many results per page | [optional] |
-| **PageNumber** | **int?** | How many pages in | [optional] |
+| **PageSize** | **int?** | How many results per page | |
+| **PageNumber** | **int?** | How many pages in | |
 {: class="table table-striped"}
 
 

@@ -1441,8 +1441,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
-        /// <returns>TrunkBase</returns>
-        TrunkBase GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
+        /// <returns>TrunkBaseEntityListing</returns>
+        TrunkBaseEntityListing GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
 
         /// <summary>
         /// Get Trunk Base Settings listing
@@ -1456,8 +1456,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
-        /// <returns>ApiResponse of TrunkBase</returns>
-        ApiResponse<TrunkBase> GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
+        /// <returns>ApiResponse of TrunkBaseEntityListing</returns>
+        ApiResponse<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
         /// </summary>
@@ -4004,8 +4004,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
-        /// <returns>Task of TrunkBase</returns>
-        System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
+        /// <returns>Task of TrunkBaseEntityListing</returns>
+        System.Threading.Tasks.Task<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
 
         /// <summary>
         /// Get Trunk Base Settings listing
@@ -4019,8 +4019,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
-        /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
+        /// <returns>Task of ApiResponse (TrunkBaseEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
         /// </summary>
@@ -14898,10 +14898,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
-        /// <returns>TrunkBase</returns>
-        public TrunkBase GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
+        /// <returns>TrunkBaseEntityListing</returns>
+        public TrunkBaseEntityListing GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
         {
-             ApiResponse<TrunkBase> localVarResponse = GetProvidersEdgesTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
+             ApiResponse<TrunkBaseEntityListing> localVarResponse = GetProvidersEdgesTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
              return localVarResponse.Data;
         }
 
@@ -14914,8 +14914,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
-        /// <returns>ApiResponse of TrunkBase</returns>
-        public ApiResponse< TrunkBase > GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
+        /// <returns>ApiResponse of TrunkBaseEntityListing</returns>
+        public ApiResponse< TrunkBaseEntityListing > GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
@@ -14968,9 +14968,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunkbasesettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TrunkBase>(localVarStatusCode,
+            return new ApiResponse<TrunkBaseEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrunkBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBase)));
+                (TrunkBaseEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBaseEntityListing)));
             
         }
 
@@ -14983,10 +14983,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
-        /// <returns>Task of TrunkBase</returns>
-        public async System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
+        /// <returns>Task of TrunkBaseEntityListing</returns>
+        public async System.Threading.Tasks.Task<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
         {
-             ApiResponse<TrunkBase> localVarResponse = await GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
+             ApiResponse<TrunkBaseEntityListing> localVarResponse = await GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
              return localVarResponse.Data;
 
         }
@@ -15000,8 +15000,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
-        /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
+        /// <returns>Task of ApiResponse (TrunkBaseEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
@@ -15054,9 +15054,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesTrunkbasesettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TrunkBase>(localVarStatusCode,
+            return new ApiResponse<TrunkBaseEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrunkBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBase)));
+                (TrunkBaseEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBaseEntityListing)));
             
         }
 
