@@ -22,7 +22,8 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Enabled">Enabled (default to false).</param>
-        public GeolocationSettings(string Name = null, bool? Enabled = null)
+        /// <param name="MapboxKey">MapboxKey.</param>
+        public GeolocationSettings(string Name = null, bool? Enabled = null, string MapboxKey = null)
         {
             this.Name = Name;
             // use default value if no "Enabled" provided
@@ -34,6 +35,7 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Enabled = Enabled;
             }
+            this.MapboxKey = MapboxKey;
         }
         
         /// <summary>
@@ -53,6 +55,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
         /// <summary>
+        /// Gets or Sets MapboxKey
+        /// </summary>
+        [DataMember(Name="mapboxKey", EmitDefaultValue=false)]
+        public string MapboxKey { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -69,6 +76,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  MapboxKey: ").Append(MapboxKey).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -122,6 +130,11 @@ namespace ININ.PureCloudApi.Model
                     this.Enabled.Equals(other.Enabled)
                 ) &&
                 (
+                    this.MapboxKey == other.MapboxKey ||
+                    this.MapboxKey != null &&
+                    this.MapboxKey.Equals(other.MapboxKey)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -145,6 +158,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                if (this.MapboxKey != null)
+                    hash = hash * 59 + this.MapboxKey.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

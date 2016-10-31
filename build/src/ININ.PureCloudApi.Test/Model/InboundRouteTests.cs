@@ -123,6 +123,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'FromEmail'
         }
         /// <summary>
+        /// Test the property 'Flow'
+        /// </summary>
+        [Test]
+        public void FlowTest()
+        {
+            // TODO: unit test for the property 'Flow'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

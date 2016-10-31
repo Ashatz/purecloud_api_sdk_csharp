@@ -33,7 +33,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Language">The language to use for routing..</param>
         /// <param name="FromName">The sender name to use for outgoing replies. (required).</param>
         /// <param name="FromEmail">The sender email to use for outgoing replies. (required).</param>
-        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null)
+        /// <param name="Flow">The flow to use for processing the email..</param>
+        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, UriReference Flow = null)
         {
             // to ensure "Pattern" is required (not null)
             if (Pattern == null)
@@ -67,6 +68,7 @@ namespace ININ.PureCloudApi.Model
             this.Priority = Priority;
             this.Skills = Skills;
             this.Language = Language;
+            this.Flow = Flow;
         }
         
         /// <summary>
@@ -123,6 +125,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="fromEmail", EmitDefaultValue=false)]
         public string FromEmail { get; set; }
         /// <summary>
+        /// The flow to use for processing the email.
+        /// </summary>
+        /// <value>The flow to use for processing the email.</value>
+        [DataMember(Name="flow", EmitDefaultValue=false)]
+        public UriReference Flow { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -145,6 +153,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  FromName: ").Append(FromName).Append("\n");
             sb.Append("  FromEmail: ").Append(FromEmail).Append("\n");
+            sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -228,6 +237,11 @@ namespace ININ.PureCloudApi.Model
                     this.FromEmail.Equals(other.FromEmail)
                 ) &&
                 (
+                    this.Flow == other.Flow ||
+                    this.Flow != null &&
+                    this.Flow.Equals(other.Flow)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -263,6 +277,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.FromName.GetHashCode();
                 if (this.FromEmail != null)
                     hash = hash * 59 + this.FromEmail.GetHashCode();
+                if (this.Flow != null)
+                    hash = hash * 59 + this.Flow.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

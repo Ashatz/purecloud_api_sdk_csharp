@@ -75,6 +75,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Enabled'
         }
         /// <summary>
+        /// Test the property 'MapboxKey'
+        /// </summary>
+        [Test]
+        public void MapboxKeyTest()
+        {
+            // TODO: unit test for the property 'MapboxKey'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

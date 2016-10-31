@@ -91,6 +91,22 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property '_Float'
         }
         /// <summary>
+        /// Test the property 'Binary'
+        /// </summary>
+        [Test]
+        public void BinaryTest()
+        {
+            // TODO: unit test for the property 'Binary'
+        }
+        /// <summary>
+        /// Test the property 'Pojo'
+        /// </summary>
+        [Test]
+        public void PojoTest()
+        {
+            // TODO: unit test for the property 'Pojo'
+        }
+        /// <summary>
         /// Test the property 'ValueNode'
         /// </summary>
         [Test]
@@ -115,28 +131,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'MissingNode'
         }
         /// <summary>
-        /// Test the property 'Pojo'
-        /// </summary>
-        [Test]
-        public void PojoTest()
-        {
-            // TODO: unit test for the property 'Pojo'
-        }
-        /// <summary>
         /// Test the property 'IntegralNumber'
         /// </summary>
         [Test]
         public void IntegralNumberTest()
         {
             // TODO: unit test for the property 'IntegralNumber'
-        }
-        /// <summary>
-        /// Test the property 'FloatingPointNumber'
-        /// </summary>
-        [Test]
-        public void FloatingPointNumberTest()
-        {
-            // TODO: unit test for the property 'FloatingPointNumber'
         }
         /// <summary>
         /// Test the property '_Short'
@@ -195,12 +195,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Textual'
         }
         /// <summary>
-        /// Test the property 'Binary'
+        /// Test the property 'FloatingPointNumber'
         /// </summary>
         [Test]
-        public void BinaryTest()
+        public void FloatingPointNumberTest()
         {
-            // TODO: unit test for the property 'Binary'
+            // TODO: unit test for the property 'FloatingPointNumber'
         }
         /// <summary>
         /// Test the property 'Array'

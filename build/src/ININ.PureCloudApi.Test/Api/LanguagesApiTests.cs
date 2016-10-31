@@ -93,6 +93,53 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetTranslations
+        /// </summary>
+        [Test]
+        public void GetTranslationsTest()
+        {
+            // TODO: add unit test for the method 'GetTranslations'
+            var response = instance.GetTranslations();
+            Assert.IsInstanceOf<AvailableTranslations> (response, "response is AvailableTranslations");
+        }
+        
+        /// <summary>
+        /// Test GetTranslationsBuiltin
+        /// </summary>
+        [Test]
+        public void GetTranslationsBuiltinTest()
+        {
+            // TODO: add unit test for the method 'GetTranslationsBuiltin'
+            string language = null; // TODO: replace null with proper value
+            var response = instance.GetTranslationsBuiltin(language);
+            Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+        }
+        
+        /// <summary>
+        /// Test GetTranslationsOrganization
+        /// </summary>
+        [Test]
+        public void GetTranslationsOrganizationTest()
+        {
+            // TODO: add unit test for the method 'GetTranslationsOrganization'
+            string language = null; // TODO: replace null with proper value
+            var response = instance.GetTranslationsOrganization(language);
+            Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+        }
+        
+        /// <summary>
+        /// Test GetTranslationsUsersUserId
+        /// </summary>
+        [Test]
+        public void GetTranslationsUsersUserIdTest()
+        {
+            // TODO: add unit test for the method 'GetTranslationsUsersUserId'
+            string userId = null; // TODO: replace null with proper value
+            var response = instance.GetTranslationsUsersUserId(userId);
+            Assert.IsInstanceOf<Dictionary<string, Object>> (response, "response is Dictionary<string, Object>");
+        }
+        
+        /// <summary>
         /// Test PostLanguages
         /// </summary>
         [Test]

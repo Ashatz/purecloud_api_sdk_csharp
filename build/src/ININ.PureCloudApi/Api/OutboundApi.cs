@@ -1120,10 +1120,10 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Campaign</returns>
         ApiResponse<Campaign> PostCampaignsWithHttpInfo (Campaign body);
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign
+        /// Schedule a Callback for a Dialer Campaign (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated and may have unexpected results. Please use \&quot;/conversations/{conversationId}/participants/{participantId}/callbacks instead.\&quot;
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
@@ -1132,10 +1132,10 @@ namespace ININ.PureCloudApi.Api
         ContactCallbackRequest PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body);
 
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign
+        /// Schedule a Callback for a Dialer Campaign (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated and may have unexpected results. Please use \&quot;/conversations/{conversationId}/participants/{participantId}/callbacks instead.\&quot;
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
@@ -2767,10 +2767,10 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Campaign)</returns>
         System.Threading.Tasks.Task<ApiResponse<Campaign>> PostCampaignsAsyncWithHttpInfo (Campaign body);
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign
+        /// Schedule a Callback for a Dialer Campaign (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated and may have unexpected results. Please use \&quot;/conversations/{conversationId}/participants/{participantId}/callbacks instead.\&quot;
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
@@ -2779,10 +2779,10 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleAsync (string campaignId, ContactCallbackRequest body);
 
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign
+        /// Schedule a Callback for a Dialer Campaign (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated and may have unexpected results. Please use \&quot;/conversations/{conversationId}/participants/{participantId}/callbacks instead.\&quot;
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
@@ -10958,7 +10958,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign 
+        /// Schedule a Callback for a Dialer Campaign (Deprecated) This endpoint is deprecated and may have unexpected results. Please use \&quot;/conversations/{conversationId}/participants/{participantId}/callbacks instead.\&quot;
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
@@ -10971,7 +10971,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign 
+        /// Schedule a Callback for a Dialer Campaign (Deprecated) This endpoint is deprecated and may have unexpected results. Please use \&quot;/conversations/{conversationId}/participants/{participantId}/callbacks instead.\&quot;
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
@@ -11047,7 +11047,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign 
+        /// Schedule a Callback for a Dialer Campaign (Deprecated) This endpoint is deprecated and may have unexpected results. Please use \&quot;/conversations/{conversationId}/participants/{participantId}/callbacks instead.\&quot;
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
@@ -11061,7 +11061,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Schedule a Callback for a Dialer Campaign 
+        /// Schedule a Callback for a Dialer Campaign (Deprecated) This endpoint is deprecated and may have unexpected results. Please use \&quot;/conversations/{conversationId}/participants/{participantId}/callbacks instead.\&quot;
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>

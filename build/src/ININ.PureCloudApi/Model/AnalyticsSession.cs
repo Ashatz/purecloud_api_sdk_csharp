@@ -68,9 +68,9 @@ namespace ININ.PureCloudApi.Model
             Video,
             
             /// <summary>
-            /// Enum Screenshare for "screenShare"
+            /// Enum Screenshare for "screenshare"
             /// </summary>
-            [EnumMember(Value = "screenShare")]
+            [EnumMember(Value = "screenshare")]
             Screenshare
         }
         /// <summary>

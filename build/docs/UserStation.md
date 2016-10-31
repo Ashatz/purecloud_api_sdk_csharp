@@ -8,6 +8,8 @@ title: UserStation
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | A globally unique identifier for this station | [optional] |
+| **Name** | **string** |  | [optional] |
+| **Type** | **string** |  | [optional] |
 | **AssociatedUser** | [**User**](User.html) |  | [optional] |
 | **AssociatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DefaultUser** | [**User**](User.html) |  | [optional] |
