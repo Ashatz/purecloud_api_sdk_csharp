@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets Dimension
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DimensionEnum
         {
             /// <summary>
@@ -46,7 +47,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MetricEnum
         {
             /// <summary>
@@ -120,7 +121,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MediaTypeEnum
         {
             /// <summary>
@@ -152,7 +153,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets NumericRange
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum NumericRangeEnum
         {
             /// <summary>
@@ -202,7 +203,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets Statistic
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatisticEnum
         {
             /// <summary>
@@ -240,7 +241,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum AlertTypesEnum
         {
             /// <summary>

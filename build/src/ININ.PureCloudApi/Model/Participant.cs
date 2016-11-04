@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// This field controls how the UI prompts the agent for a wrapup.
         /// </summary>
         /// <value>This field controls how the UI prompts the agent for a wrapup.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum WrapupPromptEnum
         {
             /// <summary>

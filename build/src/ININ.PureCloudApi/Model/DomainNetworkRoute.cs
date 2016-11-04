@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// The address family for this route.
         /// </summary>
         /// <value>The address family for this route.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum FamilyEnum
         {
             /// <summary>

@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// The share entity type
         /// </summary>
         /// <value>The share entity type</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SharedEntityTypeEnum
         {
             /// <summary>
@@ -41,7 +42,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets MemberType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MemberTypeEnum
         {
             /// <summary>

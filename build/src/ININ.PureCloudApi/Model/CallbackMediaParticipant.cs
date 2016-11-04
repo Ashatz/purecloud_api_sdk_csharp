@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
         /// <value>The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
             /// <summary>
@@ -102,7 +103,7 @@ namespace ININ.PureCloudApi.Model
         /// The participant's direction.  Values can be: 'inbound' or 'outbound'
         /// </summary>
         /// <value>The participant's direction.  Values can be: 'inbound' or 'outbound'</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
             /// <summary>
@@ -129,7 +130,7 @@ namespace ININ.PureCloudApi.Model
         /// The reason the participant was disconnected from the conversation.
         /// </summary>
         /// <value>The reason the participant was disconnected from the conversation.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DisconnectTypeEnum
         {
             /// <summary>

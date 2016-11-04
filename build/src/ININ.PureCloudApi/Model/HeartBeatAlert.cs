@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum AlertTypesEnum
         {
             /// <summary>
@@ -53,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// The type of heartbeat rule that generated the alert
         /// </summary>
         /// <value>The type of heartbeat rule that generated the alert</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum RuleTypeEnum
         {
             /// <summary>

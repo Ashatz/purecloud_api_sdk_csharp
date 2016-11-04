@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets ProviderType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ProviderTypeEnum
         {
             /// <summary>
@@ -52,7 +53,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MediaTypeEnum
         {
             /// <summary>
@@ -84,7 +85,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets FileState
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum FileStateEnum
         {
             /// <summary>

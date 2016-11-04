@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// The connection state of this communication.
         /// </summary>
         /// <value>The connection state of this communication.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
             /// <summary>
@@ -60,7 +61,7 @@ namespace ININ.PureCloudApi.Model
         /// The direction of the email
         /// </summary>
         /// <value>The direction of the email</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
             /// <summary>
@@ -87,7 +88,7 @@ namespace ININ.PureCloudApi.Model
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DisconnectTypeEnum
         {
             /// <summary>

@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// The metric the modification is appied to
         /// </summary>
         /// <value>The metric the modification is appied to</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MetricEnum
         {
             /// <summary>
@@ -60,7 +61,7 @@ namespace ININ.PureCloudApi.Model
         /// The type of modification
         /// </summary>
         /// <value>The type of modification</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ModificationTypeEnum
         {
             /// <summary>

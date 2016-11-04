@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Optional type, can usually be inferred
         /// </summary>
         /// <value>Optional type, can usually be inferred</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
             /// <summary>
@@ -54,7 +55,7 @@ namespace ININ.PureCloudApi.Model
         /// Left hand side for dimension predicates
         /// </summary>
         /// <value>Left hand side for dimension predicates</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DimensionEnum
         {
             /// <summary>
@@ -369,7 +370,7 @@ namespace ININ.PureCloudApi.Model
         /// Left hand side for property predicates
         /// </summary>
         /// <value>Left hand side for property predicates</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum PropertyTypeEnum
         {
             /// <summary>
@@ -420,7 +421,7 @@ namespace ININ.PureCloudApi.Model
         /// Left hand side for metric predicates
         /// </summary>
         /// <value>Left hand side for metric predicates</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MetricEnum
         {
             /// <summary>
@@ -669,7 +670,7 @@ namespace ININ.PureCloudApi.Model
         /// Optional operator, default is matches
         /// </summary>
         /// <value>Optional operator, default is matches</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
             /// <summary>

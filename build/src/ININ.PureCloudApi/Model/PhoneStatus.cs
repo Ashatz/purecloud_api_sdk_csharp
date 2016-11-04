@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// The Operational Status of this phone
         /// </summary>
         /// <value>The Operational Status of this phone</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperationalStatusEnum
         {
             /// <summary>
@@ -54,7 +55,7 @@ namespace ININ.PureCloudApi.Model
         /// The status of the primary or secondary Edges assigned to the phone lines.
         /// </summary>
         /// <value>The status of the primary or secondary Edges assigned to the phone lines.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum EdgesStatusEnum
         {
             /// <summary>
@@ -93,7 +94,7 @@ namespace ININ.PureCloudApi.Model
         /// The phone status's edge assignment type.
         /// </summary>
         /// <value>The phone status's edge assignment type.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum PhoneAssignmentToEdgeTypeEnum
         {
             /// <summary>

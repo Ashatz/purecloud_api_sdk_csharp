@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets State
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
             /// <summary>
@@ -52,7 +53,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets StatusCode
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusCodeEnum
         {
             /// <summary>
@@ -132,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets OnlineStatus
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OnlineStatusEnum
         {
             /// <summary>
@@ -158,7 +159,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets EdgeDeploymentType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum EdgeDeploymentTypeEnum
         {
             /// <summary>

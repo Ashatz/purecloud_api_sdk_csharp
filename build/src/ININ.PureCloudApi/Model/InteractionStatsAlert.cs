@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// The dimension of concern.
         /// </summary>
         /// <value>The dimension of concern.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DimensionEnum
         {
             /// <summary>
@@ -48,7 +49,7 @@ namespace ININ.PureCloudApi.Model
         /// The metric to be assessed.
         /// </summary>
         /// <value>The metric to be assessed.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MetricEnum
         {
             /// <summary>
@@ -123,7 +124,7 @@ namespace ININ.PureCloudApi.Model
         /// The media type.
         /// </summary>
         /// <value>The media type.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MediaTypeEnum
         {
             /// <summary>
@@ -156,7 +157,7 @@ namespace ININ.PureCloudApi.Model
         /// The comparison descriptor used against the metric's value.
         /// </summary>
         /// <value>The comparison descriptor used against the metric's value.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum NumericRangeEnum
         {
             /// <summary>
@@ -207,7 +208,7 @@ namespace ININ.PureCloudApi.Model
         /// The statistic of concern for the metric.
         /// </summary>
         /// <value>The statistic of concern for the metric.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatisticEnum
         {
             /// <summary>
@@ -245,7 +246,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum AlertTypesEnum
         {
             /// <summary>

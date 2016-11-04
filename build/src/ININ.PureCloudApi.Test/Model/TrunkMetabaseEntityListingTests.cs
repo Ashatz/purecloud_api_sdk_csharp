@@ -83,30 +83,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Total'
         }
         /// <summary>
-        /// Test the property 'SelfUri'
-        /// </summary>
-        [Test]
-        public void SelfUriTest()
-        {
-            // TODO: unit test for the property 'SelfUri'
-        }
-        /// <summary>
-        /// Test the property 'FirstUri'
-        /// </summary>
-        [Test]
-        public void FirstUriTest()
-        {
-            // TODO: unit test for the property 'FirstUri'
-        }
-        /// <summary>
-        /// Test the property 'PreviousUri'
-        /// </summary>
-        [Test]
-        public void PreviousUriTest()
-        {
-            // TODO: unit test for the property 'PreviousUri'
-        }
-        /// <summary>
         /// Test the property 'NextUri'
         /// </summary>
         [Test]
@@ -121,6 +97,30 @@ namespace ININ.PureCloudApi.Test
         public void LastUriTest()
         {
             // TODO: unit test for the property 'LastUri'
+        }
+        /// <summary>
+        /// Test the property 'PreviousUri'
+        /// </summary>
+        [Test]
+        public void PreviousUriTest()
+        {
+            // TODO: unit test for the property 'PreviousUri'
+        }
+        /// <summary>
+        /// Test the property 'SelfUri'
+        /// </summary>
+        [Test]
+        public void SelfUriTest()
+        {
+            // TODO: unit test for the property 'SelfUri'
+        }
+        /// <summary>
+        /// Test the property 'FirstUri'
+        /// </summary>
+        [Test]
+        public void FirstUriTest()
+        {
+            // TODO: unit test for the property 'FirstUri'
         }
         /// <summary>
         /// Test the property 'PageCount'

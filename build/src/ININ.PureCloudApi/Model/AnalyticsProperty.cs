@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match
         /// </summary>
         /// <value>Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum PropertyTypeEnum
         {
             /// <summary>

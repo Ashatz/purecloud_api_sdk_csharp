@@ -115,20 +115,20 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'RoleNeedsUpdate'
         }
         /// <summary>
-        /// Test the property '_Base'
-        /// </summary>
-        [Test]
-        public void _BaseTest()
-        {
-            // TODO: unit test for the property '_Base'
-        }
-        /// <summary>
         /// Test the property '_Default'
         /// </summary>
         [Test]
         public void _DefaultTest()
         {
             // TODO: unit test for the property '_Default'
+        }
+        /// <summary>
+        /// Test the property '_Base'
+        /// </summary>
+        [Test]
+        public void _BaseTest()
+        {
+            // TODO: unit test for the property '_Base'
         }
         /// <summary>
         /// Test the property 'SelfUri'

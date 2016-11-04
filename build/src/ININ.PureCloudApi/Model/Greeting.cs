@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Greeting type
         /// </summary>
         /// <value>Greeting type</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
             /// <summary>
@@ -54,7 +55,7 @@ namespace ININ.PureCloudApi.Model
         /// Greeting owner type
         /// </summary>
         /// <value>Greeting owner type</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OwnerTypeEnum
         {
             /// <summary>

@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
         /// <value>Represents the current file state for a recording. Examples: Uploading, Archived, etc</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum FileStateEnum
         {
             /// <summary>
@@ -72,7 +73,7 @@ namespace ININ.PureCloudApi.Model
         /// The type of archive medium used. Example: CloudArchive
         /// </summary>
         /// <value>The type of archive medium used. Example: CloudArchive</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ArchiveMediumEnum
         {
             /// <summary>

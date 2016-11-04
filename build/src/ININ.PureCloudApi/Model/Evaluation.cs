@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
             /// <summary>
@@ -53,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.
         /// </summary>
         /// <value>The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ResourceTypeEnum
         {
             /// <summary>

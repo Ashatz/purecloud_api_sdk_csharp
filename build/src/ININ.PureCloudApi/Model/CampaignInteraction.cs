@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Describes what happened with call analysis for instance: disposition.classification.callable.person, disposition.classification.callable.noanswer
         /// </summary>
         /// <value>Describes what happened with call analysis for instance: disposition.classification.callable.person, disposition.classification.callable.noanswer</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DispositionEnum
         {
             /// <summary>

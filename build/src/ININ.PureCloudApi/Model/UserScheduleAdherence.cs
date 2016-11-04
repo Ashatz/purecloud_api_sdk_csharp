@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Activity for which the user is scheduled
         /// </summary>
         /// <value>Activity for which the user is scheduled</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ScheduledActivityCategoryEnum
         {
             /// <summary>
@@ -90,7 +91,7 @@ namespace ININ.PureCloudApi.Model
         /// Actual underlying system presence value
         /// </summary>
         /// <value>Actual underlying system presence value</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SystemPresenceEnum
         {
             /// <summary>
@@ -171,7 +172,7 @@ namespace ININ.PureCloudApi.Model
         /// Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue
         /// </summary>
         /// <value>Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum RoutingStatusEnum
         {
             /// <summary>
@@ -216,7 +217,7 @@ namespace ININ.PureCloudApi.Model
         /// Activity in which the user is actually engaged
         /// </summary>
         /// <value>Activity in which the user is actually engaged</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ActualActivityCategoryEnum
         {
             /// <summary>
@@ -285,7 +286,7 @@ namespace ININ.PureCloudApi.Model
         /// The user's current adherence state
         /// </summary>
         /// <value>The user's current adherence state</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum AdherenceStateEnum
         {
             /// <summary>
@@ -324,7 +325,7 @@ namespace ININ.PureCloudApi.Model
         /// The impact of the user's current adherenceState
         /// </summary>
         /// <value>The impact of the user's current adherenceState</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ImpactEnum
         {
             /// <summary>

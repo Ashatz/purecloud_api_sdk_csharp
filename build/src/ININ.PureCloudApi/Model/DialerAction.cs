@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Type of the action
         /// </summary>
         /// <value>Type of the action</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
             /// <summary>
@@ -48,7 +49,7 @@ namespace ININ.PureCloudApi.Model
         /// Identifier of the action
         /// </summary>
         /// <value>Identifier of the action</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ActionTypeNameEnum
         {
             /// <summary>
@@ -93,7 +94,7 @@ namespace ININ.PureCloudApi.Model
         /// Indicator of the type of update action (applicable only to certain types of actions)
         /// </summary>
         /// <value>Indicator of the type of update action (applicable only to certain types of actions)</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum UpdateOptionEnum
         {
             /// <summary>
