@@ -59,11 +59,17 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
+        /// The notification id of creation completion
+        /// </summary>
+        /// <value>The notification id of creation completion</value>
+        [DataMember(Name="notificationId", EmitDefaultValue=false)]
+        public string NotificationId { get; private set; }
+        /// <summary>
         /// The id of the forecast
         /// </summary>
         /// <value>The id of the forecast</value>
-        [DataMember(Name="forecastId", EmitDefaultValue=false)]
-        public string ForecastId { get; private set; }
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,7 +78,8 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ForecastCreationCompletion {\n");
-            sb.Append("  ForecastId: ").Append(ForecastId).Append("\n");
+            sb.Append("  NotificationId: ").Append(NotificationId).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -111,9 +118,14 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.ForecastId == other.ForecastId ||
-                    this.ForecastId != null &&
-                    this.ForecastId.Equals(other.ForecastId)
+                    this.NotificationId == other.NotificationId ||
+                    this.NotificationId != null &&
+                    this.NotificationId.Equals(other.NotificationId)
+                ) &&
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) &&
                 (
                     this.Status == other.Status ||
@@ -133,8 +145,10 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.ForecastId != null)
-                    hash = hash * 59 + this.ForecastId.GetHashCode();
+                if (this.NotificationId != null)
+                    hash = hash * 59 + this.NotificationId.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
                 return hash;

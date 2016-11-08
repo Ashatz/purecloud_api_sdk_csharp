@@ -73,6 +73,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
         /// <param name="Title">Title.</param>
         /// <param name="Username">Username.</param>
+        /// <param name="Manager">Manager.</param>
         /// <param name="Images">Images.</param>
         /// <param name="Version">Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH. (required).</param>
         /// <param name="RoutingStatus">ACD routing status.</param>
@@ -93,7 +94,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Superiors">The first 50 superiors of this user..</param>
         /// <param name="DirectReports">The first 50 direct reports to this user..</param>
         /// <param name="Adjacents">The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands..</param>
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<Location> Locations = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null)
+        /// <param name="RoutingSkills">The first 50 routing skills for user&#39;s organizations.</param>
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<Location> Locations = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -112,6 +114,7 @@ namespace ININ.PureCloudApi.Model
             this.Addresses = Addresses;
             this.Title = Title;
             this.Username = Username;
+            this.Manager = Manager;
             this.Images = Images;
             this.RoutingStatus = RoutingStatus;
             this.Presence = Presence;
@@ -131,6 +134,7 @@ namespace ININ.PureCloudApi.Model
             this.Superiors = Superiors;
             this.DirectReports = DirectReports;
             this.Adjacents = Adjacents;
+            this.RoutingSkills = RoutingSkills;
         }
         
         /// <summary>
@@ -181,6 +185,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
+        /// <summary>
+        /// Gets or Sets Manager
+        /// </summary>
+        [DataMember(Name="manager", EmitDefaultValue=false)]
+        public User Manager { get; set; }
         /// <summary>
         /// Gets or Sets Images
         /// </summary>
@@ -301,6 +310,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="adjacents", EmitDefaultValue=false)]
         public Adjacents Adjacents { get; set; }
         /// <summary>
+        /// The first 50 routing skills for user&#39;s organizations
+        /// </summary>
+        /// <value>The first 50 routing skills for user&#39;s organizations</value>
+        [DataMember(Name="routingSkills", EmitDefaultValue=false)]
+        public List<RoutingSkill> RoutingSkills { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -324,6 +339,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  Manager: ").Append(Manager).Append("\n");
             sb.Append("  Images: ").Append(Images).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
@@ -344,6 +360,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Superiors: ").Append(Superiors).Append("\n");
             sb.Append("  DirectReports: ").Append(DirectReports).Append("\n");
             sb.Append("  Adjacents: ").Append(Adjacents).Append("\n");
+            sb.Append("  RoutingSkills: ").Append(RoutingSkills).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -430,6 +447,11 @@ namespace ININ.PureCloudApi.Model
                     this.Username == other.Username ||
                     this.Username != null &&
                     this.Username.Equals(other.Username)
+                ) &&
+                (
+                    this.Manager == other.Manager ||
+                    this.Manager != null &&
+                    this.Manager.Equals(other.Manager)
                 ) &&
                 (
                     this.Images == other.Images ||
@@ -532,6 +554,11 @@ namespace ININ.PureCloudApi.Model
                     this.Adjacents.Equals(other.Adjacents)
                 ) &&
                 (
+                    this.RoutingSkills == other.RoutingSkills ||
+                    this.RoutingSkills != null &&
+                    this.RoutingSkills.SequenceEqual(other.RoutingSkills)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -569,6 +596,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Title.GetHashCode();
                 if (this.Username != null)
                     hash = hash * 59 + this.Username.GetHashCode();
+                if (this.Manager != null)
+                    hash = hash * 59 + this.Manager.GetHashCode();
                 if (this.Images != null)
                     hash = hash * 59 + this.Images.GetHashCode();
                 if (this.Version != null)
@@ -609,6 +638,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DirectReports.GetHashCode();
                 if (this.Adjacents != null)
                     hash = hash * 59 + this.Adjacents.GetHashCode();
+                if (this.RoutingSkills != null)
+                    hash = hash * 59 + this.RoutingSkills.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

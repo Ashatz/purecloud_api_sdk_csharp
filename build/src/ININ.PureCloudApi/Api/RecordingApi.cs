@@ -205,6 +205,46 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Annotation</returns>
         ApiResponse<Annotation> GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId);
         /// <summary>
+        /// gets a list local key settings data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>LocalEncryptionConfigurationListing</returns>
+        LocalEncryptionConfigurationListing GetLocalkeysSettings ();
+
+        /// <summary>
+        /// gets a list local key settings data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of LocalEncryptionConfigurationListing</returns>
+        ApiResponse<LocalEncryptionConfigurationListing> GetLocalkeysSettingsWithHttpInfo ();
+        /// <summary>
+        /// Get the local encryption settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <returns>LocalEncryptionConfiguration</returns>
+        LocalEncryptionConfiguration GetLocalkeysSettingsSettingsId (string settingsId);
+
+        /// <summary>
+        /// Get the local encryption settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
+        ApiResponse<LocalEncryptionConfiguration> GetLocalkeysSettingsSettingsIdWithHttpInfo (string settingsId);
+        /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
         /// </summary>
         /// <remarks>
@@ -316,6 +356,48 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
         ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        /// <summary>
+        /// Get encryption key list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>EncryptionKeyEntityListing</returns>
+        EncryptionKeyEntityListing GetRecordingkeys (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get encryption key list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of EncryptionKeyEntityListing</returns>
+        ApiResponse<EncryptionKeyEntityListing> GetRecordingkeysWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get key rotation schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>KeyRotationSchedule</returns>
+        KeyRotationSchedule GetRecordingkeysRotationschedule ();
+
+        /// <summary>
+        /// Get key rotation schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        ApiResponse<KeyRotationSchedule> GetRecordingkeysRotationscheduleWithHttpInfo ();
         /// <summary>
         /// Get the Recording Settings for the Organization
         /// </summary>
@@ -432,6 +514,48 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Annotation</returns>
         ApiResponse<Annotation> PostConversationIdRecordingsRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body);
         /// <summary>
+        /// create a local recording key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption body</param>
+        /// <returns>EncryptionKey</returns>
+        EncryptionKey PostLocalkeys (LocalEncryptionKeyRequest body);
+
+        /// <summary>
+        /// create a local recording key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption body</param>
+        /// <returns>ApiResponse of EncryptionKey</returns>
+        ApiResponse<EncryptionKey> PostLocalkeysWithHttpInfo (LocalEncryptionKeyRequest body);
+        /// <summary>
+        /// create settings for local key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption Configuration</param>
+        /// <returns>LocalEncryptionConfiguration</returns>
+        LocalEncryptionConfiguration PostLocalkeysSettings (LocalEncryptionConfiguration body);
+
+        /// <summary>
+        /// create settings for local key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption Configuration</param>
+        /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
+        ApiResponse<LocalEncryptionConfiguration> PostLocalkeysSettingsWithHttpInfo (LocalEncryptionConfiguration body);
+        /// <summary>
         /// Create media retention policy
         /// </summary>
         /// <remarks>
@@ -452,6 +576,25 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
         ApiResponse<Policy> PostMediaretentionpoliciesWithHttpInfo (PolicyCreate body);
+        /// <summary>
+        /// Create encryption key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>EncryptionKey</returns>
+        EncryptionKey PostRecordingkeys ();
+
+        /// <summary>
+        /// Create encryption key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of EncryptionKey</returns>
+        ApiResponse<EncryptionKey> PostRecordingkeysWithHttpInfo ();
         /// <summary>
         /// Updates the retention records on a recording.
         /// </summary>
@@ -505,6 +648,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Annotation</returns>
         ApiResponse<Annotation> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
         /// <summary>
+        /// Update the local encryption settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <param name="body">Local Encryption metadata</param>
+        /// <returns>LocalEncryptionConfiguration</returns>
+        LocalEncryptionConfiguration PutLocalkeysSettingsSettingsId (string settingsId, LocalEncryptionConfiguration body);
+
+        /// <summary>
+        /// Update the local encryption settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <param name="body">Local Encryption metadata</param>
+        /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
+        ApiResponse<LocalEncryptionConfiguration> PutLocalkeysSettingsSettingsIdWithHttpInfo (string settingsId, LocalEncryptionConfiguration body);
+        /// <summary>
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
@@ -527,6 +693,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
         ApiResponse<Policy> PutMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body);
+        /// <summary>
+        /// Update key rotation schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">KeyRotationSchedule</param>
+        /// <returns>KeyRotationSchedule</returns>
+        KeyRotationSchedule PutRecordingkeysRotationschedule (KeyRotationSchedule body);
+
+        /// <summary>
+        /// Update key rotation schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">KeyRotationSchedule</param>
+        /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        ApiResponse<KeyRotationSchedule> PutRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body);
         /// <summary>
         /// Update the Recording Settings for the Organization
         /// </summary>
@@ -741,6 +928,46 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Annotation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
         /// <summary>
+        /// gets a list local key settings data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of LocalEncryptionConfigurationListing</returns>
+        System.Threading.Tasks.Task<LocalEncryptionConfigurationListing> GetLocalkeysSettingsAsync ();
+
+        /// <summary>
+        /// gets a list local key settings data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (LocalEncryptionConfigurationListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfigurationListing>> GetLocalkeysSettingsAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get the local encryption settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <returns>Task of LocalEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<LocalEncryptionConfiguration> GetLocalkeysSettingsSettingsIdAsync (string settingsId);
+
+        /// <summary>
+        /// Get the local encryption settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> GetLocalkeysSettingsSettingsIdAsyncWithHttpInfo (string settingsId);
+        /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
         /// </summary>
         /// <remarks>
@@ -852,6 +1079,48 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        /// <summary>
+        /// Get encryption key list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of EncryptionKeyEntityListing</returns>
+        System.Threading.Tasks.Task<EncryptionKeyEntityListing> GetRecordingkeysAsync (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get encryption key list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (EncryptionKeyEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EncryptionKeyEntityListing>> GetRecordingkeysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get key rotation schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of KeyRotationSchedule</returns>
+        System.Threading.Tasks.Task<KeyRotationSchedule> GetRecordingkeysRotationscheduleAsync ();
+
+        /// <summary>
+        /// Get key rotation schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> GetRecordingkeysRotationscheduleAsyncWithHttpInfo ();
         /// <summary>
         /// Get the Recording Settings for the Organization
         /// </summary>
@@ -968,6 +1237,48 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Annotation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationIdRecordingsRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body);
         /// <summary>
+        /// create a local recording key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption body</param>
+        /// <returns>Task of EncryptionKey</returns>
+        System.Threading.Tasks.Task<EncryptionKey> PostLocalkeysAsync (LocalEncryptionKeyRequest body);
+
+        /// <summary>
+        /// create a local recording key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption body</param>
+        /// <returns>Task of ApiResponse (EncryptionKey)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostLocalkeysAsyncWithHttpInfo (LocalEncryptionKeyRequest body);
+        /// <summary>
+        /// create settings for local key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption Configuration</param>
+        /// <returns>Task of LocalEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<LocalEncryptionConfiguration> PostLocalkeysSettingsAsync (LocalEncryptionConfiguration body);
+
+        /// <summary>
+        /// create settings for local key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption Configuration</param>
+        /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> PostLocalkeysSettingsAsyncWithHttpInfo (LocalEncryptionConfiguration body);
+        /// <summary>
         /// Create media retention policy
         /// </summary>
         /// <remarks>
@@ -988,6 +1299,25 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
         System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (PolicyCreate body);
+        /// <summary>
+        /// Create encryption key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of EncryptionKey</returns>
+        System.Threading.Tasks.Task<EncryptionKey> PostRecordingkeysAsync ();
+
+        /// <summary>
+        /// Create encryption key
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (EncryptionKey)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingkeysAsyncWithHttpInfo ();
         /// <summary>
         /// Updates the retention records on a recording.
         /// </summary>
@@ -1041,6 +1371,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Annotation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
         /// <summary>
+        /// Update the local encryption settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <param name="body">Local Encryption metadata</param>
+        /// <returns>Task of LocalEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<LocalEncryptionConfiguration> PutLocalkeysSettingsSettingsIdAsync (string settingsId, LocalEncryptionConfiguration body);
+
+        /// <summary>
+        /// Update the local encryption settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <param name="body">Local Encryption metadata</param>
+        /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> PutLocalkeysSettingsSettingsIdAsyncWithHttpInfo (string settingsId, LocalEncryptionConfiguration body);
+        /// <summary>
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
@@ -1063,6 +1416,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
         System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body);
+        /// <summary>
+        /// Update key rotation schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">KeyRotationSchedule</param>
+        /// <returns>Task of KeyRotationSchedule</returns>
+        System.Threading.Tasks.Task<KeyRotationSchedule> PutRecordingkeysRotationscheduleAsync (KeyRotationSchedule body);
+
+        /// <summary>
+        /// Update key rotation schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">KeyRotationSchedule</param>
+        /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body);
         /// <summary>
         /// Update the Recording Settings for the Organization
         /// </summary>
@@ -2497,6 +2871,300 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// gets a list local key settings data 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>LocalEncryptionConfigurationListing</returns>
+        public LocalEncryptionConfigurationListing GetLocalkeysSettings ()
+        {
+             ApiResponse<LocalEncryptionConfigurationListing> localVarResponse = GetLocalkeysSettingsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// gets a list local key settings data 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of LocalEncryptionConfigurationListing</returns>
+        public ApiResponse< LocalEncryptionConfigurationListing > GetLocalkeysSettingsWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/recording/localkeys/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocalkeysSettings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocalkeysSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LocalEncryptionConfigurationListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LocalEncryptionConfigurationListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocalEncryptionConfigurationListing)));
+            
+        }
+
+        /// <summary>
+        /// gets a list local key settings data 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of LocalEncryptionConfigurationListing</returns>
+        public async System.Threading.Tasks.Task<LocalEncryptionConfigurationListing> GetLocalkeysSettingsAsync ()
+        {
+             ApiResponse<LocalEncryptionConfigurationListing> localVarResponse = await GetLocalkeysSettingsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// gets a list local key settings data 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (LocalEncryptionConfigurationListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfigurationListing>> GetLocalkeysSettingsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/recording/localkeys/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocalkeysSettings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocalkeysSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LocalEncryptionConfigurationListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LocalEncryptionConfigurationListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocalEncryptionConfigurationListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the local encryption settings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <returns>LocalEncryptionConfiguration</returns>
+        public LocalEncryptionConfiguration GetLocalkeysSettingsSettingsId (string settingsId)
+        {
+             ApiResponse<LocalEncryptionConfiguration> localVarResponse = GetLocalkeysSettingsSettingsIdWithHttpInfo(settingsId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the local encryption settings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
+        public ApiResponse< LocalEncryptionConfiguration > GetLocalkeysSettingsSettingsIdWithHttpInfo (string settingsId)
+        {
+            // verify the required parameter 'settingsId' is set
+            if (settingsId == null)
+                throw new ApiException(400, "Missing required parameter 'settingsId' when calling RecordingApi->GetLocalkeysSettingsSettingsId");
+
+            var localVarPath = "/api/v2/recording/localkeys/settings/{settingsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (settingsId != null) localVarPathParams.Add("settingsId", Configuration.ApiClient.ParameterToString(settingsId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocalkeysSettingsSettingsId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocalkeysSettingsSettingsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LocalEncryptionConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LocalEncryptionConfiguration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocalEncryptionConfiguration)));
+            
+        }
+
+        /// <summary>
+        /// Get the local encryption settings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <returns>Task of LocalEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<LocalEncryptionConfiguration> GetLocalkeysSettingsSettingsIdAsync (string settingsId)
+        {
+             ApiResponse<LocalEncryptionConfiguration> localVarResponse = await GetLocalkeysSettingsSettingsIdAsyncWithHttpInfo(settingsId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the local encryption settings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> GetLocalkeysSettingsSettingsIdAsyncWithHttpInfo (string settingsId)
+        {
+            // verify the required parameter 'settingsId' is set
+            if (settingsId == null)
+                throw new ApiException(400, "Missing required parameter 'settingsId' when calling RecordingApi->GetLocalkeysSettingsSettingsId");
+
+            var localVarPath = "/api/v2/recording/localkeys/settings/{settingsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (settingsId != null) localVarPathParams.Add("settingsId", Configuration.ApiClient.ParameterToString(settingsId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocalkeysSettingsSettingsId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLocalkeysSettingsSettingsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LocalEncryptionConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LocalEncryptionConfiguration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocalEncryptionConfiguration)));
+            
+        }
+
+        /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary&#x3D;true to this endpoint
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3177,6 +3845,300 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<OrphanRecordingListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (OrphanRecordingListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrphanRecordingListing)));
+            
+        }
+
+        /// <summary>
+        /// Get encryption key list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>EncryptionKeyEntityListing</returns>
+        public EncryptionKeyEntityListing GetRecordingkeys (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<EncryptionKeyEntityListing> localVarResponse = GetRecordingkeysWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get encryption key list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of EncryptionKeyEntityListing</returns>
+        public ApiResponse< EncryptionKeyEntityListing > GetRecordingkeysWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeys: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EncryptionKeyEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EncryptionKeyEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKeyEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get encryption key list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of EncryptionKeyEntityListing</returns>
+        public async System.Threading.Tasks.Task<EncryptionKeyEntityListing> GetRecordingkeysAsync (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<EncryptionKeyEntityListing> localVarResponse = await GetRecordingkeysAsyncWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get encryption key list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (EncryptionKeyEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EncryptionKeyEntityListing>> GetRecordingkeysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeys: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EncryptionKeyEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EncryptionKeyEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKeyEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>KeyRotationSchedule</returns>
+        public KeyRotationSchedule GetRecordingkeysRotationschedule ()
+        {
+             ApiResponse<KeyRotationSchedule> localVarResponse = GetRecordingkeysRotationscheduleWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        public ApiResponse< KeyRotationSchedule > GetRecordingkeysRotationscheduleWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeysRotationschedule: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeysRotationschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyRotationSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeyRotationSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyRotationSchedule)));
+            
+        }
+
+        /// <summary>
+        /// Get key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of KeyRotationSchedule</returns>
+        public async System.Threading.Tasks.Task<KeyRotationSchedule> GetRecordingkeysRotationscheduleAsync ()
+        {
+             ApiResponse<KeyRotationSchedule> localVarResponse = await GetRecordingkeysRotationscheduleAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> GetRecordingkeysRotationscheduleAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeysRotationschedule: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingkeysRotationschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyRotationSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeyRotationSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyRotationSchedule)));
             
         }
 
@@ -4022,6 +4984,340 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// create a local recording key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption body</param>
+        /// <returns>EncryptionKey</returns>
+        public EncryptionKey PostLocalkeys (LocalEncryptionKeyRequest body)
+        {
+             ApiResponse<EncryptionKey> localVarResponse = PostLocalkeysWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// create a local recording key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption body</param>
+        /// <returns>ApiResponse of EncryptionKey</returns>
+        public ApiResponse< EncryptionKey > PostLocalkeysWithHttpInfo (LocalEncryptionKeyRequest body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostLocalkeys");
+
+            var localVarPath = "/api/v2/recording/localkeys";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLocalkeys: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLocalkeys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EncryptionKey>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EncryptionKey) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKey)));
+            
+        }
+
+        /// <summary>
+        /// create a local recording key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption body</param>
+        /// <returns>Task of EncryptionKey</returns>
+        public async System.Threading.Tasks.Task<EncryptionKey> PostLocalkeysAsync (LocalEncryptionKeyRequest body)
+        {
+             ApiResponse<EncryptionKey> localVarResponse = await PostLocalkeysAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// create a local recording key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption body</param>
+        /// <returns>Task of ApiResponse (EncryptionKey)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostLocalkeysAsyncWithHttpInfo (LocalEncryptionKeyRequest body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostLocalkeys");
+
+            var localVarPath = "/api/v2/recording/localkeys";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLocalkeys: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLocalkeys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EncryptionKey>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EncryptionKey) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKey)));
+            
+        }
+
+        /// <summary>
+        /// create settings for local key creation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption Configuration</param>
+        /// <returns>LocalEncryptionConfiguration</returns>
+        public LocalEncryptionConfiguration PostLocalkeysSettings (LocalEncryptionConfiguration body)
+        {
+             ApiResponse<LocalEncryptionConfiguration> localVarResponse = PostLocalkeysSettingsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// create settings for local key creation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption Configuration</param>
+        /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
+        public ApiResponse< LocalEncryptionConfiguration > PostLocalkeysSettingsWithHttpInfo (LocalEncryptionConfiguration body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostLocalkeysSettings");
+
+            var localVarPath = "/api/v2/recording/localkeys/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLocalkeysSettings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLocalkeysSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LocalEncryptionConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LocalEncryptionConfiguration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocalEncryptionConfiguration)));
+            
+        }
+
+        /// <summary>
+        /// create settings for local key creation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption Configuration</param>
+        /// <returns>Task of LocalEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<LocalEncryptionConfiguration> PostLocalkeysSettingsAsync (LocalEncryptionConfiguration body)
+        {
+             ApiResponse<LocalEncryptionConfiguration> localVarResponse = await PostLocalkeysSettingsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// create settings for local key creation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Local Encryption Configuration</param>
+        /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> PostLocalkeysSettingsAsyncWithHttpInfo (LocalEncryptionConfiguration body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostLocalkeysSettings");
+
+            var localVarPath = "/api/v2/recording/localkeys/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLocalkeysSettings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLocalkeysSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LocalEncryptionConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LocalEncryptionConfiguration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocalEncryptionConfiguration)));
+            
+        }
+
+        /// <summary>
         /// Create media retention policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4185,6 +5481,147 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Policy>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Policy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Policy)));
+            
+        }
+
+        /// <summary>
+        /// Create encryption key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>EncryptionKey</returns>
+        public EncryptionKey PostRecordingkeys ()
+        {
+             ApiResponse<EncryptionKey> localVarResponse = PostRecordingkeysWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create encryption key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of EncryptionKey</returns>
+        public ApiResponse< EncryptionKey > PostRecordingkeysWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingkeys: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingkeys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EncryptionKey>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EncryptionKey) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKey)));
+            
+        }
+
+        /// <summary>
+        /// Create encryption key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of EncryptionKey</returns>
+        public async System.Threading.Tasks.Task<EncryptionKey> PostRecordingkeysAsync ()
+        {
+             ApiResponse<EncryptionKey> localVarResponse = await PostRecordingkeysAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create encryption key 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (EncryptionKey)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingkeysAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/recording/recordingkeys";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingkeys: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingkeys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EncryptionKey>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EncryptionKey) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKey)));
             
         }
 
@@ -4581,6 +6018,185 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Update the local encryption settings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <param name="body">Local Encryption metadata</param>
+        /// <returns>LocalEncryptionConfiguration</returns>
+        public LocalEncryptionConfiguration PutLocalkeysSettingsSettingsId (string settingsId, LocalEncryptionConfiguration body)
+        {
+             ApiResponse<LocalEncryptionConfiguration> localVarResponse = PutLocalkeysSettingsSettingsIdWithHttpInfo(settingsId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the local encryption settings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <param name="body">Local Encryption metadata</param>
+        /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
+        public ApiResponse< LocalEncryptionConfiguration > PutLocalkeysSettingsSettingsIdWithHttpInfo (string settingsId, LocalEncryptionConfiguration body)
+        {
+            // verify the required parameter 'settingsId' is set
+            if (settingsId == null)
+                throw new ApiException(400, "Missing required parameter 'settingsId' when calling RecordingApi->PutLocalkeysSettingsSettingsId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutLocalkeysSettingsSettingsId");
+
+            var localVarPath = "/api/v2/recording/localkeys/settings/{settingsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (settingsId != null) localVarPathParams.Add("settingsId", Configuration.ApiClient.ParameterToString(settingsId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutLocalkeysSettingsSettingsId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutLocalkeysSettingsSettingsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LocalEncryptionConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LocalEncryptionConfiguration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocalEncryptionConfiguration)));
+            
+        }
+
+        /// <summary>
+        /// Update the local encryption settings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <param name="body">Local Encryption metadata</param>
+        /// <returns>Task of LocalEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<LocalEncryptionConfiguration> PutLocalkeysSettingsSettingsIdAsync (string settingsId, LocalEncryptionConfiguration body)
+        {
+             ApiResponse<LocalEncryptionConfiguration> localVarResponse = await PutLocalkeysSettingsSettingsIdAsyncWithHttpInfo(settingsId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the local encryption settings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="settingsId">Settings Id</param>
+        /// <param name="body">Local Encryption metadata</param>
+        /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> PutLocalkeysSettingsSettingsIdAsyncWithHttpInfo (string settingsId, LocalEncryptionConfiguration body)
+        {
+            // verify the required parameter 'settingsId' is set
+            if (settingsId == null)
+                throw new ApiException(400, "Missing required parameter 'settingsId' when calling RecordingApi->PutLocalkeysSettingsSettingsId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutLocalkeysSettingsSettingsId");
+
+            var localVarPath = "/api/v2/recording/localkeys/settings/{settingsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (settingsId != null) localVarPathParams.Add("settingsId", Configuration.ApiClient.ParameterToString(settingsId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutLocalkeysSettingsSettingsId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutLocalkeysSettingsSettingsId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LocalEncryptionConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LocalEncryptionConfiguration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocalEncryptionConfiguration)));
+            
+        }
+
+        /// <summary>
         /// Update a media retention policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4756,6 +6372,173 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Policy>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Policy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Policy)));
+            
+        }
+
+        /// <summary>
+        /// Update key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">KeyRotationSchedule</param>
+        /// <returns>KeyRotationSchedule</returns>
+        public KeyRotationSchedule PutRecordingkeysRotationschedule (KeyRotationSchedule body)
+        {
+             ApiResponse<KeyRotationSchedule> localVarResponse = PutRecordingkeysRotationscheduleWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">KeyRotationSchedule</param>
+        /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        public ApiResponse< KeyRotationSchedule > PutRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingkeysRotationschedule");
+
+            var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingkeysRotationschedule: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingkeysRotationschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyRotationSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeyRotationSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyRotationSchedule)));
+            
+        }
+
+        /// <summary>
+        /// Update key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">KeyRotationSchedule</param>
+        /// <returns>Task of KeyRotationSchedule</returns>
+        public async System.Threading.Tasks.Task<KeyRotationSchedule> PutRecordingkeysRotationscheduleAsync (KeyRotationSchedule body)
+        {
+             ApiResponse<KeyRotationSchedule> localVarResponse = await PutRecordingkeysRotationscheduleAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update key rotation schedule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">KeyRotationSchedule</param>
+        /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingkeysRotationschedule");
+
+            var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingkeysRotationschedule: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRecordingkeysRotationschedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyRotationSchedule>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (KeyRotationSchedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyRotationSchedule)));
             
         }
 

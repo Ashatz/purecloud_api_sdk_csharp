@@ -12,6 +12,7 @@ title: ForecastCreation
 | **Description** | **string** | The description of the forecast to be created | |
 | **Metrics** | **List&lt;string&gt;** | The metrics the forecast is for | |
 | **ManagementUnitId** | **string** | The id of the management unit to which the new forecast belongs | [optional] |
+| **CopiedForecastId** | **string** | The id of forecast the new forecast will copy from | [optional] |
 {: class="table table-striped"}
 
 

@@ -13,35 +13,35 @@ using ININ.PureCloudApi.Client;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// ForecastMetadataEntityListing
+    /// LocalEncryptionConfigurationListing
     /// </summary>
     [DataContract]
-    public partial class ForecastMetadataEntityListing :  IEquatable<ForecastMetadataEntityListing>
+    public partial class LocalEncryptionConfigurationListing :  IEquatable<LocalEncryptionConfigurationListing>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ForecastMetadataEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="LocalEncryptionConfigurationListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
         /// <param name="PageNumber">PageNumber.</param>
         /// <param name="Total">Total.</param>
-        /// <param name="NextUri">NextUri.</param>
-        /// <param name="LastUri">LastUri.</param>
-        /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="FirstUri">FirstUri.</param>
+        /// <param name="PreviousUri">PreviousUri.</param>
+        /// <param name="LastUri">LastUri.</param>
+        /// <param name="NextUri">NextUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public ForecastMetadataEntityListing(List<ForecastMetadata> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string NextUri = null, string LastUri = null, string PreviousUri = null, string SelfUri = null, string FirstUri = null, int? PageCount = null)
+        public LocalEncryptionConfigurationListing(List<LocalEncryptionConfiguration> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string LastUri = null, string NextUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.Total = Total;
-            this.NextUri = NextUri;
-            this.LastUri = LastUri;
-            this.PreviousUri = PreviousUri;
             this.SelfUri = SelfUri;
             this.FirstUri = FirstUri;
+            this.PreviousUri = PreviousUri;
+            this.LastUri = LastUri;
+            this.NextUri = NextUri;
             this.PageCount = PageCount;
         }
         
@@ -49,7 +49,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<ForecastMetadata> Entities { get; set; }
+        public List<LocalEncryptionConfiguration> Entities { get; set; }
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
@@ -66,21 +66,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
         /// <summary>
-        /// Gets or Sets NextUri
-        /// </summary>
-        [DataMember(Name="nextUri", EmitDefaultValue=false)]
-        public string NextUri { get; set; }
-        /// <summary>
-        /// Gets or Sets LastUri
-        /// </summary>
-        [DataMember(Name="lastUri", EmitDefaultValue=false)]
-        public string LastUri { get; set; }
-        /// <summary>
-        /// Gets or Sets PreviousUri
-        /// </summary>
-        [DataMember(Name="previousUri", EmitDefaultValue=false)]
-        public string PreviousUri { get; set; }
-        /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
@@ -90,6 +75,21 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="firstUri", EmitDefaultValue=false)]
         public string FirstUri { get; set; }
+        /// <summary>
+        /// Gets or Sets PreviousUri
+        /// </summary>
+        [DataMember(Name="previousUri", EmitDefaultValue=false)]
+        public string PreviousUri { get; set; }
+        /// <summary>
+        /// Gets or Sets LastUri
+        /// </summary>
+        [DataMember(Name="lastUri", EmitDefaultValue=false)]
+        public string LastUri { get; set; }
+        /// <summary>
+        /// Gets or Sets NextUri
+        /// </summary>
+        [DataMember(Name="nextUri", EmitDefaultValue=false)]
+        public string NextUri { get; set; }
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
@@ -102,16 +102,16 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ForecastMetadataEntityListing {\n");
+            sb.Append("class LocalEncryptionConfigurationListing {\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
-            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
-            sb.Append("  LastUri: ").Append(LastUri).Append("\n");
-            sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
+            sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
+            sb.Append("  LastUri: ").Append(LastUri).Append("\n");
+            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -134,15 +134,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ForecastMetadataEntityListing);
+            return this.Equals(obj as LocalEncryptionConfigurationListing);
         }
 
         /// <summary>
-        /// Returns true if ForecastMetadataEntityListing instances are equal
+        /// Returns true if LocalEncryptionConfigurationListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of ForecastMetadataEntityListing to be compared</param>
+        /// <param name="other">Instance of LocalEncryptionConfigurationListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ForecastMetadataEntityListing other)
+        public bool Equals(LocalEncryptionConfigurationListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -170,21 +170,6 @@ namespace ININ.PureCloudApi.Model
                     this.Total.Equals(other.Total)
                 ) &&
                 (
-                    this.NextUri == other.NextUri ||
-                    this.NextUri != null &&
-                    this.NextUri.Equals(other.NextUri)
-                ) &&
-                (
-                    this.LastUri == other.LastUri ||
-                    this.LastUri != null &&
-                    this.LastUri.Equals(other.LastUri)
-                ) &&
-                (
-                    this.PreviousUri == other.PreviousUri ||
-                    this.PreviousUri != null &&
-                    this.PreviousUri.Equals(other.PreviousUri)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -193,6 +178,21 @@ namespace ININ.PureCloudApi.Model
                     this.FirstUri == other.FirstUri ||
                     this.FirstUri != null &&
                     this.FirstUri.Equals(other.FirstUri)
+                ) &&
+                (
+                    this.PreviousUri == other.PreviousUri ||
+                    this.PreviousUri != null &&
+                    this.PreviousUri.Equals(other.PreviousUri)
+                ) &&
+                (
+                    this.LastUri == other.LastUri ||
+                    this.LastUri != null &&
+                    this.LastUri.Equals(other.LastUri)
+                ) &&
+                (
+                    this.NextUri == other.NextUri ||
+                    this.NextUri != null &&
+                    this.NextUri.Equals(other.NextUri)
                 ) &&
                 (
                     this.PageCount == other.PageCount ||
@@ -220,16 +220,16 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PageNumber.GetHashCode();
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-                if (this.NextUri != null)
-                    hash = hash * 59 + this.NextUri.GetHashCode();
-                if (this.LastUri != null)
-                    hash = hash * 59 + this.LastUri.GetHashCode();
-                if (this.PreviousUri != null)
-                    hash = hash * 59 + this.PreviousUri.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 if (this.FirstUri != null)
                     hash = hash * 59 + this.FirstUri.GetHashCode();
+                if (this.PreviousUri != null)
+                    hash = hash * 59 + this.PreviousUri.GetHashCode();
+                if (this.LastUri != null)
+                    hash = hash * 59 + this.LastUri.GetHashCode();
+                if (this.NextUri != null)
+                    hash = hash * 59 + this.NextUri.GetHashCode();
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
                 return hash;

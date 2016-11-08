@@ -90,6 +90,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'ManagementUnitId'
         }
+        /// <summary>
+        /// Test the property 'CopiedForecastId'
+        /// </summary>
+        [Test]
+        public void CopiedForecastIdTest()
+        {
+            // TODO: unit test for the property 'CopiedForecastId'
+        }
 
     }
 

@@ -54,10 +54,10 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum CallVolume for "CALL_VOLUME"
+            /// Enum Volume for "VOLUME"
             /// </summary>
-            [EnumMember(Value = "CALL_VOLUME")]
-            CallVolume,
+            [EnumMember(Value = "VOLUME")]
+            Volume,
             
             /// <summary>
             /// Enum Att for "ATT"
@@ -69,13 +69,7 @@ namespace ININ.PureCloudApi.Model
             /// Enum Acw for "ACW"
             /// </summary>
             [EnumMember(Value = "ACW")]
-            Acw,
-            
-            /// <summary>
-            /// Enum ChatVolume for "CHAT_VOLUME"
-            /// </summary>
-            [EnumMember(Value = "CHAT_VOLUME")]
-            ChatVolume
+            Acw
         }
         /// <summary>
         /// The frequency of the period
@@ -96,7 +90,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Description">The description of the forecast to be created (required).</param>
         /// <param name="Metrics">The metrics the forecast is for (required).</param>
         /// <param name="ManagementUnitId">The id of the management unit to which the new forecast belongs.</param>
-        public ForecastCreation(int? NumberOfPeriods = null, PeriodFrequencyEnum? PeriodFrequency = null, string Description = null, List<MetricsEnum> Metrics = null, string ManagementUnitId = null)
+        /// <param name="CopiedForecastId">The id of forecast the new forecast will copy from.</param>
+        public ForecastCreation(int? NumberOfPeriods = null, PeriodFrequencyEnum? PeriodFrequency = null, string Description = null, List<MetricsEnum> Metrics = null, string ManagementUnitId = null, string CopiedForecastId = null)
         {
             // to ensure "NumberOfPeriods" is required (not null)
             if (NumberOfPeriods == null)
@@ -135,6 +130,7 @@ namespace ININ.PureCloudApi.Model
                 this.Metrics = Metrics;
             }
             this.ManagementUnitId = ManagementUnitId;
+            this.CopiedForecastId = CopiedForecastId;
         }
         
         /// <summary>
@@ -162,6 +158,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="managementUnitId", EmitDefaultValue=false)]
         public string ManagementUnitId { get; set; }
         /// <summary>
+        /// The id of forecast the new forecast will copy from
+        /// </summary>
+        /// <value>The id of forecast the new forecast will copy from</value>
+        [DataMember(Name="copiedForecastId", EmitDefaultValue=false)]
+        public string CopiedForecastId { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -174,6 +176,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
+            sb.Append("  CopiedForecastId: ").Append(CopiedForecastId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -234,6 +237,11 @@ namespace ININ.PureCloudApi.Model
                     this.ManagementUnitId == other.ManagementUnitId ||
                     this.ManagementUnitId != null &&
                     this.ManagementUnitId.Equals(other.ManagementUnitId)
+                ) &&
+                (
+                    this.CopiedForecastId == other.CopiedForecastId ||
+                    this.CopiedForecastId != null &&
+                    this.CopiedForecastId.Equals(other.CopiedForecastId)
                 );
         }
 
@@ -258,6 +266,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Metrics.GetHashCode();
                 if (this.ManagementUnitId != null)
                     hash = hash * 59 + this.ManagementUnitId.GetHashCode();
+                if (this.CopiedForecastId != null)
+                    hash = hash * 59 + this.CopiedForecastId.GetHashCode();
                 return hash;
             }
         }

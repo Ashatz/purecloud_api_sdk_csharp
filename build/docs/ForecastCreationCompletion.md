@@ -7,7 +7,8 @@ title: ForecastCreationCompletion
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ForecastId** | **string** | The id of the forecast | [optional] |
+| **NotificationId** | **string** | The notification id of creation completion | [optional] |
+| **Id** | **string** | The id of the forecast | [optional] |
 | **Status** | **string** | The status of the creation of the forecast | [optional] |
 {: class="table table-striped"}
 

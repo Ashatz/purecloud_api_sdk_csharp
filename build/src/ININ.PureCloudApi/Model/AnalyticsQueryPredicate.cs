@@ -364,7 +364,25 @@ namespace ININ.PureCloudApi.Model
             /// Enum Eventtime for "eventTime"
             /// </summary>
             [EnumMember(Value = "eventTime")]
-            Eventtime
+            Eventtime,
+            
+            /// <summary>
+            /// Enum Systempresence for "systemPresence"
+            /// </summary>
+            [EnumMember(Value = "systemPresence")]
+            Systempresence,
+            
+            /// <summary>
+            /// Enum Organizationpresenceid for "organizationPresenceId"
+            /// </summary>
+            [EnumMember(Value = "organizationPresenceId")]
+            Organizationpresenceid,
+            
+            /// <summary>
+            /// Enum Routingstatus for "routingStatus"
+            /// </summary>
+            [EnumMember(Value = "routingStatus")]
+            Routingstatus
         }
         /// <summary>
         /// Left hand side for property predicates

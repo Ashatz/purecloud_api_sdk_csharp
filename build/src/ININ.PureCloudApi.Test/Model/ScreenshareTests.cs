@@ -122,6 +122,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'Provider'
         }
+        /// <summary>
+        /// Test the property 'Segments'
+        /// </summary>
+        [Test]
+        public void SegmentsTest()
+        {
+            // TODO: unit test for the property 'Segments'
+        }
 
     }
 

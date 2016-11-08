@@ -14,9 +14,9 @@ title: JsonNode
 | **Boolean** | **bool?** |  | [optional] [default to false]|
 | **Number** | **bool?** |  | [optional] [default to false]|
 | **_Float** | **bool?** |  | [optional] [default to false]|
+| **MissingNode** | **bool?** |  | [optional] [default to false]|
 | **ValueNode** | **bool?** |  | [optional] [default to false]|
 | **ContainerNode** | **bool?** |  | [optional] [default to false]|
-| **MissingNode** | **bool?** |  | [optional] [default to false]|
 | **Pojo** | **bool?** |  | [optional] [default to false]|
 | **IntegralNumber** | **bool?** |  | [optional] [default to false]|
 | **FloatingPointNumber** | **bool?** |  | [optional] [default to false]|

@@ -51,12 +51,20 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
-        /// Test the property 'ForecastId'
+        /// Test the property 'NotificationId'
         /// </summary>
         [Test]
-        public void ForecastIdTest()
+        public void NotificationIdTest()
         {
-            // TODO: unit test for the property 'ForecastId'
+            // TODO: unit test for the property 'NotificationId'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Test]
+        public void IdTest()
+        {
+            // TODO: unit test for the property 'Id'
         }
         /// <summary>
         /// Test the property 'Status'

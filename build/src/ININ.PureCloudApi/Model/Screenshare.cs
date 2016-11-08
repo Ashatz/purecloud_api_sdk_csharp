@@ -210,7 +210,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Provider">The source provider for the screen share..</param>
-        public Screenshare(StateEnum? State = null, string Id = null, string Context = null, bool? Sharing = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null)
+        /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
+        public Screenshare(StateEnum? State = null, string Id = null, string Context = null, bool? Sharing = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, List<Segment> Segments = null)
         {
             this.State = State;
             this.Id = Id;
@@ -229,6 +230,7 @@ namespace ININ.PureCloudApi.Model
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.Provider = Provider;
+            this.Segments = Segments;
         }
         
         /// <summary>
@@ -274,6 +276,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         /// <summary>
+        /// The time line of the participant&#39;s call, divided into activity segments.
+        /// </summary>
+        /// <value>The time line of the participant&#39;s call, divided into activity segments.</value>
+        [DataMember(Name="segments", EmitDefaultValue=false)]
+        public List<Segment> Segments { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -290,6 +298,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -370,6 +379,11 @@ namespace ININ.PureCloudApi.Model
                     this.Provider == other.Provider ||
                     this.Provider != null &&
                     this.Provider.Equals(other.Provider)
+                ) &&
+                (
+                    this.Segments == other.Segments ||
+                    this.Segments != null &&
+                    this.Segments.SequenceEqual(other.Segments)
                 );
         }
 
@@ -402,6 +416,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.Segments != null)
+                    hash = hash * 59 + this.Segments.GetHashCode();
                 return hash;
             }
         }

@@ -17,6 +17,7 @@ title: User
 | **State** | **string** | The current state for this user. | [optional] |
 | **Title** | **string** |  | [optional] |
 | **Username** | **string** |  | [optional] |
+| **Manager** | [**User**](User.html) |  | [optional] |
 | **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
 | **Version** | **int?** | Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH. | |
 | **RoutingStatus** | [**RoutingStatus**](RoutingStatus.html) | ACD routing status | [optional] |

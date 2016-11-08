@@ -161,6 +161,29 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetLocalkeysSettings
+        /// </summary>
+        [Test]
+        public void GetLocalkeysSettingsTest()
+        {
+            // TODO: add unit test for the method 'GetLocalkeysSettings'
+            var response = instance.GetLocalkeysSettings();
+            Assert.IsInstanceOf<LocalEncryptionConfigurationListing> (response, "response is LocalEncryptionConfigurationListing");
+        }
+        
+        /// <summary>
+        /// Test GetLocalkeysSettingsSettingsId
+        /// </summary>
+        [Test]
+        public void GetLocalkeysSettingsSettingsIdTest()
+        {
+            // TODO: add unit test for the method 'GetLocalkeysSettingsSettingsId'
+            string settingsId = null; // TODO: replace null with proper value
+            var response = instance.GetLocalkeysSettingsSettingsId(settingsId);
+            Assert.IsInstanceOf<LocalEncryptionConfiguration> (response, "response is LocalEncryptionConfiguration");
+        }
+        
+        /// <summary>
         /// Test GetMediaretentionpolicies
         /// </summary>
         [Test]
@@ -220,6 +243,30 @@ namespace ININ.PureCloudApi.Test
             string previousPage = null; // TODO: replace null with proper value
             var response = instance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
             Assert.IsInstanceOf<OrphanRecordingListing> (response, "response is OrphanRecordingListing");
+        }
+        
+        /// <summary>
+        /// Test GetRecordingkeys
+        /// </summary>
+        [Test]
+        public void GetRecordingkeysTest()
+        {
+            // TODO: add unit test for the method 'GetRecordingkeys'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.GetRecordingkeys(pageSize, pageNumber);
+            Assert.IsInstanceOf<EncryptionKeyEntityListing> (response, "response is EncryptionKeyEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetRecordingkeysRotationschedule
+        /// </summary>
+        [Test]
+        public void GetRecordingkeysRotationscheduleTest()
+        {
+            // TODO: add unit test for the method 'GetRecordingkeysRotationschedule'
+            var response = instance.GetRecordingkeysRotationschedule();
+            Assert.IsInstanceOf<KeyRotationSchedule> (response, "response is KeyRotationSchedule");
         }
         
         /// <summary>
@@ -288,6 +335,30 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostLocalkeys
+        /// </summary>
+        [Test]
+        public void PostLocalkeysTest()
+        {
+            // TODO: add unit test for the method 'PostLocalkeys'
+            LocalEncryptionKeyRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostLocalkeys(body);
+            Assert.IsInstanceOf<EncryptionKey> (response, "response is EncryptionKey");
+        }
+        
+        /// <summary>
+        /// Test PostLocalkeysSettings
+        /// </summary>
+        [Test]
+        public void PostLocalkeysSettingsTest()
+        {
+            // TODO: add unit test for the method 'PostLocalkeysSettings'
+            LocalEncryptionConfiguration body = null; // TODO: replace null with proper value
+            var response = instance.PostLocalkeysSettings(body);
+            Assert.IsInstanceOf<LocalEncryptionConfiguration> (response, "response is LocalEncryptionConfiguration");
+        }
+        
+        /// <summary>
         /// Test PostMediaretentionpolicies
         /// </summary>
         [Test]
@@ -297,6 +368,17 @@ namespace ININ.PureCloudApi.Test
             PolicyCreate body = null; // TODO: replace null with proper value
             var response = instance.PostMediaretentionpolicies(body);
             Assert.IsInstanceOf<Policy> (response, "response is Policy");
+        }
+        
+        /// <summary>
+        /// Test PostRecordingkeys
+        /// </summary>
+        [Test]
+        public void PostRecordingkeysTest()
+        {
+            // TODO: add unit test for the method 'PostRecordingkeys'
+            var response = instance.PostRecordingkeys();
+            Assert.IsInstanceOf<EncryptionKey> (response, "response is EncryptionKey");
         }
         
         /// <summary>
@@ -329,6 +411,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PutLocalkeysSettingsSettingsId
+        /// </summary>
+        [Test]
+        public void PutLocalkeysSettingsSettingsIdTest()
+        {
+            // TODO: add unit test for the method 'PutLocalkeysSettingsSettingsId'
+            string settingsId = null; // TODO: replace null with proper value
+            LocalEncryptionConfiguration body = null; // TODO: replace null with proper value
+            var response = instance.PutLocalkeysSettingsSettingsId(settingsId, body);
+            Assert.IsInstanceOf<LocalEncryptionConfiguration> (response, "response is LocalEncryptionConfiguration");
+        }
+        
+        /// <summary>
         /// Test PutMediaretentionpoliciesPolicyId
         /// </summary>
         [Test]
@@ -339,6 +434,18 @@ namespace ININ.PureCloudApi.Test
             Policy body = null; // TODO: replace null with proper value
             var response = instance.PutMediaretentionpoliciesPolicyId(policyId, body);
             Assert.IsInstanceOf<Policy> (response, "response is Policy");
+        }
+        
+        /// <summary>
+        /// Test PutRecordingkeysRotationschedule
+        /// </summary>
+        [Test]
+        public void PutRecordingkeysRotationscheduleTest()
+        {
+            // TODO: add unit test for the method 'PutRecordingkeysRotationschedule'
+            KeyRotationSchedule body = null; // TODO: replace null with proper value
+            var response = instance.PutRecordingkeysRotationschedule(body);
+            Assert.IsInstanceOf<KeyRotationSchedule> (response, "response is KeyRotationSchedule");
         }
         
         /// <summary>

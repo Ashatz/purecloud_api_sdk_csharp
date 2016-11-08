@@ -17,6 +17,7 @@ title: UserMe
 | **State** | **string** | The current state for this user. | [optional] |
 | **Title** | **string** |  | [optional] |
 | **Username** | **string** |  | [optional] |
+| **Manager** | [**User**](User.html) |  | [optional] |
 | **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
 | **Version** | **int?** | Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH. | |
 | **RoutingStatus** | [**RoutingStatus**](RoutingStatus.html) | ACD routing status | [optional] |
@@ -37,6 +38,7 @@ title: UserMe
 | **Superiors** | [**List&lt;User&gt;**](User.html) | The first 50 superiors of this user. | [optional] |
 | **DirectReports** | [**List&lt;User&gt;**](User.html) | The first 50 direct reports to this user. | [optional] |
 | **Adjacents** | [**Adjacents**](Adjacents.html) | The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands. | [optional] |
+| **RoutingSkills** | [**List&lt;RoutingSkill&gt;**](RoutingSkill.html) | The first 50 routing skills for user&#39;s organizations | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

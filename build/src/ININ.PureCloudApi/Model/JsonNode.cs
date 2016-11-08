@@ -101,9 +101,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Boolean">Boolean (default to false).</param>
         /// <param name="Number">Number (default to false).</param>
         /// <param name="_Float">_Float (default to false).</param>
+        /// <param name="MissingNode">MissingNode (default to false).</param>
         /// <param name="ValueNode">ValueNode (default to false).</param>
         /// <param name="ContainerNode">ContainerNode (default to false).</param>
-        /// <param name="MissingNode">MissingNode (default to false).</param>
         /// <param name="Pojo">Pojo (default to false).</param>
         /// <param name="IntegralNumber">IntegralNumber (default to false).</param>
         /// <param name="FloatingPointNumber">FloatingPointNumber (default to false).</param>
@@ -115,7 +115,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="BigInteger">BigInteger (default to false).</param>
         /// <param name="Textual">Textual (default to false).</param>
         /// <param name="Binary">Binary (default to false).</param>
-        public JsonNode(bool? Array = null, bool? _Null = null, NodeTypeEnum? NodeType = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? _Float = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null)
+        public JsonNode(bool? Array = null, bool? _Null = null, NodeTypeEnum? NodeType = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? _Float = null, bool? MissingNode = null, bool? ValueNode = null, bool? ContainerNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null)
         {
             // use default value if no "Array" provided
             if (Array == null)
@@ -172,6 +172,15 @@ namespace ININ.PureCloudApi.Model
             {
                 this._Float = _Float;
             }
+            // use default value if no "MissingNode" provided
+            if (MissingNode == null)
+            {
+                this.MissingNode = false;
+            }
+            else
+            {
+                this.MissingNode = MissingNode;
+            }
             // use default value if no "ValueNode" provided
             if (ValueNode == null)
             {
@@ -189,15 +198,6 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.ContainerNode = ContainerNode;
-            }
-            // use default value if no "MissingNode" provided
-            if (MissingNode == null)
-            {
-                this.MissingNode = false;
-            }
-            else
-            {
-                this.MissingNode = MissingNode;
             }
             // use default value if no "Pojo" provided
             if (Pojo == null)
@@ -331,6 +331,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="float", EmitDefaultValue=false)]
         public bool? _Float { get; set; }
         /// <summary>
+        /// Gets or Sets MissingNode
+        /// </summary>
+        [DataMember(Name="missingNode", EmitDefaultValue=false)]
+        public bool? MissingNode { get; set; }
+        /// <summary>
         /// Gets or Sets ValueNode
         /// </summary>
         [DataMember(Name="valueNode", EmitDefaultValue=false)]
@@ -340,11 +345,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="containerNode", EmitDefaultValue=false)]
         public bool? ContainerNode { get; set; }
-        /// <summary>
-        /// Gets or Sets MissingNode
-        /// </summary>
-        [DataMember(Name="missingNode", EmitDefaultValue=false)]
-        public bool? MissingNode { get; set; }
         /// <summary>
         /// Gets or Sets Pojo
         /// </summary>
@@ -415,9 +415,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Boolean: ").Append(Boolean).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  _Float: ").Append(_Float).Append("\n");
+            sb.Append("  MissingNode: ").Append(MissingNode).Append("\n");
             sb.Append("  ValueNode: ").Append(ValueNode).Append("\n");
             sb.Append("  ContainerNode: ").Append(ContainerNode).Append("\n");
-            sb.Append("  MissingNode: ").Append(MissingNode).Append("\n");
             sb.Append("  Pojo: ").Append(Pojo).Append("\n");
             sb.Append("  IntegralNumber: ").Append(IntegralNumber).Append("\n");
             sb.Append("  FloatingPointNumber: ").Append(FloatingPointNumber).Append("\n");
@@ -501,6 +501,11 @@ namespace ININ.PureCloudApi.Model
                     this._Float.Equals(other._Float)
                 ) &&
                 (
+                    this.MissingNode == other.MissingNode ||
+                    this.MissingNode != null &&
+                    this.MissingNode.Equals(other.MissingNode)
+                ) &&
+                (
                     this.ValueNode == other.ValueNode ||
                     this.ValueNode != null &&
                     this.ValueNode.Equals(other.ValueNode)
@@ -509,11 +514,6 @@ namespace ININ.PureCloudApi.Model
                     this.ContainerNode == other.ContainerNode ||
                     this.ContainerNode != null &&
                     this.ContainerNode.Equals(other.ContainerNode)
-                ) &&
-                (
-                    this.MissingNode == other.MissingNode ||
-                    this.MissingNode != null &&
-                    this.MissingNode.Equals(other.MissingNode)
                 ) &&
                 (
                     this.Pojo == other.Pojo ||
@@ -597,12 +597,12 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Number.GetHashCode();
                 if (this._Float != null)
                     hash = hash * 59 + this._Float.GetHashCode();
+                if (this.MissingNode != null)
+                    hash = hash * 59 + this.MissingNode.GetHashCode();
                 if (this.ValueNode != null)
                     hash = hash * 59 + this.ValueNode.GetHashCode();
                 if (this.ContainerNode != null)
                     hash = hash * 59 + this.ContainerNode.GetHashCode();
-                if (this.MissingNode != null)
-                    hash = hash * 59 + this.MissingNode.GetHashCode();
                 if (this.Pojo != null)
                     hash = hash * 59 + this.Pojo.GetHashCode();
                 if (this.IntegralNumber != null)
