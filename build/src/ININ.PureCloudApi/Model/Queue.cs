@@ -119,8 +119,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
+        /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="MemberCount">MemberCount.</param>
-        public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, int? MemberCount = null)
+        public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, QueueEmailAddress OutboundEmailAddress = null, int? MemberCount = null)
         {
             // to ensure "MediaSettings" is required (not null)
             if (MediaSettings == null)
@@ -163,6 +164,7 @@ namespace ININ.PureCloudApi.Model
             this.QueueFlow = QueueFlow;
             this.CallingPartyName = CallingPartyName;
             this.CallingPartyNumber = CallingPartyNumber;
+            this.OutboundEmailAddress = OutboundEmailAddress;
             this.MemberCount = MemberCount;
         }
         
@@ -256,6 +258,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="callingPartyNumber", EmitDefaultValue=false)]
         public string CallingPartyNumber { get; set; }
         /// <summary>
+        /// Gets or Sets OutboundEmailAddress
+        /// </summary>
+        [DataMember(Name="outboundEmailAddress", EmitDefaultValue=false)]
+        public QueueEmailAddress OutboundEmailAddress { get; set; }
+        /// <summary>
         /// Gets or Sets MemberCount
         /// </summary>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
@@ -292,6 +299,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
+            sb.Append("  OutboundEmailAddress: ").Append(OutboundEmailAddress).Append("\n");
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -421,6 +429,11 @@ namespace ININ.PureCloudApi.Model
                     this.CallingPartyNumber.Equals(other.CallingPartyNumber)
                 ) &&
                 (
+                    this.OutboundEmailAddress == other.OutboundEmailAddress ||
+                    this.OutboundEmailAddress != null &&
+                    this.OutboundEmailAddress.Equals(other.OutboundEmailAddress)
+                ) &&
+                (
                     this.MemberCount == other.MemberCount ||
                     this.MemberCount != null &&
                     this.MemberCount.Equals(other.MemberCount)
@@ -479,6 +492,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();
                 if (this.CallingPartyNumber != null)
                     hash = hash * 59 + this.CallingPartyNumber.GetHashCode();
+                if (this.OutboundEmailAddress != null)
+                    hash = hash * 59 + this.OutboundEmailAddress.GetHashCode();
                 if (this.MemberCount != null)
                     hash = hash * 59 + this.MemberCount.GetHashCode();
                 if (this.SelfUri != null)

@@ -59,68 +59,36 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'Name'
+        /// Test the property 'FloorplanId'
         /// </summary>
         [Test]
-        public void NameTest()
+        public void FloorplanIdTest()
         {
-            // TODO: unit test for the property 'Name'
+            // TODO: unit test for the property 'FloorplanId'
         }
         /// <summary>
-        /// Test the property 'Address'
+        /// Test the property 'Coordinates'
         /// </summary>
         [Test]
-        public void AddressTest()
+        public void CoordinatesTest()
         {
-            // TODO: unit test for the property 'Address'
+            // TODO: unit test for the property 'Coordinates'
         }
         /// <summary>
-        /// Test the property 'AddressVerified'
+        /// Test the property 'Notes'
         /// </summary>
         [Test]
-        public void AddressVerifiedTest()
+        public void NotesTest()
         {
-            // TODO: unit test for the property 'AddressVerified'
+            // TODO: unit test for the property 'Notes'
         }
         /// <summary>
-        /// Test the property 'EmergencyNumber'
+        /// Test the property 'LocationDefinition'
         /// </summary>
         [Test]
-        public void EmergencyNumberTest()
+        public void LocationDefinitionTest()
         {
-            // TODO: unit test for the property 'EmergencyNumber'
-        }
-        /// <summary>
-        /// Test the property 'State'
-        /// </summary>
-        [Test]
-        public void StateTest()
-        {
-            // TODO: unit test for the property 'State'
-        }
-        /// <summary>
-        /// Test the property 'Version'
-        /// </summary>
-        [Test]
-        public void VersionTest()
-        {
-            // TODO: unit test for the property 'Version'
-        }
-        /// <summary>
-        /// Test the property 'Path'
-        /// </summary>
-        [Test]
-        public void PathTest()
-        {
-            // TODO: unit test for the property 'Path'
-        }
-        /// <summary>
-        /// Test the property 'SelfUri'
-        /// </summary>
-        [Test]
-        public void SelfUriTest()
-        {
-            // TODO: unit test for the property 'SelfUri'
+            // TODO: unit test for the property 'LocationDefinition'
         }
 
     }

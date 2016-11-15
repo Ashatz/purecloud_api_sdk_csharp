@@ -22,8 +22,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
-        /// <returns>Location</returns>
-        Location GetLocationId (string locationId);
+        /// <returns>LocationDefinition</returns>
+        LocationDefinition GetLocationId (string locationId);
 
         /// <summary>
         /// Get Location by ID.
@@ -33,8 +33,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
-        /// <returns>ApiResponse of Location</returns>
-        ApiResponse<Location> GetLocationIdWithHttpInfo (string locationId);
+        /// <returns>ApiResponse of LocationDefinition</returns>
+        ApiResponse<LocationDefinition> GetLocationIdWithHttpInfo (string locationId);
         /// <summary>
         /// Get a list of all locations.
         /// </summary>
@@ -45,8 +45,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>List&lt;Location&gt;</returns>
-        List<Location> GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        /// <returns>List&lt;LocationDefinition&gt;</returns>
+        List<LocationDefinition> GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of all locations.
@@ -58,8 +58,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>ApiResponse of List&lt;Location&gt;</returns>
-        ApiResponse<List<Location>> GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        /// <returns>ApiResponse of List&lt;LocationDefinition&gt;</returns>
+        ApiResponse<List<LocationDefinition>> GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
         /// Search locations using the q64 value returned from a previous search
         /// </summary>
@@ -114,8 +114,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
-        /// <returns>Task of Location</returns>
-        System.Threading.Tasks.Task<Location> GetLocationIdAsync (string locationId);
+        /// <returns>Task of LocationDefinition</returns>
+        System.Threading.Tasks.Task<LocationDefinition> GetLocationIdAsync (string locationId);
 
         /// <summary>
         /// Get Location by ID.
@@ -125,8 +125,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
-        /// <returns>Task of ApiResponse (Location)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationIdAsyncWithHttpInfo (string locationId);
+        /// <returns>Task of ApiResponse (LocationDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> GetLocationIdAsyncWithHttpInfo (string locationId);
         /// <summary>
         /// Get a list of all locations.
         /// </summary>
@@ -137,8 +137,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>Task of List&lt;Location&gt;</returns>
-        System.Threading.Tasks.Task<List<Location>> GetLocationsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        /// <returns>Task of List&lt;LocationDefinition&gt;</returns>
+        System.Threading.Tasks.Task<List<LocationDefinition>> GetLocationsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of all locations.
@@ -150,8 +150,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;Location&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Location>>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        /// <returns>Task of ApiResponse (List&lt;LocationDefinition&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<LocationDefinition>>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
         /// Search locations using the q64 value returned from a previous search
         /// </summary>
@@ -291,10 +291,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
-        /// <returns>Location</returns>
-        public Location GetLocationId (string locationId)
+        /// <returns>LocationDefinition</returns>
+        public LocationDefinition GetLocationId (string locationId)
         {
-             ApiResponse<Location> localVarResponse = GetLocationIdWithHttpInfo(locationId);
+             ApiResponse<LocationDefinition> localVarResponse = GetLocationIdWithHttpInfo(locationId);
              return localVarResponse.Data;
         }
 
@@ -303,8 +303,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
-        /// <returns>ApiResponse of Location</returns>
-        public ApiResponse< Location > GetLocationIdWithHttpInfo (string locationId)
+        /// <returns>ApiResponse of LocationDefinition</returns>
+        public ApiResponse< LocationDefinition > GetLocationIdWithHttpInfo (string locationId)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
@@ -356,9 +356,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLocationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Location>(localVarStatusCode,
+            return new ApiResponse<LocationDefinition>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Location) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Location)));
+                (LocationDefinition) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationDefinition)));
             
         }
 
@@ -367,10 +367,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
-        /// <returns>Task of Location</returns>
-        public async System.Threading.Tasks.Task<Location> GetLocationIdAsync (string locationId)
+        /// <returns>Task of LocationDefinition</returns>
+        public async System.Threading.Tasks.Task<LocationDefinition> GetLocationIdAsync (string locationId)
         {
-             ApiResponse<Location> localVarResponse = await GetLocationIdAsyncWithHttpInfo(locationId);
+             ApiResponse<LocationDefinition> localVarResponse = await GetLocationIdAsyncWithHttpInfo(locationId);
              return localVarResponse.Data;
 
         }
@@ -380,8 +380,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="locationId">Location ID</param>
-        /// <returns>Task of ApiResponse (Location)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationIdAsyncWithHttpInfo (string locationId)
+        /// <returns>Task of ApiResponse (LocationDefinition)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LocationDefinition>> GetLocationIdAsyncWithHttpInfo (string locationId)
         {
             // verify the required parameter 'locationId' is set
             if (locationId == null)
@@ -433,9 +433,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLocationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Location>(localVarStatusCode,
+            return new ApiResponse<LocationDefinition>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Location) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Location)));
+                (LocationDefinition) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationDefinition)));
             
         }
 
@@ -446,10 +446,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>List&lt;Location&gt;</returns>
-        public List<Location> GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        /// <returns>List&lt;LocationDefinition&gt;</returns>
+        public List<LocationDefinition> GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<List<Location>> localVarResponse = GetLocationsWithHttpInfo(pageSize, pageNumber, sortOrder);
+             ApiResponse<List<LocationDefinition>> localVarResponse = GetLocationsWithHttpInfo(pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -460,8 +460,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>ApiResponse of List&lt;Location&gt;</returns>
-        public ApiResponse< List<Location> > GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        /// <returns>ApiResponse of List&lt;LocationDefinition&gt;</returns>
+        public ApiResponse< List<LocationDefinition> > GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
 
             var localVarPath = "/api/v2/locations";
@@ -512,9 +512,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLocations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<Location>>(localVarStatusCode,
+            return new ApiResponse<List<LocationDefinition>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Location>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Location>)));
+                (List<LocationDefinition>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LocationDefinition>)));
             
         }
 
@@ -525,10 +525,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>Task of List&lt;Location&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Location>> GetLocationsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        /// <returns>Task of List&lt;LocationDefinition&gt;</returns>
+        public async System.Threading.Tasks.Task<List<LocationDefinition>> GetLocationsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<List<Location>> localVarResponse = await GetLocationsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder);
+             ApiResponse<List<LocationDefinition>> localVarResponse = await GetLocationsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -540,8 +540,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;Location&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Location>>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        /// <returns>Task of ApiResponse (List&lt;LocationDefinition&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<LocationDefinition>>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
 
             var localVarPath = "/api/v2/locations";
@@ -592,9 +592,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLocations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<Location>>(localVarStatusCode,
+            return new ApiResponse<List<LocationDefinition>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<Location>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Location>)));
+                (List<LocationDefinition>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LocationDefinition>)));
             
         }
 

@@ -107,38 +107,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property '_Float'
         }
         /// <summary>
-        /// Test the property 'MissingNode'
-        /// </summary>
-        [Test]
-        public void MissingNodeTest()
-        {
-            // TODO: unit test for the property 'MissingNode'
-        }
-        /// <summary>
-        /// Test the property 'ValueNode'
-        /// </summary>
-        [Test]
-        public void ValueNodeTest()
-        {
-            // TODO: unit test for the property 'ValueNode'
-        }
-        /// <summary>
-        /// Test the property 'ContainerNode'
-        /// </summary>
-        [Test]
-        public void ContainerNodeTest()
-        {
-            // TODO: unit test for the property 'ContainerNode'
-        }
-        /// <summary>
-        /// Test the property 'Pojo'
-        /// </summary>
-        [Test]
-        public void PojoTest()
-        {
-            // TODO: unit test for the property 'Pojo'
-        }
-        /// <summary>
         /// Test the property 'IntegralNumber'
         /// </summary>
         [Test]
@@ -217,6 +185,38 @@ namespace ININ.PureCloudApi.Test
         public void BinaryTest()
         {
             // TODO: unit test for the property 'Binary'
+        }
+        /// <summary>
+        /// Test the property 'ValueNode'
+        /// </summary>
+        [Test]
+        public void ValueNodeTest()
+        {
+            // TODO: unit test for the property 'ValueNode'
+        }
+        /// <summary>
+        /// Test the property 'ContainerNode'
+        /// </summary>
+        [Test]
+        public void ContainerNodeTest()
+        {
+            // TODO: unit test for the property 'ContainerNode'
+        }
+        /// <summary>
+        /// Test the property 'MissingNode'
+        /// </summary>
+        [Test]
+        public void MissingNodeTest()
+        {
+            // TODO: unit test for the property 'MissingNode'
+        }
+        /// <summary>
+        /// Test the property 'Pojo'
+        /// </summary>
+        [Test]
+        public void PojoTest()
+        {
+            // TODO: unit test for the property 'Pojo'
         }
 
     }

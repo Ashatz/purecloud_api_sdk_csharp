@@ -129,8 +129,8 @@ namespace ININ.PureCloudApi.Test
             string formatId = null; // TODO: replace null with proper value
             bool? download = null; // TODO: replace null with proper value
             string fileName = null; // TODO: replace null with proper value
-            instance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, formatId, download, fileName);
-            
+            var response = instance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, formatId, download, fileName);
+            Assert.IsInstanceOf<Recording> (response, "response is Recording");
         }
         
         /// <summary>
@@ -391,8 +391,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
             Recording body = null; // TODO: replace null with proper value
-            instance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body);
-            
+            var response = instance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body);
+            Assert.IsInstanceOf<Recording> (response, "response is Recording");
         }
         
         /// <summary>

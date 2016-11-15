@@ -84,7 +84,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Station">Effective, default, and last station information.</param>
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
         /// <param name="ProfileSkills">Skills possessed by the user.</param>
-        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null)
+        /// <param name="Locations">The user placement at each site location..</param>
+        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -113,6 +114,7 @@ namespace ININ.PureCloudApi.Model
             this.Station = Station;
             this.Authorization = Authorization;
             this.ProfileSkills = ProfileSkills;
+            this.Locations = Locations;
         }
         
         /// <summary>
@@ -228,6 +230,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="profileSkills", EmitDefaultValue=false)]
         public List<string> ProfileSkills { get; set; }
         /// <summary>
+        /// The user placement at each site location.
+        /// </summary>
+        /// <value>The user placement at each site location.</value>
+        [DataMember(Name="locations", EmitDefaultValue=false)]
+        public List<Location> Locations { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -262,6 +270,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Station: ").Append(Station).Append("\n");
             sb.Append("  Authorization: ").Append(Authorization).Append("\n");
             sb.Append("  ProfileSkills: ").Append(ProfileSkills).Append("\n");
+            sb.Append("  Locations: ").Append(Locations).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -405,6 +414,11 @@ namespace ININ.PureCloudApi.Model
                     this.ProfileSkills.SequenceEqual(other.ProfileSkills)
                 ) &&
                 (
+                    this.Locations == other.Locations ||
+                    this.Locations != null &&
+                    this.Locations.SequenceEqual(other.Locations)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -464,6 +478,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Authorization.GetHashCode();
                 if (this.ProfileSkills != null)
                     hash = hash * 59 + this.ProfileSkills.GetHashCode();
+                if (this.Locations != null)
+                    hash = hash * 59 + this.Locations.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

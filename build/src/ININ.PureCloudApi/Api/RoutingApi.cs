@@ -259,8 +259,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>InboundRouteEntityListing</returns>
-        InboundRouteEntityListing GetEmailDomainsDomainnameRoutes (string domainName);
+        InboundRouteEntityListing GetEmailDomainsDomainnameRoutes (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null);
 
         /// <summary>
         /// Get routes
@@ -270,8 +273,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>ApiResponse of InboundRouteEntityListing</returns>
-        ApiResponse<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesWithHttpInfo (string domainName);
+        ApiResponse<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesWithHttpInfo (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null);
         /// <summary>
         /// Get a route
         /// </summary>
@@ -585,8 +591,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Filter for results that start with this value (optional)</param>
         /// <returns>SkillEntityListing</returns>
-        SkillEntityListing GetSkills (int? pageSize = null, int? pageNumber = null);
+        SkillEntityListing GetSkills (int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get the list of routing skills.
@@ -597,8 +604,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Filter for results that start with this value (optional)</param>
         /// <returns>ApiResponse of SkillEntityListing</returns>
-        ApiResponse<SkillEntityListing> GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<SkillEntityListing> GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
         /// <summary>
         /// Get Routing Skill
         /// </summary>
@@ -1323,8 +1331,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>Task of InboundRouteEntityListing</returns>
-        System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesAsync (string domainName);
+        System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesAsync (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null);
 
         /// <summary>
         /// Get routes
@@ -1334,8 +1345,11 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName);
+        System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null);
         /// <summary>
         /// Get a route
         /// </summary>
@@ -1649,8 +1663,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Filter for results that start with this value (optional)</param>
         /// <returns>Task of SkillEntityListing</returns>
-        System.Threading.Tasks.Task<SkillEntityListing> GetSkillsAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<SkillEntityListing> GetSkillsAsync (int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get the list of routing skills.
@@ -1661,8 +1676,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Filter for results that start with this value (optional)</param>
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
         /// <summary>
         /// Get Routing Skill
         /// </summary>
@@ -3948,10 +3964,13 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>InboundRouteEntityListing</returns>
-        public InboundRouteEntityListing GetEmailDomainsDomainnameRoutes (string domainName)
+        public InboundRouteEntityListing GetEmailDomainsDomainnameRoutes (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
         {
-             ApiResponse<InboundRouteEntityListing> localVarResponse = GetEmailDomainsDomainnameRoutesWithHttpInfo(domainName);
+             ApiResponse<InboundRouteEntityListing> localVarResponse = GetEmailDomainsDomainnameRoutesWithHttpInfo(domainName, pageSize, pageNumber, pattern);
              return localVarResponse.Data;
         }
 
@@ -3960,8 +3979,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>ApiResponse of InboundRouteEntityListing</returns>
-        public ApiResponse< InboundRouteEntityListing > GetEmailDomainsDomainnameRoutesWithHttpInfo (string domainName)
+        public ApiResponse< InboundRouteEntityListing > GetEmailDomainsDomainnameRoutesWithHttpInfo (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
@@ -3993,6 +4015,9 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pattern != null) localVarQueryParams.Add("pattern", Configuration.ApiClient.ParameterToString(pattern)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4024,10 +4049,13 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>Task of InboundRouteEntityListing</returns>
-        public async System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesAsync (string domainName)
+        public async System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainsDomainnameRoutesAsync (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
         {
-             ApiResponse<InboundRouteEntityListing> localVarResponse = await GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo(domainName);
+             ApiResponse<InboundRouteEntityListing> localVarResponse = await GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo(domainName, pageSize, pageNumber, pattern);
              return localVarResponse.Data;
 
         }
@@ -4037,8 +4065,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pattern">Filter routes by the route&#39;s pattern property (optional)</param>
         /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainsDomainnameRoutesAsyncWithHttpInfo (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
@@ -4070,6 +4101,9 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (domainName != null) localVarPathParams.Add("domainName", Configuration.ApiClient.ParameterToString(domainName)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pattern != null) localVarQueryParams.Add("pattern", Configuration.ApiClient.ParameterToString(pattern)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6088,10 +6122,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Filter for results that start with this value (optional)</param>
         /// <returns>SkillEntityListing</returns>
-        public SkillEntityListing GetSkills (int? pageSize = null, int? pageNumber = null)
+        public SkillEntityListing GetSkills (int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<SkillEntityListing> localVarResponse = GetSkillsWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<SkillEntityListing> localVarResponse = GetSkillsWithHttpInfo(pageSize, pageNumber, name);
              return localVarResponse.Data;
         }
 
@@ -6101,8 +6136,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Filter for results that start with this value (optional)</param>
         /// <returns>ApiResponse of SkillEntityListing</returns>
-        public ApiResponse< SkillEntityListing > GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< SkillEntityListing > GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
         {
 
             var localVarPath = "/api/v2/routing/skills";
@@ -6132,6 +6168,7 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -6164,10 +6201,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Filter for results that start with this value (optional)</param>
         /// <returns>Task of SkillEntityListing</returns>
-        public async System.Threading.Tasks.Task<SkillEntityListing> GetSkillsAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<SkillEntityListing> GetSkillsAsync (int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<SkillEntityListing> localVarResponse = await GetSkillsAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<SkillEntityListing> localVarResponse = await GetSkillsAsyncWithHttpInfo(pageSize, pageNumber, name);
              return localVarResponse.Data;
 
         }
@@ -6178,8 +6216,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Filter for results that start with this value (optional)</param>
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
         {
 
             var localVarPath = "/api/v2/routing/skills";
@@ -6209,6 +6248,7 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

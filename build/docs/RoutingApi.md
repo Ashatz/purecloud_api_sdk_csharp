@@ -673,7 +673,7 @@ namespace Example
 
 <a name="getemaildomainsdomainnameroutes"></a>
 
-## [**InboundRouteEntityListing**](InboundRouteEntityListing.html) GetEmailDomainsDomainnameRoutes (string domainName)
+## [**InboundRouteEntityListing**](InboundRouteEntityListing.html) GetEmailDomainsDomainnameRoutes (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
 
 Get routes
 
@@ -699,11 +699,14 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var domainName = domainName_example;  // string | email domain
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pattern = pattern_example;  // string | Filter routes by the route's pattern property (optional) 
 
             try
             {
                 // Get routes
-                InboundRouteEntityListing result = apiInstance.GetEmailDomainsDomainnameRoutes(domainName);
+                InboundRouteEntityListing result = apiInstance.GetEmailDomainsDomainnameRoutes(domainName, pageSize, pageNumber, pattern);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -721,6 +724,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pattern** | **string**| Filter routes by the route&#39;s pattern property | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1450,7 +1456,7 @@ namespace Example
 
 <a name="getskills"></a>
 
-## [**SkillEntityListing**](SkillEntityListing.html) GetSkills (int? pageSize = null, int? pageNumber = null)
+## [**SkillEntityListing**](SkillEntityListing.html) GetSkills (int? pageSize = null, int? pageNumber = null, string name = null)
 
 Get the list of routing skills.
 
@@ -1477,11 +1483,12 @@ namespace Example
             var apiInstance = new RoutingApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var name = name_example;  // string | Filter for results that start with this value (optional) 
 
             try
             {
                 // Get the list of routing skills.
-                SkillEntityListing result = apiInstance.GetSkills(pageSize, pageNumber);
+                SkillEntityListing result = apiInstance.GetSkills(pageSize, pageNumber, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1500,6 +1507,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **name** | **string**| Filter for results that start with this value | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

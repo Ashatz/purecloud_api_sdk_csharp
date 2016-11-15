@@ -28,11 +28,12 @@ title: UserMe
 | **Station** | [**UserStations**](UserStations.html) | Effective, default, and last station information | [optional] |
 | **Authorization** | [**UserAuthorization**](UserAuthorization.html) | Roles and permissions assigned to the user | [optional] |
 | **ProfileSkills** | **List&lt;string&gt;** | Skills possessed by the user | [optional] |
+| **Locations** | [**List&lt;Location&gt;**](Location.html) | The user placement at each site location. | [optional] |
 | **Date** | [**ServerDate**](ServerDate.html) | The PureCloud system date time. | [optional] |
 | **GeolocationSettings** | [**GeolocationSettings**](GeolocationSettings.html) | Geolocation settings for user&#39;s organization. | [optional] |
 | **Organization** | [**Organization**](Organization.html) | Organization details for this user. | [optional] |
 | **PresenceDefinitions** | [**List&lt;OrganizationPresence&gt;**](OrganizationPresence.html) | The first 100 presence definitions for user&#39;s organization. | [optional] |
-| **Locations** | [**List&lt;Location&gt;**](Location.html) | The first 100 locations for user&#39;s organization | [optional] |
+| **LocationDefinitions** | [**List&lt;LocationDefinition&gt;**](LocationDefinition.html) | The first 100 site locations for user&#39;s organization | [optional] |
 | **OrgAuthorization** | [**List&lt;DomainOrganizationRole&gt;**](DomainOrganizationRole.html) | The first 100 organization roles, with applicable permission policies, for user&#39;s organization. | [optional] |
 | **Favorites** | [**List&lt;User&gt;**](User.html) | The first 50 favorited users. | [optional] |
 | **Superiors** | [**List&lt;User&gt;**](User.html) | The first 50 superiors of this user. | [optional] |

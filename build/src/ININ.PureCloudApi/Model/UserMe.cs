@@ -84,18 +84,19 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Station">Effective, default, and last station information.</param>
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
         /// <param name="ProfileSkills">Skills possessed by the user.</param>
+        /// <param name="Locations">The user placement at each site location..</param>
         /// <param name="Date">The PureCloud system date time..</param>
         /// <param name="GeolocationSettings">Geolocation settings for user&#39;s organization..</param>
         /// <param name="Organization">Organization details for this user..</param>
         /// <param name="PresenceDefinitions">The first 100 presence definitions for user&#39;s organization..</param>
-        /// <param name="Locations">The first 100 locations for user&#39;s organization.</param>
+        /// <param name="LocationDefinitions">The first 100 site locations for user&#39;s organization.</param>
         /// <param name="OrgAuthorization">The first 100 organization roles, with applicable permission policies, for user&#39;s organization..</param>
         /// <param name="Favorites">The first 50 favorited users..</param>
         /// <param name="Superiors">The first 50 superiors of this user..</param>
         /// <param name="DirectReports">The first 50 direct reports to this user..</param>
         /// <param name="Adjacents">The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands..</param>
         /// <param name="RoutingSkills">The first 50 routing skills for user&#39;s organizations.</param>
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<Location> Locations = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null)
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -124,11 +125,12 @@ namespace ININ.PureCloudApi.Model
             this.Station = Station;
             this.Authorization = Authorization;
             this.ProfileSkills = ProfileSkills;
+            this.Locations = Locations;
             this.Date = Date;
             this.GeolocationSettings = GeolocationSettings;
             this.Organization = Organization;
             this.PresenceDefinitions = PresenceDefinitions;
-            this.Locations = Locations;
+            this.LocationDefinitions = LocationDefinitions;
             this.OrgAuthorization = OrgAuthorization;
             this.Favorites = Favorites;
             this.Superiors = Superiors;
@@ -250,6 +252,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="profileSkills", EmitDefaultValue=false)]
         public List<string> ProfileSkills { get; set; }
         /// <summary>
+        /// The user placement at each site location.
+        /// </summary>
+        /// <value>The user placement at each site location.</value>
+        [DataMember(Name="locations", EmitDefaultValue=false)]
+        public List<Location> Locations { get; set; }
+        /// <summary>
         /// The PureCloud system date time.
         /// </summary>
         /// <value>The PureCloud system date time.</value>
@@ -274,11 +282,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="presenceDefinitions", EmitDefaultValue=false)]
         public List<OrganizationPresence> PresenceDefinitions { get; set; }
         /// <summary>
-        /// The first 100 locations for user&#39;s organization
+        /// The first 100 site locations for user&#39;s organization
         /// </summary>
-        /// <value>The first 100 locations for user&#39;s organization</value>
-        [DataMember(Name="locations", EmitDefaultValue=false)]
-        public List<Location> Locations { get; set; }
+        /// <value>The first 100 site locations for user&#39;s organization</value>
+        [DataMember(Name="locationDefinitions", EmitDefaultValue=false)]
+        public List<LocationDefinition> LocationDefinitions { get; set; }
         /// <summary>
         /// The first 100 organization roles, with applicable permission policies, for user&#39;s organization.
         /// </summary>
@@ -350,11 +358,12 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Station: ").Append(Station).Append("\n");
             sb.Append("  Authorization: ").Append(Authorization).Append("\n");
             sb.Append("  ProfileSkills: ").Append(ProfileSkills).Append("\n");
+            sb.Append("  Locations: ").Append(Locations).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  GeolocationSettings: ").Append(GeolocationSettings).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("  PresenceDefinitions: ").Append(PresenceDefinitions).Append("\n");
-            sb.Append("  Locations: ").Append(Locations).Append("\n");
+            sb.Append("  LocationDefinitions: ").Append(LocationDefinitions).Append("\n");
             sb.Append("  OrgAuthorization: ").Append(OrgAuthorization).Append("\n");
             sb.Append("  Favorites: ").Append(Favorites).Append("\n");
             sb.Append("  Superiors: ").Append(Superiors).Append("\n");
@@ -504,6 +513,11 @@ namespace ININ.PureCloudApi.Model
                     this.ProfileSkills.SequenceEqual(other.ProfileSkills)
                 ) &&
                 (
+                    this.Locations == other.Locations ||
+                    this.Locations != null &&
+                    this.Locations.SequenceEqual(other.Locations)
+                ) &&
+                (
                     this.Date == other.Date ||
                     this.Date != null &&
                     this.Date.Equals(other.Date)
@@ -524,9 +538,9 @@ namespace ININ.PureCloudApi.Model
                     this.PresenceDefinitions.SequenceEqual(other.PresenceDefinitions)
                 ) &&
                 (
-                    this.Locations == other.Locations ||
-                    this.Locations != null &&
-                    this.Locations.SequenceEqual(other.Locations)
+                    this.LocationDefinitions == other.LocationDefinitions ||
+                    this.LocationDefinitions != null &&
+                    this.LocationDefinitions.SequenceEqual(other.LocationDefinitions)
                 ) &&
                 (
                     this.OrgAuthorization == other.OrgAuthorization ||
@@ -618,6 +632,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Authorization.GetHashCode();
                 if (this.ProfileSkills != null)
                     hash = hash * 59 + this.ProfileSkills.GetHashCode();
+                if (this.Locations != null)
+                    hash = hash * 59 + this.Locations.GetHashCode();
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();
                 if (this.GeolocationSettings != null)
@@ -626,8 +642,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Organization.GetHashCode();
                 if (this.PresenceDefinitions != null)
                     hash = hash * 59 + this.PresenceDefinitions.GetHashCode();
-                if (this.Locations != null)
-                    hash = hash * 59 + this.Locations.GetHashCode();
+                if (this.LocationDefinitions != null)
+                    hash = hash * 59 + this.LocationDefinitions.GetHashCode();
                 if (this.OrgAuthorization != null)
                     hash = hash * 59 + this.OrgAuthorization.GetHashCode();
                 if (this.Favorites != null)

@@ -28,6 +28,7 @@ title: User
 | **Station** | [**UserStations**](UserStations.html) | Effective, default, and last station information | [optional] |
 | **Authorization** | [**UserAuthorization**](UserAuthorization.html) | Roles and permissions assigned to the user | [optional] |
 | **ProfileSkills** | **List&lt;string&gt;** | Skills possessed by the user | [optional] |
+| **Locations** | [**List&lt;Location&gt;**](Location.html) | The user placement at each site location. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

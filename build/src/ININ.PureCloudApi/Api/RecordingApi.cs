@@ -139,8 +139,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <returns></returns>
-        void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
+        /// <returns>Recording</returns>
+        Recording GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -154,8 +154,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
+        /// <returns>ApiResponse of Recording</returns>
+        ApiResponse<Recording> GetConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
         /// <summary>
         /// Get annotations for recording
         /// </summary>
@@ -605,8 +605,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <returns></returns>
-        void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body);
+        /// <returns>Recording</returns>
+        Recording PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body);
 
         /// <summary>
         /// Updates the retention records on a recording.
@@ -618,8 +618,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body);
+        /// <returns>ApiResponse of Recording</returns>
+        ApiResponse<Recording> PutConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body);
         /// <summary>
         /// Update annotation
         /// </summary>
@@ -862,8 +862,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
+        /// <returns>Task of Recording</returns>
+        System.Threading.Tasks.Task<Recording> GetConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -877,8 +877,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
+        /// <returns>Task of ApiResponse (Recording)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
         /// <summary>
         /// Get annotations for recording
         /// </summary>
@@ -1328,8 +1328,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, Recording body);
+        /// <returns>Task of Recording</returns>
+        System.Threading.Tasks.Task<Recording> PutConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, Recording body);
 
         /// <summary>
         /// Updates the retention records on a recording.
@@ -1341,8 +1341,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body);
+        /// <returns>Task of ApiResponse (Recording)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Recording>> PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body);
         /// <summary>
         /// Update annotation
         /// </summary>
@@ -2356,10 +2356,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <returns></returns>
-        public void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+        /// <returns>Recording</returns>
+        public Recording GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
-             GetConversationIdRecordingsRecordingIdWithHttpInfo(conversationId, recordingId, formatId, download, fileName);
+             ApiResponse<Recording> localVarResponse = GetConversationIdRecordingsRecordingIdWithHttpInfo(conversationId, recordingId, formatId, download, fileName);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -2371,8 +2372,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+        /// <returns>ApiResponse of Recording</returns>
+        public ApiResponse< Recording > GetConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -2431,10 +2432,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Recording>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (Recording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Recording)));
+            
         }
 
         /// <summary>
@@ -2446,10 +2447,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+        /// <returns>Task of Recording</returns>
+        public async System.Threading.Tasks.Task<Recording> GetConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
-             await GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo(conversationId, recordingId, formatId, download, fileName);
+             ApiResponse<Recording> localVarResponse = await GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo(conversationId, recordingId, formatId, download, fileName);
+             return localVarResponse.Data;
 
         }
 
@@ -2462,8 +2464,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="download">requesting a download format of the recording (optional, default to false)</param>
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+        /// <returns>Task of ApiResponse (Recording)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -2522,10 +2524,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationIdRecordingsRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Recording>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (Recording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Recording)));
+            
         }
 
         /// <summary>
@@ -5632,10 +5634,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <returns></returns>
-        public void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body)
+        /// <returns>Recording</returns>
+        public Recording PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body)
         {
-             PutConversationIdRecordingsRecordingIdWithHttpInfo(conversationId, recordingId, body);
+             ApiResponse<Recording> localVarResponse = PutConversationIdRecordingsRecordingIdWithHttpInfo(conversationId, recordingId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -5645,8 +5648,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body)
+        /// <returns>ApiResponse of Recording</returns>
+        public ApiResponse< Recording > PutConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -5713,10 +5716,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationIdRecordingsRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Recording>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (Recording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Recording)));
+            
         }
 
         /// <summary>
@@ -5726,10 +5729,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, Recording body)
+        /// <returns>Task of Recording</returns>
+        public async System.Threading.Tasks.Task<Recording> PutConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, Recording body)
         {
-             await PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo(conversationId, recordingId, body);
+             ApiResponse<Recording> localVarResponse = await PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo(conversationId, recordingId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -5740,8 +5744,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body)
+        /// <returns>Task of ApiResponse (Recording)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Recording>> PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -5808,10 +5812,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationIdRecordingsRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Recording>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (Recording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Recording)));
+            
         }
 
         /// <summary>

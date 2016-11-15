@@ -329,7 +329,7 @@ namespace Example
 
 <a name="getconversationidrecordingsrecordingid"></a>
 
-## void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+## [**Recording**](Recording.html) GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
 
 Gets a specific recording.
 
@@ -363,7 +363,8 @@ namespace Example
             try
             {
                 // Gets a specific recording.
-                apiInstance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, formatId, download, fileName);
+                Recording result = apiInstance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, formatId, download, fileName);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -388,7 +389,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Recording**](Recording.html)
 
 <a name="getconversationidrecordingsrecordingidannotations"></a>
 
@@ -1486,7 +1487,7 @@ This endpoint does require any parameters.
 
 <a name="putconversationidrecordingsrecordingid"></a>
 
-## void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body)
+## [**Recording**](Recording.html) PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body)
 
 Updates the retention records on a recording.
 
@@ -1518,7 +1519,8 @@ namespace Example
             try
             {
                 // Updates the retention records on a recording.
-                apiInstance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body);
+                Recording result = apiInstance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -1541,7 +1543,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Recording**](Recording.html)
 
 <a name="putconversationidrecordingsrecordingidannotationsannotationid"></a>
 
