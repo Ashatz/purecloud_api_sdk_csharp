@@ -34,69 +34,69 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Alerting for "ALERTING"
+            /// Enum Alerting for "alerting"
             /// </summary>
-            [EnumMember(Value = "ALERTING")]
+            [EnumMember(Value = "alerting")]
             Alerting,
             
             /// <summary>
-            /// Enum Dialing for "DIALING"
+            /// Enum Dialing for "dialing"
             /// </summary>
-            [EnumMember(Value = "DIALING")]
+            [EnumMember(Value = "dialing")]
             Dialing,
             
             /// <summary>
-            /// Enum Contacting for "CONTACTING"
+            /// Enum Contacting for "contacting"
             /// </summary>
-            [EnumMember(Value = "CONTACTING")]
+            [EnumMember(Value = "contacting")]
             Contacting,
             
             /// <summary>
-            /// Enum Offering for "OFFERING"
+            /// Enum Offering for "offering"
             /// </summary>
-            [EnumMember(Value = "OFFERING")]
+            [EnumMember(Value = "offering")]
             Offering,
             
             /// <summary>
-            /// Enum Connected for "CONNECTED"
+            /// Enum Connected for "connected"
             /// </summary>
-            [EnumMember(Value = "CONNECTED")]
+            [EnumMember(Value = "connected")]
             Connected,
             
             /// <summary>
-            /// Enum Disconnected for "DISCONNECTED"
+            /// Enum Disconnected for "disconnected"
             /// </summary>
-            [EnumMember(Value = "DISCONNECTED")]
+            [EnumMember(Value = "disconnected")]
             Disconnected,
             
             /// <summary>
-            /// Enum Terminated for "TERMINATED"
+            /// Enum Terminated for "terminated"
             /// </summary>
-            [EnumMember(Value = "TERMINATED")]
+            [EnumMember(Value = "terminated")]
             Terminated,
             
             /// <summary>
-            /// Enum Converting for "CONVERTING"
+            /// Enum Converting for "converting"
             /// </summary>
-            [EnumMember(Value = "CONVERTING")]
+            [EnumMember(Value = "converting")]
             Converting,
             
             /// <summary>
-            /// Enum Uploading for "UPLOADING"
+            /// Enum Uploading for "uploading"
             /// </summary>
-            [EnumMember(Value = "UPLOADING")]
+            [EnumMember(Value = "uploading")]
             Uploading,
             
             /// <summary>
-            /// Enum Transmitting for "TRANSMITTING"
+            /// Enum Transmitting for "transmitting"
             /// </summary>
-            [EnumMember(Value = "TRANSMITTING")]
+            [EnumMember(Value = "transmitting")]
             Transmitting,
             
             /// <summary>
-            /// Enum None for "NONE"
+            /// Enum None for "none"
             /// </summary>
-            [EnumMember(Value = "NONE")]
+            [EnumMember(Value = "none")]
             None
         }
         /// <summary>
@@ -115,15 +115,15 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Inbound for "INBOUND"
+            /// Enum Inbound for "inbound"
             /// </summary>
-            [EnumMember(Value = "INBOUND")]
+            [EnumMember(Value = "inbound")]
             Inbound,
             
             /// <summary>
-            /// Enum Outbound for "OUTBOUND"
+            /// Enum Outbound for "outbound"
             /// </summary>
-            [EnumMember(Value = "OUTBOUND")]
+            [EnumMember(Value = "outbound")]
             Outbound
         }
         /// <summary>
@@ -142,87 +142,87 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Endpoint for "ENDPOINT"
+            /// Enum Endpoint for "endpoint"
             /// </summary>
-            [EnumMember(Value = "ENDPOINT")]
+            [EnumMember(Value = "endpoint")]
             Endpoint,
             
             /// <summary>
-            /// Enum Client for "CLIENT"
+            /// Enum Client for "client"
             /// </summary>
-            [EnumMember(Value = "CLIENT")]
+            [EnumMember(Value = "client")]
             Client,
             
             /// <summary>
-            /// Enum System for "SYSTEM"
+            /// Enum System for "system"
             /// </summary>
-            [EnumMember(Value = "SYSTEM")]
+            [EnumMember(Value = "system")]
             System,
             
             /// <summary>
-            /// Enum Transfer for "TRANSFER"
+            /// Enum Transfer for "transfer"
             /// </summary>
-            [EnumMember(Value = "TRANSFER")]
+            [EnumMember(Value = "transfer")]
             Transfer,
             
             /// <summary>
-            /// Enum TransferConference for "TRANSFER_CONFERENCE"
+            /// Enum Transferconference for "transfer.conference"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_CONFERENCE")]
-            TransferConference,
+            [EnumMember(Value = "transfer.conference")]
+            Transferconference,
             
             /// <summary>
-            /// Enum TransferConsult for "TRANSFER_CONSULT"
+            /// Enum Transferconsult for "transfer.consult"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_CONSULT")]
-            TransferConsult,
+            [EnumMember(Value = "transfer.consult")]
+            Transferconsult,
             
             /// <summary>
-            /// Enum TransferForward for "TRANSFER_FORWARD"
+            /// Enum Transferforward for "transfer.forward"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_FORWARD")]
-            TransferForward,
+            [EnumMember(Value = "transfer.forward")]
+            Transferforward,
             
             /// <summary>
-            /// Enum TransferNoAnswer for "TRANSFER_NO_ANSWER"
+            /// Enum Transfernoanswer for "transfer.noanswer"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NO_ANSWER")]
-            TransferNoAnswer,
+            [EnumMember(Value = "transfer.noanswer")]
+            Transfernoanswer,
             
             /// <summary>
-            /// Enum TransferNotAvailable for "TRANSFER_NOT_AVAILABLE"
+            /// Enum Transfernotavailable for "transfer.notavailable"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_NOT_AVAILABLE")]
-            TransferNotAvailable,
+            [EnumMember(Value = "transfer.notavailable")]
+            Transfernotavailable,
             
             /// <summary>
-            /// Enum TransportFailure for "TRANSPORT_FAILURE"
+            /// Enum Transportfailure for "transport.failure"
             /// </summary>
-            [EnumMember(Value = "TRANSPORT_FAILURE")]
-            TransportFailure,
+            [EnumMember(Value = "transport.failure")]
+            Transportfailure,
             
             /// <summary>
-            /// Enum Error for "ERROR"
+            /// Enum Error for "error"
             /// </summary>
-            [EnumMember(Value = "ERROR")]
+            [EnumMember(Value = "error")]
             Error,
             
             /// <summary>
-            /// Enum Peer for "PEER"
+            /// Enum Peer for "peer"
             /// </summary>
-            [EnumMember(Value = "PEER")]
+            [EnumMember(Value = "peer")]
             Peer,
             
             /// <summary>
-            /// Enum Other for "OTHER"
+            /// Enum Other for "other"
             /// </summary>
-            [EnumMember(Value = "OTHER")]
+            [EnumMember(Value = "other")]
             Other,
             
             /// <summary>
-            /// Enum Spam for "SPAM"
+            /// Enum Spam for "spam"
             /// </summary>
-            [EnumMember(Value = "SPAM")]
+            [EnumMember(Value = "spam")]
             Spam
         }
         /// <summary>

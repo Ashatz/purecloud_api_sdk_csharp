@@ -19,7 +19,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletepresenceid"></a>
 
-## [**OrganizationPresence**](OrganizationPresence.html) DeletePresenceId (string presenceId)
+## void DeletePresenceId (string presenceId)
 
 Delete a Presence Definition
 
@@ -49,8 +49,7 @@ namespace Example
             try
             {
                 // Delete a Presence Definition
-                OrganizationPresence result = apiInstance.DeletePresenceId(presenceId);
-                Debug.WriteLine(result);
+                apiInstance.DeletePresenceId(presenceId);
             }
             catch (Exception e)
             {
@@ -71,7 +70,7 @@ namespace Example
 
 ### Return type
 
-[**OrganizationPresence**](OrganizationPresence.html)
+void (empty response body)
 
 <a name="getpresenceid"></a>
 

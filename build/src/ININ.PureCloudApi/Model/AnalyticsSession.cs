@@ -136,8 +136,16 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ScriptId">ScriptId.</param>
         /// <param name="SkipEnabled">SkipEnabled (default to false).</param>
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
+        /// <param name="CobrowseRole">CobrowseRole.</param>
+        /// <param name="CobrowseRoomId">CobrowseRoomId.</param>
+        /// <param name="MediaBridgeId">MediaBridgeId.</param>
+        /// <param name="ScreenShareAddressSelf">ScreenShareAddressSelf.</param>
+        /// <param name="SharingScreen">SharingScreen (default to false).</param>
+        /// <param name="ScreenShareRoomId">ScreenShareRoomId.</param>
+        /// <param name="VideoRoomId">VideoRoomId.</param>
+        /// <param name="VideoAddressSelf">VideoAddressSelf.</param>
         /// <param name="Segments">Segments.</param>
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.MediaType = MediaType;
             this.SessionId = SessionId;
@@ -170,6 +178,22 @@ namespace ININ.PureCloudApi.Model
                 this.SkipEnabled = SkipEnabled;
             }
             this.TimeoutSeconds = TimeoutSeconds;
+            this.CobrowseRole = CobrowseRole;
+            this.CobrowseRoomId = CobrowseRoomId;
+            this.MediaBridgeId = MediaBridgeId;
+            this.ScreenShareAddressSelf = ScreenShareAddressSelf;
+            // use default value if no "SharingScreen" provided
+            if (SharingScreen == null)
+            {
+                this.SharingScreen = false;
+            }
+            else
+            {
+                this.SharingScreen = SharingScreen;
+            }
+            this.ScreenShareRoomId = ScreenShareRoomId;
+            this.VideoRoomId = VideoRoomId;
+            this.VideoAddressSelf = VideoAddressSelf;
             this.Segments = Segments;
         }
         
@@ -280,6 +304,46 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
         public int? TimeoutSeconds { get; set; }
         /// <summary>
+        /// Gets or Sets CobrowseRole
+        /// </summary>
+        [DataMember(Name="cobrowseRole", EmitDefaultValue=false)]
+        public string CobrowseRole { get; set; }
+        /// <summary>
+        /// Gets or Sets CobrowseRoomId
+        /// </summary>
+        [DataMember(Name="cobrowseRoomId", EmitDefaultValue=false)]
+        public string CobrowseRoomId { get; set; }
+        /// <summary>
+        /// Gets or Sets MediaBridgeId
+        /// </summary>
+        [DataMember(Name="mediaBridgeId", EmitDefaultValue=false)]
+        public string MediaBridgeId { get; set; }
+        /// <summary>
+        /// Gets or Sets ScreenShareAddressSelf
+        /// </summary>
+        [DataMember(Name="screenShareAddressSelf", EmitDefaultValue=false)]
+        public string ScreenShareAddressSelf { get; set; }
+        /// <summary>
+        /// Gets or Sets SharingScreen
+        /// </summary>
+        [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
+        public bool? SharingScreen { get; set; }
+        /// <summary>
+        /// Gets or Sets ScreenShareRoomId
+        /// </summary>
+        [DataMember(Name="screenShareRoomId", EmitDefaultValue=false)]
+        public string ScreenShareRoomId { get; set; }
+        /// <summary>
+        /// Gets or Sets VideoRoomId
+        /// </summary>
+        [DataMember(Name="videoRoomId", EmitDefaultValue=false)]
+        public string VideoRoomId { get; set; }
+        /// <summary>
+        /// Gets or Sets VideoAddressSelf
+        /// </summary>
+        [DataMember(Name="videoAddressSelf", EmitDefaultValue=false)]
+        public string VideoAddressSelf { get; set; }
+        /// <summary>
         /// Gets or Sets Segments
         /// </summary>
         [DataMember(Name="segments", EmitDefaultValue=false)]
@@ -315,6 +379,14 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
+            sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
+            sb.Append("  CobrowseRoomId: ").Append(CobrowseRoomId).Append("\n");
+            sb.Append("  MediaBridgeId: ").Append(MediaBridgeId).Append("\n");
+            sb.Append("  ScreenShareAddressSelf: ").Append(ScreenShareAddressSelf).Append("\n");
+            sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
+            sb.Append("  ScreenShareRoomId: ").Append(ScreenShareRoomId).Append("\n");
+            sb.Append("  VideoRoomId: ").Append(VideoRoomId).Append("\n");
+            sb.Append("  VideoAddressSelf: ").Append(VideoAddressSelf).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -468,6 +540,46 @@ namespace ININ.PureCloudApi.Model
                     this.TimeoutSeconds.Equals(other.TimeoutSeconds)
                 ) &&
                 (
+                    this.CobrowseRole == other.CobrowseRole ||
+                    this.CobrowseRole != null &&
+                    this.CobrowseRole.Equals(other.CobrowseRole)
+                ) &&
+                (
+                    this.CobrowseRoomId == other.CobrowseRoomId ||
+                    this.CobrowseRoomId != null &&
+                    this.CobrowseRoomId.Equals(other.CobrowseRoomId)
+                ) &&
+                (
+                    this.MediaBridgeId == other.MediaBridgeId ||
+                    this.MediaBridgeId != null &&
+                    this.MediaBridgeId.Equals(other.MediaBridgeId)
+                ) &&
+                (
+                    this.ScreenShareAddressSelf == other.ScreenShareAddressSelf ||
+                    this.ScreenShareAddressSelf != null &&
+                    this.ScreenShareAddressSelf.Equals(other.ScreenShareAddressSelf)
+                ) &&
+                (
+                    this.SharingScreen == other.SharingScreen ||
+                    this.SharingScreen != null &&
+                    this.SharingScreen.Equals(other.SharingScreen)
+                ) &&
+                (
+                    this.ScreenShareRoomId == other.ScreenShareRoomId ||
+                    this.ScreenShareRoomId != null &&
+                    this.ScreenShareRoomId.Equals(other.ScreenShareRoomId)
+                ) &&
+                (
+                    this.VideoRoomId == other.VideoRoomId ||
+                    this.VideoRoomId != null &&
+                    this.VideoRoomId.Equals(other.VideoRoomId)
+                ) &&
+                (
+                    this.VideoAddressSelf == other.VideoAddressSelf ||
+                    this.VideoAddressSelf != null &&
+                    this.VideoAddressSelf.Equals(other.VideoAddressSelf)
+                ) &&
+                (
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
@@ -531,6 +643,22 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();
                 if (this.TimeoutSeconds != null)
                     hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
+                if (this.CobrowseRole != null)
+                    hash = hash * 59 + this.CobrowseRole.GetHashCode();
+                if (this.CobrowseRoomId != null)
+                    hash = hash * 59 + this.CobrowseRoomId.GetHashCode();
+                if (this.MediaBridgeId != null)
+                    hash = hash * 59 + this.MediaBridgeId.GetHashCode();
+                if (this.ScreenShareAddressSelf != null)
+                    hash = hash * 59 + this.ScreenShareAddressSelf.GetHashCode();
+                if (this.SharingScreen != null)
+                    hash = hash * 59 + this.SharingScreen.GetHashCode();
+                if (this.ScreenShareRoomId != null)
+                    hash = hash * 59 + this.ScreenShareRoomId.GetHashCode();
+                if (this.VideoRoomId != null)
+                    hash = hash * 59 + this.VideoRoomId.GetHashCode();
+                if (this.VideoAddressSelf != null)
+                    hash = hash * 59 + this.VideoAddressSelf.GetHashCode();
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
                 return hash;

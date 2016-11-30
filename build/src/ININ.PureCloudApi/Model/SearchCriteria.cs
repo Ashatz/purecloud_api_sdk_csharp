@@ -147,7 +147,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum QueryString for "QUERY_STRING"
             /// </summary>
             [EnumMember(Value = "QUERY_STRING")]
-            QueryString
+            QueryString,
+            
+            /// <summary>
+            /// Enum MatchAll for "MATCH_ALL"
+            /// </summary>
+            [EnumMember(Value = "MATCH_ALL")]
+            MatchAll
         }
         /// <summary>
         /// How to apply this search criteria against other criteria

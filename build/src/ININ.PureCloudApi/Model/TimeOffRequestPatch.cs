@@ -13,32 +13,33 @@ using ININ.PureCloudApi.Client;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// CallbackConversationNotificationUser
+    /// TimeOffRequestPatch
     /// </summary>
     [DataContract]
-    public partial class CallbackConversationNotificationUser :  IEquatable<CallbackConversationNotificationUser>
+    public partial class TimeOffRequestPatch :  IEquatable<TimeOffRequestPatch>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CallbackConversationNotificationUser" /> class.
+        /// Initializes a new instance of the <see cref="TimeOffRequestPatch" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        public CallbackConversationNotificationUser(string Id = null, string Name = null)
+        /// <param name="MarkedAsRead">MarkedAsRead (default to false).</param>
+        public TimeOffRequestPatch(bool? MarkedAsRead = null)
         {
-            this.Id = Id;
-            this.Name = Name;
+            // use default value if no "MarkedAsRead" provided
+            if (MarkedAsRead == null)
+            {
+                this.MarkedAsRead = false;
+            }
+            else
+            {
+                this.MarkedAsRead = MarkedAsRead;
+            }
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Gets or Sets MarkedAsRead
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="markedAsRead", EmitDefaultValue=false)]
+        public bool? MarkedAsRead { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -46,9 +47,8 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CallbackConversationNotificationUser {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("class TimeOffRequestPatch {\n");
+            sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -70,15 +70,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CallbackConversationNotificationUser);
+            return this.Equals(obj as TimeOffRequestPatch);
         }
 
         /// <summary>
-        /// Returns true if CallbackConversationNotificationUser instances are equal
+        /// Returns true if TimeOffRequestPatch instances are equal
         /// </summary>
-        /// <param name="other">Instance of CallbackConversationNotificationUser to be compared</param>
+        /// <param name="other">Instance of TimeOffRequestPatch to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CallbackConversationNotificationUser other)
+        public bool Equals(TimeOffRequestPatch other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -86,14 +86,9 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.MarkedAsRead == other.MarkedAsRead ||
+                    this.MarkedAsRead != null &&
+                    this.MarkedAsRead.Equals(other.MarkedAsRead)
                 );
         }
 
@@ -108,10 +103,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.MarkedAsRead != null)
+                    hash = hash * 59 + this.MarkedAsRead.GetHashCode();
                 return hash;
             }
         }

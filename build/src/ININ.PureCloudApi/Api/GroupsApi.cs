@@ -111,8 +111,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UserEntityListing</returns>
-        UserEntityListing GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        UserEntityListing GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Get group members
@@ -125,8 +126,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
-        ApiResponse<UserEntityListing> GetGroupIdMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        ApiResponse<UserEntityListing> GetGroupIdMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
         /// <summary>
         /// Get a group list
         /// </summary>
@@ -362,8 +364,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UserEntityListing</returns>
-        System.Threading.Tasks.Task<UserEntityListing> GetGroupIdMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<UserEntityListing> GetGroupIdMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Get group members
@@ -376,8 +379,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupIdMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupIdMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
         /// <summary>
         /// Get a group list
         /// </summary>
@@ -1234,10 +1238,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>UserEntityListing</returns>
-        public UserEntityListing GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public UserEntityListing GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = GetGroupIdMembersWithHttpInfo(groupId, pageSize, pageNumber, sortOrder);
+             ApiResponse<UserEntityListing> localVarResponse = GetGroupIdMembersWithHttpInfo(groupId, pageSize, pageNumber, sortOrder, expand);
              return localVarResponse.Data;
         }
 
@@ -1249,8 +1254,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
-        public ApiResponse< UserEntityListing > GetGroupIdMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public ApiResponse< UserEntityListing > GetGroupIdMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -1285,6 +1291,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1319,10 +1326,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of UserEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserEntityListing> GetGroupIdMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<UserEntityListing> GetGroupIdMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = await GetGroupIdMembersAsyncWithHttpInfo(groupId, pageSize, pageNumber, sortOrder);
+             ApiResponse<UserEntityListing> localVarResponse = await GetGroupIdMembersAsyncWithHttpInfo(groupId, pageSize, pageNumber, sortOrder, expand);
              return localVarResponse.Data;
 
         }
@@ -1335,8 +1343,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupIdMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupIdMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -1371,6 +1380,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

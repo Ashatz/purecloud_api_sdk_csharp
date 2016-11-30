@@ -33,21 +33,21 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum None for "NONE"
+            /// Enum None for "none"
             /// </summary>
-            [EnumMember(Value = "NONE")]
+            [EnumMember(Value = "none")]
             None,
             
             /// <summary>
-            /// Enum Active for "ACTIVE"
+            /// Enum Active for "active"
             /// </summary>
-            [EnumMember(Value = "ACTIVE")]
+            [EnumMember(Value = "active")]
             Active,
             
             /// <summary>
-            /// Enum Paused for "PAUSED"
+            /// Enum Paused for "paused"
             /// </summary>
-            [EnumMember(Value = "PAUSED")]
+            [EnumMember(Value = "paused")]
             Paused
         }
         /// <summary>

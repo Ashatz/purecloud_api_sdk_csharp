@@ -110,7 +110,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         List<Recording> GetConversationIdRecordings (string conversationId, int? maxWaitMs = null, string formatId = null);
@@ -123,7 +123,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         ApiResponse<List<Recording>> GetConversationIdRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
@@ -833,7 +833,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         System.Threading.Tasks.Task<List<Recording>> GetConversationIdRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null);
@@ -846,7 +846,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationIdRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
@@ -2187,7 +2187,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         public List<Recording> GetConversationIdRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
@@ -2201,7 +2201,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         public ApiResponse< List<Recording> > GetConversationIdRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
@@ -2269,7 +2269,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         public async System.Threading.Tasks.Task<List<Recording>> GetConversationIdRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null)
@@ -2284,7 +2284,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. (optional, default to 5000)</param>
+        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
         /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationIdRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)

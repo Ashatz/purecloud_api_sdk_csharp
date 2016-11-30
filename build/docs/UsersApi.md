@@ -39,6 +39,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUserIdRoutingskills**](UsersApi.html#postuseridroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
 | [**PostUsers**](UsersApi.html#postusers) | **POST** /api/v2/users | Create user |
 | [**PostUsersAggregatesQuery**](UsersApi.html#postusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
+| [**PostUsersDetailsQuery**](UsersApi.html#postusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostUsersObservationsQuery**](UsersApi.html#postusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
 | [**PutUserIdCallforwarding**](UsersApi.html#putuseridcallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
 | [**PutUserIdOutofoffice**](UsersApi.html#putuseridoutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
@@ -559,7 +560,7 @@ namespace Example
 
 <a name="getuseridadjacents"></a>
 
-## void GetUserIdAdjacents (string userId, List<string> expand = null)
+## [**Adjacents**](Adjacents.html) GetUserIdAdjacents (string userId, List<string> expand = null)
 
 Get adjacents
 
@@ -590,7 +591,8 @@ namespace Example
             try
             {
                 // Get adjacents
-                apiInstance.GetUserIdAdjacents(userId, expand);
+                Adjacents result = apiInstance.GetUserIdAdjacents(userId, expand);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -612,7 +614,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Adjacents**](Adjacents.html)
 
 <a name="getuseridcallforwarding"></a>
 
@@ -672,7 +674,7 @@ namespace Example
 
 <a name="getuseriddirectreports"></a>
 
-## void GetUserIdDirectreports (string userId, List<string> expand = null)
+## [**List&lt;User&gt;**](User.html) GetUserIdDirectreports (string userId, List<string> expand = null)
 
 Get direct reports
 
@@ -703,7 +705,8 @@ namespace Example
             try
             {
                 // Get direct reports
-                apiInstance.GetUserIdDirectreports(userId, expand);
+                List&lt;User&gt; result = apiInstance.GetUserIdDirectreports(userId, expand);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -725,11 +728,11 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**List<User>**](User.html)
 
 <a name="getuseridfavorites"></a>
 
-## void GetUserIdFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
+## [**UserEntityListing**](UserEntityListing.html) GetUserIdFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
 
 Get favorites
 
@@ -763,7 +766,8 @@ namespace Example
             try
             {
                 // Get favorites
-                apiInstance.GetUserIdFavorites(userId, pageSize, pageNumber, sortOrder, expand);
+                UserEntityListing result = apiInstance.GetUserIdFavorites(userId, pageSize, pageNumber, sortOrder, expand);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -788,7 +792,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**UserEntityListing**](UserEntityListing.html)
 
 <a name="getuseridgeolocationsclientid"></a>
 
@@ -1254,7 +1258,7 @@ namespace Example
 
 <a name="getuseridsuperiors"></a>
 
-## void GetUserIdSuperiors (string userId, List<string> expand = null)
+## [**List&lt;User&gt;**](User.html) GetUserIdSuperiors (string userId, List<string> expand = null)
 
 Get superiors
 
@@ -1285,7 +1289,8 @@ namespace Example
             try
             {
                 // Get superiors
-                apiInstance.GetUserIdSuperiors(userId, expand);
+                List&lt;User&gt; result = apiInstance.GetUserIdSuperiors(userId, expand);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -1307,7 +1312,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**List<User>**](User.html)
 
 <a name="getusers"></a>
 
@@ -1892,6 +1897,62 @@ namespace Example
 ### Return type
 
 [**PresenceQueryResponse**](PresenceQueryResponse.html)
+
+<a name="postusersdetailsquery"></a>
+
+## [**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html) PostUsersDetailsQuery (UserDetailsQuery body)
+
+Query for user details
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostUsersDetailsQueryExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UsersApi();
+            var body = new UserDetailsQuery(); // UserDetailsQuery | query
+
+            try
+            {
+                // Query for user details
+                AnalyticsUserDetailsQueryResponse result = apiInstance.PostUsersDetailsQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUsersDetailsQuery: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UserDetailsQuery**](UserDetailsQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html)
 
 <a name="postusersobservationsquery"></a>
 

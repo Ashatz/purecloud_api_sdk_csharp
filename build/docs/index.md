@@ -140,6 +140,10 @@ Console.WriteLine($"Hello, {me.DisplayName}");
 
 The .NET SDK includes a helper class `NotificationHandler` to assist in managing PureCloud notifications. The class will create a single notification channel, or use an existing one, and provides methods to add and remove subscriptions and raises an event with a deserialized notification object whenever one is received.
 
+**WARNING**
+
+The helper uses [WebSocketSharp](https://www.nuget.org/packages/WebSocketSharp)'s websocket implementation. Unfortunately, the package is pre-release only and therefore cannot be included as a dependency in a release package. The dependency must be resolved manually. The nuget page for the package contains instructions for installing the pre-release pacakge.
+
 ### Using NotificationHandler
 
 Create a new instance:
@@ -209,7 +213,7 @@ Console.ReadKey(true);
 
 ### Notification Topics and Classes for Deserialization
 
-The SDK containst a static class, [NotificationTopics](https://github.com/MyPureCloud/purecloud_api_sdk_csharp/blob/master/build/src/ININ.PureCloudApi/Extensions/Client/NotificationTopics.cs), that contains a dictionary of all of the known topics and the types that should be used for deserialization. This class exists to allow an application to dynamically see the defined topics and programatically specify the defined type for a known topic. This class also serves as a reference to the developer to know which classes go with which topics.
+The SDK contains a static class, [NotificationTopics](https://github.com/MyPureCloud/purecloud_api_sdk_csharp/blob/master/build/src/ININ.PureCloudApi/Extensions/Client/NotificationTopics.cs), that contains a dictionary of all of the known topics and the types that should be used for deserialization. This class exists to allow an application to dynamically see the defined topics and programatically specify the defined type for a known topic. This class also serves as a reference to the developer to know which classes go with which topics.
 
 _Note that the deserializer does not use this mapping; it uses the type provided to it when adding a topic subscription._
 
@@ -233,8 +237,8 @@ The quick way is great for compiling using a script or if you just prefer workin
 If you're working inside Visual Studio, adding the files to your project allows you to edit and build inside an IDE.
 
 1. Clone the repo
-2. Add all of the .cs files in the build directory to a project in Visual Studio
-3. Add references for JSON.NET and RestSharp
+2. Open the solution file: [ININ.PureCloudApi.sln](https://github.com/MyPureCloud/purecloud_api_sdk_csharp/blob/master/build/ININ.PureCloudApi.sln)
+3. Resolve/restore dependencies
 4. Build the project in Visual Studio
 
 ### SDK Source Code Generation

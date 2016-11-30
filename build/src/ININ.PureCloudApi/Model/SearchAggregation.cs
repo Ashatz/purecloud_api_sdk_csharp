@@ -52,6 +52,12 @@ namespace ININ.PureCloudApi.Model
             Average,
             
             /// <summary>
+            /// Enum Term for "TERM"
+            /// </summary>
+            [EnumMember(Value = "TERM")]
+            Term,
+            
+            /// <summary>
             /// Enum Contains for "CONTAINS"
             /// </summary>
             [EnumMember(Value = "CONTAINS")]

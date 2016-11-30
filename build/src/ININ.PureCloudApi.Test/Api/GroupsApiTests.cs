@@ -113,7 +113,8 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            var response = instance.GetGroupIdMembers(groupId, pageSize, pageNumber, sortOrder);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetGroupIdMembers(groupId, pageSize, pageNumber, sortOrder, expand);
             Assert.IsInstanceOf<UserEntityListing> (response, "response is UserEntityListing");
         }
         

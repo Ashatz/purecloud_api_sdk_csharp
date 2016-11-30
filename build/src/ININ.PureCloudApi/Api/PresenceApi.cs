@@ -22,8 +22,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <returns>OrganizationPresence</returns>
-        OrganizationPresence DeletePresenceId (string presenceId);
+        /// <returns></returns>
+        void DeletePresenceId (string presenceId);
 
         /// <summary>
         /// Delete a Presence Definition
@@ -33,8 +33,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <returns>ApiResponse of OrganizationPresence</returns>
-        ApiResponse<OrganizationPresence> DeletePresenceIdWithHttpInfo (string presenceId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeletePresenceIdWithHttpInfo (string presenceId);
         /// <summary>
         /// Get a Presence Definition
         /// </summary>
@@ -206,8 +206,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <returns>Task of OrganizationPresence</returns>
-        System.Threading.Tasks.Task<OrganizationPresence> DeletePresenceIdAsync (string presenceId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeletePresenceIdAsync (string presenceId);
 
         /// <summary>
         /// Delete a Presence Definition
@@ -217,8 +217,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresenceIdAsyncWithHttpInfo (string presenceId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresenceIdAsyncWithHttpInfo (string presenceId);
         /// <summary>
         /// Get a Presence Definition
         /// </summary>
@@ -475,11 +475,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <returns>OrganizationPresence</returns>
-        public OrganizationPresence DeletePresenceId (string presenceId)
+        /// <returns></returns>
+        public void DeletePresenceId (string presenceId)
         {
-             ApiResponse<OrganizationPresence> localVarResponse = DeletePresenceIdWithHttpInfo(presenceId);
-             return localVarResponse.Data;
+             DeletePresenceIdWithHttpInfo(presenceId);
         }
 
         /// <summary>
@@ -487,8 +486,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <returns>ApiResponse of OrganizationPresence</returns>
-        public ApiResponse< OrganizationPresence > DeletePresenceIdWithHttpInfo (string presenceId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeletePresenceIdWithHttpInfo (string presenceId)
         {
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
@@ -540,10 +539,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeletePresenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OrganizationPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrganizationPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
@@ -551,11 +550,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <returns>Task of OrganizationPresence</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresence> DeletePresenceIdAsync (string presenceId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeletePresenceIdAsync (string presenceId)
         {
-             ApiResponse<OrganizationPresence> localVarResponse = await DeletePresenceIdAsyncWithHttpInfo(presenceId);
-             return localVarResponse.Data;
+             await DeletePresenceIdAsyncWithHttpInfo(presenceId);
 
         }
 
@@ -564,8 +562,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
-        /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresenceIdAsyncWithHttpInfo (string presenceId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresenceIdAsyncWithHttpInfo (string presenceId)
         {
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
@@ -617,10 +615,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeletePresenceId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OrganizationPresence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrganizationPresence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPresence)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>

@@ -288,6 +288,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostUsersDetailsQuery
+        /// </summary>
+        [Test]
+        public void PostUsersDetailsQueryTest()
+        {
+            // TODO: add unit test for the method 'PostUsersDetailsQuery'
+            UserDetailsQuery body = null; // TODO: replace null with proper value
+            var response = instance.PostUsersDetailsQuery(body);
+            Assert.IsInstanceOf<AnalyticsUserDetailsQueryResponse> (response, "response is AnalyticsUserDetailsQueryResponse");
+        }
+        
+        /// <summary>
         /// Test PostUsersObservationsQuery
         /// </summary>
         [Test]

@@ -21,7 +21,7 @@ title: CallConversationNotificationParticipants
 | **Held** | **bool?** |  | [optional] |
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
-| **User** | [**CallbackConversationNotificationUser**](CallbackConversationNotificationUser.html) |  | [optional] |
+| **User** | [**DocumentDataNotificationCreatedBy**](DocumentDataNotificationCreatedBy.html) |  | [optional] |
 | **Queue** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ErrorInfo** | [**CallConversationNotificationErrorInfo**](CallConversationNotificationErrorInfo.html) |  | [optional] |

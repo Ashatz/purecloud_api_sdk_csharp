@@ -34,15 +34,15 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Q850 for "Q_850"
+            /// Enum Q850 for "q850"
             /// </summary>
-            [EnumMember(Value = "Q_850")]
+            [EnumMember(Value = "q850")]
             Q850,
             
             /// <summary>
-            /// Enum Sip for "SIP"
+            /// Enum Sip for "sip"
             /// </summary>
-            [EnumMember(Value = "SIP")]
+            [EnumMember(Value = "sip")]
             Sip
         }
         /// <summary>

@@ -1,7 +1,7 @@
 ---
-title: ConversationNotificationScreenShare
+title: ConversationNotificationScreenshare
 ---
-## ININ.PureCloudApi.Model.ConversationNotificationScreenShare
+## ININ.PureCloudApi.Model.ConversationNotificationScreenshare
 
 ## Properties
 

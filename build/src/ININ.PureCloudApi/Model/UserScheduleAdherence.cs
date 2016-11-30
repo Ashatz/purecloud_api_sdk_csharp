@@ -79,13 +79,7 @@ namespace ININ.PureCloudApi.Model
             /// Enum Unavailable for "Unavailable"
             /// </summary>
             [EnumMember(Value = "Unavailable")]
-            Unavailable,
-            
-            /// <summary>
-            /// Enum Blank for "BLANK"
-            /// </summary>
-            [EnumMember(Value = "BLANK")]
-            Blank
+            Unavailable
         }
         /// <summary>
         /// Actual underlying system presence value
@@ -160,13 +154,7 @@ namespace ININ.PureCloudApi.Model
             /// Enum Break for "Break"
             /// </summary>
             [EnumMember(Value = "Break")]
-            Break,
-            
-            /// <summary>
-            /// Enum Blank for "BLANK"
-            /// </summary>
-            [EnumMember(Value = "BLANK")]
-            Blank
+            Break
         }
         /// <summary>
         /// Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue
@@ -274,13 +262,7 @@ namespace ININ.PureCloudApi.Model
             /// Enum Unavailable for "Unavailable"
             /// </summary>
             [EnumMember(Value = "Unavailable")]
-            Unavailable,
-            
-            /// <summary>
-            /// Enum Blank for "BLANK"
-            /// </summary>
-            [EnumMember(Value = "BLANK")]
-            Blank
+            Unavailable
         }
         /// <summary>
         /// The user's current adherence state

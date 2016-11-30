@@ -61,8 +61,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeletePresenceId'
             string presenceId = null; // TODO: replace null with proper value
-            var response = instance.DeletePresenceId(presenceId);
-            Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
+            instance.DeletePresenceId(presenceId);
+            
         }
         
         /// <summary>

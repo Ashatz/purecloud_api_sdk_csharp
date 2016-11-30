@@ -1433,7 +1433,7 @@ namespace ININ.PureCloudApi.Api
         /// Get Trunk Base Settings listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1441,14 +1441,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>TrunkBaseEntityListing</returns>
-        TrunkBaseEntityListing GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
+        TrunkBaseEntityListing GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null);
 
         /// <summary>
         /// Get Trunk Base Settings listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1456,8 +1457,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of TrunkBaseEntityListing</returns>
-        ApiResponse<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
+        ApiResponse<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null);
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
         /// </summary>
@@ -1508,7 +1510,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a Trunk Base Settings object by ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -1519,7 +1521,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a Trunk Base Settings object by ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -3996,7 +3998,7 @@ namespace ININ.PureCloudApi.Api
         /// Get Trunk Base Settings listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4004,14 +4006,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of TrunkBaseEntityListing</returns>
-        System.Threading.Tasks.Task<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
+        System.Threading.Tasks.Task<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null);
 
         /// <summary>
         /// Get Trunk Base Settings listing
         /// </summary>
         /// <remarks>
-        /// 
+        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4019,8 +4022,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBaseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null);
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
         /// </summary>
@@ -4071,7 +4075,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a Trunk Base Settings object by ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -4082,7 +4086,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a Trunk Base Settings object by ID
         /// </summary>
         /// <remarks>
-        /// 
+        /// Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -14890,7 +14894,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get Trunk Base Settings listing 
+        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -14898,15 +14902,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>TrunkBaseEntityListing</returns>
-        public TrunkBaseEntityListing GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
+        public TrunkBaseEntityListing GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null)
         {
-             ApiResponse<TrunkBaseEntityListing> localVarResponse = GetProvidersEdgesTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
+             ApiResponse<TrunkBaseEntityListing> localVarResponse = GetProvidersEdgesTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, expand);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Trunk Base Settings listing 
+        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -14914,8 +14919,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of TrunkBaseEntityListing</returns>
-        public ApiResponse< TrunkBaseEntityListing > GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
+        public ApiResponse< TrunkBaseEntityListing > GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
@@ -14948,6 +14954,7 @@ namespace ININ.PureCloudApi.Api
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (recordingEnabled != null) localVarQueryParams.Add("recordingEnabled", Configuration.ApiClient.ParameterToString(recordingEnabled)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -14975,7 +14982,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get Trunk Base Settings listing 
+        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -14983,16 +14990,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of TrunkBaseEntityListing</returns>
-        public async System.Threading.Tasks.Task<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
+        public async System.Threading.Tasks.Task<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null)
         {
-             ApiResponse<TrunkBaseEntityListing> localVarResponse = await GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
+             ApiResponse<TrunkBaseEntityListing> localVarResponse = await GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, expand);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get Trunk Base Settings listing 
+        /// Get Trunk Base Settings listing Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -15000,8 +15008,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBaseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
@@ -15034,6 +15043,7 @@ namespace ININ.PureCloudApi.Api
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (recordingEnabled != null) localVarQueryParams.Add("recordingEnabled", Configuration.ApiClient.ParameterToString(recordingEnabled)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -15373,7 +15383,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get a Trunk Base Settings object by ID 
+        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -15385,7 +15395,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get a Trunk Base Settings object by ID 
+        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -15449,7 +15459,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get a Trunk Base Settings object by ID 
+        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
@@ -15462,7 +15472,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get a Trunk Base Settings object by ID 
+        /// Get a Trunk Base Settings object by ID Managed properties will not be returned unless the user is assigned the managed:all:all permission.
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>

@@ -7,13 +7,12 @@ title: JsonNode
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Array** | **bool?** |  | [optional] [default to false]|
-| **_Null** | **bool?** |  | [optional] [default to false]|
 | **NodeType** | **string** |  | [optional] |
 | **_Object** | **bool?** |  | [optional] [default to false]|
 | **Boolean** | **bool?** |  | [optional] [default to false]|
 | **Number** | **bool?** |  | [optional] [default to false]|
 | **_Float** | **bool?** |  | [optional] [default to false]|
+| **Pojo** | **bool?** |  | [optional] [default to false]|
 | **IntegralNumber** | **bool?** |  | [optional] [default to false]|
 | **FloatingPointNumber** | **bool?** |  | [optional] [default to false]|
 | **_Short** | **bool?** |  | [optional] [default to false]|
@@ -27,7 +26,8 @@ title: JsonNode
 | **ValueNode** | **bool?** |  | [optional] [default to false]|
 | **ContainerNode** | **bool?** |  | [optional] [default to false]|
 | **MissingNode** | **bool?** |  | [optional] [default to false]|
-| **Pojo** | **bool?** |  | [optional] [default to false]|
+| **Array** | **bool?** |  | [optional] [default to false]|
+| **_Null** | **bool?** |  | [optional] [default to false]|
 {: class="table table-striped"}
 
 

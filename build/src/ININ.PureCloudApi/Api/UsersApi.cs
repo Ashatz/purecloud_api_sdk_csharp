@@ -218,8 +218,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns></returns>
-        void GetUserIdAdjacents (string userId, List<string> expand = null);
+        /// <returns>Adjacents</returns>
+        Adjacents GetUserIdAdjacents (string userId, List<string> expand = null);
 
         /// <summary>
         /// Get adjacents
@@ -230,8 +230,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetUserIdAdjacentsWithHttpInfo (string userId, List<string> expand = null);
+        /// <returns>ApiResponse of Adjacents</returns>
+        ApiResponse<Adjacents> GetUserIdAdjacentsWithHttpInfo (string userId, List<string> expand = null);
         /// <summary>
         /// Get a user&#39;s CallForwarding
         /// </summary>
@@ -262,8 +262,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns></returns>
-        void GetUserIdDirectreports (string userId, List<string> expand = null);
+        /// <returns>List&lt;User&gt;</returns>
+        List<User> GetUserIdDirectreports (string userId, List<string> expand = null);
 
         /// <summary>
         /// Get direct reports
@@ -274,8 +274,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetUserIdDirectreportsWithHttpInfo (string userId, List<string> expand = null);
+        /// <returns>ApiResponse of List&lt;User&gt;</returns>
+        ApiResponse<List<User>> GetUserIdDirectreportsWithHttpInfo (string userId, List<string> expand = null);
         /// <summary>
         /// Get favorites
         /// </summary>
@@ -288,8 +288,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns></returns>
-        void GetUserIdFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
+        /// <returns>UserEntityListing</returns>
+        UserEntityListing GetUserIdFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Get favorites
@@ -303,8 +303,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetUserIdFavoritesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
+        /// <returns>ApiResponse of UserEntityListing</returns>
+        ApiResponse<UserEntityListing> GetUserIdFavoritesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
         /// <summary>
         /// Get a user&#39;s Geolocation
         /// </summary>
@@ -496,8 +496,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns></returns>
-        void GetUserIdSuperiors (string userId, List<string> expand = null);
+        /// <returns>List&lt;User&gt;</returns>
+        List<User> GetUserIdSuperiors (string userId, List<string> expand = null);
 
         /// <summary>
         /// Get superiors
@@ -508,8 +508,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetUserIdSuperiorsWithHttpInfo (string userId, List<string> expand = null);
+        /// <returns>ApiResponse of List&lt;User&gt;</returns>
+        ApiResponse<List<User>> GetUserIdSuperiorsWithHttpInfo (string userId, List<string> expand = null);
         /// <summary>
         /// Get the list of available users.
         /// </summary>
@@ -744,6 +744,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of PresenceQueryResponse</returns>
         ApiResponse<PresenceQueryResponse> PostUsersAggregatesQueryWithHttpInfo (AggregationQuery body);
+        /// <summary>
+        /// Query for user details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AnalyticsUserDetailsQueryResponse</returns>
+        AnalyticsUserDetailsQueryResponse PostUsersDetailsQuery (UserDetailsQuery body);
+
+        /// <summary>
+        /// Query for user details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AnalyticsUserDetailsQueryResponse</returns>
+        ApiResponse<AnalyticsUserDetailsQueryResponse> PostUsersDetailsQueryWithHttpInfo (UserDetailsQuery body);
         /// <summary>
         /// Query for user observations
         /// </summary>
@@ -1157,8 +1178,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetUserIdAdjacentsAsync (string userId, List<string> expand = null);
+        /// <returns>Task of Adjacents</returns>
+        System.Threading.Tasks.Task<Adjacents> GetUserIdAdjacentsAsync (string userId, List<string> expand = null);
 
         /// <summary>
         /// Get adjacents
@@ -1169,8 +1190,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetUserIdAdjacentsAsyncWithHttpInfo (string userId, List<string> expand = null);
+        /// <returns>Task of ApiResponse (Adjacents)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Adjacents>> GetUserIdAdjacentsAsyncWithHttpInfo (string userId, List<string> expand = null);
         /// <summary>
         /// Get a user&#39;s CallForwarding
         /// </summary>
@@ -1201,8 +1222,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetUserIdDirectreportsAsync (string userId, List<string> expand = null);
+        /// <returns>Task of List&lt;User&gt;</returns>
+        System.Threading.Tasks.Task<List<User>> GetUserIdDirectreportsAsync (string userId, List<string> expand = null);
 
         /// <summary>
         /// Get direct reports
@@ -1213,8 +1234,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetUserIdDirectreportsAsyncWithHttpInfo (string userId, List<string> expand = null);
+        /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<User>>> GetUserIdDirectreportsAsyncWithHttpInfo (string userId, List<string> expand = null);
         /// <summary>
         /// Get favorites
         /// </summary>
@@ -1227,8 +1248,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetUserIdFavoritesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
+        /// <returns>Task of UserEntityListing</returns>
+        System.Threading.Tasks.Task<UserEntityListing> GetUserIdFavoritesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Get favorites
@@ -1242,8 +1263,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetUserIdFavoritesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
+        /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUserIdFavoritesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
         /// <summary>
         /// Get a user&#39;s Geolocation
         /// </summary>
@@ -1435,8 +1456,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetUserIdSuperiorsAsync (string userId, List<string> expand = null);
+        /// <returns>Task of List&lt;User&gt;</returns>
+        System.Threading.Tasks.Task<List<User>> GetUserIdSuperiorsAsync (string userId, List<string> expand = null);
 
         /// <summary>
         /// Get superiors
@@ -1447,8 +1468,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetUserIdSuperiorsAsyncWithHttpInfo (string userId, List<string> expand = null);
+        /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<User>>> GetUserIdSuperiorsAsyncWithHttpInfo (string userId, List<string> expand = null);
         /// <summary>
         /// Get the list of available users.
         /// </summary>
@@ -1683,6 +1704,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (PresenceQueryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PresenceQueryResponse>> PostUsersAggregatesQueryAsyncWithHttpInfo (AggregationQuery body);
+        /// <summary>
+        /// Query for user details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AnalyticsUserDetailsQueryResponse</returns>
+        System.Threading.Tasks.Task<AnalyticsUserDetailsQueryResponse> PostUsersDetailsQueryAsync (UserDetailsQuery body);
+
+        /// <summary>
+        /// Query for user details
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AnalyticsUserDetailsQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsQueryResponse>> PostUsersDetailsQueryAsyncWithHttpInfo (UserDetailsQuery body);
         /// <summary>
         /// Query for user observations
         /// </summary>
@@ -3375,10 +3417,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns></returns>
-        public void GetUserIdAdjacents (string userId, List<string> expand = null)
+        /// <returns>Adjacents</returns>
+        public Adjacents GetUserIdAdjacents (string userId, List<string> expand = null)
         {
-             GetUserIdAdjacentsWithHttpInfo(userId, expand);
+             ApiResponse<Adjacents> localVarResponse = GetUserIdAdjacentsWithHttpInfo(userId, expand);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -3387,8 +3430,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetUserIdAdjacentsWithHttpInfo (string userId, List<string> expand = null)
+        /// <returns>ApiResponse of Adjacents</returns>
+        public ApiResponse< Adjacents > GetUserIdAdjacentsWithHttpInfo (string userId, List<string> expand = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3441,10 +3484,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUserIdAdjacents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Adjacents>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (Adjacents) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Adjacents)));
+            
         }
 
         /// <summary>
@@ -3453,10 +3496,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetUserIdAdjacentsAsync (string userId, List<string> expand = null)
+        /// <returns>Task of Adjacents</returns>
+        public async System.Threading.Tasks.Task<Adjacents> GetUserIdAdjacentsAsync (string userId, List<string> expand = null)
         {
-             await GetUserIdAdjacentsAsyncWithHttpInfo(userId, expand);
+             ApiResponse<Adjacents> localVarResponse = await GetUserIdAdjacentsAsyncWithHttpInfo(userId, expand);
+             return localVarResponse.Data;
 
         }
 
@@ -3466,8 +3510,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUserIdAdjacentsAsyncWithHttpInfo (string userId, List<string> expand = null)
+        /// <returns>Task of ApiResponse (Adjacents)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Adjacents>> GetUserIdAdjacentsAsyncWithHttpInfo (string userId, List<string> expand = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3520,10 +3564,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUserIdAdjacents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Adjacents>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (Adjacents) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Adjacents)));
+            
         }
 
         /// <summary>
@@ -3685,10 +3729,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns></returns>
-        public void GetUserIdDirectreports (string userId, List<string> expand = null)
+        /// <returns>List&lt;User&gt;</returns>
+        public List<User> GetUserIdDirectreports (string userId, List<string> expand = null)
         {
-             GetUserIdDirectreportsWithHttpInfo(userId, expand);
+             ApiResponse<List<User>> localVarResponse = GetUserIdDirectreportsWithHttpInfo(userId, expand);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -3697,8 +3742,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetUserIdDirectreportsWithHttpInfo (string userId, List<string> expand = null)
+        /// <returns>ApiResponse of List&lt;User&gt;</returns>
+        public ApiResponse< List<User> > GetUserIdDirectreportsWithHttpInfo (string userId, List<string> expand = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3751,10 +3796,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUserIdDirectreports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<List<User>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (List<User>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<User>)));
+            
         }
 
         /// <summary>
@@ -3763,10 +3808,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetUserIdDirectreportsAsync (string userId, List<string> expand = null)
+        /// <returns>Task of List&lt;User&gt;</returns>
+        public async System.Threading.Tasks.Task<List<User>> GetUserIdDirectreportsAsync (string userId, List<string> expand = null)
         {
-             await GetUserIdDirectreportsAsyncWithHttpInfo(userId, expand);
+             ApiResponse<List<User>> localVarResponse = await GetUserIdDirectreportsAsyncWithHttpInfo(userId, expand);
+             return localVarResponse.Data;
 
         }
 
@@ -3776,8 +3822,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUserIdDirectreportsAsyncWithHttpInfo (string userId, List<string> expand = null)
+        /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<User>>> GetUserIdDirectreportsAsyncWithHttpInfo (string userId, List<string> expand = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3830,10 +3876,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUserIdDirectreports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<List<User>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (List<User>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<User>)));
+            
         }
 
         /// <summary>
@@ -3845,10 +3891,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns></returns>
-        public void GetUserIdFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
+        /// <returns>UserEntityListing</returns>
+        public UserEntityListing GetUserIdFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
-             GetUserIdFavoritesWithHttpInfo(userId, pageSize, pageNumber, sortOrder, expand);
+             ApiResponse<UserEntityListing> localVarResponse = GetUserIdFavoritesWithHttpInfo(userId, pageSize, pageNumber, sortOrder, expand);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -3860,8 +3907,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetUserIdFavoritesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
+        /// <returns>ApiResponse of UserEntityListing</returns>
+        public ApiResponse< UserEntityListing > GetUserIdFavoritesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3917,10 +3964,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUserIdFavorites: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (UserEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
+            
         }
 
         /// <summary>
@@ -3932,10 +3979,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetUserIdFavoritesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
+        /// <returns>Task of UserEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserEntityListing> GetUserIdFavoritesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
-             await GetUserIdFavoritesAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder, expand);
+             ApiResponse<UserEntityListing> localVarResponse = await GetUserIdFavoritesAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder, expand);
+             return localVarResponse.Data;
 
         }
 
@@ -3948,8 +3996,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUserIdFavoritesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
+        /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUserIdFavoritesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -4005,10 +4053,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUserIdFavorites: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (UserEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
+            
         }
 
         /// <summary>
@@ -5289,10 +5337,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns></returns>
-        public void GetUserIdSuperiors (string userId, List<string> expand = null)
+        /// <returns>List&lt;User&gt;</returns>
+        public List<User> GetUserIdSuperiors (string userId, List<string> expand = null)
         {
-             GetUserIdSuperiorsWithHttpInfo(userId, expand);
+             ApiResponse<List<User>> localVarResponse = GetUserIdSuperiorsWithHttpInfo(userId, expand);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -5301,8 +5350,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetUserIdSuperiorsWithHttpInfo (string userId, List<string> expand = null)
+        /// <returns>ApiResponse of List&lt;User&gt;</returns>
+        public ApiResponse< List<User> > GetUserIdSuperiorsWithHttpInfo (string userId, List<string> expand = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -5355,10 +5404,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUserIdSuperiors: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<List<User>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (List<User>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<User>)));
+            
         }
 
         /// <summary>
@@ -5367,10 +5416,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetUserIdSuperiorsAsync (string userId, List<string> expand = null)
+        /// <returns>Task of List&lt;User&gt;</returns>
+        public async System.Threading.Tasks.Task<List<User>> GetUserIdSuperiorsAsync (string userId, List<string> expand = null)
         {
-             await GetUserIdSuperiorsAsyncWithHttpInfo(userId, expand);
+             ApiResponse<List<User>> localVarResponse = await GetUserIdSuperiorsAsyncWithHttpInfo(userId, expand);
+             return localVarResponse.Data;
 
         }
 
@@ -5380,8 +5430,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUserIdSuperiorsAsyncWithHttpInfo (string userId, List<string> expand = null)
+        /// <returns>Task of ApiResponse (List&lt;User&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<User>>> GetUserIdSuperiorsAsyncWithHttpInfo (string userId, List<string> expand = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -5434,10 +5484,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUserIdSuperiors: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<List<User>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (List<User>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<User>)));
+            
         }
 
         /// <summary>
@@ -7207,6 +7257,173 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<PresenceQueryResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PresenceQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PresenceQueryResponse)));
+            
+        }
+
+        /// <summary>
+        /// Query for user details 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AnalyticsUserDetailsQueryResponse</returns>
+        public AnalyticsUserDetailsQueryResponse PostUsersDetailsQuery (UserDetailsQuery body)
+        {
+             ApiResponse<AnalyticsUserDetailsQueryResponse> localVarResponse = PostUsersDetailsQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for user details 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AnalyticsUserDetailsQueryResponse</returns>
+        public ApiResponse< AnalyticsUserDetailsQueryResponse > PostUsersDetailsQueryWithHttpInfo (UserDetailsQuery body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersDetailsQuery");
+
+            var localVarPath = "/api/v2/analytics/users/details/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersDetailsQuery: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersDetailsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsUserDetailsQueryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AnalyticsUserDetailsQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsUserDetailsQueryResponse)));
+            
+        }
+
+        /// <summary>
+        /// Query for user details 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AnalyticsUserDetailsQueryResponse</returns>
+        public async System.Threading.Tasks.Task<AnalyticsUserDetailsQueryResponse> PostUsersDetailsQueryAsync (UserDetailsQuery body)
+        {
+             ApiResponse<AnalyticsUserDetailsQueryResponse> localVarResponse = await PostUsersDetailsQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for user details 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AnalyticsUserDetailsQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsUserDetailsQueryResponse>> PostUsersDetailsQueryAsyncWithHttpInfo (UserDetailsQuery body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersDetailsQuery");
+
+            var localVarPath = "/api/v2/analytics/users/details/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersDetailsQuery: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersDetailsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsUserDetailsQueryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AnalyticsUserDetailsQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsUserDetailsQueryResponse)));
             
         }
 

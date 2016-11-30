@@ -66,6 +66,71 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetManagementunitsMuIdUsersUserIdTimeoffrequests
+        /// </summary>
+        [Test]
+        public void GetManagementunitsMuIdUsersUserIdTimeoffrequestsTest()
+        {
+            // TODO: add unit test for the method 'GetManagementunitsMuIdUsersUserIdTimeoffrequests'
+            string muId = null; // TODO: replace null with proper value
+            string userId = null; // TODO: replace null with proper value
+            bool? recentlyReviewed = null; // TODO: replace null with proper value
+            var response = instance.GetManagementunitsMuIdUsersUserIdTimeoffrequests(muId, userId, recentlyReviewed);
+            Assert.IsInstanceOf<TimeOffRequestList> (response, "response is TimeOffRequestList");
+        }
+        
+        /// <summary>
+        /// Test GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId
+        /// </summary>
+        [Test]
+        public void GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestIdTest()
+        {
+            // TODO: add unit test for the method 'GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId'
+            string muId = null; // TODO: replace null with proper value
+            string userId = null; // TODO: replace null with proper value
+            string timeOffRequestId = null; // TODO: replace null with proper value
+            var response = instance.GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId(muId, userId, timeOffRequestId);
+            Assert.IsInstanceOf<TimeOffRequest> (response, "response is TimeOffRequest");
+        }
+        
+        /// <summary>
+        /// Test GetTimeoffrequests
+        /// </summary>
+        [Test]
+        public void GetTimeoffrequestsTest()
+        {
+            // TODO: add unit test for the method 'GetTimeoffrequests'
+            bool? recentlyReviewed = null; // TODO: replace null with proper value
+            var response = instance.GetTimeoffrequests(recentlyReviewed);
+            Assert.IsInstanceOf<TimeOffRequestList> (response, "response is TimeOffRequestList");
+        }
+        
+        /// <summary>
+        /// Test GetTimeoffrequestsTimeoffrequestId
+        /// </summary>
+        [Test]
+        public void GetTimeoffrequestsTimeoffrequestIdTest()
+        {
+            // TODO: add unit test for the method 'GetTimeoffrequestsTimeoffrequestId'
+            string timeOffRequestId = null; // TODO: replace null with proper value
+            var response = instance.GetTimeoffrequestsTimeoffrequestId(timeOffRequestId);
+            Assert.IsInstanceOf<TimeOffRequest> (response, "response is TimeOffRequest");
+        }
+        
+        /// <summary>
+        /// Test PatchTimeoffrequestsTimeoffrequestId
+        /// </summary>
+        [Test]
+        public void PatchTimeoffrequestsTimeoffrequestIdTest()
+        {
+            // TODO: add unit test for the method 'PatchTimeoffrequestsTimeoffrequestId'
+            string timeOffRequestId = null; // TODO: replace null with proper value
+            TimeOffRequestPatch body = null; // TODO: replace null with proper value
+            instance.PatchTimeoffrequestsTimeoffrequestId(timeOffRequestId, body);
+            
+        }
+        
+        /// <summary>
         /// Test PostLongtermforecasts
         /// </summary>
         [Test]

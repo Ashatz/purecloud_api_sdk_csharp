@@ -278,7 +278,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Subject">Subject.</param>
         /// <param name="MessagesSent">MessagesSent.</param>
-        public EmailConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, EmailConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, EmailConversationNotificationErrorInfo ErrorInfo = null, EmailConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, EmailConversationNotificationUriReference ExternalContact = null, EmailConversationNotificationUriReference ExternalOrganization = null, string Subject = null, int? MessagesSent = null)
+        public EmailConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataNotificationCreatedBy User = null, EmailConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, EmailConversationNotificationErrorInfo ErrorInfo = null, EmailConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, EmailConversationNotificationUriReference ExternalContact = null, EmailConversationNotificationUriReference ExternalOrganization = null, string Subject = null, int? MessagesSent = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -367,7 +367,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public CallbackConversationNotificationUser User { get; set; }
+        public DocumentDataNotificationCreatedBy User { get; set; }
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>

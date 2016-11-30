@@ -34,21 +34,21 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum On for "ON"
+            /// Enum On for "on"
             /// </summary>
-            [EnumMember(Value = "ON")]
+            [EnumMember(Value = "on")]
             On,
             
             /// <summary>
-            /// Enum Off for "OFF"
+            /// Enum Off for "off"
             /// </summary>
-            [EnumMember(Value = "OFF")]
+            [EnumMember(Value = "off")]
             Off,
             
             /// <summary>
-            /// Enum Complete for "COMPLETE"
+            /// Enum Complete for "complete"
             /// </summary>
-            [EnumMember(Value = "COMPLETE")]
+            [EnumMember(Value = "complete")]
             Complete
         }
         /// <summary>

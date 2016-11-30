@@ -7,7 +7,7 @@ title: OutOfOfficeNotification
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **User** | [**OutOfOfficeNotificationUser**](OutOfOfficeNotificationUser.html) |  | [optional] |
+| **User** | [**DocumentDataNotificationWorkspace**](DocumentDataNotificationWorkspace.html) |  | [optional] |
 | **Active** | **bool?** |  | [optional] |
 | **StartDate** | **DateTime?** |  | [optional] |
 | **EndDate** | **DateTime?** |  | [optional] |

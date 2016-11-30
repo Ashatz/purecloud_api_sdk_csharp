@@ -13,10 +13,10 @@ using ININ.PureCloudApi.Client;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// ConversationNotificationScreenShares
+    /// ConversationNotificationScreenshares
     /// </summary>
     [DataContract]
-    public partial class ConversationNotificationScreenShares :  IEquatable<ConversationNotificationScreenShares>
+    public partial class ConversationNotificationScreenshares :  IEquatable<ConversationNotificationScreenshares>
     {
         /// <summary>
         /// Gets or Sets State
@@ -195,7 +195,7 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationNotificationScreenShares" /> class.
+        /// Initializes a new instance of the <see cref="ConversationNotificationScreenshares" /> class.
         /// </summary>
         /// <param name="State">State.</param>
         /// <param name="Self">Self.</param>
@@ -207,7 +207,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationScreenShares(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationScreenshares(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Self = Self;
@@ -268,7 +268,7 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ConversationNotificationScreenShares {\n");
+            sb.Append("class ConversationNotificationScreenshares {\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -300,15 +300,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ConversationNotificationScreenShares);
+            return this.Equals(obj as ConversationNotificationScreenshares);
         }
 
         /// <summary>
-        /// Returns true if ConversationNotificationScreenShares instances are equal
+        /// Returns true if ConversationNotificationScreenshares instances are equal
         /// </summary>
-        /// <param name="other">Instance of ConversationNotificationScreenShares to be compared</param>
+        /// <param name="other">Instance of ConversationNotificationScreenshares to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ConversationNotificationScreenShares other)
+        public bool Equals(ConversationNotificationScreenshares other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

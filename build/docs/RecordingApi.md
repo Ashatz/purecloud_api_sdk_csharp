@@ -295,7 +295,7 @@ namespace Example
 
             var apiInstance = new RecordingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
-            var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. (optional)  (default to 5000)
+            var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional)  (default to 5000)
             var formatId = formatId_example;  // string | The desired media format (optional)  (default to WEBM)
 
             try
@@ -319,7 +319,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-| **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. | [optional] [default to 5000] |
+| **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
 | **formatId** | **string**| The desired media format | [optional] [default to WEBM] |
 {: class="table table-striped"}
 

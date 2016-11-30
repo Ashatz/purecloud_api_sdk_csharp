@@ -28,6 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUsage**](ContentManagementApi.html#getusage) | **GET** /api/v2/contentmanagement/usage | Get usage details. |
 | [**GetWorkspaces**](ContentManagementApi.html#getworkspaces) | **GET** /api/v2/contentmanagement/workspaces | Get a list of workspaces. |
 | [**GetWorkspacesWorkspaceId**](ContentManagementApi.html#getworkspacesworkspaceid) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId} | Get a workspace. |
+| [**GetWorkspacesWorkspaceIdDocuments**](ContentManagementApi.html#getworkspacesworkspaceiddocuments) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/documents | Get a list of documents. |
 | [**GetWorkspacesWorkspaceIdMembers**](ContentManagementApi.html#getworkspacesworkspaceidmembers) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/members | Get a list workspace members |
 | [**GetWorkspacesWorkspaceIdMembersMemberId**](ContentManagementApi.html#getworkspacesworkspaceidmembersmemberid) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Get a workspace member |
 | [**GetWorkspacesWorkspaceIdTagvalues**](ContentManagementApi.html#getworkspacesworkspaceidtagvalues) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Get a list of workspace tags |
@@ -1278,6 +1279,72 @@ namespace Example
 ### Return type
 
 [**Workspace**](Workspace.html)
+
+<a name="getworkspacesworkspaceiddocuments"></a>
+
+## [**DocumentEntityListing**](DocumentEntityListing.html) GetWorkspacesWorkspaceIdDocuments (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+
+Get a list of documents.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetWorkspacesWorkspaceIdDocumentsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ContentManagementApi();
+            var workspaceId = workspaceId_example;  // string | Workspace ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | name or dateCreated (optional) 
+            var sortOrder = sortOrder_example;  // string | ascending or descending (optional)  (default to ascending)
+
+            try
+            {
+                // Get a list of documents.
+                DocumentEntityListing result = apiInstance.GetWorkspacesWorkspaceIdDocuments(workspaceId, expand, pageSize, pageNumber, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ContentManagementApi.GetWorkspacesWorkspaceIdDocuments: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **workspaceId** | **string**| Workspace ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| name or dateCreated | [optional]  |
+| **sortOrder** | **string**| ascending or descending | [optional] [default to ascending] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DocumentEntityListing**](DocumentEntityListing.html)
 
 <a name="getworkspacesworkspaceidmembers"></a>
 

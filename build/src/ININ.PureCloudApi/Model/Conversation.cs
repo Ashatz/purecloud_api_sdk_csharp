@@ -67,69 +67,69 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Alerting for "ALERTING"
+            /// Enum Alerting for "alerting"
             /// </summary>
-            [EnumMember(Value = "ALERTING")]
+            [EnumMember(Value = "alerting")]
             Alerting,
             
             /// <summary>
-            /// Enum Dialing for "DIALING"
+            /// Enum Dialing for "dialing"
             /// </summary>
-            [EnumMember(Value = "DIALING")]
+            [EnumMember(Value = "dialing")]
             Dialing,
             
             /// <summary>
-            /// Enum Contacting for "CONTACTING"
+            /// Enum Contacting for "contacting"
             /// </summary>
-            [EnumMember(Value = "CONTACTING")]
+            [EnumMember(Value = "contacting")]
             Contacting,
             
             /// <summary>
-            /// Enum Offering for "OFFERING"
+            /// Enum Offering for "offering"
             /// </summary>
-            [EnumMember(Value = "OFFERING")]
+            [EnumMember(Value = "offering")]
             Offering,
             
             /// <summary>
-            /// Enum Connected for "CONNECTED"
+            /// Enum Connected for "connected"
             /// </summary>
-            [EnumMember(Value = "CONNECTED")]
+            [EnumMember(Value = "connected")]
             Connected,
             
             /// <summary>
-            /// Enum Disconnected for "DISCONNECTED"
+            /// Enum Disconnected for "disconnected"
             /// </summary>
-            [EnumMember(Value = "DISCONNECTED")]
+            [EnumMember(Value = "disconnected")]
             Disconnected,
             
             /// <summary>
-            /// Enum Terminated for "TERMINATED"
+            /// Enum Terminated for "terminated"
             /// </summary>
-            [EnumMember(Value = "TERMINATED")]
+            [EnumMember(Value = "terminated")]
             Terminated,
             
             /// <summary>
-            /// Enum Converting for "CONVERTING"
+            /// Enum Converting for "converting"
             /// </summary>
-            [EnumMember(Value = "CONVERTING")]
+            [EnumMember(Value = "converting")]
             Converting,
             
             /// <summary>
-            /// Enum Uploading for "UPLOADING"
+            /// Enum Uploading for "uploading"
             /// </summary>
-            [EnumMember(Value = "UPLOADING")]
+            [EnumMember(Value = "uploading")]
             Uploading,
             
             /// <summary>
-            /// Enum Transmitting for "TRANSMITTING"
+            /// Enum Transmitting for "transmitting"
             /// </summary>
-            [EnumMember(Value = "TRANSMITTING")]
+            [EnumMember(Value = "transmitting")]
             Transmitting,
             
             /// <summary>
-            /// Enum None for "NONE"
+            /// Enum None for "none"
             /// </summary>
-            [EnumMember(Value = "NONE")]
+            [EnumMember(Value = "none")]
             None
         }
         /// <summary>

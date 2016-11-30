@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Domain">Domain.</param>
         /// <param name="Route">Route.</param>
-        public QueueEmailAddress(UriReference Domain = null, UriReference Route = null)
+        public QueueEmailAddress(UriReference Domain = null, InboundRoute Route = null)
         {
             this.Domain = Domain;
             this.Route = Route;
@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Route
         /// </summary>
         [DataMember(Name="route", EmitDefaultValue=false)]
-        public UriReference Route { get; set; }
+        public InboundRoute Route { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

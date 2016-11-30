@@ -3662,11 +3662,11 @@ namespace Example
 
 <a name="getprovidersedgestrunkbasesettings"></a>
 
-## [**TrunkBaseEntityListing**](TrunkBaseEntityListing.html) GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null)
+## [**TrunkBaseEntityListing**](TrunkBaseEntityListing.html) GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null)
 
 Get Trunk Base Settings listing
 
-
+Managed properties will not be returned unless the user is assigned the managed:all:all permission.
 
 ### Example
 ~~~csharp
@@ -3692,11 +3692,12 @@ namespace Example
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
             var recordingEnabled = true;  // bool? | Filter trunks by recording enabled (optional) 
+            var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
 
             try
             {
                 // Get Trunk Base Settings listing
-                TrunkBaseEntityListing result = apiInstance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
+                TrunkBaseEntityListing result = apiInstance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3718,6 +3719,7 @@ namespace Example
 | **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
 | **recordingEnabled** | **bool?**| Filter trunks by recording enabled | [optional]  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3846,7 +3848,7 @@ namespace Example
 
 Get a Trunk Base Settings object by ID
 
-
+Managed properties will not be returned unless the user is assigned the managed:all:all permission.
 
 ### Example
 ~~~csharp

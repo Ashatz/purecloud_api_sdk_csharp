@@ -247,7 +247,7 @@ namespace Example
 
 <a name="getgroupidmembers"></a>
 
-## [**UserEntityListing**](UserEntityListing.html) GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**UserEntityListing**](UserEntityListing.html) GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
 
 Get group members
 
@@ -276,11 +276,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get group members
-                UserEntityListing result = apiInstance.GetGroupIdMembers(groupId, pageSize, pageNumber, sortOrder);
+                UserEntityListing result = apiInstance.GetGroupIdMembers(groupId, pageSize, pageNumber, sortOrder, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -301,6 +302,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

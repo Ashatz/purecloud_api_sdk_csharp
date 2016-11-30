@@ -526,6 +526,37 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Workspace</returns>
         ApiResponse<Workspace> GetWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, List<string> expand = null);
         /// <summary>
+        /// Get a list of documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <returns>DocumentEntityListing</returns>
+        DocumentEntityListing GetWorkspacesWorkspaceIdDocuments (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get a list of documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <returns>ApiResponse of DocumentEntityListing</returns>
+        ApiResponse<DocumentEntityListing> GetWorkspacesWorkspaceIdDocumentsWithHttpInfo (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
         /// Get a list workspace members
         /// </summary>
         /// <remarks>
@@ -1430,6 +1461,37 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
         System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, List<string> expand = null);
+        /// <summary>
+        /// Get a list of documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <returns>Task of DocumentEntityListing</returns>
+        System.Threading.Tasks.Task<DocumentEntityListing> GetWorkspacesWorkspaceIdDocumentsAsync (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get a list of documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetWorkspacesWorkspaceIdDocumentsAsyncWithHttpInfo (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Get a list workspace members
         /// </summary>
@@ -5300,6 +5362,189 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Workspace>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Workspace) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Workspace)));
+            
+        }
+
+        /// <summary>
+        /// Get a list of documents. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <returns>DocumentEntityListing</returns>
+        public DocumentEntityListing GetWorkspacesWorkspaceIdDocuments (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<DocumentEntityListing> localVarResponse = GetWorkspacesWorkspaceIdDocumentsWithHttpInfo(workspaceId, expand, pageSize, pageNumber, sortBy, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of documents. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <returns>ApiResponse of DocumentEntityListing</returns>
+        public ApiResponse< DocumentEntityListing > GetWorkspacesWorkspaceIdDocumentsWithHttpInfo (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        {
+            // verify the required parameter 'workspaceId' is set
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdDocuments");
+
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/documents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdDocuments: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdDocuments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DocumentEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get a list of documents. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <returns>Task of DocumentEntityListing</returns>
+        public async System.Threading.Tasks.Task<DocumentEntityListing> GetWorkspacesWorkspaceIdDocumentsAsync (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<DocumentEntityListing> localVarResponse = await GetWorkspacesWorkspaceIdDocumentsAsyncWithHttpInfo(workspaceId, expand, pageSize, pageNumber, sortBy, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of documents. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">name or dateCreated (optional)</param>
+        /// <param name="sortOrder">ascending or descending (optional, default to ascending)</param>
+        /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetWorkspacesWorkspaceIdDocumentsAsyncWithHttpInfo (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        {
+            // verify the required parameter 'workspaceId' is set
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdDocuments");
+
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/documents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (workspaceId != null) localVarPathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdDocuments: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkspacesWorkspaceIdDocuments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DocumentEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentEntityListing)));
             
         }
 
