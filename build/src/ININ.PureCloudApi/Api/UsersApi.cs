@@ -522,8 +522,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>UsersEntityListing</returns>
-        UsersEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        /// <returns>UserEntityListing</returns>
+        UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -537,8 +537,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of UsersEntityListing</returns>
-        ApiResponse<UsersEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        /// <returns>ApiResponse of UserEntityListing</returns>
+        ApiResponse<UserEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
         /// <summary>
         /// Update user
         /// </summary>
@@ -1482,8 +1482,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of UsersEntityListing</returns>
-        System.Threading.Tasks.Task<UsersEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        /// <returns>Task of UserEntityListing</returns>
+        System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -1497,8 +1497,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse (UsersEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
         /// <summary>
         /// Update user
         /// </summary>
@@ -5499,10 +5499,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>UsersEntityListing</returns>
-        public UsersEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        /// <returns>UserEntityListing</returns>
+        public UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<UsersEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand);
+             ApiResponse<UserEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand);
              return localVarResponse.Data;
         }
 
@@ -5515,8 +5515,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of UsersEntityListing</returns>
-        public ApiResponse< UsersEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        /// <returns>ApiResponse of UserEntityListing</returns>
+        public ApiResponse< UserEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/users";
@@ -5569,9 +5569,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UsersEntityListing>(localVarStatusCode,
+            return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UsersEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersEntityListing)));
+                (UserEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
             
         }
 
@@ -5584,10 +5584,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of UsersEntityListing</returns>
-        public async System.Threading.Tasks.Task<UsersEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        /// <returns>Task of UserEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<UsersEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand);
+             ApiResponse<UserEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand);
              return localVarResponse.Data;
 
         }
@@ -5601,8 +5601,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse (UsersEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsersEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/users";
@@ -5655,9 +5655,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UsersEntityListing>(localVarStatusCode,
+            return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UsersEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersEntityListing)));
+                (UserEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
             
         }
 

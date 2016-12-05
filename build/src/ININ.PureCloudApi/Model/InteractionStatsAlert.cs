@@ -315,7 +315,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Unread">Indicates if the alert has been read. (required) (default to false).</param>
         /// <param name="NotificationUsers">The ids of users who were notified of alarm state change. (required).</param>
-        /// <param name="AlertTypes">A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] (required).</param>
+        /// <param name="AlertTypes">A collection of notification methods. (required).</param>
         /// <param name="RuleUri">RuleUri.</param>
         public InteractionStatsAlert(bool? Unread = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, string RuleUri = null)
         {
@@ -404,9 +404,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<User> NotificationUsers { get; set; }
         /// <summary>
-        /// A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;]
+        /// A collection of notification methods.
         /// </summary>
-        /// <value>A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;]</value>
+        /// <value>A collection of notification methods.</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; set; }
         /// <summary>

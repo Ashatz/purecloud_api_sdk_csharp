@@ -479,8 +479,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
+        /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <returns>KeywordSetEntityListing</returns>
-        KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null);
+        KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null);
 
         /// <summary>
         /// Get the list of keyword sets
@@ -496,8 +498,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
+        /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <returns>ApiResponse of KeywordSetEntityListing</returns>
-        ApiResponse<KeywordSetEntityListing> GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null);
+        ApiResponse<KeywordSetEntityListing> GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null);
         /// <summary>
         /// Get a keywordSet by id.
         /// </summary>
@@ -1304,8 +1308,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
+        /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <returns>Task of KeywordSetEntityListing</returns>
-        System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null);
+        System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null);
 
         /// <summary>
         /// Get the list of keyword sets
@@ -1321,8 +1327,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
+        /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null);
         /// <summary>
         /// Get a keywordSet by id.
         /// </summary>
@@ -4464,10 +4472,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
+        /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <returns>KeywordSetEntityListing</returns>
-        public KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        public KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null)
         {
-             ApiResponse<KeywordSetEntityListing> localVarResponse = GetKeywordsetsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name);
+             ApiResponse<KeywordSetEntityListing> localVarResponse = GetKeywordsetsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId);
              return localVarResponse.Data;
         }
 
@@ -4482,8 +4492,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
+        /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <returns>ApiResponse of KeywordSetEntityListing</returns>
-        public ApiResponse< KeywordSetEntityListing > GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        public ApiResponse< KeywordSetEntityListing > GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null)
         {
 
             var localVarPath = "/api/v2/quality/keywordsets";
@@ -4518,6 +4530,8 @@ namespace ININ.PureCloudApi.Api
             if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
             if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (queueId != null) localVarQueryParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // query parameter
+            if (agentId != null) localVarQueryParams.Add("agentId", Configuration.ApiClient.ParameterToString(agentId)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4555,10 +4569,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
+        /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <returns>Task of KeywordSetEntityListing</returns>
-        public async System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        public async System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null)
         {
-             ApiResponse<KeywordSetEntityListing> localVarResponse = await GetKeywordsetsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name);
+             ApiResponse<KeywordSetEntityListing> localVarResponse = await GetKeywordsetsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId);
              return localVarResponse.Data;
 
         }
@@ -4574,8 +4590,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
+        /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
+        /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null)
         {
 
             var localVarPath = "/api/v2/quality/keywordsets";
@@ -4610,6 +4628,8 @@ namespace ININ.PureCloudApi.Api
             if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
             if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (queueId != null) localVarQueryParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // query parameter
+            if (agentId != null) localVarQueryParams.Add("agentId", Configuration.ApiClient.ParameterToString(agentId)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

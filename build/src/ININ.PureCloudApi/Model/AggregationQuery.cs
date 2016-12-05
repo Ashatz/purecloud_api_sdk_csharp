@@ -608,7 +608,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Filter">Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters.</param>
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
         /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) (default to false).</param>
-        public AggregationQuery(string Interval = null, DateTime? Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, AnalyticsQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null)
+        public AggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, AnalyticsQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null)
         {
             this.Interval = Interval;
             this.Granularity = Granularity;
@@ -638,7 +638,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
-        public DateTime? Granularity { get; set; }
+        public string Granularity { get; set; }
         /// <summary>
         /// Sets the time zone for the query interval, defaults to UTC. Time zones are represented as an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London
         /// </summary>

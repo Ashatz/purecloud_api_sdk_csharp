@@ -1,13 +1,13 @@
 ---
-title: UsersEntityListing
+title: UserPresenceAlertContainer
 ---
-## ININ.PureCloudApi.Model.UsersEntityListing
+## ININ.PureCloudApi.Model.UserPresenceAlertContainer
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;User&gt;**](User.html) |  | [optional] |
+| **Entities** | [**List&lt;UserPresenceAlert&gt;**](UserPresenceAlert.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |

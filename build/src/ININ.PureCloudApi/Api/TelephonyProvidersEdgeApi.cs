@@ -483,8 +483,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Edge</returns>
-        Edge GetProvidersEdgesEdgeId (string edgeId);
+        Edge GetProvidersEdgesEdgeId (string edgeId, List<string> expand = null);
 
         /// <summary>
         /// Get edge.
@@ -494,8 +495,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of Edge</returns>
-        ApiResponse<Edge> GetProvidersEdgesEdgeIdWithHttpInfo (string edgeId);
+        ApiResponse<Edge> GetProvidersEdgesEdgeIdWithHttpInfo (string edgeId, List<string> expand = null);
         /// <summary>
         /// Get the list of lines.
         /// </summary>
@@ -1603,7 +1605,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of TrunkRecordingEnabledCount</returns>
         ApiResponse<TrunkRecordingEnabledCount> GetProvidersEdgesTrunkswithrecordingWithHttpInfo (string trunkType = null);
         /// <summary>
-        /// Lists available schema categories
+        /// Lists available schema categories (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -1615,7 +1617,7 @@ namespace ININ.PureCloudApi.Api
         SchemaCategoryEntityListing GetSchemasEdgesVnext (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Lists available schema categories
+        /// Lists available schema categories (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -1626,7 +1628,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of SchemaCategoryEntityListing</returns>
         ApiResponse<SchemaCategoryEntityListing> GetSchemasEdgesVnextWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         /// <summary>
-        /// List schemas of a specific category
+        /// List schemas of a specific category (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -1639,7 +1641,7 @@ namespace ININ.PureCloudApi.Api
         SchemaReferenceEntityListing GetSchemasEdgesVnextSchemacategory (string schemaCategory, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// List schemas of a specific category
+        /// List schemas of a specific category (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -1651,7 +1653,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of SchemaReferenceEntityListing</returns>
         ApiResponse<SchemaReferenceEntityListing> GetSchemasEdgesVnextSchemacategoryWithHttpInfo (string schemaCategory, int? pageSize = null, int? pageNumber = null);
         /// <summary>
-        /// List schemas of a specific category
+        /// List schemas of a specific category (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -1665,7 +1667,7 @@ namespace ININ.PureCloudApi.Api
         SchemaReferenceEntityListing GetSchemasEdgesVnextSchemacategorySchematype (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// List schemas of a specific category
+        /// List schemas of a specific category (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -1678,7 +1680,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of SchemaReferenceEntityListing</returns>
         ApiResponse<SchemaReferenceEntityListing> GetSchemasEdgesVnextSchemacategorySchematypeWithHttpInfo (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
         /// <summary>
-        /// Get a json schema
+        /// Get a json schema (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -1691,7 +1693,7 @@ namespace ININ.PureCloudApi.Api
         Organization GetSchemasEdgesVnextSchemacategorySchematypeSchemaId (string schemaCategory, string schemaType, string schemaId);
 
         /// <summary>
-        /// Get a json schema
+        /// Get a json schema (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -1703,7 +1705,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Organization</returns>
         ApiResponse<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdWithHttpInfo (string schemaCategory, string schemaType, string schemaId);
         /// <summary>
-        /// Get metadata for a schema
+        /// Get metadata for a schema (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -1719,7 +1721,7 @@ namespace ININ.PureCloudApi.Api
         Organization GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null);
 
         /// <summary>
-        /// Get metadata for a schema
+        /// Get metadata for a schema (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -3048,8 +3050,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of Edge</returns>
-        System.Threading.Tasks.Task<Edge> GetProvidersEdgesEdgeIdAsync (string edgeId);
+        System.Threading.Tasks.Task<Edge> GetProvidersEdgesEdgeIdAsync (string edgeId, List<string> expand = null);
 
         /// <summary>
         /// Get edge.
@@ -3059,8 +3062,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Edge>> GetProvidersEdgesEdgeIdAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<Edge>> GetProvidersEdgesEdgeIdAsyncWithHttpInfo (string edgeId, List<string> expand = null);
         /// <summary>
         /// Get the list of lines.
         /// </summary>
@@ -4168,7 +4172,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (TrunkRecordingEnabledCount)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrunkRecordingEnabledCount>> GetProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo (string trunkType = null);
         /// <summary>
-        /// Lists available schema categories
+        /// Lists available schema categories (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -4180,7 +4184,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<SchemaCategoryEntityListing> GetSchemasEdgesVnextAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Lists available schema categories
+        /// Lists available schema categories (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -4191,7 +4195,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (SchemaCategoryEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SchemaCategoryEntityListing>> GetSchemasEdgesVnextAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         /// <summary>
-        /// List schemas of a specific category
+        /// List schemas of a specific category (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -4204,7 +4208,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<SchemaReferenceEntityListing> GetSchemasEdgesVnextSchemacategoryAsync (string schemaCategory, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// List schemas of a specific category
+        /// List schemas of a specific category (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -4216,7 +4220,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (SchemaReferenceEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SchemaReferenceEntityListing>> GetSchemasEdgesVnextSchemacategoryAsyncWithHttpInfo (string schemaCategory, int? pageSize = null, int? pageNumber = null);
         /// <summary>
-        /// List schemas of a specific category
+        /// List schemas of a specific category (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -4230,7 +4234,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<SchemaReferenceEntityListing> GetSchemasEdgesVnextSchemacategorySchematypeAsync (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// List schemas of a specific category
+        /// List schemas of a specific category (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -4243,7 +4247,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (SchemaReferenceEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<SchemaReferenceEntityListing>> GetSchemasEdgesVnextSchemacategorySchematypeAsyncWithHttpInfo (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
         /// <summary>
-        /// Get a json schema
+        /// Get a json schema (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -4256,7 +4260,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdAsync (string schemaCategory, string schemaType, string schemaId);
 
         /// <summary>
-        /// Get a json schema
+        /// Get a json schema (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -4268,7 +4272,7 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Organization)</returns>
         System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdAsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId);
         /// <summary>
-        /// Get metadata for a schema
+        /// Get metadata for a schema (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -4284,7 +4288,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataIdAsync (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null);
 
         /// <summary>
-        /// Get metadata for a schema
+        /// Get metadata for a schema (Deprecated)
         /// </summary>
         /// <remarks>
         /// 
@@ -8484,10 +8488,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Edge</returns>
-        public Edge GetProvidersEdgesEdgeId (string edgeId)
+        public Edge GetProvidersEdgesEdgeId (string edgeId, List<string> expand = null)
         {
-             ApiResponse<Edge> localVarResponse = GetProvidersEdgesEdgeIdWithHttpInfo(edgeId);
+             ApiResponse<Edge> localVarResponse = GetProvidersEdgesEdgeIdWithHttpInfo(edgeId, expand);
              return localVarResponse.Data;
         }
 
@@ -8496,8 +8501,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of Edge</returns>
-        public ApiResponse< Edge > GetProvidersEdgesEdgeIdWithHttpInfo (string edgeId)
+        public ApiResponse< Edge > GetProvidersEdgesEdgeIdWithHttpInfo (string edgeId, List<string> expand = null)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -8529,6 +8535,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -8560,10 +8567,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of Edge</returns>
-        public async System.Threading.Tasks.Task<Edge> GetProvidersEdgesEdgeIdAsync (string edgeId)
+        public async System.Threading.Tasks.Task<Edge> GetProvidersEdgesEdgeIdAsync (string edgeId, List<string> expand = null)
         {
-             ApiResponse<Edge> localVarResponse = await GetProvidersEdgesEdgeIdAsyncWithHttpInfo(edgeId);
+             ApiResponse<Edge> localVarResponse = await GetProvidersEdgesEdgeIdAsyncWithHttpInfo(edgeId, expand);
              return localVarResponse.Data;
 
         }
@@ -8573,8 +8581,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Edge>> GetProvidersEdgesEdgeIdAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<Edge>> GetProvidersEdgesEdgeIdAsyncWithHttpInfo (string edgeId, List<string> expand = null)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -8606,6 +8615,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -16019,7 +16029,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Lists available schema categories 
+        /// Lists available schema categories (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -16032,7 +16042,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Lists available schema categories 
+        /// Lists available schema categories (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -16095,7 +16105,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Lists available schema categories 
+        /// Lists available schema categories (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -16109,7 +16119,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Lists available schema categories 
+        /// Lists available schema categories (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -16172,7 +16182,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// List schemas of a specific category 
+        /// List schemas of a specific category (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16186,7 +16196,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// List schemas of a specific category 
+        /// List schemas of a specific category (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16254,7 +16264,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// List schemas of a specific category 
+        /// List schemas of a specific category (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16269,7 +16279,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// List schemas of a specific category 
+        /// List schemas of a specific category (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16337,7 +16347,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// List schemas of a specific category 
+        /// List schemas of a specific category (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16352,7 +16362,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// List schemas of a specific category 
+        /// List schemas of a specific category (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16425,7 +16435,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// List schemas of a specific category 
+        /// List schemas of a specific category (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16441,7 +16451,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// List schemas of a specific category 
+        /// List schemas of a specific category (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16514,7 +16524,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get a json schema 
+        /// Get a json schema (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16528,7 +16538,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get a json schema 
+        /// Get a json schema (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16602,7 +16612,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get a json schema 
+        /// Get a json schema (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16617,7 +16627,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get a json schema 
+        /// Get a json schema (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16691,7 +16701,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get metadata for a schema 
+        /// Get metadata for a schema (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16708,7 +16718,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get metadata for a schema 
+        /// Get metadata for a schema (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16794,7 +16804,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get metadata for a schema 
+        /// Get metadata for a schema (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>
@@ -16812,7 +16822,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get metadata for a schema 
+        /// Get metadata for a schema (Deprecated) 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaCategory">Schema category</param>

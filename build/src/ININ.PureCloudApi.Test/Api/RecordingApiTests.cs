@@ -229,6 +229,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetOrphanIdMedia
+        /// </summary>
+        [Test]
+        public void GetOrphanIdMediaTest()
+        {
+            // TODO: add unit test for the method 'GetOrphanIdMedia'
+            string orphanId = null; // TODO: replace null with proper value
+            string formatId = null; // TODO: replace null with proper value
+            bool? download = null; // TODO: replace null with proper value
+            string fileName = null; // TODO: replace null with proper value
+            var response = instance.GetOrphanIdMedia(orphanId, formatId, download, fileName);
+            Assert.IsInstanceOf<Recording> (response, "response is Recording");
+        }
+        
+        /// <summary>
         /// Test GetOrphanrecordings
         /// </summary>
         [Test]
@@ -241,7 +256,8 @@ namespace ININ.PureCloudApi.Test
             List<Object> expand = null; // TODO: replace null with proper value
             string nextPage = null; // TODO: replace null with proper value
             string previousPage = null; // TODO: replace null with proper value
-            var response = instance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+            bool? hasConversation = null; // TODO: replace null with proper value
+            var response = instance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation);
             Assert.IsInstanceOf<OrphanRecordingListing> (response, "response is OrphanRecordingListing");
         }
         
@@ -434,6 +450,19 @@ namespace ININ.PureCloudApi.Test
             Policy body = null; // TODO: replace null with proper value
             var response = instance.PutMediaretentionpoliciesPolicyId(policyId, body);
             Assert.IsInstanceOf<Policy> (response, "response is Policy");
+        }
+        
+        /// <summary>
+        /// Test PutOrphanId
+        /// </summary>
+        [Test]
+        public void PutOrphanIdTest()
+        {
+            // TODO: add unit test for the method 'PutOrphanId'
+            string orphanId = null; // TODO: replace null with proper value
+            OrphanUpdateRequest body = null; // TODO: replace null with proper value
+            var response = instance.PutOrphanId(orphanId, body);
+            Assert.IsInstanceOf<Recording> (response, "response is Recording");
         }
         
         /// <summary>

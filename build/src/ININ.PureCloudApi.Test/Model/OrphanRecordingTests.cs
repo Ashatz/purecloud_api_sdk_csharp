@@ -131,6 +131,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Recording'
         }
         /// <summary>
+        /// Test the property 'OrphanStatus'
+        /// </summary>
+        [Test]
+        public void OrphanStatusTest()
+        {
+            // TODO: unit test for the property 'OrphanStatus'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

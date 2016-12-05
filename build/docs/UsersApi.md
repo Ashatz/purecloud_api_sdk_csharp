@@ -1316,7 +1316,7 @@ namespace Example
 
 <a name="getusers"></a>
 
-## [**UsersEntityListing**](UsersEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+## [**UserEntityListing**](UserEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
 
 Get the list of available users.
 
@@ -1350,7 +1350,7 @@ namespace Example
             try
             {
                 // Get the list of available users.
-                UsersEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand);
+                UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1376,7 +1376,7 @@ namespace Example
 
 ### Return type
 
-[**UsersEntityListing**](UsersEntityListing.html)
+[**UserEntityListing**](UserEntityListing.html)
 
 <a name="patchuserid"></a>
 

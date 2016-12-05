@@ -102,13 +102,62 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test DeleteRoutingstatusAlertsAlertId
+        /// </summary>
+        [Test]
+        public void DeleteRoutingstatusAlertsAlertIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteRoutingstatusAlertsAlertId'
+            string alertId = null; // TODO: replace null with proper value
+            instance.DeleteRoutingstatusAlertsAlertId(alertId);
+            
+        }
+        
+        /// <summary>
+        /// Test DeleteRoutingstatusRulesRuleId
+        /// </summary>
+        [Test]
+        public void DeleteRoutingstatusRulesRuleIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteRoutingstatusRulesRuleId'
+            string ruleId = null; // TODO: replace null with proper value
+            instance.DeleteRoutingstatusRulesRuleId(ruleId);
+            
+        }
+        
+        /// <summary>
+        /// Test DeleteUserpresenceAlertsAlertId
+        /// </summary>
+        [Test]
+        public void DeleteUserpresenceAlertsAlertIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteUserpresenceAlertsAlertId'
+            string alertId = null; // TODO: replace null with proper value
+            instance.DeleteUserpresenceAlertsAlertId(alertId);
+            
+        }
+        
+        /// <summary>
+        /// Test DeleteUserpresenceRulesRuleId
+        /// </summary>
+        [Test]
+        public void DeleteUserpresenceRulesRuleIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteUserpresenceRulesRuleId'
+            string ruleId = null; // TODO: replace null with proper value
+            instance.DeleteUserpresenceRulesRuleId(ruleId);
+            
+        }
+        
+        /// <summary>
         /// Test GetHeartbeatAlerts
         /// </summary>
         [Test]
         public void GetHeartbeatAlertsTest()
         {
             // TODO: add unit test for the method 'GetHeartbeatAlerts'
-            var response = instance.GetHeartbeatAlerts();
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetHeartbeatAlerts(expand);
             Assert.IsInstanceOf<HeartBeatAlertContainer> (response, "response is HeartBeatAlertContainer");
         }
         
@@ -120,7 +169,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetHeartbeatAlertsAlertId'
             string alertId = null; // TODO: replace null with proper value
-            var response = instance.GetHeartbeatAlertsAlertId(alertId);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetHeartbeatAlertsAlertId(alertId, expand);
             Assert.IsInstanceOf<HeartBeatAlert> (response, "response is HeartBeatAlert");
         }
         
@@ -131,7 +181,8 @@ namespace ININ.PureCloudApi.Test
         public void GetHeartbeatRulesTest()
         {
             // TODO: add unit test for the method 'GetHeartbeatRules'
-            var response = instance.GetHeartbeatRules();
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetHeartbeatRules(expand);
             Assert.IsInstanceOf<HeartBeatRuleContainer> (response, "response is HeartBeatRuleContainer");
         }
         
@@ -143,7 +194,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetHeartbeatRulesRuleId'
             string ruleId = null; // TODO: replace null with proper value
-            var response = instance.GetHeartbeatRulesRuleId(ruleId);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetHeartbeatRulesRuleId(ruleId, expand);
             Assert.IsInstanceOf<HeartBeatRule> (response, "response is HeartBeatRule");
         }
         
@@ -154,7 +206,8 @@ namespace ININ.PureCloudApi.Test
         public void GetInteractionstatsAlertsTest()
         {
             // TODO: add unit test for the method 'GetInteractionstatsAlerts'
-            var response = instance.GetInteractionstatsAlerts();
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetInteractionstatsAlerts(expand);
             Assert.IsInstanceOf<InteractionStatsAlertContainer> (response, "response is InteractionStatsAlertContainer");
         }
         
@@ -166,7 +219,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetInteractionstatsAlertsAlertId'
             string alertId = null; // TODO: replace null with proper value
-            var response = instance.GetInteractionstatsAlertsAlertId(alertId);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetInteractionstatsAlertsAlertId(alertId, expand);
             Assert.IsInstanceOf<InteractionStatsAlert> (response, "response is InteractionStatsAlert");
         }
         
@@ -188,7 +242,8 @@ namespace ININ.PureCloudApi.Test
         public void GetInteractionstatsRulesTest()
         {
             // TODO: add unit test for the method 'GetInteractionstatsRules'
-            var response = instance.GetInteractionstatsRules();
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetInteractionstatsRules(expand);
             Assert.IsInstanceOf<InteractionStatsRuleContainer> (response, "response is InteractionStatsRuleContainer");
         }
         
@@ -200,8 +255,109 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetInteractionstatsRulesRuleId'
             string ruleId = null; // TODO: replace null with proper value
-            var response = instance.GetInteractionstatsRulesRuleId(ruleId);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetInteractionstatsRulesRuleId(ruleId, expand);
             Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule");
+        }
+        
+        /// <summary>
+        /// Test GetRoutingstatusAlerts
+        /// </summary>
+        [Test]
+        public void GetRoutingstatusAlertsTest()
+        {
+            // TODO: add unit test for the method 'GetRoutingstatusAlerts'
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetRoutingstatusAlerts(expand);
+            Assert.IsInstanceOf<RoutingStatusAlertContainer> (response, "response is RoutingStatusAlertContainer");
+        }
+        
+        /// <summary>
+        /// Test GetRoutingstatusAlertsAlertId
+        /// </summary>
+        [Test]
+        public void GetRoutingstatusAlertsAlertIdTest()
+        {
+            // TODO: add unit test for the method 'GetRoutingstatusAlertsAlertId'
+            string alertId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetRoutingstatusAlertsAlertId(alertId, expand);
+            Assert.IsInstanceOf<RoutingStatusAlert> (response, "response is RoutingStatusAlert");
+        }
+        
+        /// <summary>
+        /// Test GetRoutingstatusRules
+        /// </summary>
+        [Test]
+        public void GetRoutingstatusRulesTest()
+        {
+            // TODO: add unit test for the method 'GetRoutingstatusRules'
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetRoutingstatusRules(expand);
+            Assert.IsInstanceOf<RoutingStatusRuleContainer> (response, "response is RoutingStatusRuleContainer");
+        }
+        
+        /// <summary>
+        /// Test GetRoutingstatusRulesRuleId
+        /// </summary>
+        [Test]
+        public void GetRoutingstatusRulesRuleIdTest()
+        {
+            // TODO: add unit test for the method 'GetRoutingstatusRulesRuleId'
+            string ruleId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetRoutingstatusRulesRuleId(ruleId, expand);
+            Assert.IsInstanceOf<RoutingStatusRule> (response, "response is RoutingStatusRule");
+        }
+        
+        /// <summary>
+        /// Test GetUserpresenceAlerts
+        /// </summary>
+        [Test]
+        public void GetUserpresenceAlertsTest()
+        {
+            // TODO: add unit test for the method 'GetUserpresenceAlerts'
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetUserpresenceAlerts(expand);
+            Assert.IsInstanceOf<UserPresenceAlertContainer> (response, "response is UserPresenceAlertContainer");
+        }
+        
+        /// <summary>
+        /// Test GetUserpresenceAlertsAlertId
+        /// </summary>
+        [Test]
+        public void GetUserpresenceAlertsAlertIdTest()
+        {
+            // TODO: add unit test for the method 'GetUserpresenceAlertsAlertId'
+            string alertId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetUserpresenceAlertsAlertId(alertId, expand);
+            Assert.IsInstanceOf<UserPresenceAlert> (response, "response is UserPresenceAlert");
+        }
+        
+        /// <summary>
+        /// Test GetUserpresenceRules
+        /// </summary>
+        [Test]
+        public void GetUserpresenceRulesTest()
+        {
+            // TODO: add unit test for the method 'GetUserpresenceRules'
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetUserpresenceRules(expand);
+            Assert.IsInstanceOf<UserPresenceRuleContainer> (response, "response is UserPresenceRuleContainer");
+        }
+        
+        /// <summary>
+        /// Test GetUserpresenceRulesRuleId
+        /// </summary>
+        [Test]
+        public void GetUserpresenceRulesRuleIdTest()
+        {
+            // TODO: add unit test for the method 'GetUserpresenceRulesRuleId'
+            string ruleId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetUserpresenceRulesRuleId(ruleId, expand);
+            Assert.IsInstanceOf<UserPresenceRule> (response, "response is UserPresenceRule");
         }
         
         /// <summary>
@@ -212,7 +368,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostHeartbeatRules'
             HeartBeatRule body = null; // TODO: replace null with proper value
-            var response = instance.PostHeartbeatRules(body);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.PostHeartbeatRules(body, expand);
             Assert.IsInstanceOf<HeartBeatRule> (response, "response is HeartBeatRule");
         }
         
@@ -224,8 +381,35 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostInteractionstatsRules'
             InteractionStatsRule body = null; // TODO: replace null with proper value
-            var response = instance.PostInteractionstatsRules(body);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.PostInteractionstatsRules(body, expand);
             Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule");
+        }
+        
+        /// <summary>
+        /// Test PostRoutingstatusRules
+        /// </summary>
+        [Test]
+        public void PostRoutingstatusRulesTest()
+        {
+            // TODO: add unit test for the method 'PostRoutingstatusRules'
+            RoutingStatusRule body = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.PostRoutingstatusRules(body, expand);
+            Assert.IsInstanceOf<RoutingStatusRule> (response, "response is RoutingStatusRule");
+        }
+        
+        /// <summary>
+        /// Test PostUserpresenceRules
+        /// </summary>
+        [Test]
+        public void PostUserpresenceRulesTest()
+        {
+            // TODO: add unit test for the method 'PostUserpresenceRules'
+            UserPresenceRule body = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.PostUserpresenceRules(body, expand);
+            Assert.IsInstanceOf<UserPresenceRule> (response, "response is UserPresenceRule");
         }
         
         /// <summary>
@@ -237,7 +421,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutHeartbeatRulesRuleId'
             string ruleId = null; // TODO: replace null with proper value
             HeartBeatRule body = null; // TODO: replace null with proper value
-            var response = instance.PutHeartbeatRulesRuleId(ruleId, body);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.PutHeartbeatRulesRuleId(ruleId, body, expand);
             Assert.IsInstanceOf<HeartBeatRule> (response, "response is HeartBeatRule");
         }
         
@@ -250,7 +435,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutInteractionstatsAlertsAlertId'
             string alertId = null; // TODO: replace null with proper value
             UnreadStatus body = null; // TODO: replace null with proper value
-            var response = instance.PutInteractionstatsAlertsAlertId(alertId, body);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.PutInteractionstatsAlertsAlertId(alertId, body, expand);
             Assert.IsInstanceOf<UnreadStatus> (response, "response is UnreadStatus");
         }
         
@@ -263,8 +449,37 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutInteractionstatsRulesRuleId'
             string ruleId = null; // TODO: replace null with proper value
             InteractionStatsRule body = null; // TODO: replace null with proper value
-            var response = instance.PutInteractionstatsRulesRuleId(ruleId, body);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.PutInteractionstatsRulesRuleId(ruleId, body, expand);
             Assert.IsInstanceOf<InteractionStatsRule> (response, "response is InteractionStatsRule");
+        }
+        
+        /// <summary>
+        /// Test PutRoutingstatusRulesRuleId
+        /// </summary>
+        [Test]
+        public void PutRoutingstatusRulesRuleIdTest()
+        {
+            // TODO: add unit test for the method 'PutRoutingstatusRulesRuleId'
+            string ruleId = null; // TODO: replace null with proper value
+            RoutingStatusRule body = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.PutRoutingstatusRulesRuleId(ruleId, body, expand);
+            Assert.IsInstanceOf<RoutingStatusRule> (response, "response is RoutingStatusRule");
+        }
+        
+        /// <summary>
+        /// Test PutUserpresenceRulesRuleId
+        /// </summary>
+        [Test]
+        public void PutUserpresenceRulesRuleIdTest()
+        {
+            // TODO: add unit test for the method 'PutUserpresenceRulesRuleId'
+            string ruleId = null; // TODO: replace null with proper value
+            UserPresenceRule body = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.PutUserpresenceRulesRuleId(ruleId, body, expand);
+            Assert.IsInstanceOf<UserPresenceRule> (response, "response is UserPresenceRule");
         }
         
     }

@@ -107,6 +107,86 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Description'
         }
         /// <summary>
+        /// Test the property 'KeywordName'
+        /// </summary>
+        [Test]
+        public void KeywordNameTest()
+        {
+            // TODO: unit test for the property 'KeywordName'
+        }
+        /// <summary>
+        /// Test the property 'Confidence'
+        /// </summary>
+        [Test]
+        public void ConfidenceTest()
+        {
+            // TODO: unit test for the property 'Confidence'
+        }
+        /// <summary>
+        /// Test the property 'KeywordSetId'
+        /// </summary>
+        [Test]
+        public void KeywordSetIdTest()
+        {
+            // TODO: unit test for the property 'KeywordSetId'
+        }
+        /// <summary>
+        /// Test the property 'KeywordSetName'
+        /// </summary>
+        [Test]
+        public void KeywordSetNameTest()
+        {
+            // TODO: unit test for the property 'KeywordSetName'
+        }
+        /// <summary>
+        /// Test the property 'Utterance'
+        /// </summary>
+        [Test]
+        public void UtteranceTest()
+        {
+            // TODO: unit test for the property 'Utterance'
+        }
+        /// <summary>
+        /// Test the property 'TimeBegin'
+        /// </summary>
+        [Test]
+        public void TimeBeginTest()
+        {
+            // TODO: unit test for the property 'TimeBegin'
+        }
+        /// <summary>
+        /// Test the property 'TimeEnd'
+        /// </summary>
+        [Test]
+        public void TimeEndTest()
+        {
+            // TODO: unit test for the property 'TimeEnd'
+        }
+        /// <summary>
+        /// Test the property 'KeywordConfidenceThreshold'
+        /// </summary>
+        [Test]
+        public void KeywordConfidenceThresholdTest()
+        {
+            // TODO: unit test for the property 'KeywordConfidenceThreshold'
+        }
+        /// <summary>
+        /// Test the property 'AgentScoreModifier'
+        /// </summary>
+        [Test]
+        public void AgentScoreModifierTest()
+        {
+            // TODO: unit test for the property 'AgentScoreModifier'
+        }
+        /// <summary>
+        /// Test the property 'CustomerScoreModifier'
+        /// </summary>
+        [Test]
+        public void CustomerScoreModifierTest()
+        {
+            // TODO: unit test for the property 'CustomerScoreModifier'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

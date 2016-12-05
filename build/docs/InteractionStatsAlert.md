@@ -21,7 +21,7 @@ title: InteractionStatsAlert
 | **StartDate** | **DateTime?** | The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
 | **EndDate** | **DateTime?** | The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **NotificationUsers** | [**List&lt;User&gt;**](User.html) | The ids of users who were notified of alarm state change. | |
-| **AlertTypes** | **List&lt;string&gt;** | A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] | |
+| **AlertTypes** | **List&lt;string&gt;** | A collection of notification methods. | |
 | **RuleUri** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

@@ -13,13 +13,13 @@ using ININ.PureCloudApi.Client;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// UsersEntityListing
+    /// UserPresenceAlertContainer
     /// </summary>
     [DataContract]
-    public partial class UsersEntityListing :  IEquatable<UsersEntityListing>
+    public partial class UserPresenceAlertContainer :  IEquatable<UserPresenceAlertContainer>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UsersEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="UserPresenceAlertContainer" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NextUri">NextUri.</param>
         /// <param name="LastUri">LastUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public UsersEntityListing(List<User> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
+        public UserPresenceAlertContainer(List<UserPresenceAlert> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -49,7 +49,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<User> Entities { get; set; }
+        public List<UserPresenceAlert> Entities { get; set; }
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
@@ -102,7 +102,7 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UsersEntityListing {\n");
+            sb.Append("class UserPresenceAlertContainer {\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
@@ -134,15 +134,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UsersEntityListing);
+            return this.Equals(obj as UserPresenceAlertContainer);
         }
 
         /// <summary>
-        /// Returns true if UsersEntityListing instances are equal
+        /// Returns true if UserPresenceAlertContainer instances are equal
         /// </summary>
-        /// <param name="other">Instance of UsersEntityListing to be compared</param>
+        /// <param name="other">Instance of UserPresenceAlertContainer to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UsersEntityListing other)
+        public bool Equals(UserPresenceAlertContainer other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

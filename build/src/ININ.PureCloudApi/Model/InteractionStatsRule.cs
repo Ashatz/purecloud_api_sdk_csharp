@@ -323,7 +323,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Value">The threshold value. (required).</param>
         /// <param name="Enabled">Indicates if the rule is enabled. (required) (default to false).</param>
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
-        /// <param name="AlertTypes">A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] (required).</param>
+        /// <param name="AlertTypes">A collection of notification methods. (required).</param>
         public InteractionStatsRule(string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
             // to ensure "Name" is required (not null)
@@ -470,9 +470,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<User> NotificationUsers { get; set; }
         /// <summary>
-        /// A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;]
+        /// A collection of notification methods.
         /// </summary>
-        /// <value>A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;]</value>
+        /// <value>A collection of notification methods.</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; set; }
         /// <summary>

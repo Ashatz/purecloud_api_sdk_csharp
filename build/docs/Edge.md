@@ -35,7 +35,7 @@ title: Edge
 | **Patch** | **string** |  | [optional] |
 | **StatusCode** | **string** |  | [optional] |
 | **EdgeGroup** | [**EdgeGroup**](EdgeGroup.html) |  | [optional] |
-| **Site** | [**UriReference**](UriReference.html) |  | [optional] |
+| **Site** | [**Site**](Site.html) | The Site to which the Edge is assigned. | [optional] |
 | **SoftwareStatus** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) |  | [optional] |
 | **OnlineStatus** | **string** |  | [optional] |
 | **SerialNumber** | **string** |  | [optional] |

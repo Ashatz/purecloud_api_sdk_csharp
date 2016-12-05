@@ -106,7 +106,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum RequiredFields for "REQUIRED_FIELDS"
             /// </summary>
             [EnumMember(Value = "REQUIRED_FIELDS")]
-            RequiredFields
+            RequiredFields,
+            
+            /// <summary>
+            /// Enum MatchAll for "MATCH_ALL"
+            /// </summary>
+            [EnumMember(Value = "MATCH_ALL")]
+            MatchAll
         }
         /// <summary>
         /// How to apply this search criteria against other criteria

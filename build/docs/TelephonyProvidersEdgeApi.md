@@ -75,11 +75,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetProvidersEdgesTrunks**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunks) | **GET** /api/v2/telephony/providers/edges/trunks | Get the list of available trunks. |
 | [**GetProvidersEdgesTrunksTrunkId**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkstrunkid) | **GET** /api/v2/telephony/providers/edges/trunks/{trunkId} | Get a Trunk by ID |
 | [**GetProvidersEdgesTrunkswithrecording**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkswithrecording) | **GET** /api/v2/telephony/providers/edges/trunkswithrecording | Get Counts of trunks that have recording disabled or enabled |
-| [**GetSchemasEdgesVnext**](TelephonyProvidersEdgeApi.html#getschemasedgesvnext) | **GET** /api/v2/configuration/schemas/edges/vnext | Lists available schema categories |
-| [**GetSchemasEdgesVnextSchemacategory**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategory) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory} | List schemas of a specific category |
-| [**GetSchemasEdgesVnextSchemacategorySchematype**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematype) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType} | List schemas of a specific category |
-| [**GetSchemasEdgesVnextSchemacategorySchematypeSchemaId**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematypeschemaid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId} | Get a json schema |
-| [**GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId} | Get metadata for a schema |
+| [**GetSchemasEdgesVnext**](TelephonyProvidersEdgeApi.html#getschemasedgesvnext) | **GET** /api/v2/configuration/schemas/edges/vnext | Lists available schema categories (Deprecated) |
+| [**GetSchemasEdgesVnextSchemacategory**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategory) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory} | List schemas of a specific category (Deprecated) |
+| [**GetSchemasEdgesVnextSchemacategorySchematype**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematype) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType} | List schemas of a specific category (Deprecated) |
+| [**GetSchemasEdgesVnextSchemacategorySchematypeSchemaId**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematypeschemaid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId} | Get a json schema (Deprecated) |
+| [**GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId**](TelephonyProvidersEdgeApi.html#getschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid) | **GET** /api/v2/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extensionType}/{metadataId} | Get metadata for a schema (Deprecated) |
 | [**PostProvidersEdges**](TelephonyProvidersEdgeApi.html#postprovidersedges) | **POST** /api/v2/telephony/providers/edges | Create an edge. |
 | [**PostProvidersEdgesAddressvalidation**](TelephonyProvidersEdgeApi.html#postprovidersedgesaddressvalidation) | **POST** /api/v2/telephony/providers/edges/addressvalidation | Validates a street address |
 | [**PostProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeApi.html#postprovidersedgescertificateauthorities) | **POST** /api/v2/telephony/providers/edges/certificateauthorities | Create a certificate authority. |
@@ -1311,7 +1311,7 @@ namespace Example
 
 <a name="getprovidersedgesedgeid"></a>
 
-## [**Edge**](Edge.html) GetProvidersEdgesEdgeId (string edgeId)
+## [**Edge**](Edge.html) GetProvidersEdgesEdgeId (string edgeId, List<string> expand = null)
 
 Get edge.
 
@@ -1337,11 +1337,12 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var edgeId = edgeId_example;  // string | Edge ID
+            var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
 
             try
             {
                 // Get edge.
-                Edge result = apiInstance.GetProvidersEdgesEdgeId(edgeId);
+                Edge result = apiInstance.GetProvidersEdgesEdgeId(edgeId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1359,6 +1360,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4082,7 +4084,7 @@ namespace Example
 
 ## [**SchemaCategoryEntityListing**](SchemaCategoryEntityListing.html) GetSchemasEdgesVnext (int? pageSize = null, int? pageNumber = null)
 
-Lists available schema categories
+Lists available schema categories (Deprecated)
 
 
 
@@ -4110,7 +4112,7 @@ namespace Example
 
             try
             {
-                // Lists available schema categories
+                // Lists available schema categories (Deprecated)
                 SchemaCategoryEntityListing result = apiInstance.GetSchemasEdgesVnext(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -4140,7 +4142,7 @@ namespace Example
 
 ## [**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) GetSchemasEdgesVnextSchemacategory (string schemaCategory, int? pageSize = null, int? pageNumber = null)
 
-List schemas of a specific category
+List schemas of a specific category (Deprecated)
 
 
 
@@ -4169,7 +4171,7 @@ namespace Example
 
             try
             {
-                // List schemas of a specific category
+                // List schemas of a specific category (Deprecated)
                 SchemaReferenceEntityListing result = apiInstance.GetSchemasEdgesVnextSchemacategory(schemaCategory, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -4200,7 +4202,7 @@ namespace Example
 
 ## [**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) GetSchemasEdgesVnextSchemacategorySchematype (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
 
-List schemas of a specific category
+List schemas of a specific category (Deprecated)
 
 
 
@@ -4230,7 +4232,7 @@ namespace Example
 
             try
             {
-                // List schemas of a specific category
+                // List schemas of a specific category (Deprecated)
                 SchemaReferenceEntityListing result = apiInstance.GetSchemasEdgesVnextSchemacategorySchematype(schemaCategory, schemaType, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -4262,7 +4264,7 @@ namespace Example
 
 ## [**Organization**](Organization.html) GetSchemasEdgesVnextSchemacategorySchematypeSchemaId (string schemaCategory, string schemaType, string schemaId)
 
-Get a json schema
+Get a json schema (Deprecated)
 
 
 
@@ -4291,7 +4293,7 @@ namespace Example
 
             try
             {
-                // Get a json schema
+                // Get a json schema (Deprecated)
                 Organization result = apiInstance.GetSchemasEdgesVnextSchemacategorySchematypeSchemaId(schemaCategory, schemaType, schemaId);
                 Debug.WriteLine(result);
             }
@@ -4322,7 +4324,7 @@ namespace Example
 
 ## [**Organization**](Organization.html) GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null)
 
-Get metadata for a schema
+Get metadata for a schema (Deprecated)
 
 
 
@@ -4354,7 +4356,7 @@ namespace Example
 
             try
             {
-                // Get metadata for a schema
+                // Get metadata for a schema (Deprecated)
                 Organization result = apiInstance.GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensiontypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);
                 Debug.WriteLine(result);
             }

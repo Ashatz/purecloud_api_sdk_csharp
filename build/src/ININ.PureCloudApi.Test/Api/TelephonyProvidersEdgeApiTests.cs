@@ -323,7 +323,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetProvidersEdgesEdgeId'
             string edgeId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeId(edgeId);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesEdgeId(edgeId, expand);
             Assert.IsInstanceOf<Edge> (response, "response is Edge");
         }
         

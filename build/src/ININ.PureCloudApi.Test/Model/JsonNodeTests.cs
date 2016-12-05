@@ -51,6 +51,22 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
+        /// Test the property 'Array'
+        /// </summary>
+        [Test]
+        public void ArrayTest()
+        {
+            // TODO: unit test for the property 'Array'
+        }
+        /// <summary>
+        /// Test the property '_Null'
+        /// </summary>
+        [Test]
+        public void _NullTest()
+        {
+            // TODO: unit test for the property '_Null'
+        }
+        /// <summary>
         /// Test the property 'NodeType'
         /// </summary>
         [Test]
@@ -89,6 +105,30 @@ namespace ININ.PureCloudApi.Test
         public void _FloatTest()
         {
             // TODO: unit test for the property '_Float'
+        }
+        /// <summary>
+        /// Test the property 'ValueNode'
+        /// </summary>
+        [Test]
+        public void ValueNodeTest()
+        {
+            // TODO: unit test for the property 'ValueNode'
+        }
+        /// <summary>
+        /// Test the property 'ContainerNode'
+        /// </summary>
+        [Test]
+        public void ContainerNodeTest()
+        {
+            // TODO: unit test for the property 'ContainerNode'
+        }
+        /// <summary>
+        /// Test the property 'MissingNode'
+        /// </summary>
+        [Test]
+        public void MissingNodeTest()
+        {
+            // TODO: unit test for the property 'MissingNode'
         }
         /// <summary>
         /// Test the property 'Pojo'
@@ -177,46 +217,6 @@ namespace ININ.PureCloudApi.Test
         public void BinaryTest()
         {
             // TODO: unit test for the property 'Binary'
-        }
-        /// <summary>
-        /// Test the property 'ValueNode'
-        /// </summary>
-        [Test]
-        public void ValueNodeTest()
-        {
-            // TODO: unit test for the property 'ValueNode'
-        }
-        /// <summary>
-        /// Test the property 'ContainerNode'
-        /// </summary>
-        [Test]
-        public void ContainerNodeTest()
-        {
-            // TODO: unit test for the property 'ContainerNode'
-        }
-        /// <summary>
-        /// Test the property 'MissingNode'
-        /// </summary>
-        [Test]
-        public void MissingNodeTest()
-        {
-            // TODO: unit test for the property 'MissingNode'
-        }
-        /// <summary>
-        /// Test the property 'Array'
-        /// </summary>
-        [Test]
-        public void ArrayTest()
-        {
-            // TODO: unit test for the property 'Array'
-        }
-        /// <summary>
-        /// Test the property '_Null'
-        /// </summary>
-        [Test]
-        public void _NullTest()
-        {
-            // TODO: unit test for the property '_Null'
         }
 
     }

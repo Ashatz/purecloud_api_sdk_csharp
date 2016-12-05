@@ -10,7 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#deleteconversationidrecordingsrecordingidannotationsannotationid) | **DELETE** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
 | [**DeleteMediaretentionpolicies**](RecordingApi.html#deletemediaretentionpolicies) | **DELETE** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
 | [**DeleteMediaretentionpoliciesPolicyId**](RecordingApi.html#deletemediaretentionpoliciespolicyid) | **DELETE** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
-| [**DeleteOrphanId**](RecordingApi.html#deleteorphanid) | **DELETE** /api/v2/orphanrecordings/{orphanId} |  deletes a single orphan recording |
+| [**DeleteOrphanId**](RecordingApi.html#deleteorphanid) | **DELETE** /api/v2/orphanrecordings/{orphanId} | Deletes a single orphan recording |
 | [**GetConversationIdRecordings**](RecordingApi.html#getconversationidrecordings) | **GET** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
 | [**GetConversationIdRecordingsRecordingId**](RecordingApi.html#getconversationidrecordingsrecordingid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
 | [**GetConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#getconversationidrecordingsrecordingidannotations) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetMediaretentionpolicies**](RecordingApi.html#getmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
 | [**GetMediaretentionpoliciesPolicyId**](RecordingApi.html#getmediaretentionpoliciespolicyid) | **GET** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
 | [**GetOrphanId**](RecordingApi.html#getorphanid) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
+| [**GetOrphanIdMedia**](RecordingApi.html#getorphanidmedia) | **GET** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
 | [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **GET** /api/v2/orphanrecordings | Gets all orphan recordings |
 | [**GetRecordingkeys**](RecordingApi.html#getrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
 | [**GetRecordingkeysRotationschedule**](RecordingApi.html#getrecordingkeysrotationschedule) | **GET** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
@@ -36,6 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#putconversationidrecordingsrecordingidannotationsannotationid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
 | [**PutLocalkeysSettingsSettingsId**](RecordingApi.html#putlocalkeyssettingssettingsid) | **PUT** /api/v2/recording/localkeys/settings/{settingsId} | Update the local encryption settings |
 | [**PutMediaretentionpoliciesPolicyId**](RecordingApi.html#putmediaretentionpoliciespolicyid) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
+| [**PutOrphanId**](RecordingApi.html#putorphanid) | **PUT** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
 | [**PutRecordingkeysRotationschedule**](RecordingApi.html#putrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
 | [**PutSettings**](RecordingApi.html#putsettings) | **PUT** /api/v2/recording/settings | Update the Recording Settings for the Organization |
 {: class="table table-striped"}
@@ -215,7 +217,7 @@ namespace Example
 
 ## [**OrphanRecording**](OrphanRecording.html) DeleteOrphanId (string orphanId)
 
- deletes a single orphan recording
+Deletes a single orphan recording
 
 
 
@@ -242,7 +244,7 @@ namespace Example
 
             try
             {
-                //  deletes a single orphan recording
+                // Deletes a single orphan recording
                 OrphanRecording result = apiInstance.DeleteOrphanId(orphanId);
                 Debug.WriteLine(result);
             }
@@ -802,9 +804,71 @@ namespace Example
 
 [**OrphanRecording**](OrphanRecording.html)
 
+<a name="getorphanidmedia"></a>
+
+## [**Recording**](Recording.html) GetOrphanIdMedia (string orphanId, string formatId = null, bool? download = null, string fileName = null)
+
+Gets the media of a single orphan recording
+
+A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetOrphanIdMediaExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var orphanId = orphanId_example;  // string | Orphan ID
+            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
+            var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
+            var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
+
+            try
+            {
+                // Gets the media of a single orphan recording
+                Recording result = apiInstance.GetOrphanIdMedia(orphanId, formatId, download, fileName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetOrphanIdMedia: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **orphanId** | **string**| Orphan ID |  |
+| **formatId** | **string**| The desired media format. | [optional] [default to WEBM] |
+| **download** | **bool?**| requesting a download format of the recording | [optional] [default to false] |
+| **fileName** | **string**| the name of the downloaded fileName | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Recording**](Recording.html)
+
 <a name="getorphanrecordings"></a>
 
-## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null)
 
 Gets all orphan recordings
 
@@ -835,11 +899,12 @@ namespace Example
             var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var hasConversation = true;  // bool? | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional)  (default to false)
 
             try
             {
                 // Gets all orphan recordings
-                OrphanRecordingListing result = apiInstance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                OrphanRecordingListing result = apiInstance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -862,6 +927,7 @@ namespace Example
 | **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
+| **hasConversation** | **bool?**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -1722,6 +1788,64 @@ namespace Example
 ### Return type
 
 [**Policy**](Policy.html)
+
+<a name="putorphanid"></a>
+
+## [**Recording**](Recording.html) PutOrphanId (string orphanId, OrphanUpdateRequest body = null)
+
+Updates an orphan recording to a regular recording with retention values
+
+If this operation is successful the orphan will no longer exist. It will be replaced by the resulting recording in the response. This replacement recording is accessible by the normal Recording api.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutOrphanIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var orphanId = orphanId_example;  // string | Orphan ID
+            var body = new OrphanUpdateRequest(); // OrphanUpdateRequest |  (optional) 
+
+            try
+            {
+                // Updates an orphan recording to a regular recording with retention values
+                Recording result = apiInstance.PutOrphanId(orphanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PutOrphanId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **orphanId** | **string**| Orphan ID |  |
+| **body** | [**OrphanUpdateRequest**](OrphanUpdateRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Recording**](Recording.html)
 
 <a name="putrecordingkeysrotationschedule"></a>
 
