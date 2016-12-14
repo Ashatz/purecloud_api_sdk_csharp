@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// This field controls how the UI prompts the agent for a wrapup.
         /// </summary>
         /// <value>This field controls how the UI prompts the agent for a wrapup.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum WrapupPromptEnum
         {
             /// <summary>
@@ -33,28 +34,28 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Mandatory for "MANDATORY"
+            /// Enum Mandatory for "mandatory"
             /// </summary>
-            [EnumMember(Value = "MANDATORY")]
+            [EnumMember(Value = "mandatory")]
             Mandatory,
             
             /// <summary>
-            /// Enum Optional for "OPTIONAL"
+            /// Enum Optional for "optional"
             /// </summary>
-            [EnumMember(Value = "OPTIONAL")]
+            [EnumMember(Value = "optional")]
             Optional,
             
             /// <summary>
-            /// Enum Timeout for "TIMEOUT"
+            /// Enum Timeout for "timeout"
             /// </summary>
-            [EnumMember(Value = "TIMEOUT")]
+            [EnumMember(Value = "timeout")]
             Timeout,
             
             /// <summary>
-            /// Enum ForcedTimeout for "FORCED_TIMEOUT"
+            /// Enum Forcedtimeout for "forcedTimeout"
             /// </summary>
-            [EnumMember(Value = "FORCED_TIMEOUT")]
-            ForcedTimeout
+            [EnumMember(Value = "forcedTimeout")]
+            Forcedtimeout
         }
         /// <summary>
         /// This field controls how the UI prompts the agent for a wrapup.

@@ -235,6 +235,70 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'TimeoutSeconds'
         }
         /// <summary>
+        /// Test the property 'CobrowseRole'
+        /// </summary>
+        [Test]
+        public void CobrowseRoleTest()
+        {
+            // TODO: unit test for the property 'CobrowseRole'
+        }
+        /// <summary>
+        /// Test the property 'CobrowseRoomId'
+        /// </summary>
+        [Test]
+        public void CobrowseRoomIdTest()
+        {
+            // TODO: unit test for the property 'CobrowseRoomId'
+        }
+        /// <summary>
+        /// Test the property 'MediaBridgeId'
+        /// </summary>
+        [Test]
+        public void MediaBridgeIdTest()
+        {
+            // TODO: unit test for the property 'MediaBridgeId'
+        }
+        /// <summary>
+        /// Test the property 'ScreenShareAddressSelf'
+        /// </summary>
+        [Test]
+        public void ScreenShareAddressSelfTest()
+        {
+            // TODO: unit test for the property 'ScreenShareAddressSelf'
+        }
+        /// <summary>
+        /// Test the property 'SharingScreen'
+        /// </summary>
+        [Test]
+        public void SharingScreenTest()
+        {
+            // TODO: unit test for the property 'SharingScreen'
+        }
+        /// <summary>
+        /// Test the property 'ScreenShareRoomId'
+        /// </summary>
+        [Test]
+        public void ScreenShareRoomIdTest()
+        {
+            // TODO: unit test for the property 'ScreenShareRoomId'
+        }
+        /// <summary>
+        /// Test the property 'VideoRoomId'
+        /// </summary>
+        [Test]
+        public void VideoRoomIdTest()
+        {
+            // TODO: unit test for the property 'VideoRoomId'
+        }
+        /// <summary>
+        /// Test the property 'VideoAddressSelf'
+        /// </summary>
+        [Test]
+        public void VideoAddressSelfTest()
+        {
+            // TODO: unit test for the property 'VideoAddressSelf'
+        }
+        /// <summary>
         /// Test the property 'Segments'
         /// </summary>
         [Test]

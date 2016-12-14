@@ -30,6 +30,14 @@ title: AnalyticsSession
 | **ScriptId** | **string** |  | [optional] |
 | **SkipEnabled** | **bool?** |  | [optional] [default to false]|
 | **TimeoutSeconds** | **int?** |  | [optional] |
+| **CobrowseRole** | **string** |  | [optional] |
+| **CobrowseRoomId** | **string** |  | [optional] |
+| **MediaBridgeId** | **string** |  | [optional] |
+| **ScreenShareAddressSelf** | **string** |  | [optional] |
+| **SharingScreen** | **bool?** |  | [optional] [default to false]|
+| **ScreenShareRoomId** | **string** |  | [optional] |
+| **VideoRoomId** | **string** |  | [optional] |
+| **VideoAddressSelf** | **string** |  | [optional] |
 | **Segments** | [**List&lt;AnalyticsConversationSegment&gt;**](AnalyticsConversationSegment.html) |  | [optional] |
 {: class="table table-striped"}
 

@@ -62,6 +62,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchEmailsEmailId**](ConversationsApi.html#patchemailsemailid) | **PATCH** /api/v2/conversations/emails/{emailId} | Update a conversation by disconnecting all of the participants |
 | [**PatchEmailsEmailIdParticipantsParticipantId**](ConversationsApi.html#patchemailsemailidparticipantsparticipantid) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId} | Update conversation participant |
 | [**PatchEmailsEmailIdParticipantsParticipantIdAttributes**](ConversationsApi.html#patchemailsemailidparticipantsparticipantidattributes) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId**](ConversationsApi.html#patchemailsemailidparticipantsparticipantidcommunicationscommunicationid) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
 | [**PostCallbacks**](ConversationsApi.html#postcallbacks) | **POST** /api/v2/conversations/callbacks | Create a Callback |
 | [**PostCallbacksCallbackIdParticipantsParticipantIdReplace**](ConversationsApi.html#postcallbackscallbackidparticipantsparticipantidreplace) | **POST** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostCalls**](ConversationsApi.html#postcalls) | **POST** /api/v2/conversations/calls | Create a call conversation |
@@ -3246,6 +3247,67 @@ namespace Example
 | **emailId** | **string**| emailId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchemailsemailidparticipantsparticipantidcommunicationscommunicationid"></a>
+
+## void PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
+
+Update conversation participant's communication by disconnecting it.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var emailId = emailId_example;  // string | emailId
+            var participantId = participantId_example;  // string | participantId
+            var communicationId = communicationId_example;  // string | communicationId
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+
+            try
+            {
+                // Update conversation participant's communication by disconnecting it.
+                apiInstance.PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId(emailId, participantId, communicationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailId** | **string**| emailId |  |
+| **participantId** | **string**| participantId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
 {: class="table table-striped"}
 
 ### Return type

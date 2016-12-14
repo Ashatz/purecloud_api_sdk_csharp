@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored
         /// </summary>
         /// <value>The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ContentTypeEnum
         {
             /// <summary>

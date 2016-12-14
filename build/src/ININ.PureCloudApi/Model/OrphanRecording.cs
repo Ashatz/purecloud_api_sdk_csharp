@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets ProviderType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ProviderTypeEnum
         {
             /// <summary>
@@ -52,7 +53,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MediaTypeEnum
         {
             /// <summary>
@@ -84,7 +85,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets FileState
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum FileStateEnum
         {
             /// <summary>
@@ -132,6 +133,51 @@ namespace ININ.PureCloudApi.Model
             Uploading
         }
         /// <summary>
+        /// The status of the orphaned recording's conversation.
+        /// </summary>
+        /// <value>The status of the orphaned recording's conversation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum OrphanStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum NoConversation for "NO_CONVERSATION"
+            /// </summary>
+            [EnumMember(Value = "NO_CONVERSATION")]
+            NoConversation,
+            
+            /// <summary>
+            /// Enum UnknownConversation for "UNKNOWN_CONVERSATION"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN_CONVERSATION")]
+            UnknownConversation,
+            
+            /// <summary>
+            /// Enum ConversationNotComplete for "CONVERSATION_NOT_COMPLETE"
+            /// </summary>
+            [EnumMember(Value = "CONVERSATION_NOT_COMPLETE")]
+            ConversationNotComplete,
+            
+            /// <summary>
+            /// Enum ConversationNotEvaluated for "CONVERSATION_NOT_EVALUATED"
+            /// </summary>
+            [EnumMember(Value = "CONVERSATION_NOT_EVALUATED")]
+            ConversationNotEvaluated,
+            
+            /// <summary>
+            /// Enum Evaluated for "EVALUATED"
+            /// </summary>
+            [EnumMember(Value = "EVALUATED")]
+            Evaluated
+        }
+        /// <summary>
         /// Gets or Sets ProviderType
         /// </summary>
         [DataMember(Name="providerType", EmitDefaultValue=false)]
@@ -147,6 +193,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="fileState", EmitDefaultValue=false)]
         public FileStateEnum? FileState { get; set; }
         /// <summary>
+        /// The status of the orphaned recording's conversation.
+        /// </summary>
+        /// <value>The status of the orphaned recording's conversation.</value>
+        [DataMember(Name="orphanStatus", EmitDefaultValue=false)]
+        public OrphanStatusEnum? OrphanStatus { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="OrphanRecording" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -158,7 +210,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="FileState">FileState.</param>
         /// <param name="ProviderEndpoint">ProviderEndpoint.</param>
         /// <param name="Recording">Recording.</param>
-        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null)
+        /// <param name="OrphanStatus">The status of the orphaned recording&#39;s conversation..</param>
+        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, OrphanStatusEnum? OrphanStatus = null)
         {
             this.Name = Name;
             this.CreatedTime = CreatedTime;
@@ -169,6 +222,7 @@ namespace ININ.PureCloudApi.Model
             this.FileState = FileState;
             this.ProviderEndpoint = ProviderEndpoint;
             this.Recording = Recording;
+            this.OrphanStatus = OrphanStatus;
         }
         
         /// <summary>
@@ -233,6 +287,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FileState: ").Append(FileState).Append("\n");
             sb.Append("  ProviderEndpoint: ").Append(ProviderEndpoint).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
+            sb.Append("  OrphanStatus: ").Append(OrphanStatus).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -321,6 +376,11 @@ namespace ININ.PureCloudApi.Model
                     this.Recording.Equals(other.Recording)
                 ) &&
                 (
+                    this.OrphanStatus == other.OrphanStatus ||
+                    this.OrphanStatus != null &&
+                    this.OrphanStatus.Equals(other.OrphanStatus)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -358,6 +418,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ProviderEndpoint.GetHashCode();
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
+                if (this.OrphanStatus != null)
+                    hash = hash * 59 + this.OrphanStatus.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

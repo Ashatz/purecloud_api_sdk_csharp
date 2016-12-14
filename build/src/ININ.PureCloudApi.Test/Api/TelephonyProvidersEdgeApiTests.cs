@@ -323,7 +323,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetProvidersEdgesEdgeId'
             string edgeId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgeId(edgeId);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesEdgeId(edgeId, expand);
             Assert.IsInstanceOf<Edge> (response, "response is Edge");
         }
         
@@ -864,8 +865,9 @@ namespace ININ.PureCloudApi.Test
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             bool? recordingEnabled = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled);
-            Assert.IsInstanceOf<TrunkBase> (response, "response is TrunkBase");
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, expand);
+            Assert.IsInstanceOf<TrunkBaseEntityListing> (response, "response is TrunkBaseEntityListing");
         }
         
         /// <summary>

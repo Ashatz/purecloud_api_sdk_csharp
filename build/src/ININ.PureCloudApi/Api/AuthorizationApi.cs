@@ -319,7 +319,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole PutRolesRoleId (string roleId, DomainOrganizationRole body);
+        DomainOrganizationRole PutRolesRoleId (string roleId, DomainOrganizationRoleUpdate body);
 
         /// <summary>
         /// Update an organization role.
@@ -331,7 +331,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> PutRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRole body);
+        ApiResponse<DomainOrganizationRole> PutRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRoleUpdate body);
         /// <summary>
         /// Sets the users for the role
         /// </summary>
@@ -708,7 +708,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> PutRolesRoleIdAsync (string roleId, DomainOrganizationRole body);
+        System.Threading.Tasks.Task<DomainOrganizationRole> PutRolesRoleIdAsync (string roleId, DomainOrganizationRoleUpdate body);
 
         /// <summary>
         /// Update an organization role.
@@ -720,7 +720,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRole body);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRoleUpdate body);
         /// <summary>
         /// Sets the users for the role
         /// </summary>
@@ -2994,7 +2994,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole PutRolesRoleId (string roleId, DomainOrganizationRole body)
+        public DomainOrganizationRole PutRolesRoleId (string roleId, DomainOrganizationRoleUpdate body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = PutRolesRoleIdWithHttpInfo(roleId, body);
              return localVarResponse.Data;
@@ -3007,7 +3007,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > PutRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRole body)
+        public ApiResponse< DomainOrganizationRole > PutRolesRoleIdWithHttpInfo (string roleId, DomainOrganizationRoleUpdate body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -3083,7 +3083,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> PutRolesRoleIdAsync (string roleId, DomainOrganizationRole body)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> PutRolesRoleIdAsync (string roleId, DomainOrganizationRoleUpdate body)
         {
              ApiResponse<DomainOrganizationRole> localVarResponse = await PutRolesRoleIdAsyncWithHttpInfo(roleId, body);
              return localVarResponse.Data;
@@ -3097,7 +3097,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRole body)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutRolesRoleIdAsyncWithHttpInfo (string roleId, DomainOrganizationRoleUpdate body)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)

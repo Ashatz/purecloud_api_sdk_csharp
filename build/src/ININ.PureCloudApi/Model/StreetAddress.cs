@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -26,8 +27,8 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="StreetAddress" /> class.
         /// </summary>
         /// <param name="Country">2 Letter Country code, like US or GB (required).</param>
-        /// <param name="A1">A1.</param>
-        /// <param name="A3">A3.</param>
+        /// <param name="A1">State or Province (required).</param>
+        /// <param name="A3">City or township (required).</param>
         /// <param name="RD">RD.</param>
         /// <param name="HNO">HNO.</param>
         /// <param name="LOC">LOC.</param>
@@ -44,8 +45,24 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Country = Country;
             }
-            this.A1 = A1;
-            this.A3 = A3;
+            // to ensure "A1" is required (not null)
+            if (A1 == null)
+            {
+                throw new InvalidDataException("A1 is a required property for StreetAddress and cannot be null");
+            }
+            else
+            {
+                this.A1 = A1;
+            }
+            // to ensure "A3" is required (not null)
+            if (A3 == null)
+            {
+                throw new InvalidDataException("A3 is a required property for StreetAddress and cannot be null");
+            }
+            else
+            {
+                this.A3 = A3;
+            }
             this.RD = RD;
             this.HNO = HNO;
             this.LOC = LOC;
@@ -60,13 +77,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
         /// <summary>
-        /// Gets or Sets A1
+        /// State or Province
         /// </summary>
+        /// <value>State or Province</value>
         [DataMember(Name="A1", EmitDefaultValue=false)]
         public string A1 { get; set; }
         /// <summary>
-        /// Gets or Sets A3
+        /// City or township
         /// </summary>
+        /// <value>City or township</value>
         [DataMember(Name="A3", EmitDefaultValue=false)]
         public string A3 { get; set; }
         /// <summary>

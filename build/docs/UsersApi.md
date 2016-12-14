@@ -12,10 +12,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserIdRoutingskillsSkillId**](UsersApi.html#deleteuseridroutingskillsskillid) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
 | [**DeleteUserIdStationAssociatedstation**](UsersApi.html#deleteuseridstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
 | [**DeleteUserIdStationDefaultstation**](UsersApi.html#deleteuseridstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
+| [**GetFieldconfig**](UsersApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetMe**](UsersApi.html#getme) | **GET** /api/v2/users/me | Get current user details. |
 | [**GetSearch**](UsersApi.html#getsearch) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
 | [**GetUserId**](UsersApi.html#getuserid) | **GET** /api/v2/users/{userId} | Get user. |
+| [**GetUserIdAdjacents**](UsersApi.html#getuseridadjacents) | **GET** /api/v2/users/{userId}/adjacents | Get adjacents |
 | [**GetUserIdCallforwarding**](UsersApi.html#getuseridcallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
+| [**GetUserIdDirectreports**](UsersApi.html#getuseriddirectreports) | **GET** /api/v2/users/{userId}/directreports | Get direct reports |
+| [**GetUserIdFavorites**](UsersApi.html#getuseridfavorites) | **GET** /api/v2/users/{userId}/favorites | Get favorites |
 | [**GetUserIdGeolocationsClientId**](UsersApi.html#getuseridgeolocationsclientid) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
 | [**GetUserIdOutofoffice**](UsersApi.html#getuseridoutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
 | [**GetUserIdProfileskills**](UsersApi.html#getuseridprofileskills) | **GET** /api/v2/users/{userId}/profileskills | List profile skills for a user |
@@ -24,6 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserIdRoutingskills**](UsersApi.html#getuseridroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
 | [**GetUserIdRoutingstatus**](UsersApi.html#getuseridroutingstatus) | **GET** /api/v2/users/{userId}/routingstatus | Fetch the routing status of a user |
 | [**GetUserIdStation**](UsersApi.html#getuseridstation) | **GET** /api/v2/users/{userId}/station | Get station information for user |
+| [**GetUserIdSuperiors**](UsersApi.html#getuseridsuperiors) | **GET** /api/v2/users/{userId}/superiors | Get superiors |
 | [**GetUsers**](UsersApi.html#getusers) | **GET** /api/v2/users | Get the list of available users. |
 | [**PatchUserId**](UsersApi.html#patchuserid) | **PATCH** /api/v2/users/{userId} | Update user |
 | [**PatchUserIdCallforwarding**](UsersApi.html#patchuseridcallforwarding) | **PATCH** /api/v2/users/{userId}/callforwarding | Patch a user&#39;s CallForwarding |
@@ -34,6 +39,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUserIdRoutingskills**](UsersApi.html#postuseridroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
 | [**PostUsers**](UsersApi.html#postusers) | **POST** /api/v2/users | Create user |
 | [**PostUsersAggregatesQuery**](UsersApi.html#postusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
+| [**PostUsersDetailsQuery**](UsersApi.html#postusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostUsersObservationsQuery**](UsersApi.html#postusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
 | [**PutUserIdCallforwarding**](UsersApi.html#putuseridcallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
 | [**PutUserIdOutofoffice**](UsersApi.html#putuseridoutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
@@ -324,6 +330,62 @@ namespace Example
 
 void (empty response body)
 
+<a name="getfieldconfig"></a>
+
+## [**FieldConfig**](FieldConfig.html) GetFieldconfig (string type)
+
+Fetch field config for an entity type
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetFieldconfigExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UsersApi();
+            var type = type_example;  // string | Field type
+
+            try
+            {
+                // Fetch field config for an entity type
+                FieldConfig result = apiInstance.GetFieldconfig(type);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetFieldconfig: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **type** | **string**| Field type |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FieldConfig**](FieldConfig.html)
+
 <a name="getme"></a>
 
 ## [**UserMe**](UserMe.html) GetMe (List<string> expand = null)
@@ -496,6 +558,64 @@ namespace Example
 
 [**User**](User.html)
 
+<a name="getuseridadjacents"></a>
+
+## [**Adjacents**](Adjacents.html) GetUserIdAdjacents (string userId, List<string> expand = null)
+
+Get adjacents
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserIdAdjacentsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get adjacents
+                Adjacents result = apiInstance.GetUserIdAdjacents(userId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserIdAdjacents: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Adjacents**](Adjacents.html)
+
 <a name="getuseridcallforwarding"></a>
 
 ## [**CallForwarding**](CallForwarding.html) GetUserIdCallforwarding (string userId)
@@ -551,6 +671,128 @@ namespace Example
 ### Return type
 
 [**CallForwarding**](CallForwarding.html)
+
+<a name="getuseriddirectreports"></a>
+
+## [**List&lt;User&gt;**](User.html) GetUserIdDirectreports (string userId, List<string> expand = null)
+
+Get direct reports
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserIdDirectreportsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get direct reports
+                List&lt;User&gt; result = apiInstance.GetUserIdDirectreports(userId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserIdDirectreports: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<User>**](User.html)
+
+<a name="getuseridfavorites"></a>
+
+## [**UserEntityListing**](UserEntityListing.html) GetUserIdFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
+
+Get favorites
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserIdFavoritesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get favorites
+                UserEntityListing result = apiInstance.GetUserIdFavorites(userId, pageSize, pageNumber, sortOrder, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserIdFavorites: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserEntityListing**](UserEntityListing.html)
 
 <a name="getuseridgeolocationsclientid"></a>
 
@@ -1014,9 +1256,67 @@ namespace Example
 
 [**UserStations**](UserStations.html)
 
+<a name="getuseridsuperiors"></a>
+
+## [**List&lt;User&gt;**](User.html) GetUserIdSuperiors (string userId, List<string> expand = null)
+
+Get superiors
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserIdSuperiorsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get superiors
+                List&lt;User&gt; result = apiInstance.GetUserIdSuperiors(userId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserIdSuperiors: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<User>**](User.html)
+
 <a name="getusers"></a>
 
-## [**UsersEntityListing**](UsersEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+## [**UserEntityListing**](UserEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
 
 Get the list of available users.
 
@@ -1050,7 +1350,7 @@ namespace Example
             try
             {
                 // Get the list of available users.
-                UsersEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand);
+                UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1076,7 +1376,7 @@ namespace Example
 
 ### Return type
 
-[**UsersEntityListing**](UsersEntityListing.html)
+[**UserEntityListing**](UserEntityListing.html)
 
 <a name="patchuserid"></a>
 
@@ -1597,6 +1897,62 @@ namespace Example
 ### Return type
 
 [**PresenceQueryResponse**](PresenceQueryResponse.html)
+
+<a name="postusersdetailsquery"></a>
+
+## [**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html) PostUsersDetailsQuery (UserDetailsQuery body)
+
+Query for user details
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostUsersDetailsQueryExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new UsersApi();
+            var body = new UserDetailsQuery(); // UserDetailsQuery | query
+
+            try
+            {
+                // Query for user details
+                AnalyticsUserDetailsQueryResponse result = apiInstance.PostUsersDetailsQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUsersDetailsQuery: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UserDetailsQuery**](UserDetailsQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html)
 
 <a name="postusersobservationsquery"></a>
 

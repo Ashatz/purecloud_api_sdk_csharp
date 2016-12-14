@@ -21,7 +21,7 @@ title: EmailConversationNotificationParticipants
 | **Held** | **bool?** |  | [optional] |
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
-| **User** | [**CallbackConversationNotificationUser**](CallbackConversationNotificationUser.html) |  | [optional] |
+| **User** | [**DocumentDataNotificationCreatedBy**](DocumentDataNotificationCreatedBy.html) |  | [optional] |
 | **Queue** | [**EmailConversationNotificationUriReference**](EmailConversationNotificationUriReference.html) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ErrorInfo** | [**EmailConversationNotificationErrorInfo**](EmailConversationNotificationErrorInfo.html) |  | [optional] |
@@ -29,6 +29,8 @@ title: EmailConversationNotificationParticipants
 | **WrapupTimeoutMs** | **int?** |  | [optional] |
 | **WrapupSkipped** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
+| **ExternalContact** | [**EmailConversationNotificationUriReference**](EmailConversationNotificationUriReference.html) |  | [optional] |
+| **ExternalOrganization** | [**EmailConversationNotificationUriReference**](EmailConversationNotificationUriReference.html) |  | [optional] |
 | **Subject** | **string** |  | [optional] |
 | **MessagesSent** | **int?** |  | [optional] |
 {: class="table table-striped"}

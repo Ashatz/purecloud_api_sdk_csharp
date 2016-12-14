@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,12 +21,16 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStation" /> class.
         /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
         /// <param name="AssociatedUser">AssociatedUser.</param>
         /// <param name="AssociatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DefaultUser">DefaultUser.</param>
         /// <param name="ProviderInfo">Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; }.</param>
-        public UserStation(User AssociatedUser = null, DateTime? AssociatedDate = null, User DefaultUser = null, Dictionary<string, string> ProviderInfo = null)
+        public UserStation(string Name = null, string Type = null, User AssociatedUser = null, DateTime? AssociatedDate = null, User DefaultUser = null, Dictionary<string, string> ProviderInfo = null)
         {
+            this.Name = Name;
+            this.Type = Type;
             this.AssociatedUser = AssociatedUser;
             this.AssociatedDate = AssociatedDate;
             this.DefaultUser = DefaultUser;
@@ -38,6 +43,16 @@ namespace ININ.PureCloudApi.Model
         /// <value>A globally unique identifier for this station</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public string Type { get; set; }
         /// <summary>
         /// Gets or Sets AssociatedUser
         /// </summary>
@@ -69,6 +84,8 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class UserStation {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  AssociatedUser: ").Append(AssociatedUser).Append("\n");
             sb.Append("  AssociatedDate: ").Append(AssociatedDate).Append("\n");
             sb.Append("  DefaultUser: ").Append(DefaultUser).Append("\n");
@@ -115,6 +132,16 @@ namespace ININ.PureCloudApi.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
                     this.AssociatedUser == other.AssociatedUser ||
                     this.AssociatedUser != null &&
                     this.AssociatedUser.Equals(other.AssociatedUser)
@@ -149,6 +176,10 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.AssociatedUser != null)
                     hash = hash * 59 + this.AssociatedUser.GetHashCode();
                 if (this.AssociatedDate != null)

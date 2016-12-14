@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -18,109 +19,47 @@ namespace ININ.PureCloudApi.Model
     public partial class Location :  IEquatable<Location>
     {
         /// <summary>
-        /// Current activity status of the location.
-        /// </summary>
-        /// <value>Current activity status of the location.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StateEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Active for "active"
-            /// </summary>
-            [EnumMember(Value = "active")]
-            Active,
-            
-            /// <summary>
-            /// Enum Deleted for "deleted"
-            /// </summary>
-            [EnumMember(Value = "deleted")]
-            Deleted
-        }
-        /// <summary>
-        /// Current activity status of the location.
-        /// </summary>
-        /// <value>Current activity status of the location.</value>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public StateEnum? State { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="Location" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Address">Address.</param>
-        /// <param name="AddressVerified">AddressVerified (default to false).</param>
-        /// <param name="EmergencyNumber">EmergencyNumber.</param>
-        /// <param name="State">Current activity status of the location..</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="Path">Path.</param>
-        public Location(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null, List<string> Path = null)
+        /// <param name="Id">Id.</param>
+        /// <param name="FloorplanId">FloorplanId.</param>
+        /// <param name="Coordinates">Coordinates.</param>
+        /// <param name="Notes">Notes.</param>
+        /// <param name="LocationDefinition">LocationDefinition.</param>
+        public Location(string Id = null, string FloorplanId = null, Dictionary<string, double?> Coordinates = null, string Notes = null, LocationDefinition LocationDefinition = null)
         {
-            this.Name = Name;
-            this.Address = Address;
-            // use default value if no "AddressVerified" provided
-            if (AddressVerified == null)
-            {
-                this.AddressVerified = false;
-            }
-            else
-            {
-                this.AddressVerified = AddressVerified;
-            }
-            this.EmergencyNumber = EmergencyNumber;
-            this.State = State;
-            this.Version = Version;
-            this.Path = Path;
+            this.Id = Id;
+            this.FloorplanId = FloorplanId;
+            this.Coordinates = Coordinates;
+            this.Notes = Notes;
+            this.LocationDefinition = LocationDefinition;
         }
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets FloorplanId
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="floorplanId", EmitDefaultValue=false)]
+        public string FloorplanId { get; set; }
         /// <summary>
-        /// Gets or Sets Address
+        /// Gets or Sets Coordinates
         /// </summary>
-        [DataMember(Name="address", EmitDefaultValue=false)]
-        public LocationAddress Address { get; set; }
+        [DataMember(Name="coordinates", EmitDefaultValue=false)]
+        public Dictionary<string, double?> Coordinates { get; set; }
         /// <summary>
-        /// Gets or Sets AddressVerified
+        /// Gets or Sets Notes
         /// </summary>
-        [DataMember(Name="addressVerified", EmitDefaultValue=false)]
-        public bool? AddressVerified { get; set; }
+        [DataMember(Name="notes", EmitDefaultValue=false)]
+        public string Notes { get; set; }
         /// <summary>
-        /// Gets or Sets EmergencyNumber
+        /// Gets or Sets LocationDefinition
         /// </summary>
-        [DataMember(Name="emergencyNumber", EmitDefaultValue=false)]
-        public LocationEmergencyNumber EmergencyNumber { get; set; }
-        /// <summary>
-        /// Gets or Sets Version
-        /// </summary>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
-        /// <summary>
-        /// Gets or Sets Path
-        /// </summary>
-        [DataMember(Name="path", EmitDefaultValue=false)]
-        public List<string> Path { get; set; }
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        [DataMember(Name="locationDefinition", EmitDefaultValue=false)]
+        public LocationDefinition LocationDefinition { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -130,14 +69,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Location {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Address: ").Append(Address).Append("\n");
-            sb.Append("  AddressVerified: ").Append(AddressVerified).Append("\n");
-            sb.Append("  EmergencyNumber: ").Append(EmergencyNumber).Append("\n");
-            sb.Append("  State: ").Append(State).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  Path: ").Append(Path).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  FloorplanId: ").Append(FloorplanId).Append("\n");
+            sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
+            sb.Append("  LocationDefinition: ").Append(LocationDefinition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -180,44 +115,24 @@ namespace ININ.PureCloudApi.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.FloorplanId == other.FloorplanId ||
+                    this.FloorplanId != null &&
+                    this.FloorplanId.Equals(other.FloorplanId)
                 ) &&
                 (
-                    this.Address == other.Address ||
-                    this.Address != null &&
-                    this.Address.Equals(other.Address)
+                    this.Coordinates == other.Coordinates ||
+                    this.Coordinates != null &&
+                    this.Coordinates.SequenceEqual(other.Coordinates)
                 ) &&
                 (
-                    this.AddressVerified == other.AddressVerified ||
-                    this.AddressVerified != null &&
-                    this.AddressVerified.Equals(other.AddressVerified)
+                    this.Notes == other.Notes ||
+                    this.Notes != null &&
+                    this.Notes.Equals(other.Notes)
                 ) &&
                 (
-                    this.EmergencyNumber == other.EmergencyNumber ||
-                    this.EmergencyNumber != null &&
-                    this.EmergencyNumber.Equals(other.EmergencyNumber)
-                ) &&
-                (
-                    this.State == other.State ||
-                    this.State != null &&
-                    this.State.Equals(other.State)
-                ) &&
-                (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
-                (
-                    this.Path == other.Path ||
-                    this.Path != null &&
-                    this.Path.SequenceEqual(other.Path)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
+                    this.LocationDefinition == other.LocationDefinition ||
+                    this.LocationDefinition != null &&
+                    this.LocationDefinition.Equals(other.LocationDefinition)
                 );
         }
 
@@ -234,22 +149,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                if (this.Address != null)
-                    hash = hash * 59 + this.Address.GetHashCode();
-                if (this.AddressVerified != null)
-                    hash = hash * 59 + this.AddressVerified.GetHashCode();
-                if (this.EmergencyNumber != null)
-                    hash = hash * 59 + this.EmergencyNumber.GetHashCode();
-                if (this.State != null)
-                    hash = hash * 59 + this.State.GetHashCode();
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
-                if (this.Path != null)
-                    hash = hash * 59 + this.Path.GetHashCode();
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                if (this.FloorplanId != null)
+                    hash = hash * 59 + this.FloorplanId.GetHashCode();
+                if (this.Coordinates != null)
+                    hash = hash * 59 + this.Coordinates.GetHashCode();
+                if (this.Notes != null)
+                    hash = hash * 59 + this.Notes.GetHashCode();
+                if (this.LocationDefinition != null)
+                    hash = hash * 59 + this.LocationDefinition.GetHashCode();
                 return hash;
             }
         }

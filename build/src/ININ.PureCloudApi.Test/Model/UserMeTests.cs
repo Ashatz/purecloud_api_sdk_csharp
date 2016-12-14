@@ -131,6 +131,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Username'
         }
         /// <summary>
+        /// Test the property 'Manager'
+        /// </summary>
+        [Test]
+        public void ManagerTest()
+        {
+            // TODO: unit test for the property 'Manager'
+        }
+        /// <summary>
         /// Test the property 'Images'
         /// </summary>
         [Test]
@@ -211,6 +219,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'ProfileSkills'
         }
         /// <summary>
+        /// Test the property 'Locations'
+        /// </summary>
+        [Test]
+        public void LocationsTest()
+        {
+            // TODO: unit test for the property 'Locations'
+        }
+        /// <summary>
         /// Test the property 'Date'
         /// </summary>
         [Test]
@@ -243,12 +259,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'PresenceDefinitions'
         }
         /// <summary>
-        /// Test the property 'Locations'
+        /// Test the property 'LocationDefinitions'
         /// </summary>
         [Test]
-        public void LocationsTest()
+        public void LocationDefinitionsTest()
         {
-            // TODO: unit test for the property 'Locations'
+            // TODO: unit test for the property 'LocationDefinitions'
         }
         /// <summary>
         /// Test the property 'OrgAuthorization'
@@ -257,6 +273,46 @@ namespace ININ.PureCloudApi.Test
         public void OrgAuthorizationTest()
         {
             // TODO: unit test for the property 'OrgAuthorization'
+        }
+        /// <summary>
+        /// Test the property 'Favorites'
+        /// </summary>
+        [Test]
+        public void FavoritesTest()
+        {
+            // TODO: unit test for the property 'Favorites'
+        }
+        /// <summary>
+        /// Test the property 'Superiors'
+        /// </summary>
+        [Test]
+        public void SuperiorsTest()
+        {
+            // TODO: unit test for the property 'Superiors'
+        }
+        /// <summary>
+        /// Test the property 'DirectReports'
+        /// </summary>
+        [Test]
+        public void DirectReportsTest()
+        {
+            // TODO: unit test for the property 'DirectReports'
+        }
+        /// <summary>
+        /// Test the property 'Adjacents'
+        /// </summary>
+        [Test]
+        public void AdjacentsTest()
+        {
+            // TODO: unit test for the property 'Adjacents'
+        }
+        /// <summary>
+        /// Test the property 'RoutingSkills'
+        /// </summary>
+        [Test]
+        public void RoutingSkillsTest()
+        {
+            // TODO: unit test for the property 'RoutingSkills'
         }
         /// <summary>
         /// Test the property 'SelfUri'

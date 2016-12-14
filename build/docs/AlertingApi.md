@@ -11,6 +11,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteHeartbeatRulesRuleId**](AlertingApi.html#deleteheartbeatrulesruleid) | **DELETE** /api/v2/alerting/heartbeat/rules/{ruleId} | Delete a heart beat rule. |
 | [**DeleteInteractionstatsAlertsAlertId**](AlertingApi.html#deleteinteractionstatsalertsalertid) | **DELETE** /api/v2/alerting/interactionstats/alerts/{alertId} | Delete an interaction stats alert |
 | [**DeleteInteractionstatsRulesRuleId**](AlertingApi.html#deleteinteractionstatsrulesruleid) | **DELETE** /api/v2/alerting/interactionstats/rules/{ruleId} | Delete an interaction stats rule. |
+| [**DeleteRoutingstatusAlertsAlertId**](AlertingApi.html#deleteroutingstatusalertsalertid) | **DELETE** /api/v2/alerting/routingstatus/alerts/{alertId} | Delete a routing status alert |
+| [**DeleteRoutingstatusRulesRuleId**](AlertingApi.html#deleteroutingstatusrulesruleid) | **DELETE** /api/v2/alerting/routingstatus/rules/{ruleId} | Delete a routing status rule. |
+| [**DeleteUserpresenceAlertsAlertId**](AlertingApi.html#deleteuserpresencealertsalertid) | **DELETE** /api/v2/alerting/userpresence/alerts/{alertId} | Delete a user presence alert |
+| [**DeleteUserpresenceRulesRuleId**](AlertingApi.html#deleteuserpresencerulesruleid) | **DELETE** /api/v2/alerting/userpresence/rules/{ruleId} | Delete a user presence rule. |
 | [**GetHeartbeatAlerts**](AlertingApi.html#getheartbeatalerts) | **GET** /api/v2/alerting/heartbeat/alerts | Get heart beat alert list. |
 | [**GetHeartbeatAlertsAlertId**](AlertingApi.html#getheartbeatalertsalertid) | **GET** /api/v2/alerting/heartbeat/alerts/{alertId} | Get a heart beat alert |
 | [**GetHeartbeatRules**](AlertingApi.html#getheartbeatrules) | **GET** /api/v2/alerting/heartbeat/rules | Get a heart beat rule list. |
@@ -20,11 +24,23 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetInteractionstatsAlertsUnread**](AlertingApi.html#getinteractionstatsalertsunread) | **GET** /api/v2/alerting/interactionstats/alerts/unread | Gets user unread count of interaction stats alerts. |
 | [**GetInteractionstatsRules**](AlertingApi.html#getinteractionstatsrules) | **GET** /api/v2/alerting/interactionstats/rules | Get an interaction stats rule list. |
 | [**GetInteractionstatsRulesRuleId**](AlertingApi.html#getinteractionstatsrulesruleid) | **GET** /api/v2/alerting/interactionstats/rules/{ruleId} | Get an interaction stats rule. |
+| [**GetRoutingstatusAlerts**](AlertingApi.html#getroutingstatusalerts) | **GET** /api/v2/alerting/routingstatus/alerts | Get routing status alert list. |
+| [**GetRoutingstatusAlertsAlertId**](AlertingApi.html#getroutingstatusalertsalertid) | **GET** /api/v2/alerting/routingstatus/alerts/{alertId} | Get a routing status alert |
+| [**GetRoutingstatusRules**](AlertingApi.html#getroutingstatusrules) | **GET** /api/v2/alerting/routingstatus/rules | Get a routing status rule list. |
+| [**GetRoutingstatusRulesRuleId**](AlertingApi.html#getroutingstatusrulesruleid) | **GET** /api/v2/alerting/routingstatus/rules/{ruleId} | Get a routing status rule. |
+| [**GetUserpresenceAlerts**](AlertingApi.html#getuserpresencealerts) | **GET** /api/v2/alerting/userpresence/alerts | Get user presence alert list. |
+| [**GetUserpresenceAlertsAlertId**](AlertingApi.html#getuserpresencealertsalertid) | **GET** /api/v2/alerting/userpresence/alerts/{alertId} | Get a user presence alert |
+| [**GetUserpresenceRules**](AlertingApi.html#getuserpresencerules) | **GET** /api/v2/alerting/userpresence/rules | Get a user presence rule list. |
+| [**GetUserpresenceRulesRuleId**](AlertingApi.html#getuserpresencerulesruleid) | **GET** /api/v2/alerting/userpresence/rules/{ruleId} | Get a user presence rule. |
 | [**PostHeartbeatRules**](AlertingApi.html#postheartbeatrules) | **POST** /api/v2/alerting/heartbeat/rules | Create a heart beat rule. |
 | [**PostInteractionstatsRules**](AlertingApi.html#postinteractionstatsrules) | **POST** /api/v2/alerting/interactionstats/rules | Create an interaction stats rule. |
+| [**PostRoutingstatusRules**](AlertingApi.html#postroutingstatusrules) | **POST** /api/v2/alerting/routingstatus/rules | Create a routing status rule. |
+| [**PostUserpresenceRules**](AlertingApi.html#postuserpresencerules) | **POST** /api/v2/alerting/userpresence/rules | Create a user presence rule. |
 | [**PutHeartbeatRulesRuleId**](AlertingApi.html#putheartbeatrulesruleid) | **PUT** /api/v2/alerting/heartbeat/rules/{ruleId} | Update a heart beat rule |
 | [**PutInteractionstatsAlertsAlertId**](AlertingApi.html#putinteractionstatsalertsalertid) | **PUT** /api/v2/alerting/interactionstats/alerts/{alertId} | Update an interaction stats alert read status |
 | [**PutInteractionstatsRulesRuleId**](AlertingApi.html#putinteractionstatsrulesruleid) | **PUT** /api/v2/alerting/interactionstats/rules/{ruleId} | Update an interaction stats rule |
+| [**PutRoutingstatusRulesRuleId**](AlertingApi.html#putroutingstatusrulesruleid) | **PUT** /api/v2/alerting/routingstatus/rules/{ruleId} | Update a routing status rule |
+| [**PutUserpresenceRulesRuleId**](AlertingApi.html#putuserpresencerulesruleid) | **PUT** /api/v2/alerting/userpresence/rules/{ruleId} | Update a user presence rule |
 {: class="table table-striped"}
 
 <a name="deleteheartbeatalertsalertid"></a>
@@ -247,9 +263,229 @@ namespace Example
 
 void (empty response body)
 
+<a name="deleteroutingstatusalertsalertid"></a>
+
+## void DeleteRoutingstatusAlertsAlertId (string alertId)
+
+Delete a routing status alert
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteRoutingstatusAlertsAlertIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var alertId = alertId_example;  // string | Alert ID
+
+            try
+            {
+                // Delete a routing status alert
+                apiInstance.DeleteRoutingstatusAlertsAlertId(alertId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.DeleteRoutingstatusAlertsAlertId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **alertId** | **string**| Alert ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutingstatusrulesruleid"></a>
+
+## void DeleteRoutingstatusRulesRuleId (string ruleId)
+
+Delete a routing status rule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteRoutingstatusRulesRuleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var ruleId = ruleId_example;  // string | Rule ID
+
+            try
+            {
+                // Delete a routing status rule.
+                apiInstance.DeleteRoutingstatusRulesRuleId(ruleId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.DeleteRoutingstatusRulesRuleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ruleId** | **string**| Rule ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteuserpresencealertsalertid"></a>
+
+## void DeleteUserpresenceAlertsAlertId (string alertId)
+
+Delete a user presence alert
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteUserpresenceAlertsAlertIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var alertId = alertId_example;  // string | Alert ID
+
+            try
+            {
+                // Delete a user presence alert
+                apiInstance.DeleteUserpresenceAlertsAlertId(alertId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.DeleteUserpresenceAlertsAlertId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **alertId** | **string**| Alert ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteuserpresencerulesruleid"></a>
+
+## void DeleteUserpresenceRulesRuleId (string ruleId)
+
+Delete a user presence rule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteUserpresenceRulesRuleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var ruleId = ruleId_example;  // string | Rule ID
+
+            try
+            {
+                // Delete a user presence rule.
+                apiInstance.DeleteUserpresenceRulesRuleId(ruleId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.DeleteUserpresenceRulesRuleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ruleId** | **string**| Rule ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="getheartbeatalerts"></a>
 
-## [**HeartBeatAlertContainer**](HeartBeatAlertContainer.html) GetHeartbeatAlerts ()
+## [**HeartBeatAlertContainer**](HeartBeatAlertContainer.html) GetHeartbeatAlerts (List<string> expand = null)
 
 Get heart beat alert list.
 
@@ -274,11 +510,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AlertingApi();
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get heart beat alert list.
-                HeartBeatAlertContainer result = apiInstance.GetHeartbeatAlerts();
+                HeartBeatAlertContainer result = apiInstance.GetHeartbeatAlerts(expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -291,7 +528,11 @@ namespace Example
 ~~~
 
 ### Parameters
-This endpoint does require any parameters.
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -300,7 +541,7 @@ This endpoint does require any parameters.
 
 <a name="getheartbeatalertsalertid"></a>
 
-## [**HeartBeatAlert**](HeartBeatAlert.html) GetHeartbeatAlertsAlertId (string alertId)
+## [**HeartBeatAlert**](HeartBeatAlert.html) GetHeartbeatAlertsAlertId (string alertId, List<string> expand = null)
 
 Get a heart beat alert
 
@@ -326,11 +567,12 @@ namespace Example
 
             var apiInstance = new AlertingApi();
             var alertId = alertId_example;  // string | Alert ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get a heart beat alert
-                HeartBeatAlert result = apiInstance.GetHeartbeatAlertsAlertId(alertId);
+                HeartBeatAlert result = apiInstance.GetHeartbeatAlertsAlertId(alertId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -348,6 +590,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -356,7 +599,7 @@ namespace Example
 
 <a name="getheartbeatrules"></a>
 
-## [**HeartBeatRuleContainer**](HeartBeatRuleContainer.html) GetHeartbeatRules ()
+## [**HeartBeatRuleContainer**](HeartBeatRuleContainer.html) GetHeartbeatRules (List<string> expand = null)
 
 Get a heart beat rule list.
 
@@ -381,11 +624,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AlertingApi();
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get a heart beat rule list.
-                HeartBeatRuleContainer result = apiInstance.GetHeartbeatRules();
+                HeartBeatRuleContainer result = apiInstance.GetHeartbeatRules(expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -398,7 +642,11 @@ namespace Example
 ~~~
 
 ### Parameters
-This endpoint does require any parameters.
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -407,7 +655,7 @@ This endpoint does require any parameters.
 
 <a name="getheartbeatrulesruleid"></a>
 
-## [**HeartBeatRule**](HeartBeatRule.html) GetHeartbeatRulesRuleId (string ruleId)
+## [**HeartBeatRule**](HeartBeatRule.html) GetHeartbeatRulesRuleId (string ruleId, List<string> expand = null)
 
 Get a heart beat rule.
 
@@ -433,11 +681,12 @@ namespace Example
 
             var apiInstance = new AlertingApi();
             var ruleId = ruleId_example;  // string | Rule ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get a heart beat rule.
-                HeartBeatRule result = apiInstance.GetHeartbeatRulesRuleId(ruleId);
+                HeartBeatRule result = apiInstance.GetHeartbeatRulesRuleId(ruleId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -455,6 +704,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -463,7 +713,7 @@ namespace Example
 
 <a name="getinteractionstatsalerts"></a>
 
-## [**InteractionStatsAlertContainer**](InteractionStatsAlertContainer.html) GetInteractionstatsAlerts ()
+## [**InteractionStatsAlertContainer**](InteractionStatsAlertContainer.html) GetInteractionstatsAlerts (List<string> expand = null)
 
 Get interaction stats alert list.
 
@@ -488,11 +738,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AlertingApi();
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get interaction stats alert list.
-                InteractionStatsAlertContainer result = apiInstance.GetInteractionstatsAlerts();
+                InteractionStatsAlertContainer result = apiInstance.GetInteractionstatsAlerts(expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -505,7 +756,11 @@ namespace Example
 ~~~
 
 ### Parameters
-This endpoint does require any parameters.
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -514,7 +769,7 @@ This endpoint does require any parameters.
 
 <a name="getinteractionstatsalertsalertid"></a>
 
-## [**InteractionStatsAlert**](InteractionStatsAlert.html) GetInteractionstatsAlertsAlertId (string alertId)
+## [**InteractionStatsAlert**](InteractionStatsAlert.html) GetInteractionstatsAlertsAlertId (string alertId, List<string> expand = null)
 
 Get an interaction stats alert
 
@@ -540,11 +795,12 @@ namespace Example
 
             var apiInstance = new AlertingApi();
             var alertId = alertId_example;  // string | Alert ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get an interaction stats alert
-                InteractionStatsAlert result = apiInstance.GetInteractionstatsAlertsAlertId(alertId);
+                InteractionStatsAlert result = apiInstance.GetInteractionstatsAlertsAlertId(alertId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -562,6 +818,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -621,7 +878,7 @@ This endpoint does require any parameters.
 
 <a name="getinteractionstatsrules"></a>
 
-## [**InteractionStatsRuleContainer**](InteractionStatsRuleContainer.html) GetInteractionstatsRules ()
+## [**InteractionStatsRuleContainer**](InteractionStatsRuleContainer.html) GetInteractionstatsRules (List<string> expand = null)
 
 Get an interaction stats rule list.
 
@@ -646,11 +903,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new AlertingApi();
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get an interaction stats rule list.
-                InteractionStatsRuleContainer result = apiInstance.GetInteractionstatsRules();
+                InteractionStatsRuleContainer result = apiInstance.GetInteractionstatsRules(expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -663,7 +921,11 @@ namespace Example
 ~~~
 
 ### Parameters
-This endpoint does require any parameters.
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -672,7 +934,7 @@ This endpoint does require any parameters.
 
 <a name="getinteractionstatsrulesruleid"></a>
 
-## [**InteractionStatsRule**](InteractionStatsRule.html) GetInteractionstatsRulesRuleId (string ruleId)
+## [**InteractionStatsRule**](InteractionStatsRule.html) GetInteractionstatsRulesRuleId (string ruleId, List<string> expand = null)
 
 Get an interaction stats rule.
 
@@ -698,11 +960,12 @@ namespace Example
 
             var apiInstance = new AlertingApi();
             var ruleId = ruleId_example;  // string | Rule ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get an interaction stats rule.
-                InteractionStatsRule result = apiInstance.GetInteractionstatsRulesRuleId(ruleId);
+                InteractionStatsRule result = apiInstance.GetInteractionstatsRulesRuleId(ruleId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -720,15 +983,472 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**InteractionStatsRule**](InteractionStatsRule.html)
 
+<a name="getroutingstatusalerts"></a>
+
+## [**RoutingStatusAlertContainer**](RoutingStatusAlertContainer.html) GetRoutingstatusAlerts (List<string> expand = null)
+
+Get routing status alert list.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetRoutingstatusAlertsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get routing status alert list.
+                RoutingStatusAlertContainer result = apiInstance.GetRoutingstatusAlerts(expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.GetRoutingstatusAlerts: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoutingStatusAlertContainer**](RoutingStatusAlertContainer.html)
+
+<a name="getroutingstatusalertsalertid"></a>
+
+## [**RoutingStatusAlert**](RoutingStatusAlert.html) GetRoutingstatusAlertsAlertId (string alertId, List<string> expand = null)
+
+Get a routing status alert
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetRoutingstatusAlertsAlertIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var alertId = alertId_example;  // string | Alert ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get a routing status alert
+                RoutingStatusAlert result = apiInstance.GetRoutingstatusAlertsAlertId(alertId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.GetRoutingstatusAlertsAlertId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **alertId** | **string**| Alert ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoutingStatusAlert**](RoutingStatusAlert.html)
+
+<a name="getroutingstatusrules"></a>
+
+## [**RoutingStatusRuleContainer**](RoutingStatusRuleContainer.html) GetRoutingstatusRules (List<string> expand = null)
+
+Get a routing status rule list.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetRoutingstatusRulesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get a routing status rule list.
+                RoutingStatusRuleContainer result = apiInstance.GetRoutingstatusRules(expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.GetRoutingstatusRules: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoutingStatusRuleContainer**](RoutingStatusRuleContainer.html)
+
+<a name="getroutingstatusrulesruleid"></a>
+
+## [**RoutingStatusRule**](RoutingStatusRule.html) GetRoutingstatusRulesRuleId (string ruleId, List<string> expand = null)
+
+Get a routing status rule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetRoutingstatusRulesRuleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var ruleId = ruleId_example;  // string | Rule ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get a routing status rule.
+                RoutingStatusRule result = apiInstance.GetRoutingstatusRulesRuleId(ruleId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.GetRoutingstatusRulesRuleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ruleId** | **string**| Rule ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoutingStatusRule**](RoutingStatusRule.html)
+
+<a name="getuserpresencealerts"></a>
+
+## [**UserPresenceAlertContainer**](UserPresenceAlertContainer.html) GetUserpresenceAlerts (List<string> expand = null)
+
+Get user presence alert list.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserpresenceAlertsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get user presence alert list.
+                UserPresenceAlertContainer result = apiInstance.GetUserpresenceAlerts(expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.GetUserpresenceAlerts: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserPresenceAlertContainer**](UserPresenceAlertContainer.html)
+
+<a name="getuserpresencealertsalertid"></a>
+
+## [**UserPresenceAlert**](UserPresenceAlert.html) GetUserpresenceAlertsAlertId (string alertId, List<string> expand = null)
+
+Get a user presence alert
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserpresenceAlertsAlertIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var alertId = alertId_example;  // string | Alert ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get a user presence alert
+                UserPresenceAlert result = apiInstance.GetUserpresenceAlertsAlertId(alertId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.GetUserpresenceAlertsAlertId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **alertId** | **string**| Alert ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserPresenceAlert**](UserPresenceAlert.html)
+
+<a name="getuserpresencerules"></a>
+
+## [**UserPresenceRuleContainer**](UserPresenceRuleContainer.html) GetUserpresenceRules (List<string> expand = null)
+
+Get a user presence rule list.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserpresenceRulesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get a user presence rule list.
+                UserPresenceRuleContainer result = apiInstance.GetUserpresenceRules(expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.GetUserpresenceRules: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserPresenceRuleContainer**](UserPresenceRuleContainer.html)
+
+<a name="getuserpresencerulesruleid"></a>
+
+## [**UserPresenceRule**](UserPresenceRule.html) GetUserpresenceRulesRuleId (string ruleId, List<string> expand = null)
+
+Get a user presence rule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetUserpresenceRulesRuleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var ruleId = ruleId_example;  // string | Rule ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Get a user presence rule.
+                UserPresenceRule result = apiInstance.GetUserpresenceRulesRuleId(ruleId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.GetUserpresenceRulesRuleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ruleId** | **string**| Rule ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserPresenceRule**](UserPresenceRule.html)
+
 <a name="postheartbeatrules"></a>
 
-## [**HeartBeatRule**](HeartBeatRule.html) PostHeartbeatRules (HeartBeatRule body)
+## [**HeartBeatRule**](HeartBeatRule.html) PostHeartbeatRules (HeartBeatRule body, List<string> expand = null)
 
 Create a heart beat rule.
 
@@ -754,11 +1474,12 @@ namespace Example
 
             var apiInstance = new AlertingApi();
             var body = new HeartBeatRule(); // HeartBeatRule | HeartBeatRule
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Create a heart beat rule.
-                HeartBeatRule result = apiInstance.PostHeartbeatRules(body);
+                HeartBeatRule result = apiInstance.PostHeartbeatRules(body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -776,6 +1497,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**HeartBeatRule**](HeartBeatRule.html)| HeartBeatRule |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -784,7 +1506,7 @@ namespace Example
 
 <a name="postinteractionstatsrules"></a>
 
-## [**InteractionStatsRule**](InteractionStatsRule.html) PostInteractionstatsRules (InteractionStatsRule body)
+## [**InteractionStatsRule**](InteractionStatsRule.html) PostInteractionstatsRules (InteractionStatsRule body, List<string> expand = null)
 
 Create an interaction stats rule.
 
@@ -810,11 +1532,12 @@ namespace Example
 
             var apiInstance = new AlertingApi();
             var body = new InteractionStatsRule(); // InteractionStatsRule | AlertingRule
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Create an interaction stats rule.
-                InteractionStatsRule result = apiInstance.PostInteractionstatsRules(body);
+                InteractionStatsRule result = apiInstance.PostInteractionstatsRules(body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -832,15 +1555,132 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**InteractionStatsRule**](InteractionStatsRule.html)
 
+<a name="postroutingstatusrules"></a>
+
+## [**RoutingStatusRule**](RoutingStatusRule.html) PostRoutingstatusRules (RoutingStatusRule body, List<string> expand = null)
+
+Create a routing status rule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostRoutingstatusRulesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var body = new RoutingStatusRule(); // RoutingStatusRule | RoutingStatusRule
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Create a routing status rule.
+                RoutingStatusRule result = apiInstance.PostRoutingstatusRules(body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.PostRoutingstatusRules: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RoutingStatusRule**](RoutingStatusRule.html)| RoutingStatusRule |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoutingStatusRule**](RoutingStatusRule.html)
+
+<a name="postuserpresencerules"></a>
+
+## [**UserPresenceRule**](UserPresenceRule.html) PostUserpresenceRules (UserPresenceRule body, List<string> expand = null)
+
+Create a user presence rule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostUserpresenceRulesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var body = new UserPresenceRule(); // UserPresenceRule | UserPresenceRule
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Create a user presence rule.
+                UserPresenceRule result = apiInstance.PostUserpresenceRules(body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.PostUserpresenceRules: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UserPresenceRule**](UserPresenceRule.html)| UserPresenceRule |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserPresenceRule**](UserPresenceRule.html)
+
 <a name="putheartbeatrulesruleid"></a>
 
-## [**HeartBeatRule**](HeartBeatRule.html) PutHeartbeatRulesRuleId (string ruleId, HeartBeatRule body)
+## [**HeartBeatRule**](HeartBeatRule.html) PutHeartbeatRulesRuleId (string ruleId, HeartBeatRule body, List<string> expand = null)
 
 Update a heart beat rule
 
@@ -867,11 +1707,12 @@ namespace Example
             var apiInstance = new AlertingApi();
             var ruleId = ruleId_example;  // string | Rule ID
             var body = new HeartBeatRule(); // HeartBeatRule | HeartBeatRule
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Update a heart beat rule
-                HeartBeatRule result = apiInstance.PutHeartbeatRulesRuleId(ruleId, body);
+                HeartBeatRule result = apiInstance.PutHeartbeatRulesRuleId(ruleId, body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -890,6 +1731,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
 | **body** | [**HeartBeatRule**](HeartBeatRule.html)| HeartBeatRule |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -898,7 +1740,7 @@ namespace Example
 
 <a name="putinteractionstatsalertsalertid"></a>
 
-## [**UnreadStatus**](UnreadStatus.html) PutInteractionstatsAlertsAlertId (string alertId, UnreadStatus body)
+## [**UnreadStatus**](UnreadStatus.html) PutInteractionstatsAlertsAlertId (string alertId, UnreadStatus body, List<string> expand = null)
 
 Update an interaction stats alert read status
 
@@ -925,11 +1767,12 @@ namespace Example
             var apiInstance = new AlertingApi();
             var alertId = alertId_example;  // string | Alert ID
             var body = new UnreadStatus(); // UnreadStatus | InteractionStatsAlert
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Update an interaction stats alert read status
-                UnreadStatus result = apiInstance.PutInteractionstatsAlertsAlertId(alertId, body);
+                UnreadStatus result = apiInstance.PutInteractionstatsAlertsAlertId(alertId, body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -948,6 +1791,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
 | **body** | [**UnreadStatus**](UnreadStatus.html)| InteractionStatsAlert |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -956,7 +1800,7 @@ namespace Example
 
 <a name="putinteractionstatsrulesruleid"></a>
 
-## [**InteractionStatsRule**](InteractionStatsRule.html) PutInteractionstatsRulesRuleId (string ruleId, InteractionStatsRule body)
+## [**InteractionStatsRule**](InteractionStatsRule.html) PutInteractionstatsRulesRuleId (string ruleId, InteractionStatsRule body, List<string> expand = null)
 
 Update an interaction stats rule
 
@@ -983,11 +1827,12 @@ namespace Example
             var apiInstance = new AlertingApi();
             var ruleId = ruleId_example;  // string | Rule ID
             var body = new InteractionStatsRule(); // InteractionStatsRule | AlertingRule
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Update an interaction stats rule
-                InteractionStatsRule result = apiInstance.PutInteractionstatsRulesRuleId(ruleId, body);
+                InteractionStatsRule result = apiInstance.PutInteractionstatsRulesRuleId(ruleId, body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1006,9 +1851,130 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
 | **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**InteractionStatsRule**](InteractionStatsRule.html)
+
+<a name="putroutingstatusrulesruleid"></a>
+
+## [**RoutingStatusRule**](RoutingStatusRule.html) PutRoutingstatusRulesRuleId (string ruleId, RoutingStatusRule body, List<string> expand = null)
+
+Update a routing status rule
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutRoutingstatusRulesRuleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var ruleId = ruleId_example;  // string | Rule ID
+            var body = new RoutingStatusRule(); // RoutingStatusRule | RoutingStatusRule
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Update a routing status rule
+                RoutingStatusRule result = apiInstance.PutRoutingstatusRulesRuleId(ruleId, body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.PutRoutingstatusRulesRuleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ruleId** | **string**| Rule ID |  |
+| **body** | [**RoutingStatusRule**](RoutingStatusRule.html)| RoutingStatusRule |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoutingStatusRule**](RoutingStatusRule.html)
+
+<a name="putuserpresencerulesruleid"></a>
+
+## [**UserPresenceRule**](UserPresenceRule.html) PutUserpresenceRulesRuleId (string ruleId, UserPresenceRule body, List<string> expand = null)
+
+Update a user presence rule
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutUserpresenceRulesRuleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AlertingApi();
+            var ruleId = ruleId_example;  // string | Rule ID
+            var body = new UserPresenceRule(); // UserPresenceRule | UserPresenceRule
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            {
+                // Update a user presence rule
+                UserPresenceRule result = apiInstance.PutUserpresenceRulesRuleId(ruleId, body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.PutUserpresenceRulesRuleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ruleId** | **string**| Rule ID |  |
+| **body** | [**UserPresenceRule**](UserPresenceRule.html)| UserPresenceRule |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserPresenceRule**](UserPresenceRule.html)
 

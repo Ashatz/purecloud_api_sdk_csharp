@@ -29,6 +29,8 @@ title: AnalyticsConversationSegment
 | **Conference** | **bool?** |  | [optional] [default to false]|
 | **GroupId** | **string** |  | [optional] |
 | **Subject** | **string** |  | [optional] |
+| **AudioMuted** | **bool?** |  | [optional] [default to false]|
+| **VideoMuted** | **bool?** |  | [optional] [default to false]|
 {: class="table table-striped"}
 
 

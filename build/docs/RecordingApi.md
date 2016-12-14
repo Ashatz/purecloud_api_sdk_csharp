@@ -10,24 +10,35 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#deleteconversationidrecordingsrecordingidannotationsannotationid) | **DELETE** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
 | [**DeleteMediaretentionpolicies**](RecordingApi.html#deletemediaretentionpolicies) | **DELETE** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
 | [**DeleteMediaretentionpoliciesPolicyId**](RecordingApi.html#deletemediaretentionpoliciespolicyid) | **DELETE** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
-| [**DeleteOrphanId**](RecordingApi.html#deleteorphanid) | **DELETE** /api/v2/orphanrecordings/{orphanId} |  deletes a single orphan recording |
+| [**DeleteOrphanId**](RecordingApi.html#deleteorphanid) | **DELETE** /api/v2/orphanrecordings/{orphanId} | Deletes a single orphan recording |
 | [**GetConversationIdRecordings**](RecordingApi.html#getconversationidrecordings) | **GET** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
 | [**GetConversationIdRecordingsRecordingId**](RecordingApi.html#getconversationidrecordingsrecordingid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
 | [**GetConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#getconversationidrecordingsrecordingidannotations) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
 | [**GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#getconversationidrecordingsrecordingidannotationsannotationid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
+| [**GetLocalkeysSettings**](RecordingApi.html#getlocalkeyssettings) | **GET** /api/v2/recording/localkeys/settings | gets a list local key settings data |
+| [**GetLocalkeysSettingsSettingsId**](RecordingApi.html#getlocalkeyssettingssettingsid) | **GET** /api/v2/recording/localkeys/settings/{settingsId} | Get the local encryption settings |
 | [**GetMediaretentionpolicies**](RecordingApi.html#getmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
 | [**GetMediaretentionpoliciesPolicyId**](RecordingApi.html#getmediaretentionpoliciespolicyid) | **GET** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
 | [**GetOrphanId**](RecordingApi.html#getorphanid) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
+| [**GetOrphanIdMedia**](RecordingApi.html#getorphanidmedia) | **GET** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
 | [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **GET** /api/v2/orphanrecordings | Gets all orphan recordings |
+| [**GetRecordingkeys**](RecordingApi.html#getrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
+| [**GetRecordingkeysRotationschedule**](RecordingApi.html#getrecordingkeysrotationschedule) | **GET** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
 | [**GetSettings**](RecordingApi.html#getsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
 | [**GetsScreensessions**](RecordingApi.html#getsscreensessions) | **GET** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
 | [**PatchMediaretentionpoliciesPolicyId**](RecordingApi.html#patchmediaretentionpoliciespolicyid) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PatchsScreensessionsRecordingsessionId**](RecordingApi.html#patchsscreensessionsrecordingsessionid) | **PATCH** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
 | [**PostConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#postconversationidrecordingsrecordingidannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
+| [**PostLocalkeys**](RecordingApi.html#postlocalkeys) | **POST** /api/v2/recording/localkeys | create a local recording key |
+| [**PostLocalkeysSettings**](RecordingApi.html#postlocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation |
 | [**PostMediaretentionpolicies**](RecordingApi.html#postmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
+| [**PostRecordingkeys**](RecordingApi.html#postrecordingkeys) | **POST** /api/v2/recording/recordingkeys | Create encryption key |
 | [**PutConversationIdRecordingsRecordingId**](RecordingApi.html#putconversationidrecordingsrecordingid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
 | [**PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#putconversationidrecordingsrecordingidannotationsannotationid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
+| [**PutLocalkeysSettingsSettingsId**](RecordingApi.html#putlocalkeyssettingssettingsid) | **PUT** /api/v2/recording/localkeys/settings/{settingsId} | Update the local encryption settings |
 | [**PutMediaretentionpoliciesPolicyId**](RecordingApi.html#putmediaretentionpoliciespolicyid) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
+| [**PutOrphanId**](RecordingApi.html#putorphanid) | **PUT** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
+| [**PutRecordingkeysRotationschedule**](RecordingApi.html#putrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
 | [**PutSettings**](RecordingApi.html#putsettings) | **PUT** /api/v2/recording/settings | Update the Recording Settings for the Organization |
 {: class="table table-striped"}
 
@@ -206,7 +217,7 @@ namespace Example
 
 ## [**OrphanRecording**](OrphanRecording.html) DeleteOrphanId (string orphanId)
 
- deletes a single orphan recording
+Deletes a single orphan recording
 
 
 
@@ -233,7 +244,7 @@ namespace Example
 
             try
             {
-                //  deletes a single orphan recording
+                // Deletes a single orphan recording
                 OrphanRecording result = apiInstance.DeleteOrphanId(orphanId);
                 Debug.WriteLine(result);
             }
@@ -286,7 +297,7 @@ namespace Example
 
             var apiInstance = new RecordingApi();
             var conversationId = conversationId_example;  // string | Conversation ID
-            var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. (optional)  (default to 5000)
+            var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional)  (default to 5000)
             var formatId = formatId_example;  // string | The desired media format (optional)  (default to WEBM)
 
             try
@@ -310,7 +321,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-| **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. | [optional] [default to 5000] |
+| **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
 | **formatId** | **string**| The desired media format | [optional] [default to WEBM] |
 {: class="table table-striped"}
 
@@ -320,7 +331,7 @@ namespace Example
 
 <a name="getconversationidrecordingsrecordingid"></a>
 
-## void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
+## [**Recording**](Recording.html) GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
 
 Gets a specific recording.
 
@@ -354,7 +365,8 @@ namespace Example
             try
             {
                 // Gets a specific recording.
-                apiInstance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, formatId, download, fileName);
+                Recording result = apiInstance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, formatId, download, fileName);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -379,7 +391,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Recording**](Recording.html)
 
 <a name="getconversationidrecordingsrecordingidannotations"></a>
 
@@ -498,6 +510,113 @@ namespace Example
 ### Return type
 
 [**Annotation**](Annotation.html)
+
+<a name="getlocalkeyssettings"></a>
+
+## [**LocalEncryptionConfigurationListing**](LocalEncryptionConfigurationListing.html) GetLocalkeysSettings ()
+
+gets a list local key settings data
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetLocalkeysSettingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+
+            try
+            {
+                // gets a list local key settings data
+                LocalEncryptionConfigurationListing result = apiInstance.GetLocalkeysSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetLocalkeysSettings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**LocalEncryptionConfigurationListing**](LocalEncryptionConfigurationListing.html)
+
+<a name="getlocalkeyssettingssettingsid"></a>
+
+## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) GetLocalkeysSettingsSettingsId (string settingsId)
+
+Get the local encryption settings
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetLocalkeysSettingsSettingsIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var settingsId = settingsId_example;  // string | Settings Id
+
+            try
+            {
+                // Get the local encryption settings
+                LocalEncryptionConfiguration result = apiInstance.GetLocalkeysSettingsSettingsId(settingsId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetLocalkeysSettingsSettingsId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **settingsId** | **string**| Settings Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)
 
 <a name="getmediaretentionpolicies"></a>
 
@@ -685,9 +804,71 @@ namespace Example
 
 [**OrphanRecording**](OrphanRecording.html)
 
+<a name="getorphanidmedia"></a>
+
+## [**Recording**](Recording.html) GetOrphanIdMedia (string orphanId, string formatId = null, bool? download = null, string fileName = null)
+
+Gets the media of a single orphan recording
+
+A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetOrphanIdMediaExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var orphanId = orphanId_example;  // string | Orphan ID
+            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
+            var download = true;  // bool? | requesting a download format of the recording (optional)  (default to false)
+            var fileName = fileName_example;  // string | the name of the downloaded fileName (optional) 
+
+            try
+            {
+                // Gets the media of a single orphan recording
+                Recording result = apiInstance.GetOrphanIdMedia(orphanId, formatId, download, fileName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetOrphanIdMedia: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **orphanId** | **string**| Orphan ID |  |
+| **formatId** | **string**| The desired media format. | [optional] [default to WEBM] |
+| **download** | **bool?**| requesting a download format of the recording | [optional] [default to false] |
+| **fileName** | **string**| the name of the downloaded fileName | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Recording**](Recording.html)
+
 <a name="getorphanrecordings"></a>
 
-## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null)
 
 Gets all orphan recordings
 
@@ -718,11 +899,12 @@ namespace Example
             var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            var hasConversation = true;  // bool? | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional)  (default to false)
 
             try
             {
                 // Gets all orphan recordings
-                OrphanRecordingListing result = apiInstance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                OrphanRecordingListing result = apiInstance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -745,11 +927,121 @@ namespace Example
 | **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
+| **hasConversation** | **bool?**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
 
 [**OrphanRecordingListing**](OrphanRecordingListing.html)
+
+<a name="getrecordingkeys"></a>
+
+## [**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html) GetRecordingkeys (int? pageSize = null, int? pageNumber = null)
+
+Get encryption key list
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetRecordingkeysExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get encryption key list
+                EncryptionKeyEntityListing result = apiInstance.GetRecordingkeys(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingkeys: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html)
+
+<a name="getrecordingkeysrotationschedule"></a>
+
+## [**KeyRotationSchedule**](KeyRotationSchedule.html) GetRecordingkeysRotationschedule ()
+
+Get key rotation schedule
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetRecordingkeysRotationscheduleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+
+            try
+            {
+                // Get key rotation schedule
+                KeyRotationSchedule result = apiInstance.GetRecordingkeysRotationschedule();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingkeysRotationschedule: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**KeyRotationSchedule**](KeyRotationSchedule.html)
 
 <a name="getsettings"></a>
 
@@ -1040,6 +1332,118 @@ namespace Example
 
 [**Annotation**](Annotation.html)
 
+<a name="postlocalkeys"></a>
+
+## [**EncryptionKey**](EncryptionKey.html) PostLocalkeys (LocalEncryptionKeyRequest body)
+
+create a local recording key
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostLocalkeysExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var body = new LocalEncryptionKeyRequest(); // LocalEncryptionKeyRequest | Local Encryption body
+
+            try
+            {
+                // create a local recording key
+                EncryptionKey result = apiInstance.PostLocalkeys(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PostLocalkeys: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**LocalEncryptionKeyRequest**](LocalEncryptionKeyRequest.html)| Local Encryption body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EncryptionKey**](EncryptionKey.html)
+
+<a name="postlocalkeyssettings"></a>
+
+## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) PostLocalkeysSettings (LocalEncryptionConfiguration body)
+
+create settings for local key creation
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostLocalkeysSettingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var body = new LocalEncryptionConfiguration(); // LocalEncryptionConfiguration | Local Encryption Configuration
+
+            try
+            {
+                // create settings for local key creation
+                LocalEncryptionConfiguration result = apiInstance.PostLocalkeysSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PostLocalkeysSettings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)| Local Encryption Configuration |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)
+
 <a name="postmediaretentionpolicies"></a>
 
 ## [**Policy**](Policy.html) PostMediaretentionpolicies (PolicyCreate body)
@@ -1096,9 +1500,60 @@ namespace Example
 
 [**Policy**](Policy.html)
 
+<a name="postrecordingkeys"></a>
+
+## [**EncryptionKey**](EncryptionKey.html) PostRecordingkeys ()
+
+Create encryption key
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostRecordingkeysExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+
+            try
+            {
+                // Create encryption key
+                EncryptionKey result = apiInstance.PostRecordingkeys();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PostRecordingkeys: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**EncryptionKey**](EncryptionKey.html)
+
 <a name="putconversationidrecordingsrecordingid"></a>
 
-## void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body)
+## [**Recording**](Recording.html) PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body)
 
 Updates the retention records on a recording.
 
@@ -1130,7 +1585,8 @@ namespace Example
             try
             {
                 // Updates the retention records on a recording.
-                apiInstance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body);
+                Recording result = apiInstance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -1153,7 +1609,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Recording**](Recording.html)
 
 <a name="putconversationidrecordingsrecordingidannotationsannotationid"></a>
 
@@ -1217,6 +1673,64 @@ namespace Example
 
 [**Annotation**](Annotation.html)
 
+<a name="putlocalkeyssettingssettingsid"></a>
+
+## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) PutLocalkeysSettingsSettingsId (string settingsId, LocalEncryptionConfiguration body)
+
+Update the local encryption settings
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutLocalkeysSettingsSettingsIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var settingsId = settingsId_example;  // string | Settings Id
+            var body = new LocalEncryptionConfiguration(); // LocalEncryptionConfiguration | Local Encryption metadata
+
+            try
+            {
+                // Update the local encryption settings
+                LocalEncryptionConfiguration result = apiInstance.PutLocalkeysSettingsSettingsId(settingsId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PutLocalkeysSettingsSettingsId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **settingsId** | **string**| Settings Id |  |
+| **body** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)| Local Encryption metadata |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)
+
 <a name="putmediaretentionpoliciespolicyid"></a>
 
 ## [**Policy**](Policy.html) PutMediaretentionpoliciesPolicyId (string policyId, Policy body)
@@ -1274,6 +1788,120 @@ namespace Example
 ### Return type
 
 [**Policy**](Policy.html)
+
+<a name="putorphanid"></a>
+
+## [**Recording**](Recording.html) PutOrphanId (string orphanId, OrphanUpdateRequest body = null)
+
+Updates an orphan recording to a regular recording with retention values
+
+If this operation is successful the orphan will no longer exist. It will be replaced by the resulting recording in the response. This replacement recording is accessible by the normal Recording api.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutOrphanIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var orphanId = orphanId_example;  // string | Orphan ID
+            var body = new OrphanUpdateRequest(); // OrphanUpdateRequest |  (optional) 
+
+            try
+            {
+                // Updates an orphan recording to a regular recording with retention values
+                Recording result = apiInstance.PutOrphanId(orphanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PutOrphanId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **orphanId** | **string**| Orphan ID |  |
+| **body** | [**OrphanUpdateRequest**](OrphanUpdateRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Recording**](Recording.html)
+
+<a name="putrecordingkeysrotationschedule"></a>
+
+## [**KeyRotationSchedule**](KeyRotationSchedule.html) PutRecordingkeysRotationschedule (KeyRotationSchedule body)
+
+Update key rotation schedule
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutRecordingkeysRotationscheduleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RecordingApi();
+            var body = new KeyRotationSchedule(); // KeyRotationSchedule | KeyRotationSchedule
+
+            try
+            {
+                // Update key rotation schedule
+                KeyRotationSchedule result = apiInstance.PutRecordingkeysRotationschedule(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PutRecordingkeysRotationschedule: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**KeyRotationSchedule**](KeyRotationSchedule.html)| KeyRotationSchedule |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KeyRotationSchedule**](KeyRotationSchedule.html)
 
 <a name="putsettings"></a>
 

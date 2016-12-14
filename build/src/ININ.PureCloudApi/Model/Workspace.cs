@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
             /// <summary>
@@ -51,7 +52,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Workspace" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected Workspace() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Workspace" /> class.
+        /// </summary>
+        /// <param name="Name">The current name of the workspace. (required).</param>
         /// <param name="Type">Type.</param>
         /// <param name="IsCurrentUserWorkspace">IsCurrentUserWorkspace (default to false).</param>
         /// <param name="User">User.</param>
@@ -63,7 +69,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Description">Description.</param>
         public Workspace(string Name = null, TypeEnum? Type = null, bool? IsCurrentUserWorkspace = null, UriReference User = null, string Bucket = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkspaceSummary Summary = null, List<string> Acl = null, string Description = null)
         {
-            this.Name = Name;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for Workspace and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             this.Type = Type;
             // use default value if no "IsCurrentUserWorkspace" provided
             if (IsCurrentUserWorkspace == null)
@@ -90,8 +104,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// The current name of the workspace.
         /// </summary>
+        /// <value>The current name of the workspace.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>

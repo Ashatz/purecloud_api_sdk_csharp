@@ -36,11 +36,11 @@ zip -r ${WORKSPACE}/doc.zip docs/*
 
 # Conditionally commit
 cd $REPO
-if [ -f "$REPO/newVersion.md" ]
+if [[ -f "$REPO/newVersion.md" && $SKIP_COMMIT != true ]]
 then
 	echo "Adding to commit"
 	git add .
 	git commit -am $PACKAGE_VERSION
 else
-	echo "No new version, nothing to push"
+	echo "Skipping git commit"
 fi

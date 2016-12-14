@@ -25,6 +25,7 @@ title: Phone
 | **Lines** | [**List&lt;Line&gt;**](Line.html) | Lines | |
 | **Status** | [**PhoneStatus**](PhoneStatus.html) | The status of the phone and lines from the primary Edge. | [optional] |
 | **SecondaryStatus** | [**PhoneStatus**](PhoneStatus.html) | The status of the phone and lines from the secondary Edge. | [optional] |
+| **UserAgentInfo** | [**UserAgentInfo**](UserAgentInfo.html) | User Agent Information for this phone. This includes model, firmware version, and manufacturer. | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Capabilities** | [**PhoneCapabilities**](PhoneCapabilities.html) |  | [optional] |
 | **WebRtcUser** | [**UriReference**](UriReference.html) | This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones. | [optional] |

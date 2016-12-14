@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -18,9 +19,10 @@ namespace ININ.PureCloudApi.Model
     public partial class AnalyticsQueryFilter :  IEquatable<AnalyticsQueryFilter>
     {
         /// <summary>
-        /// Gets or Sets Type
+        /// Boolean operation to apply to the provided predicates and clauses
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        /// <value>Boolean operation to apply to the provided predicates and clauses</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
             /// <summary>
@@ -44,19 +46,33 @@ namespace ININ.PureCloudApi.Model
             Or
         }
         /// <summary>
-        /// Gets or Sets Type
+        /// Boolean operation to apply to the provided predicates and clauses
         /// </summary>
+        /// <value>Boolean operation to apply to the provided predicates and clauses</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsQueryFilter" /> class.
         /// </summary>
-        /// <param name="Type">Type.</param>
+        [JsonConstructorAttribute]
+        protected AnalyticsQueryFilter() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AnalyticsQueryFilter" /> class.
+        /// </summary>
+        /// <param name="Type">Boolean operation to apply to the provided predicates and clauses (required).</param>
         /// <param name="Clauses">Boolean &#39;and/or&#39; logic with up to two-levels of nesting.</param>
         /// <param name="Predicates">Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric..</param>
         public AnalyticsQueryFilter(TypeEnum? Type = null, List<AnalyticsQueryClause> Clauses = null, List<AnalyticsQueryPredicate> Predicates = null)
         {
-            this.Type = Type;
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for AnalyticsQueryFilter and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
             this.Clauses = Clauses;
             this.Predicates = Predicates;
         }

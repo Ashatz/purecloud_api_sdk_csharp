@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteGroupId**](GroupsApi.html#deletegroupid) | **DELETE** /api/v2/groups/{groupId} | Delete group |
 | [**DeleteGroupIdMembers**](GroupsApi.html#deletegroupidmembers) | **DELETE** /api/v2/groups/{groupId}/members | Remove members |
+| [**GetFieldconfig**](GroupsApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetGroupId**](GroupsApi.html#getgroupid) | **GET** /api/v2/groups/{groupId} | Get group |
 | [**GetGroupIdMembers**](GroupsApi.html#getgroupidmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
 | [**GetGroups**](GroupsApi.html#getgroups) | **GET** /api/v2/groups | Get a group list |
@@ -132,6 +133,62 @@ namespace Example
 
 void (empty response body)
 
+<a name="getfieldconfig"></a>
+
+## [**FieldConfig**](FieldConfig.html) GetFieldconfig (string type)
+
+Fetch field config for an entity type
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetFieldconfigExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GroupsApi();
+            var type = type_example;  // string | Field type
+
+            try
+            {
+                // Fetch field config for an entity type
+                FieldConfig result = apiInstance.GetFieldconfig(type);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.GetFieldconfig: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **type** | **string**| Field type |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FieldConfig**](FieldConfig.html)
+
 <a name="getgroupid"></a>
 
 ## [**Group**](Group.html) GetGroupId (string groupId)
@@ -190,7 +247,7 @@ namespace Example
 
 <a name="getgroupidmembers"></a>
 
-## [**UserEntityListing**](UserEntityListing.html) GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**UserEntityListing**](UserEntityListing.html) GetGroupIdMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
 
 Get group members
 
@@ -219,11 +276,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
 
             try
             {
                 // Get group members
-                UserEntityListing result = apiInstance.GetGroupIdMembers(groupId, pageSize, pageNumber, sortOrder);
+                UserEntityListing result = apiInstance.GetGroupIdMembers(groupId, pageSize, pageNumber, sortOrder, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -244,6 +302,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

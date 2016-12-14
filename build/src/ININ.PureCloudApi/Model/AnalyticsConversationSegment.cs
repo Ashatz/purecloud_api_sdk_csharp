@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DisconnectTypeEnum
         {
             /// <summary>
@@ -106,7 +107,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets SegmentType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SegmentTypeEnum
         {
             /// <summary>
@@ -218,7 +219,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Conference">Conference (default to false).</param>
         /// <param name="GroupId">GroupId.</param>
         /// <param name="Subject">Subject.</param>
-        public AnalyticsConversationSegment(DateTime? SegmentStart = null, DateTime? SegmentEnd = null, string QueueId = null, string WrapUpCode = null, string WrapUpNote = null, List<string> WrapUpTags = null, string ErrorCode = null, DisconnectTypeEnum? DisconnectType = null, SegmentTypeEnum? SegmentType = null, List<string> RequestedRoutingUserIds = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<AnalyticsProperty> Properties = null, string SourceConversationId = null, string DestinationConversationId = null, string SourceSessionId = null, string DestinationSessionId = null, List<long?> SipResponseCodes = null, List<long?> Q850ResponseCodes = null, bool? Conference = null, string GroupId = null, string Subject = null)
+        /// <param name="AudioMuted">AudioMuted (default to false).</param>
+        /// <param name="VideoMuted">VideoMuted (default to false).</param>
+        public AnalyticsConversationSegment(DateTime? SegmentStart = null, DateTime? SegmentEnd = null, string QueueId = null, string WrapUpCode = null, string WrapUpNote = null, List<string> WrapUpTags = null, string ErrorCode = null, DisconnectTypeEnum? DisconnectType = null, SegmentTypeEnum? SegmentType = null, List<string> RequestedRoutingUserIds = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<AnalyticsProperty> Properties = null, string SourceConversationId = null, string DestinationConversationId = null, string SourceSessionId = null, string DestinationSessionId = null, List<long?> SipResponseCodes = null, List<long?> Q850ResponseCodes = null, bool? Conference = null, string GroupId = null, string Subject = null, bool? AudioMuted = null, bool? VideoMuted = null)
         {
             this.SegmentStart = SegmentStart;
             this.SegmentEnd = SegmentEnd;
@@ -250,6 +253,24 @@ namespace ININ.PureCloudApi.Model
             }
             this.GroupId = GroupId;
             this.Subject = Subject;
+            // use default value if no "AudioMuted" provided
+            if (AudioMuted == null)
+            {
+                this.AudioMuted = false;
+            }
+            else
+            {
+                this.AudioMuted = AudioMuted;
+            }
+            // use default value if no "VideoMuted" provided
+            if (VideoMuted == null)
+            {
+                this.VideoMuted = false;
+            }
+            else
+            {
+                this.VideoMuted = VideoMuted;
+            }
         }
         
         /// <summary>
@@ -355,6 +376,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
         /// <summary>
+        /// Gets or Sets AudioMuted
+        /// </summary>
+        [DataMember(Name="audioMuted", EmitDefaultValue=false)]
+        public bool? AudioMuted { get; set; }
+        /// <summary>
+        /// Gets or Sets VideoMuted
+        /// </summary>
+        [DataMember(Name="videoMuted", EmitDefaultValue=false)]
+        public bool? VideoMuted { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -384,6 +415,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Conference: ").Append(Conference).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
+            sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
+            sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -529,6 +562,16 @@ namespace ININ.PureCloudApi.Model
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
+                ) &&
+                (
+                    this.AudioMuted == other.AudioMuted ||
+                    this.AudioMuted != null &&
+                    this.AudioMuted.Equals(other.AudioMuted)
+                ) &&
+                (
+                    this.VideoMuted == other.VideoMuted ||
+                    this.VideoMuted != null &&
+                    this.VideoMuted.Equals(other.VideoMuted)
                 );
         }
 
@@ -587,6 +630,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.GroupId.GetHashCode();
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
+                if (this.AudioMuted != null)
+                    hash = hash * 59 + this.AudioMuted.GetHashCode();
+                if (this.VideoMuted != null)
+                    hash = hash * 59 + this.VideoMuted.GetHashCode();
                 return hash;
             }
         }

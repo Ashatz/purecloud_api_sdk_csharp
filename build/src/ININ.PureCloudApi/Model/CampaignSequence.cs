@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// status of the sequence
         /// </summary>
         /// <value>status of the sequence</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
             /// <summary>
@@ -33,21 +34,21 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum On for "ON"
+            /// Enum On for "on"
             /// </summary>
-            [EnumMember(Value = "ON")]
+            [EnumMember(Value = "on")]
             On,
             
             /// <summary>
-            /// Enum Off for "OFF"
+            /// Enum Off for "off"
             /// </summary>
-            [EnumMember(Value = "OFF")]
+            [EnumMember(Value = "off")]
             Off,
             
             /// <summary>
-            /// Enum Complete for "COMPLETE"
+            /// Enum Complete for "complete"
             /// </summary>
-            [EnumMember(Value = "COMPLETE")]
+            [EnumMember(Value = "complete")]
             Complete
         }
         /// <summary>

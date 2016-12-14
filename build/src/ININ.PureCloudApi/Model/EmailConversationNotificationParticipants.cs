@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets State
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
             /// <summary>
@@ -106,7 +107,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
             /// <summary>
@@ -132,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DisconnectTypeEnum
         {
             /// <summary>
@@ -273,9 +274,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
         /// <param name="Provider">Provider.</param>
+        /// <param name="ExternalContact">ExternalContact.</param>
+        /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Subject">Subject.</param>
         /// <param name="MessagesSent">MessagesSent.</param>
-        public EmailConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, EmailConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, EmailConversationNotificationErrorInfo ErrorInfo = null, EmailConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, string Subject = null, int? MessagesSent = null)
+        public EmailConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataNotificationCreatedBy User = null, EmailConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, EmailConversationNotificationErrorInfo ErrorInfo = null, EmailConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, EmailConversationNotificationUriReference ExternalContact = null, EmailConversationNotificationUriReference ExternalOrganization = null, string Subject = null, int? MessagesSent = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -299,6 +302,8 @@ namespace ININ.PureCloudApi.Model
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
             this.Provider = Provider;
+            this.ExternalContact = ExternalContact;
+            this.ExternalOrganization = ExternalOrganization;
             this.Subject = Subject;
             this.MessagesSent = MessagesSent;
         }
@@ -362,7 +367,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public CallbackConversationNotificationUser User { get; set; }
+        public DocumentDataNotificationCreatedBy User { get; set; }
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
@@ -398,6 +403,16 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        /// <summary>
+        /// Gets or Sets ExternalContact
+        /// </summary>
+        [DataMember(Name="externalContact", EmitDefaultValue=false)]
+        public EmailConversationNotificationUriReference ExternalContact { get; set; }
+        /// <summary>
+        /// Gets or Sets ExternalOrganization
+        /// </summary>
+        [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
+        public EmailConversationNotificationUriReference ExternalOrganization { get; set; }
         /// <summary>
         /// Gets or Sets Subject
         /// </summary>
@@ -438,6 +453,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  MessagesSent: ").Append(MessagesSent).Append("\n");
             sb.Append("}\n");
@@ -587,6 +604,16 @@ namespace ININ.PureCloudApi.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.ExternalContact == other.ExternalContact ||
+                    this.ExternalContact != null &&
+                    this.ExternalContact.Equals(other.ExternalContact)
+                ) &&
+                (
+                    this.ExternalOrganization == other.ExternalOrganization ||
+                    this.ExternalOrganization != null &&
+                    this.ExternalOrganization.Equals(other.ExternalOrganization)
+                ) &&
+                (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
@@ -653,6 +680,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ExternalContact != null)
+                    hash = hash * 59 + this.ExternalContact.GetHashCode();
+                if (this.ExternalOrganization != null)
+                    hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
                 if (this.MessagesSent != null)

@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets GroupBy
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum GroupByEnum
         {
             /// <summary>
@@ -144,6 +145,18 @@ namespace ININ.PureCloudApi.Model
             /// </summary>
             [EnumMember(Value = "conversationEnd")]
             Conversationend,
+            
+            /// <summary>
+            /// Enum Externalcontactid for "externalContactId"
+            /// </summary>
+            [EnumMember(Value = "externalContactId")]
+            Externalcontactid,
+            
+            /// <summary>
+            /// Enum Externalorganizationid for "externalOrganizationId"
+            /// </summary>
+            [EnumMember(Value = "externalOrganizationId")]
+            Externalorganizationid,
             
             /// <summary>
             /// Enum Stationid for "stationId"
@@ -317,12 +330,30 @@ namespace ININ.PureCloudApi.Model
             /// Enum Eventtime for "eventTime"
             /// </summary>
             [EnumMember(Value = "eventTime")]
-            Eventtime
+            Eventtime,
+            
+            /// <summary>
+            /// Enum Systempresence for "systemPresence"
+            /// </summary>
+            [EnumMember(Value = "systemPresence")]
+            Systempresence,
+            
+            /// <summary>
+            /// Enum Organizationpresenceid for "organizationPresenceId"
+            /// </summary>
+            [EnumMember(Value = "organizationPresenceId")]
+            Organizationpresenceid,
+            
+            /// <summary>
+            /// Enum Routingstatus for "routingStatus"
+            /// </summary>
+            [EnumMember(Value = "routingStatus")]
+            Routingstatus
         }
         /// <summary>
         /// Gets or Sets Metrics
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MetricsEnum
         {
             /// <summary>
@@ -572,14 +603,16 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Interval">Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="Granularity">Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
+        /// <param name="TimeZone">Sets the time zone for the query interval, defaults to UTC. Time zones are represented as an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London.</param>
         /// <param name="GroupBy">Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group..</param>
         /// <param name="Filter">Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters.</param>
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
         /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) (default to false).</param>
-        public AggregationQuery(string Interval = null, DateTime? Granularity = null, List<GroupByEnum> GroupBy = null, AnalyticsQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null)
+        public AggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, AnalyticsQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null)
         {
             this.Interval = Interval;
             this.Granularity = Granularity;
+            this.TimeZone = TimeZone;
             this.GroupBy = GroupBy;
             this.Filter = Filter;
             this.Metrics = Metrics;
@@ -605,7 +638,13 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
-        public DateTime? Granularity { get; set; }
+        public string Granularity { get; set; }
+        /// <summary>
+        /// Sets the time zone for the query interval, defaults to UTC. Time zones are represented as an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London
+        /// </summary>
+        /// <value>Sets the time zone for the query interval, defaults to UTC. Time zones are represented as an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London</value>
+        [DataMember(Name="timeZone", EmitDefaultValue=false)]
+        public string TimeZone { get; set; }
         /// <summary>
         /// Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group.
         /// </summary>
@@ -640,6 +679,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class AggregationQuery {\n");
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Granularity: ").Append(Granularity).Append("\n");
+            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  GroupBy: ").Append(GroupBy).Append("\n");
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
@@ -691,6 +731,11 @@ namespace ININ.PureCloudApi.Model
                     this.Granularity.Equals(other.Granularity)
                 ) &&
                 (
+                    this.TimeZone == other.TimeZone ||
+                    this.TimeZone != null &&
+                    this.TimeZone.Equals(other.TimeZone)
+                ) &&
+                (
                     this.GroupBy == other.GroupBy ||
                     this.GroupBy != null &&
                     this.GroupBy.SequenceEqual(other.GroupBy)
@@ -727,6 +772,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Interval.GetHashCode();
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
+                if (this.TimeZone != null)
+                    hash = hash * 59 + this.TimeZone.GetHashCode();
                 if (this.GroupBy != null)
                     hash = hash * 59 + this.GroupBy.GetHashCode();
                 if (this.Filter != null)

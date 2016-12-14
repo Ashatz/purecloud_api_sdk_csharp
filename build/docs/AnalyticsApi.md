@@ -26,6 +26,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostReportingSchedules**](AnalyticsApi.html#postreportingschedules) | **POST** /api/v2/analytics/reporting/schedules | Create a scheduled report job |
 | [**PostReportingSchedulesScheduleIdRunreport**](AnalyticsApi.html#postreportingschedulesscheduleidrunreport) | **POST** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
 | [**PostUsersAggregatesQuery**](AnalyticsApi.html#postusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
+| [**PostUsersDetailsQuery**](AnalyticsApi.html#postusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostUsersObservationsQuery**](AnalyticsApi.html#postusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
 | [**PutReportingSchedulesScheduleId**](AnalyticsApi.html#putreportingschedulesscheduleid) | **PUT** /api/v2/analytics/reporting/schedules/{scheduleId} | Update a scheduled report job. |
 {: class="table table-striped"}
@@ -1099,6 +1100,62 @@ namespace Example
 ### Return type
 
 [**PresenceQueryResponse**](PresenceQueryResponse.html)
+
+<a name="postusersdetailsquery"></a>
+
+## [**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html) PostUsersDetailsQuery (UserDetailsQuery body)
+
+Query for user details
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostUsersDetailsQueryExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new AnalyticsApi();
+            var body = new UserDetailsQuery(); // UserDetailsQuery | query
+
+            try
+            {
+                // Query for user details
+                AnalyticsUserDetailsQueryResponse result = apiInstance.PostUsersDetailsQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostUsersDetailsQuery: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UserDetailsQuery**](UserDetailsQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html)
 
 <a name="postusersobservationsquery"></a>
 

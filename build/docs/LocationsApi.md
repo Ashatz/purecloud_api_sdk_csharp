@@ -15,7 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="getlocationid"></a>
 
-## [**Location**](Location.html) GetLocationId (string locationId)
+## [**LocationDefinition**](LocationDefinition.html) GetLocationId (string locationId)
 
 Get Location by ID.
 
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // Get Location by ID.
-                Location result = apiInstance.GetLocationId(locationId);
+                LocationDefinition result = apiInstance.GetLocationId(locationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -67,11 +67,11 @@ namespace Example
 
 ### Return type
 
-[**Location**](Location.html)
+[**LocationDefinition**](LocationDefinition.html)
 
 <a name="getlocations"></a>
 
-## [**List&lt;Location&gt;**](Location.html) GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**List&lt;LocationDefinition&gt;**](LocationDefinition.html) GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 Get a list of all locations.
 
@@ -103,7 +103,7 @@ namespace Example
             try
             {
                 // Get a list of all locations.
-                List&lt;Location&gt; result = apiInstance.GetLocations(pageSize, pageNumber, sortOrder);
+                List&lt;LocationDefinition&gt; result = apiInstance.GetLocations(pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -127,7 +127,7 @@ namespace Example
 
 ### Return type
 
-[**List<Location>**](Location.html)
+[**List<LocationDefinition>**](LocationDefinition.html)
 
 <a name="getsearch"></a>
 

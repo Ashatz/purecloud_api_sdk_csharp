@@ -226,6 +226,22 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'Subject'
         }
+        /// <summary>
+        /// Test the property 'AudioMuted'
+        /// </summary>
+        [Test]
+        public void AudioMutedTest()
+        {
+            // TODO: unit test for the property 'AudioMuted'
+        }
+        /// <summary>
+        /// Test the property 'VideoMuted'
+        /// </summary>
+        [Test]
+        public void VideoMutedTest()
+        {
+            // TODO: unit test for the property 'VideoMuted'
+        }
 
     }
 

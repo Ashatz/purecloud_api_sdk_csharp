@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Optional type, can usually be inferred
         /// </summary>
         /// <value>Optional type, can usually be inferred</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
             /// <summary>
@@ -54,7 +55,7 @@ namespace ININ.PureCloudApi.Model
         /// Left hand side for dimension predicates
         /// </summary>
         /// <value>Left hand side for dimension predicates</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DimensionEnum
         {
             /// <summary>
@@ -178,6 +179,18 @@ namespace ININ.PureCloudApi.Model
             /// </summary>
             [EnumMember(Value = "conversationEnd")]
             Conversationend,
+            
+            /// <summary>
+            /// Enum Externalcontactid for "externalContactId"
+            /// </summary>
+            [EnumMember(Value = "externalContactId")]
+            Externalcontactid,
+            
+            /// <summary>
+            /// Enum Externalorganizationid for "externalOrganizationId"
+            /// </summary>
+            [EnumMember(Value = "externalOrganizationId")]
+            Externalorganizationid,
             
             /// <summary>
             /// Enum Stationid for "stationId"
@@ -351,13 +364,31 @@ namespace ININ.PureCloudApi.Model
             /// Enum Eventtime for "eventTime"
             /// </summary>
             [EnumMember(Value = "eventTime")]
-            Eventtime
+            Eventtime,
+            
+            /// <summary>
+            /// Enum Systempresence for "systemPresence"
+            /// </summary>
+            [EnumMember(Value = "systemPresence")]
+            Systempresence,
+            
+            /// <summary>
+            /// Enum Organizationpresenceid for "organizationPresenceId"
+            /// </summary>
+            [EnumMember(Value = "organizationPresenceId")]
+            Organizationpresenceid,
+            
+            /// <summary>
+            /// Enum Routingstatus for "routingStatus"
+            /// </summary>
+            [EnumMember(Value = "routingStatus")]
+            Routingstatus
         }
         /// <summary>
         /// Left hand side for property predicates
         /// </summary>
         /// <value>Left hand side for property predicates</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum PropertyTypeEnum
         {
             /// <summary>
@@ -408,7 +439,7 @@ namespace ININ.PureCloudApi.Model
         /// Left hand side for metric predicates
         /// </summary>
         /// <value>Left hand side for metric predicates</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MetricEnum
         {
             /// <summary>
@@ -657,7 +688,7 @@ namespace ININ.PureCloudApi.Model
         /// Optional operator, default is matches
         /// </summary>
         /// <value>Optional operator, default is matches</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
             /// <summary>

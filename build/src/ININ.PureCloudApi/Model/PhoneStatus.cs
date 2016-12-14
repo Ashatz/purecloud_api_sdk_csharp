@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// The Operational Status of this phone
         /// </summary>
         /// <value>The Operational Status of this phone</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperationalStatusEnum
         {
             /// <summary>
@@ -54,7 +55,7 @@ namespace ININ.PureCloudApi.Model
         /// The status of the primary or secondary Edges assigned to the phone lines.
         /// </summary>
         /// <value>The status of the primary or secondary Edges assigned to the phone lines.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum EdgesStatusEnum
         {
             /// <summary>
@@ -93,7 +94,7 @@ namespace ININ.PureCloudApi.Model
         /// The phone status's edge assignment type.
         /// </summary>
         /// <value>The phone status's edge assignment type.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum PhoneAssignmentToEdgeTypeEnum
         {
             /// <summary>
@@ -140,15 +141,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="OperationalStatus">The Operational Status of this phone.</param>
         /// <param name="EdgesStatus">The status of the primary or secondary Edges assigned to the phone lines..</param>
+        /// <param name="EventCreationTime">Event Creation Time represents an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London.</param>
         /// <param name="Provision">Provision information for this phone.</param>
         /// <param name="LineStatuses">A list of LineStatus information for each of the lines of this phone.</param>
         /// <param name="PhoneAssignmentToEdgeType">The phone status&#39;s edge assignment type..</param>
         /// <param name="Edge">The URI of the edge that provided this status information..</param>
-        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, UriReference Edge = null)
+        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, string EventCreationTime = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, UriReference Edge = null)
         {
             this.Name = Name;
             this.OperationalStatus = OperationalStatus;
             this.EdgesStatus = EdgesStatus;
+            this.EventCreationTime = EventCreationTime;
             this.Provision = Provision;
             this.LineStatuses = LineStatuses;
             this.PhoneAssignmentToEdgeType = PhoneAssignmentToEdgeType;
@@ -166,6 +169,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        /// <summary>
+        /// Event Creation Time represents an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London
+        /// </summary>
+        /// <value>Event Creation Time represents an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London</value>
+        [DataMember(Name="eventCreationTime", EmitDefaultValue=false)]
+        public string EventCreationTime { get; set; }
         /// <summary>
         /// Provision information for this phone
         /// </summary>
@@ -202,6 +211,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  OperationalStatus: ").Append(OperationalStatus).Append("\n");
             sb.Append("  EdgesStatus: ").Append(EdgesStatus).Append("\n");
+            sb.Append("  EventCreationTime: ").Append(EventCreationTime).Append("\n");
             sb.Append("  Provision: ").Append(Provision).Append("\n");
             sb.Append("  LineStatuses: ").Append(LineStatuses).Append("\n");
             sb.Append("  PhoneAssignmentToEdgeType: ").Append(PhoneAssignmentToEdgeType).Append("\n");
@@ -264,6 +274,11 @@ namespace ININ.PureCloudApi.Model
                     this.EdgesStatus.Equals(other.EdgesStatus)
                 ) &&
                 (
+                    this.EventCreationTime == other.EventCreationTime ||
+                    this.EventCreationTime != null &&
+                    this.EventCreationTime.Equals(other.EventCreationTime)
+                ) &&
+                (
                     this.Provision == other.Provision ||
                     this.Provision != null &&
                     this.Provision.Equals(other.Provision)
@@ -309,6 +324,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.OperationalStatus.GetHashCode();
                 if (this.EdgesStatus != null)
                     hash = hash * 59 + this.EdgesStatus.GetHashCode();
+                if (this.EventCreationTime != null)
+                    hash = hash * 59 + this.EventCreationTime.GetHashCode();
                 if (this.Provision != null)
                     hash = hash * 59 + this.Provision.GetHashCode();
                 if (this.LineStatuses != null)

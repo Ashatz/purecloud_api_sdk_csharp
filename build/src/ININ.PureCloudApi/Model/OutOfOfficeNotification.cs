@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -25,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="StartDate">StartDate.</param>
         /// <param name="EndDate">EndDate.</param>
         /// <param name="ModifiedDate">ModifiedDate.</param>
-        public OutOfOfficeNotification(OutOfOfficeNotificationUser User = null, bool? Active = null, DateTime? StartDate = null, DateTime? EndDate = null, DateTime? ModifiedDate = null)
+        public OutOfOfficeNotification(DocumentDataNotificationWorkspace User = null, bool? Active = null, DateTime? StartDate = null, DateTime? EndDate = null, DateTime? ModifiedDate = null)
         {
             this.User = User;
             this.Active = Active;
@@ -38,7 +39,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public OutOfOfficeNotificationUser User { get; set; }
+        public DocumentDataNotificationWorkspace User { get; set; }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>

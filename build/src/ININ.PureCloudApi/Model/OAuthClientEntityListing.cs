@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -30,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NextUri">NextUri.</param>
         /// <param name="LastUri">LastUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public OAuthClientEntityListing(List<OAuthClient> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
+        public OAuthClientEntityListing(List<OAuthClientListing> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -48,7 +49,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<OAuthClient> Entities { get; set; }
+        public List<OAuthClientListing> Entities { get; set; }
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>

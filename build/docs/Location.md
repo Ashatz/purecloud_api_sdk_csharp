@@ -7,15 +7,11 @@ title: Location
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** |  | [optional] |
-| **Address** | [**LocationAddress**](LocationAddress.html) |  | [optional] |
-| **AddressVerified** | **bool?** |  | [optional] [default to false]|
-| **EmergencyNumber** | [**LocationEmergencyNumber**](LocationEmergencyNumber.html) |  | [optional] |
-| **State** | **string** | Current activity status of the location. | [optional] |
-| **Version** | **int?** |  | [optional] |
-| **Path** | **List&lt;string&gt;** |  | [optional] |
-| **SelfUri** | **string** | The URI for this object | [optional] |
+| **Id** | **string** |  | [optional] |
+| **FloorplanId** | **string** |  | [optional] |
+| **Coordinates** | **Dictionary&lt;string, double?&gt;** |  | [optional] |
+| **Notes** | **string** |  | [optional] |
+| **LocationDefinition** | [**LocationDefinition**](LocationDefinition.html) |  | [optional] |
 {: class="table table-striped"}
 
 

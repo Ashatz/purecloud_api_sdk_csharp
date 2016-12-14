@@ -25,7 +25,7 @@ title: Site
 | **Addresses** | [**List&lt;Contact&gt;**](Contact.html) |  | [optional] |
 | **Edges** | [**List&lt;Edge&gt;**](Edge.html) |  | [optional] |
 | **EdgeAutoUpdateConfig** | [**EdgeAutoUpdateConfig**](EdgeAutoUpdateConfig.html) | Recurrance rule, time zone, and start/end settings for automatic edge updates for this site | [optional] |
-| **Location** | [**Location**](Location.html) | Location | |
+| **Location** | [**LocationDefinition**](LocationDefinition.html) | Location | |
 | **Managed** | **bool?** |  | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

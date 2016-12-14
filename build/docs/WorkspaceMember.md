@@ -10,7 +10,7 @@ title: WorkspaceMember
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Workspace** | [**UriReference**](UriReference.html) |  | [optional] |
-| **MemberType** | **string** |  | [optional] |
+| **MemberType** | **string** | The workspace member type. | |
 | **Member** | [**UriReference**](UriReference.html) |  | [optional] |
 | **User** | [**User**](User.html) |  | [optional] |
 | **Group** | [**Group**](Group.html) |  | [optional] |

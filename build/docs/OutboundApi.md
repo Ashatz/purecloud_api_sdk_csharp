@@ -54,7 +54,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostCallabletimesets**](OutboundApi.html#postcallabletimesets) | **POST** /api/v2/outbound/callabletimesets | Create callable time set |
 | [**PostCallanalysisresponsesets**](OutboundApi.html#postcallanalysisresponsesets) | **POST** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
 | [**PostCampaigns**](OutboundApi.html#postcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
-| [**PostCampaignsCampaignIdCallbackSchedule**](OutboundApi.html#postcampaignscampaignidcallbackschedule) | **POST** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign |
+| [**PostCampaignsCampaignIdCallbackSchedule**](OutboundApi.html#postcampaignscampaignidcallbackschedule) | **POST** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign (Deprecated) |
 | [**PostCampaignsProgress**](OutboundApi.html#postcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
 | [**PostContactlists**](OutboundApi.html#postcontactlists) | **POST** /api/v2/outbound/contactlists | Create a contact List. |
 | [**PostContactlistsContactlistIdContacts**](OutboundApi.html#postcontactlistscontactlistidcontacts) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
@@ -2825,9 +2825,9 @@ namespace Example
 
 ## [**ContactCallbackRequest**](ContactCallbackRequest.html) PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body)
 
-Schedule a Callback for a Dialer Campaign
+Schedule a Callback for a Dialer Campaign (Deprecated)
 
-
+This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
 
 ### Example
 ~~~csharp
@@ -2853,7 +2853,7 @@ namespace Example
 
             try
             {
-                // Schedule a Callback for a Dialer Campaign
+                // Schedule a Callback for a Dialer Campaign (Deprecated)
                 ContactCallbackRequest result = apiInstance.PostCampaignsCampaignIdCallbackSchedule(campaignId, body);
                 Debug.WriteLine(result);
             }

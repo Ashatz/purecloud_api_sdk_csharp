@@ -59,12 +59,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'SessionId'
         }
         /// <summary>
-        /// Test the property 'Timestamp'
+        /// Test the property 'TargetDate'
         /// </summary>
         [Test]
-        public void TimestampTest()
+        public void TargetDateTest()
         {
-            // TODO: unit test for the property 'Timestamp'
+            // TODO: unit test for the property 'TargetDate'
         }
         /// <summary>
         /// Test the property 'Properties'

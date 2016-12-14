@@ -15,7 +15,7 @@ title: LocationsSearchResponse
 | **CurrentPage** | **string** | Q64 value for the current page of results | [optional] |
 | **NextPage** | **string** | Q64 value for the next page of results | [optional] |
 | **Types** | **List&lt;string&gt;** | Resource types the search was performed against | |
-| **Results** | [**List&lt;Location&gt;**](Location.html) | Search results | |
+| **Results** | [**List&lt;LocationDefinition&gt;**](LocationDefinition.html) | Search results | |
 {: class="table table-striped"}
 
 

@@ -341,6 +341,23 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetWorkspacesWorkspaceIdDocuments
+        /// </summary>
+        [Test]
+        public void GetWorkspacesWorkspaceIdDocumentsTest()
+        {
+            // TODO: add unit test for the method 'GetWorkspacesWorkspaceIdDocuments'
+            string workspaceId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            var response = instance.GetWorkspacesWorkspaceIdDocuments(workspaceId, expand, pageSize, pageNumber, sortBy, sortOrder);
+            Assert.IsInstanceOf<DocumentEntityListing> (response, "response is DocumentEntityListing");
+        }
+        
+        /// <summary>
         /// Test GetWorkspacesWorkspaceIdMembers
         /// </summary>
         [Test]

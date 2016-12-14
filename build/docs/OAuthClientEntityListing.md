@@ -7,7 +7,7 @@ title: OAuthClientEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;OAuthClient&gt;**](OAuthClient.html) |  | [optional] |
+| **Entities** | [**List&lt;OAuthClientListing&gt;**](OAuthClientListing.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |

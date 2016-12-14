@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets Purpose
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum PurposeEnum
         {
             /// <summary>
@@ -121,13 +122,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ParticipantName">ParticipantName.</param>
         /// <param name="UserId">UserId.</param>
         /// <param name="Purpose">Purpose.</param>
+        /// <param name="ExternalContactId">ExternalContactId.</param>
+        /// <param name="ExternalOrganizationId">ExternalOrganizationId.</param>
         /// <param name="Sessions">Sessions.</param>
-        public AnalyticsParticipant(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, List<AnalyticsSession> Sessions = null)
+        public AnalyticsParticipant(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, List<AnalyticsSession> Sessions = null)
         {
             this.ParticipantId = ParticipantId;
             this.ParticipantName = ParticipantName;
             this.UserId = UserId;
             this.Purpose = Purpose;
+            this.ExternalContactId = ExternalContactId;
+            this.ExternalOrganizationId = ExternalOrganizationId;
             this.Sessions = Sessions;
         }
         
@@ -147,6 +152,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
         /// <summary>
+        /// Gets or Sets ExternalContactId
+        /// </summary>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; set; }
+        /// <summary>
+        /// Gets or Sets ExternalOrganizationId
+        /// </summary>
+        [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
+        public string ExternalOrganizationId { get; set; }
+        /// <summary>
         /// Gets or Sets Sessions
         /// </summary>
         [DataMember(Name="sessions", EmitDefaultValue=false)]
@@ -163,6 +178,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ParticipantName: ").Append(ParticipantName).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
+            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -221,6 +238,16 @@ namespace ININ.PureCloudApi.Model
                     this.Purpose.Equals(other.Purpose)
                 ) &&
                 (
+                    this.ExternalContactId == other.ExternalContactId ||
+                    this.ExternalContactId != null &&
+                    this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+                (
+                    this.ExternalOrganizationId == other.ExternalOrganizationId ||
+                    this.ExternalOrganizationId != null &&
+                    this.ExternalOrganizationId.Equals(other.ExternalOrganizationId)
+                ) &&
+                (
                     this.Sessions == other.Sessions ||
                     this.Sessions != null &&
                     this.Sessions.SequenceEqual(other.Sessions)
@@ -246,6 +273,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.UserId.GetHashCode();
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
+                if (this.ExternalContactId != null)
+                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
+                if (this.ExternalOrganizationId != null)
+                    hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();
                 return hash;

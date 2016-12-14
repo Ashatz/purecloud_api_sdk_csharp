@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// Disconnect reason protocol type.
         /// </summary>
         /// <value>Disconnect reason protocol type.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
             /// <summary>
@@ -33,15 +34,15 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Q850 for "Q_850"
+            /// Enum Q850 for "q850"
             /// </summary>
-            [EnumMember(Value = "Q_850")]
+            [EnumMember(Value = "q850")]
             Q850,
             
             /// <summary>
-            /// Enum Sip for "SIP"
+            /// Enum Sip for "sip"
             /// </summary>
-            [EnumMember(Value = "SIP")]
+            [EnumMember(Value = "sip")]
             Sip
         }
         /// <summary>

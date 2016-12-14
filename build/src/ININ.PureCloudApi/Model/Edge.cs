@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets State
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
             /// <summary>
@@ -52,7 +53,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets StatusCode
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusCodeEnum
         {
             /// <summary>
@@ -132,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets OnlineStatus
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OnlineStatusEnum
         {
             /// <summary>
@@ -158,7 +159,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets EdgeDeploymentType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum EdgeDeploymentTypeEnum
         {
             /// <summary>
@@ -248,14 +249,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Patch">Patch.</param>
         /// <param name="StatusCode">StatusCode.</param>
         /// <param name="EdgeGroup">EdgeGroup.</param>
-        /// <param name="Site">Site.</param>
+        /// <param name="Site">The Site to which the Edge is assigned..</param>
         /// <param name="SoftwareStatus">SoftwareStatus.</param>
         /// <param name="OnlineStatus">OnlineStatus.</param>
         /// <param name="SerialNumber">SerialNumber.</param>
         /// <param name="PhysicalEdge">PhysicalEdge (default to false).</param>
         /// <param name="Managed">Managed (default to false).</param>
         /// <param name="EdgeDeploymentType">EdgeDeploymentType.</param>
-        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, UriReference Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null)
+        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -453,10 +454,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
         public EdgeGroup EdgeGroup { get; set; }
         /// <summary>
-        /// Gets or Sets Site
+        /// The Site to which the Edge is assigned.
         /// </summary>
+        /// <value>The Site to which the Edge is assigned.</value>
         [DataMember(Name="site", EmitDefaultValue=false)]
-        public UriReference Site { get; set; }
+        public Site Site { get; set; }
         /// <summary>
         /// Gets or Sets SoftwareStatus
         /// </summary>

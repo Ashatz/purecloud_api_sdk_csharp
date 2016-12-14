@@ -54,6 +54,18 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
+        /// Test GetFieldconfig
+        /// </summary>
+        [Test]
+        public void GetFieldconfigTest()
+        {
+            // TODO: add unit test for the method 'GetFieldconfig'
+            string type = null; // TODO: replace null with proper value
+            var response = instance.GetFieldconfig(type);
+            Assert.IsInstanceOf<FieldConfig> (response, "response is FieldConfig");
+        }
+        
+        /// <summary>
         /// Test GetMe
         /// </summary>
         [Test]

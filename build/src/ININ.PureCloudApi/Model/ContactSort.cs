@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -18,9 +19,10 @@ namespace ININ.PureCloudApi.Model
     public partial class ContactSort :  IEquatable<ContactSort>
     {
         /// <summary>
-        /// Gets or Sets Direction
+        /// The sort direction
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        /// <value>The sort direction</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
             /// <summary>
@@ -44,15 +46,16 @@ namespace ININ.PureCloudApi.Model
             Desc
         }
         /// <summary>
-        /// Gets or Sets Direction
+        /// The sort direction
         /// </summary>
+        /// <value>The sort direction</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactSort" /> class.
         /// </summary>
         /// <param name="FieldName">FieldName.</param>
-        /// <param name="Direction">Direction.</param>
+        /// <param name="Direction">The sort direction.</param>
         /// <param name="Numeric">Whether that column contains numeric data (default to false).</param>
         public ContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null)
         {

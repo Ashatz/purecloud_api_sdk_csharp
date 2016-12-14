@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,14 +21,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EncryptionKey" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
-        /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="KeydataSummary">KeydataSummary.</param>
-        /// <param name="User">User.</param>
-        public EncryptionKey(string Id = null, string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null)
+        /// <param name="CreateDate">create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="KeydataSummary">key data summary (base 64 encoded public key).</param>
+        /// <param name="User">user that requested generation of public key.</param>
+        public EncryptionKey(string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null)
         {
-            this.Id = Id;
             this.Name = Name;
             this.CreateDate = CreateDate;
             this.KeydataSummary = KeydataSummary;
@@ -35,29 +34,32 @@ namespace ININ.PureCloudApi.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The globally unique identifier for the object.
         /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public string Id { get; private set; }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createDate", EmitDefaultValue=false)]
         public DateTime? CreateDate { get; set; }
         /// <summary>
-        /// Gets or Sets KeydataSummary
+        /// key data summary (base 64 encoded public key)
         /// </summary>
+        /// <value>key data summary (base 64 encoded public key)</value>
         [DataMember(Name="keydataSummary", EmitDefaultValue=false)]
         public string KeydataSummary { get; set; }
         /// <summary>
-        /// Gets or Sets User
+        /// user that requested generation of public key
         /// </summary>
+        /// <value>user that requested generation of public key</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
         /// <summary>

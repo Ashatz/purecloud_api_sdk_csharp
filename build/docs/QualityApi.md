@@ -1017,7 +1017,7 @@ namespace Example
 
 <a name="getkeywordsets"></a>
 
-## [**KeywordSetEntityListing**](KeywordSetEntityListing.html) GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null)
+## [**KeywordSetEntityListing**](KeywordSetEntityListing.html) GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null)
 
 Get the list of keyword sets
 
@@ -1049,11 +1049,13 @@ namespace Example
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var name = name_example;  // string | the keyword set name - used for filtering results in searches. (optional) 
+            var queueId = queueId_example;  // string | the queue id - used for filtering results in searches. (optional) 
+            var agentId = agentId_example;  // string | the agent id - used for filtering results in searches. (optional) 
 
             try
             {
                 // Get the list of keyword sets
-                KeywordSetEntityListing result = apiInstance.GetKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name);
+                KeywordSetEntityListing result = apiInstance.GetKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1077,6 +1079,8 @@ namespace Example
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **name** | **string**| the keyword set name - used for filtering results in searches. | [optional]  |
+| **queueId** | **string**| the queue id - used for filtering results in searches. | [optional]  |
+| **agentId** | **string**| the agent id - used for filtering results in searches. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

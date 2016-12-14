@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum AlertTypesEnum
         {
             /// <summary>
@@ -53,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// The type of system the will be generating the heartbeat.
         /// </summary>
         /// <value>The type of system the will be generating the heartbeat.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum RuleTypeEnum
         {
             /// <summary>
@@ -89,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="HeartBeatTimeoutInMinutes">The number of minutes to wait before alerting missing heartbeats. (required).</param>
         /// <param name="Enabled">Indicates if the rule is enabled. (required) (default to false).</param>
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
-        /// <param name="AlertTypes">A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;]. (required).</param>
+        /// <param name="AlertTypes">A collection of notification methods. (required).</param>
         /// <param name="RuleType">The type of system the will be generating the heartbeat. (required).</param>
         public HeartBeatRule(string Name = null, string SenderId = null, int? HeartBeatTimeoutInMinutes = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, RuleTypeEnum? RuleType = null)
         {
@@ -201,9 +202,9 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<User> NotificationUsers { get; set; }
         /// <summary>
-        /// A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;].
+        /// A collection of notification methods.
         /// </summary>
-        /// <value>A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;].</value>
+        /// <value>A collection of notification methods.</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; set; }
         /// <summary>

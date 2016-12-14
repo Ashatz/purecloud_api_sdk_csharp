@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets State
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
             /// <summary>
@@ -53,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
         /// <value>The skill evaluation method to use when routing conversations.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SkillEvaluationMethodEnum
         {
             /// <summary>
@@ -118,9 +119,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
+        /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="Joined">Joined (default to false).</param>
         /// <param name="MemberCount">MemberCount.</param>
-        public UserQueue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, bool? Joined = null, int? MemberCount = null)
+        public UserQueue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null, int? MemberCount = null)
         {
             // to ensure "MediaSettings" is required (not null)
             if (MediaSettings == null)
@@ -163,6 +165,7 @@ namespace ININ.PureCloudApi.Model
             this.QueueFlow = QueueFlow;
             this.CallingPartyName = CallingPartyName;
             this.CallingPartyNumber = CallingPartyNumber;
+            this.OutboundEmailAddress = OutboundEmailAddress;
             // use default value if no "Joined" provided
             if (Joined == null)
             {
@@ -265,6 +268,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="callingPartyNumber", EmitDefaultValue=false)]
         public string CallingPartyNumber { get; set; }
         /// <summary>
+        /// Gets or Sets OutboundEmailAddress
+        /// </summary>
+        [DataMember(Name="outboundEmailAddress", EmitDefaultValue=false)]
+        public QueueEmailAddress OutboundEmailAddress { get; set; }
+        /// <summary>
         /// Gets or Sets Joined
         /// </summary>
         [DataMember(Name="joined", EmitDefaultValue=false)]
@@ -306,6 +314,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
+            sb.Append("  OutboundEmailAddress: ").Append(OutboundEmailAddress).Append("\n");
             sb.Append("  Joined: ").Append(Joined).Append("\n");
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -436,6 +445,11 @@ namespace ININ.PureCloudApi.Model
                     this.CallingPartyNumber.Equals(other.CallingPartyNumber)
                 ) &&
                 (
+                    this.OutboundEmailAddress == other.OutboundEmailAddress ||
+                    this.OutboundEmailAddress != null &&
+                    this.OutboundEmailAddress.Equals(other.OutboundEmailAddress)
+                ) &&
+                (
                     this.Joined == other.Joined ||
                     this.Joined != null &&
                     this.Joined.Equals(other.Joined)
@@ -499,6 +513,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();
                 if (this.CallingPartyNumber != null)
                     hash = hash * 59 + this.CallingPartyNumber.GetHashCode();
+                if (this.OutboundEmailAddress != null)
+                    hash = hash * 59 + this.OutboundEmailAddress.GetHashCode();
                 if (this.Joined != null)
                     hash = hash * 59 + this.Joined.GetHashCode();
                 if (this.MemberCount != null)

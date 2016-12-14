@@ -115,6 +115,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetFieldconfig
+        /// </summary>
+        [Test]
+        public void GetFieldconfigTest()
+        {
+            // TODO: add unit test for the method 'GetFieldconfig'
+            string type = null; // TODO: replace null with proper value
+            var response = instance.GetFieldconfig(type);
+            Assert.IsInstanceOf<FieldConfig> (response, "response is FieldConfig");
+        }
+        
+        /// <summary>
         /// Test GetMe
         /// </summary>
         [Test]
@@ -153,6 +165,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetUserIdAdjacents
+        /// </summary>
+        [Test]
+        public void GetUserIdAdjacentsTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdAdjacents'
+            string userId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetUserIdAdjacents(userId, expand);
+            Assert.IsInstanceOf<Adjacents> (response, "response is Adjacents");
+        }
+        
+        /// <summary>
         /// Test GetUserIdCallforwarding
         /// </summary>
         [Test]
@@ -162,6 +187,35 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             var response = instance.GetUserIdCallforwarding(userId);
             Assert.IsInstanceOf<CallForwarding> (response, "response is CallForwarding");
+        }
+        
+        /// <summary>
+        /// Test GetUserIdDirectreports
+        /// </summary>
+        [Test]
+        public void GetUserIdDirectreportsTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdDirectreports'
+            string userId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetUserIdDirectreports(userId, expand);
+            Assert.IsInstanceOf<List<User>> (response, "response is List<User>");
+        }
+        
+        /// <summary>
+        /// Test GetUserIdFavorites
+        /// </summary>
+        [Test]
+        public void GetUserIdFavoritesTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdFavorites'
+            string userId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetUserIdFavorites(userId, pageSize, pageNumber, sortOrder, expand);
+            Assert.IsInstanceOf<UserEntityListing> (response, "response is UserEntityListing");
         }
         
         /// <summary>
@@ -268,6 +322,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetUserIdSuperiors
+        /// </summary>
+        [Test]
+        public void GetUserIdSuperiorsTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdSuperiors'
+            string userId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetUserIdSuperiors(userId, expand);
+            Assert.IsInstanceOf<List<User>> (response, "response is List<User>");
+        }
+        
+        /// <summary>
         /// Test GetUsers
         /// </summary>
         [Test]
@@ -280,7 +347,7 @@ namespace ININ.PureCloudApi.Test
             string sortOrder = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
             var response = instance.GetUsers(pageSize, pageNumber, id, sortOrder, expand);
-            Assert.IsInstanceOf<UsersEntityListing> (response, "response is UsersEntityListing");
+            Assert.IsInstanceOf<UserEntityListing> (response, "response is UserEntityListing");
         }
         
         /// <summary>
@@ -397,6 +464,18 @@ namespace ININ.PureCloudApi.Test
             AggregationQuery body = null; // TODO: replace null with proper value
             var response = instance.PostUsersAggregatesQuery(body);
             Assert.IsInstanceOf<PresenceQueryResponse> (response, "response is PresenceQueryResponse");
+        }
+        
+        /// <summary>
+        /// Test PostUsersDetailsQuery
+        /// </summary>
+        [Test]
+        public void PostUsersDetailsQueryTest()
+        {
+            // TODO: add unit test for the method 'PostUsersDetailsQuery'
+            UserDetailsQuery body = null; // TODO: replace null with proper value
+            var response = instance.PostUsersDetailsQuery(body);
+            Assert.IsInstanceOf<AnalyticsUserDetailsQueryResponse> (response, "response is AnalyticsUserDetailsQueryResponse");
         }
         
         /// <summary>

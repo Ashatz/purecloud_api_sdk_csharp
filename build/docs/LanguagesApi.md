@@ -10,6 +10,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteLanguageId**](LanguagesApi.html#deletelanguageid) | **DELETE** /api/v2/languages/{languageId} | Delete Language |
 | [**GetLanguageId**](LanguagesApi.html#getlanguageid) | **GET** /api/v2/languages/{languageId} | Get language |
 | [**GetLanguages**](LanguagesApi.html#getlanguages) | **GET** /api/v2/languages | Get the list of supported languages. |
+| [**GetTranslations**](LanguagesApi.html#gettranslations) | **GET** /api/v2/languages/translations | Get all available languages for translation |
+| [**GetTranslationsBuiltin**](LanguagesApi.html#gettranslationsbuiltin) | **GET** /api/v2/languages/translations/builtin | Get the builtin translation for a language |
+| [**GetTranslationsOrganization**](LanguagesApi.html#gettranslationsorganization) | **GET** /api/v2/languages/translations/organization | Get effective translation for an organization by language |
+| [**GetTranslationsUsersUserId**](LanguagesApi.html#gettranslationsusersuserid) | **GET** /api/v2/languages/translations/users/{userId} | Get effective language translation for a user |
 | [**PostLanguages**](LanguagesApi.html#postlanguages) | **POST** /api/v2/languages | Create Language |
 | [**PutLanguageId**](LanguagesApi.html#putlanguageid) | **PUT** /api/v2/languages/{languageId} | Update Language |
 {: class="table table-striped"}
@@ -186,6 +190,225 @@ namespace Example
 ### Return type
 
 [**LanguageEntityListing**](LanguageEntityListing.html)
+
+<a name="gettranslations"></a>
+
+## [**AvailableTranslations**](AvailableTranslations.html) GetTranslations ()
+
+Get all available languages for translation
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetTranslationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new LanguagesApi();
+
+            try
+            {
+                // Get all available languages for translation
+                AvailableTranslations result = apiInstance.GetTranslations();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguagesApi.GetTranslations: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**AvailableTranslations**](AvailableTranslations.html)
+
+<a name="gettranslationsbuiltin"></a>
+
+## **Dictionary&lt;string, Object&gt;** GetTranslationsBuiltin (string language)
+
+Get the builtin translation for a language
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetTranslationsBuiltinExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new LanguagesApi();
+            var language = language_example;  // string | The language of the builtin translation to retrieve
+
+            try
+            {
+                // Get the builtin translation for a language
+                Dictionary&lt;string, Object&gt; result = apiInstance.GetTranslationsBuiltin(language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguagesApi.GetTranslationsBuiltin: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **language** | **string**| The language of the builtin translation to retrieve |  |
+{: class="table table-striped"}
+
+### Return type
+
+**Dictionary<string, Object>**
+
+<a name="gettranslationsorganization"></a>
+
+## **Dictionary&lt;string, Object&gt;** GetTranslationsOrganization (string language)
+
+Get effective translation for an organization by language
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetTranslationsOrganizationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new LanguagesApi();
+            var language = language_example;  // string | The language of the translation to retrieve for the organization
+
+            try
+            {
+                // Get effective translation for an organization by language
+                Dictionary&lt;string, Object&gt; result = apiInstance.GetTranslationsOrganization(language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguagesApi.GetTranslationsOrganization: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **language** | **string**| The language of the translation to retrieve for the organization |  |
+{: class="table table-striped"}
+
+### Return type
+
+**Dictionary<string, Object>**
+
+<a name="gettranslationsusersuserid"></a>
+
+## **Dictionary&lt;string, Object&gt;** GetTranslationsUsersUserId (string userId)
+
+Get effective language translation for a user
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetTranslationsUsersUserIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new LanguagesApi();
+            var userId = userId_example;  // string | The user id
+
+            try
+            {
+                // Get effective language translation for a user
+                Dictionary&lt;string, Object&gt; result = apiInstance.GetTranslationsUsersUserId(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguagesApi.GetTranslationsUsersUserId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| The user id |  |
+{: class="table table-striped"}
+
+### Return type
+
+**Dictionary<string, Object>**
 
 <a name="postlanguages"></a>
 

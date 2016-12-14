@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// The type of the condition
         /// </summary>
         /// <value>The type of the condition</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
             /// <summary>
@@ -66,7 +67,7 @@ namespace ININ.PureCloudApi.Model
         /// Determines the type of the value associated with the condition
         /// </summary>
         /// <value>Determines the type of the value associated with the condition</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ValueTypeEnum
         {
             /// <summary>
@@ -105,7 +106,7 @@ namespace ININ.PureCloudApi.Model
         /// An operation type for condition evaluation
         /// </summary>
         /// <value>An operation type for condition evaluation</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
             /// <summary>

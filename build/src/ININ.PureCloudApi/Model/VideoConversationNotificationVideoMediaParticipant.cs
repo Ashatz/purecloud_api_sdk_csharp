@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets State
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
             /// <summary>
@@ -106,7 +107,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
             /// <summary>
@@ -132,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DisconnectTypeEnum
         {
             /// <summary>
@@ -273,12 +274,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
         /// <param name="Provider">Provider.</param>
+        /// <param name="ExternalContact">ExternalContact.</param>
+        /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="AudioMuted">AudioMuted.</param>
         /// <param name="VideoMuted">VideoMuted.</param>
         /// <param name="SharingScreen">SharingScreen.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Context">Context.</param>
-        public VideoConversationNotificationVideoMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, CallbackConversationNotificationUser User = null, VideoConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, VideoConversationNotificationErrorInfo ErrorInfo = null, VideoConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, string Context = null)
+        public VideoConversationNotificationVideoMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataNotificationCreatedBy User = null, VideoConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, VideoConversationNotificationErrorInfo ErrorInfo = null, VideoConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, VideoConversationNotificationUriReference ExternalContact = null, VideoConversationNotificationUriReference ExternalOrganization = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, string Context = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -302,6 +305,8 @@ namespace ININ.PureCloudApi.Model
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
             this.Provider = Provider;
+            this.ExternalContact = ExternalContact;
+            this.ExternalOrganization = ExternalOrganization;
             this.AudioMuted = AudioMuted;
             this.VideoMuted = VideoMuted;
             this.SharingScreen = SharingScreen;
@@ -368,7 +373,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public CallbackConversationNotificationUser User { get; set; }
+        public DocumentDataNotificationCreatedBy User { get; set; }
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
@@ -404,6 +409,16 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        /// <summary>
+        /// Gets or Sets ExternalContact
+        /// </summary>
+        [DataMember(Name="externalContact", EmitDefaultValue=false)]
+        public VideoConversationNotificationUriReference ExternalContact { get; set; }
+        /// <summary>
+        /// Gets or Sets ExternalOrganization
+        /// </summary>
+        [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
+        public VideoConversationNotificationUriReference ExternalOrganization { get; set; }
         /// <summary>
         /// Gets or Sets AudioMuted
         /// </summary>
@@ -459,6 +474,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
             sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
@@ -611,6 +628,16 @@ namespace ININ.PureCloudApi.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.ExternalContact == other.ExternalContact ||
+                    this.ExternalContact != null &&
+                    this.ExternalContact.Equals(other.ExternalContact)
+                ) &&
+                (
+                    this.ExternalOrganization == other.ExternalOrganization ||
+                    this.ExternalOrganization != null &&
+                    this.ExternalOrganization.Equals(other.ExternalOrganization)
+                ) &&
+                (
                     this.AudioMuted == other.AudioMuted ||
                     this.AudioMuted != null &&
                     this.AudioMuted.Equals(other.AudioMuted)
@@ -692,6 +719,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ExternalContact != null)
+                    hash = hash * 59 + this.ExternalContact.GetHashCode();
+                if (this.ExternalOrganization != null)
+                    hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.AudioMuted != null)
                     hash = hash * 59 + this.AudioMuted.GetHashCode();
                 if (this.VideoMuted != null)

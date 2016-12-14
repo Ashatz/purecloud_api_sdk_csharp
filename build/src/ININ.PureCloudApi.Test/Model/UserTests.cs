@@ -131,6 +131,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Username'
         }
         /// <summary>
+        /// Test the property 'Manager'
+        /// </summary>
+        [Test]
+        public void ManagerTest()
+        {
+            // TODO: unit test for the property 'Manager'
+        }
+        /// <summary>
         /// Test the property 'Images'
         /// </summary>
         [Test]
@@ -209,6 +217,14 @@ namespace ININ.PureCloudApi.Test
         public void ProfileSkillsTest()
         {
             // TODO: unit test for the property 'ProfileSkills'
+        }
+        /// <summary>
+        /// Test the property 'Locations'
+        /// </summary>
+        [Test]
+        public void LocationsTest()
+        {
+            // TODO: unit test for the property 'Locations'
         }
         /// <summary>
         /// Test the property 'SelfUri'

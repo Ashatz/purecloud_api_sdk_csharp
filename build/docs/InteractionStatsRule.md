@@ -19,7 +19,7 @@ title: InteractionStatsRule
 | **Enabled** | **bool?** | Indicates if the rule is enabled. | [default to false]|
 | **InAlarm** | **bool?** | Indicates if the rule is in alarm state. | [optional] [default to false]|
 | **NotificationUsers** | [**List&lt;User&gt;**](User.html) | The ids of users who will be notified of alarm state change. | |
-| **AlertTypes** | **List&lt;string&gt;** | A collection of notification methods. &#x3D; [&#39;SMS&#39;, &#39;DEVICE&#39;, &#39;EMAIL&#39;] | |
+| **AlertTypes** | **List&lt;string&gt;** | A collection of notification methods. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

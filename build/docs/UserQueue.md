@@ -25,6 +25,7 @@ title: UserQueue
 | **QueueFlow** | [**UriReference**](UriReference.html) | The in-queue flow to use for conversations waiting in queue. | [optional] |
 | **CallingPartyName** | **string** | The name to use for caller identification for outbound calls from this queue. | [optional] |
 | **CallingPartyNumber** | **string** | The phone number to use for caller identification for outbound calls from this queue. | [optional] |
+| **OutboundEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress.html) |  | [optional] |
 | **Joined** | **bool?** |  | [optional] [default to false]|
 | **MemberCount** | **int?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

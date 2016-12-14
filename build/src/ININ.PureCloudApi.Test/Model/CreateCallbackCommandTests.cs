@@ -107,22 +107,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CountryCode'
         }
         /// <summary>
-        /// Test the property 'IsAutomated'
-        /// </summary>
-        [Test]
-        public void IsAutomatedTest()
-        {
-            // TODO: unit test for the property 'IsAutomated'
-        }
-        /// <summary>
-        /// Test the property 'AutomatedCallbackConfigId'
-        /// </summary>
-        [Test]
-        public void AutomatedCallbackConfigIdTest()
-        {
-            // TODO: unit test for the property 'AutomatedCallbackConfigId'
-        }
-        /// <summary>
         /// Test the property 'Data'
         /// </summary>
         [Test]

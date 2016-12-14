@@ -11,6 +11,8 @@ title: AnalyticsParticipant
 | **ParticipantName** | **string** |  | [optional] |
 | **UserId** | **string** |  | [optional] |
 | **Purpose** | **string** |  | [optional] |
+| **ExternalContactId** | **string** |  | [optional] |
+| **ExternalOrganizationId** | **string** |  | [optional] |
 | **Sessions** | [**List&lt;AnalyticsSession&gt;**](AnalyticsSession.html) |  | [optional] |
 {: class="table table-striped"}
 

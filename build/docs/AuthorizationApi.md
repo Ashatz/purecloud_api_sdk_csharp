@@ -773,7 +773,7 @@ namespace Example
 
 <a name="putrolesroleid"></a>
 
-## [**DomainOrganizationRole**](DomainOrganizationRole.html) PutRolesRoleId (string roleId, DomainOrganizationRole body)
+## [**DomainOrganizationRole**](DomainOrganizationRole.html) PutRolesRoleId (string roleId, DomainOrganizationRoleUpdate body)
 
 Update an organization role.
 
@@ -799,7 +799,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
-            var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role
+            var body = new DomainOrganizationRoleUpdate(); // DomainOrganizationRoleUpdate | Organization role
 
             try
             {
@@ -822,7 +822,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **body** | [**DomainOrganizationRole**](DomainOrganizationRole.html)| Organization role |  |
+| **body** | [**DomainOrganizationRoleUpdate**](DomainOrganizationRoleUpdate.html)| Organization role |  |
 {: class="table table-striped"}
 
 ### Return type

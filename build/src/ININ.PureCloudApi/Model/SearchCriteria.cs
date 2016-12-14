@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -21,7 +22,7 @@ namespace ININ.PureCloudApi.Model
         /// How to apply this search criteria against other criteria
         /// </summary>
         /// <value>How to apply this search criteria against other criteria</value>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
             /// <summary>
@@ -53,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
             /// <summary>
@@ -146,7 +147,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum QueryString for "QUERY_STRING"
             /// </summary>
             [EnumMember(Value = "QUERY_STRING")]
-            QueryString
+            QueryString,
+            
+            /// <summary>
+            /// Enum MatchAll for "MATCH_ALL"
+            /// </summary>
+            [EnumMember(Value = "MATCH_ALL")]
+            MatchAll
         }
         /// <summary>
         /// How to apply this search criteria against other criteria

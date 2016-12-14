@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -34,7 +35,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NextPage">Q64 value for the next page of results.</param>
         /// <param name="Types">Resource types the search was performed against (required).</param>
         /// <param name="Results">Search results (required).</param>
-        public LocationsSearchResponse(long? Total = null, int? PageCount = null, int? PageSize = null, int? PageNumber = null, string PreviousPage = null, string CurrentPage = null, string NextPage = null, List<string> Types = null, List<Location> Results = null)
+        public LocationsSearchResponse(long? Total = null, int? PageCount = null, int? PageSize = null, int? PageNumber = null, string PreviousPage = null, string CurrentPage = null, string NextPage = null, List<string> Types = null, List<LocationDefinition> Results = null)
         {
             // to ensure "Total" is required (not null)
             if (Total == null)
@@ -148,7 +149,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Search results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
-        public List<Location> Results { get; set; }
+        public List<LocationDefinition> Results { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

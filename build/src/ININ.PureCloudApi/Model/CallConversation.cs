@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -20,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum RecordingStateEnum
         {
             /// <summary>
@@ -32,21 +33,21 @@ namespace ININ.PureCloudApi.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum None for "NONE"
+            /// Enum None for "none"
             /// </summary>
-            [EnumMember(Value = "NONE")]
+            [EnumMember(Value = "none")]
             None,
             
             /// <summary>
-            /// Enum Active for "ACTIVE"
+            /// Enum Active for "active"
             /// </summary>
-            [EnumMember(Value = "ACTIVE")]
+            [EnumMember(Value = "active")]
             Active,
             
             /// <summary>
-            /// Enum Paused for "PAUSED"
+            /// Enum Paused for "paused"
             /// </summary>
-            [EnumMember(Value = "PAUSED")]
+            [EnumMember(Value = "paused")]
             Paused
         }
         /// <summary>

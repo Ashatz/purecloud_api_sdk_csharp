@@ -195,6 +195,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CallingPartyNumber'
         }
         /// <summary>
+        /// Test the property 'OutboundEmailAddress'
+        /// </summary>
+        [Test]
+        public void OutboundEmailAddressTest()
+        {
+            // TODO: unit test for the property 'OutboundEmailAddress'
+        }
+        /// <summary>
         /// Test the property 'SourceQueueId'
         /// </summary>
         [Test]

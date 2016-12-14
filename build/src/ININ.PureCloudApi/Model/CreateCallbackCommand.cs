@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using ININ.PureCloudApi.Client;
 
 namespace ININ.PureCloudApi.Model
 {
@@ -32,10 +33,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CallbackNumbers">A list of phone numbers for the callback. (required).</param>
         /// <param name="CallbackScheduledTime">The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CountryCode">The country code to be associated with the callback numbers..</param>
-        /// <param name="IsAutomated">Whether or not to automatically place a call for this callback. (default to false).</param>
-        /// <param name="AutomatedCallbackConfigId">The id of the configuration to handle the response (e.g. live voice, machine) from automatically placing a call for a callback..</param>
         /// <param name="Data">A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }.</param>
-        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? IsAutomated = null, string AutomatedCallbackConfigId = null, Dictionary<string, string> Data = null)
+        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, Dictionary<string, string> Data = null)
         {
             // to ensure "CallbackNumbers" is required (not null)
             if (CallbackNumbers == null)
@@ -52,16 +51,6 @@ namespace ININ.PureCloudApi.Model
             this.CallbackUserName = CallbackUserName;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.CountryCode = CountryCode;
-            // use default value if no "IsAutomated" provided
-            if (IsAutomated == null)
-            {
-                this.IsAutomated = false;
-            }
-            else
-            {
-                this.IsAutomated = IsAutomated;
-            }
-            this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
             this.Data = Data;
         }
         
@@ -108,18 +97,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
         /// <summary>
-        /// Whether or not to automatically place a call for this callback.
-        /// </summary>
-        /// <value>Whether or not to automatically place a call for this callback.</value>
-        [DataMember(Name="isAutomated", EmitDefaultValue=false)]
-        public bool? IsAutomated { get; set; }
-        /// <summary>
-        /// The id of the configuration to handle the response (e.g. live voice, machine) from automatically placing a call for a callback.
-        /// </summary>
-        /// <value>The id of the configuration to handle the response (e.g. live voice, machine) from automatically placing a call for a callback.</value>
-        [DataMember(Name="automatedCallbackConfigId", EmitDefaultValue=false)]
-        public string AutomatedCallbackConfigId { get; set; }
-        /// <summary>
         /// A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }
         /// </summary>
         /// <value>A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }</value>
@@ -140,8 +117,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
-            sb.Append("  IsAutomated: ").Append(IsAutomated).Append("\n");
-            sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -215,16 +190,6 @@ namespace ININ.PureCloudApi.Model
                     this.CountryCode.Equals(other.CountryCode)
                 ) &&
                 (
-                    this.IsAutomated == other.IsAutomated ||
-                    this.IsAutomated != null &&
-                    this.IsAutomated.Equals(other.IsAutomated)
-                ) &&
-                (
-                    this.AutomatedCallbackConfigId == other.AutomatedCallbackConfigId ||
-                    this.AutomatedCallbackConfigId != null &&
-                    this.AutomatedCallbackConfigId.Equals(other.AutomatedCallbackConfigId)
-                ) &&
-                (
                     this.Data == other.Data ||
                     this.Data != null &&
                     this.Data.SequenceEqual(other.Data)
@@ -256,10 +221,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
-                if (this.IsAutomated != null)
-                    hash = hash * 59 + this.IsAutomated.GetHashCode();
-                if (this.AutomatedCallbackConfigId != null)
-                    hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
                 return hash;
