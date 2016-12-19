@@ -102,7 +102,25 @@ namespace ININ.PureCloudApi.Model
             /// Enum Forwardtransfer for "forwardTransfer"
             /// </summary>
             [EnumMember(Value = "forwardTransfer")]
-            Forwardtransfer
+            Forwardtransfer,
+            
+            /// <summary>
+            /// Enum Timeout for "timeout"
+            /// </summary>
+            [EnumMember(Value = "timeout")]
+            Timeout,
+            
+            /// <summary>
+            /// Enum Noanswertransfer for "noAnswerTransfer"
+            /// </summary>
+            [EnumMember(Value = "noAnswerTransfer")]
+            Noanswertransfer,
+            
+            /// <summary>
+            /// Enum Notavailabletransfer for "notAvailableTransfer"
+            /// </summary>
+            [EnumMember(Value = "notAvailableTransfer")]
+            Notavailabletransfer
         }
         /// <summary>
         /// Gets or Sets SegmentType

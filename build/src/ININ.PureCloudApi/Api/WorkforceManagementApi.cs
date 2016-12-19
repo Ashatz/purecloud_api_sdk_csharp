@@ -485,13 +485,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAdherence: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetAdherence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAdherence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserScheduleAdherence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (UserScheduleAdherence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleAdherence)));
             
         }
@@ -562,13 +564,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAdherence: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetAdherence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAdherence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserScheduleAdherence>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (UserScheduleAdherence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleAdherence)));
             
         }
@@ -647,13 +651,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequests: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequests: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequests: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TimeOffRequestList>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (TimeOffRequestList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestList)));
             
         }
@@ -733,13 +739,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequests: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequests: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequests: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TimeOffRequestList>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (TimeOffRequestList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestList)));
             
         }
@@ -821,13 +829,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TimeOffRequest>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (TimeOffRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequest)));
             
         }
@@ -910,13 +920,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TimeOffRequest>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (TimeOffRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequest)));
             
         }
@@ -983,13 +995,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequests: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequests: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequests: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TimeOffRequestList>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (TimeOffRequestList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestList)));
             
         }
@@ -1057,13 +1071,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequests: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequests: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequests: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TimeOffRequestList>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (TimeOffRequestList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestList)));
             
         }
@@ -1133,13 +1149,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequestsTimeoffrequestId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TimeOffRequest>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (TimeOffRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequest)));
             
         }
@@ -1210,13 +1228,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTimeoffrequestsTimeoffrequestId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TimeOffRequest>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (TimeOffRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequest)));
             
         }
@@ -1295,14 +1315,16 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchTimeoffrequestsTimeoffrequestId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
         }
 
@@ -1381,14 +1403,16 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchTimeoffrequestsTimeoffrequestId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchTimeoffrequestsTimeoffrequestId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 null);
         }
 
@@ -1464,13 +1488,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostLongtermforecasts: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostLongtermforecasts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostLongtermforecasts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ForecastCreationCompletion>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (ForecastCreationCompletion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ForecastCreationCompletion)));
             
         }
@@ -1548,13 +1574,15 @@ namespace ININ.PureCloudApi.Api
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostLongtermforecasts: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostLongtermforecasts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostLongtermforecasts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ForecastCreationCompletion>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarHeaders,
                 (ForecastCreationCompletion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ForecastCreationCompletion)));
             
         }
