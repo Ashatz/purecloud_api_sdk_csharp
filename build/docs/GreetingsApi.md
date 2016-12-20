@@ -12,12 +12,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGreetingId**](GreetingsApi.html#getgreetingid) | **GET** /api/v2/greetings/{greetingId} | Get a Greeting with the given GreetingId |
 | [**GetGreetingIdMedia**](GreetingsApi.html#getgreetingidmedia) | **GET** /api/v2/greetings/{greetingId}/media | Get media playback URI for this greeting |
 | [**GetGreetings**](GreetingsApi.html#getgreetings) | **GET** /api/v2/greetings | Gets an Organization&#39;s Greetings |
+| [**GetGroupIdGreetings**](GreetingsApi.html#getgroupidgreetings) | **GET** /api/v2/groups/{groupId}/greetings | Get a list of the Group&#39;s Greetings |
+| [**GetGroupIdGreetingsDefaults**](GreetingsApi.html#getgroupidgreetingsdefaults) | **GET** /api/v2/groups/{groupId}/greetings/defaults | Grabs the list of Default Greetings given a Group&#39;s ID |
 | [**GetUserIdGreetings**](GreetingsApi.html#getuseridgreetings) | **GET** /api/v2/users/{userId}/greetings | Get a list of the User&#39;s Greetings |
 | [**GetUserIdGreetingsDefaults**](GreetingsApi.html#getuseridgreetingsdefaults) | **GET** /api/v2/users/{userId}/greetings/defaults | Grabs the list of Default Greetings given a User&#39;s ID |
 | [**PostGreetings**](GreetingsApi.html#postgreetings) | **POST** /api/v2/greetings | Create a Greeting for an Organization |
+| [**PostGroupIdGreetings**](GreetingsApi.html#postgroupidgreetings) | **POST** /api/v2/groups/{groupId}/greetings | Creates a Greeting for a Group |
 | [**PostUserIdGreetings**](GreetingsApi.html#postuseridgreetings) | **POST** /api/v2/users/{userId}/greetings | Creates a Greeting for a User |
 | [**PutDefaults**](GreetingsApi.html#putdefaults) | **PUT** /api/v2/greetings/defaults | Update an Organization&#39;s DefaultGreetingList |
 | [**PutGreetingId**](GreetingsApi.html#putgreetingid) | **PUT** /api/v2/greetings/{greetingId} | Updates the Greeting with the given GreetingId |
+| [**PutGroupIdGreetingsDefaults**](GreetingsApi.html#putgroupidgreetingsdefaults) | **PUT** /api/v2/groups/{groupId}/greetings/defaults | Updates the DefaultGreetingList of the specified Group |
 | [**PutUserIdGreetingsDefaults**](GreetingsApi.html#putuseridgreetingsdefaults) | **PUT** /api/v2/users/{userId}/greetings/defaults | Updates the DefaultGreetingList of the specified User |
 {: class="table table-striped"}
 
@@ -300,6 +304,122 @@ namespace Example
 
 [**DomainEntityListing**](DomainEntityListing.html)
 
+<a name="getgroupidgreetings"></a>
+
+## [**GreetingListing**](GreetingListing.html) GetGroupIdGreetings (string groupId, int? pageSize = null, int? pageNumber = null)
+
+Get a list of the Group's Greetings
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetGroupIdGreetingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GreetingsApi();
+            var groupId = groupId_example;  // string | Group ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Get a list of the Group's Greetings
+                GreetingListing result = apiInstance.GetGroupIdGreetings(groupId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GreetingsApi.GetGroupIdGreetings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**GreetingListing**](GreetingListing.html)
+
+<a name="getgroupidgreetingsdefaults"></a>
+
+## [**DefaultGreetingList**](DefaultGreetingList.html) GetGroupIdGreetingsDefaults (string groupId)
+
+Grabs the list of Default Greetings given a Group's ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetGroupIdGreetingsDefaultsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GreetingsApi();
+            var groupId = groupId_example;  // string | Group ID
+
+            try
+            {
+                // Grabs the list of Default Greetings given a Group's ID
+                DefaultGreetingList result = apiInstance.GetGroupIdGreetingsDefaults(groupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GreetingsApi.GetGroupIdGreetingsDefaults: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DefaultGreetingList**](DefaultGreetingList.html)
+
 <a name="getuseridgreetings"></a>
 
 ## [**DomainEntityListing**](DomainEntityListing.html) GetUserIdGreetings (string userId, int? pageSize = null, int? pageNumber = null)
@@ -472,6 +592,64 @@ namespace Example
 
 [**DefaultGreetingList**](DefaultGreetingList.html)
 
+<a name="postgroupidgreetings"></a>
+
+## [**Greeting**](Greeting.html) PostGroupIdGreetings (string groupId, Greeting body)
+
+Creates a Greeting for a Group
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostGroupIdGreetingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GreetingsApi();
+            var groupId = groupId_example;  // string | Group ID
+            var body = new Greeting(); // Greeting | The Greeting to create
+
+            try
+            {
+                // Creates a Greeting for a Group
+                Greeting result = apiInstance.PostGroupIdGreetings(groupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GreetingsApi.PostGroupIdGreetings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+| **body** | [**Greeting**](Greeting.html)| The Greeting to create |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Greeting**](Greeting.html)
+
 <a name="postuseridgreetings"></a>
 
 ## [**Greeting**](Greeting.html) PostUserIdGreetings (string userId, Greeting body)
@@ -643,6 +821,64 @@ namespace Example
 ### Return type
 
 [**Greeting**](Greeting.html)
+
+<a name="putgroupidgreetingsdefaults"></a>
+
+## [**DefaultGreetingList**](DefaultGreetingList.html) PutGroupIdGreetingsDefaults (string groupId, DefaultGreetingList body)
+
+Updates the DefaultGreetingList of the specified Group
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutGroupIdGreetingsDefaultsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GreetingsApi();
+            var groupId = groupId_example;  // string | Group ID
+            var body = new DefaultGreetingList(); // DefaultGreetingList | The updated defaultGreetingList
+
+            try
+            {
+                // Updates the DefaultGreetingList of the specified Group
+                DefaultGreetingList result = apiInstance.PutGroupIdGreetingsDefaults(groupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GreetingsApi.PutGroupIdGreetingsDefaults: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+| **body** | [**DefaultGreetingList**](DefaultGreetingList.html)| The updated defaultGreetingList |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DefaultGreetingList**](DefaultGreetingList.html)
 
 <a name="putuseridgreetingsdefaults"></a>
 

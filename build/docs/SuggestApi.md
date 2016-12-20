@@ -41,7 +41,7 @@ namespace Example
 
             var apiInstance = new SuggestApi();
             var q64 = q64_example;  // string | q64
-            var expand = new List<string>(); // List<string> | expand (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
             var profile = true;  // bool? | profile (optional)  (default to true)
 
             try
@@ -65,7 +65,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 | **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -75,7 +75,7 @@ namespace Example
 
 <a name="getsuggest"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64, bool? profile = null)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64, List<string> expand = null, bool? profile = null)
 
 Suggest resources using the q64 value returned from a previous suggest query.
 
@@ -101,12 +101,13 @@ namespace Example
 
             var apiInstance = new SuggestApi();
             var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
             var profile = true;  // bool? | profile (optional)  (default to true)
 
             try
             {
                 // Suggest resources using the q64 value returned from a previous suggest query.
-                JsonNodeSearchResponse result = apiInstance.GetSuggest(q64, profile);
+                JsonNodeSearchResponse result = apiInstance.GetSuggest(q64, expand, profile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -124,6 +125,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 | **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 

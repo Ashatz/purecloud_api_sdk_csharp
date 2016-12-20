@@ -36,7 +36,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="VoicemailExtension">The extension for voicemail retrieval.  The default value is *86..</param>
         /// <param name="PinRequired">If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone. (default to false).</param>
-        public VoicemailOrganizationPolicy(bool? Enabled = null, int? RetentionTimeDays = null, int? AlertTimeoutSeconds = null, int? MinimumRecordingTimeSeconds = null, int? MaximumRecordingTimeSeconds = null, string UnavailableMessageUri = null, string NamePromptMessageUri = null, string FullMessageUri = null, bool? CompressSilence = null, PINConfiguration PinConfiguration = null, long? QuotaSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string VoicemailExtension = null, bool? PinRequired = null)
+        /// <param name="SendEmailNotifications">Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting. (default to false).</param>
+        public VoicemailOrganizationPolicy(bool? Enabled = null, int? RetentionTimeDays = null, int? AlertTimeoutSeconds = null, int? MinimumRecordingTimeSeconds = null, int? MaximumRecordingTimeSeconds = null, string UnavailableMessageUri = null, string NamePromptMessageUri = null, string FullMessageUri = null, bool? CompressSilence = null, PINConfiguration PinConfiguration = null, long? QuotaSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string VoicemailExtension = null, bool? PinRequired = null, bool? SendEmailNotifications = null)
         {
             // use default value if no "Enabled" provided
             if (Enabled == null)
@@ -76,6 +77,15 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.PinRequired = PinRequired;
+            }
+            // use default value if no "SendEmailNotifications" provided
+            if (SendEmailNotifications == null)
+            {
+                this.SendEmailNotifications = false;
+            }
+            else
+            {
+                this.SendEmailNotifications = SendEmailNotifications;
             }
         }
         
@@ -159,6 +169,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="pinRequired", EmitDefaultValue=false)]
         public bool? PinRequired { get; set; }
         /// <summary>
+        /// Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting.
+        /// </summary>
+        /// <value>Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting.</value>
+        [DataMember(Name="sendEmailNotifications", EmitDefaultValue=false)]
+        public bool? SendEmailNotifications { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -181,6 +197,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  VoicemailExtension: ").Append(VoicemailExtension).Append("\n");
             sb.Append("  PinRequired: ").Append(PinRequired).Append("\n");
+            sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -291,6 +308,11 @@ namespace ININ.PureCloudApi.Model
                     this.PinRequired == other.PinRequired ||
                     this.PinRequired != null &&
                     this.PinRequired.Equals(other.PinRequired)
+                ) &&
+                (
+                    this.SendEmailNotifications == other.SendEmailNotifications ||
+                    this.SendEmailNotifications != null &&
+                    this.SendEmailNotifications.Equals(other.SendEmailNotifications)
                 );
         }
 
@@ -335,6 +357,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.VoicemailExtension.GetHashCode();
                 if (this.PinRequired != null)
                     hash = hash * 59 + this.PinRequired.GetHashCode();
+                if (this.SendEmailNotifications != null)
+                    hash = hash * 59 + this.SendEmailNotifications.GetHashCode();
                 return hash;
             }
         }

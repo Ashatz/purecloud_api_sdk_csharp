@@ -131,6 +131,38 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CallerUser'
         }
         /// <summary>
+        /// Test the property 'Deleted'
+        /// </summary>
+        [Test]
+        public void DeletedTest()
+        {
+            // TODO: unit test for the property 'Deleted'
+        }
+        /// <summary>
+        /// Test the property 'Note'
+        /// </summary>
+        [Test]
+        public void NoteTest()
+        {
+            // TODO: unit test for the property 'Note'
+        }
+        /// <summary>
+        /// Test the property 'User'
+        /// </summary>
+        [Test]
+        public void UserTest()
+        {
+            // TODO: unit test for the property 'User'
+        }
+        /// <summary>
+        /// Test the property 'Group'
+        /// </summary>
+        [Test]
+        public void GroupTest()
+        {
+            // TODO: unit test for the property 'Group'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

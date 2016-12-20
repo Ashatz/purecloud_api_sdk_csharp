@@ -195,6 +195,50 @@ namespace ININ.PureCloudApi.Model
             Invalid
         }
         /// <summary>
+        /// Gets or Sets CallDrainingState
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CallDrainingStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum None for "NONE"
+            /// </summary>
+            [EnumMember(Value = "NONE")]
+            None,
+            
+            /// <summary>
+            /// Enum Wait for "WAIT"
+            /// </summary>
+            [EnumMember(Value = "WAIT")]
+            Wait,
+            
+            /// <summary>
+            /// Enum WaitTimeout for "WAIT_TIMEOUT"
+            /// </summary>
+            [EnumMember(Value = "WAIT_TIMEOUT")]
+            WaitTimeout,
+            
+            /// <summary>
+            /// Enum Terminate for "TERMINATE"
+            /// </summary>
+            [EnumMember(Value = "TERMINATE")]
+            Terminate,
+            
+            /// <summary>
+            /// Enum Complete for "COMPLETE"
+            /// </summary>
+            [EnumMember(Value = "COMPLETE")]
+            Complete
+        }
+        /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
@@ -214,6 +258,11 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="edgeDeploymentType", EmitDefaultValue=false)]
         public EdgeDeploymentTypeEnum? EdgeDeploymentType { get; set; }
+        /// <summary>
+        /// Gets or Sets CallDrainingState
+        /// </summary>
+        [DataMember(Name="callDrainingState", EmitDefaultValue=false)]
+        public CallDrainingStateEnum? CallDrainingState { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Edge" /> class.
         /// </summary>
@@ -256,7 +305,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PhysicalEdge">PhysicalEdge (default to false).</param>
         /// <param name="Managed">Managed (default to false).</param>
         /// <param name="EdgeDeploymentType">EdgeDeploymentType.</param>
-        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null)
+        /// <param name="CallDrainingState">CallDrainingState.</param>
+        /// <param name="ConversationCount">ConversationCount.</param>
+        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, CallDrainingStateEnum? CallDrainingState = null, int? ConversationCount = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -316,6 +367,8 @@ namespace ININ.PureCloudApi.Model
                 this.Managed = Managed;
             }
             this.EdgeDeploymentType = EdgeDeploymentType;
+            this.CallDrainingState = CallDrainingState;
+            this.ConversationCount = ConversationCount;
         }
         
         /// <summary>
@@ -480,6 +533,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="managed", EmitDefaultValue=false)]
         public bool? Managed { get; set; }
         /// <summary>
+        /// Gets or Sets ConversationCount
+        /// </summary>
+        [DataMember(Name="conversationCount", EmitDefaultValue=false)]
+        public int? ConversationCount { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -528,6 +586,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PhysicalEdge: ").Append(PhysicalEdge).Append("\n");
             sb.Append("  Managed: ").Append(Managed).Append("\n");
             sb.Append("  EdgeDeploymentType: ").Append(EdgeDeploymentType).Append("\n");
+            sb.Append("  CallDrainingState: ").Append(CallDrainingState).Append("\n");
+            sb.Append("  ConversationCount: ").Append(ConversationCount).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -741,6 +801,16 @@ namespace ININ.PureCloudApi.Model
                     this.EdgeDeploymentType.Equals(other.EdgeDeploymentType)
                 ) &&
                 (
+                    this.CallDrainingState == other.CallDrainingState ||
+                    this.CallDrainingState != null &&
+                    this.CallDrainingState.Equals(other.CallDrainingState)
+                ) &&
+                (
+                    this.ConversationCount == other.ConversationCount ||
+                    this.ConversationCount != null &&
+                    this.ConversationCount.Equals(other.ConversationCount)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -828,6 +898,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Managed.GetHashCode();
                 if (this.EdgeDeploymentType != null)
                     hash = hash * 59 + this.EdgeDeploymentType.GetHashCode();
+                if (this.CallDrainingState != null)
+                    hash = hash * 59 + this.CallDrainingState.GetHashCode();
+                if (this.ConversationCount != null)
+                    hash = hash * 59 + this.ConversationCount.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

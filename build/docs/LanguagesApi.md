@@ -7,24 +7,25 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteLanguageId**](LanguagesApi.html#deletelanguageid) | **DELETE** /api/v2/languages/{languageId} | Delete Language |
-| [**GetLanguageId**](LanguagesApi.html#getlanguageid) | **GET** /api/v2/languages/{languageId} | Get language |
-| [**GetLanguages**](LanguagesApi.html#getlanguages) | **GET** /api/v2/languages | Get the list of supported languages. |
+| [**DeleteLanguageId**](LanguagesApi.html#deletelanguageid) | **DELETE** /api/v2/languages/{languageId} | Delete Language (Deprecated) |
+| [**DeleteLanguagesLanguageId**](LanguagesApi.html#deletelanguageslanguageid) | **DELETE** /api/v2/routing/languages/{languageId} | Delete Language |
+| [**GetLanguageId**](LanguagesApi.html#getlanguageid) | **GET** /api/v2/languages/{languageId} | Get language (Deprecated) |
+| [**GetLanguages**](LanguagesApi.html#getlanguages) | **GET** /api/v2/languages | Get the list of supported languages. (Deprecated) |
+| [**GetLanguagesLanguageId**](LanguagesApi.html#getlanguageslanguageid) | **GET** /api/v2/routing/languages/{languageId} | Get language |
 | [**GetTranslations**](LanguagesApi.html#gettranslations) | **GET** /api/v2/languages/translations | Get all available languages for translation |
 | [**GetTranslationsBuiltin**](LanguagesApi.html#gettranslationsbuiltin) | **GET** /api/v2/languages/translations/builtin | Get the builtin translation for a language |
 | [**GetTranslationsOrganization**](LanguagesApi.html#gettranslationsorganization) | **GET** /api/v2/languages/translations/organization | Get effective translation for an organization by language |
 | [**GetTranslationsUsersUserId**](LanguagesApi.html#gettranslationsusersuserid) | **GET** /api/v2/languages/translations/users/{userId} | Get effective language translation for a user |
-| [**PostLanguages**](LanguagesApi.html#postlanguages) | **POST** /api/v2/languages | Create Language |
-| [**PutLanguageId**](LanguagesApi.html#putlanguageid) | **PUT** /api/v2/languages/{languageId} | Update Language |
+| [**PostLanguages**](LanguagesApi.html#postlanguages) | **POST** /api/v2/languages | Create Language (Deprecated) |
 {: class="table table-striped"}
 
 <a name="deletelanguageid"></a>
 
 ## void DeleteLanguageId (string languageId)
 
-Delete Language
+Delete Language (Deprecated)
 
-
+This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
 
 ### Example
 ~~~csharp
@@ -49,7 +50,7 @@ namespace Example
 
             try
             {
-                // Delete Language
+                // Delete Language (Deprecated)
                 apiInstance.DeleteLanguageId(languageId);
             }
             catch (Exception e)
@@ -73,13 +74,68 @@ namespace Example
 
 void (empty response body)
 
+<a name="deletelanguageslanguageid"></a>
+
+## void DeleteLanguagesLanguageId (string languageId)
+
+Delete Language
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteLanguagesLanguageIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new LanguagesApi();
+            var languageId = languageId_example;  // string | Language ID
+
+            try
+            {
+                // Delete Language
+                apiInstance.DeleteLanguagesLanguageId(languageId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguagesApi.DeleteLanguagesLanguageId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageId** | **string**| Language ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="getlanguageid"></a>
 
 ## [**Language**](Language.html) GetLanguageId (string languageId)
 
-Get language
+Get language (Deprecated)
 
-
+This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
 
 ### Example
 ~~~csharp
@@ -104,7 +160,7 @@ namespace Example
 
             try
             {
-                // Get language
+                // Get language (Deprecated)
                 Language result = apiInstance.GetLanguageId(languageId);
                 Debug.WriteLine(result);
             }
@@ -133,9 +189,9 @@ namespace Example
 
 ## [**LanguageEntityListing**](LanguageEntityListing.html) GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
 
-Get the list of supported languages.
+Get the list of supported languages. (Deprecated)
 
-
+This endpoint is deprecated. It has been moved to /routing/languages
 
 ### Example
 ~~~csharp
@@ -163,7 +219,7 @@ namespace Example
 
             try
             {
-                // Get the list of supported languages.
+                // Get the list of supported languages. (Deprecated)
                 LanguageEntityListing result = apiInstance.GetLanguages(pageSize, pageNumber, sortOrder, name);
                 Debug.WriteLine(result);
             }
@@ -190,6 +246,62 @@ namespace Example
 ### Return type
 
 [**LanguageEntityListing**](LanguageEntityListing.html)
+
+<a name="getlanguageslanguageid"></a>
+
+## [**Language**](Language.html) GetLanguagesLanguageId (string languageId)
+
+Get language
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetLanguagesLanguageIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new LanguagesApi();
+            var languageId = languageId_example;  // string | Language ID
+
+            try
+            {
+                // Get language
+                Language result = apiInstance.GetLanguagesLanguageId(languageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguagesApi.GetLanguagesLanguageId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageId** | **string**| Language ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Language**](Language.html)
 
 <a name="gettranslations"></a>
 
@@ -414,9 +526,9 @@ namespace Example
 
 ## [**Language**](Language.html) PostLanguages (Language body)
 
-Create Language
+Create Language (Deprecated)
 
-
+This endpoint is deprecated. It has been moved to /routing/languages
 
 ### Example
 ~~~csharp
@@ -441,7 +553,7 @@ namespace Example
 
             try
             {
-                // Create Language
+                // Create Language (Deprecated)
                 Language result = apiInstance.PostLanguages(body);
                 Debug.WriteLine(result);
             }
@@ -459,64 +571,6 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Language**](Language.html)| Language |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Language**](Language.html)
-
-<a name="putlanguageid"></a>
-
-## [**Language**](Language.html) PutLanguageId (string languageId, Language body)
-
-Update Language
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PutLanguageIdExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new LanguagesApi();
-            var languageId = languageId_example;  // string | Language ID
-            var body = new Language(); // Language | Language
-
-            try
-            {
-                // Update Language
-                Language result = apiInstance.PutLanguageId(languageId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling LanguagesApi.PutLanguageId: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **languageId** | **string**| Language ID |  |
 | **body** | [**Language**](Language.html)| Language |  |
 {: class="table table-striped"}
 

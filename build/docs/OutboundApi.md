@@ -2993,7 +2993,7 @@ namespace Example
 
 <a name="postcontactlistscontactlistidcontacts"></a>
 
-## [**List&lt;DialerContact&gt;**](DialerContact.html) PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null)
+## [**List&lt;DialerContact&gt;**](DialerContact.html) PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null)
 
 Add contacts to a contact list.
 
@@ -3021,11 +3021,12 @@ namespace Example
             var contactListId = contactListId_example;  // string | Contact List ID
             var body = new List<DialerContact>(); // List<DialerContact> | Contact
             var priority = true;  // bool? | Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional) 
+            var clearSystemData = true;  // bool? | Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won't. (optional) 
 
             try
             {
                 // Add contacts to a contact list.
-                List&lt;DialerContact&gt; result = apiInstance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
+                List&lt;DialerContact&gt; result = apiInstance.PostContactlistsContactlistIdContacts(contactListId, body, priority, clearSystemData);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3045,6 +3046,7 @@ namespace Example
 | **contactListId** | **string**| Contact List ID |  |
 | **body** | [**List<DialerContact>**](DialerContact.html)| Contact |  |
 | **priority** | **bool?**| Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. | [optional]  |
+| **clearSystemData** | **bool?**| Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

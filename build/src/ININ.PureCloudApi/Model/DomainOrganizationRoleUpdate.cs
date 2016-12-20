@@ -33,9 +33,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
         /// <param name="UserCount">UserCount.</param>
         /// <param name="RoleNeedsUpdate">Optional unless patch operation. (default to false).</param>
-        /// <param name="_Default">_Default (default to false).</param>
         /// <param name="_Base">_Base (default to false).</param>
-        public DomainOrganizationRoleUpdate(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, bool? _Base = null)
+        /// <param name="_Default">_Default (default to false).</param>
+        public DomainOrganizationRoleUpdate(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Base = null, bool? _Default = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -60,15 +60,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.RoleNeedsUpdate = RoleNeedsUpdate;
             }
-            // use default value if no "_Default" provided
-            if (_Default == null)
-            {
-                this._Default = false;
-            }
-            else
-            {
-                this._Default = _Default;
-            }
             // use default value if no "_Base" provided
             if (_Base == null)
             {
@@ -77,6 +68,15 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this._Base = _Base;
+            }
+            // use default value if no "_Default" provided
+            if (_Default == null)
+            {
+                this._Default = false;
+            }
+            else
+            {
+                this._Default = _Default;
             }
         }
         
@@ -124,15 +124,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="roleNeedsUpdate", EmitDefaultValue=false)]
         public bool? RoleNeedsUpdate { get; set; }
         /// <summary>
-        /// Gets or Sets _Default
-        /// </summary>
-        [DataMember(Name="default", EmitDefaultValue=false)]
-        public bool? _Default { get; set; }
-        /// <summary>
         /// Gets or Sets _Base
         /// </summary>
         [DataMember(Name="base", EmitDefaultValue=false)]
         public bool? _Base { get; set; }
+        /// <summary>
+        /// Gets or Sets _Default
+        /// </summary>
+        [DataMember(Name="default", EmitDefaultValue=false)]
+        public bool? _Default { get; set; }
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -155,8 +155,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
             sb.Append("  UserCount: ").Append(UserCount).Append("\n");
             sb.Append("  RoleNeedsUpdate: ").Append(RoleNeedsUpdate).Append("\n");
-            sb.Append("  _Default: ").Append(_Default).Append("\n");
             sb.Append("  _Base: ").Append(_Base).Append("\n");
+            sb.Append("  _Default: ").Append(_Default).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -235,14 +235,14 @@ namespace ININ.PureCloudApi.Model
                     this.RoleNeedsUpdate.Equals(other.RoleNeedsUpdate)
                 ) &&
                 (
-                    this._Default == other._Default ||
-                    this._Default != null &&
-                    this._Default.Equals(other._Default)
-                ) &&
-                (
                     this._Base == other._Base ||
                     this._Base != null &&
                     this._Base.Equals(other._Base)
+                ) &&
+                (
+                    this._Default == other._Default ||
+                    this._Default != null &&
+                    this._Default.Equals(other._Default)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -278,10 +278,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.UserCount.GetHashCode();
                 if (this.RoleNeedsUpdate != null)
                     hash = hash * 59 + this.RoleNeedsUpdate.GetHashCode();
-                if (this._Default != null)
-                    hash = hash * 59 + this._Default.GetHashCode();
                 if (this._Base != null)
                     hash = hash * 59 + this._Base.GetHashCode();
+                if (this._Default != null)
+                    hash = hash * 59 + this._Default.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

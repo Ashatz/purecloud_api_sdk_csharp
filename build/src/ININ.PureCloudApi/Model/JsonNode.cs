@@ -94,8 +94,6 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonNode" /> class.
         /// </summary>
-        /// <param name="Array">Array (default to false).</param>
-        /// <param name="_Null">_Null (default to false).</param>
         /// <param name="NodeType">NodeType.</param>
         /// <param name="_Object">_Object (default to false).</param>
         /// <param name="Boolean">Boolean (default to false).</param>
@@ -115,26 +113,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="BigInteger">BigInteger (default to false).</param>
         /// <param name="Textual">Textual (default to false).</param>
         /// <param name="Binary">Binary (default to false).</param>
-        public JsonNode(bool? Array = null, bool? _Null = null, NodeTypeEnum? NodeType = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? _Float = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null)
+        /// <param name="Array">Array (default to false).</param>
+        /// <param name="_Null">_Null (default to false).</param>
+        public JsonNode(NodeTypeEnum? NodeType = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? _Float = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? Array = null, bool? _Null = null)
         {
-            // use default value if no "Array" provided
-            if (Array == null)
-            {
-                this.Array = false;
-            }
-            else
-            {
-                this.Array = Array;
-            }
-            // use default value if no "_Null" provided
-            if (_Null == null)
-            {
-                this._Null = false;
-            }
-            else
-            {
-                this._Null = _Null;
-            }
             this.NodeType = NodeType;
             // use default value if no "_Object" provided
             if (_Object == null)
@@ -298,18 +280,26 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Binary = Binary;
             }
+            // use default value if no "Array" provided
+            if (Array == null)
+            {
+                this.Array = false;
+            }
+            else
+            {
+                this.Array = Array;
+            }
+            // use default value if no "_Null" provided
+            if (_Null == null)
+            {
+                this._Null = false;
+            }
+            else
+            {
+                this._Null = _Null;
+            }
         }
         
-        /// <summary>
-        /// Gets or Sets Array
-        /// </summary>
-        [DataMember(Name="array", EmitDefaultValue=false)]
-        public bool? Array { get; set; }
-        /// <summary>
-        /// Gets or Sets _Null
-        /// </summary>
-        [DataMember(Name="null", EmitDefaultValue=false)]
-        public bool? _Null { get; set; }
         /// <summary>
         /// Gets or Sets _Object
         /// </summary>
@@ -401,6 +391,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="binary", EmitDefaultValue=false)]
         public bool? Binary { get; set; }
         /// <summary>
+        /// Gets or Sets Array
+        /// </summary>
+        [DataMember(Name="array", EmitDefaultValue=false)]
+        public bool? Array { get; set; }
+        /// <summary>
+        /// Gets or Sets _Null
+        /// </summary>
+        [DataMember(Name="null", EmitDefaultValue=false)]
+        public bool? _Null { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -408,8 +408,6 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JsonNode {\n");
-            sb.Append("  Array: ").Append(Array).Append("\n");
-            sb.Append("  _Null: ").Append(_Null).Append("\n");
             sb.Append("  NodeType: ").Append(NodeType).Append("\n");
             sb.Append("  _Object: ").Append(_Object).Append("\n");
             sb.Append("  Boolean: ").Append(Boolean).Append("\n");
@@ -429,6 +427,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  BigInteger: ").Append(BigInteger).Append("\n");
             sb.Append("  Textual: ").Append(Textual).Append("\n");
             sb.Append("  Binary: ").Append(Binary).Append("\n");
+            sb.Append("  Array: ").Append(Array).Append("\n");
+            sb.Append("  _Null: ").Append(_Null).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -465,16 +465,6 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
-                (
-                    this.Array == other.Array ||
-                    this.Array != null &&
-                    this.Array.Equals(other.Array)
-                ) &&
-                (
-                    this._Null == other._Null ||
-                    this._Null != null &&
-                    this._Null.Equals(other._Null)
-                ) &&
                 (
                     this.NodeType == other.NodeType ||
                     this.NodeType != null &&
@@ -569,6 +559,16 @@ namespace ININ.PureCloudApi.Model
                     this.Binary == other.Binary ||
                     this.Binary != null &&
                     this.Binary.Equals(other.Binary)
+                ) &&
+                (
+                    this.Array == other.Array ||
+                    this.Array != null &&
+                    this.Array.Equals(other.Array)
+                ) &&
+                (
+                    this._Null == other._Null ||
+                    this._Null != null &&
+                    this._Null.Equals(other._Null)
                 );
         }
 
@@ -583,10 +583,6 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Array != null)
-                    hash = hash * 59 + this.Array.GetHashCode();
-                if (this._Null != null)
-                    hash = hash * 59 + this._Null.GetHashCode();
                 if (this.NodeType != null)
                     hash = hash * 59 + this.NodeType.GetHashCode();
                 if (this._Object != null)
@@ -625,6 +621,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Textual.GetHashCode();
                 if (this.Binary != null)
                     hash = hash * 59 + this.Binary.GetHashCode();
+                if (this.Array != null)
+                    hash = hash * 59 + this.Array.GetHashCode();
+                if (this._Null != null)
+                    hash = hash * 59 + this._Null.GetHashCode();
                 return hash;
             }
         }

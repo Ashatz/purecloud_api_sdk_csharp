@@ -107,6 +107,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetSearch_3
+        /// </summary>
+        [Test]
+        public void GetSearch_3Test()
+        {
+            // TODO: add unit test for the method 'GetSearch_3'
+            string q64 = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetSearch_3(q64, expand);
+            Assert.IsInstanceOf<VoicemailsSearchResponse> (response, "response is VoicemailsSearchResponse");
+        }
+        
+        /// <summary>
         /// Test GetSuggest
         /// </summary>
         [Test]
@@ -114,8 +127,9 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetSuggest'
             string q64 = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
             bool? profile = null; // TODO: replace null with proper value
-            var response = instance.GetSuggest(q64, profile);
+            var response = instance.GetSuggest(q64, expand, profile);
             Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse");
         }
         
@@ -166,6 +180,18 @@ namespace ININ.PureCloudApi.Test
             UserSearchRequest body = null; // TODO: replace null with proper value
             var response = instance.PostSearch_2(body);
             Assert.IsInstanceOf<UsersSearchResponse> (response, "response is UsersSearchResponse");
+        }
+        
+        /// <summary>
+        /// Test PostSearch_3
+        /// </summary>
+        [Test]
+        public void PostSearch_3Test()
+        {
+            // TODO: add unit test for the method 'PostSearch_3'
+            VoicemailSearchRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostSearch_3(body);
+            Assert.IsInstanceOf<VoicemailsSearchResponse> (response, "response is VoicemailsSearchResponse");
         }
         
         /// <summary>

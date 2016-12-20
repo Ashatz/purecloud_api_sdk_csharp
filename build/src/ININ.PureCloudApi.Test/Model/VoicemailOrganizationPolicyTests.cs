@@ -170,6 +170,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'PinRequired'
         }
+        /// <summary>
+        /// Test the property 'SendEmailNotifications'
+        /// </summary>
+        [Test]
+        public void SendEmailNotificationsTest()
+        {
+            // TODO: unit test for the property 'SendEmailNotifications'
+        }
 
     }
 

@@ -42,6 +42,8 @@ title: Edge
 | **PhysicalEdge** | **bool?** |  | [optional] [default to false]|
 | **Managed** | **bool?** |  | [optional] [default to false]|
 | **EdgeDeploymentType** | **string** |  | [optional] |
+| **CallDrainingState** | **string** |  | [optional] |
+| **ConversationCount** | **int?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

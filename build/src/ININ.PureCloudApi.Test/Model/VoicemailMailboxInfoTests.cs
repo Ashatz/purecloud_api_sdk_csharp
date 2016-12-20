@@ -75,12 +75,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'UnreadCount'
         }
         /// <summary>
-        /// Test the property 'VoicemailPolicy'
+        /// Test the property 'DeletedCount'
         /// </summary>
         [Test]
-        public void VoicemailPolicyTest()
+        public void DeletedCountTest()
         {
-            // TODO: unit test for the property 'VoicemailPolicy'
+            // TODO: unit test for the property 'DeletedCount'
         }
         /// <summary>
         /// Test the property 'CreatedDate'

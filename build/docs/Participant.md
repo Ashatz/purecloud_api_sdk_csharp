@@ -24,6 +24,7 @@ title: Participant
 | **ConsultParticipantId** | **string** | If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred. | [optional] |
 | **Address** | **string** | The address for the this participant. For a phone call this will be the ANI. | [optional] |
 | **Ani** | **string** | The address for the this participant. For a phone call this will be the ANI. | [optional] |
+| **AniName** | **string** | The ani-based name for this participant. | [optional] |
 | **Dnis** | **string** | The address for the this participant. For a phone call this will be the ANI. | [optional] |
 | **Locale** | **string** | An ISO 639 language code specifying the locale for this participant | [optional] |
 | **WrapupRequired** | **bool?** | True iff this participant is required to enter wrapup for this conversation. | [optional] [default to false]|

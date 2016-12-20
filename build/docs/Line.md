@@ -23,8 +23,8 @@ title: Line
 | **Template** | [**UriReference**](UriReference.html) |  | [optional] |
 | **Site** | [**UriReference**](UriReference.html) |  | [optional] |
 | **LineBaseSettings** | [**UriReference**](UriReference.html) |  | [optional] |
-| **PrimaryEdge** | [**Edge**](Edge.html) |  | [optional] |
-| **SecondaryEdge** | [**Edge**](Edge.html) |  | [optional] |
+| **PrimaryEdge** | [**Edge**](Edge.html) | The primary edge associated to the line. (Deprecated) | [optional] |
+| **SecondaryEdge** | [**Edge**](Edge.html) | The secondary edge associated to the line. (Deprecated) | [optional] |
 | **LoggedInUser** | [**UriReference**](UriReference.html) |  | [optional] |
 | **DefaultForUser** | [**UriReference**](UriReference.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

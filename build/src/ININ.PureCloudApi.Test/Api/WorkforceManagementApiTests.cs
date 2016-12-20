@@ -66,6 +66,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetDecisionsDownloadsDownloadId
+        /// </summary>
+        [Test]
+        public void GetDecisionsDownloadsDownloadIdTest()
+        {
+            // TODO: add unit test for the method 'GetDecisionsDownloadsDownloadId'
+            string downloadId = null; // TODO: replace null with proper value
+            string downloadfilename = null; // TODO: replace null with proper value
+            var response = instance.GetDecisionsDownloadsDownloadId(downloadId, downloadfilename);
+            Assert.IsInstanceOf<DecisionsDownloadLink> (response, "response is DecisionsDownloadLink");
+        }
+        
+        /// <summary>
         /// Test GetManagementunitsMuIdUsersUserIdTimeoffrequests
         /// </summary>
         [Test]
@@ -128,6 +141,18 @@ namespace ININ.PureCloudApi.Test
             TimeOffRequestPatch body = null; // TODO: replace null with proper value
             instance.PatchTimeoffrequestsTimeoffrequestId(timeOffRequestId, body);
             
+        }
+        
+        /// <summary>
+        /// Test PostDecisionsDownloadsSearch
+        /// </summary>
+        [Test]
+        public void PostDecisionsDownloadsSearchTest()
+        {
+            // TODO: add unit test for the method 'PostDecisionsDownloadsSearch'
+            ForecastSearchRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostDecisionsDownloadsSearch(body);
+            Assert.IsInstanceOf<DecisionsFileMetadataEntityListing> (response, "response is DecisionsFileMetadataEntityListing");
         }
         
         /// <summary>

@@ -51,6 +51,14 @@ namespace ININ.PureCloudApi.Test
         }
 
         /// <summary>
+        /// Test the property 'Expand'
+        /// </summary>
+        [Test]
+        public void ExpandTest()
+        {
+            // TODO: unit test for the property 'Expand'
+        }
+        /// <summary>
         /// Test the property 'Types'
         /// </summary>
         [Test]

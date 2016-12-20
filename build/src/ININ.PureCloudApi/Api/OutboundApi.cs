@@ -1194,8 +1194,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
+        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
         /// <returns>List&lt;DialerContact&gt;</returns>
-        List<DialerContact> PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null);
+        List<DialerContact> PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null);
 
         /// <summary>
         /// Add contacts to a contact list.
@@ -1207,8 +1208,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
+        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
-        ApiResponse<List<DialerContact>> PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null);
+        ApiResponse<List<DialerContact>> PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null);
         /// <summary>
         /// Initiate the export of a contact list.
         /// </summary>
@@ -2841,8 +2843,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
+        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
         /// <returns>Task of List&lt;DialerContact&gt;</returns>
-        System.Threading.Tasks.Task<List<DialerContact>> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null);
+        System.Threading.Tasks.Task<List<DialerContact>> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null);
 
         /// <summary>
         /// Add contacts to a contact list.
@@ -2854,8 +2857,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
+        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null);
+        System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null);
         /// <summary>
         /// Initiate the export of a contact list.
         /// </summary>
@@ -11677,10 +11681,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
+        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
         /// <returns>List&lt;DialerContact&gt;</returns>
-        public List<DialerContact> PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null)
+        public List<DialerContact> PostContactlistsContactlistIdContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null)
         {
-             ApiResponse<List<DialerContact>> localVarResponse = PostContactlistsContactlistIdContactsWithHttpInfo(contactListId, body, priority);
+             ApiResponse<List<DialerContact>> localVarResponse = PostContactlistsContactlistIdContactsWithHttpInfo(contactListId, body, priority, clearSystemData);
              return localVarResponse.Data;
         }
 
@@ -11691,8 +11696,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
+        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
-        public ApiResponse< List<DialerContact> > PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null)
+        public ApiResponse< List<DialerContact> > PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -11728,6 +11734,7 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
             if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
+            if (clearSystemData != null) localVarQueryParams.Add("clearSystemData", Configuration.ApiClient.ParameterToString(clearSystemData)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -11771,10 +11778,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
+        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
         /// <returns>Task of List&lt;DialerContact&gt;</returns>
-        public async System.Threading.Tasks.Task<List<DialerContact>> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null)
+        public async System.Threading.Tasks.Task<List<DialerContact>> PostContactlistsContactlistIdContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null)
         {
-             ApiResponse<List<DialerContact>> localVarResponse = await PostContactlistsContactlistIdContactsAsyncWithHttpInfo(contactListId, body, priority);
+             ApiResponse<List<DialerContact>> localVarResponse = await PostContactlistsContactlistIdContactsAsyncWithHttpInfo(contactListId, body, priority, clearSystemData);
              return localVarResponse.Data;
 
         }
@@ -11786,8 +11794,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
         /// <param name="priority">Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional)</param>
+        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -11823,6 +11832,7 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
             if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
+            if (clearSystemData != null) localVarQueryParams.Add("clearSystemData", Configuration.ApiClient.ParameterToString(clearSystemData)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter

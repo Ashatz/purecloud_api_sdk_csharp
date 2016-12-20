@@ -21,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetEmailDomainsDomainnameRoutes**](RoutingApi.html#getemaildomainsdomainnameroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
 | [**GetEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#getemaildomainsdomainnameroutesrouteid) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
 | [**GetEmailSetup**](RoutingApi.html#getemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
+| [**GetLanguages**](RoutingApi.html#getlanguages) | **GET** /api/v2/routing/languages | Get the list of supported languages. |
 | [**GetQueues**](RoutingApi.html#getqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
 | [**GetQueuesQueueId**](RoutingApi.html#getqueuesqueueid) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
 | [**GetQueuesQueueIdConversations**](RoutingApi.html#getqueuesqueueidconversations) | **GET** /api/v2/routing/queues/{queueId}/conversations | Get recent conversations that are still active |
@@ -41,6 +42,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchQueuesQueueIdUsersMemberId**](RoutingApi.html#patchqueuesqueueidusersmemberid) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number of joined status for a User in a Queue |
 | [**PostEmailDomains**](RoutingApi.html#postemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
 | [**PostEmailDomainsDomainnameRoutes**](RoutingApi.html#postemaildomainsdomainnameroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
+| [**PostLanguages**](RoutingApi.html#postlanguages) | **POST** /api/v2/routing/languages | Create Language |
 | [**PostQueues**](RoutingApi.html#postqueues) | **POST** /api/v2/routing/queues | Create queue |
 | [**PostQueuesObservationsQuery**](RoutingApi.html#postqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
 | [**PostQueuesQueueIdUsers**](RoutingApi.html#postqueuesqueueidusers) | **POST** /api/v2/routing/queues/{queueId}/users | Bulk add or delete up to 100 queue members |
@@ -841,6 +843,68 @@ This endpoint does require any parameters.
 ### Return type
 
 [**EmailSetup**](EmailSetup.html)
+
+<a name="getlanguages"></a>
+
+## [**LanguageEntityListing**](LanguageEntityListing.html) GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+
+Get the list of supported languages.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetLanguagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            var name = name_example;  // string | Name (optional) 
+
+            try
+            {
+                // Get the list of supported languages.
+                LanguageEntityListing result = apiInstance.GetLanguages(pageSize, pageNumber, sortOrder, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetLanguages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
+| **name** | **string**| Name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LanguageEntityListing**](LanguageEntityListing.html)
 
 <a name="getqueues"></a>
 
@@ -2030,6 +2094,62 @@ namespace Example
 ### Return type
 
 [**InboundRoute**](InboundRoute.html)
+
+<a name="postlanguages"></a>
+
+## [**Language**](Language.html) PostLanguages (Language body)
+
+Create Language
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostLanguagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new RoutingApi();
+            var body = new Language(); // Language | Language
+
+            try
+            {
+                // Create Language
+                Language result = apiInstance.PostLanguages(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostLanguages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**Language**](Language.html)| Language |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Language**](Language.html)
 
 <a name="postqueues"></a>
 

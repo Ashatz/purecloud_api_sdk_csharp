@@ -8,11 +8,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetAdherence**](WorkforceManagementApi.html#getadherence) | **GET** /api/v2/workforcemanagement/adherence | Get a list of UserScheduleAdherence records for the requested users |
+| [**GetDecisionsDownloadsDownloadId**](WorkforceManagementApi.html#getdecisionsdownloadsdownloadid) | **GET** /api/v2/workforcemanagement/decisions/downloads/{downloadId} | Get decisions download link |
 | [**GetManagementunitsMuIdUsersUserIdTimeoffrequests**](WorkforceManagementApi.html#getmanagementunitsmuidusersuseridtimeoffrequests) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests | Get a list of time off requests for any user |
 | [**GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId**](WorkforceManagementApi.html#getmanagementunitsmuidusersuseridtimeoffrequeststimeoffrequestid) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Get a time off request by id |
 | [**GetTimeoffrequests**](WorkforceManagementApi.html#gettimeoffrequests) | **GET** /api/v2/workforcemanagement/timeoffrequests | Get a list of time off requests for the current user |
 | [**GetTimeoffrequestsTimeoffrequestId**](WorkforceManagementApi.html#gettimeoffrequeststimeoffrequestid) | **GET** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user by id |
 | [**PatchTimeoffrequestsTimeoffrequestId**](WorkforceManagementApi.html#patchtimeoffrequeststimeoffrequestid) | **PATCH** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Mark a time off request for the current user as read or unread |
+| [**PostDecisionsDownloadsSearch**](WorkforceManagementApi.html#postdecisionsdownloadssearch) | **POST** /api/v2/workforcemanagement/decisions/downloads/search | Download decisions files metadata |
 | [**PostLongtermforecasts**](WorkforceManagementApi.html#postlongtermforecasts) | **POST** /api/v2/workforcemanagement/longtermforecasts | Create a forecast |
 {: class="table table-striped"}
 
@@ -71,6 +73,64 @@ namespace Example
 ### Return type
 
 [**UserScheduleAdherence**](UserScheduleAdherence.html)
+
+<a name="getdecisionsdownloadsdownloadid"></a>
+
+## [**DecisionsDownloadLink**](DecisionsDownloadLink.html) GetDecisionsDownloadsDownloadId (string downloadId, string downloadfilename = null)
+
+Get decisions download link
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetDecisionsDownloadsDownloadIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new WorkforceManagementApi();
+            var downloadId = downloadId_example;  // string | The decisions file download id
+            var downloadfilename = downloadfilename_example;  // string | The file name used to get the download url (optional)  (default to downloadfilename)
+
+            try
+            {
+                // Get decisions download link
+                DecisionsDownloadLink result = apiInstance.GetDecisionsDownloadsDownloadId(downloadId, downloadfilename);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetDecisionsDownloadsDownloadId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **downloadId** | **string**| The decisions file download id |  |
+| **downloadfilename** | **string**| The file name used to get the download url | [optional] [default to downloadfilename] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DecisionsDownloadLink**](DecisionsDownloadLink.html)
 
 <a name="getmanagementunitsmuidusersuseridtimeoffrequests"></a>
 
@@ -360,6 +420,62 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="postdecisionsdownloadssearch"></a>
+
+## [**DecisionsFileMetadataEntityListing**](DecisionsFileMetadataEntityListing.html) PostDecisionsDownloadsSearch (ForecastSearchRequest body)
+
+Download decisions files metadata
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostDecisionsDownloadsSearchExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new ForecastSearchRequest(); // ForecastSearchRequest | 
+
+            try
+            {
+                // Download decisions files metadata
+                DecisionsFileMetadataEntityListing result = apiInstance.PostDecisionsDownloadsSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostDecisionsDownloadsSearch: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ForecastSearchRequest**](ForecastSearchRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DecisionsFileMetadataEntityListing**](DecisionsFileMetadataEntityListing.html)
 
 <a name="postlongtermforecasts"></a>
 

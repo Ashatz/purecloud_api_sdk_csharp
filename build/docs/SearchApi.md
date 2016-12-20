@@ -11,11 +11,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSearch_0**](SearchApi.html#getsearch_0) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
 | [**GetSearch_1**](SearchApi.html#getsearch_1) | **GET** /api/v2/search | Search using the q64 value returned from a previous search. |
 | [**GetSearch_2**](SearchApi.html#getsearch_2) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
+| [**GetSearch_3**](SearchApi.html#getsearch_3) | **GET** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
 | [**GetSuggest**](SearchApi.html#getsuggest) | **GET** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
 | [**PostSearch**](SearchApi.html#postsearch) | **POST** /api/v2/groups/search | Search groups |
 | [**PostSearch_0**](SearchApi.html#postsearch_0) | **POST** /api/v2/locations/search | Search locations |
 | [**PostSearch_1**](SearchApi.html#postsearch_1) | **POST** /api/v2/search | Search resources. |
 | [**PostSearch_2**](SearchApi.html#postsearch_2) | **POST** /api/v2/users/search | Search users |
+| [**PostSearch_3**](SearchApi.html#postsearch_3) | **POST** /api/v2/voicemail/search | Search voicemails |
 | [**PostSuggest**](SearchApi.html#postsuggest) | **POST** /api/v2/search/suggest | Suggest resources. |
 {: class="table table-striped"}
 
@@ -163,7 +165,7 @@ namespace Example
 
             var apiInstance = new SearchApi();
             var q64 = q64_example;  // string | q64
-            var expand = new List<string>(); // List<string> | expand (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
             var profile = true;  // bool? | profile (optional)  (default to true)
 
             try
@@ -187,7 +189,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 | **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -253,9 +255,67 @@ namespace Example
 
 [**UsersSearchResponse**](UsersSearchResponse.html)
 
+<a name="getsearch_3"></a>
+
+## [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) GetSearch_3 (string q64, List<string> expand = null)
+
+Search voicemails using the q64 value returned from a previous search
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetSearch_3Example
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new SearchApi();
+            var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | expand (optional) 
+
+            try
+            {
+                // Search voicemails using the q64 value returned from a previous search
+                VoicemailsSearchResponse result = apiInstance.GetSearch_3(q64, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.GetSearch_3: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string.html)| expand | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailsSearchResponse**](VoicemailsSearchResponse.html)
+
 <a name="getsuggest"></a>
 
-## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64, bool? profile = null)
+## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSuggest (string q64, List<string> expand = null, bool? profile = null)
 
 Suggest resources using the q64 value returned from a previous suggest query.
 
@@ -281,12 +341,13 @@ namespace Example
 
             var apiInstance = new SearchApi();
             var q64 = q64_example;  // string | q64
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
             var profile = true;  // bool? | profile (optional)  (default to true)
 
             try
             {
                 // Suggest resources using the q64 value returned from a previous suggest query.
-                JsonNodeSearchResponse result = apiInstance.GetSuggest(q64, profile);
+                JsonNodeSearchResponse result = apiInstance.GetSuggest(q64, expand, profile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -304,6 +365,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
 | **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -536,6 +598,62 @@ namespace Example
 ### Return type
 
 [**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="postsearch_3"></a>
+
+## [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) PostSearch_3 (VoicemailSearchRequest body)
+
+Search voicemails
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostSearch_3Example
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new SearchApi();
+            var body = new VoicemailSearchRequest(); // VoicemailSearchRequest | Search request options
+
+            try
+            {
+                // Search voicemails
+                VoicemailsSearchResponse result = apiInstance.PostSearch_3(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostSearch_3: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**VoicemailSearchRequest**](VoicemailSearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailsSearchResponse**](VoicemailsSearchResponse.html)
 
 <a name="postsuggest"></a>
 

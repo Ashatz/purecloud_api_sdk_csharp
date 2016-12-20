@@ -851,7 +851,7 @@ namespace Example
 
 <a name="getprovidersedges"></a>
 
-## [**EdgeEntityListing**](EdgeEntityListing.html) GetProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null)
+## [**EdgeEntityListing**](EdgeEntityListing.html) GetProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
 
 Get the list of edges.
 
@@ -882,11 +882,12 @@ namespace Example
             var siteId = siteId_example;  // string | Filter by site.id (optional) 
             var edgeGroupId = edgeGroupId_example;  // string | Filter by edgeGroup.id (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            var managed = true;  // bool? | Filter by managed (optional) 
 
             try
             {
                 // Get the list of edges.
-                EdgeEntityListing result = apiInstance.GetProvidersEdges(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy);
+                EdgeEntityListing result = apiInstance.GetProvidersEdges(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -909,6 +910,7 @@ namespace Example
 | **siteId** | **string**| Filter by site.id | [optional]  |
 | **edgeGroupId** | **string**| Filter by edgeGroup.id | [optional]  |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **managed** | **bool?**| Filter by managed | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1945,7 +1947,7 @@ namespace Example
 
 <a name="getprovidersedgesedgegroups"></a>
 
-## [**EdgeGroupEntityListing**](EdgeGroupEntityListing.html) GetProvidersEdgesEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+## [**EdgeGroupEntityListing**](EdgeGroupEntityListing.html) GetProvidersEdgesEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
 
 Get the list of edge groups.
 
@@ -1974,11 +1976,12 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            var managed = true;  // bool? | Filter by managed (optional) 
 
             try
             {
                 // Get the list of edge groups.
-                EdgeGroupEntityListing result = apiInstance.GetProvidersEdgesEdgegroups(pageSize, pageNumber, name, sortBy);
+                EdgeGroupEntityListing result = apiInstance.GetProvidersEdgesEdgegroups(pageSize, pageNumber, name, sortBy, managed);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1999,6 +2002,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **managed** | **bool?**| Filter by managed | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3312,7 +3316,7 @@ namespace Example
 
 <a name="getprovidersedgessites"></a>
 
-## [**SiteEntityListing**](SiteEntityListing.html) GetProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null)
+## [**SiteEntityListing**](SiteEntityListing.html) GetProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
 
 Get the list of Sites.
 
@@ -3343,11 +3347,12 @@ namespace Example
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
             var name = name_example;  // string | Name (optional) 
             var locationId = locationId_example;  // string | Location Id (optional) 
+            var managed = true;  // bool? | Filter by managed (optional) 
 
             try
             {
                 // Get the list of Sites.
-                SiteEntityListing result = apiInstance.GetProvidersEdgesSites(pageSize, pageNumber, sortBy, sortOrder, name, locationId);
+                SiteEntityListing result = apiInstance.GetProvidersEdgesSites(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3370,6 +3375,7 @@ namespace Example
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
 | **name** | **string**| Name | [optional]  |
 | **locationId** | **string**| Location Id | [optional]  |
+| **managed** | **bool?**| Filter by managed | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3664,7 +3670,7 @@ namespace Example
 
 <a name="getprovidersedgestrunkbasesettings"></a>
 
-## [**TrunkBaseEntityListing**](TrunkBaseEntityListing.html) GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null)
+## [**TrunkBaseEntityListing**](TrunkBaseEntityListing.html) GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null)
 
 Get Trunk Base Settings listing
 
@@ -3694,12 +3700,14 @@ namespace Example
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
             var recordingEnabled = true;  // bool? | Filter trunks by recording enabled (optional) 
+            var ignoreHidden = true;  // bool? | Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional) 
+            var managed = true;  // bool? | Filter by managed (optional) 
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
 
             try
             {
                 // Get Trunk Base Settings listing
-                TrunkBaseEntityListing result = apiInstance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, expand);
+                TrunkBaseEntityListing result = apiInstance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, ignoreHidden, managed, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3721,6 +3729,8 @@ namespace Example
 | **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
 | **recordingEnabled** | **bool?**| Filter trunks by recording enabled | [optional]  |
+| **ignoreHidden** | **bool?**| Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. | [optional]  |
+| **managed** | **bool?**| Filter by managed | [optional]  |
 | **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
 {: class="table table-striped"}
 
@@ -3846,7 +3856,7 @@ namespace Example
 
 <a name="getprovidersedgestrunkbasesettingstrunkbasesettingsid"></a>
 
-## [**TrunkBase**](TrunkBase.html) GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId)
+## [**TrunkBase**](TrunkBase.html) GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, bool? ignoreHidden = null)
 
 Get a Trunk Base Settings object by ID
 
@@ -3872,11 +3882,12 @@ namespace Example
 
             var apiInstance = new TelephonyProvidersEdgeApi();
             var trunkBaseSettingsId = trunkBaseSettingsId_example;  // string | Trunk Base ID
+            var ignoreHidden = true;  // bool? | Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional) 
 
             try
             {
                 // Get a Trunk Base Settings object by ID
-                TrunkBase result = apiInstance.GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId(trunkBaseSettingsId);
+                TrunkBase result = apiInstance.GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId(trunkBaseSettingsId, ignoreHidden);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3894,6 +3905,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **trunkBaseSettingsId** | **string**| Trunk Base ID |  |
+| **ignoreHidden** | **bool?**| Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

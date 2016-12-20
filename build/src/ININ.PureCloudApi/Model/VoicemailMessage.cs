@@ -21,16 +21,14 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMessage" /> class.
         /// </summary>
-        /// <param name="Conversation">Conversation.</param>
-        /// <param name="Read">Read (default to false).</param>
-        /// <param name="AudioRecordingDurationSeconds">AudioRecordingDurationSeconds.</param>
-        /// <param name="AudioRecordingSizeBytes">AudioRecordingSizeBytes.</param>
-        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="CallerAddress">CallerAddress.</param>
-        /// <param name="CallerName">CallerName.</param>
-        /// <param name="CallerUser">CallerUser.</param>
-        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, long? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, User CallerUser = null)
+        /// <param name="Conversation">The conversation that the voicemail message is associated with.</param>
+        /// <param name="Read">Whether the voicemail message is marked as read (default to false).</param>
+        /// <param name="CallerUser">Optionally the user that left the voicemail message if the caller was a known user.</param>
+        /// <param name="Deleted">Whether the voicemail message has been marked as deleted (default to false).</param>
+        /// <param name="Note">An optional note.</param>
+        /// <param name="User">The user that the voicemail message belongs to or null which means the voicemail message belongs to a group.</param>
+        /// <param name="Group">The group that the voicemail message belongs to or null which means the voicemail message belongs to a user.</param>
+        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, User CallerUser = null, bool? Deleted = null, string Note = null, User User = null, Group Group = null)
         {
             this.Conversation = Conversation;
             // use default value if no "Read" provided
@@ -42,13 +40,19 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Read = Read;
             }
-            this.AudioRecordingDurationSeconds = AudioRecordingDurationSeconds;
-            this.AudioRecordingSizeBytes = AudioRecordingSizeBytes;
-            this.CreatedDate = CreatedDate;
-            this.ModifiedDate = ModifiedDate;
-            this.CallerAddress = CallerAddress;
-            this.CallerName = CallerName;
             this.CallerUser = CallerUser;
+            // use default value if no "Deleted" provided
+            if (Deleted == null)
+            {
+                this.Deleted = false;
+            }
+            else
+            {
+                this.Deleted = Deleted;
+            }
+            this.Note = Note;
+            this.User = User;
+            this.Group = Group;
         }
         
         /// <summary>
@@ -58,52 +62,83 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         /// <summary>
-        /// Gets or Sets Conversation
+        /// The conversation that the voicemail message is associated with
         /// </summary>
+        /// <value>The conversation that the voicemail message is associated with</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public Conversation Conversation { get; set; }
         /// <summary>
-        /// Gets or Sets Read
+        /// Whether the voicemail message is marked as read
         /// </summary>
+        /// <value>Whether the voicemail message is marked as read</value>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
         /// <summary>
-        /// Gets or Sets AudioRecordingDurationSeconds
+        /// The voicemail message&#39;s audio recording duration in seconds
         /// </summary>
+        /// <value>The voicemail message&#39;s audio recording duration in seconds</value>
         [DataMember(Name="audioRecordingDurationSeconds", EmitDefaultValue=false)]
-        public int? AudioRecordingDurationSeconds { get; set; }
+        public int? AudioRecordingDurationSeconds { get; private set; }
         /// <summary>
-        /// Gets or Sets AudioRecordingSizeBytes
+        /// The voicemail message&#39;s audio recording size in bytes
         /// </summary>
+        /// <value>The voicemail message&#39;s audio recording size in bytes</value>
         [DataMember(Name="audioRecordingSizeBytes", EmitDefaultValue=false)]
-        public long? AudioRecordingSizeBytes { get; set; }
+        public long? AudioRecordingSizeBytes { get; private set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date the voicemail message was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date the voicemail message was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
-        public DateTime? CreatedDate { get; set; }
+        public DateTime? CreatedDate { get; private set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date the voicemail message was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date the voicemail message was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
-        public DateTime? ModifiedDate { get; set; }
+        public DateTime? ModifiedDate { get; private set; }
         /// <summary>
-        /// Gets or Sets CallerAddress
+        /// The caller address
         /// </summary>
+        /// <value>The caller address</value>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
-        public string CallerAddress { get; set; }
+        public string CallerAddress { get; private set; }
         /// <summary>
-        /// Gets or Sets CallerName
+        /// Optionally the name of the caller that left the voicemail message if the caller was a known user
         /// </summary>
+        /// <value>Optionally the name of the caller that left the voicemail message if the caller was a known user</value>
         [DataMember(Name="callerName", EmitDefaultValue=false)]
-        public string CallerName { get; set; }
+        public string CallerName { get; private set; }
         /// <summary>
-        /// Gets or Sets CallerUser
+        /// Optionally the user that left the voicemail message if the caller was a known user
         /// </summary>
+        /// <value>Optionally the user that left the voicemail message if the caller was a known user</value>
         [DataMember(Name="callerUser", EmitDefaultValue=false)]
         public User CallerUser { get; set; }
+        /// <summary>
+        /// Whether the voicemail message has been marked as deleted
+        /// </summary>
+        /// <value>Whether the voicemail message has been marked as deleted</value>
+        [DataMember(Name="deleted", EmitDefaultValue=false)]
+        public bool? Deleted { get; set; }
+        /// <summary>
+        /// An optional note
+        /// </summary>
+        /// <value>An optional note</value>
+        [DataMember(Name="note", EmitDefaultValue=false)]
+        public string Note { get; set; }
+        /// <summary>
+        /// The user that the voicemail message belongs to or null which means the voicemail message belongs to a group
+        /// </summary>
+        /// <value>The user that the voicemail message belongs to or null which means the voicemail message belongs to a group</value>
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public User User { get; set; }
+        /// <summary>
+        /// The group that the voicemail message belongs to or null which means the voicemail message belongs to a user
+        /// </summary>
+        /// <value>The group that the voicemail message belongs to or null which means the voicemail message belongs to a user</value>
+        [DataMember(Name="group", EmitDefaultValue=false)]
+        public Group Group { get; set; }
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -128,6 +163,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
             sb.Append("  CallerUser: ").Append(CallerUser).Append("\n");
+            sb.Append("  Deleted: ").Append(Deleted).Append("\n");
+            sb.Append("  Note: ").Append(Note).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -216,6 +255,26 @@ namespace ININ.PureCloudApi.Model
                     this.CallerUser.Equals(other.CallerUser)
                 ) &&
                 (
+                    this.Deleted == other.Deleted ||
+                    this.Deleted != null &&
+                    this.Deleted.Equals(other.Deleted)
+                ) &&
+                (
+                    this.Note == other.Note ||
+                    this.Note != null &&
+                    this.Note.Equals(other.Note)
+                ) &&
+                (
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
+                ) &&
+                (
+                    this.Group == other.Group ||
+                    this.Group != null &&
+                    this.Group.Equals(other.Group)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -253,6 +312,14 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CallerName.GetHashCode();
                 if (this.CallerUser != null)
                     hash = hash * 59 + this.CallerUser.GetHashCode();
+                if (this.Deleted != null)
+                    hash = hash * 59 + this.Deleted.GetHashCode();
+                if (this.Note != null)
+                    hash = hash * 59 + this.Note.GetHashCode();
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
+                if (this.Group != null)
+                    hash = hash * 59 + this.Group.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

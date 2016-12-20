@@ -223,7 +223,8 @@ namespace ININ.PureCloudApi.Test
             string siteId = null; // TODO: replace null with proper value
             string edgeGroupId = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdges(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy);
+            bool? managed = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdges(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed);
             Assert.IsInstanceOf<EdgeEntityListing> (response, "response is EdgeEntityListing");
         }
         
@@ -467,7 +468,8 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesEdgegroups(pageSize, pageNumber, name, sortBy);
+            bool? managed = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesEdgegroups(pageSize, pageNumber, name, sortBy, managed);
             Assert.IsInstanceOf<EdgeGroupEntityListing> (response, "response is EdgeGroupEntityListing");
         }
         
@@ -786,7 +788,8 @@ namespace ININ.PureCloudApi.Test
             string sortOrder = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
             string locationId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesSites(pageSize, pageNumber, sortBy, sortOrder, name, locationId);
+            bool? managed = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesSites(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed);
             Assert.IsInstanceOf<SiteEntityListing> (response, "response is SiteEntityListing");
         }
         
@@ -865,8 +868,10 @@ namespace ININ.PureCloudApi.Test
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             bool? recordingEnabled = null; // TODO: replace null with proper value
+            bool? ignoreHidden = null; // TODO: replace null with proper value
+            bool? managed = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, expand);
+            var response = instance.GetProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, ignoreHidden, managed, expand);
             Assert.IsInstanceOf<TrunkBaseEntityListing> (response, "response is TrunkBaseEntityListing");
         }
         
@@ -904,7 +909,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId'
             string trunkBaseSettingsId = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId(trunkBaseSettingsId);
+            bool? ignoreHidden = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId(trunkBaseSettingsId, ignoreHidden);
             Assert.IsInstanceOf<TrunkBase> (response, "response is TrunkBase");
         }
         

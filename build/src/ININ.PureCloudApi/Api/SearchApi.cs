@@ -68,7 +68,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
-        /// <param name="expand">expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         JsonNodeSearchResponse GetSearch_1 (string q64, List<string> expand = null, bool? profile = null);
@@ -81,7 +81,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
-        /// <param name="expand">expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         ApiResponse<JsonNodeSearchResponse> GetSearch_1WithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
@@ -109,6 +109,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of UsersSearchResponse</returns>
         ApiResponse<UsersSearchResponse> GetSearch_2WithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>VoicemailsSearchResponse</returns>
+        VoicemailsSearchResponse GetSearch_3 (string q64, List<string> expand = null);
+
+        /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        ApiResponse<VoicemailsSearchResponse> GetSearch_3WithHttpInfo (string q64, List<string> expand = null);
+        /// <summary>
         /// Suggest resources using the q64 value returned from a previous suggest query.
         /// </summary>
         /// <remarks>
@@ -116,9 +139,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        JsonNodeSearchResponse GetSuggest (string q64, bool? profile = null);
+        JsonNodeSearchResponse GetSuggest (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
         /// Suggest resources using the q64 value returned from a previous suggest query.
@@ -128,9 +152,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        ApiResponse<JsonNodeSearchResponse> GetSuggestWithHttpInfo (string q64, bool? profile = null);
+        ApiResponse<JsonNodeSearchResponse> GetSuggestWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
         /// <summary>
         /// Search groups
         /// </summary>
@@ -218,6 +243,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of UsersSearchResponse</returns>
         ApiResponse<UsersSearchResponse> PostSearch_2WithHttpInfo (UserSearchRequest body);
         /// <summary>
+        /// Search voicemails
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>VoicemailsSearchResponse</returns>
+        VoicemailsSearchResponse PostSearch_3 (VoicemailSearchRequest body);
+
+        /// <summary>
+        /// Search voicemails
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        ApiResponse<VoicemailsSearchResponse> PostSearch_3WithHttpInfo (VoicemailSearchRequest body);
+        /// <summary>
         /// Suggest resources.
         /// </summary>
         /// <remarks>
@@ -296,7 +342,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
-        /// <param name="expand">expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearch_1Async (string q64, List<string> expand = null, bool? profile = null);
@@ -309,7 +355,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
-        /// <param name="expand">expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearch_1AsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
@@ -337,6 +383,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetSearch_2AsyncWithHttpInfo (string q64, List<string> expand = null);
         /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of VoicemailsSearchResponse</returns>
+        System.Threading.Tasks.Task<VoicemailsSearchResponse> GetSearch_3Async (string q64, List<string> expand = null);
+
+        /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetSearch_3AsyncWithHttpInfo (string q64, List<string> expand = null);
+        /// <summary>
         /// Suggest resources using the q64 value returned from a previous suggest query.
         /// </summary>
         /// <remarks>
@@ -344,9 +413,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64, bool? profile = null);
+        System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
         /// Suggest resources using the q64 value returned from a previous suggest query.
@@ -356,9 +426,10 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64, bool? profile = null);
+        System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
         /// <summary>
         /// Search groups
         /// </summary>
@@ -445,6 +516,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostSearch_2AsyncWithHttpInfo (UserSearchRequest body);
+        /// <summary>
+        /// Search voicemails
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of VoicemailsSearchResponse</returns>
+        System.Threading.Tasks.Task<VoicemailsSearchResponse> PostSearch_3Async (VoicemailSearchRequest body);
+
+        /// <summary>
+        /// Search voicemails
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostSearch_3AsyncWithHttpInfo (VoicemailSearchRequest body);
         /// <summary>
         /// Suggest resources.
         /// </summary>
@@ -889,7 +981,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
-        /// <param name="expand">expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
         public JsonNodeSearchResponse GetSearch_1 (string q64, List<string> expand = null, bool? profile = null)
@@ -903,7 +995,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
-        /// <param name="expand">expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         public ApiResponse< JsonNodeSearchResponse > GetSearch_1WithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
@@ -973,7 +1065,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
-        /// <param name="expand">expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearch_1Async (string q64, List<string> expand = null, bool? profile = null)
@@ -988,7 +1080,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
-        /// <param name="expand">expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearch_1AsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
@@ -1217,15 +1309,179 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>VoicemailsSearchResponse</returns>
+        public VoicemailsSearchResponse GetSearch_3 (string q64, List<string> expand = null)
+        {
+             ApiResponse<VoicemailsSearchResponse> localVarResponse = GetSearch_3WithHttpInfo(q64, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        public ApiResponse< VoicemailsSearchResponse > GetSearch_3WithHttpInfo (string q64, List<string> expand = null)
+        {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling SearchApi->GetSearch_3");
+
+            var localVarPath = "/api/v2/voicemail/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch_3: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
+            
+        }
+
+        /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of VoicemailsSearchResponse</returns>
+        public async System.Threading.Tasks.Task<VoicemailsSearchResponse> GetSearch_3Async (string q64, List<string> expand = null)
+        {
+             ApiResponse<VoicemailsSearchResponse> localVarResponse = await GetSearch_3AsyncWithHttpInfo(q64, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetSearch_3AsyncWithHttpInfo (string q64, List<string> expand = null)
+        {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling SearchApi->GetSearch_3");
+
+            var localVarPath = "/api/v2/voicemail/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch_3: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
+            
+        }
+
+        /// <summary>
         /// Suggest resources using the q64 value returned from a previous suggest query. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
-        public JsonNodeSearchResponse GetSuggest (string q64, bool? profile = null)
+        public JsonNodeSearchResponse GetSuggest (string q64, List<string> expand = null, bool? profile = null)
         {
-             ApiResponse<JsonNodeSearchResponse> localVarResponse = GetSuggestWithHttpInfo(q64, profile);
+             ApiResponse<JsonNodeSearchResponse> localVarResponse = GetSuggestWithHttpInfo(q64, expand, profile);
              return localVarResponse.Data;
         }
 
@@ -1234,9 +1490,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
-        public ApiResponse< JsonNodeSearchResponse > GetSuggestWithHttpInfo (string q64, bool? profile = null)
+        public ApiResponse< JsonNodeSearchResponse > GetSuggestWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         {
             // verify the required parameter 'q64' is set
             if (q64 == null)
@@ -1268,6 +1525,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (profile != null) localVarQueryParams.Add("profile", Configuration.ApiClient.ParameterToString(profile)); // query parameter
 
             // authentication (PureCloud Auth) required
@@ -1302,11 +1560,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
-        public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64, bool? profile = null)
+        public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSuggestAsync (string q64, List<string> expand = null, bool? profile = null)
         {
-             ApiResponse<JsonNodeSearchResponse> localVarResponse = await GetSuggestAsyncWithHttpInfo(q64, profile);
+             ApiResponse<JsonNodeSearchResponse> localVarResponse = await GetSuggestAsyncWithHttpInfo(q64, expand, profile);
              return localVarResponse.Data;
 
         }
@@ -1316,9 +1575,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
+        /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64, bool? profile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSuggestAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         {
             // verify the required parameter 'q64' is set
             if (q64 == null)
@@ -1350,6 +1610,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (profile != null) localVarQueryParams.Add("profile", Configuration.ApiClient.ParameterToString(profile)); // query parameter
 
             // authentication (PureCloud Auth) required
@@ -2066,6 +2327,177 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<UsersSearchResponse>(localVarStatusCode,
                 localVarHeaders,
                 (UsersSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersSearchResponse)));
+            
+        }
+
+        /// <summary>
+        /// Search voicemails 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>VoicemailsSearchResponse</returns>
+        public VoicemailsSearchResponse PostSearch_3 (VoicemailSearchRequest body)
+        {
+             ApiResponse<VoicemailsSearchResponse> localVarResponse = PostSearch_3WithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search voicemails 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        public ApiResponse< VoicemailsSearchResponse > PostSearch_3WithHttpInfo (VoicemailSearchRequest body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSearch_3");
+
+            var localVarPath = "/api/v2/voicemail/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch_3: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
+            
+        }
+
+        /// <summary>
+        /// Search voicemails 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of VoicemailsSearchResponse</returns>
+        public async System.Threading.Tasks.Task<VoicemailsSearchResponse> PostSearch_3Async (VoicemailSearchRequest body)
+        {
+             ApiResponse<VoicemailsSearchResponse> localVarResponse = await PostSearch_3AsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search voicemails 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostSearch_3AsyncWithHttpInfo (VoicemailSearchRequest body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostSearch_3");
+
+            var localVarPath = "/api/v2/voicemail/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch_3: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
             
         }
 

@@ -302,8 +302,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id (optional)</param>
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>EdgeEntityListing</returns>
-        EdgeEntityListing GetProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null);
+        EdgeEntityListing GetProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null);
 
         /// <summary>
         /// Get the list of edges.
@@ -318,8 +319,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id (optional)</param>
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>ApiResponse of EdgeEntityListing</returns>
-        ApiResponse<EdgeEntityListing> GetProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null);
+        ApiResponse<EdgeEntityListing> GetProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null);
         /// <summary>
         /// Get the list of available languages.
         /// </summary>
@@ -735,8 +737,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>EdgeGroupEntityListing</returns>
-        EdgeGroupEntityListing GetProvidersEdgesEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        EdgeGroupEntityListing GetProvidersEdgesEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null);
 
         /// <summary>
         /// Get the list of edge groups.
@@ -749,8 +752,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>ApiResponse of EdgeGroupEntityListing</returns>
-        ApiResponse<EdgeGroupEntityListing> GetProvidersEdgesEdgegroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        ApiResponse<EdgeGroupEntityListing> GetProvidersEdgesEdgegroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null);
         /// <summary>
         /// Get edge group.
         /// </summary>
@@ -1302,8 +1306,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>SiteEntityListing</returns>
-        SiteEntityListing GetProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null);
+        SiteEntityListing GetProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
 
         /// <summary>
         /// Get the list of Sites.
@@ -1318,8 +1323,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>ApiResponse of SiteEntityListing</returns>
-        ApiResponse<SiteEntityListing> GetProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null);
+        ApiResponse<SiteEntityListing> GetProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
         /// <summary>
         /// Get a Site by ID.
         /// </summary>
@@ -1443,9 +1449,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>TrunkBaseEntityListing</returns>
-        TrunkBaseEntityListing GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null);
+        TrunkBaseEntityListing GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null);
 
         /// <summary>
         /// Get Trunk Base Settings listing
@@ -1459,9 +1467,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of TrunkBaseEntityListing</returns>
-        ApiResponse<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null);
+        ApiResponse<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null);
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
         /// </summary>
@@ -1516,8 +1526,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>TrunkBase</returns>
-        TrunkBase GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId);
+        TrunkBase GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, bool? ignoreHidden = null);
 
         /// <summary>
         /// Get a Trunk Base Settings object by ID
@@ -1527,8 +1538,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        ApiResponse<TrunkBase> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId);
+        ApiResponse<TrunkBase> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId, bool? ignoreHidden = null);
         /// <summary>
         /// Get the list of available trunks.
         /// </summary>
@@ -2869,8 +2881,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id (optional)</param>
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of EdgeEntityListing</returns>
-        System.Threading.Tasks.Task<EdgeEntityListing> GetProvidersEdgesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null);
+        System.Threading.Tasks.Task<EdgeEntityListing> GetProvidersEdgesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null);
 
         /// <summary>
         /// Get the list of edges.
@@ -2885,8 +2898,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id (optional)</param>
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of ApiResponse (EdgeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null);
         /// <summary>
         /// Get the list of available languages.
         /// </summary>
@@ -3302,8 +3316,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of EdgeGroupEntityListing</returns>
-        System.Threading.Tasks.Task<EdgeGroupEntityListing> GetProvidersEdgesEdgegroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        System.Threading.Tasks.Task<EdgeGroupEntityListing> GetProvidersEdgesEdgegroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null);
 
         /// <summary>
         /// Get the list of edge groups.
@@ -3316,8 +3331,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of ApiResponse (EdgeGroupEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetProvidersEdgesEdgegroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetProvidersEdgesEdgegroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null);
         /// <summary>
         /// Get edge group.
         /// </summary>
@@ -3869,8 +3885,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of SiteEntityListing</returns>
-        System.Threading.Tasks.Task<SiteEntityListing> GetProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null);
+        System.Threading.Tasks.Task<SiteEntityListing> GetProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
 
         /// <summary>
         /// Get the list of Sites.
@@ -3885,8 +3902,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of ApiResponse (SiteEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null);
+        System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
         /// <summary>
         /// Get a Site by ID.
         /// </summary>
@@ -4010,9 +4028,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of TrunkBaseEntityListing</returns>
-        System.Threading.Tasks.Task<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null);
+        System.Threading.Tasks.Task<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null);
 
         /// <summary>
         /// Get Trunk Base Settings listing
@@ -4026,9 +4046,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBaseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null);
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
         /// </summary>
@@ -4083,8 +4105,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>Task of TrunkBase</returns>
-        System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId);
+        System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId, bool? ignoreHidden = null);
 
         /// <summary>
         /// Get a Trunk Base Settings object by ID
@@ -4094,8 +4117,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId, bool? ignoreHidden = null);
         /// <summary>
         /// Get the list of available trunks.
         /// </summary>
@@ -7297,10 +7321,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id (optional)</param>
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>EdgeEntityListing</returns>
-        public EdgeEntityListing GetProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null)
+        public EdgeEntityListing GetProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
         {
-             ApiResponse<EdgeEntityListing> localVarResponse = GetProvidersEdgesWithHttpInfo(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy);
+             ApiResponse<EdgeEntityListing> localVarResponse = GetProvidersEdgesWithHttpInfo(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed);
              return localVarResponse.Data;
         }
 
@@ -7314,8 +7339,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id (optional)</param>
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>ApiResponse of EdgeEntityListing</returns>
-        public ApiResponse< EdgeEntityListing > GetProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null)
+        public ApiResponse< EdgeEntityListing > GetProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges";
@@ -7349,6 +7375,7 @@ namespace ININ.PureCloudApi.Api
             if (siteId != null) localVarQueryParams.Add("site.id", Configuration.ApiClient.ParameterToString(siteId)); // query parameter
             if (edgeGroupId != null) localVarQueryParams.Add("edgeGroup.id", Configuration.ApiClient.ParameterToString(edgeGroupId)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (managed != null) localVarQueryParams.Add("managed", Configuration.ApiClient.ParameterToString(managed)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -7387,10 +7414,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id (optional)</param>
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of EdgeEntityListing</returns>
-        public async System.Threading.Tasks.Task<EdgeEntityListing> GetProvidersEdgesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<EdgeEntityListing> GetProvidersEdgesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
         {
-             ApiResponse<EdgeEntityListing> localVarResponse = await GetProvidersEdgesAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy);
+             ApiResponse<EdgeEntityListing> localVarResponse = await GetProvidersEdgesAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed);
              return localVarResponse.Data;
 
         }
@@ -7405,8 +7433,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id (optional)</param>
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of ApiResponse (EdgeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges";
@@ -7440,6 +7469,7 @@ namespace ININ.PureCloudApi.Api
             if (siteId != null) localVarQueryParams.Add("site.id", Configuration.ApiClient.ParameterToString(siteId)); // query parameter
             if (edgeGroupId != null) localVarQueryParams.Add("edgeGroup.id", Configuration.ApiClient.ParameterToString(edgeGroupId)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (managed != null) localVarQueryParams.Add("managed", Configuration.ApiClient.ParameterToString(managed)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10380,10 +10410,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>EdgeGroupEntityListing</returns>
-        public EdgeGroupEntityListing GetProvidersEdgesEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public EdgeGroupEntityListing GetProvidersEdgesEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
         {
-             ApiResponse<EdgeGroupEntityListing> localVarResponse = GetProvidersEdgesEdgegroupsWithHttpInfo(pageSize, pageNumber, name, sortBy);
+             ApiResponse<EdgeGroupEntityListing> localVarResponse = GetProvidersEdgesEdgegroupsWithHttpInfo(pageSize, pageNumber, name, sortBy, managed);
              return localVarResponse.Data;
         }
 
@@ -10395,8 +10426,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>ApiResponse of EdgeGroupEntityListing</returns>
-        public ApiResponse< EdgeGroupEntityListing > GetProvidersEdgesEdgegroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public ApiResponse< EdgeGroupEntityListing > GetProvidersEdgesEdgegroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/edgegroups";
@@ -10428,6 +10460,7 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (managed != null) localVarQueryParams.Add("managed", Configuration.ApiClient.ParameterToString(managed)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -10464,10 +10497,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of EdgeGroupEntityListing</returns>
-        public async System.Threading.Tasks.Task<EdgeGroupEntityListing> GetProvidersEdgesEdgegroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<EdgeGroupEntityListing> GetProvidersEdgesEdgegroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
         {
-             ApiResponse<EdgeGroupEntityListing> localVarResponse = await GetProvidersEdgesEdgegroupsAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy);
+             ApiResponse<EdgeGroupEntityListing> localVarResponse = await GetProvidersEdgesEdgegroupsAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy, managed);
              return localVarResponse.Data;
 
         }
@@ -10480,8 +10514,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of ApiResponse (EdgeGroupEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetProvidersEdgesEdgegroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetProvidersEdgesEdgegroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/edgegroups";
@@ -10513,6 +10548,7 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (managed != null) localVarQueryParams.Add("managed", Configuration.ApiClient.ParameterToString(managed)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -14173,10 +14209,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>SiteEntityListing</returns>
-        public SiteEntityListing GetProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null)
+        public SiteEntityListing GetProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
         {
-             ApiResponse<SiteEntityListing> localVarResponse = GetProvidersEdgesSitesWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, locationId);
+             ApiResponse<SiteEntityListing> localVarResponse = GetProvidersEdgesSitesWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed);
              return localVarResponse.Data;
         }
 
@@ -14190,8 +14227,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>ApiResponse of SiteEntityListing</returns>
-        public ApiResponse< SiteEntityListing > GetProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null)
+        public ApiResponse< SiteEntityListing > GetProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/sites";
@@ -14225,6 +14263,7 @@ namespace ININ.PureCloudApi.Api
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (locationId != null) localVarQueryParams.Add("location.id", Configuration.ApiClient.ParameterToString(locationId)); // query parameter
+            if (managed != null) localVarQueryParams.Add("managed", Configuration.ApiClient.ParameterToString(managed)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -14263,10 +14302,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of SiteEntityListing</returns>
-        public async System.Threading.Tasks.Task<SiteEntityListing> GetProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null)
+        public async System.Threading.Tasks.Task<SiteEntityListing> GetProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
         {
-             ApiResponse<SiteEntityListing> localVarResponse = await GetProvidersEdgesSitesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, locationId);
+             ApiResponse<SiteEntityListing> localVarResponse = await GetProvidersEdgesSitesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed);
              return localVarResponse.Data;
 
         }
@@ -14281,8 +14321,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <returns>Task of ApiResponse (SiteEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/sites";
@@ -14316,6 +14357,7 @@ namespace ININ.PureCloudApi.Api
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (locationId != null) localVarQueryParams.Add("location.id", Configuration.ApiClient.ParameterToString(locationId)); // query parameter
+            if (managed != null) localVarQueryParams.Add("managed", Configuration.ApiClient.ParameterToString(managed)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -15156,11 +15198,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>TrunkBaseEntityListing</returns>
-        public TrunkBaseEntityListing GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null)
+        public TrunkBaseEntityListing GetProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null)
         {
-             ApiResponse<TrunkBaseEntityListing> localVarResponse = GetProvidersEdgesTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, expand);
+             ApiResponse<TrunkBaseEntityListing> localVarResponse = GetProvidersEdgesTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, ignoreHidden, managed, expand);
              return localVarResponse.Data;
         }
 
@@ -15173,9 +15217,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of TrunkBaseEntityListing</returns>
-        public ApiResponse< TrunkBaseEntityListing > GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null)
+        public ApiResponse< TrunkBaseEntityListing > GetProvidersEdgesTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
@@ -15208,6 +15254,8 @@ namespace ININ.PureCloudApi.Api
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (recordingEnabled != null) localVarQueryParams.Add("recordingEnabled", Configuration.ApiClient.ParameterToString(recordingEnabled)); // query parameter
+            if (ignoreHidden != null) localVarQueryParams.Add("ignoreHidden", Configuration.ApiClient.ParameterToString(ignoreHidden)); // query parameter
+            if (managed != null) localVarQueryParams.Add("managed", Configuration.ApiClient.ParameterToString(managed)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
@@ -15246,11 +15294,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of TrunkBaseEntityListing</returns>
-        public async System.Threading.Tasks.Task<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<TrunkBaseEntityListing> GetProvidersEdgesTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null)
         {
-             ApiResponse<TrunkBaseEntityListing> localVarResponse = await GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, expand);
+             ApiResponse<TrunkBaseEntityListing> localVarResponse = await GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, ignoreHidden, managed, expand);
              return localVarResponse.Data;
 
         }
@@ -15264,9 +15314,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
         /// <param name="recordingEnabled">Filter trunks by recording enabled (optional)</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
+        /// <param name="managed">Filter by managed (optional)</param>
         /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBaseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
@@ -15299,6 +15351,8 @@ namespace ININ.PureCloudApi.Api
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (recordingEnabled != null) localVarQueryParams.Add("recordingEnabled", Configuration.ApiClient.ParameterToString(recordingEnabled)); // query parameter
+            if (ignoreHidden != null) localVarQueryParams.Add("ignoreHidden", Configuration.ApiClient.ParameterToString(ignoreHidden)); // query parameter
+            if (managed != null) localVarQueryParams.Add("managed", Configuration.ApiClient.ParameterToString(managed)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
@@ -15653,10 +15707,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>TrunkBase</returns>
-        public TrunkBase GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId)
+        public TrunkBase GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, bool? ignoreHidden = null)
         {
-             ApiResponse<TrunkBase> localVarResponse = GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo(trunkBaseSettingsId);
+             ApiResponse<TrunkBase> localVarResponse = GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo(trunkBaseSettingsId, ignoreHidden);
              return localVarResponse.Data;
         }
 
@@ -15665,8 +15720,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        public ApiResponse< TrunkBase > GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId)
+        public ApiResponse< TrunkBase > GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId, bool? ignoreHidden = null)
         {
             // verify the required parameter 'trunkBaseSettingsId' is set
             if (trunkBaseSettingsId == null)
@@ -15698,6 +15754,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (trunkBaseSettingsId != null) localVarPathParams.Add("trunkBaseSettingsId", Configuration.ApiClient.ParameterToString(trunkBaseSettingsId)); // path parameter
+            if (ignoreHidden != null) localVarQueryParams.Add("ignoreHidden", Configuration.ApiClient.ParameterToString(ignoreHidden)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -15731,10 +15788,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>Task of TrunkBase</returns>
-        public async System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId)
+        public async System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId, bool? ignoreHidden = null)
         {
-             ApiResponse<TrunkBase> localVarResponse = await GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo(trunkBaseSettingsId);
+             ApiResponse<TrunkBase> localVarResponse = await GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo(trunkBaseSettingsId, ignoreHidden);
              return localVarResponse.Data;
 
         }
@@ -15744,8 +15802,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
+        /// <param name="ignoreHidden">Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional)</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgesTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId, bool? ignoreHidden = null)
         {
             // verify the required parameter 'trunkBaseSettingsId' is set
             if (trunkBaseSettingsId == null)
@@ -15777,6 +15836,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (trunkBaseSettingsId != null) localVarPathParams.Add("trunkBaseSettingsId", Configuration.ApiClient.ParameterToString(trunkBaseSettingsId)); // path parameter
+            if (ignoreHidden != null) localVarQueryParams.Add("ignoreHidden", Configuration.ApiClient.ParameterToString(ignoreHidden)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

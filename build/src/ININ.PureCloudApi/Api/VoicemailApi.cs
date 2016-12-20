@@ -55,7 +55,74 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteMessagesMessageIdWithHttpInfo (string messageId);
         /// <summary>
-        /// Get mailbox information
+        /// Get the group&#39;s mailbox information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">groupId</param>
+        /// <returns>VoicemailMailboxInfo</returns>
+        VoicemailMailboxInfo GetGroupsGroupIdMailbox (string groupId);
+
+        /// <summary>
+        /// Get the group&#39;s mailbox information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">groupId</param>
+        /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
+        ApiResponse<VoicemailMailboxInfo> GetGroupsGroupIdMailboxWithHttpInfo (string groupId);
+        /// <summary>
+        /// List voicemail messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>VoicemailMessageEntityListing</returns>
+        VoicemailMessageEntityListing GetGroupsGroupIdMessages (string groupId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// List voicemail messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
+        ApiResponse<VoicemailMessageEntityListing> GetGroupsGroupIdMessagesWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get a group&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>VoicemailGroupPolicy</returns>
+        VoicemailGroupPolicy GetGroupsGroupIdPolicy (string groupId);
+
+        /// <summary>
+        /// Get a group&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
+        ApiResponse<VoicemailGroupPolicy> GetGroupsGroupIdPolicyWithHttpInfo (string groupId);
+        /// <summary>
+        /// Get the current user&#39;s mailbox information
         /// </summary>
         /// <remarks>
         /// 
@@ -65,7 +132,7 @@ namespace ININ.PureCloudApi.Api
         VoicemailMailboxInfo GetMailbox ();
 
         /// <summary>
-        /// Get mailbox information
+        /// Get the current user&#39;s mailbox information
         /// </summary>
         /// <remarks>
         /// 
@@ -74,14 +141,35 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
         ApiResponse<VoicemailMailboxInfo> GetMailboxWithHttpInfo ();
         /// <summary>
+        /// Get the current user&#39;s mailbox information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>VoicemailMailboxInfo</returns>
+        VoicemailMailboxInfo GetMeMailbox ();
+
+        /// <summary>
+        /// Get the current user&#39;s mailbox information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
+        ApiResponse<VoicemailMailboxInfo> GetMeMailboxWithHttpInfo ();
+        /// <summary>
         /// List voicemail messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
-        VoicemailMessageEntityListing GetMessages ();
+        VoicemailMessageEntityListing GetMeMessages (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// List voicemail messages
@@ -90,8 +178,50 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
-        ApiResponse<VoicemailMessageEntityListing> GetMessagesWithHttpInfo ();
+        ApiResponse<VoicemailMessageEntityListing> GetMeMessagesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get the current user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>VoicemailUserPolicy</returns>
+        VoicemailUserPolicy GetMePolicy ();
+
+        /// <summary>
+        /// Get the current user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of VoicemailUserPolicy</returns>
+        ApiResponse<VoicemailUserPolicy> GetMePolicyWithHttpInfo ();
+        /// <summary>
+        /// List voicemail messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <returns>VoicemailMessageEntityListing</returns>
+        VoicemailMessageEntityListing GetMessages (string ids = null);
+
+        /// <summary>
+        /// List voicemail messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
+        ApiResponse<VoicemailMessageEntityListing> GetMessagesWithHttpInfo (string ids = null);
         /// <summary>
         /// Get message.
         /// </summary>
@@ -156,6 +286,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
         ApiResponse<VoicemailOrganizationPolicy> GetPolicyWithHttpInfo ();
         /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>VoicemailsSearchResponse</returns>
+        VoicemailsSearchResponse GetSearch (string q64, List<string> expand = null);
+
+        /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        ApiResponse<VoicemailsSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null);
+        /// <summary>
         /// Get a user&#39;s voicemail policy
         /// </summary>
         /// <remarks>
@@ -176,6 +329,50 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         ApiResponse<VoicemailUserPolicy> GetUserpoliciesUserIdWithHttpInfo (string userId);
+        /// <summary>
+        /// Update a group&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The group&#39;s voicemail policy</param>
+        /// <returns>VoicemailGroupPolicy</returns>
+        VoicemailGroupPolicy PatchGroupsGroupIdPolicy (string groupId, VoicemailGroupPolicy body);
+
+        /// <summary>
+        /// Update a group&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The group&#39;s voicemail policy</param>
+        /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
+        ApiResponse<VoicemailGroupPolicy> PatchGroupsGroupIdPolicyWithHttpInfo (string groupId, VoicemailGroupPolicy body);
+        /// <summary>
+        /// Update the current user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The user&#39;s voicemail policy</param>
+        /// <returns>VoicemailUserPolicy</returns>
+        VoicemailUserPolicy PatchMePolicy (VoicemailUserPolicy body);
+
+        /// <summary>
+        /// Update the current user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The user&#39;s voicemail policy</param>
+        /// <returns>ApiResponse of VoicemailUserPolicy</returns>
+        ApiResponse<VoicemailUserPolicy> PatchMePolicyWithHttpInfo (VoicemailUserPolicy body);
         /// <summary>
         /// Update a user&#39;s voicemail policy
         /// </summary>
@@ -199,6 +396,48 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         ApiResponse<VoicemailUserPolicy> PatchUserpoliciesUserIdWithHttpInfo (string userId, VoicemailUserPolicy body);
+        /// <summary>
+        /// Copy a voicemail message to a user or group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>VoicemailMessage</returns>
+        VoicemailMessage PostMessages (CopyVoicemailMessage body = null);
+
+        /// <summary>
+        /// Copy a voicemail message to a user or group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of VoicemailMessage</returns>
+        ApiResponse<VoicemailMessage> PostMessagesWithHttpInfo (CopyVoicemailMessage body = null);
+        /// <summary>
+        /// Search voicemails
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>VoicemailsSearchResponse</returns>
+        VoicemailsSearchResponse PostSearch (VoicemailSearchRequest body);
+
+        /// <summary>
+        /// Search voicemails
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        ApiResponse<VoicemailsSearchResponse> PostSearchWithHttpInfo (VoicemailSearchRequest body);
         /// <summary>
         /// Update a message.
         /// </summary>
@@ -286,7 +525,74 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteMessagesMessageIdAsyncWithHttpInfo (string messageId);
         /// <summary>
-        /// Get mailbox information
+        /// Get the group&#39;s mailbox information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">groupId</param>
+        /// <returns>Task of VoicemailMailboxInfo</returns>
+        System.Threading.Tasks.Task<VoicemailMailboxInfo> GetGroupsGroupIdMailboxAsync (string groupId);
+
+        /// <summary>
+        /// Get the group&#39;s mailbox information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">groupId</param>
+        /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetGroupsGroupIdMailboxAsyncWithHttpInfo (string groupId);
+        /// <summary>
+        /// List voicemail messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of VoicemailMessageEntityListing</returns>
+        System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetGroupsGroupIdMessagesAsync (string groupId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// List voicemail messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetGroupsGroupIdMessagesAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get a group&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of VoicemailGroupPolicy</returns>
+        System.Threading.Tasks.Task<VoicemailGroupPolicy> GetGroupsGroupIdPolicyAsync (string groupId);
+
+        /// <summary>
+        /// Get a group&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> GetGroupsGroupIdPolicyAsyncWithHttpInfo (string groupId);
+        /// <summary>
+        /// Get the current user&#39;s mailbox information
         /// </summary>
         /// <remarks>
         /// 
@@ -296,7 +602,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<VoicemailMailboxInfo> GetMailboxAsync ();
 
         /// <summary>
-        /// Get mailbox information
+        /// Get the current user&#39;s mailbox information
         /// </summary>
         /// <remarks>
         /// 
@@ -305,14 +611,35 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetMailboxAsyncWithHttpInfo ();
         /// <summary>
+        /// Get the current user&#39;s mailbox information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of VoicemailMailboxInfo</returns>
+        System.Threading.Tasks.Task<VoicemailMailboxInfo> GetMeMailboxAsync ();
+
+        /// <summary>
+        /// Get the current user&#39;s mailbox information
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetMeMailboxAsyncWithHttpInfo ();
+        /// <summary>
         /// List voicemail messages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
-        System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMessagesAsync ();
+        System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMeMessagesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// List voicemail messages
@@ -321,8 +648,50 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMessagesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMeMessagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Get the current user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of VoicemailUserPolicy</returns>
+        System.Threading.Tasks.Task<VoicemailUserPolicy> GetMePolicyAsync ();
+
+        /// <summary>
+        /// Get the current user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetMePolicyAsyncWithHttpInfo ();
+        /// <summary>
+        /// List voicemail messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <returns>Task of VoicemailMessageEntityListing</returns>
+        System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMessagesAsync (string ids = null);
+
+        /// <summary>
+        /// List voicemail messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMessagesAsyncWithHttpInfo (string ids = null);
         /// <summary>
         /// Get message.
         /// </summary>
@@ -387,6 +756,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetPolicyAsyncWithHttpInfo ();
         /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of VoicemailsSearchResponse</returns>
+        System.Threading.Tasks.Task<VoicemailsSearchResponse> GetSearchAsync (string q64, List<string> expand = null);
+
+        /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
+        /// <summary>
         /// Get a user&#39;s voicemail policy
         /// </summary>
         /// <remarks>
@@ -407,6 +799,50 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetUserpoliciesUserIdAsyncWithHttpInfo (string userId);
+        /// <summary>
+        /// Update a group&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The group&#39;s voicemail policy</param>
+        /// <returns>Task of VoicemailGroupPolicy</returns>
+        System.Threading.Tasks.Task<VoicemailGroupPolicy> PatchGroupsGroupIdPolicyAsync (string groupId, VoicemailGroupPolicy body);
+
+        /// <summary>
+        /// Update a group&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The group&#39;s voicemail policy</param>
+        /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> PatchGroupsGroupIdPolicyAsyncWithHttpInfo (string groupId, VoicemailGroupPolicy body);
+        /// <summary>
+        /// Update the current user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The user&#39;s voicemail policy</param>
+        /// <returns>Task of VoicemailUserPolicy</returns>
+        System.Threading.Tasks.Task<VoicemailUserPolicy> PatchMePolicyAsync (VoicemailUserPolicy body);
+
+        /// <summary>
+        /// Update the current user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The user&#39;s voicemail policy</param>
+        /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchMePolicyAsyncWithHttpInfo (VoicemailUserPolicy body);
         /// <summary>
         /// Update a user&#39;s voicemail policy
         /// </summary>
@@ -430,6 +866,48 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchUserpoliciesUserIdAsyncWithHttpInfo (string userId, VoicemailUserPolicy body);
+        /// <summary>
+        /// Copy a voicemail message to a user or group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of VoicemailMessage</returns>
+        System.Threading.Tasks.Task<VoicemailMessage> PostMessagesAsync (CopyVoicemailMessage body = null);
+
+        /// <summary>
+        /// Copy a voicemail message to a user or group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PostMessagesAsyncWithHttpInfo (CopyVoicemailMessage body = null);
+        /// <summary>
+        /// Search voicemails
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of VoicemailsSearchResponse</returns>
+        System.Threading.Tasks.Task<VoicemailsSearchResponse> PostSearchAsync (VoicemailSearchRequest body);
+
+        /// <summary>
+        /// Search voicemails
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostSearchAsyncWithHttpInfo (VoicemailSearchRequest body);
         /// <summary>
         /// Update a message.
         /// </summary>
@@ -867,7 +1345,490 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get mailbox information 
+        /// Get the group&#39;s mailbox information 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">groupId</param>
+        /// <returns>VoicemailMailboxInfo</returns>
+        public VoicemailMailboxInfo GetGroupsGroupIdMailbox (string groupId)
+        {
+             ApiResponse<VoicemailMailboxInfo> localVarResponse = GetGroupsGroupIdMailboxWithHttpInfo(groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the group&#39;s mailbox information 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">groupId</param>
+        /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
+        public ApiResponse< VoicemailMailboxInfo > GetGroupsGroupIdMailboxWithHttpInfo (string groupId)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetGroupsGroupIdMailbox");
+
+            var localVarPath = "/api/v2/voicemail/groups/{groupId}/mailbox";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdMailbox: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdMailbox: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMailboxInfo>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMailboxInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)));
+            
+        }
+
+        /// <summary>
+        /// Get the group&#39;s mailbox information 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">groupId</param>
+        /// <returns>Task of VoicemailMailboxInfo</returns>
+        public async System.Threading.Tasks.Task<VoicemailMailboxInfo> GetGroupsGroupIdMailboxAsync (string groupId)
+        {
+             ApiResponse<VoicemailMailboxInfo> localVarResponse = await GetGroupsGroupIdMailboxAsyncWithHttpInfo(groupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the group&#39;s mailbox information 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">groupId</param>
+        /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetGroupsGroupIdMailboxAsyncWithHttpInfo (string groupId)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetGroupsGroupIdMailbox");
+
+            var localVarPath = "/api/v2/voicemail/groups/{groupId}/mailbox";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdMailbox: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdMailbox: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMailboxInfo>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMailboxInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)));
+            
+        }
+
+        /// <summary>
+        /// List voicemail messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>VoicemailMessageEntityListing</returns>
+        public VoicemailMessageEntityListing GetGroupsGroupIdMessages (string groupId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<VoicemailMessageEntityListing> localVarResponse = GetGroupsGroupIdMessagesWithHttpInfo(groupId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List voicemail messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
+        public ApiResponse< VoicemailMessageEntityListing > GetGroupsGroupIdMessagesWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetGroupsGroupIdMessages");
+
+            var localVarPath = "/api/v2/voicemail/groups/{groupId}/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMessageEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// List voicemail messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of VoicemailMessageEntityListing</returns>
+        public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetGroupsGroupIdMessagesAsync (string groupId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<VoicemailMessageEntityListing> localVarResponse = await GetGroupsGroupIdMessagesAsyncWithHttpInfo(groupId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List voicemail messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetGroupsGroupIdMessagesAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetGroupsGroupIdMessages");
+
+            var localVarPath = "/api/v2/voicemail/groups/{groupId}/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMessageEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get a group&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>VoicemailGroupPolicy</returns>
+        public VoicemailGroupPolicy GetGroupsGroupIdPolicy (string groupId)
+        {
+             ApiResponse<VoicemailGroupPolicy> localVarResponse = GetGroupsGroupIdPolicyWithHttpInfo(groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a group&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
+        public ApiResponse< VoicemailGroupPolicy > GetGroupsGroupIdPolicyWithHttpInfo (string groupId)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetGroupsGroupIdPolicy");
+
+            var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdPolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailGroupPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailGroupPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)));
+            
+        }
+
+        /// <summary>
+        /// Get a group&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of VoicemailGroupPolicy</returns>
+        public async System.Threading.Tasks.Task<VoicemailGroupPolicy> GetGroupsGroupIdPolicyAsync (string groupId)
+        {
+             ApiResponse<VoicemailGroupPolicy> localVarResponse = await GetGroupsGroupIdPolicyAsyncWithHttpInfo(groupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a group&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> GetGroupsGroupIdPolicyAsyncWithHttpInfo (string groupId)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetGroupsGroupIdPolicy");
+
+            var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdPolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupsGroupIdPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailGroupPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailGroupPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)));
+            
+        }
+
+        /// <summary>
+        /// Get the current user&#39;s mailbox information 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VoicemailMailboxInfo</returns>
@@ -878,7 +1839,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get mailbox information 
+        /// Get the current user&#39;s mailbox information 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
@@ -939,7 +1900,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get mailbox information 
+        /// Get the current user&#39;s mailbox information 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of VoicemailMailboxInfo</returns>
@@ -951,7 +1912,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get mailbox information 
+        /// Get the current user&#39;s mailbox information 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
@@ -1012,25 +1973,25 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// List voicemail messages 
+        /// Get the current user&#39;s mailbox information 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>VoicemailMessageEntityListing</returns>
-        public VoicemailMessageEntityListing GetMessages ()
+        /// <returns>VoicemailMailboxInfo</returns>
+        public VoicemailMailboxInfo GetMeMailbox ()
         {
-             ApiResponse<VoicemailMessageEntityListing> localVarResponse = GetMessagesWithHttpInfo();
+             ApiResponse<VoicemailMailboxInfo> localVarResponse = GetMeMailboxWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List voicemail messages 
+        /// Get the current user&#39;s mailbox information 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
-        public ApiResponse< VoicemailMessageEntityListing > GetMessagesWithHttpInfo ()
+        /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
+        public ApiResponse< VoicemailMailboxInfo > GetMeMailboxWithHttpInfo ()
         {
 
-            var localVarPath = "/api/v2/voicemail/messages";
+            var localVarPath = "/api/v2/voicemail/me/mailbox";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1073,9 +2034,160 @@ namespace ININ.PureCloudApi.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetMeMailbox: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetMeMailbox: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMailboxInfo>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMailboxInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)));
+            
+        }
+
+        /// <summary>
+        /// Get the current user&#39;s mailbox information 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of VoicemailMailboxInfo</returns>
+        public async System.Threading.Tasks.Task<VoicemailMailboxInfo> GetMeMailboxAsync ()
+        {
+             ApiResponse<VoicemailMailboxInfo> localVarResponse = await GetMeMailboxAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the current user&#39;s mailbox information 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetMeMailboxAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/voicemail/me/mailbox";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetMeMailbox: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetMeMailbox: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMailboxInfo>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMailboxInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMailboxInfo)));
+            
+        }
+
+        /// <summary>
+        /// List voicemail messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>VoicemailMessageEntityListing</returns>
+        public VoicemailMessageEntityListing GetMeMessages (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<VoicemailMessageEntityListing> localVarResponse = GetMeMessagesWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List voicemail messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
+        public ApiResponse< VoicemailMessageEntityListing > GetMeMessagesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        {
+
+            var localVarPath = "/api/v2/voicemail/me/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetMeMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetMeMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
@@ -1087,10 +2199,12 @@ namespace ININ.PureCloudApi.Api
         /// List voicemail messages 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
-        public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMessagesAsync ()
+        public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMeMessagesAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<VoicemailMessageEntityListing> localVarResponse = await GetMessagesAsyncWithHttpInfo();
+             ApiResponse<VoicemailMessageEntityListing> localVarResponse = await GetMeMessagesAsyncWithHttpInfo(pageSize, pageNumber);
              return localVarResponse.Data;
 
         }
@@ -1099,8 +2213,231 @@ namespace ININ.PureCloudApi.Api
         /// List voicemail messages 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMessagesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMeMessagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        {
+
+            var localVarPath = "/api/v2/voicemail/me/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetMeMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetMeMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMessageEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the current user&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>VoicemailUserPolicy</returns>
+        public VoicemailUserPolicy GetMePolicy ()
+        {
+             ApiResponse<VoicemailUserPolicy> localVarResponse = GetMePolicyWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the current user&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of VoicemailUserPolicy</returns>
+        public ApiResponse< VoicemailUserPolicy > GetMePolicyWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/voicemail/me/policy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetMePolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetMePolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailUserPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
+            
+        }
+
+        /// <summary>
+        /// Get the current user&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of VoicemailUserPolicy</returns>
+        public async System.Threading.Tasks.Task<VoicemailUserPolicy> GetMePolicyAsync ()
+        {
+             ApiResponse<VoicemailUserPolicy> localVarResponse = await GetMePolicyAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the current user&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetMePolicyAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/v2/voicemail/me/policy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetMePolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetMePolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailUserPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
+            
+        }
+
+        /// <summary>
+        /// List voicemail messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <returns>VoicemailMessageEntityListing</returns>
+        public VoicemailMessageEntityListing GetMessages (string ids = null)
+        {
+             ApiResponse<VoicemailMessageEntityListing> localVarResponse = GetMessagesWithHttpInfo(ids);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List voicemail messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
+        public ApiResponse< VoicemailMessageEntityListing > GetMessagesWithHttpInfo (string ids = null)
         {
 
             var localVarPath = "/api/v2/voicemail/messages";
@@ -1128,6 +2465,83 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMessageEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMessageEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessageEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// List voicemail messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <returns>Task of VoicemailMessageEntityListing</returns>
+        public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMessagesAsync (string ids = null)
+        {
+             ApiResponse<VoicemailMessageEntityListing> localVarResponse = await GetMessagesAsyncWithHttpInfo(ids);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List voicemail messages 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMessagesAsyncWithHttpInfo (string ids = null)
+        {
+
+            var localVarPath = "/api/v2/voicemail/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1622,6 +3036,169 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>VoicemailsSearchResponse</returns>
+        public VoicemailsSearchResponse GetSearch (string q64, List<string> expand = null)
+        {
+             ApiResponse<VoicemailsSearchResponse> localVarResponse = GetSearchWithHttpInfo(q64, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        public ApiResponse< VoicemailsSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null)
+        {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling VoicemailApi->GetSearch");
+
+            var localVarPath = "/api/v2/voicemail/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
+            
+        }
+
+        /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of VoicemailsSearchResponse</returns>
+        public async System.Threading.Tasks.Task<VoicemailsSearchResponse> GetSearchAsync (string q64, List<string> expand = null)
+        {
+             ApiResponse<VoicemailsSearchResponse> localVarResponse = await GetSearchAsyncWithHttpInfo(q64, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search voicemails using the q64 value returned from a previous search 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q64">q64</param>
+        /// <param name="expand">expand (optional)</param>
+        /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
+        {
+            // verify the required parameter 'q64' is set
+            if (q64 == null)
+                throw new ApiException(400, "Missing required parameter 'q64' when calling VoicemailApi->GetSearch");
+
+            var localVarPath = "/api/v2/voicemail/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
+            
+        }
+
+        /// <summary>
         /// Get a user&#39;s voicemail policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1771,6 +3348,360 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException (localVarStatusCode, "Error calling GetUserpoliciesUserId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUserpoliciesUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailUserPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
+            
+        }
+
+        /// <summary>
+        /// Update a group&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The group&#39;s voicemail policy</param>
+        /// <returns>VoicemailGroupPolicy</returns>
+        public VoicemailGroupPolicy PatchGroupsGroupIdPolicy (string groupId, VoicemailGroupPolicy body)
+        {
+             ApiResponse<VoicemailGroupPolicy> localVarResponse = PatchGroupsGroupIdPolicyWithHttpInfo(groupId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a group&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The group&#39;s voicemail policy</param>
+        /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
+        public ApiResponse< VoicemailGroupPolicy > PatchGroupsGroupIdPolicyWithHttpInfo (string groupId, VoicemailGroupPolicy body)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->PatchGroupsGroupIdPolicy");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchGroupsGroupIdPolicy");
+
+            var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchGroupsGroupIdPolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchGroupsGroupIdPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailGroupPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailGroupPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)));
+            
+        }
+
+        /// <summary>
+        /// Update a group&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The group&#39;s voicemail policy</param>
+        /// <returns>Task of VoicemailGroupPolicy</returns>
+        public async System.Threading.Tasks.Task<VoicemailGroupPolicy> PatchGroupsGroupIdPolicyAsync (string groupId, VoicemailGroupPolicy body)
+        {
+             ApiResponse<VoicemailGroupPolicy> localVarResponse = await PatchGroupsGroupIdPolicyAsyncWithHttpInfo(groupId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a group&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The group&#39;s voicemail policy</param>
+        /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> PatchGroupsGroupIdPolicyAsyncWithHttpInfo (string groupId, VoicemailGroupPolicy body)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->PatchGroupsGroupIdPolicy");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchGroupsGroupIdPolicy");
+
+            var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchGroupsGroupIdPolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchGroupsGroupIdPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailGroupPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailGroupPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailGroupPolicy)));
+            
+        }
+
+        /// <summary>
+        /// Update the current user&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The user&#39;s voicemail policy</param>
+        /// <returns>VoicemailUserPolicy</returns>
+        public VoicemailUserPolicy PatchMePolicy (VoicemailUserPolicy body)
+        {
+             ApiResponse<VoicemailUserPolicy> localVarResponse = PatchMePolicyWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the current user&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The user&#39;s voicemail policy</param>
+        /// <returns>ApiResponse of VoicemailUserPolicy</returns>
+        public ApiResponse< VoicemailUserPolicy > PatchMePolicyWithHttpInfo (VoicemailUserPolicy body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchMePolicy");
+
+            var localVarPath = "/api/v2/voicemail/me/policy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchMePolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchMePolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailUserPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
+            
+        }
+
+        /// <summary>
+        /// Update the current user&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The user&#39;s voicemail policy</param>
+        /// <returns>Task of VoicemailUserPolicy</returns>
+        public async System.Threading.Tasks.Task<VoicemailUserPolicy> PatchMePolicyAsync (VoicemailUserPolicy body)
+        {
+             ApiResponse<VoicemailUserPolicy> localVarResponse = await PatchMePolicyAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the current user&#39;s voicemail policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The user&#39;s voicemail policy</param>
+        /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchMePolicyAsyncWithHttpInfo (VoicemailUserPolicy body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchMePolicy");
+
+            var localVarPath = "/api/v2/voicemail/me/policy";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchMePolicy: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchMePolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarHeaders,
@@ -1958,6 +3889,342 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarHeaders,
                 (VoicemailUserPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
+            
+        }
+
+        /// <summary>
+        /// Copy a voicemail message to a user or group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>VoicemailMessage</returns>
+        public VoicemailMessage PostMessages (CopyVoicemailMessage body = null)
+        {
+             ApiResponse<VoicemailMessage> localVarResponse = PostMessagesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Copy a voicemail message to a user or group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of VoicemailMessage</returns>
+        public ApiResponse< VoicemailMessage > PostMessagesWithHttpInfo (CopyVoicemailMessage body = null)
+        {
+
+            var localVarPath = "/api/v2/voicemail/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMessage>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
+            
+        }
+
+        /// <summary>
+        /// Copy a voicemail message to a user or group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of VoicemailMessage</returns>
+        public async System.Threading.Tasks.Task<VoicemailMessage> PostMessagesAsync (CopyVoicemailMessage body = null)
+        {
+             ApiResponse<VoicemailMessage> localVarResponse = await PostMessagesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Copy a voicemail message to a user or group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PostMessagesAsyncWithHttpInfo (CopyVoicemailMessage body = null)
+        {
+
+            var localVarPath = "/api/v2/voicemail/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostMessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMessage>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
+            
+        }
+
+        /// <summary>
+        /// Search voicemails 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>VoicemailsSearchResponse</returns>
+        public VoicemailsSearchResponse PostSearch (VoicemailSearchRequest body)
+        {
+             ApiResponse<VoicemailsSearchResponse> localVarResponse = PostSearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search voicemails 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        public ApiResponse< VoicemailsSearchResponse > PostSearchWithHttpInfo (VoicemailSearchRequest body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PostSearch");
+
+            var localVarPath = "/api/v2/voicemail/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
+            
+        }
+
+        /// <summary>
+        /// Search voicemails 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of VoicemailsSearchResponse</returns>
+        public async System.Threading.Tasks.Task<VoicemailsSearchResponse> PostSearchAsync (VoicemailSearchRequest body)
+        {
+             ApiResponse<VoicemailsSearchResponse> localVarResponse = await PostSearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search voicemails 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostSearchAsyncWithHttpInfo (VoicemailSearchRequest body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PostSearch");
+
+            var localVarPath = "/api/v2/voicemail/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailsSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailsSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailsSearchResponse)));
             
         }
 

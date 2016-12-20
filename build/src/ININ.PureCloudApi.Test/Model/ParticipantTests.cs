@@ -187,6 +187,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Ani'
         }
         /// <summary>
+        /// Test the property 'AniName'
+        /// </summary>
+        [Test]
+        public void AniNameTest()
+        {
+            // TODO: unit test for the property 'AniName'
+        }
+        /// <summary>
         /// Test the property 'Dnis'
         /// </summary>
         [Test]

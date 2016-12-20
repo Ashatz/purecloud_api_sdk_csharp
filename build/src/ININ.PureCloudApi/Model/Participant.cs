@@ -83,6 +83,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConsultParticipantId">If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred..</param>
         /// <param name="Address">The address for the this participant. For a phone call this will be the ANI..</param>
         /// <param name="Ani">The address for the this participant. For a phone call this will be the ANI..</param>
+        /// <param name="AniName">The ani-based name for this participant..</param>
         /// <param name="Dnis">The address for the this participant. For a phone call this will be the ANI..</param>
         /// <param name="Locale">An ISO 639 language code specifying the locale for this participant.</param>
         /// <param name="WrapupRequired">True iff this participant is required to enter wrapup for this conversation. (default to false).</param>
@@ -101,7 +102,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
         /// <param name="Evaluations">Evaluations.</param>
-        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
+        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -120,6 +121,7 @@ namespace ININ.PureCloudApi.Model
             this.ConsultParticipantId = ConsultParticipantId;
             this.Address = Address;
             this.Ani = Ani;
+            this.AniName = AniName;
             this.Dnis = Dnis;
             this.Locale = Locale;
             // use default value if no "WrapupRequired" provided
@@ -259,6 +261,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
         /// <summary>
+        /// The ani-based name for this participant.
+        /// </summary>
+        /// <value>The ani-based name for this participant.</value>
+        [DataMember(Name="aniName", EmitDefaultValue=false)]
+        public string AniName { get; set; }
+        /// <summary>
         /// The address for the this participant. For a phone call this will be the ANI.
         /// </summary>
         /// <value>The address for the this participant. For a phone call this will be the ANI.</value>
@@ -376,6 +384,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Ani: ").Append(Ani).Append("\n");
+            sb.Append("  AniName: ").Append(AniName).Append("\n");
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
@@ -516,6 +525,11 @@ namespace ININ.PureCloudApi.Model
                     this.Ani.Equals(other.Ani)
                 ) &&
                 (
+                    this.AniName == other.AniName ||
+                    this.AniName != null &&
+                    this.AniName.Equals(other.AniName)
+                ) &&
+                (
                     this.Dnis == other.Dnis ||
                     this.Dnis != null &&
                     this.Dnis.Equals(other.Dnis)
@@ -652,6 +666,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Address.GetHashCode();
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
+                if (this.AniName != null)
+                    hash = hash * 59 + this.AniName.GetHashCode();
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
                 if (this.Locale != null)

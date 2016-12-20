@@ -723,7 +723,8 @@ namespace ININ.PureCloudApi.Test
             string contactListId = null; // TODO: replace null with proper value
             List<DialerContact> body = null; // TODO: replace null with proper value
             bool? priority = null; // TODO: replace null with proper value
-            var response = instance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
+            bool? clearSystemData = null; // TODO: replace null with proper value
+            var response = instance.PostContactlistsContactlistIdContacts(contactListId, body, priority, clearSystemData);
             Assert.IsInstanceOf<List<DialerContact>> (response, "response is List<DialerContact>");
         }
         

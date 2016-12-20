@@ -227,6 +227,22 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'WebRtcUser'
         }
         /// <summary>
+        /// Test the property 'PrimaryEdge'
+        /// </summary>
+        [Test]
+        public void PrimaryEdgeTest()
+        {
+            // TODO: unit test for the property 'PrimaryEdge'
+        }
+        /// <summary>
+        /// Test the property 'SecondaryEdge'
+        /// </summary>
+        [Test]
+        public void SecondaryEdgeTest()
+        {
+            // TODO: unit test for the property 'SecondaryEdge'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

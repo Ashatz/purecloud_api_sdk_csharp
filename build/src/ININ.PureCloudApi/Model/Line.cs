@@ -78,8 +78,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Template">Template.</param>
         /// <param name="Site">Site.</param>
         /// <param name="LineBaseSettings">LineBaseSettings.</param>
-        /// <param name="PrimaryEdge">PrimaryEdge.</param>
-        /// <param name="SecondaryEdge">SecondaryEdge.</param>
+        /// <param name="PrimaryEdge">The primary edge associated to the line. (Deprecated).</param>
+        /// <param name="SecondaryEdge">The secondary edge associated to the line. (Deprecated).</param>
         /// <param name="LoggedInUser">LoggedInUser.</param>
         /// <param name="DefaultForUser">DefaultForUser.</param>
         public Line(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, Object> Properties = null, UriReference EdgeGroup = null, UriReference Template = null, UriReference Site = null, UriReference LineBaseSettings = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null, UriReference LoggedInUser = null, UriReference DefaultForUser = null)
@@ -193,13 +193,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="lineBaseSettings", EmitDefaultValue=false)]
         public UriReference LineBaseSettings { get; set; }
         /// <summary>
-        /// Gets or Sets PrimaryEdge
+        /// The primary edge associated to the line. (Deprecated)
         /// </summary>
+        /// <value>The primary edge associated to the line. (Deprecated)</value>
         [DataMember(Name="primaryEdge", EmitDefaultValue=false)]
         public Edge PrimaryEdge { get; set; }
         /// <summary>
-        /// Gets or Sets SecondaryEdge
+        /// The secondary edge associated to the line. (Deprecated)
         /// </summary>
+        /// <value>The secondary edge associated to the line. (Deprecated)</value>
         [DataMember(Name="secondaryEdge", EmitDefaultValue=false)]
         public Edge SecondaryEdge { get; set; }
         /// <summary>

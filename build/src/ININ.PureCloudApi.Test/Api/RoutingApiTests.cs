@@ -228,6 +228,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetLanguages
+        /// </summary>
+        [Test]
+        public void GetLanguagesTest()
+        {
+            // TODO: add unit test for the method 'GetLanguages'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            var response = instance.GetLanguages(pageSize, pageNumber, sortOrder, name);
+            Assert.IsInstanceOf<LanguageEntityListing> (response, "response is LanguageEntityListing");
+        }
+        
+        /// <summary>
         /// Test GetQueues
         /// </summary>
         [Test]
@@ -501,6 +516,18 @@ namespace ININ.PureCloudApi.Test
             InboundRoute body = null; // TODO: replace null with proper value
             var response = instance.PostEmailDomainsDomainnameRoutes(domainName, body);
             Assert.IsInstanceOf<InboundRoute> (response, "response is InboundRoute");
+        }
+        
+        /// <summary>
+        /// Test PostLanguages
+        /// </summary>
+        [Test]
+        public void PostLanguagesTest()
+        {
+            // TODO: add unit test for the method 'PostLanguages'
+            Language body = null; // TODO: replace null with proper value
+            var response = instance.PostLanguages(body);
+            Assert.IsInstanceOf<Language> (response, "response is Language");
         }
         
         /// <summary>

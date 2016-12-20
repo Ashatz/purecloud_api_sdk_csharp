@@ -36,6 +36,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of UserScheduleAdherence</returns>
         ApiResponse<UserScheduleAdherence> GetAdherenceWithHttpInfo (List<string> userId);
         /// <summary>
+        /// Get decisions download link
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">The decisions file download id</param>
+        /// <param name="downloadfilename">The file name used to get the download url (optional, default to downloadfilename)</param>
+        /// <returns>DecisionsDownloadLink</returns>
+        DecisionsDownloadLink GetDecisionsDownloadsDownloadId (string downloadId, string downloadfilename = null);
+
+        /// <summary>
+        /// Get decisions download link
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">The decisions file download id</param>
+        /// <param name="downloadfilename">The file name used to get the download url (optional, default to downloadfilename)</param>
+        /// <returns>ApiResponse of DecisionsDownloadLink</returns>
+        ApiResponse<DecisionsDownloadLink> GetDecisionsDownloadsDownloadIdWithHttpInfo (string downloadId, string downloadfilename = null);
+        /// <summary>
         /// Get a list of time off requests for any user
         /// </summary>
         /// <remarks>
@@ -151,6 +174,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchTimeoffrequestsTimeoffrequestIdWithHttpInfo (string timeOffRequestId, TimeOffRequestPatch body = null);
         /// <summary>
+        /// Download decisions files metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>DecisionsFileMetadataEntityListing</returns>
+        DecisionsFileMetadataEntityListing PostDecisionsDownloadsSearch (ForecastSearchRequest body);
+
+        /// <summary>
+        /// Download decisions files metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of DecisionsFileMetadataEntityListing</returns>
+        ApiResponse<DecisionsFileMetadataEntityListing> PostDecisionsDownloadsSearchWithHttpInfo (ForecastSearchRequest body);
+        /// <summary>
         /// Create a forecast
         /// </summary>
         /// <remarks>
@@ -194,6 +238,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request</param>
         /// <returns>Task of ApiResponse (UserScheduleAdherence)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserScheduleAdherence>> GetAdherenceAsyncWithHttpInfo (List<string> userId);
+        /// <summary>
+        /// Get decisions download link
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">The decisions file download id</param>
+        /// <param name="downloadfilename">The file name used to get the download url (optional, default to downloadfilename)</param>
+        /// <returns>Task of DecisionsDownloadLink</returns>
+        System.Threading.Tasks.Task<DecisionsDownloadLink> GetDecisionsDownloadsDownloadIdAsync (string downloadId, string downloadfilename = null);
+
+        /// <summary>
+        /// Get decisions download link
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">The decisions file download id</param>
+        /// <param name="downloadfilename">The file name used to get the download url (optional, default to downloadfilename)</param>
+        /// <returns>Task of ApiResponse (DecisionsDownloadLink)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DecisionsDownloadLink>> GetDecisionsDownloadsDownloadIdAsyncWithHttpInfo (string downloadId, string downloadfilename = null);
         /// <summary>
         /// Get a list of time off requests for any user
         /// </summary>
@@ -309,6 +376,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchTimeoffrequestsTimeoffrequestIdAsyncWithHttpInfo (string timeOffRequestId, TimeOffRequestPatch body = null);
+        /// <summary>
+        /// Download decisions files metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of DecisionsFileMetadataEntityListing</returns>
+        System.Threading.Tasks.Task<DecisionsFileMetadataEntityListing> PostDecisionsDownloadsSearchAsync (ForecastSearchRequest body);
+
+        /// <summary>
+        /// Download decisions files metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (DecisionsFileMetadataEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DecisionsFileMetadataEntityListing>> PostDecisionsDownloadsSearchAsyncWithHttpInfo (ForecastSearchRequest body);
         /// <summary>
         /// Create a forecast
         /// </summary>
@@ -574,6 +662,169 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<UserScheduleAdherence>(localVarStatusCode,
                 localVarHeaders,
                 (UserScheduleAdherence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleAdherence)));
+            
+        }
+
+        /// <summary>
+        /// Get decisions download link 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">The decisions file download id</param>
+        /// <param name="downloadfilename">The file name used to get the download url (optional, default to downloadfilename)</param>
+        /// <returns>DecisionsDownloadLink</returns>
+        public DecisionsDownloadLink GetDecisionsDownloadsDownloadId (string downloadId, string downloadfilename = null)
+        {
+             ApiResponse<DecisionsDownloadLink> localVarResponse = GetDecisionsDownloadsDownloadIdWithHttpInfo(downloadId, downloadfilename);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get decisions download link 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">The decisions file download id</param>
+        /// <param name="downloadfilename">The file name used to get the download url (optional, default to downloadfilename)</param>
+        /// <returns>ApiResponse of DecisionsDownloadLink</returns>
+        public ApiResponse< DecisionsDownloadLink > GetDecisionsDownloadsDownloadIdWithHttpInfo (string downloadId, string downloadfilename = null)
+        {
+            // verify the required parameter 'downloadId' is set
+            if (downloadId == null)
+                throw new ApiException(400, "Missing required parameter 'downloadId' when calling WorkforceManagementApi->GetDecisionsDownloadsDownloadId");
+
+            var localVarPath = "/api/v2/workforcemanagement/decisions/downloads/{downloadId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (downloadId != null) localVarPathParams.Add("downloadId", Configuration.ApiClient.ParameterToString(downloadId)); // path parameter
+            if (downloadfilename != null) localVarQueryParams.Add("downloadfilename", Configuration.ApiClient.ParameterToString(downloadfilename)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetDecisionsDownloadsDownloadId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDecisionsDownloadsDownloadId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionsDownloadLink>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionsDownloadLink) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionsDownloadLink)));
+            
+        }
+
+        /// <summary>
+        /// Get decisions download link 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">The decisions file download id</param>
+        /// <param name="downloadfilename">The file name used to get the download url (optional, default to downloadfilename)</param>
+        /// <returns>Task of DecisionsDownloadLink</returns>
+        public async System.Threading.Tasks.Task<DecisionsDownloadLink> GetDecisionsDownloadsDownloadIdAsync (string downloadId, string downloadfilename = null)
+        {
+             ApiResponse<DecisionsDownloadLink> localVarResponse = await GetDecisionsDownloadsDownloadIdAsyncWithHttpInfo(downloadId, downloadfilename);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get decisions download link 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="downloadId">The decisions file download id</param>
+        /// <param name="downloadfilename">The file name used to get the download url (optional, default to downloadfilename)</param>
+        /// <returns>Task of ApiResponse (DecisionsDownloadLink)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionsDownloadLink>> GetDecisionsDownloadsDownloadIdAsyncWithHttpInfo (string downloadId, string downloadfilename = null)
+        {
+            // verify the required parameter 'downloadId' is set
+            if (downloadId == null)
+                throw new ApiException(400, "Missing required parameter 'downloadId' when calling WorkforceManagementApi->GetDecisionsDownloadsDownloadId");
+
+            var localVarPath = "/api/v2/workforcemanagement/decisions/downloads/{downloadId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (downloadId != null) localVarPathParams.Add("downloadId", Configuration.ApiClient.ParameterToString(downloadId)); // path parameter
+            if (downloadfilename != null) localVarQueryParams.Add("downloadfilename", Configuration.ApiClient.ParameterToString(downloadfilename)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetDecisionsDownloadsDownloadId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDecisionsDownloadsDownloadId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionsDownloadLink>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionsDownloadLink) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionsDownloadLink)));
             
         }
 
@@ -1414,6 +1665,177 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null);
+        }
+
+        /// <summary>
+        /// Download decisions files metadata 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>DecisionsFileMetadataEntityListing</returns>
+        public DecisionsFileMetadataEntityListing PostDecisionsDownloadsSearch (ForecastSearchRequest body)
+        {
+             ApiResponse<DecisionsFileMetadataEntityListing> localVarResponse = PostDecisionsDownloadsSearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download decisions files metadata 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of DecisionsFileMetadataEntityListing</returns>
+        public ApiResponse< DecisionsFileMetadataEntityListing > PostDecisionsDownloadsSearchWithHttpInfo (ForecastSearchRequest body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostDecisionsDownloadsSearch");
+
+            var localVarPath = "/api/v2/workforcemanagement/decisions/downloads/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostDecisionsDownloadsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostDecisionsDownloadsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionsFileMetadataEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionsFileMetadataEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionsFileMetadataEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Download decisions files metadata 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of DecisionsFileMetadataEntityListing</returns>
+        public async System.Threading.Tasks.Task<DecisionsFileMetadataEntityListing> PostDecisionsDownloadsSearchAsync (ForecastSearchRequest body)
+        {
+             ApiResponse<DecisionsFileMetadataEntityListing> localVarResponse = await PostDecisionsDownloadsSearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Download decisions files metadata 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (DecisionsFileMetadataEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionsFileMetadataEntityListing>> PostDecisionsDownloadsSearchAsyncWithHttpInfo (ForecastSearchRequest body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostDecisionsDownloadsSearch");
+
+            var localVarPath = "/api/v2/workforcemanagement/decisions/downloads/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostDecisionsDownloadsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostDecisionsDownloadsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionsFileMetadataEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionsFileMetadataEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionsFileMetadataEntityListing)));
+            
         }
 
         /// <summary>

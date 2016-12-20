@@ -75,8 +75,9 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetSuggest'
             string q64 = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
             bool? profile = null; // TODO: replace null with proper value
-            var response = instance.GetSuggest(q64, profile);
+            var response = instance.GetSuggest(q64, expand, profile);
             Assert.IsInstanceOf<JsonNodeSearchResponse> (response, "response is JsonNodeSearchResponse");
         }
         

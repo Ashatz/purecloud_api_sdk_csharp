@@ -29,6 +29,8 @@ title: Phone
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Capabilities** | [**PhoneCapabilities**](PhoneCapabilities.html) |  | [optional] |
 | **WebRtcUser** | [**UriReference**](UriReference.html) | This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones. | [optional] |
+| **PrimaryEdge** | [**Edge**](Edge.html) |  | [optional] |
+| **SecondaryEdge** | [**Edge**](Edge.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

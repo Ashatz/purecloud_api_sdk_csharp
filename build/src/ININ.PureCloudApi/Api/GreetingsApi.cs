@@ -122,6 +122,52 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of DomainEntityListing</returns>
         ApiResponse<DomainEntityListing> GetGreetingsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         /// <summary>
+        /// Get a list of the Group&#39;s Greetings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>GreetingListing</returns>
+        GreetingListing GetGroupIdGreetings (string groupId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a list of the Group&#39;s Greetings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of GreetingListing</returns>
+        ApiResponse<GreetingListing> GetGroupIdGreetingsWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Grabs the list of Default Greetings given a Group&#39;s ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>DefaultGreetingList</returns>
+        DefaultGreetingList GetGroupIdGreetingsDefaults (string groupId);
+
+        /// <summary>
+        /// Grabs the list of Default Greetings given a Group&#39;s ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>ApiResponse of DefaultGreetingList</returns>
+        ApiResponse<DefaultGreetingList> GetGroupIdGreetingsDefaultsWithHttpInfo (string groupId);
+        /// <summary>
         /// Get a list of the User&#39;s Greetings
         /// </summary>
         /// <remarks>
@@ -189,6 +235,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         ApiResponse<DefaultGreetingList> PostGreetingsWithHttpInfo (Greeting body);
         /// <summary>
+        /// Creates a Greeting for a Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The Greeting to create</param>
+        /// <returns>Greeting</returns>
+        Greeting PostGroupIdGreetings (string groupId, Greeting body);
+
+        /// <summary>
+        /// Creates a Greeting for a Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The Greeting to create</param>
+        /// <returns>ApiResponse of Greeting</returns>
+        ApiResponse<Greeting> PostGroupIdGreetingsWithHttpInfo (string groupId, Greeting body);
+        /// <summary>
         /// Creates a Greeting for a User
         /// </summary>
         /// <remarks>
@@ -255,6 +324,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">The updated Greeting</param>
         /// <returns>ApiResponse of Greeting</returns>
         ApiResponse<Greeting> PutGreetingIdWithHttpInfo (string greetingId, Greeting body);
+        /// <summary>
+        /// Updates the DefaultGreetingList of the specified Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The updated defaultGreetingList</param>
+        /// <returns>DefaultGreetingList</returns>
+        DefaultGreetingList PutGroupIdGreetingsDefaults (string groupId, DefaultGreetingList body);
+
+        /// <summary>
+        /// Updates the DefaultGreetingList of the specified Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The updated defaultGreetingList</param>
+        /// <returns>ApiResponse of DefaultGreetingList</returns>
+        ApiResponse<DefaultGreetingList> PutGroupIdGreetingsDefaultsWithHttpInfo (string groupId, DefaultGreetingList body);
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
         /// </summary>
@@ -388,6 +480,52 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         /// <summary>
+        /// Get a list of the Group&#39;s Greetings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of GreetingListing</returns>
+        System.Threading.Tasks.Task<GreetingListing> GetGroupIdGreetingsAsync (string groupId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a list of the Group&#39;s Greetings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (GreetingListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GreetingListing>> GetGroupIdGreetingsAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        /// <summary>
+        /// Grabs the list of Default Greetings given a Group&#39;s ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of DefaultGreetingList</returns>
+        System.Threading.Tasks.Task<DefaultGreetingList> GetGroupIdGreetingsDefaultsAsync (string groupId);
+
+        /// <summary>
+        /// Grabs the list of Default Greetings given a Group&#39;s ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGroupIdGreetingsDefaultsAsyncWithHttpInfo (string groupId);
+        /// <summary>
         /// Get a list of the User&#39;s Greetings
         /// </summary>
         /// <remarks>
@@ -455,6 +593,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostGreetingsAsyncWithHttpInfo (Greeting body);
         /// <summary>
+        /// Creates a Greeting for a Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The Greeting to create</param>
+        /// <returns>Task of Greeting</returns>
+        System.Threading.Tasks.Task<Greeting> PostGroupIdGreetingsAsync (string groupId, Greeting body);
+
+        /// <summary>
+        /// Creates a Greeting for a Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The Greeting to create</param>
+        /// <returns>Task of ApiResponse (Greeting)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Greeting>> PostGroupIdGreetingsAsyncWithHttpInfo (string groupId, Greeting body);
+        /// <summary>
         /// Creates a Greeting for a User
         /// </summary>
         /// <remarks>
@@ -521,6 +682,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
         System.Threading.Tasks.Task<ApiResponse<Greeting>> PutGreetingIdAsyncWithHttpInfo (string greetingId, Greeting body);
+        /// <summary>
+        /// Updates the DefaultGreetingList of the specified Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The updated defaultGreetingList</param>
+        /// <returns>Task of DefaultGreetingList</returns>
+        System.Threading.Tasks.Task<DefaultGreetingList> PutGroupIdGreetingsDefaultsAsync (string groupId, DefaultGreetingList body);
+
+        /// <summary>
+        /// Updates the DefaultGreetingList of the specified Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The updated defaultGreetingList</param>
+        /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutGroupIdGreetingsDefaultsAsyncWithHttpInfo (string groupId, DefaultGreetingList body);
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
         /// </summary>
@@ -1414,6 +1598,332 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get a list of the Group&#39;s Greetings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>GreetingListing</returns>
+        public GreetingListing GetGroupIdGreetings (string groupId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<GreetingListing> localVarResponse = GetGroupIdGreetingsWithHttpInfo(groupId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of the Group&#39;s Greetings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of GreetingListing</returns>
+        public ApiResponse< GreetingListing > GetGroupIdGreetingsWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupIdGreetings");
+
+            var localVarPath = "/api/v2/groups/{groupId}/greetings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdGreetings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GreetingListing>(localVarStatusCode,
+                localVarHeaders,
+                (GreetingListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GreetingListing)));
+            
+        }
+
+        /// <summary>
+        /// Get a list of the Group&#39;s Greetings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of GreetingListing</returns>
+        public async System.Threading.Tasks.Task<GreetingListing> GetGroupIdGreetingsAsync (string groupId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<GreetingListing> localVarResponse = await GetGroupIdGreetingsAsyncWithHttpInfo(groupId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of the Group&#39;s Greetings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (GreetingListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GreetingListing>> GetGroupIdGreetingsAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupIdGreetings");
+
+            var localVarPath = "/api/v2/groups/{groupId}/greetings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdGreetings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GreetingListing>(localVarStatusCode,
+                localVarHeaders,
+                (GreetingListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GreetingListing)));
+            
+        }
+
+        /// <summary>
+        /// Grabs the list of Default Greetings given a Group&#39;s ID 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>DefaultGreetingList</returns>
+        public DefaultGreetingList GetGroupIdGreetingsDefaults (string groupId)
+        {
+             ApiResponse<DefaultGreetingList> localVarResponse = GetGroupIdGreetingsDefaultsWithHttpInfo(groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Grabs the list of Default Greetings given a Group&#39;s ID 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>ApiResponse of DefaultGreetingList</returns>
+        public ApiResponse< DefaultGreetingList > GetGroupIdGreetingsDefaultsWithHttpInfo (string groupId)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupIdGreetingsDefaults");
+
+            var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
+                localVarHeaders,
+                (DefaultGreetingList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DefaultGreetingList)));
+            
+        }
+
+        /// <summary>
+        /// Grabs the list of Default Greetings given a Group&#39;s ID 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of DefaultGreetingList</returns>
+        public async System.Threading.Tasks.Task<DefaultGreetingList> GetGroupIdGreetingsDefaultsAsync (string groupId)
+        {
+             ApiResponse<DefaultGreetingList> localVarResponse = await GetGroupIdGreetingsDefaultsAsyncWithHttpInfo(groupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Grabs the list of Default Greetings given a Group&#39;s ID 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGroupIdGreetingsDefaultsAsyncWithHttpInfo (string groupId)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupIdGreetingsDefaults");
+
+            var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGroupIdGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
+                localVarHeaders,
+                (DefaultGreetingList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DefaultGreetingList)));
+            
+        }
+
+        /// <summary>
         /// Get a list of the User&#39;s Greetings 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1907,6 +2417,189 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
                 localVarHeaders,
                 (DefaultGreetingList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DefaultGreetingList)));
+            
+        }
+
+        /// <summary>
+        /// Creates a Greeting for a Group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The Greeting to create</param>
+        /// <returns>Greeting</returns>
+        public Greeting PostGroupIdGreetings (string groupId, Greeting body)
+        {
+             ApiResponse<Greeting> localVarResponse = PostGroupIdGreetingsWithHttpInfo(groupId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a Greeting for a Group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The Greeting to create</param>
+        /// <returns>ApiResponse of Greeting</returns>
+        public ApiResponse< Greeting > PostGroupIdGreetingsWithHttpInfo (string groupId, Greeting body)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->PostGroupIdGreetings");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGroupIdGreetings");
+
+            var localVarPath = "/api/v2/groups/{groupId}/greetings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupIdGreetings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupIdGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Greeting>(localVarStatusCode,
+                localVarHeaders,
+                (Greeting) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Greeting)));
+            
+        }
+
+        /// <summary>
+        /// Creates a Greeting for a Group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The Greeting to create</param>
+        /// <returns>Task of Greeting</returns>
+        public async System.Threading.Tasks.Task<Greeting> PostGroupIdGreetingsAsync (string groupId, Greeting body)
+        {
+             ApiResponse<Greeting> localVarResponse = await PostGroupIdGreetingsAsyncWithHttpInfo(groupId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a Greeting for a Group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The Greeting to create</param>
+        /// <returns>Task of ApiResponse (Greeting)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PostGroupIdGreetingsAsyncWithHttpInfo (string groupId, Greeting body)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->PostGroupIdGreetings");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGroupIdGreetings");
+
+            var localVarPath = "/api/v2/groups/{groupId}/greetings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupIdGreetings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGroupIdGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Greeting>(localVarStatusCode,
+                localVarHeaders,
+                (Greeting) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Greeting)));
             
         }
 
@@ -2444,6 +3137,189 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarHeaders,
                 (Greeting) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Greeting)));
+            
+        }
+
+        /// <summary>
+        /// Updates the DefaultGreetingList of the specified Group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The updated defaultGreetingList</param>
+        /// <returns>DefaultGreetingList</returns>
+        public DefaultGreetingList PutGroupIdGreetingsDefaults (string groupId, DefaultGreetingList body)
+        {
+             ApiResponse<DefaultGreetingList> localVarResponse = PutGroupIdGreetingsDefaultsWithHttpInfo(groupId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates the DefaultGreetingList of the specified Group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The updated defaultGreetingList</param>
+        /// <returns>ApiResponse of DefaultGreetingList</returns>
+        public ApiResponse< DefaultGreetingList > PutGroupIdGreetingsDefaultsWithHttpInfo (string groupId, DefaultGreetingList body)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->PutGroupIdGreetingsDefaults");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGroupIdGreetingsDefaults");
+
+            var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupIdGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupIdGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
+                localVarHeaders,
+                (DefaultGreetingList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DefaultGreetingList)));
+            
+        }
+
+        /// <summary>
+        /// Updates the DefaultGreetingList of the specified Group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The updated defaultGreetingList</param>
+        /// <returns>Task of DefaultGreetingList</returns>
+        public async System.Threading.Tasks.Task<DefaultGreetingList> PutGroupIdGreetingsDefaultsAsync (string groupId, DefaultGreetingList body)
+        {
+             ApiResponse<DefaultGreetingList> localVarResponse = await PutGroupIdGreetingsDefaultsAsyncWithHttpInfo(groupId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates the DefaultGreetingList of the specified Group 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId">Group ID</param>
+        /// <param name="body">The updated defaultGreetingList</param>
+        /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutGroupIdGreetingsDefaultsAsyncWithHttpInfo (string groupId, DefaultGreetingList body)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->PutGroupIdGreetingsDefaults");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGroupIdGreetingsDefaults");
+
+            var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupIdGreetingsDefaults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutGroupIdGreetingsDefaults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
+                localVarHeaders,
+                (DefaultGreetingList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DefaultGreetingList)));
             
         }
 

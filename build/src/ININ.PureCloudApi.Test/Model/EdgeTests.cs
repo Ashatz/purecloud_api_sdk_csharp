@@ -331,6 +331,22 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'EdgeDeploymentType'
         }
         /// <summary>
+        /// Test the property 'CallDrainingState'
+        /// </summary>
+        [Test]
+        public void CallDrainingStateTest()
+        {
+            // TODO: unit test for the property 'CallDrainingState'
+        }
+        /// <summary>
+        /// Test the property 'ConversationCount'
+        /// </summary>
+        [Test]
+        public void ConversationCountTest()
+        {
+            // TODO: unit test for the property 'ConversationCount'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

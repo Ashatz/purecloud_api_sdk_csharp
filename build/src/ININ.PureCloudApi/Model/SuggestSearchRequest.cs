@@ -26,9 +26,10 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SuggestSearchRequest" /> class.
         /// </summary>
+        /// <param name="Expand">Provides more details about a specified resource.</param>
         /// <param name="Types">Resource domain type to search (required).</param>
         /// <param name="Query">Suggest query (required).</param>
-        public SuggestSearchRequest(List<string> Types = null, List<SuggestSearchCriteria> Query = null)
+        public SuggestSearchRequest(List<string> Expand = null, List<string> Types = null, List<SuggestSearchCriteria> Query = null)
         {
             // to ensure "Types" is required (not null)
             if (Types == null)
@@ -48,8 +49,15 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Query = Query;
             }
+            this.Expand = Expand;
         }
         
+        /// <summary>
+        /// Provides more details about a specified resource
+        /// </summary>
+        /// <value>Provides more details about a specified resource</value>
+        [DataMember(Name="expand", EmitDefaultValue=false)]
+        public List<string> Expand { get; set; }
         /// <summary>
         /// Resource domain type to search
         /// </summary>
@@ -70,6 +78,7 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SuggestSearchRequest {\n");
+            sb.Append("  Expand: ").Append(Expand).Append("\n");
             sb.Append("  Types: ").Append(Types).Append("\n");
             sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("}\n");
@@ -109,6 +118,11 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
+                    this.Expand == other.Expand ||
+                    this.Expand != null &&
+                    this.Expand.SequenceEqual(other.Expand)
+                ) &&
+                (
                     this.Types == other.Types ||
                     this.Types != null &&
                     this.Types.SequenceEqual(other.Types)
@@ -131,6 +145,8 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Expand != null)
+                    hash = hash * 59 + this.Expand.GetHashCode();
                 if (this.Types != null)
                     hash = hash * 59 + this.Types.GetHashCode();
                 if (this.Query != null)

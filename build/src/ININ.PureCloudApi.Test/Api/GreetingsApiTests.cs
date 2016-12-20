@@ -115,6 +115,32 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetGroupIdGreetings
+        /// </summary>
+        [Test]
+        public void GetGroupIdGreetingsTest()
+        {
+            // TODO: add unit test for the method 'GetGroupIdGreetings'
+            string groupId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.GetGroupIdGreetings(groupId, pageSize, pageNumber);
+            Assert.IsInstanceOf<GreetingListing> (response, "response is GreetingListing");
+        }
+        
+        /// <summary>
+        /// Test GetGroupIdGreetingsDefaults
+        /// </summary>
+        [Test]
+        public void GetGroupIdGreetingsDefaultsTest()
+        {
+            // TODO: add unit test for the method 'GetGroupIdGreetingsDefaults'
+            string groupId = null; // TODO: replace null with proper value
+            var response = instance.GetGroupIdGreetingsDefaults(groupId);
+            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList");
+        }
+        
+        /// <summary>
         /// Test GetUserIdGreetings
         /// </summary>
         [Test]
@@ -153,6 +179,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostGroupIdGreetings
+        /// </summary>
+        [Test]
+        public void PostGroupIdGreetingsTest()
+        {
+            // TODO: add unit test for the method 'PostGroupIdGreetings'
+            string groupId = null; // TODO: replace null with proper value
+            Greeting body = null; // TODO: replace null with proper value
+            var response = instance.PostGroupIdGreetings(groupId, body);
+            Assert.IsInstanceOf<Greeting> (response, "response is Greeting");
+        }
+        
+        /// <summary>
         /// Test PostUserIdGreetings
         /// </summary>
         [Test]
@@ -188,6 +227,19 @@ namespace ININ.PureCloudApi.Test
             Greeting body = null; // TODO: replace null with proper value
             var response = instance.PutGreetingId(greetingId, body);
             Assert.IsInstanceOf<Greeting> (response, "response is Greeting");
+        }
+        
+        /// <summary>
+        /// Test PutGroupIdGreetingsDefaults
+        /// </summary>
+        [Test]
+        public void PutGroupIdGreetingsDefaultsTest()
+        {
+            // TODO: add unit test for the method 'PutGroupIdGreetingsDefaults'
+            string groupId = null; // TODO: replace null with proper value
+            DefaultGreetingList body = null; // TODO: replace null with proper value
+            var response = instance.PutGroupIdGreetingsDefaults(groupId, body);
+            Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList");
         }
         
         /// <summary>

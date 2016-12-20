@@ -84,7 +84,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Properties">Properties.</param>
         /// <param name="Capabilities">Capabilities.</param>
         /// <param name="WebRtcUser">This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones..</param>
-        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, UserAgentInfo UserAgentInfo = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null)
+        /// <param name="PrimaryEdge">PrimaryEdge.</param>
+        /// <param name="SecondaryEdge">SecondaryEdge.</param>
+        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, UserAgentInfo UserAgentInfo = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, UriReference WebRtcUser = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -139,6 +141,8 @@ namespace ININ.PureCloudApi.Model
             this.Properties = Properties;
             this.Capabilities = Capabilities;
             this.WebRtcUser = WebRtcUser;
+            this.PrimaryEdge = PrimaryEdge;
+            this.SecondaryEdge = SecondaryEdge;
         }
         
         /// <summary>
@@ -258,6 +262,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="webRtcUser", EmitDefaultValue=false)]
         public UriReference WebRtcUser { get; set; }
         /// <summary>
+        /// Gets or Sets PrimaryEdge
+        /// </summary>
+        [DataMember(Name="primaryEdge", EmitDefaultValue=false)]
+        public Edge PrimaryEdge { get; set; }
+        /// <summary>
+        /// Gets or Sets SecondaryEdge
+        /// </summary>
+        [DataMember(Name="secondaryEdge", EmitDefaultValue=false)]
+        public Edge SecondaryEdge { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -293,6 +307,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("  Capabilities: ").Append(Capabilities).Append("\n");
             sb.Append("  WebRtcUser: ").Append(WebRtcUser).Append("\n");
+            sb.Append("  PrimaryEdge: ").Append(PrimaryEdge).Append("\n");
+            sb.Append("  SecondaryEdge: ").Append(SecondaryEdge).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -441,6 +457,16 @@ namespace ININ.PureCloudApi.Model
                     this.WebRtcUser.Equals(other.WebRtcUser)
                 ) &&
                 (
+                    this.PrimaryEdge == other.PrimaryEdge ||
+                    this.PrimaryEdge != null &&
+                    this.PrimaryEdge.Equals(other.PrimaryEdge)
+                ) &&
+                (
+                    this.SecondaryEdge == other.SecondaryEdge ||
+                    this.SecondaryEdge != null &&
+                    this.SecondaryEdge.Equals(other.SecondaryEdge)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -502,6 +528,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Capabilities.GetHashCode();
                 if (this.WebRtcUser != null)
                     hash = hash * 59 + this.WebRtcUser.GetHashCode();
+                if (this.PrimaryEdge != null)
+                    hash = hash * 59 + this.PrimaryEdge.GetHashCode();
+                if (this.SecondaryEdge != null)
+                    hash = hash * 59 + this.SecondaryEdge.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

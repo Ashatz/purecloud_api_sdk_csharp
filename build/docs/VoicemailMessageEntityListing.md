@@ -7,9 +7,16 @@ title: VoicemailMessageEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Total** | **long?** |  | [optional] |
 | **Entities** | [**List&lt;VoicemailMessage&gt;**](VoicemailMessage.html) |  | [optional] |
+| **PageSize** | **int?** |  | [optional] |
+| **PageNumber** | **int?** |  | [optional] |
+| **Total** | **long?** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
+| **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
 

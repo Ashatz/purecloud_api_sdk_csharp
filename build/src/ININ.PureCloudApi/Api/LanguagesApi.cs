@@ -15,6 +15,27 @@ namespace ININ.PureCloudApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Delete Language (Deprecated)
+        /// </summary>
+        /// <remarks>
+        /// This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns></returns>
+        void DeleteLanguageId (string languageId);
+
+        /// <summary>
+        /// Delete Language (Deprecated)
+        /// </summary>
+        /// <remarks>
+        /// This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteLanguageIdWithHttpInfo (string languageId);
+        /// <summary>
         /// Delete Language
         /// </summary>
         /// <remarks>
@@ -23,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns></returns>
-        void DeleteLanguageId (string languageId);
+        void DeleteLanguagesLanguageId (string languageId);
 
         /// <summary>
         /// Delete Language
@@ -34,12 +55,12 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteLanguageIdWithHttpInfo (string languageId);
+        ApiResponse<Object> DeleteLanguagesLanguageIdWithHttpInfo (string languageId);
         /// <summary>
-        /// Get language
+        /// Get language (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
@@ -47,20 +68,20 @@ namespace ININ.PureCloudApi.Api
         Language GetLanguageId (string languageId);
 
         /// <summary>
-        /// Get language
+        /// Get language (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Language</returns>
         ApiResponse<Language> GetLanguageIdWithHttpInfo (string languageId);
         /// <summary>
-        /// Get the list of supported languages.
+        /// Get the list of supported languages. (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -71,10 +92,10 @@ namespace ININ.PureCloudApi.Api
         LanguageEntityListing GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
-        /// Get the list of supported languages.
+        /// Get the list of supported languages. (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -83,6 +104,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of LanguageEntityListing</returns>
         ApiResponse<LanguageEntityListing> GetLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+        /// <summary>
+        /// Get language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>Language</returns>
+        Language GetLanguagesLanguageId (string languageId);
+
+        /// <summary>
+        /// Get language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>ApiResponse of Language</returns>
+        ApiResponse<Language> GetLanguagesLanguageIdWithHttpInfo (string languageId);
         /// <summary>
         /// Get all available languages for translation
         /// </summary>
@@ -166,10 +208,10 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
         ApiResponse<Dictionary<string, Object>> GetTranslationsUsersUserIdWithHttpInfo (string userId);
         /// <summary>
-        /// Create Language
+        /// Create Language (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
@@ -177,40 +219,38 @@ namespace ININ.PureCloudApi.Api
         Language PostLanguages (Language body);
 
         /// <summary>
-        /// Create Language
+        /// Create Language (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
         /// <returns>ApiResponse of Language</returns>
         ApiResponse<Language> PostLanguagesWithHttpInfo (Language body);
-        /// <summary>
-        /// Update Language
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="languageId">Language ID</param>
-        /// <param name="body">Language</param>
-        /// <returns>Language</returns>
-        Language PutLanguageId (string languageId, Language body);
-
-        /// <summary>
-        /// Update Language
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="languageId">Language ID</param>
-        /// <param name="body">Language</param>
-        /// <returns>ApiResponse of Language</returns>
-        ApiResponse<Language> PutLanguageIdWithHttpInfo (string languageId, Language body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Delete Language (Deprecated)
+        /// </summary>
+        /// <remarks>
+        /// This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteLanguageIdAsync (string languageId);
+
+        /// <summary>
+        /// Delete Language (Deprecated)
+        /// </summary>
+        /// <remarks>
+        /// This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageIdAsyncWithHttpInfo (string languageId);
         /// <summary>
         /// Delete Language
         /// </summary>
@@ -220,7 +260,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteLanguageIdAsync (string languageId);
+        System.Threading.Tasks.Task DeleteLanguagesLanguageIdAsync (string languageId);
 
         /// <summary>
         /// Delete Language
@@ -231,12 +271,12 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguageIdAsyncWithHttpInfo (string languageId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguagesLanguageIdAsyncWithHttpInfo (string languageId);
         /// <summary>
-        /// Get language
+        /// Get language (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
@@ -244,20 +284,20 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<Language> GetLanguageIdAsync (string languageId);
 
         /// <summary>
-        /// Get language
+        /// Get language (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse (Language)</returns>
         System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguageIdAsyncWithHttpInfo (string languageId);
         /// <summary>
-        /// Get the list of supported languages.
+        /// Get the list of supported languages. (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -268,10 +308,10 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<LanguageEntityListing> GetLanguagesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
-        /// Get the list of supported languages.
+        /// Get the list of supported languages. (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -280,6 +320,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+        /// <summary>
+        /// Get language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>Task of Language</returns>
+        System.Threading.Tasks.Task<Language> GetLanguagesLanguageIdAsync (string languageId);
+
+        /// <summary>
+        /// Get language
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>Task of ApiResponse (Language)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguagesLanguageIdAsyncWithHttpInfo (string languageId);
         /// <summary>
         /// Get all available languages for translation
         /// </summary>
@@ -363,10 +424,10 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetTranslationsUsersUserIdAsyncWithHttpInfo (string userId);
         /// <summary>
-        /// Create Language
+        /// Create Language (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
@@ -374,38 +435,15 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<Language> PostLanguagesAsync (Language body);
 
         /// <summary>
-        /// Create Language
+        /// Create Language (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. It has been moved to /routing/languages
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
         /// <returns>Task of ApiResponse (Language)</returns>
         System.Threading.Tasks.Task<ApiResponse<Language>> PostLanguagesAsyncWithHttpInfo (Language body);
-        /// <summary>
-        /// Update Language
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="languageId">Language ID</param>
-        /// <param name="body">Language</param>
-        /// <returns>Task of Language</returns>
-        System.Threading.Tasks.Task<Language> PutLanguageIdAsync (string languageId, Language body);
-
-        /// <summary>
-        /// Update Language
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="languageId">Language ID</param>
-        /// <param name="body">Language</param>
-        /// <returns>Task of ApiResponse (Language)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Language>> PutLanguageIdAsyncWithHttpInfo (string languageId, Language body);
         #endregion Asynchronous Operations
     }
 
@@ -497,7 +535,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete Language 
+        /// Delete Language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
@@ -508,7 +546,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete Language 
+        /// Delete Language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
@@ -574,7 +612,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete Language 
+        /// Delete Language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
@@ -586,7 +624,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Delete Language 
+        /// Delete Language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
@@ -652,7 +690,162 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get language 
+        /// Delete Language 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns></returns>
+        public void DeleteLanguagesLanguageId (string languageId)
+        {
+             DeleteLanguagesLanguageIdWithHttpInfo(languageId);
+        }
+
+        /// <summary>
+        /// Delete Language 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteLanguagesLanguageIdWithHttpInfo (string languageId)
+        {
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->DeleteLanguagesLanguageId");
+
+            var localVarPath = "/api/v2/routing/languages/{languageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (languageId != null) localVarPathParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguagesLanguageId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguagesLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        /// <summary>
+        /// Delete Language 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteLanguagesLanguageIdAsync (string languageId)
+        {
+             await DeleteLanguagesLanguageIdAsyncWithHttpInfo(languageId);
+
+        }
+
+        /// <summary>
+        /// Delete Language 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteLanguagesLanguageIdAsyncWithHttpInfo (string languageId)
+        {
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->DeleteLanguagesLanguageId");
+
+            var localVarPath = "/api/v2/routing/languages/{languageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (languageId != null) localVarPathParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguagesLanguageId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteLanguagesLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        /// <summary>
+        /// Get language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
@@ -664,7 +857,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get language 
+        /// Get language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
@@ -730,7 +923,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get language 
+        /// Get language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
@@ -743,7 +936,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get language 
+        /// Get language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="languageId">Language ID</param>
@@ -809,7 +1002,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get the list of supported languages. 
+        /// Get the list of supported languages. (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -824,7 +1017,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get the list of supported languages. 
+        /// Get the list of supported languages. (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -893,7 +1086,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get the list of supported languages. 
+        /// Get the list of supported languages. (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -909,7 +1102,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Get the list of supported languages. 
+        /// Get the list of supported languages. (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -974,6 +1167,163 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<LanguageEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (LanguageEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LanguageEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get language 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>Language</returns>
+        public Language GetLanguagesLanguageId (string languageId)
+        {
+             ApiResponse<Language> localVarResponse = GetLanguagesLanguageIdWithHttpInfo(languageId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get language 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>ApiResponse of Language</returns>
+        public ApiResponse< Language > GetLanguagesLanguageIdWithHttpInfo (string languageId)
+        {
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->GetLanguagesLanguageId");
+
+            var localVarPath = "/api/v2/routing/languages/{languageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (languageId != null) localVarPathParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguagesLanguageId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguagesLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Language>(localVarStatusCode,
+                localVarHeaders,
+                (Language) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)));
+            
+        }
+
+        /// <summary>
+        /// Get language 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>Task of Language</returns>
+        public async System.Threading.Tasks.Task<Language> GetLanguagesLanguageIdAsync (string languageId)
+        {
+             ApiResponse<Language> localVarResponse = await GetLanguagesLanguageIdAsyncWithHttpInfo(languageId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get language 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageId">Language ID</param>
+        /// <returns>Task of ApiResponse (Language)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguagesLanguageIdAsyncWithHttpInfo (string languageId)
+        {
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->GetLanguagesLanguageId");
+
+            var localVarPath = "/api/v2/routing/languages/{languageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (languageId != null) localVarPathParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguagesLanguageId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguagesLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Language>(localVarStatusCode,
+                localVarHeaders,
+                (Language) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)));
             
         }
 
@@ -1594,7 +1944,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create Language 
+        /// Create Language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
@@ -1606,7 +1956,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create Language 
+        /// Create Language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
@@ -1679,7 +2029,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create Language 
+        /// Create Language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
@@ -1692,7 +2042,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Create Language 
+        /// Create Language (Deprecated) This endpoint is deprecated. It has been moved to /routing/languages
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Language</param>
@@ -1757,189 +2107,6 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException (localVarStatusCode, "Error calling PostLanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostLanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Language>(localVarStatusCode,
-                localVarHeaders,
-                (Language) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)));
-            
-        }
-
-        /// <summary>
-        /// Update Language 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="languageId">Language ID</param>
-        /// <param name="body">Language</param>
-        /// <returns>Language</returns>
-        public Language PutLanguageId (string languageId, Language body)
-        {
-             ApiResponse<Language> localVarResponse = PutLanguageIdWithHttpInfo(languageId, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Update Language 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="languageId">Language ID</param>
-        /// <param name="body">Language</param>
-        /// <returns>ApiResponse of Language</returns>
-        public ApiResponse< Language > PutLanguageIdWithHttpInfo (string languageId, Language body)
-        {
-            // verify the required parameter 'languageId' is set
-            if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->PutLanguageId");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling LanguagesApi->PutLanguageId");
-
-            var localVarPath = "/api/v2/languages/{languageId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (languageId != null) localVarPathParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutLanguageId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Language>(localVarStatusCode,
-                localVarHeaders,
-                (Language) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Language)));
-            
-        }
-
-        /// <summary>
-        /// Update Language 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="languageId">Language ID</param>
-        /// <param name="body">Language</param>
-        /// <returns>Task of Language</returns>
-        public async System.Threading.Tasks.Task<Language> PutLanguageIdAsync (string languageId, Language body)
-        {
-             ApiResponse<Language> localVarResponse = await PutLanguageIdAsyncWithHttpInfo(languageId, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Update Language 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="languageId">Language ID</param>
-        /// <param name="body">Language</param>
-        /// <returns>Task of ApiResponse (Language)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Language>> PutLanguageIdAsyncWithHttpInfo (string languageId, Language body)
-        {
-            // verify the required parameter 'languageId' is set
-            if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->PutLanguageId");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling LanguagesApi->PutLanguageId");
-
-            var localVarPath = "/api/v2/languages/{languageId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (languageId != null) localVarPathParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutLanguageId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutLanguageId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Language>(localVarStatusCode,
                 localVarHeaders,
