@@ -90,6 +90,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test DeleteCampaignrulesCampaignruleId
+        /// </summary>
+        [Test]
+        public void DeleteCampaignrulesCampaignruleIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteCampaignrulesCampaignruleId'
+            string campaignRuleId = null; // TODO: replace null with proper value
+            var response = instance.DeleteCampaignrulesCampaignruleId(campaignRuleId);
+            Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test DeleteCampaignsCampaignId
         /// </summary>
         [Test]
@@ -283,6 +295,35 @@ namespace ININ.PureCloudApi.Test
             string callAnalysisSetId = null; // TODO: replace null with proper value
             var response = instance.GetCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId);
             Assert.IsInstanceOf<ResponseSet> (response, "response is ResponseSet");
+        }
+        
+        /// <summary>
+        /// Test GetCampaignrules
+        /// </summary>
+        [Test]
+        public void GetCampaignrulesTest()
+        {
+            // TODO: add unit test for the method 'GetCampaignrules'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string filterType = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            var response = instance.GetCampaignrules(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+            Assert.IsInstanceOf<CampaignRuleEntityListing> (response, "response is CampaignRuleEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetCampaignrulesCampaignruleId
+        /// </summary>
+        [Test]
+        public void GetCampaignrulesCampaignruleIdTest()
+        {
+            // TODO: add unit test for the method 'GetCampaignrulesCampaignruleId'
+            string campaignRuleId = null; // TODO: replace null with proper value
+            var response = instance.GetCampaignrulesCampaignruleId(campaignRuleId);
+            Assert.IsInstanceOf<CampaignRule> (response, "response is CampaignRule");
         }
         
         /// <summary>
@@ -665,6 +706,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostCampaignrules
+        /// </summary>
+        [Test]
+        public void PostCampaignrulesTest()
+        {
+            // TODO: add unit test for the method 'PostCampaignrules'
+            CampaignRule body = null; // TODO: replace null with proper value
+            var response = instance.PostCampaignrules(body);
+            Assert.IsInstanceOf<CampaignRule> (response, "response is CampaignRule");
+        }
+        
+        /// <summary>
         /// Test PostCampaigns
         /// </summary>
         [Test]
@@ -850,6 +903,19 @@ namespace ININ.PureCloudApi.Test
             ResponseSet body = null; // TODO: replace null with proper value
             var response = instance.PutCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId, body);
             Assert.IsInstanceOf<ResponseSet> (response, "response is ResponseSet");
+        }
+        
+        /// <summary>
+        /// Test PutCampaignrulesCampaignruleId
+        /// </summary>
+        [Test]
+        public void PutCampaignrulesCampaignruleIdTest()
+        {
+            // TODO: add unit test for the method 'PutCampaignrulesCampaignruleId'
+            string campaignRuleId = null; // TODO: replace null with proper value
+            CampaignRule body = null; // TODO: replace null with proper value
+            var response = instance.PutCampaignrulesCampaignruleId(campaignRuleId, body);
+            Assert.IsInstanceOf<CampaignRule> (response, "response is CampaignRule");
         }
         
         /// <summary>

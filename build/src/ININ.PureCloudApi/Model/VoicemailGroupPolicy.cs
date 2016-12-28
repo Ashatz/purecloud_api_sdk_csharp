@@ -25,7 +25,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Group">The group associated with the policy.</param>
         /// <param name="Enabled">Whether voicemail is enabled for the group (default to false).</param>
         /// <param name="SendEmailNotifications">Whether email notifications are sent to group members when a new voicemail is received (default to false).</param>
-        public VoicemailGroupPolicy(string Name = null, Group Group = null, bool? Enabled = null, bool? SendEmailNotifications = null)
+        /// <param name="RotateCallsSecs">How many seconds to ring before rotating to the next member in the group.</param>
+        /// <param name="StopRingingAfterRotations">How many rotations to go through.</param>
+        public VoicemailGroupPolicy(string Name = null, Group Group = null, bool? Enabled = null, bool? SendEmailNotifications = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null)
         {
             this.Name = Name;
             this.Group = Group;
@@ -47,6 +49,8 @@ namespace ININ.PureCloudApi.Model
             {
                 this.SendEmailNotifications = SendEmailNotifications;
             }
+            this.RotateCallsSecs = RotateCallsSecs;
+            this.StopRingingAfterRotations = StopRingingAfterRotations;
         }
         
         /// <summary>
@@ -73,6 +77,18 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="sendEmailNotifications", EmitDefaultValue=false)]
         public bool? SendEmailNotifications { get; set; }
         /// <summary>
+        /// How many seconds to ring before rotating to the next member in the group
+        /// </summary>
+        /// <value>How many seconds to ring before rotating to the next member in the group</value>
+        [DataMember(Name="rotateCallsSecs", EmitDefaultValue=false)]
+        public int? RotateCallsSecs { get; set; }
+        /// <summary>
+        /// How many rotations to go through
+        /// </summary>
+        /// <value>How many rotations to go through</value>
+        [DataMember(Name="stopRingingAfterRotations", EmitDefaultValue=false)]
+        public int? StopRingingAfterRotations { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -84,6 +100,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
+            sb.Append("  RotateCallsSecs: ").Append(RotateCallsSecs).Append("\n");
+            sb.Append("  StopRingingAfterRotations: ").Append(StopRingingAfterRotations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,6 +157,16 @@ namespace ININ.PureCloudApi.Model
                     this.SendEmailNotifications == other.SendEmailNotifications ||
                     this.SendEmailNotifications != null &&
                     this.SendEmailNotifications.Equals(other.SendEmailNotifications)
+                ) &&
+                (
+                    this.RotateCallsSecs == other.RotateCallsSecs ||
+                    this.RotateCallsSecs != null &&
+                    this.RotateCallsSecs.Equals(other.RotateCallsSecs)
+                ) &&
+                (
+                    this.StopRingingAfterRotations == other.StopRingingAfterRotations ||
+                    this.StopRingingAfterRotations != null &&
+                    this.StopRingingAfterRotations.Equals(other.StopRingingAfterRotations)
                 );
         }
 
@@ -161,6 +189,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Enabled.GetHashCode();
                 if (this.SendEmailNotifications != null)
                     hash = hash * 59 + this.SendEmailNotifications.GetHashCode();
+                if (this.RotateCallsSecs != null)
+                    hash = hash * 59 + this.RotateCallsSecs.GetHashCode();
+                if (this.StopRingingAfterRotations != null)
+                    hash = hash * 59 + this.StopRingingAfterRotations.GetHashCode();
                 return hash;
             }
         }

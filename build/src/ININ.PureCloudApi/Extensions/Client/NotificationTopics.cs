@@ -12,6 +12,7 @@ namespace ININ.PureCloudApi.Client
         {
             Topics = new Dictionary<string, Type>
             { 
+              {"billing.tasks.{id}", typeof(BillingTaskResultNotification)},
               {"v2.contentmanagement.documents.{id}", typeof(DocumentDataNotification)},
               {"v2.contentmanagement.workspaces.{id}.documents", typeof(DocumentDataNotification)},
               {"v2.routing.queues.{id}.conversations", typeof(ConversationNotification)},

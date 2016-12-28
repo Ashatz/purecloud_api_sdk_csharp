@@ -78,6 +78,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId);
         /// <summary>
+        /// Delete Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>string</returns>
+        string DeleteCampaignrulesCampaignruleId (string campaignRuleId);
+
+        /// <summary>
+        /// Delete Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteCampaignrulesCampaignruleIdWithHttpInfo (string campaignRuleId);
+        /// <summary>
         /// Delete a campaign.
         /// </summary>
         /// <remarks>
@@ -424,6 +445,58 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ApiResponse of ResponseSet</returns>
         ApiResponse<ResponseSet> GetCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId);
+        /// <summary>
+        /// Query Campaign Rule list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>CampaignRuleEntityListing</returns>
+        CampaignRuleEntityListing GetCampaignrules (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query Campaign Rule list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of CampaignRuleEntityListing</returns>
+        ApiResponse<CampaignRuleEntityListing> GetCampaignrulesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>CampaignRule</returns>
+        CampaignRule GetCampaignrulesCampaignruleId (string campaignRuleId);
+
+        /// <summary>
+        /// Get Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>ApiResponse of CampaignRule</returns>
+        ApiResponse<CampaignRule> GetCampaignrulesCampaignruleIdWithHttpInfo (string campaignRuleId);
         /// <summary>
         /// Query a list of dialer campaigns.
         /// </summary>
@@ -1099,6 +1172,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of ResponseSet</returns>
         ApiResponse<ResponseSet> PostCallanalysisresponsesetsWithHttpInfo (ResponseSet body);
         /// <summary>
+        /// Create Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>CampaignRule</returns>
+        CampaignRule PostCampaignrules (CampaignRule body);
+
+        /// <summary>
+        /// Create Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>ApiResponse of CampaignRule</returns>
+        ApiResponse<CampaignRule> PostCampaignrulesWithHttpInfo (CampaignRule body);
+        /// <summary>
         /// Create a campaign.
         /// </summary>
         /// <remarks>
@@ -1430,6 +1524,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of ResponseSet</returns>
         ApiResponse<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId, ResponseSet body);
         /// <summary>
+        /// Update Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>CampaignRule</returns>
+        CampaignRule PutCampaignrulesCampaignruleId (string campaignRuleId, CampaignRule body);
+
+        /// <summary>
+        /// Update Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>ApiResponse of CampaignRule</returns>
+        ApiResponse<CampaignRule> PutCampaignrulesCampaignruleIdWithHttpInfo (string campaignRuleId, CampaignRule body);
+        /// <summary>
         /// Update a campaign.
         /// </summary>
         /// <remarks>
@@ -1726,6 +1843,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId);
+        /// <summary>
+        /// Delete Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteCampaignrulesCampaignruleIdAsync (string campaignRuleId);
+
+        /// <summary>
+        /// Delete Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignrulesCampaignruleIdAsyncWithHttpInfo (string campaignRuleId);
         /// <summary>
         /// Delete a campaign.
         /// </summary>
@@ -2073,6 +2211,58 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResponseSet>> GetCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId);
+        /// <summary>
+        /// Query Campaign Rule list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of CampaignRuleEntityListing</returns>
+        System.Threading.Tasks.Task<CampaignRuleEntityListing> GetCampaignrulesAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query Campaign Rule list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (CampaignRuleEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignRuleEntityListing>> GetCampaignrulesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>Task of CampaignRule</returns>
+        System.Threading.Tasks.Task<CampaignRule> GetCampaignrulesCampaignruleIdAsync (string campaignRuleId);
+
+        /// <summary>
+        /// Get Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>Task of ApiResponse (CampaignRule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignRule>> GetCampaignrulesCampaignruleIdAsyncWithHttpInfo (string campaignRuleId);
         /// <summary>
         /// Query a list of dialer campaigns.
         /// </summary>
@@ -2748,6 +2938,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PostCallanalysisresponsesetsAsyncWithHttpInfo (ResponseSet body);
         /// <summary>
+        /// Create Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>Task of CampaignRule</returns>
+        System.Threading.Tasks.Task<CampaignRule> PostCampaignrulesAsync (CampaignRule body);
+
+        /// <summary>
+        /// Create Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>Task of ApiResponse (CampaignRule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignRule>> PostCampaignrulesAsyncWithHttpInfo (CampaignRule body);
+        /// <summary>
         /// Create a campaign.
         /// </summary>
         /// <remarks>
@@ -3078,6 +3289,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body);
+        /// <summary>
+        /// Update Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>Task of CampaignRule</returns>
+        System.Threading.Tasks.Task<CampaignRule> PutCampaignrulesCampaignruleIdAsync (string campaignRuleId, CampaignRule body);
+
+        /// <summary>
+        /// Update Campaign Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>Task of ApiResponse (CampaignRule)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignRule>> PutCampaignrulesCampaignruleIdAsyncWithHttpInfo (string campaignRuleId, CampaignRule body);
         /// <summary>
         /// Update a campaign.
         /// </summary>
@@ -3864,6 +4098,163 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCallanalysisresponsesetsCallanalysissetId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Delete Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>string</returns>
+        public string DeleteCampaignrulesCampaignruleId (string campaignRuleId)
+        {
+             ApiResponse<string> localVarResponse = DeleteCampaignrulesCampaignruleIdWithHttpInfo(campaignRuleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteCampaignrulesCampaignruleIdWithHttpInfo (string campaignRuleId)
+        {
+            // verify the required parameter 'campaignRuleId' is set
+            if (campaignRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignRuleId' when calling OutboundApi->DeleteCampaignrulesCampaignruleId");
+
+            var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignRuleId != null) localVarPathParams.Add("campaignRuleId", Configuration.ApiClient.ParameterToString(campaignRuleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignrulesCampaignruleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignrulesCampaignruleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Delete Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteCampaignrulesCampaignruleIdAsync (string campaignRuleId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteCampaignrulesCampaignruleIdAsyncWithHttpInfo(campaignRuleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignrulesCampaignruleIdAsyncWithHttpInfo (string campaignRuleId)
+        {
+            // verify the required parameter 'campaignRuleId' is set
+            if (campaignRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignRuleId' when calling OutboundApi->DeleteCampaignrulesCampaignruleId");
+
+            var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignRuleId != null) localVarPathParams.Add("campaignRuleId", Configuration.ApiClient.ParameterToString(campaignRuleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignrulesCampaignruleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignrulesCampaignruleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarHeaders,
@@ -6307,6 +6698,344 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ResponseSet>(localVarStatusCode,
                 localVarHeaders,
                 (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+            
+        }
+
+        /// <summary>
+        /// Query Campaign Rule list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>CampaignRuleEntityListing</returns>
+        public CampaignRuleEntityListing GetCampaignrules (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<CampaignRuleEntityListing> localVarResponse = GetCampaignrulesWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query Campaign Rule list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of CampaignRuleEntityListing</returns>
+        public ApiResponse< CampaignRuleEntityListing > GetCampaignrulesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/campaignrules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignrules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignrules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignRuleEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignRuleEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignRuleEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Query Campaign Rule list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of CampaignRuleEntityListing</returns>
+        public async System.Threading.Tasks.Task<CampaignRuleEntityListing> GetCampaignrulesAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<CampaignRuleEntityListing> localVarResponse = await GetCampaignrulesAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query Campaign Rule list 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (CampaignRuleEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignRuleEntityListing>> GetCampaignrulesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/campaignrules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignrules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignrules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignRuleEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignRuleEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignRuleEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>CampaignRule</returns>
+        public CampaignRule GetCampaignrulesCampaignruleId (string campaignRuleId)
+        {
+             ApiResponse<CampaignRule> localVarResponse = GetCampaignrulesCampaignruleIdWithHttpInfo(campaignRuleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>ApiResponse of CampaignRule</returns>
+        public ApiResponse< CampaignRule > GetCampaignrulesCampaignruleIdWithHttpInfo (string campaignRuleId)
+        {
+            // verify the required parameter 'campaignRuleId' is set
+            if (campaignRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignRuleId' when calling OutboundApi->GetCampaignrulesCampaignruleId");
+
+            var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignRuleId != null) localVarPathParams.Add("campaignRuleId", Configuration.ApiClient.ParameterToString(campaignRuleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignrulesCampaignruleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignrulesCampaignruleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignRule>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignRule)));
+            
+        }
+
+        /// <summary>
+        /// Get Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>Task of CampaignRule</returns>
+        public async System.Threading.Tasks.Task<CampaignRule> GetCampaignrulesCampaignruleIdAsync (string campaignRuleId)
+        {
+             ApiResponse<CampaignRule> localVarResponse = await GetCampaignrulesCampaignruleIdAsyncWithHttpInfo(campaignRuleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <returns>Task of ApiResponse (CampaignRule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignRule>> GetCampaignrulesCampaignruleIdAsyncWithHttpInfo (string campaignRuleId)
+        {
+            // verify the required parameter 'campaignRuleId' is set
+            if (campaignRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignRuleId' when calling OutboundApi->GetCampaignrulesCampaignruleId");
+
+            var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignRuleId != null) localVarPathParams.Add("campaignRuleId", Configuration.ApiClient.ParameterToString(campaignRuleId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignrulesCampaignruleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignrulesCampaignruleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignRule>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignRule)));
             
         }
 
@@ -10979,6 +11708,177 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Create Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>CampaignRule</returns>
+        public CampaignRule PostCampaignrules (CampaignRule body)
+        {
+             ApiResponse<CampaignRule> localVarResponse = PostCampaignrulesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>ApiResponse of CampaignRule</returns>
+        public ApiResponse< CampaignRule > PostCampaignrulesWithHttpInfo (CampaignRule body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCampaignrules");
+
+            var localVarPath = "/api/v2/outbound/campaignrules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignrules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignrules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignRule>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignRule)));
+            
+        }
+
+        /// <summary>
+        /// Create Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>Task of CampaignRule</returns>
+        public async System.Threading.Tasks.Task<CampaignRule> PostCampaignrulesAsync (CampaignRule body)
+        {
+             ApiResponse<CampaignRule> localVarResponse = await PostCampaignrulesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>Task of ApiResponse (CampaignRule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignRule>> PostCampaignrulesAsyncWithHttpInfo (CampaignRule body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostCampaignrules");
+
+            var localVarPath = "/api/v2/outbound/campaignrules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignrules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignrules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignRule>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignRule)));
+            
+        }
+
+        /// <summary>
         /// Create a campaign. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13578,6 +14478,189 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ResponseSet>(localVarStatusCode,
                 localVarHeaders,
                 (ResponseSet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseSet)));
+            
+        }
+
+        /// <summary>
+        /// Update Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>CampaignRule</returns>
+        public CampaignRule PutCampaignrulesCampaignruleId (string campaignRuleId, CampaignRule body)
+        {
+             ApiResponse<CampaignRule> localVarResponse = PutCampaignrulesCampaignruleIdWithHttpInfo(campaignRuleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>ApiResponse of CampaignRule</returns>
+        public ApiResponse< CampaignRule > PutCampaignrulesCampaignruleIdWithHttpInfo (string campaignRuleId, CampaignRule body)
+        {
+            // verify the required parameter 'campaignRuleId' is set
+            if (campaignRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignRuleId' when calling OutboundApi->PutCampaignrulesCampaignruleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutCampaignrulesCampaignruleId");
+
+            var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignRuleId != null) localVarPathParams.Add("campaignRuleId", Configuration.ApiClient.ParameterToString(campaignRuleId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignrulesCampaignruleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignrulesCampaignruleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignRule>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignRule)));
+            
+        }
+
+        /// <summary>
+        /// Update Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>Task of CampaignRule</returns>
+        public async System.Threading.Tasks.Task<CampaignRule> PutCampaignrulesCampaignruleIdAsync (string campaignRuleId, CampaignRule body)
+        {
+             ApiResponse<CampaignRule> localVarResponse = await PutCampaignrulesCampaignruleIdAsyncWithHttpInfo(campaignRuleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update Campaign Rule 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignRuleId">Campaign Rule ID</param>
+        /// <param name="body">CampaignRule</param>
+        /// <returns>Task of ApiResponse (CampaignRule)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignRule>> PutCampaignrulesCampaignruleIdAsyncWithHttpInfo (string campaignRuleId, CampaignRule body)
+        {
+            // verify the required parameter 'campaignRuleId' is set
+            if (campaignRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignRuleId' when calling OutboundApi->PutCampaignrulesCampaignruleId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutCampaignrulesCampaignruleId");
+
+            var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignRuleId != null) localVarPathParams.Add("campaignRuleId", Configuration.ApiClient.ParameterToString(campaignRuleId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignrulesCampaignruleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCampaignrulesCampaignruleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignRule>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignRule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignRule)));
             
         }
 

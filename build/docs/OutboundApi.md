@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAttemptlimitsAttemptlimitsId**](OutboundApi.html#deleteattemptlimitsattemptlimitsid) | **DELETE** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Delete attempt limits |
 | [**DeleteCallabletimesetsCallabletimesetId**](OutboundApi.html#deletecallabletimesetscallabletimesetid) | **DELETE** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Delete callable time set |
 | [**DeleteCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#deletecallanalysisresponsesetscallanalysissetid) | **DELETE** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Delete a dialer call analysis response set. |
+| [**DeleteCampaignrulesCampaignruleId**](OutboundApi.html#deletecampaignrulescampaignruleid) | **DELETE** /api/v2/outbound/campaignrules/{campaignRuleId} | Delete Campaign Rule |
 | [**DeleteCampaignsCampaignId**](OutboundApi.html#deletecampaignscampaignid) | **DELETE** /api/v2/outbound/campaigns/{campaignId} | Delete a campaign. |
 | [**DeleteCampaignsCampaignIdProgress**](OutboundApi.html#deletecampaignscampaignidprogress) | **DELETE** /api/v2/outbound/campaigns/{campaignId}/progress | Reset campaign progress and recycle the campaign |
 | [**DeleteContactlistsContactlistId**](OutboundApi.html#deletecontactlistscontactlistid) | **DELETE** /api/v2/outbound/contactlists/{contactListId} | Delete a contact list. |
@@ -25,6 +26,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetCallabletimesetsCallabletimesetId**](OutboundApi.html#getcallabletimesetscallabletimesetid) | **GET** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Get callable time set |
 | [**GetCallanalysisresponsesets**](OutboundApi.html#getcallanalysisresponsesets) | **GET** /api/v2/outbound/callanalysisresponsesets | Query a list of dialer call analysis response sets. |
 | [**GetCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#getcallanalysisresponsesetscallanalysissetid) | **GET** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Get a dialer call analysis response set. |
+| [**GetCampaignrules**](OutboundApi.html#getcampaignrules) | **GET** /api/v2/outbound/campaignrules | Query Campaign Rule list |
+| [**GetCampaignrulesCampaignruleId**](OutboundApi.html#getcampaignrulescampaignruleid) | **GET** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
 | [**GetCampaigns**](OutboundApi.html#getcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
 | [**GetCampaignsCampaignId**](OutboundApi.html#getcampaignscampaignid) | **GET** /api/v2/outbound/campaigns/{campaignId} | Get dialer campaign. |
 | [**GetCampaignsCampaignIdDiagnostics**](OutboundApi.html#getcampaignscampaigniddiagnostics) | **GET** /api/v2/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
@@ -53,6 +56,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAudits**](OutboundApi.html#postaudits) | **POST** /api/v2/outbound/audits | Retrieves audits for dialer. |
 | [**PostCallabletimesets**](OutboundApi.html#postcallabletimesets) | **POST** /api/v2/outbound/callabletimesets | Create callable time set |
 | [**PostCallanalysisresponsesets**](OutboundApi.html#postcallanalysisresponsesets) | **POST** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
+| [**PostCampaignrules**](OutboundApi.html#postcampaignrules) | **POST** /api/v2/outbound/campaignrules | Create Campaign Rule |
 | [**PostCampaigns**](OutboundApi.html#postcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
 | [**PostCampaignsCampaignIdCallbackSchedule**](OutboundApi.html#postcampaignscampaignidcallbackschedule) | **POST** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign (Deprecated) |
 | [**PostCampaignsProgress**](OutboundApi.html#postcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
@@ -68,6 +72,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutAttemptlimitsAttemptlimitsId**](OutboundApi.html#putattemptlimitsattemptlimitsid) | **PUT** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Update attempt limits |
 | [**PutCallabletimesetsCallabletimesetId**](OutboundApi.html#putcallabletimesetscallabletimesetid) | **PUT** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Update callable time set |
 | [**PutCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#putcallanalysisresponsesetscallanalysissetid) | **PUT** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Update a dialer call analysis response set. |
+| [**PutCampaignrulesCampaignruleId**](OutboundApi.html#putcampaignrulescampaignruleid) | **PUT** /api/v2/outbound/campaignrules/{campaignRuleId} | Update Campaign Rule |
 | [**PutCampaignsCampaignId**](OutboundApi.html#putcampaignscampaignid) | **PUT** /api/v2/outbound/campaigns/{campaignId} | Update a campaign. |
 | [**PutCampaignsCampaignIdAgentsUserId**](OutboundApi.html#putcampaignscampaignidagentsuserid) | **PUT** /api/v2/outbound/campaigns/{campaignId}/agents/{userId} | Send notification that an agent&#39;s state changed  |
 | [**PutContactlistsContactlistId**](OutboundApi.html#putcontactlistscontactlistid) | **PUT** /api/v2/outbound/contactlists/{contactListId} | Update a contact list. |
@@ -242,6 +247,62 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="deletecampaignrulescampaignruleid"></a>
+
+## **string** DeleteCampaignrulesCampaignruleId (string campaignRuleId)
+
+Delete Campaign Rule
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteCampaignrulesCampaignruleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var campaignRuleId = campaignRuleId_example;  // string | Campaign Rule ID
+
+            try
+            {
+                // Delete Campaign Rule
+                string result = apiInstance.DeleteCampaignrulesCampaignruleId(campaignRuleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteCampaignrulesCampaignruleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignRuleId** | **string**| Campaign Rule ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1119,6 +1180,128 @@ namespace Example
 ### Return type
 
 [**ResponseSet**](ResponseSet.html)
+
+<a name="getcampaignrules"></a>
+
+## [**CampaignRuleEntityListing**](CampaignRuleEntityListing.html) GetCampaignrules (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+
+Query Campaign Rule list
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCampaignrulesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var name = name_example;  // string | Name (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+
+            try
+            {
+                // Query Campaign Rule list
+                CampaignRuleEntityListing result = apiInstance.GetCampaignrules(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetCampaignrules: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **name** | **string**| Name | [optional]  |
+| **sortBy** | **string**| Sort by | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to a] |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignRuleEntityListing**](CampaignRuleEntityListing.html)
+
+<a name="getcampaignrulescampaignruleid"></a>
+
+## [**CampaignRule**](CampaignRule.html) GetCampaignrulesCampaignruleId (string campaignRuleId)
+
+Get Campaign Rule
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetCampaignrulesCampaignruleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var campaignRuleId = campaignRuleId_example;  // string | Campaign Rule ID
+
+            try
+            {
+                // Get Campaign Rule
+                CampaignRule result = apiInstance.GetCampaignrulesCampaignruleId(campaignRuleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetCampaignrulesCampaignruleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignRuleId** | **string**| Campaign Rule ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignRule**](CampaignRule.html)
 
 <a name="getcampaigns"></a>
 
@@ -2765,6 +2948,62 @@ namespace Example
 
 [**ResponseSet**](ResponseSet.html)
 
+<a name="postcampaignrules"></a>
+
+## [**CampaignRule**](CampaignRule.html) PostCampaignrules (CampaignRule body)
+
+Create Campaign Rule
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostCampaignrulesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new CampaignRule(); // CampaignRule | CampaignRule
+
+            try
+            {
+                // Create Campaign Rule
+                CampaignRule result = apiInstance.PostCampaignrules(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostCampaignrules: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CampaignRule**](CampaignRule.html)| CampaignRule |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignRule**](CampaignRule.html)
+
 <a name="postcampaigns"></a>
 
 ## [**Campaign**](Campaign.html) PostCampaigns (Campaign body)
@@ -3618,6 +3857,64 @@ namespace Example
 ### Return type
 
 [**ResponseSet**](ResponseSet.html)
+
+<a name="putcampaignrulescampaignruleid"></a>
+
+## [**CampaignRule**](CampaignRule.html) PutCampaignrulesCampaignruleId (string campaignRuleId, CampaignRule body)
+
+Update Campaign Rule
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutCampaignrulesCampaignruleIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var campaignRuleId = campaignRuleId_example;  // string | Campaign Rule ID
+            var body = new CampaignRule(); // CampaignRule | CampaignRule
+
+            try
+            {
+                // Update Campaign Rule
+                CampaignRule result = apiInstance.PutCampaignrulesCampaignruleId(campaignRuleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutCampaignrulesCampaignruleId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignRuleId** | **string**| Campaign Rule ID |  |
+| **body** | [**CampaignRule**](CampaignRule.html)| CampaignRule |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignRule**](CampaignRule.html)
 
 <a name="putcampaignscampaignid"></a>
 

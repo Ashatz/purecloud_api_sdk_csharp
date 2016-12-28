@@ -82,6 +82,22 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'SendEmailNotifications'
         }
+        /// <summary>
+        /// Test the property 'RotateCallsSecs'
+        /// </summary>
+        [Test]
+        public void RotateCallsSecsTest()
+        {
+            // TODO: unit test for the property 'RotateCallsSecs'
+        }
+        /// <summary>
+        /// Test the property 'StopRingingAfterRotations'
+        /// </summary>
+        [Test]
+        public void StopRingingAfterRotationsTest()
+        {
+            // TODO: unit test for the property 'StopRingingAfterRotations'
+        }
 
     }
 
