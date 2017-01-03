@@ -21,40 +21,16 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainCapabilities" /> class.
         /// </summary>
-        /// <param name="Enabled">True if this address family on the interface is enabled. (default to false).</param>
-        /// <param name="Dhcp">True if this address family on the interface is using DHCP. (default to false).</param>
+        /// <param name="Enabled">True if this address family on the interface is enabled..</param>
+        /// <param name="Dhcp">True if this address family on the interface is using DHCP..</param>
         /// <param name="Metric">The metric being used for the address family on this interface. Lower values will have a higher priority. If autoMetric is true, this value will be the automatically calculated metric. To set this value be sure autoMetric is false. If no value is returned, metric configuration is not supported on this Edge..</param>
-        /// <param name="AutoMetric">True if the metric is being calculated automatically for the address family on this interface. (default to false).</param>
+        /// <param name="AutoMetric">True if the metric is being calculated automatically for the address family on this interface..</param>
         public DomainCapabilities(bool? Enabled = null, bool? Dhcp = null, int? Metric = null, bool? AutoMetric = null)
         {
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
-            // use default value if no "Dhcp" provided
-            if (Dhcp == null)
-            {
-                this.Dhcp = false;
-            }
-            else
-            {
-                this.Dhcp = Dhcp;
-            }
+            this.Enabled = Enabled;
+            this.Dhcp = Dhcp;
             this.Metric = Metric;
-            // use default value if no "AutoMetric" provided
-            if (AutoMetric == null)
-            {
-                this.AutoMetric = false;
-            }
-            else
-            {
-                this.AutoMetric = AutoMetric;
-            }
+            this.AutoMetric = AutoMetric;
         }
         
         /// <summary>

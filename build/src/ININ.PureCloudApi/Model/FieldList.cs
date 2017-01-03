@@ -21,50 +21,26 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldList" /> class.
         /// </summary>
-        /// <param name="CustomLabels">CustomLabels (default to false).</param>
+        /// <param name="CustomLabels">CustomLabels.</param>
         /// <param name="InstructionText">InstructionText.</param>
         /// <param name="Key">Key.</param>
         /// <param name="LabelKeys">LabelKeys.</param>
         /// <param name="_Params">_Params.</param>
-        /// <param name="Repeatable">Repeatable (default to false).</param>
+        /// <param name="Repeatable">Repeatable.</param>
         /// <param name="State">State.</param>
         /// <param name="Type">Type.</param>
-        /// <param name="Required">Required (default to false).</param>
+        /// <param name="Required">Required.</param>
         public FieldList(bool? CustomLabels = null, string InstructionText = null, string Key = null, List<string> LabelKeys = null, Dictionary<string, Object> _Params = null, bool? Repeatable = null, string State = null, string Type = null, bool? Required = null)
         {
-            // use default value if no "CustomLabels" provided
-            if (CustomLabels == null)
-            {
-                this.CustomLabels = false;
-            }
-            else
-            {
-                this.CustomLabels = CustomLabels;
-            }
+            this.CustomLabels = CustomLabels;
             this.InstructionText = InstructionText;
             this.Key = Key;
             this.LabelKeys = LabelKeys;
             this._Params = _Params;
-            // use default value if no "Repeatable" provided
-            if (Repeatable == null)
-            {
-                this.Repeatable = false;
-            }
-            else
-            {
-                this.Repeatable = Repeatable;
-            }
+            this.Repeatable = Repeatable;
             this.State = State;
             this.Type = Type;
-            // use default value if no "Required" provided
-            if (Required == null)
-            {
-                this.Required = false;
-            }
-            else
-            {
-                this.Required = Required;
-            }
+            this.Required = Required;
         }
         
         /// <summary>

@@ -59,7 +59,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">The current name of the workspace. (required).</param>
         /// <param name="Type">Type.</param>
-        /// <param name="IsCurrentUserWorkspace">IsCurrentUserWorkspace (default to false).</param>
+        /// <param name="IsCurrentUserWorkspace">IsCurrentUserWorkspace.</param>
         /// <param name="User">User.</param>
         /// <param name="Bucket">Bucket.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -79,15 +79,7 @@ namespace ININ.PureCloudApi.Model
                 this.Name = Name;
             }
             this.Type = Type;
-            // use default value if no "IsCurrentUserWorkspace" provided
-            if (IsCurrentUserWorkspace == null)
-            {
-                this.IsCurrentUserWorkspace = false;
-            }
-            else
-            {
-                this.IsCurrentUserWorkspace = IsCurrentUserWorkspace;
-            }
+            this.IsCurrentUserWorkspace = IsCurrentUserWorkspace;
             this.User = User;
             this.Bucket = Bucket;
             this.DateCreated = DateCreated;

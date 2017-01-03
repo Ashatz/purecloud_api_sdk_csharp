@@ -12,10 +12,10 @@ title: DomainEdgeSoftwareUpdateDto
 | **DownloadStartTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ExecuteStartTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ExecuteStopTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **ExecuteOnIdle** | **bool?** |  | [optional] [default to false]|
+| **ExecuteOnIdle** | **bool?** |  | [optional] |
 | **Status** | **string** |  | [optional] |
 | **EdgeUri** | **string** |  | [optional] |
-| **Current** | **bool?** |  | [optional] [default to false]|
+| **Current** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

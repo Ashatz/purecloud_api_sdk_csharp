@@ -11,7 +11,7 @@ title: DomainPermission
 | **EntityType** | **string** |  | [optional] |
 | **Action** | **string** |  | [optional] |
 | **Label** | **string** |  | [optional] |
-| **AllowsConditions** | **bool?** |  | [optional] [default to false]|
+| **AllowsConditions** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

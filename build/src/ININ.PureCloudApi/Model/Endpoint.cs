@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Count">Count.</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="Schema">Schema (required).</param>
-        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Enabled">Enabled.</param>
         /// <param name="Site">Site.</param>
         /// <param name="Dids">Dids.</param>
         public Endpoint(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, int? Count = null, Dictionary<string, Object> Properties = null, UriReference Schema = null, bool? Enabled = null, UriReference Site = null, List<string> Dids = null)
@@ -110,15 +110,7 @@ namespace ININ.PureCloudApi.Model
             this.CreatedByApp = CreatedByApp;
             this.Count = Count;
             this.Properties = Properties;
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
+            this.Enabled = Enabled;
             this.Site = Site;
             this.Dids = Dids;
         }

@@ -12,7 +12,7 @@ title: CustomerInteractionCenter
 | **Certificate** | **string** |  | [optional] |
 | **IssuerURI** | **string** |  | [optional] |
 | **SsoTargetURI** | **string** |  | [optional] |
-| **Disabled** | **bool?** |  | [optional] [default to false]|
+| **Disabled** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

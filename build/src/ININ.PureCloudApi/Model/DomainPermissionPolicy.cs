@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PolicyDescription">PolicyDescription.</param>
         /// <param name="ActionSet">ActionSet.</param>
         /// <param name="NamedResources">NamedResources.</param>
-        /// <param name="AllowConditions">AllowConditions (default to false).</param>
+        /// <param name="AllowConditions">AllowConditions.</param>
         /// <param name="ResourceConditionNode">ResourceConditionNode.</param>
         public DomainPermissionPolicy(string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, List<string> ActionSet = null, List<string> NamedResources = null, bool? AllowConditions = null, DomainResourceConditionNode ResourceConditionNode = null)
         {
@@ -37,15 +37,7 @@ namespace ININ.PureCloudApi.Model
             this.PolicyDescription = PolicyDescription;
             this.ActionSet = ActionSet;
             this.NamedResources = NamedResources;
-            // use default value if no "AllowConditions" provided
-            if (AllowConditions == null)
-            {
-                this.AllowConditions = false;
-            }
-            else
-            {
-                this.AllowConditions = AllowConditions;
-            }
+            this.AllowConditions = AllowConditions;
             this.ResourceConditionNode = ResourceConditionNode;
         }
         

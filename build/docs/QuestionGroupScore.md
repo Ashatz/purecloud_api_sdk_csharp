@@ -16,7 +16,7 @@ title: QuestionGroupScore
 | **MaxTotalScoreUnweighted** | **float?** |  | [optional] |
 | **TotalCriticalScoreUnweighted** | **float?** |  | [optional] |
 | **MaxTotalCriticalScoreUnweighted** | **float?** |  | [optional] |
-| **MarkedNA** | **bool?** |  | [optional] [default to false]|
+| **MarkedNA** | **bool?** |  | [optional] |
 | **QuestionScores** | [**List&lt;QuestionScore&gt;**](QuestionScore.html) |  | [optional] |
 {: class="table table-striped"}
 

@@ -28,7 +28,7 @@ title: Campaign
 | **CallerAddress** | **string** | caller id phone number to be displayed on the outbound call | [optional] |
 | **OutboundLineCount** | **int?** | for agentless campaigns, the number of outbound lines to be concurrently dialed | [optional] |
 | **RuleSets** | [**List&lt;UriReference&gt;**](UriReference.html) | identifiers of the rule sets | [optional] |
-| **SkipPreviewDisabled** | **bool?** | for preview campaigns, indicator of whether the agent can skip a preview without placing a call | [optional] [default to false]|
+| **SkipPreviewDisabled** | **bool?** | for preview campaigns, indicator of whether the agent can skip a preview without placing a call | [optional] |
 | **PreviewTimeOutSeconds** | **long?** | for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls | [optional] |
 | **ContactSort** | [**ContactSort**](ContactSort.html) | information determining the order in which the contacts will be dialed | [optional] |
 | **NoAnswerTimeout** | **int?** | for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds | [optional] |

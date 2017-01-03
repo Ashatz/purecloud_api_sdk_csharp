@@ -11,7 +11,7 @@ title: MeteredEvaluationAssignment
 | **Evaluators** | [**List&lt;User&gt;**](User.html) |  | [optional] |
 | **MaxNumberEvaluations** | **int?** |  | [optional] |
 | **EvaluationForm** | [**EvaluationForm**](EvaluationForm.html) |  | [optional] |
-| **AssignToActiveUser** | **bool?** |  | [optional] [default to false]|
+| **AssignToActiveUser** | **bool?** |  | [optional] |
 | **TimeInterval** | [**TimeInterval**](TimeInterval.html) |  | [optional] |
 {: class="table table-striped"}
 

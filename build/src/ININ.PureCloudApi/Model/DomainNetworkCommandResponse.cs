@@ -23,21 +23,13 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="CorrelationId">CorrelationId.</param>
         /// <param name="CommandName">CommandName.</param>
-        /// <param name="Acknowledged">Acknowledged (default to false).</param>
+        /// <param name="Acknowledged">Acknowledged.</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         public DomainNetworkCommandResponse(string CorrelationId = null, string CommandName = null, bool? Acknowledged = null, ErrorDetails ErrorInfo = null)
         {
             this.CorrelationId = CorrelationId;
             this.CommandName = CommandName;
-            // use default value if no "Acknowledged" provided
-            if (Acknowledged == null)
-            {
-                this.Acknowledged = false;
-            }
-            else
-            {
-                this.Acknowledged = Acknowledged;
-            }
+            this.Acknowledged = Acknowledged;
             this.ErrorInfo = ErrorInfo;
         }
         

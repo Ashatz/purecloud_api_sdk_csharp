@@ -106,9 +106,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CreatedByApp">CreatedByApp.</param>
         /// <param name="Site">The site associated to the outbound route. (required).</param>
         /// <param name="ClassificationTypes">ClassificationTypes.</param>
-        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Enabled">Enabled.</param>
         /// <param name="Distribution">Distribution.</param>
-        /// <param name="Managed">Managed (default to false).</param>
+        /// <param name="Managed">Managed.</param>
         /// <param name="ExternalTrunkBases">Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing..</param>
         public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Site Site = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, bool? Managed = null, List<UriReference> ExternalTrunkBases = null)
         {
@@ -140,25 +140,9 @@ namespace ININ.PureCloudApi.Model
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
             this.ClassificationTypes = ClassificationTypes;
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
+            this.Enabled = Enabled;
             this.Distribution = Distribution;
-            // use default value if no "Managed" provided
-            if (Managed == null)
-            {
-                this.Managed = false;
-            }
-            else
-            {
-                this.Managed = Managed;
-            }
+            this.Managed = Managed;
             this.ExternalTrunkBases = ExternalTrunkBases;
         }
         

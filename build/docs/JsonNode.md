@@ -7,27 +7,27 @@ title: JsonNode
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Array** | **bool?** |  | [optional] |
+| **_Null** | **bool?** |  | [optional] |
 | **NodeType** | **string** |  | [optional] |
-| **_Object** | **bool?** |  | [optional] [default to false]|
-| **Boolean** | **bool?** |  | [optional] [default to false]|
-| **Number** | **bool?** |  | [optional] [default to false]|
-| **_Float** | **bool?** |  | [optional] [default to false]|
-| **ValueNode** | **bool?** |  | [optional] [default to false]|
-| **ContainerNode** | **bool?** |  | [optional] [default to false]|
-| **MissingNode** | **bool?** |  | [optional] [default to false]|
-| **Pojo** | **bool?** |  | [optional] [default to false]|
-| **IntegralNumber** | **bool?** |  | [optional] [default to false]|
-| **FloatingPointNumber** | **bool?** |  | [optional] [default to false]|
-| **_Short** | **bool?** |  | [optional] [default to false]|
-| **_Int** | **bool?** |  | [optional] [default to false]|
-| **_Long** | **bool?** |  | [optional] [default to false]|
-| **_Double** | **bool?** |  | [optional] [default to false]|
-| **BigDecimal** | **bool?** |  | [optional] [default to false]|
-| **BigInteger** | **bool?** |  | [optional] [default to false]|
-| **Textual** | **bool?** |  | [optional] [default to false]|
-| **Binary** | **bool?** |  | [optional] [default to false]|
-| **Array** | **bool?** |  | [optional] [default to false]|
-| **_Null** | **bool?** |  | [optional] [default to false]|
+| **_Object** | **bool?** |  | [optional] |
+| **Boolean** | **bool?** |  | [optional] |
+| **Number** | **bool?** |  | [optional] |
+| **_Float** | **bool?** |  | [optional] |
+| **ValueNode** | **bool?** |  | [optional] |
+| **ContainerNode** | **bool?** |  | [optional] |
+| **MissingNode** | **bool?** |  | [optional] |
+| **Pojo** | **bool?** |  | [optional] |
+| **IntegralNumber** | **bool?** |  | [optional] |
+| **FloatingPointNumber** | **bool?** |  | [optional] |
+| **_Short** | **bool?** |  | [optional] |
+| **_Int** | **bool?** |  | [optional] |
+| **_Long** | **bool?** |  | [optional] |
+| **_Double** | **bool?** |  | [optional] |
+| **BigDecimal** | **bool?** |  | [optional] |
+| **BigInteger** | **bool?** |  | [optional] |
+| **Textual** | **bool?** |  | [optional] |
+| **Binary** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

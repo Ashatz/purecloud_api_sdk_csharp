@@ -11,9 +11,9 @@ title: CertificateDetails
 | **Subject** | **string** | Information about the subject of the certificate.  The value of this property is a comma separated key&#x3D;value format.  Each key is one of the attribute names supported by X.500. | [optional] |
 | **ExpirationDate** | **DateTime?** | The expiration date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **IssueDate** | **DateTime?** | The issue date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **Expired** | **bool?** | True if the certificate is expired, false otherwise. | [optional] [default to false]|
-| **SignatureValid** | **bool?** |  | [optional] [default to false]|
-| **Valid** | **bool?** |  | [optional] [default to false]|
+| **Expired** | **bool?** | True if the certificate is expired, false otherwise. | [optional] |
+| **SignatureValid** | **bool?** |  | [optional] |
+| **Valid** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

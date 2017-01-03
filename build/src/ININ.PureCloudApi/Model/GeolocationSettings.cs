@@ -22,20 +22,12 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="GeolocationSettings" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Enabled">Enabled.</param>
         /// <param name="MapboxKey">MapboxKey.</param>
         public GeolocationSettings(string Name = null, bool? Enabled = null, string MapboxKey = null)
         {
             this.Name = Name;
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
+            this.Enabled = Enabled;
             this.MapboxKey = MapboxKey;
         }
         

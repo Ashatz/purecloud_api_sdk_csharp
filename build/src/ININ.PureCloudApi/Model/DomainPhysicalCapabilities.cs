@@ -21,28 +21,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPhysicalCapabilities" /> class.
         /// </summary>
-        /// <param name="Vlan">Vlan (default to false).</param>
-        /// <param name="Team">Team (default to false).</param>
+        /// <param name="Vlan">Vlan.</param>
+        /// <param name="Team">Team.</param>
         public DomainPhysicalCapabilities(bool? Vlan = null, bool? Team = null)
         {
-            // use default value if no "Vlan" provided
-            if (Vlan == null)
-            {
-                this.Vlan = false;
-            }
-            else
-            {
-                this.Vlan = Vlan;
-            }
-            // use default value if no "Team" provided
-            if (Team == null)
-            {
-                this.Team = false;
-            }
-            else
-            {
-                this.Team = Team;
-            }
+            this.Vlan = Vlan;
+            this.Team = Team;
         }
         
         /// <summary>

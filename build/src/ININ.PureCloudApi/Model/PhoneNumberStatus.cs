@@ -21,18 +21,10 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumberStatus" /> class.
         /// </summary>
-        /// <param name="Callable">false if the phone number is not callable (default to false).</param>
+        /// <param name="Callable">false if the phone number is not callable.</param>
         public PhoneNumberStatus(bool? Callable = null)
         {
-            // use default value if no "Callable" provided
-            if (Callable == null)
-            {
-                this.Callable = false;
-            }
-            else
-            {
-                this.Callable = Callable;
-            }
+            this.Callable = Callable;
         }
         
         /// <summary>

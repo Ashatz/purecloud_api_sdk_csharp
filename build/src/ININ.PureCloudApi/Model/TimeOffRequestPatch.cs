@@ -21,18 +21,10 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestPatch" /> class.
         /// </summary>
-        /// <param name="MarkedAsRead">MarkedAsRead (default to false).</param>
+        /// <param name="MarkedAsRead">MarkedAsRead.</param>
         public TimeOffRequestPatch(bool? MarkedAsRead = null)
         {
-            // use default value if no "MarkedAsRead" provided
-            if (MarkedAsRead == null)
-            {
-                this.MarkedAsRead = false;
-            }
-            else
-            {
-                this.MarkedAsRead = MarkedAsRead;
-            }
+            this.MarkedAsRead = MarkedAsRead;
         }
         
         /// <summary>

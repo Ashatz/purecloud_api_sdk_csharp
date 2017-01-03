@@ -66,6 +66,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test Get
+        /// </summary>
+        [Test]
+        public void GetTest()
+        {
+            // TODO: add unit test for the method 'Get'
+            int? pageNumber = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            var response = instance.Get(pageNumber, pageSize);
+            Assert.IsInstanceOf<AttributeEntityListing> (response, "response is AttributeEntityListing");
+        }
+        
+        /// <summary>
         /// Test GetAttributeId
         /// </summary>
         [Test]
@@ -78,27 +91,14 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetAttributes
+        /// Test Post
         /// </summary>
         [Test]
-        public void GetAttributesTest()
+        public void PostTest()
         {
-            // TODO: add unit test for the method 'GetAttributes'
-            int? pageNumber = null; // TODO: replace null with proper value
-            int? pageSize = null; // TODO: replace null with proper value
-            var response = instance.GetAttributes(pageNumber, pageSize);
-            Assert.IsInstanceOf<AttributeEntityListing> (response, "response is AttributeEntityListing");
-        }
-        
-        /// <summary>
-        /// Test PostAttributes
-        /// </summary>
-        [Test]
-        public void PostAttributesTest()
-        {
-            // TODO: add unit test for the method 'PostAttributes'
+            // TODO: add unit test for the method 'Post'
             ININ.PureCloudApi.Model.Attribute body = null; // TODO: replace null with proper value
-            var response = instance.PostAttributes(body);
+            var response = instance.Post(body);
             Assert.IsInstanceOf<ININ.PureCloudApi.Model.Attribute> (response, "response is ININ.PureCloudApi.Model.Attribute");
         }
         

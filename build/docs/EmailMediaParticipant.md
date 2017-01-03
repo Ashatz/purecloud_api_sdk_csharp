@@ -18,8 +18,8 @@ title: EmailMediaParticipant
 | **State** | **string** | The participant&#39;s state.  Values can be: &#39;alerting&#39;, &#39;connected&#39;, &#39;disconnected&#39;, &#39;dialing&#39;, &#39;contacting | [optional] |
 | **Direction** | **string** | The participant&#39;s direction.  Values can be: &#39;inbound&#39; or &#39;outbound&#39; | [optional] |
 | **DisconnectType** | **string** | The reason the participant was disconnected from the conversation. | [optional] |
-| **Held** | **bool?** | Value is true when the participant is on hold. | [optional] [default to false]|
-| **WrapupRequired** | **bool?** | Value is true when the participant requires wrap-up. | [optional] [default to false]|
+| **Held** | **bool?** | Value is true when the participant is on hold. | [optional] |
+| **WrapupRequired** | **bool?** | Value is true when the participant requires wrap-up. | [optional] |
 | **WrapupPrompt** | **string** | The wrap-up prompt indicating the type of wrap-up to be performed. | [optional] |
 | **User** | [**UriReference**](UriReference.html) | The PureCloud user for this participant. | [optional] |
 | **Queue** | [**UriReference**](UriReference.html) | The PureCloud queue for this participant. | [optional] |
@@ -27,7 +27,7 @@ title: EmailMediaParticipant
 | **ErrorInfo** | [**ErrorBody**](ErrorBody.html) | If the conversation ends in error, contains additional error details. | [optional] |
 | **Script** | [**UriReference**](UriReference.html) | The Engage script that should be used by this participant. | [optional] |
 | **WrapupTimeoutMs** | **int?** | The amount of time the participant has to complete wrap-up. | [optional] |
-| **WrapupSkipped** | **bool?** | Value is true when the participant has skipped wrap-up. | [optional] [default to false]|
+| **WrapupSkipped** | **bool?** | Value is true when the participant has skipped wrap-up. | [optional] |
 | **Provider** | **string** | The source provider for the communication. | [optional] |
 | **ExternalContact** | [**UriReference**](UriReference.html) | If this participant represents an external contact, then this will be the reference for the external contact. | [optional] |
 | **ExternalOrganization** | [**UriReference**](UriReference.html) | If this participant represents an external org, then this will be the reference for the external org. | [optional] |

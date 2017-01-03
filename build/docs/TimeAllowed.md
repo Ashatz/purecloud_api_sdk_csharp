@@ -9,7 +9,7 @@ title: TimeAllowed
 |------------ | ------------- | ------------- | -------------|
 | **TimeSlots** | [**List&lt;TimeSlot&gt;**](TimeSlot.html) |  | [optional] |
 | **TimeZoneId** | **string** |  | [optional] |
-| **Empty** | **bool?** |  | [optional] [default to false]|
+| **Empty** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

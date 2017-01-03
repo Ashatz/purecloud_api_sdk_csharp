@@ -66,6 +66,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test Get
+        /// </summary>
+        [Test]
+        public void GetTest()
+        {
+            // TODO: add unit test for the method 'Get'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            var response = instance.Get(pageSize, pageNumber);
+            Assert.IsInstanceOf<DomainEntityListing> (response, "response is DomainEntityListing");
+        }
+        
+        /// <summary>
         /// Test GetDefaults
         /// </summary>
         [Test]
@@ -99,19 +112,6 @@ namespace ININ.PureCloudApi.Test
             string formatId = null; // TODO: replace null with proper value
             var response = instance.GetGreetingIdMedia(greetingId, formatId);
             Assert.IsInstanceOf<GreetingMediaInfo> (response, "response is GreetingMediaInfo");
-        }
-        
-        /// <summary>
-        /// Test GetGreetings
-        /// </summary>
-        [Test]
-        public void GetGreetingsTest()
-        {
-            // TODO: add unit test for the method 'GetGreetings'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            var response = instance.GetGreetings(pageSize, pageNumber);
-            Assert.IsInstanceOf<DomainEntityListing> (response, "response is DomainEntityListing");
         }
         
         /// <summary>
@@ -167,14 +167,14 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostGreetings
+        /// Test Post
         /// </summary>
         [Test]
-        public void PostGreetingsTest()
+        public void PostTest()
         {
-            // TODO: add unit test for the method 'PostGreetings'
+            // TODO: add unit test for the method 'Post'
             Greeting body = null; // TODO: replace null with proper value
-            var response = instance.PostGreetings(body);
+            var response = instance.Post(body);
             Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList");
         }
         

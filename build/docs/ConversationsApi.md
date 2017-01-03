@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteCallsCallIdParticipantsParticipantIdConsult**](ConversationsApi.html#deletecallscallidparticipantsparticipantidconsult) | **DELETE** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Cancel the transfer |
 | [**DeleteConversationIdParticipantsParticipantIdCodesAddcommunicationcode**](ConversationsApi.html#deleteconversationidparticipantsparticipantidcodesaddcommunicationcode) | **DELETE** /api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode} | Delete a code used to add a communication to this participant |
 | [**DeleteEmailsEmailIdMessagesDraftAttachmentsAttachmentId**](ConversationsApi.html#deleteemailsemailidmessagesdraftattachmentsattachmentid) | **DELETE** /api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
+| [**Get**](ConversationsApi.html#get) | **GET** /api/v2/conversations | Get conversations |
 | [**GetCallbacks**](ConversationsApi.html#getcallbacks) | **GET** /api/v2/conversations/callbacks | Get callback conversations |
 | [**GetCallbacksCallbackId**](ConversationsApi.html#getcallbackscallbackid) | **GET** /api/v2/conversations/callbacks/{callbackId} | Get callback conversation |
 | [**GetCallbacksCallbackIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getcallbackscallbackidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
@@ -31,7 +32,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationId**](ConversationsApi.html#getconversationid) | **GET** /api/v2/conversations/{conversationId} | Get conversation |
 | [**GetConversationIdParticipantsParticipantIdWrapup**](ConversationsApi.html#getconversationidparticipantsparticipantidwrapup) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationIdParticipantsParticipantIdWrapupcodes**](ConversationsApi.html#getconversationidparticipantsparticipantidwrapupcodes) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversations**](ConversationsApi.html#getconversations) | **GET** /api/v2/conversations | Get conversations |
 | [**GetConversationsConversationIdDetails**](ConversationsApi.html#getconversationsconversationiddetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetEmails**](ConversationsApi.html#getemails) | **GET** /api/v2/conversations/emails | Get recent email conversations |
 | [**GetEmailsEmailId**](ConversationsApi.html#getemailsemailid) | **GET** /api/v2/conversations/emails/{emailId} | Get email conversation |
@@ -258,6 +258,62 @@ namespace Example
 ### Return type
 
 **string**
+
+<a name="get"></a>
+
+## [**ConversationEntityListing**](ConversationEntityListing.html) Get (string communicationType = null)
+
+Get conversations
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ConversationsApi();
+            var communicationType = communicationType_example;  // string | Call or Chat communication filtering (optional) 
+
+            try
+            {
+                // Get conversations
+                ConversationEntityListing result = apiInstance.Get(communicationType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.Get: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **communicationType** | **string**| Call or Chat communication filtering | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConversationEntityListing**](ConversationEntityListing.html)
 
 <a name="getcallbacks"></a>
 
@@ -1443,62 +1499,6 @@ namespace Example
 ### Return type
 
 [**List<WrapupCode>**](WrapupCode.html)
-
-<a name="getconversations"></a>
-
-## [**ConversationEntityListing**](ConversationEntityListing.html) GetConversations (string communicationType = null)
-
-Get conversations
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetConversationsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ConversationsApi();
-            var communicationType = communicationType_example;  // string | Call or Chat communication filtering (optional) 
-
-            try
-            {
-                // Get conversations
-                ConversationEntityListing result = apiInstance.GetConversations(communicationType);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetConversations: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **communicationType** | **string**| Call or Chat communication filtering | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ConversationEntityListing**](ConversationEntityListing.html)
 
 <a name="getconversationsconversationiddetails"></a>
 

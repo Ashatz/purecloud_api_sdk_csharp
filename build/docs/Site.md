@@ -26,7 +26,7 @@ title: Site
 | **Edges** | [**List&lt;Edge&gt;**](Edge.html) |  | [optional] |
 | **EdgeAutoUpdateConfig** | [**EdgeAutoUpdateConfig**](EdgeAutoUpdateConfig.html) | Recurrance rule, time zone, and start/end settings for automatic edge updates for this site | [optional] |
 | **Location** | [**LocationDefinition**](LocationDefinition.html) | Location | |
-| **Managed** | **bool?** |  | [optional] [default to false]|
+| **Managed** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

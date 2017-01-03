@@ -11,7 +11,7 @@ title: AuditMessage
 | **User** | [**AuditUser**](AuditUser.html) |  | [optional] |
 | **CorrelationId** | **string** | Correlation ID. | [optional] |
 | **TransactionId** | **string** | Transaction ID. | [optional] |
-| **TransactionInitiator** | **bool?** | Whether or not this audit can be considered the initiator of the transaction it is a part of. | [optional] [default to false]|
+| **TransactionInitiator** | **bool?** | Whether or not this audit can be considered the initiator of the transaction it is a part of. | [optional] |
 | **Application** | **string** | The application through which the action of this AuditMessage was initiated. | [optional] |
 | **ServiceName** | **string** | The name of the service which sent this AuditMessage. | |
 | **Level** | **string** | The level of this audit. USER or SYSTEM. | |

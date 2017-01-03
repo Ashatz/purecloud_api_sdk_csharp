@@ -104,6 +104,24 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test Get
+        /// </summary>
+        [Test]
+        public void GetTest()
+        {
+            // TODO: add unit test for the method 'Get'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            List<Object> expand = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
+            bool? hasConversation = null; // TODO: replace null with proper value
+            var response = instance.Get(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation);
+            Assert.IsInstanceOf<OrphanRecordingListing> (response, "response is OrphanRecordingListing");
+        }
+        
+        /// <summary>
         /// Test GetConversationIdRecordings
         /// </summary>
         [Test]
@@ -241,24 +259,6 @@ namespace ININ.PureCloudApi.Test
             string fileName = null; // TODO: replace null with proper value
             var response = instance.GetOrphanIdMedia(orphanId, formatId, download, fileName);
             Assert.IsInstanceOf<Recording> (response, "response is Recording");
-        }
-        
-        /// <summary>
-        /// Test GetOrphanrecordings
-        /// </summary>
-        [Test]
-        public void GetOrphanrecordingsTest()
-        {
-            // TODO: add unit test for the method 'GetOrphanrecordings'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            string sortBy = null; // TODO: replace null with proper value
-            List<Object> expand = null; // TODO: replace null with proper value
-            string nextPage = null; // TODO: replace null with proper value
-            string previousPage = null; // TODO: replace null with proper value
-            bool? hasConversation = null; // TODO: replace null with proper value
-            var response = instance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation);
-            Assert.IsInstanceOf<OrphanRecordingListing> (response, "response is OrphanRecordingListing");
         }
         
         /// <summary>

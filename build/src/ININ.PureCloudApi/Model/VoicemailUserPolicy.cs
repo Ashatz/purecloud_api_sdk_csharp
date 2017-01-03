@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailUserPolicy" /> class.
         /// </summary>
-        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Enabled">Enabled.</param>
         /// <param name="AlertTimeoutSeconds">AlertTimeoutSeconds.</param>
         /// <param name="MinimumRecordingTimeSeconds">MinimumRecordingTimeSeconds.</param>
         /// <param name="MaximumRecordingTimeSeconds">MaximumRecordingTimeSeconds.</param>
@@ -34,15 +34,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public VoicemailUserPolicy(bool? Enabled = null, int? AlertTimeoutSeconds = null, int? MinimumRecordingTimeSeconds = null, int? MaximumRecordingTimeSeconds = null, string UnavailableMessageUri = null, string NamePromptMessageUri = null, string FullMessageUri = null, string Pin = null, long? QuotaSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
         {
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
+            this.Enabled = Enabled;
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
             this.MinimumRecordingTimeSeconds = MinimumRecordingTimeSeconds;
             this.MaximumRecordingTimeSeconds = MaximumRecordingTimeSeconds;

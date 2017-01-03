@@ -94,6 +94,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test Get
+        /// </summary>
+        [Test]
+        public void GetTest()
+        {
+            // TODO: add unit test for the method 'Get'
+            string communicationType = null; // TODO: replace null with proper value
+            var response = instance.Get(communicationType);
+            Assert.IsInstanceOf<ConversationEntityListing> (response, "response is ConversationEntityListing");
+        }
+        
+        /// <summary>
         /// Test GetCallbacks
         /// </summary>
         [Test]
@@ -355,18 +367,6 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             var response = instance.GetConversationIdParticipantsParticipantIdWrapupcodes(conversationId, participantId);
             Assert.IsInstanceOf<List<WrapupCode>> (response, "response is List<WrapupCode>");
-        }
-        
-        /// <summary>
-        /// Test GetConversations
-        /// </summary>
-        [Test]
-        public void GetConversationsTest()
-        {
-            // TODO: add unit test for the method 'GetConversations'
-            string communicationType = null; // TODO: replace null with proper value
-            var response = instance.GetConversations(communicationType);
-            Assert.IsInstanceOf<ConversationEntityListing> (response, "response is ConversationEntityListing");
         }
         
         /// <summary>

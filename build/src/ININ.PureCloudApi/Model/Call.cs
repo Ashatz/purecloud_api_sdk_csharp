@@ -294,11 +294,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">The connection state of this communication..</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
         /// <param name="Direction">The direction of the call.</param>
-        /// <param name="Recording">True if this call is being recorded. (default to false).</param>
+        /// <param name="Recording">True if this call is being recorded..</param>
         /// <param name="RecordingState">State of recording on this call..</param>
-        /// <param name="Muted">True if this call is muted so that remote participants can&#39;t hear any audio from this end. (default to false).</param>
-        /// <param name="Confined">True if this call is held and the person on this side hears hold music. (default to false).</param>
-        /// <param name="Held">True if this call is held and the person on this side hears silence. (default to false).</param>
+        /// <param name="Muted">True if this call is muted so that remote participants can&#39;t hear any audio from this end..</param>
+        /// <param name="Confined">True if this call is held and the person on this side hears hold music..</param>
+        /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this call..</param>
         /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
@@ -315,43 +315,11 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.Id = Id;
             this.Direction = Direction;
-            // use default value if no "Recording" provided
-            if (Recording == null)
-            {
-                this.Recording = false;
-            }
-            else
-            {
-                this.Recording = Recording;
-            }
+            this.Recording = Recording;
             this.RecordingState = RecordingState;
-            // use default value if no "Muted" provided
-            if (Muted == null)
-            {
-                this.Muted = false;
-            }
-            else
-            {
-                this.Muted = Muted;
-            }
-            // use default value if no "Confined" provided
-            if (Confined == null)
-            {
-                this.Confined = false;
-            }
-            else
-            {
-                this.Confined = Confined;
-            }
-            // use default value if no "Held" provided
-            if (Held == null)
-            {
-                this.Held = false;
-            }
-            else
-            {
-                this.Held = Held;
-            }
+            this.Muted = Muted;
+            this.Confined = Confined;
+            this.Held = Held;
             this.RecordingId = RecordingId;
             this.Segments = Segments;
             this.ErrorInfo = ErrorInfo;

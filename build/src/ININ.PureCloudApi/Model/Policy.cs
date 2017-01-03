@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Order">Order.</param>
         /// <param name="Description">Description.</param>
-        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Enabled">Enabled.</param>
         /// <param name="MediaPolicies">Conditions and actions per media type.</param>
         /// <param name="Conditions">Conditions.</param>
         /// <param name="Actions">Actions.</param>
@@ -38,15 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.CreatedDate = CreatedDate;
             this.Order = Order;
             this.Description = Description;
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
+            this.Enabled = Enabled;
             this.MediaPolicies = MediaPolicies;
             this.Conditions = Conditions;
             this.Actions = Actions;

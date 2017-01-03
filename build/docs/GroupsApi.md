@@ -9,13 +9,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteGroupId**](GroupsApi.html#deletegroupid) | **DELETE** /api/v2/groups/{groupId} | Delete group |
 | [**DeleteGroupIdMembers**](GroupsApi.html#deletegroupidmembers) | **DELETE** /api/v2/groups/{groupId}/members | Remove members |
+| [**Get**](GroupsApi.html#get) | **GET** /api/v2/groups | Get a group list |
 | [**GetFieldconfig**](GroupsApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetGroupId**](GroupsApi.html#getgroupid) | **GET** /api/v2/groups/{groupId} | Get group |
 | [**GetGroupIdMembers**](GroupsApi.html#getgroupidmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
-| [**GetGroups**](GroupsApi.html#getgroups) | **GET** /api/v2/groups | Get a group list |
 | [**GetSearch**](GroupsApi.html#getsearch) | **GET** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
+| [**Post**](GroupsApi.html#post) | **POST** /api/v2/groups | Create a group |
 | [**PostGroupIdMembers**](GroupsApi.html#postgroupidmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
-| [**PostGroups**](GroupsApi.html#postgroups) | **POST** /api/v2/groups | Create a group |
 | [**PostSearch**](GroupsApi.html#postsearch) | **POST** /api/v2/groups/search | Search groups |
 | [**PutGroupId**](GroupsApi.html#putgroupid) | **PUT** /api/v2/groups/{groupId} | Update group |
 {: class="table table-striped"}
@@ -132,6 +132,66 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="get"></a>
+
+## [**GroupEntityListing**](GroupEntityListing.html) Get (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+
+Get a group list
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GroupsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+
+            try
+            {
+                // Get a group list
+                GroupEntityListing result = apiInstance.Get(pageSize, pageNumber, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.Get: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
+{: class="table table-striped"}
+
+### Return type
+
+[**GroupEntityListing**](GroupEntityListing.html)
 
 <a name="getfieldconfig"></a>
 
@@ -309,66 +369,6 @@ namespace Example
 
 [**UserEntityListing**](UserEntityListing.html)
 
-<a name="getgroups"></a>
-
-## [**GroupEntityListing**](GroupEntityListing.html) GetGroups (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
-
-Get a group list
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetGroupsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new GroupsApi();
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
-
-            try
-            {
-                // Get a group list
-                GroupEntityListing result = apiInstance.GetGroups(pageSize, pageNumber, sortOrder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling GroupsApi.GetGroups: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
-{: class="table table-striped"}
-
-### Return type
-
-[**GroupEntityListing**](GroupEntityListing.html)
-
 <a name="getsearch"></a>
 
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetSearch (string q64, List<string> expand = null)
@@ -427,6 +427,62 @@ namespace Example
 
 [**GroupsSearchResponse**](GroupsSearchResponse.html)
 
+<a name="post"></a>
+
+## [**Group**](Group.html) Post (Group body)
+
+Create a group
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GroupsApi();
+            var body = new Group(); // Group | Group
+
+            try
+            {
+                // Create a group
+                Group result = apiInstance.Post(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.Post: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**Group**](Group.html)| Group |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Group**](Group.html)
+
 <a name="postgroupidmembers"></a>
 
 ## void PostGroupIdMembers (string groupId, GroupMembersUpdate body)
@@ -483,62 +539,6 @@ namespace Example
 ### Return type
 
 void (empty response body)
-
-<a name="postgroups"></a>
-
-## [**Group**](Group.html) PostGroups (Group body)
-
-Create a group
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class PostGroupsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new GroupsApi();
-            var body = new Group(); // Group | Group
-
-            try
-            {
-                // Create a group
-                Group result = apiInstance.PostGroups(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling GroupsApi.PostGroups: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**Group**](Group.html)| Group |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Group**](Group.html)
 
 <a name="postsearch"></a>
 

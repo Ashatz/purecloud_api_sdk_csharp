@@ -117,7 +117,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TrunkBase">The trunk base configuration used on this trunk..</param>
         /// <param name="TrunkMetabase">The metabase used to create this trunk..</param>
         /// <param name="EdgeGroup">The edge group associated with this trunk..</param>
-        /// <param name="Enabled">True if this trunk is in-service.  This comes from the trunk_enabled property of the referenced trunk base. (default to false).</param>
+        /// <param name="Enabled">True if this trunk is in-service.  This comes from the trunk_enabled property of the referenced trunk base..</param>
         public Trunk(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, TrunkTypeEnum? TrunkType = null, UriReference Edge = null, UriReference TrunkBase = null, UriReference TrunkMetabase = null, UriReference EdgeGroup = null, bool? Enabled = null)
         {
             // to ensure "Name" is required (not null)
@@ -143,15 +143,7 @@ namespace ININ.PureCloudApi.Model
             this.TrunkBase = TrunkBase;
             this.TrunkMetabase = TrunkMetabase;
             this.EdgeGroup = EdgeGroup;
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
+            this.Enabled = Enabled;
         }
         
         /// <summary>

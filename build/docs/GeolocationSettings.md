@@ -9,7 +9,7 @@ title: GeolocationSettings
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Enabled** | **bool?** |  | [optional] [default to false]|
+| **Enabled** | **bool?** |  | [optional] |
 | **MapboxKey** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

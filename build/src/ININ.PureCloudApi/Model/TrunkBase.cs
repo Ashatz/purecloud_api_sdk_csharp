@@ -115,7 +115,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TrunkMetabase">The meta-base this trunk is based on. (required).</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="TrunkType">The type of this trunk base. (required).</param>
-        /// <param name="Managed">Is this trunk being managed remotely. (default to false).</param>
+        /// <param name="Managed">Is this trunk being managed remotely..</param>
         public TrunkBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null, bool? Managed = null)
         {
             // to ensure "Name" is required (not null)
@@ -155,15 +155,7 @@ namespace ININ.PureCloudApi.Model
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
             this.Properties = Properties;
-            // use default value if no "Managed" provided
-            if (Managed == null)
-            {
-                this.Managed = false;
-            }
-            else
-            {
-                this.Managed = Managed;
-            }
+            this.Managed = Managed;
         }
         
         /// <summary>

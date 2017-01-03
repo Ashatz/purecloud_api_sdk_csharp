@@ -23,20 +23,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Campaigns">Campaigns.</param>
         /// <param name="Sequences">Sequences.</param>
-        /// <param name="UseTriggeringEntity">UseTriggeringEntity (default to false).</param>
+        /// <param name="UseTriggeringEntity">UseTriggeringEntity.</param>
         public CampaignRuleActionEntities(List<UriReference> Campaigns = null, List<UriReference> Sequences = null, bool? UseTriggeringEntity = null)
         {
             this.Campaigns = Campaigns;
             this.Sequences = Sequences;
-            // use default value if no "UseTriggeringEntity" provided
-            if (UseTriggeringEntity == null)
-            {
-                this.UseTriggeringEntity = false;
-            }
-            else
-            {
-                this.UseTriggeringEntity = UseTriggeringEntity;
-            }
+            this.UseTriggeringEntity = UseTriggeringEntity;
         }
         
         /// <summary>

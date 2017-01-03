@@ -302,8 +302,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SoftwareStatus">SoftwareStatus.</param>
         /// <param name="OnlineStatus">OnlineStatus.</param>
         /// <param name="SerialNumber">SerialNumber.</param>
-        /// <param name="PhysicalEdge">PhysicalEdge (default to false).</param>
-        /// <param name="Managed">Managed (default to false).</param>
+        /// <param name="PhysicalEdge">PhysicalEdge.</param>
+        /// <param name="Managed">Managed.</param>
         /// <param name="EdgeDeploymentType">EdgeDeploymentType.</param>
         /// <param name="CallDrainingState">CallDrainingState.</param>
         /// <param name="ConversationCount">ConversationCount.</param>
@@ -348,24 +348,8 @@ namespace ININ.PureCloudApi.Model
             this.SoftwareStatus = SoftwareStatus;
             this.OnlineStatus = OnlineStatus;
             this.SerialNumber = SerialNumber;
-            // use default value if no "PhysicalEdge" provided
-            if (PhysicalEdge == null)
-            {
-                this.PhysicalEdge = false;
-            }
-            else
-            {
-                this.PhysicalEdge = PhysicalEdge;
-            }
-            // use default value if no "Managed" provided
-            if (Managed == null)
-            {
-                this.Managed = false;
-            }
-            else
-            {
-                this.Managed = Managed;
-            }
+            this.PhysicalEdge = PhysicalEdge;
+            this.Managed = Managed;
             this.EdgeDeploymentType = EdgeDeploymentType;
             this.CallDrainingState = CallDrainingState;
             this.ConversationCount = ConversationCount;

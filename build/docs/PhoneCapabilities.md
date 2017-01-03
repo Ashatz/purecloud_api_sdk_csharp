@@ -7,12 +7,12 @@ title: PhoneCapabilities
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Provisions** | **bool?** |  | [optional] [default to false]|
-| **Registers** | **bool?** |  | [optional] [default to false]|
-| **DualRegisters** | **bool?** |  | [optional] [default to false]|
+| **Provisions** | **bool?** |  | [optional] |
+| **Registers** | **bool?** |  | [optional] |
+| **DualRegisters** | **bool?** |  | [optional] |
 | **HardwareIdType** | **string** |  | [optional] |
-| **AllowReboot** | **bool?** |  | [optional] [default to false]|
-| **NoRebalance** | **bool?** |  | [optional] [default to false]|
+| **AllowReboot** | **bool?** |  | [optional] |
+| **NoRebalance** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

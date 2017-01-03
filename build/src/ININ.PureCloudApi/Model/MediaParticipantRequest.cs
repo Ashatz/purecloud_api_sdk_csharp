@@ -110,60 +110,20 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Wrapup">Wrap-up to assign to this participant..</param>
         /// <param name="State">The state to update to set for this participant&#39;s communications.  Possible values are: &#39;connected&#39; and &#39;disconnected&#39;..</param>
-        /// <param name="Recording">True to enable recording of this participant, otherwise false to disable recording. (default to false).</param>
-        /// <param name="Muted">True to mute this conversation participant. (default to false).</param>
-        /// <param name="Confined">True to confine this conversation participant.  Should only be used for ad-hoc conferences (default to false).</param>
-        /// <param name="Held">True to hold this conversation participant. (default to false).</param>
-        /// <param name="WrapupSkipped">True to skip wrap-up for this participant. (default to false).</param>
+        /// <param name="Recording">True to enable recording of this participant, otherwise false to disable recording..</param>
+        /// <param name="Muted">True to mute this conversation participant..</param>
+        /// <param name="Confined">True to confine this conversation participant.  Should only be used for ad-hoc conferences.</param>
+        /// <param name="Held">True to hold this conversation participant..</param>
+        /// <param name="WrapupSkipped">True to skip wrap-up for this participant..</param>
         public MediaParticipantRequest(Wrapup Wrapup = null, StateEnum? State = null, bool? Recording = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? WrapupSkipped = null)
         {
             this.Wrapup = Wrapup;
             this.State = State;
-            // use default value if no "Recording" provided
-            if (Recording == null)
-            {
-                this.Recording = false;
-            }
-            else
-            {
-                this.Recording = Recording;
-            }
-            // use default value if no "Muted" provided
-            if (Muted == null)
-            {
-                this.Muted = false;
-            }
-            else
-            {
-                this.Muted = Muted;
-            }
-            // use default value if no "Confined" provided
-            if (Confined == null)
-            {
-                this.Confined = false;
-            }
-            else
-            {
-                this.Confined = Confined;
-            }
-            // use default value if no "Held" provided
-            if (Held == null)
-            {
-                this.Held = false;
-            }
-            else
-            {
-                this.Held = Held;
-            }
-            // use default value if no "WrapupSkipped" provided
-            if (WrapupSkipped == null)
-            {
-                this.WrapupSkipped = false;
-            }
-            else
-            {
-                this.WrapupSkipped = WrapupSkipped;
-            }
+            this.Recording = Recording;
+            this.Muted = Muted;
+            this.Confined = Confined;
+            this.Held = Held;
+            this.WrapupSkipped = WrapupSkipped;
         }
         
         /// <summary>

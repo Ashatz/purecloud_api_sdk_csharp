@@ -23,20 +23,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="TimeSlots">TimeSlots.</param>
         /// <param name="TimeZoneId">TimeZoneId.</param>
-        /// <param name="Empty">Empty (default to false).</param>
+        /// <param name="Empty">Empty.</param>
         public TimeAllowed(List<TimeSlot> TimeSlots = null, string TimeZoneId = null, bool? Empty = null)
         {
             this.TimeSlots = TimeSlots;
             this.TimeZoneId = TimeZoneId;
-            // use default value if no "Empty" provided
-            if (Empty == null)
-            {
-                this.Empty = false;
-            }
-            else
-            {
-                this.Empty = Empty;
-            }
+            this.Empty = Empty;
         }
         
         /// <summary>

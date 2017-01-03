@@ -21,60 +21,20 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneCapabilities" /> class.
         /// </summary>
-        /// <param name="Provisions">Provisions (default to false).</param>
-        /// <param name="Registers">Registers (default to false).</param>
-        /// <param name="DualRegisters">DualRegisters (default to false).</param>
+        /// <param name="Provisions">Provisions.</param>
+        /// <param name="Registers">Registers.</param>
+        /// <param name="DualRegisters">DualRegisters.</param>
         /// <param name="HardwareIdType">HardwareIdType.</param>
-        /// <param name="AllowReboot">AllowReboot (default to false).</param>
-        /// <param name="NoRebalance">NoRebalance (default to false).</param>
+        /// <param name="AllowReboot">AllowReboot.</param>
+        /// <param name="NoRebalance">NoRebalance.</param>
         public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null, bool? NoRebalance = null)
         {
-            // use default value if no "Provisions" provided
-            if (Provisions == null)
-            {
-                this.Provisions = false;
-            }
-            else
-            {
-                this.Provisions = Provisions;
-            }
-            // use default value if no "Registers" provided
-            if (Registers == null)
-            {
-                this.Registers = false;
-            }
-            else
-            {
-                this.Registers = Registers;
-            }
-            // use default value if no "DualRegisters" provided
-            if (DualRegisters == null)
-            {
-                this.DualRegisters = false;
-            }
-            else
-            {
-                this.DualRegisters = DualRegisters;
-            }
+            this.Provisions = Provisions;
+            this.Registers = Registers;
+            this.DualRegisters = DualRegisters;
             this.HardwareIdType = HardwareIdType;
-            // use default value if no "AllowReboot" provided
-            if (AllowReboot == null)
-            {
-                this.AllowReboot = false;
-            }
-            else
-            {
-                this.AllowReboot = AllowReboot;
-            }
-            // use default value if no "NoRebalance" provided
-            if (NoRebalance == null)
-            {
-                this.NoRebalance = false;
-            }
-            else
-            {
-                this.NoRebalance = NoRebalance;
-            }
+            this.AllowReboot = AllowReboot;
+            this.NoRebalance = NoRebalance;
         }
         
         /// <summary>
