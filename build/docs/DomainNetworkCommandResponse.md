@@ -9,7 +9,7 @@ title: DomainNetworkCommandResponse
 |------------ | ------------- | ------------- | -------------|
 | **CorrelationId** | **string** |  | [optional] |
 | **CommandName** | **string** |  | [optional] |
-| **Acknowledged** | **bool?** |  | [optional] |
+| **Acknowledged** | **bool?** |  | [optional] [default to false]|
 | **ErrorInfo** | [**ErrorDetails**](ErrorDetails.html) |  | [optional] |
 {: class="table table-striped"}
 

@@ -134,13 +134,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CallbackNumbers">CallbackNumbers.</param>
         /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ScriptId">ScriptId.</param>
-        /// <param name="SkipEnabled">SkipEnabled.</param>
+        /// <param name="SkipEnabled">SkipEnabled (default to false).</param>
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="CobrowseRole">CobrowseRole.</param>
         /// <param name="CobrowseRoomId">CobrowseRoomId.</param>
         /// <param name="MediaBridgeId">MediaBridgeId.</param>
         /// <param name="ScreenShareAddressSelf">ScreenShareAddressSelf.</param>
-        /// <param name="SharingScreen">SharingScreen.</param>
+        /// <param name="SharingScreen">SharingScreen (default to false).</param>
         /// <param name="ScreenShareRoomId">ScreenShareRoomId.</param>
         /// <param name="VideoRoomId">VideoRoomId.</param>
         /// <param name="VideoAddressSelf">VideoAddressSelf.</param>
@@ -168,13 +168,29 @@ namespace ININ.PureCloudApi.Model
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.ScriptId = ScriptId;
-            this.SkipEnabled = SkipEnabled;
+            // use default value if no "SkipEnabled" provided
+            if (SkipEnabled == null)
+            {
+                this.SkipEnabled = false;
+            }
+            else
+            {
+                this.SkipEnabled = SkipEnabled;
+            }
             this.TimeoutSeconds = TimeoutSeconds;
             this.CobrowseRole = CobrowseRole;
             this.CobrowseRoomId = CobrowseRoomId;
             this.MediaBridgeId = MediaBridgeId;
             this.ScreenShareAddressSelf = ScreenShareAddressSelf;
-            this.SharingScreen = SharingScreen;
+            // use default value if no "SharingScreen" provided
+            if (SharingScreen == null)
+            {
+                this.SharingScreen = false;
+            }
+            else
+            {
+                this.SharingScreen = SharingScreen;
+            }
             this.ScreenShareRoomId = ScreenShareRoomId;
             this.VideoRoomId = VideoRoomId;
             this.VideoAddressSelf = VideoAddressSelf;

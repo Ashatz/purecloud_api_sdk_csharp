@@ -16,7 +16,7 @@ title: Organization
 | **Version** | **int?** | The current version of the organization. | |
 | **State** | **string** |  | [optional] |
 | **DefaultSiteId** | **string** |  | [optional] |
-| **Deletable** | **bool?** |  | [optional] |
+| **Deletable** | **bool?** |  | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -12,7 +12,7 @@ title: DocumentAudit
 | **User** | [**UriReference**](UriReference.html) |  | [optional] |
 | **Workspace** | [**UriReference**](UriReference.html) |  | [optional] |
 | **TransactionId** | **string** |  | [optional] |
-| **TransactionInitiator** | **bool?** |  | [optional] |
+| **TransactionInitiator** | **bool?** |  | [optional] [default to false]|
 | **Application** | **string** |  | [optional] |
 | **ServiceName** | **string** |  | [optional] |
 | **Level** | **string** |  | [optional] |

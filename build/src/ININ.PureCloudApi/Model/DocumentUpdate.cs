@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="ChangeNumber">ChangeNumber.</param>
         /// <param name="Name">The name of the document (required).</param>
-        /// <param name="Read">Read.</param>
+        /// <param name="Read">Read (default to false).</param>
         /// <param name="AddTags">AddTags.</param>
         /// <param name="RemoveTags">RemoveTags.</param>
         /// <param name="AddTagIds">AddTagIds.</param>
@@ -47,7 +47,15 @@ namespace ININ.PureCloudApi.Model
                 this.Name = Name;
             }
             this.ChangeNumber = ChangeNumber;
-            this.Read = Read;
+            // use default value if no "Read" provided
+            if (Read == null)
+            {
+                this.Read = false;
+            }
+            else
+            {
+                this.Read = Read;
+            }
             this.AddTags = AddTags;
             this.RemoveTags = RemoveTags;
             this.AddTagIds = AddTagIds;

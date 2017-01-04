@@ -204,9 +204,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">The connection state of this communication..</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
         /// <param name="Context">The room id context (xmpp jid) for the conference session..</param>
-        /// <param name="AudioMuted">Indicates whether this participant has muted their outgoing audio..</param>
-        /// <param name="VideoMuted">Indicates whether this participant has muted/paused their outgoing video..</param>
-        /// <param name="SharingScreen">Indicates whether this participant is sharing their screen to the session..</param>
+        /// <param name="AudioMuted">Indicates whether this participant has muted their outgoing audio. (default to false).</param>
+        /// <param name="VideoMuted">Indicates whether this participant has muted/paused their outgoing video. (default to false).</param>
+        /// <param name="SharingScreen">Indicates whether this participant is sharing their screen to the session. (default to false).</param>
         /// <param name="PeerCount">The number of peer participants from the perspective of the participant in the conference..</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -217,9 +217,33 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.Id = Id;
             this.Context = Context;
-            this.AudioMuted = AudioMuted;
-            this.VideoMuted = VideoMuted;
-            this.SharingScreen = SharingScreen;
+            // use default value if no "AudioMuted" provided
+            if (AudioMuted == null)
+            {
+                this.AudioMuted = false;
+            }
+            else
+            {
+                this.AudioMuted = AudioMuted;
+            }
+            // use default value if no "VideoMuted" provided
+            if (VideoMuted == null)
+            {
+                this.VideoMuted = false;
+            }
+            else
+            {
+                this.VideoMuted = VideoMuted;
+            }
+            // use default value if no "SharingScreen" provided
+            if (SharingScreen == null)
+            {
+                this.SharingScreen = false;
+            }
+            else
+            {
+                this.SharingScreen = SharingScreen;
+            }
             this.PeerCount = PeerCount;
             this.DisconnectType = DisconnectType;
             this.ConnectedTime = ConnectedTime;

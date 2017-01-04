@@ -24,16 +24,32 @@ namespace ININ.PureCloudApi.Model
         /// <param name="QuestionId">QuestionId.</param>
         /// <param name="AnswerId">AnswerId.</param>
         /// <param name="Score">Score.</param>
-        /// <param name="MarkedNA">MarkedNA.</param>
-        /// <param name="FailedKillQuestion">FailedKillQuestion.</param>
+        /// <param name="MarkedNA">MarkedNA (default to false).</param>
+        /// <param name="FailedKillQuestion">FailedKillQuestion (default to false).</param>
         /// <param name="Comments">Comments.</param>
         public QuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? FailedKillQuestion = null, string Comments = null)
         {
             this.QuestionId = QuestionId;
             this.AnswerId = AnswerId;
             this.Score = Score;
-            this.MarkedNA = MarkedNA;
-            this.FailedKillQuestion = FailedKillQuestion;
+            // use default value if no "MarkedNA" provided
+            if (MarkedNA == null)
+            {
+                this.MarkedNA = false;
+            }
+            else
+            {
+                this.MarkedNA = MarkedNA;
+            }
+            // use default value if no "FailedKillQuestion" provided
+            if (FailedKillQuestion == null)
+            {
+                this.FailedKillQuestion = false;
+            }
+            else
+            {
+                this.FailedKillQuestion = FailedKillQuestion;
+            }
             this.Comments = Comments;
         }
         

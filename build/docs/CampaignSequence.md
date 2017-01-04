@@ -16,7 +16,7 @@ title: CampaignSequence
 | **CurrentCampaign** | **int?** | the zero-based index of the current campaign in the campaigns list | |
 | **Status** | **string** | status of the sequence | |
 | **StopMessage** | **string** | if a sequence has unexpectedly stopped, this message provides the reason | [optional] |
-| **Repeat** | **bool?** | indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false | [optional] |
+| **Repeat** | **bool?** | indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

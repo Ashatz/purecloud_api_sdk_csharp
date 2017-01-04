@@ -10,8 +10,8 @@ title: TimeOffRequest
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
 | **User** | [**User**](User.html) | The user associated with this TimeOffRequest | |
-| **IsFullDayRequest** | **bool?** | Whether this is a full day request (false means partial day) | |
-| **MarkedAsRead** | **bool?** | Whether this request has been marked as read by the agent | |
+| **IsFullDayRequest** | **bool?** | Whether this is a full day request (false means partial day) | [default to false]|
+| **MarkedAsRead** | **bool?** | Whether this request has been marked as read by the agent | [default to false]|
 | **ActivityCodeId** | **string** | The ID of the activity code associated with this TimeOffRequest | |
 | **Status** | **string** | The administrative status of this TimeOffRequest | |
 | **PartialDayStartDateTimes** | **List&lt;DateTime?&gt;** | The start date-times for partial day requests.  Required if isFullDayRequest &#x3D;&#x3D; false | [optional] |

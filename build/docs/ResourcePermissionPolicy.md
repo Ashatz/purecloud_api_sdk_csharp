@@ -13,7 +13,7 @@ title: ResourcePermissionPolicy
 | **PolicyName** | **string** |  | [optional] |
 | **PolicyDescription** | **string** |  | [optional] |
 | **ActionSetKey** | **string** |  | [optional] |
-| **AllowConditions** | **bool?** |  | [optional] |
+| **AllowConditions** | **bool?** |  | [optional] [default to false]|
 | **ResourceConditionNode** | [**ResourceConditionNode**](ResourceConditionNode.html) |  | [optional] |
 | **NamedResources** | **List&lt;string&gt;** |  | [optional] |
 | **ResourceCondition** | **string** |  | [optional] |

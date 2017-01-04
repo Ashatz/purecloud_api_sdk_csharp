@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TotalScore">TotalScore.</param>
         /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
         /// <param name="QuestionGroupScores">QuestionGroupScores.</param>
-        /// <param name="AnyFailedKillQuestions">AnyFailedKillQuestions.</param>
+        /// <param name="AnyFailedKillQuestions">AnyFailedKillQuestions (default to false).</param>
         /// <param name="Comments">Comments.</param>
         /// <param name="AgentComments">AgentComments.</param>
         public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, List<QuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null)
@@ -32,7 +32,15 @@ namespace ININ.PureCloudApi.Model
             this.TotalScore = TotalScore;
             this.TotalCriticalScore = TotalCriticalScore;
             this.QuestionGroupScores = QuestionGroupScores;
-            this.AnyFailedKillQuestions = AnyFailedKillQuestions;
+            // use default value if no "AnyFailedKillQuestions" provided
+            if (AnyFailedKillQuestions == null)
+            {
+                this.AnyFailedKillQuestions = false;
+            }
+            else
+            {
+                this.AnyFailedKillQuestions = AnyFailedKillQuestions;
+            }
             this.Comments = Comments;
             this.AgentComments = AgentComments;
         }

@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Evaluators">Evaluators.</param>
         /// <param name="MaxNumberEvaluations">MaxNumberEvaluations.</param>
         /// <param name="EvaluationForm">EvaluationForm.</param>
-        /// <param name="AssignToActiveUser">AssignToActiveUser.</param>
+        /// <param name="AssignToActiveUser">AssignToActiveUser (default to false).</param>
         /// <param name="TimeInterval">TimeInterval.</param>
         public MeteredEvaluationAssignment(string EvaluationContextId = null, List<User> Evaluators = null, int? MaxNumberEvaluations = null, EvaluationForm EvaluationForm = null, bool? AssignToActiveUser = null, TimeInterval TimeInterval = null)
         {
@@ -33,7 +33,15 @@ namespace ININ.PureCloudApi.Model
             this.Evaluators = Evaluators;
             this.MaxNumberEvaluations = MaxNumberEvaluations;
             this.EvaluationForm = EvaluationForm;
-            this.AssignToActiveUser = AssignToActiveUser;
+            // use default value if no "AssignToActiveUser" provided
+            if (AssignToActiveUser == null)
+            {
+                this.AssignToActiveUser = false;
+            }
+            else
+            {
+                this.AssignToActiveUser = AssignToActiveUser;
+            }
             this.TimeInterval = TimeInterval;
         }
         

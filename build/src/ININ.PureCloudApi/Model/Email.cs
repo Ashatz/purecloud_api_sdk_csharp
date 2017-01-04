@@ -212,7 +212,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="State">The connection state of this communication..</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
-        /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
+        /// <param name="Held">True if this call is held and the person on this side hears silence. (default to false).</param>
         /// <param name="Subject">The subject for the initial email that started this conversation..</param>
         /// <param name="MessagesSent">The number of email messages sent by this participant..</param>
         /// <param name="Segments">The time line of the participant&#39;s email, divided into activity segments..</param>
@@ -228,7 +228,15 @@ namespace ININ.PureCloudApi.Model
         {
             this.State = State;
             this.Id = Id;
-            this.Held = Held;
+            // use default value if no "Held" provided
+            if (Held == null)
+            {
+                this.Held = false;
+            }
+            else
+            {
+                this.Held = Held;
+            }
             this.Subject = Subject;
             this.MessagesSent = MessagesSent;
             this.Segments = Segments;

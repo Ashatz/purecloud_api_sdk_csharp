@@ -12,7 +12,7 @@ title: CampaignInteraction
 | **Agent** | [**UriReference**](UriReference.html) |  | [optional] |
 | **Contact** | [**UriReference**](UriReference.html) |  | [optional] |
 | **DestinationAddress** | **string** |  | [optional] |
-| **ActivePreviewCall** | **bool?** | Boolean value if there is an active preview call on the interaction | [optional] |
+| **ActivePreviewCall** | **bool?** | Boolean value if there is an active preview call on the interaction | [optional] [default to false]|
 | **LastActivePreviewWrapupTime** | **DateTime?** | The time when the last preview of the interaction was wrapped up. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **CreationTime** | **DateTime?** | The time when dialer created the interaction. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **CallPlacedTime** | **DateTime?** | The time when the agent or system places the call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

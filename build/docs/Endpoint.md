@@ -21,7 +21,7 @@ title: Endpoint
 | **Count** | **int?** |  | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Schema** | [**UriReference**](UriReference.html) | Schema | |
-| **Enabled** | **bool?** |  | [optional] |
+| **Enabled** | **bool?** |  | [optional] [default to false]|
 | **Site** | [**UriReference**](UriReference.html) |  | [optional] |
 | **Dids** | **List&lt;string&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

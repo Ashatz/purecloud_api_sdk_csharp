@@ -176,9 +176,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LastModifiedUserId">LastModifiedUserId.</param>
         /// <param name="LastModifiedCorrelationId">LastModifiedCorrelationId.</param>
         /// <param name="CommandResponses">CommandResponses.</param>
-        /// <param name="InheritPhoneTrunkBasesIPv4">The IPv4 phone trunk base assignment will be inherited from the Edge Group..</param>
-        /// <param name="InheritPhoneTrunkBasesIPv6">The IPv6 phone trunk base assignment will be inherited from the Edge Group..</param>
-        /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group..</param>
+        /// <param name="InheritPhoneTrunkBasesIPv4">The IPv4 phone trunk base assignment will be inherited from the Edge Group. (default to false).</param>
+        /// <param name="InheritPhoneTrunkBasesIPv6">The IPv6 phone trunk base assignment will be inherited from the Edge Group. (default to false).</param>
+        /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. (default to false).</param>
         /// <param name="ExternalTrunkBaseAssignments">External trunk base settings to use for external communication from this interface..</param>
         /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
         public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
@@ -240,9 +240,33 @@ namespace ININ.PureCloudApi.Model
             this.LastModifiedUserId = LastModifiedUserId;
             this.LastModifiedCorrelationId = LastModifiedCorrelationId;
             this.CommandResponses = CommandResponses;
-            this.InheritPhoneTrunkBasesIPv4 = InheritPhoneTrunkBasesIPv4;
-            this.InheritPhoneTrunkBasesIPv6 = InheritPhoneTrunkBasesIPv6;
-            this.UseForInternalEdgeCommunication = UseForInternalEdgeCommunication;
+            // use default value if no "InheritPhoneTrunkBasesIPv4" provided
+            if (InheritPhoneTrunkBasesIPv4 == null)
+            {
+                this.InheritPhoneTrunkBasesIPv4 = false;
+            }
+            else
+            {
+                this.InheritPhoneTrunkBasesIPv4 = InheritPhoneTrunkBasesIPv4;
+            }
+            // use default value if no "InheritPhoneTrunkBasesIPv6" provided
+            if (InheritPhoneTrunkBasesIPv6 == null)
+            {
+                this.InheritPhoneTrunkBasesIPv6 = false;
+            }
+            else
+            {
+                this.InheritPhoneTrunkBasesIPv6 = InheritPhoneTrunkBasesIPv6;
+            }
+            // use default value if no "UseForInternalEdgeCommunication" provided
+            if (UseForInternalEdgeCommunication == null)
+            {
+                this.UseForInternalEdgeCommunication = false;
+            }
+            else
+            {
+                this.UseForInternalEdgeCommunication = UseForInternalEdgeCommunication;
+            }
             this.ExternalTrunkBaseAssignments = ExternalTrunkBaseAssignments;
             this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
         }

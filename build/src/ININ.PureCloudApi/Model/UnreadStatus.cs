@@ -21,10 +21,18 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UnreadStatus" /> class.
         /// </summary>
-        /// <param name="Unread">Sets if the alert is read or unread..</param>
+        /// <param name="Unread">Sets if the alert is read or unread. (default to false).</param>
         public UnreadStatus(bool? Unread = null)
         {
-            this.Unread = Unread;
+            // use default value if no "Unread" provided
+            if (Unread == null)
+            {
+                this.Unread = false;
+            }
+            else
+            {
+                this.Unread = Unread;
+            }
         }
         
         /// <summary>

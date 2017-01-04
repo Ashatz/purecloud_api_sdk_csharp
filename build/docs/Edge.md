@@ -39,8 +39,8 @@ title: Edge
 | **SoftwareStatus** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) |  | [optional] |
 | **OnlineStatus** | **string** |  | [optional] |
 | **SerialNumber** | **string** |  | [optional] |
-| **PhysicalEdge** | **bool?** |  | [optional] |
-| **Managed** | **bool?** |  | [optional] |
+| **PhysicalEdge** | **bool?** |  | [optional] [default to false]|
+| **Managed** | **bool?** |  | [optional] [default to false]|
 | **EdgeDeploymentType** | **string** |  | [optional] |
 | **CallDrainingState** | **string** |  | [optional] |
 | **ConversationCount** | **int?** |  | [optional] |

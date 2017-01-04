@@ -234,11 +234,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DestinationSessionId">DestinationSessionId.</param>
         /// <param name="SipResponseCodes">SipResponseCodes.</param>
         /// <param name="Q850ResponseCodes">Q850ResponseCodes.</param>
-        /// <param name="Conference">Conference.</param>
+        /// <param name="Conference">Conference (default to false).</param>
         /// <param name="GroupId">GroupId.</param>
         /// <param name="Subject">Subject.</param>
-        /// <param name="AudioMuted">AudioMuted.</param>
-        /// <param name="VideoMuted">VideoMuted.</param>
+        /// <param name="AudioMuted">AudioMuted (default to false).</param>
+        /// <param name="VideoMuted">VideoMuted (default to false).</param>
         public AnalyticsConversationSegment(DateTime? SegmentStart = null, DateTime? SegmentEnd = null, string QueueId = null, string WrapUpCode = null, string WrapUpNote = null, List<string> WrapUpTags = null, string ErrorCode = null, DisconnectTypeEnum? DisconnectType = null, SegmentTypeEnum? SegmentType = null, List<string> RequestedRoutingUserIds = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<AnalyticsProperty> Properties = null, string SourceConversationId = null, string DestinationConversationId = null, string SourceSessionId = null, string DestinationSessionId = null, List<long?> SipResponseCodes = null, List<long?> Q850ResponseCodes = null, bool? Conference = null, string GroupId = null, string Subject = null, bool? AudioMuted = null, bool? VideoMuted = null)
         {
             this.SegmentStart = SegmentStart;
@@ -260,11 +260,35 @@ namespace ININ.PureCloudApi.Model
             this.DestinationSessionId = DestinationSessionId;
             this.SipResponseCodes = SipResponseCodes;
             this.Q850ResponseCodes = Q850ResponseCodes;
-            this.Conference = Conference;
+            // use default value if no "Conference" provided
+            if (Conference == null)
+            {
+                this.Conference = false;
+            }
+            else
+            {
+                this.Conference = Conference;
+            }
             this.GroupId = GroupId;
             this.Subject = Subject;
-            this.AudioMuted = AudioMuted;
-            this.VideoMuted = VideoMuted;
+            // use default value if no "AudioMuted" provided
+            if (AudioMuted == null)
+            {
+                this.AudioMuted = false;
+            }
+            else
+            {
+                this.AudioMuted = AudioMuted;
+            }
+            // use default value if no "VideoMuted" provided
+            if (VideoMuted == null)
+            {
+                this.VideoMuted = false;
+            }
+            else
+            {
+                this.VideoMuted = VideoMuted;
+            }
         }
         
         /// <summary>

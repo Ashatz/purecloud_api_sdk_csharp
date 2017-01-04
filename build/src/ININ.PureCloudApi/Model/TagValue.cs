@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="TagValue" /> class.
         /// </summary>
         /// <param name="Name">The workspace tag name. (required).</param>
-        /// <param name="InUse">InUse.</param>
+        /// <param name="InUse">InUse (default to false).</param>
         /// <param name="Acl">Acl.</param>
         public TagValue(string Name = null, bool? InUse = null, List<string> Acl = null)
         {
@@ -40,7 +40,15 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Name = Name;
             }
-            this.InUse = InUse;
+            // use default value if no "InUse" provided
+            if (InUse == null)
+            {
+                this.InUse = false;
+            }
+            else
+            {
+                this.InUse = InUse;
+            }
             this.Acl = Acl;
         }
         

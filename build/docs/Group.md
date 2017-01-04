@@ -17,7 +17,7 @@ title: Group
 | **Type** | **string** | Type of group. | |
 | **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
 | **Addresses** | [**List&lt;Contact&gt;**](Contact.html) |  | [optional] |
-| **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | |
+| **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | [default to false]|
 | **Visibility** | **string** | Who can view this group | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

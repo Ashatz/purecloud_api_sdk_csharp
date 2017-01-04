@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ContentLength">ContentLength.</param>
         /// <param name="DurationMilliseconds">DurationMilliseconds.</param>
         /// <param name="Thumbnails">Thumbnails.</param>
-        /// <param name="Read">Read.</param>
+        /// <param name="Read">Read (default to false).</param>
         public UserRecording(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, Conversation Conversation = null, long? ContentLength = null, long? DurationMilliseconds = null, List<DocumentThumbnail> Thumbnails = null, bool? Read = null)
         {
             this.Name = Name;
@@ -44,7 +44,15 @@ namespace ININ.PureCloudApi.Model
             this.ContentLength = ContentLength;
             this.DurationMilliseconds = DurationMilliseconds;
             this.Thumbnails = Thumbnails;
-            this.Read = Read;
+            // use default value if no "Read" provided
+            if (Read == null)
+            {
+                this.Read = false;
+            }
+            else
+            {
+                this.Read = Read;
+            }
         }
         
         /// <summary>

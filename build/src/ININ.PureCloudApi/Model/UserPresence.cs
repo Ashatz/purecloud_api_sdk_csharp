@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Source">Represents the source where the Presence was set. Some examples are: PURECLOUD, LYNC, OUTLOOK, etc..</param>
-        /// <param name="Primary">A boolean used to tell whether or not to set this presence source as the primary on a PATCH.</param>
+        /// <param name="Primary">A boolean used to tell whether or not to set this presence source as the primary on a PATCH (default to false).</param>
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
         /// <param name="Message">Message.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -31,7 +31,15 @@ namespace ININ.PureCloudApi.Model
         {
             this.Name = Name;
             this.Source = Source;
-            this.Primary = Primary;
+            // use default value if no "Primary" provided
+            if (Primary == null)
+            {
+                this.Primary = false;
+            }
+            else
+            {
+                this.Primary = Primary;
+            }
             this.PresenceDefinition = PresenceDefinition;
             this.Message = Message;
             this.ModifiedDate = ModifiedDate;

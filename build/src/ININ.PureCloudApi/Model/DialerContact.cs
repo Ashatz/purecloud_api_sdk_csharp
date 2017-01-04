@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ContactListId">Identifier of the contact list containing this contact (required).</param>
         /// <param name="Data">An ordered map of the contact&#39;s data attributes and values.</param>
         /// <param name="CallRecords">A map of call records for the contact phone columns.</param>
-        /// <param name="Callable">false if the contact is not to be called.</param>
+        /// <param name="Callable">false if the contact is not to be called (default to false).</param>
         /// <param name="PhoneNumberStatus">A map of statuses for the contact phone columns.</param>
         public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
         {
@@ -46,7 +46,15 @@ namespace ININ.PureCloudApi.Model
             this.Name = Name;
             this.Data = Data;
             this.CallRecords = CallRecords;
-            this.Callable = Callable;
+            // use default value if no "Callable" provided
+            if (Callable == null)
+            {
+                this.Callable = false;
+            }
+            else
+            {
+                this.Callable = Callable;
+            }
             this.PhoneNumberStatus = PhoneNumberStatus;
         }
         

@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
         /// <param name="RingNumber">RingNumber.</param>
-        /// <param name="Joined">Joined.</param>
+        /// <param name="Joined">Joined (default to false).</param>
         /// <param name="MemberBy">MemberBy.</param>
         /// <param name="RoutingStatus">RoutingStatus.</param>
         public QueueMember(string Name = null, User User = null, int? RingNumber = null, bool? Joined = null, string MemberBy = null, RoutingStatus RoutingStatus = null)
@@ -32,7 +32,15 @@ namespace ININ.PureCloudApi.Model
             this.Name = Name;
             this.User = User;
             this.RingNumber = RingNumber;
-            this.Joined = Joined;
+            // use default value if no "Joined" provided
+            if (Joined == null)
+            {
+                this.Joined = false;
+            }
+            else
+            {
+                this.Joined = Joined;
+            }
             this.MemberBy = MemberBy;
             this.RoutingStatus = RoutingStatus;
         }

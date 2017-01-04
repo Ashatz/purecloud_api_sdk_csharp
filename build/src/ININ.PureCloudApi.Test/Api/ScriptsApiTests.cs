@@ -54,25 +54,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            string expand = null; // TODO: replace null with proper value
-            string name = null; // TODO: replace null with proper value
-            string feature = null; // TODO: replace null with proper value
-            string flowId = null; // TODO: replace null with proper value
-            string sortBy = null; // TODO: replace null with proper value
-            string sortOrder = null; // TODO: replace null with proper value
-            var response = instance.Get(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder);
-            Assert.IsInstanceOf<ScriptEntityListing> (response, "response is ScriptEntityListing");
-        }
-        
-        /// <summary>
         /// Test GetPublished
         /// </summary>
         [Test]
@@ -173,6 +154,25 @@ namespace ININ.PureCloudApi.Test
             string pageId = null; // TODO: replace null with proper value
             var response = instance.GetScriptIdPagesPageId(scriptId, pageId);
             Assert.IsInstanceOf<Page> (response, "response is Page");
+        }
+        
+        /// <summary>
+        /// Test GetScripts
+        /// </summary>
+        [Test]
+        public void GetScriptsTest()
+        {
+            // TODO: add unit test for the method 'GetScripts'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string expand = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            string feature = null; // TODO: replace null with proper value
+            string flowId = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            var response = instance.GetScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder);
+            Assert.IsInstanceOf<ScriptEntityListing> (response, "response is ScriptEntityListing");
         }
         
     }

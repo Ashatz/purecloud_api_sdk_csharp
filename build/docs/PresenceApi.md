@@ -8,12 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeletePresenceId**](PresenceApi.html#deletepresenceid) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition |
-| [**Get**](PresenceApi.html#get) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions |
 | [**GetPresenceId**](PresenceApi.html#getpresenceid) | **GET** /api/v2/presencedefinitions/{presenceId} | Get a Presence Definition |
+| [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions |
 | [**GetSystempresences**](PresenceApi.html#getsystempresences) | **GET** /api/v2/systempresences | Get the list of SystemPresences |
 | [**GetUserIdPresencesSourceId**](PresenceApi.html#getuseridpresencessourceid) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
 | [**PatchUserIdPresencesSourceId**](PresenceApi.html#patchuseridpresencessourceid) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
-| [**Post**](PresenceApi.html#post) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
+| [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
 | [**PutPresenceId**](PresenceApi.html#putpresenceid) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
 {: class="table table-striped"}
 
@@ -72,68 +72,6 @@ namespace Example
 
 void (empty response body)
 
-<a name="get"></a>
-
-## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) Get (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
-
-Get an Organization's list of Presence Definitions
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new PresenceApi();
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var deleted = deleted_example;  // string | Deleted query can be TRUE, FALSE or ALL (optional)  (default to false)
-            var localeCode = localeCode_example;  // string | The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional) 
-
-            try
-            {
-                // Get an Organization's list of Presence Definitions
-                OrganizationPresenceEntityListing result = apiInstance.Get(pageNumber, pageSize, deleted, localeCode);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PresenceApi.Get: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **deleted** | **string**| Deleted query can be TRUE, FALSE or ALL | [optional] [default to false] |
-| **localeCode** | **string**| The locale code to fetch for each presence definition. Use ALL to fetch everything. | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html)
-
 <a name="getpresenceid"></a>
 
 ## [**OrganizationPresence**](OrganizationPresence.html) GetPresenceId (string presenceId, string localeCode = null)
@@ -191,6 +129,68 @@ namespace Example
 ### Return type
 
 [**OrganizationPresence**](OrganizationPresence.html)
+
+<a name="getpresencedefinitions"></a>
+
+## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
+
+Get an Organization's list of Presence Definitions
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetPresencedefinitionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new PresenceApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var deleted = deleted_example;  // string | Deleted query can be TRUE, FALSE or ALL (optional)  (default to false)
+            var localeCode = localeCode_example;  // string | The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional) 
+
+            try
+            {
+                // Get an Organization's list of Presence Definitions
+                OrganizationPresenceEntityListing result = apiInstance.GetPresencedefinitions(pageNumber, pageSize, deleted, localeCode);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetPresencedefinitions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **deleted** | **string**| Deleted query can be TRUE, FALSE or ALL | [optional] [default to false] |
+| **localeCode** | **string**| The locale code to fetch for each presence definition. Use ALL to fetch everything. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html)
 
 <a name="getsystempresences"></a>
 
@@ -361,9 +361,9 @@ namespace Example
 
 [**UserPresence**](UserPresence.html)
 
-<a name="post"></a>
+<a name="postpresencedefinitions"></a>
 
-## [**OrganizationPresence**](OrganizationPresence.html) Post (OrganizationPresence body)
+## [**OrganizationPresence**](OrganizationPresence.html) PostPresencedefinitions (OrganizationPresence body)
 
 Create a Presence Definition
 
@@ -379,7 +379,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostExample
+    public class PostPresencedefinitionsExample
     {
         public void main()
         {
@@ -393,12 +393,12 @@ namespace Example
             try
             {
                 // Create a Presence Definition
-                OrganizationPresence result = apiInstance.Post(body);
+                OrganizationPresence result = apiInstance.PostPresencedefinitions(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PresenceApi.Post: " + e.Message );
+                Debug.Print("Exception when calling PresenceApi.PostPresencedefinitions: " + e.Message );
             }
         }
     }

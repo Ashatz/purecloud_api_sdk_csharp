@@ -113,7 +113,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Agent">The agent whose routing status will be watched. (required).</param>
         /// <param name="RoutingStatus">The routing status on which to alert. (required).</param>
         /// <param name="RoutingLimitInSeconds">The number of seconds to wait before alerting based upon the agent&#39;s routing status. (required).</param>
-        /// <param name="Enabled">Indicates if the rule is enabled. (required).</param>
+        /// <param name="Enabled">Indicates if the rule is enabled. (required) (default to false).</param>
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
         public RoutingStatusRule(string Name = null, User Agent = null, RoutingStatusEnum? RoutingStatus = null, int? RoutingLimitInSeconds = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)

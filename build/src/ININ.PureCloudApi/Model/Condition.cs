@@ -199,7 +199,7 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="Condition" /> class.
         /// </summary>
         /// <param name="Type">The type of the condition.</param>
-        /// <param name="Inverted">Indicates whether to evaluate for the opposite of the stated condition; default is false.</param>
+        /// <param name="Inverted">Indicates whether to evaluate for the opposite of the stated condition; default is false (default to false).</param>
         /// <param name="AttributeName">An attribute name associated with the condition (applies only to certain rule conditions).</param>
         /// <param name="Value">A value associated with the condition.</param>
         /// <param name="ValueType">Determines the type of the value associated with the condition.</param>
@@ -208,7 +208,15 @@ namespace ININ.PureCloudApi.Model
         public Condition(TypeEnum? Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null)
         {
             this.Type = Type;
-            this.Inverted = Inverted;
+            // use default value if no "Inverted" provided
+            if (Inverted == null)
+            {
+                this.Inverted = false;
+            }
+            else
+            {
+                this.Inverted = Inverted;
+            }
             this.AttributeName = AttributeName;
             this.Value = Value;
             this.ValueType = ValueType;

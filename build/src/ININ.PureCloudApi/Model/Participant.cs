@@ -86,10 +86,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AniName">The ani-based name for this participant..</param>
         /// <param name="Dnis">The address for the this participant. For a phone call this will be the ANI..</param>
         /// <param name="Locale">An ISO 639 language code specifying the locale for this participant.</param>
-        /// <param name="WrapupRequired">True iff this participant is required to enter wrapup for this conversation..</param>
+        /// <param name="WrapupRequired">True iff this participant is required to enter wrapup for this conversation. (default to false).</param>
         /// <param name="WrapupPrompt">This field controls how the UI prompts the agent for a wrapup..</param>
         /// <param name="WrapupTimeoutMs">Specifies how long a timed ACW session will last..</param>
-        /// <param name="WrapupSkipped">The UI sets this field when the agent chooses to skip entering a wrapup for this participant..</param>
+        /// <param name="WrapupSkipped">The UI sets this field when the agent chooses to skip entering a wrapup for this participant. (default to false).</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="MonitoredParticipantId">If this participant is a monitor, then this will be the id of the participant that is being monitored..</param>
         /// <param name="Attributes">Additional participant attributes.</param>
@@ -124,10 +124,26 @@ namespace ININ.PureCloudApi.Model
             this.AniName = AniName;
             this.Dnis = Dnis;
             this.Locale = Locale;
-            this.WrapupRequired = WrapupRequired;
+            // use default value if no "WrapupRequired" provided
+            if (WrapupRequired == null)
+            {
+                this.WrapupRequired = false;
+            }
+            else
+            {
+                this.WrapupRequired = WrapupRequired;
+            }
             this.WrapupPrompt = WrapupPrompt;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
-            this.WrapupSkipped = WrapupSkipped;
+            // use default value if no "WrapupSkipped" provided
+            if (WrapupSkipped == null)
+            {
+                this.WrapupSkipped = false;
+            }
+            else
+            {
+                this.WrapupSkipped = WrapupSkipped;
+            }
             this.Wrapup = Wrapup;
             this.MonitoredParticipantId = MonitoredParticipantId;
             this.Attributes = Attributes;

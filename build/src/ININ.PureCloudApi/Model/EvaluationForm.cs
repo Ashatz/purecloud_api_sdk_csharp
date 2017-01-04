@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">The evaluation form name (required).</param>
         /// <param name="Type">The form type (evaluation) (required).</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Published">Published.</param>
+        /// <param name="Published">Published (default to false).</param>
         /// <param name="ContextId">ContextId.</param>
         /// <param name="QuestionGroups">A list of question groups (required).</param>
         /// <param name="PublishedVersions">PublishedVersions.</param>
@@ -63,7 +63,15 @@ namespace ININ.PureCloudApi.Model
                 this.QuestionGroups = QuestionGroups;
             }
             this.ModifiedDate = ModifiedDate;
-            this.Published = Published;
+            // use default value if no "Published" provided
+            if (Published == null)
+            {
+                this.Published = false;
+            }
+            else
+            {
+                this.Published = Published;
+            }
             this.ContextId = ContextId;
             this.PublishedVersions = PublishedVersions;
         }

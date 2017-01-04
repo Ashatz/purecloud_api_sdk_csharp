@@ -95,7 +95,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Agent">Agent.</param>
         /// <param name="Contact">Contact.</param>
         /// <param name="DestinationAddress">DestinationAddress.</param>
-        /// <param name="ActivePreviewCall">Boolean value if there is an active preview call on the interaction.</param>
+        /// <param name="ActivePreviewCall">Boolean value if there is an active preview call on the interaction (default to false).</param>
         /// <param name="LastActivePreviewWrapupTime">The time when the last preview of the interaction was wrapped up. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreationTime">The time when dialer created the interaction. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CallPlacedTime">The time when the agent or system places the call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -118,7 +118,15 @@ namespace ININ.PureCloudApi.Model
             this.Agent = Agent;
             this.Contact = Contact;
             this.DestinationAddress = DestinationAddress;
-            this.ActivePreviewCall = ActivePreviewCall;
+            // use default value if no "ActivePreviewCall" provided
+            if (ActivePreviewCall == null)
+            {
+                this.ActivePreviewCall = false;
+            }
+            else
+            {
+                this.ActivePreviewCall = ActivePreviewCall;
+            }
             this.LastActivePreviewWrapupTime = LastActivePreviewWrapupTime;
             this.CreationTime = CreationTime;
             this.CallPlacedTime = CallPlacedTime;

@@ -21,7 +21,7 @@ title: TrunkBase
 | **TrunkMetabase** | [**UriReference**](UriReference.html) | The meta-base this trunk is based on. | |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **TrunkType** | **string** | The type of this trunk base. | |
-| **Managed** | **bool?** | Is this trunk being managed remotely. | [optional] |
+| **Managed** | **bool?** | Is this trunk being managed remotely. | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -23,7 +23,7 @@ title: Trunk
 | **TrunkBase** | [**UriReference**](UriReference.html) | The trunk base configuration used on this trunk. | [optional] |
 | **TrunkMetabase** | [**UriReference**](UriReference.html) | The metabase used to create this trunk. | [optional] |
 | **EdgeGroup** | [**UriReference**](UriReference.html) | The edge group associated with this trunk. | [optional] |
-| **Enabled** | **bool?** | True if this trunk is in-service.  This comes from the trunk_enabled property of the referenced trunk base. | [optional] |
+| **Enabled** | **bool?** | True if this trunk is in-service.  This comes from the trunk_enabled property of the referenced trunk base. | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

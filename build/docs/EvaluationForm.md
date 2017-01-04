@@ -11,7 +11,7 @@ title: EvaluationForm
 | **Name** | **string** | The evaluation form name | |
 | **Type** | **string** | The form type (evaluation) | |
 | **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **Published** | **bool?** |  | [optional] |
+| **Published** | **bool?** |  | [optional] [default to false]|
 | **ContextId** | **string** |  | [optional] |
 | **QuestionGroups** | [**List&lt;QuestionGroup&gt;**](QuestionGroup.html) | A list of question groups | |
 | **PublishedVersions** | [**DomainEntityListingEvaluationForm**](DomainEntityListingEvaluationForm.html) |  | [optional] |

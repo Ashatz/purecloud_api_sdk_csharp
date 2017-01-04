@@ -23,12 +23,20 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="MaximumCapacity">Defines the maximum number of conversations of this type that an agent can handle at one time..</param>
         /// <param name="InterruptableMediaTypes">Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression.</param>
-        /// <param name="IncludeNonAcd">If true, then track non-ACD conversations against utilization.</param>
+        /// <param name="IncludeNonAcd">If true, then track non-ACD conversations against utilization (default to false).</param>
         public OrgMediaUtilization(int? MaximumCapacity = null, List<string> InterruptableMediaTypes = null, bool? IncludeNonAcd = null)
         {
             this.MaximumCapacity = MaximumCapacity;
             this.InterruptableMediaTypes = InterruptableMediaTypes;
-            this.IncludeNonAcd = IncludeNonAcd;
+            // use default value if no "IncludeNonAcd" provided
+            if (IncludeNonAcd == null)
+            {
+                this.IncludeNonAcd = false;
+            }
+            else
+            {
+                this.IncludeNonAcd = IncludeNonAcd;
+            }
         }
         
         /// <summary>

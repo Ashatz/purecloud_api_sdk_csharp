@@ -7,7 +7,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**Get**](ScriptsApi.html#get) | **GET** /api/v2/scripts | Get the list of scripts |
 | [**GetPublished**](ScriptsApi.html#getpublished) | **GET** /api/v2/scripts/published | Get the published scripts. |
 | [**GetPublishedScriptId**](ScriptsApi.html#getpublishedscriptid) | **GET** /api/v2/scripts/published/{scriptId} | Get the published script. |
 | [**GetPublishedScriptIdPages**](ScriptsApi.html#getpublishedscriptidpages) | **GET** /api/v2/scripts/published/{scriptId}/pages | Get the list of published pages |
@@ -16,77 +15,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetScriptId**](ScriptsApi.html#getscriptid) | **GET** /api/v2/scripts/{scriptId} | Get a script |
 | [**GetScriptIdPages**](ScriptsApi.html#getscriptidpages) | **GET** /api/v2/scripts/{scriptId}/pages | Get the list of pages |
 | [**GetScriptIdPagesPageId**](ScriptsApi.html#getscriptidpagespageid) | **GET** /api/v2/scripts/{scriptId}/pages/{pageId} | Get a page |
+| [**GetScripts**](ScriptsApi.html#getscripts) | **GET** /api/v2/scripts | Get the list of scripts |
 {: class="table table-striped"}
-
-<a name="get"></a>
-
-## [**ScriptEntityListing**](ScriptEntityListing.html) Get (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null)
-
-Get the list of scripts
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ScriptsApi();
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var expand = expand_example;  // string | Expand (optional) 
-            var name = name_example;  // string | Name filter (optional) 
-            var feature = feature_example;  // string | Feature filter (optional) 
-            var flowId = flowId_example;  // string | Secure flow id filter (optional) 
-            var sortBy = sortBy_example;  // string | SortBy (optional) 
-            var sortOrder = sortOrder_example;  // string | SortOrder (optional) 
-
-            try
-            {
-                // Get the list of scripts
-                ScriptEntityListing result = apiInstance.Get(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ScriptsApi.Get: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand | [optional]  |
-| **name** | **string**| Name filter | [optional]  |
-| **feature** | **string**| Feature filter | [optional]  |
-| **flowId** | **string**| Secure flow id filter | [optional]  |
-| **sortBy** | **string**| SortBy | [optional]  |
-| **sortOrder** | **string**| SortOrder | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ScriptEntityListing**](ScriptEntityListing.html)
 
 <a name="getpublished"></a>
 
@@ -549,4 +479,74 @@ namespace Example
 ### Return type
 
 [**Page**](Page.html)
+
+<a name="getscripts"></a>
+
+## [**ScriptEntityListing**](ScriptEntityListing.html) GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null)
+
+Get the list of scripts
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetScriptsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ScriptsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand (optional) 
+            var name = name_example;  // string | Name filter (optional) 
+            var feature = feature_example;  // string | Feature filter (optional) 
+            var flowId = flowId_example;  // string | Secure flow id filter (optional) 
+            var sortBy = sortBy_example;  // string | SortBy (optional) 
+            var sortOrder = sortOrder_example;  // string | SortOrder (optional) 
+
+            try
+            {
+                // Get the list of scripts
+                ScriptEntityListing result = apiInstance.GetScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ScriptsApi.GetScripts: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand | [optional]  |
+| **name** | **string**| Name filter | [optional]  |
+| **feature** | **string**| Feature filter | [optional]  |
+| **flowId** | **string**| Secure flow id filter | [optional]  |
+| **sortBy** | **string**| SortBy | [optional]  |
+| **sortOrder** | **string**| SortOrder | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScriptEntityListing**](ScriptEntityListing.html)
 

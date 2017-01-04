@@ -8,7 +8,7 @@ title: ContentSortItem
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** |  | [optional] |
-| **Ascending** | **bool?** |  | [optional] |
+| **Ascending** | **bool?** |  | [optional] [default to false]|
 {: class="table table-striped"}
 
 

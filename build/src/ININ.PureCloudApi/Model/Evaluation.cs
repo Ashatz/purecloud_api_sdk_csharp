@@ -93,16 +93,16 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Calibration">Calibration.</param>
         /// <param name="Status">Status.</param>
         /// <param name="Answers">Answers.</param>
-        /// <param name="AgentHasRead">AgentHasRead.</param>
+        /// <param name="AgentHasRead">AgentHasRead (default to false).</param>
         /// <param name="ReleaseDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="AssignedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ChangedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Queue">Queue.</param>
-        /// <param name="NeverRelease">Signifies if the evaluation is never to be released. This cannot be set true if release date is also set..</param>
+        /// <param name="NeverRelease">Signifies if the evaluation is never to be released. This cannot be set true if release date is also set. (default to false).</param>
         /// <param name="ResourceId">Only used for email evaluations. Will be null for all other evaluations..</param>
         /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
-        /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
-        /// <param name="IsScoringIndex">IsScoringIndex.</param>
+        /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation (default to false).</param>
+        /// <param name="IsScoringIndex">IsScoringIndex (default to false).</param>
         public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null)
         {
             this.Name = Name;
@@ -113,16 +113,48 @@ namespace ININ.PureCloudApi.Model
             this.Calibration = Calibration;
             this.Status = Status;
             this.Answers = Answers;
-            this.AgentHasRead = AgentHasRead;
+            // use default value if no "AgentHasRead" provided
+            if (AgentHasRead == null)
+            {
+                this.AgentHasRead = false;
+            }
+            else
+            {
+                this.AgentHasRead = AgentHasRead;
+            }
             this.ReleaseDate = ReleaseDate;
             this.AssignedDate = AssignedDate;
             this.ChangedDate = ChangedDate;
             this.Queue = Queue;
-            this.NeverRelease = NeverRelease;
+            // use default value if no "NeverRelease" provided
+            if (NeverRelease == null)
+            {
+                this.NeverRelease = false;
+            }
+            else
+            {
+                this.NeverRelease = NeverRelease;
+            }
             this.ResourceId = ResourceId;
             this.ResourceType = ResourceType;
-            this.Redacted = Redacted;
-            this.IsScoringIndex = IsScoringIndex;
+            // use default value if no "Redacted" provided
+            if (Redacted == null)
+            {
+                this.Redacted = false;
+            }
+            else
+            {
+                this.Redacted = Redacted;
+            }
+            // use default value if no "IsScoringIndex" provided
+            if (IsScoringIndex == null)
+            {
+                this.IsScoringIndex = false;
+            }
+            else
+            {
+                this.IsScoringIndex = IsScoringIndex;
+            }
         }
         
         /// <summary>

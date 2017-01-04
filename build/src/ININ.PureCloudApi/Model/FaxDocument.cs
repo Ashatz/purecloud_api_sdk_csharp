@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ContentType">ContentType.</param>
         /// <param name="ContentLength">ContentLength.</param>
         /// <param name="Filename">Filename.</param>
-        /// <param name="Read">Read.</param>
+        /// <param name="Read">Read (default to false).</param>
         /// <param name="PageCount">PageCount.</param>
         /// <param name="CallerAddress">CallerAddress.</param>
         /// <param name="ReceiverAddress">ReceiverAddress.</param>
@@ -48,7 +48,15 @@ namespace ININ.PureCloudApi.Model
             this.ContentType = ContentType;
             this.ContentLength = ContentLength;
             this.Filename = Filename;
-            this.Read = Read;
+            // use default value if no "Read" provided
+            if (Read == null)
+            {
+                this.Read = false;
+            }
+            else
+            {
+                this.Read = Read;
+            }
             this.PageCount = PageCount;
             this.CallerAddress = CallerAddress;
             this.ReceiverAddress = ReceiverAddress;

@@ -14,9 +14,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteProviderId**](IdentityProviderApi.html#deleteproviderid) | **DELETE** /api/v2/identityproviders/{providerId} | Delete an identity provider |
 | [**DeletePurecloud**](IdentityProviderApi.html#deletepurecloud) | **DELETE** /api/v2/identityproviders/purecloud | Delete PureCloud Identity Provider |
 | [**DeleteSalesforce**](IdentityProviderApi.html#deletesalesforce) | **DELETE** /api/v2/identityproviders/salesforce | Delete Salesforce Identity Provider |
-| [**Get**](IdentityProviderApi.html#get) | **GET** /api/v2/identityproviders | The list of identity providers |
 | [**GetAdfs**](IdentityProviderApi.html#getadfs) | **GET** /api/v2/identityproviders/adfs | Get ADFS Identity Provider |
 | [**GetCic**](IdentityProviderApi.html#getcic) | **GET** /api/v2/identityproviders/cic | Get Customer Interaction Center (CIC) Identity Provider |
+| [**GetIdentityproviders**](IdentityProviderApi.html#getidentityproviders) | **GET** /api/v2/identityproviders | The list of identity providers |
 | [**GetOkta**](IdentityProviderApi.html#getokta) | **GET** /api/v2/identityproviders/okta | Get Okta Identity Provider |
 | [**GetOnelogin**](IdentityProviderApi.html#getonelogin) | **GET** /api/v2/identityproviders/onelogin | Get OneLogin Identity Provider |
 | [**GetProviderId**](IdentityProviderApi.html#getproviderid) | **GET** /api/v2/identityproviders/{providerId} | Get an identity provider |
@@ -381,57 +381,6 @@ This endpoint does require any parameters.
 
 void (empty response body)
 
-<a name="get"></a>
-
-## [**OAuthProviderEntityListing**](OAuthProviderEntityListing.html) Get ()
-
-The list of identity providers
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new IdentityProviderApi();
-
-            try
-            {
-                // The list of identity providers
-                OAuthProviderEntityListing result = apiInstance.Get();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling IdentityProviderApi.Get: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-[**OAuthProviderEntityListing**](OAuthProviderEntityListing.html)
-
 <a name="getadfs"></a>
 
 ## [**ADFS**](ADFS.html) GetAdfs ()
@@ -533,6 +482,57 @@ This endpoint does require any parameters.
 ### Return type
 
 [**CustomerInteractionCenter**](CustomerInteractionCenter.html)
+
+<a name="getidentityproviders"></a>
+
+## [**OAuthProviderEntityListing**](OAuthProviderEntityListing.html) GetIdentityproviders ()
+
+The list of identity providers
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetIdentityprovidersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new IdentityProviderApi();
+
+            try
+            {
+                // The list of identity providers
+                OAuthProviderEntityListing result = apiInstance.GetIdentityproviders();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.GetIdentityproviders: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**OAuthProviderEntityListing**](OAuthProviderEntityListing.html)
 
 <a name="getokta"></a>
 

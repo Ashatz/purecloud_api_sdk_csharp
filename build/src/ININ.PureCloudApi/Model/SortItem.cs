@@ -22,11 +22,19 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="SortItem" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Ascending">Ascending.</param>
+        /// <param name="Ascending">Ascending (default to false).</param>
         public SortItem(string Name = null, bool? Ascending = null)
         {
             this.Name = Name;
-            this.Ascending = Ascending;
+            // use default value if no "Ascending" provided
+            if (Ascending == null)
+            {
+                this.Ascending = false;
+            }
+            else
+            {
+                this.Ascending = Ascending;
+            }
         }
         
         /// <summary>

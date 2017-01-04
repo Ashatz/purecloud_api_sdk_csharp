@@ -24,11 +24,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Type">Type.</param>
-        /// <param name="DefaultAnswersToHighest">DefaultAnswersToHighest.</param>
-        /// <param name="DefaultAnswersToNA">DefaultAnswersToNA.</param>
-        /// <param name="NaEnabled">NaEnabled.</param>
+        /// <param name="DefaultAnswersToHighest">DefaultAnswersToHighest (default to false).</param>
+        /// <param name="DefaultAnswersToNA">DefaultAnswersToNA (default to false).</param>
+        /// <param name="NaEnabled">NaEnabled (default to false).</param>
         /// <param name="Weight">Weight.</param>
-        /// <param name="ManualWeight">ManualWeight.</param>
+        /// <param name="ManualWeight">ManualWeight (default to false).</param>
         /// <param name="Questions">Questions.</param>
         /// <param name="VisibilityCondition">VisibilityCondition.</param>
         public QuestionGroup(string Id = null, string Name = null, string Type = null, bool? DefaultAnswersToHighest = null, bool? DefaultAnswersToNA = null, bool? NaEnabled = null, float? Weight = null, bool? ManualWeight = null, List<Dictionary<string, Object>> Questions = null, VisibilityCondition VisibilityCondition = null)
@@ -36,11 +36,43 @@ namespace ININ.PureCloudApi.Model
             this.Id = Id;
             this.Name = Name;
             this.Type = Type;
-            this.DefaultAnswersToHighest = DefaultAnswersToHighest;
-            this.DefaultAnswersToNA = DefaultAnswersToNA;
-            this.NaEnabled = NaEnabled;
+            // use default value if no "DefaultAnswersToHighest" provided
+            if (DefaultAnswersToHighest == null)
+            {
+                this.DefaultAnswersToHighest = false;
+            }
+            else
+            {
+                this.DefaultAnswersToHighest = DefaultAnswersToHighest;
+            }
+            // use default value if no "DefaultAnswersToNA" provided
+            if (DefaultAnswersToNA == null)
+            {
+                this.DefaultAnswersToNA = false;
+            }
+            else
+            {
+                this.DefaultAnswersToNA = DefaultAnswersToNA;
+            }
+            // use default value if no "NaEnabled" provided
+            if (NaEnabled == null)
+            {
+                this.NaEnabled = false;
+            }
+            else
+            {
+                this.NaEnabled = NaEnabled;
+            }
             this.Weight = Weight;
-            this.ManualWeight = ManualWeight;
+            // use default value if no "ManualWeight" provided
+            if (ManualWeight == null)
+            {
+                this.ManualWeight = false;
+            }
+            else
+            {
+                this.ManualWeight = ManualWeight;
+            }
             this.Questions = Questions;
             this.VisibilityCondition = VisibilityCondition;
         }

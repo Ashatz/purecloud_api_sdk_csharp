@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAddressResponse" /> class.
         /// </summary>
-        /// <param name="Valid">Was the passed in address valid (required).</param>
+        /// <param name="Valid">Was the passed in address valid (required) (default to false).</param>
         /// <param name="Response">Subscriber schema.</param>
         public ValidateAddressResponse(bool? Valid = null, SubscriberResponse Response = null)
         {

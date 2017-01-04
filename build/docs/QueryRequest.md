@@ -14,7 +14,7 @@ title: QueryRequest
 | **Sort** | [**List&lt;SortItem&gt;**](SortItem.html) |  | [optional] |
 | **Filters** | [**List&lt;ContentFilterItem&gt;**](ContentFilterItem.html) |  | [optional] |
 | **AttributeFilters** | [**List&lt;AttributeFilterItem&gt;**](AttributeFilterItem.html) |  | [optional] |
-| **IncludeShares** | **bool?** |  | [optional] |
+| **IncludeShares** | **bool?** |  | [optional] [default to false]|
 {: class="table table-striped"}
 
 

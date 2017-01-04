@@ -7,7 +7,7 @@ title: ValidateAddressResponse
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Valid** | **bool?** | Was the passed in address valid | |
+| **Valid** | **bool?** | Was the passed in address valid | [default to false]|
 | **Response** | [**SubscriberResponse**](SubscriberResponse.html) | Subscriber schema | [optional] |
 {: class="table table-striped"}
 

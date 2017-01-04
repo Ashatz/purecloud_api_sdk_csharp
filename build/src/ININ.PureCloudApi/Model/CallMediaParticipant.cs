@@ -296,8 +296,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">The participant&#39;s state.  Values can be: &#39;alerting&#39;, &#39;connected&#39;, &#39;disconnected&#39;, &#39;dialing&#39;, &#39;contacting.</param>
         /// <param name="Direction">The participant&#39;s direction.  Values can be: &#39;inbound&#39; or &#39;outbound&#39;.</param>
         /// <param name="DisconnectType">The reason the participant was disconnected from the conversation..</param>
-        /// <param name="Held">Value is true when the participant is on hold..</param>
-        /// <param name="WrapupRequired">Value is true when the participant requires wrap-up..</param>
+        /// <param name="Held">Value is true when the participant is on hold. (default to false).</param>
+        /// <param name="WrapupRequired">Value is true when the participant requires wrap-up. (default to false).</param>
         /// <param name="WrapupPrompt">The wrap-up prompt indicating the type of wrap-up to be performed..</param>
         /// <param name="User">The PureCloud user for this participant..</param>
         /// <param name="Queue">The PureCloud queue for this participant..</param>
@@ -305,13 +305,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ErrorInfo">If the conversation ends in error, contains additional error details..</param>
         /// <param name="Script">The Engage script that should be used by this participant..</param>
         /// <param name="WrapupTimeoutMs">The amount of time the participant has to complete wrap-up..</param>
-        /// <param name="WrapupSkipped">Value is true when the participant has skipped wrap-up..</param>
+        /// <param name="WrapupSkipped">Value is true when the participant has skipped wrap-up. (default to false).</param>
         /// <param name="Provider">The source provider for the communication..</param>
         /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
         /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
-        /// <param name="Muted">Value is true when the call is muted..</param>
-        /// <param name="Confined">Value is true when the call is confined..</param>
-        /// <param name="Recording">Value is true when the call is being recorded..</param>
+        /// <param name="Muted">Value is true when the call is muted. (default to false).</param>
+        /// <param name="Confined">Value is true when the call is confined. (default to false).</param>
+        /// <param name="Recording">Value is true when the call is being recorded. (default to false).</param>
         /// <param name="RecordingState">The state of the call recording..</param>
         /// <param name="Group">The group involved in the group ring call..</param>
         /// <param name="Ani">The call ANI..</param>
@@ -333,8 +333,24 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.Direction = Direction;
             this.DisconnectType = DisconnectType;
-            this.Held = Held;
-            this.WrapupRequired = WrapupRequired;
+            // use default value if no "Held" provided
+            if (Held == null)
+            {
+                this.Held = false;
+            }
+            else
+            {
+                this.Held = Held;
+            }
+            // use default value if no "WrapupRequired" provided
+            if (WrapupRequired == null)
+            {
+                this.WrapupRequired = false;
+            }
+            else
+            {
+                this.WrapupRequired = WrapupRequired;
+            }
             this.WrapupPrompt = WrapupPrompt;
             this.User = User;
             this.Queue = Queue;
@@ -342,13 +358,45 @@ namespace ININ.PureCloudApi.Model
             this.ErrorInfo = ErrorInfo;
             this.Script = Script;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
-            this.WrapupSkipped = WrapupSkipped;
+            // use default value if no "WrapupSkipped" provided
+            if (WrapupSkipped == null)
+            {
+                this.WrapupSkipped = false;
+            }
+            else
+            {
+                this.WrapupSkipped = WrapupSkipped;
+            }
             this.Provider = Provider;
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
-            this.Muted = Muted;
-            this.Confined = Confined;
-            this.Recording = Recording;
+            // use default value if no "Muted" provided
+            if (Muted == null)
+            {
+                this.Muted = false;
+            }
+            else
+            {
+                this.Muted = Muted;
+            }
+            // use default value if no "Confined" provided
+            if (Confined == null)
+            {
+                this.Confined = false;
+            }
+            else
+            {
+                this.Confined = Confined;
+            }
+            // use default value if no "Recording" provided
+            if (Recording == null)
+            {
+                this.Recording = false;
+            }
+            else
+            {
+                this.Recording = Recording;
+            }
             this.RecordingState = RecordingState;
             this.Group = Group;
             this.Ani = Ani;

@@ -131,17 +131,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            var response = instance.Get();
-            Assert.IsInstanceOf<OAuthProviderEntityListing> (response, "response is OAuthProviderEntityListing");
-        }
-        
-        /// <summary>
         /// Test GetAdfs
         /// </summary>
         [Test]
@@ -161,6 +150,17 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetCic'
             var response = instance.GetCic();
             Assert.IsInstanceOf<CustomerInteractionCenter> (response, "response is CustomerInteractionCenter");
+        }
+        
+        /// <summary>
+        /// Test GetIdentityproviders
+        /// </summary>
+        [Test]
+        public void GetIdentityprovidersTest()
+        {
+            // TODO: add unit test for the method 'GetIdentityproviders'
+            var response = instance.GetIdentityproviders();
+            Assert.IsInstanceOf<OAuthProviderEntityListing> (response, "response is OAuthProviderEntityListing");
         }
         
         /// <summary>

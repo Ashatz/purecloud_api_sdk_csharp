@@ -8,15 +8,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteGreetingId**](GreetingsApi.html#deletegreetingid) | **DELETE** /api/v2/greetings/{greetingId} | Deletes a Greeting with the given GreetingId |
-| [**Get**](GreetingsApi.html#get) | **GET** /api/v2/greetings | Gets an Organization&#39;s Greetings |
 | [**GetDefaults**](GreetingsApi.html#getdefaults) | **GET** /api/v2/greetings/defaults | Get an Organization&#39;s DefaultGreetingList |
 | [**GetGreetingId**](GreetingsApi.html#getgreetingid) | **GET** /api/v2/greetings/{greetingId} | Get a Greeting with the given GreetingId |
 | [**GetGreetingIdMedia**](GreetingsApi.html#getgreetingidmedia) | **GET** /api/v2/greetings/{greetingId}/media | Get media playback URI for this greeting |
+| [**GetGreetings**](GreetingsApi.html#getgreetings) | **GET** /api/v2/greetings | Gets an Organization&#39;s Greetings |
 | [**GetGroupIdGreetings**](GreetingsApi.html#getgroupidgreetings) | **GET** /api/v2/groups/{groupId}/greetings | Get a list of the Group&#39;s Greetings |
 | [**GetGroupIdGreetingsDefaults**](GreetingsApi.html#getgroupidgreetingsdefaults) | **GET** /api/v2/groups/{groupId}/greetings/defaults | Grabs the list of Default Greetings given a Group&#39;s ID |
 | [**GetUserIdGreetings**](GreetingsApi.html#getuseridgreetings) | **GET** /api/v2/users/{userId}/greetings | Get a list of the User&#39;s Greetings |
 | [**GetUserIdGreetingsDefaults**](GreetingsApi.html#getuseridgreetingsdefaults) | **GET** /api/v2/users/{userId}/greetings/defaults | Grabs the list of Default Greetings given a User&#39;s ID |
-| [**Post**](GreetingsApi.html#post) | **POST** /api/v2/greetings | Create a Greeting for an Organization |
+| [**PostGreetings**](GreetingsApi.html#postgreetings) | **POST** /api/v2/greetings | Create a Greeting for an Organization |
 | [**PostGroupIdGreetings**](GreetingsApi.html#postgroupidgreetings) | **POST** /api/v2/groups/{groupId}/greetings | Creates a Greeting for a Group |
 | [**PostUserIdGreetings**](GreetingsApi.html#postuseridgreetings) | **POST** /api/v2/users/{userId}/greetings | Creates a Greeting for a User |
 | [**PutDefaults**](GreetingsApi.html#putdefaults) | **PUT** /api/v2/greetings/defaults | Update an Organization&#39;s DefaultGreetingList |
@@ -80,64 +80,6 @@ namespace Example
 ### Return type
 
 [**Greeting**](Greeting.html)
-
-<a name="get"></a>
-
-## [**DomainEntityListing**](DomainEntityListing.html) Get (int? pageSize = null, int? pageNumber = null)
-
-Gets an Organization's Greetings
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Model;
-
-namespace Example
-{
-    public class GetExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new GreetingsApi();
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            {
-                // Gets an Organization's Greetings
-                DomainEntityListing result = apiInstance.Get(pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling GreetingsApi.Get: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
-
-### Return type
-
-[**DomainEntityListing**](DomainEntityListing.html)
 
 <a name="getdefaults"></a>
 
@@ -303,6 +245,64 @@ namespace Example
 ### Return type
 
 [**GreetingMediaInfo**](GreetingMediaInfo.html)
+
+<a name="getgreetings"></a>
+
+## [**DomainEntityListing**](DomainEntityListing.html) GetGreetings (int? pageSize = null, int? pageNumber = null)
+
+Gets an Organization's Greetings
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetGreetingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new GreetingsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            {
+                // Gets an Organization's Greetings
+                DomainEntityListing result = apiInstance.GetGreetings(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GreetingsApi.GetGreetings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DomainEntityListing**](DomainEntityListing.html)
 
 <a name="getgroupidgreetings"></a>
 
@@ -536,9 +536,9 @@ namespace Example
 
 [**DefaultGreetingList**](DefaultGreetingList.html)
 
-<a name="post"></a>
+<a name="postgreetings"></a>
 
-## [**DefaultGreetingList**](DefaultGreetingList.html) Post (Greeting body)
+## [**DefaultGreetingList**](DefaultGreetingList.html) PostGreetings (Greeting body)
 
 Create a Greeting for an Organization
 
@@ -554,7 +554,7 @@ using ININ.PureCloudApi.Model;
 
 namespace Example
 {
-    public class PostExample
+    public class PostGreetingsExample
     {
         public void main()
         {
@@ -568,12 +568,12 @@ namespace Example
             try
             {
                 // Create a Greeting for an Organization
-                DefaultGreetingList result = apiInstance.Post(body);
+                DefaultGreetingList result = apiInstance.PostGreetings(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling GreetingsApi.Post: " + e.Message );
+                Debug.Print("Exception when calling GreetingsApi.PostGreetings: " + e.Message );
             }
         }
     }

@@ -31,8 +31,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CampaignRuleEntities">the list of entities the rule monitors (required).</param>
         /// <param name="CampaignRuleConditions">the list of conditions the are evaluated (required).</param>
         /// <param name="CampaignRuleActions">the list of actions that are executed if the conditions are satisfied (required).</param>
-        /// <param name="MatchAnyConditions">MatchAnyConditions.</param>
-        /// <param name="Enabled">Enabled.</param>
+        /// <param name="MatchAnyConditions">MatchAnyConditions (default to false).</param>
+        /// <param name="Enabled">Enabled (default to false).</param>
         public CampaignRule(string Name = null, int? Version = null, CampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleCondition> CampaignRuleConditions = null, List<CampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null)
         {
             // to ensure "CampaignRuleEntities" is required (not null)
@@ -64,8 +64,24 @@ namespace ININ.PureCloudApi.Model
             }
             this.Name = Name;
             this.Version = Version;
-            this.MatchAnyConditions = MatchAnyConditions;
-            this.Enabled = Enabled;
+            // use default value if no "MatchAnyConditions" provided
+            if (MatchAnyConditions == null)
+            {
+                this.MatchAnyConditions = false;
+            }
+            else
+            {
+                this.MatchAnyConditions = MatchAnyConditions;
+            }
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
         }
         
         /// <summary>

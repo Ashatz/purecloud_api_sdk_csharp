@@ -16,8 +16,8 @@ title: InteractionStatsRule
 | **NumericRange** | **string** | The comparison descriptor used against the metric&#39;s value. | |
 | **Statistic** | **string** | The statistic of concern for the metric. | |
 | **Value** | **double?** | The threshold value. | |
-| **Enabled** | **bool?** | Indicates if the rule is enabled. | |
-| **InAlarm** | **bool?** | Indicates if the rule is in alarm state. | [optional] |
+| **Enabled** | **bool?** | Indicates if the rule is enabled. | [default to false]|
+| **InAlarm** | **bool?** | Indicates if the rule is in alarm state. | [optional] [default to false]|
 | **NotificationUsers** | [**List&lt;User&gt;**](User.html) | The ids of users who will be notified of alarm state change. | |
 | **AlertTypes** | **List&lt;string&gt;** | A collection of notification methods. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |

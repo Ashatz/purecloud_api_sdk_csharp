@@ -23,16 +23,32 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Group">The group associated with the policy.</param>
-        /// <param name="Enabled">Whether voicemail is enabled for the group.</param>
-        /// <param name="SendEmailNotifications">Whether email notifications are sent to group members when a new voicemail is received.</param>
+        /// <param name="Enabled">Whether voicemail is enabled for the group (default to false).</param>
+        /// <param name="SendEmailNotifications">Whether email notifications are sent to group members when a new voicemail is received (default to false).</param>
         /// <param name="RotateCallsSecs">How many seconds to ring before rotating to the next member in the group.</param>
         /// <param name="StopRingingAfterRotations">How many rotations to go through.</param>
         public VoicemailGroupPolicy(string Name = null, Group Group = null, bool? Enabled = null, bool? SendEmailNotifications = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null)
         {
             this.Name = Name;
             this.Group = Group;
-            this.Enabled = Enabled;
-            this.SendEmailNotifications = SendEmailNotifications;
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
+            // use default value if no "SendEmailNotifications" provided
+            if (SendEmailNotifications == null)
+            {
+                this.SendEmailNotifications = false;
+            }
+            else
+            {
+                this.SendEmailNotifications = SendEmailNotifications;
+            }
             this.RotateCallsSecs = RotateCallsSecs;
             this.StopRingingAfterRotations = StopRingingAfterRotations;
         }

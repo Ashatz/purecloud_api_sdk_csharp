@@ -17,7 +17,7 @@ title: FaxDocument
 | **ContentType** | **string** |  | [optional] |
 | **ContentLength** | **long?** |  | [optional] |
 | **Filename** | **string** |  | [optional] |
-| **Read** | **bool?** |  | [optional] |
+| **Read** | **bool?** |  | [optional] [default to false]|
 | **PageCount** | **long?** |  | [optional] |
 | **CallerAddress** | **string** |  | [optional] |
 | **ReceiverAddress** | **string** |  | [optional] |

@@ -7,8 +7,8 @@ title: DomainPhysicalCapabilities
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Vlan** | **bool?** |  | [optional] |
-| **Team** | **bool?** |  | [optional] |
+| **Vlan** | **bool?** |  | [optional] [default to false]|
+| **Team** | **bool?** |  | [optional] [default to false]|
 {: class="table table-striped"}
 
 

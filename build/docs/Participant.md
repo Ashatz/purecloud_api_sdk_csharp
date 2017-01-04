@@ -27,10 +27,10 @@ title: Participant
 | **AniName** | **string** | The ani-based name for this participant. | [optional] |
 | **Dnis** | **string** | The address for the this participant. For a phone call this will be the ANI. | [optional] |
 | **Locale** | **string** | An ISO 639 language code specifying the locale for this participant | [optional] |
-| **WrapupRequired** | **bool?** | True iff this participant is required to enter wrapup for this conversation. | [optional] |
+| **WrapupRequired** | **bool?** | True iff this participant is required to enter wrapup for this conversation. | [optional] [default to false]|
 | **WrapupPrompt** | **string** | This field controls how the UI prompts the agent for a wrapup. | [optional] |
 | **WrapupTimeoutMs** | **int?** | Specifies how long a timed ACW session will last. | [optional] |
-| **WrapupSkipped** | **bool?** | The UI sets this field when the agent chooses to skip entering a wrapup for this participant. | [optional] |
+| **WrapupSkipped** | **bool?** | The UI sets this field when the agent chooses to skip entering a wrapup for this participant. | [optional] [default to false]|
 | **Wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
 | **MonitoredParticipantId** | **string** | If this participant is a monitor, then this will be the id of the participant that is being monitored. | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** | Additional participant attributes | [optional] |

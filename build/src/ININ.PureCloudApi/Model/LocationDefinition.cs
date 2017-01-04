@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Address">Address.</param>
-        /// <param name="AddressVerified">AddressVerified.</param>
+        /// <param name="AddressVerified">AddressVerified (default to false).</param>
         /// <param name="EmergencyNumber">EmergencyNumber.</param>
         /// <param name="State">Current activity status of the location..</param>
         /// <param name="Version">Version.</param>
@@ -65,7 +65,15 @@ namespace ININ.PureCloudApi.Model
         {
             this.Name = Name;
             this.Address = Address;
-            this.AddressVerified = AddressVerified;
+            // use default value if no "AddressVerified" provided
+            if (AddressVerified == null)
+            {
+                this.AddressVerified = false;
+            }
+            else
+            {
+                this.AddressVerified = AddressVerified;
+            }
             this.EmergencyNumber = EmergencyNumber;
             this.State = State;
             this.Version = Version;

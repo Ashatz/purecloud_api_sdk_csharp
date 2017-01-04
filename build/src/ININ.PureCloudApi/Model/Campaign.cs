@@ -95,7 +95,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CallerAddress">caller id phone number to be displayed on the outbound call.</param>
         /// <param name="OutboundLineCount">for agentless campaigns, the number of outbound lines to be concurrently dialed.</param>
         /// <param name="RuleSets">identifiers of the rule sets.</param>
-        /// <param name="SkipPreviewDisabled">for preview campaigns, indicator of whether the agent can skip a preview without placing a call.</param>
+        /// <param name="SkipPreviewDisabled">for preview campaigns, indicator of whether the agent can skip a preview without placing a call (default to false).</param>
         /// <param name="PreviewTimeOutSeconds">for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls.</param>
         /// <param name="ContactSort">information determining the order in which the contacts will be dialed.</param>
         /// <param name="NoAnswerTimeout">for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds.</param>
@@ -185,7 +185,15 @@ namespace ININ.PureCloudApi.Model
             this.CallerAddress = CallerAddress;
             this.OutboundLineCount = OutboundLineCount;
             this.RuleSets = RuleSets;
-            this.SkipPreviewDisabled = SkipPreviewDisabled;
+            // use default value if no "SkipPreviewDisabled" provided
+            if (SkipPreviewDisabled == null)
+            {
+                this.SkipPreviewDisabled = false;
+            }
+            else
+            {
+                this.SkipPreviewDisabled = SkipPreviewDisabled;
+            }
             this.PreviewTimeOutSeconds = PreviewTimeOutSeconds;
             this.ContactSort = ContactSort;
             this.NoAnswerTimeout = NoAnswerTimeout;

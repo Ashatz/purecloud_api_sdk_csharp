@@ -18,7 +18,7 @@ title: UserRecording
 | **ContentLength** | **long?** |  | [optional] |
 | **DurationMilliseconds** | **long?** |  | [optional] |
 | **Thumbnails** | [**List&lt;DocumentThumbnail&gt;**](DocumentThumbnail.html) |  | [optional] |
-| **Read** | **bool?** |  | [optional] |
+| **Read** | **bool?** |  | [optional] [default to false]|
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

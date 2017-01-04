@@ -22,11 +22,19 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="OAuthProvider" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Disabled">Disabled.</param>
+        /// <param name="Disabled">Disabled (default to false).</param>
         public OAuthProvider(string Name = null, bool? Disabled = null)
         {
             this.Name = Name;
-            this.Disabled = Disabled;
+            // use default value if no "Disabled" provided
+            if (Disabled == null)
+            {
+                this.Disabled = false;
+            }
+            else
+            {
+                this.Disabled = Disabled;
+            }
         }
         
         /// <summary>

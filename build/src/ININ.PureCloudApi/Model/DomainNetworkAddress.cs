@@ -101,13 +101,21 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Type">The type of address..</param>
         /// <param name="Address">An IPv4 or IPv6 IP address. When specifying an address of type \&quot;ip\&quot;, use CIDR format for the subnet mask..</param>
-        /// <param name="Persistent">True if this address will persist on Edge restart.  Addresses assigned by DHCP will be returned as false..</param>
+        /// <param name="Persistent">True if this address will persist on Edge restart.  Addresses assigned by DHCP will be returned as false. (default to false).</param>
         /// <param name="Family">The address family for this address..</param>
         public DomainNetworkAddress(TypeEnum? Type = null, string Address = null, bool? Persistent = null, FamilyEnum? Family = null)
         {
             this.Type = Type;
             this.Address = Address;
-            this.Persistent = Persistent;
+            // use default value if no "Persistent" provided
+            if (Persistent == null)
+            {
+                this.Persistent = false;
+            }
+            else
+            {
+                this.Persistent = Persistent;
+            }
             this.Family = Family;
         }
         

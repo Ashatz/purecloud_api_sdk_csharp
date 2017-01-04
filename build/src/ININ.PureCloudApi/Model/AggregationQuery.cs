@@ -607,7 +607,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="GroupBy">Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group..</param>
         /// <param name="Filter">Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters.</param>
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
-        /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;).</param>
+        /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) (default to false).</param>
         public AggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, AnalyticsQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null)
         {
             this.Interval = Interval;
@@ -616,7 +616,15 @@ namespace ININ.PureCloudApi.Model
             this.GroupBy = GroupBy;
             this.Filter = Filter;
             this.Metrics = Metrics;
-            this.FlattenMultivaluedDimensions = FlattenMultivaluedDimensions;
+            // use default value if no "FlattenMultivaluedDimensions" provided
+            if (FlattenMultivaluedDimensions == null)
+            {
+                this.FlattenMultivaluedDimensions = false;
+            }
+            else
+            {
+                this.FlattenMultivaluedDimensions = FlattenMultivaluedDimensions;
+            }
         }
         
         /// <summary>

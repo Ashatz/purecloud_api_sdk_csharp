@@ -79,20 +79,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            string sortOrder = null; // TODO: replace null with proper value
-            var response = instance.Get(pageSize, pageNumber, sortOrder);
-            Assert.IsInstanceOf<GroupEntityListing> (response, "response is GroupEntityListing");
-        }
-        
-        /// <summary>
         /// Test GetFieldconfig
         /// </summary>
         [Test]
@@ -133,6 +119,20 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetGroups
+        /// </summary>
+        [Test]
+        public void GetGroupsTest()
+        {
+            // TODO: add unit test for the method 'GetGroups'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            var response = instance.GetGroups(pageSize, pageNumber, sortOrder);
+            Assert.IsInstanceOf<GroupEntityListing> (response, "response is GroupEntityListing");
+        }
+        
+        /// <summary>
         /// Test GetSearch
         /// </summary>
         [Test]
@@ -146,18 +146,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Post
-        /// </summary>
-        [Test]
-        public void PostTest()
-        {
-            // TODO: add unit test for the method 'Post'
-            Group body = null; // TODO: replace null with proper value
-            var response = instance.Post(body);
-            Assert.IsInstanceOf<Group> (response, "response is Group");
-        }
-        
-        /// <summary>
         /// Test PostGroupIdMembers
         /// </summary>
         [Test]
@@ -168,6 +156,18 @@ namespace ININ.PureCloudApi.Test
             GroupMembersUpdate body = null; // TODO: replace null with proper value
             instance.PostGroupIdMembers(groupId, body);
             
+        }
+        
+        /// <summary>
+        /// Test PostGroups
+        /// </summary>
+        [Test]
+        public void PostGroupsTest()
+        {
+            // TODO: add unit test for the method 'PostGroups'
+            Group body = null; // TODO: replace null with proper value
+            var response = instance.PostGroups(body);
+            Assert.IsInstanceOf<Group> (response, "response is Group");
         }
         
         /// <summary>

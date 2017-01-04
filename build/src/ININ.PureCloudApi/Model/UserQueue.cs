@@ -120,7 +120,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
-        /// <param name="Joined">Joined.</param>
+        /// <param name="Joined">Joined (default to false).</param>
         /// <param name="MemberCount">MemberCount.</param>
         public UserQueue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null, int? MemberCount = null)
         {
@@ -166,7 +166,15 @@ namespace ININ.PureCloudApi.Model
             this.CallingPartyName = CallingPartyName;
             this.CallingPartyNumber = CallingPartyNumber;
             this.OutboundEmailAddress = OutboundEmailAddress;
-            this.Joined = Joined;
+            // use default value if no "Joined" provided
+            if (Joined == null)
+            {
+                this.Joined = false;
+            }
+            else
+            {
+                this.Joined = Joined;
+            }
             this.MemberCount = MemberCount;
         }
         

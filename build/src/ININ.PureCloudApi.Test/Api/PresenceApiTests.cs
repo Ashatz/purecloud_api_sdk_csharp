@@ -66,21 +66,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            int? pageNumber = null; // TODO: replace null with proper value
-            int? pageSize = null; // TODO: replace null with proper value
-            string deleted = null; // TODO: replace null with proper value
-            string localeCode = null; // TODO: replace null with proper value
-            var response = instance.Get(pageNumber, pageSize, deleted, localeCode);
-            Assert.IsInstanceOf<OrganizationPresenceEntityListing> (response, "response is OrganizationPresenceEntityListing");
-        }
-        
-        /// <summary>
         /// Test GetPresenceId
         /// </summary>
         [Test]
@@ -91,6 +76,21 @@ namespace ININ.PureCloudApi.Test
             string localeCode = null; // TODO: replace null with proper value
             var response = instance.GetPresenceId(presenceId, localeCode);
             Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
+        }
+        
+        /// <summary>
+        /// Test GetPresencedefinitions
+        /// </summary>
+        [Test]
+        public void GetPresencedefinitionsTest()
+        {
+            // TODO: add unit test for the method 'GetPresencedefinitions'
+            int? pageNumber = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            string deleted = null; // TODO: replace null with proper value
+            string localeCode = null; // TODO: replace null with proper value
+            var response = instance.GetPresencedefinitions(pageNumber, pageSize, deleted, localeCode);
+            Assert.IsInstanceOf<OrganizationPresenceEntityListing> (response, "response is OrganizationPresenceEntityListing");
         }
         
         /// <summary>
@@ -132,14 +132,14 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Post
+        /// Test PostPresencedefinitions
         /// </summary>
         [Test]
-        public void PostTest()
+        public void PostPresencedefinitionsTest()
         {
-            // TODO: add unit test for the method 'Post'
+            // TODO: add unit test for the method 'PostPresencedefinitions'
             OrganizationPresence body = null; // TODO: replace null with proper value
-            var response = instance.Post(body);
+            var response = instance.PostPresencedefinitions(body);
             Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence");
         }
         

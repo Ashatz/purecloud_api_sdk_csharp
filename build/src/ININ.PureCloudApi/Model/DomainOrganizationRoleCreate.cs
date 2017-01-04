@@ -32,9 +32,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Permissions">Permissions.</param>
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
         /// <param name="UserCount">UserCount.</param>
-        /// <param name="RoleNeedsUpdate">Optional unless patch operation..</param>
-        /// <param name="_Default">_Default.</param>
-        /// <param name="_Base">_Base.</param>
+        /// <param name="RoleNeedsUpdate">Optional unless patch operation. (default to false).</param>
+        /// <param name="_Default">_Default (default to false).</param>
+        /// <param name="_Base">_Base (default to false).</param>
         public DomainOrganizationRoleCreate(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, bool? _Base = null)
         {
             // to ensure "Name" is required (not null)
@@ -51,9 +51,33 @@ namespace ININ.PureCloudApi.Model
             this.Permissions = Permissions;
             this.PermissionPolicies = PermissionPolicies;
             this.UserCount = UserCount;
-            this.RoleNeedsUpdate = RoleNeedsUpdate;
-            this._Default = _Default;
-            this._Base = _Base;
+            // use default value if no "RoleNeedsUpdate" provided
+            if (RoleNeedsUpdate == null)
+            {
+                this.RoleNeedsUpdate = false;
+            }
+            else
+            {
+                this.RoleNeedsUpdate = RoleNeedsUpdate;
+            }
+            // use default value if no "_Default" provided
+            if (_Default == null)
+            {
+                this._Default = false;
+            }
+            else
+            {
+                this._Default = _Default;
+            }
+            // use default value if no "_Base" provided
+            if (_Base == null)
+            {
+                this._Base = false;
+            }
+            else
+            {
+                this._Base = _Base;
+            }
         }
         
         /// <summary>

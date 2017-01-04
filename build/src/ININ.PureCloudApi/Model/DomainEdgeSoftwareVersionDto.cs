@@ -25,16 +25,32 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EdgeVersion">EdgeVersion.</param>
         /// <param name="PublishDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="EdgeUri">EdgeUri.</param>
-        /// <param name="LatestRelease">LatestRelease.</param>
-        /// <param name="Current">Current.</param>
+        /// <param name="LatestRelease">LatestRelease (default to false).</param>
+        /// <param name="Current">Current (default to false).</param>
         public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? LatestRelease = null, bool? Current = null)
         {
             this.Name = Name;
             this.EdgeVersion = EdgeVersion;
             this.PublishDate = PublishDate;
             this.EdgeUri = EdgeUri;
-            this.LatestRelease = LatestRelease;
-            this.Current = Current;
+            // use default value if no "LatestRelease" provided
+            if (LatestRelease == null)
+            {
+                this.LatestRelease = false;
+            }
+            else
+            {
+                this.LatestRelease = LatestRelease;
+            }
+            // use default value if no "Current" provided
+            if (Current == null)
+            {
+                this.Current = false;
+            }
+            else
+            {
+                this.Current = Current;
+            }
         }
         
         /// <summary>

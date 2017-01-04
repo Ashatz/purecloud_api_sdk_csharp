@@ -9,7 +9,7 @@ title: ContactSort
 |------------ | ------------- | ------------- | -------------|
 | **FieldName** | **string** |  | [optional] |
 | **Direction** | **string** | The sort direction | [optional] |
-| **Numeric** | **bool?** | Whether that column contains numeric data | [optional] |
+| **Numeric** | **bool?** | Whether that column contains numeric data | [optional] [default to false]|
 {: class="table table-striped"}
 
 

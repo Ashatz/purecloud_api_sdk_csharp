@@ -20,9 +20,9 @@ title: OutboundRoute
 | **CreatedByApp** | **string** |  | [optional] |
 | **Site** | [**Site**](Site.html) | The site associated to the outbound route. | |
 | **ClassificationTypes** | **List&lt;string&gt;** |  | [optional] |
-| **Enabled** | **bool?** |  | [optional] |
+| **Enabled** | **bool?** |  | [optional] [default to false]|
 | **Distribution** | **string** |  | [optional] |
-| **Managed** | **bool?** |  | [optional] |
+| **Managed** | **bool?** |  | [optional] [default to false]|
 | **ExternalTrunkBases** | [**List&lt;UriReference&gt;**](UriReference.html) | Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

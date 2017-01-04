@@ -244,14 +244,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Id">A globally unique identifier for this communication..</param>
         /// <param name="Segments">The time line of the participant&#39;s callback, divided into activity segments..</param>
         /// <param name="Direction">The direction of the call.</param>
-        /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
+        /// <param name="Held">True if this call is held and the person on this side hears silence. (default to false).</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="StartHoldTime">The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DialerPreview">The preview data to be used when this callback is a Preview..</param>
         /// <param name="CallbackNumbers">The phone number(s) to use to place the callback..</param>
         /// <param name="CallbackUserName">The name of the user requesting a callback..</param>
         /// <param name="ScriptId">The UUID of the script to use..</param>
-        /// <param name="SkipEnabled">True if the ability to skip a callback should be enabled..</param>
+        /// <param name="SkipEnabled">True if the ability to skip a callback should be enabled. (default to false).</param>
         /// <param name="TimeoutSeconds">The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled..</param>
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -263,14 +263,30 @@ namespace ININ.PureCloudApi.Model
             this.Id = Id;
             this.Segments = Segments;
             this.Direction = Direction;
-            this.Held = Held;
+            // use default value if no "Held" provided
+            if (Held == null)
+            {
+                this.Held = false;
+            }
+            else
+            {
+                this.Held = Held;
+            }
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
             this.DialerPreview = DialerPreview;
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackUserName = CallbackUserName;
             this.ScriptId = ScriptId;
-            this.SkipEnabled = SkipEnabled;
+            // use default value if no "SkipEnabled" provided
+            if (SkipEnabled == null)
+            {
+                this.SkipEnabled = false;
+            }
+            else
+            {
+                this.SkipEnabled = SkipEnabled;
+            }
             this.TimeoutSeconds = TimeoutSeconds;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;

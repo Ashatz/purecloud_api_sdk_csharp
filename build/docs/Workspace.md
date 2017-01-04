@@ -10,7 +10,7 @@ title: Workspace
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The current name of the workspace. | |
 | **Type** | **string** |  | [optional] |
-| **IsCurrentUserWorkspace** | **bool?** |  | [optional] |
+| **IsCurrentUserWorkspace** | **bool?** |  | [optional] [default to false]|
 | **User** | [**UriReference**](UriReference.html) |  | [optional] |
 | **Bucket** | **string** |  | [optional] |
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="User">User.</param>
         /// <param name="CorrelationId">Correlation ID..</param>
         /// <param name="TransactionId">Transaction ID..</param>
-        /// <param name="TransactionInitiator">Whether or not this audit can be considered the initiator of the transaction it is a part of..</param>
+        /// <param name="TransactionInitiator">Whether or not this audit can be considered the initiator of the transaction it is a part of. (default to false).</param>
         /// <param name="Application">The application through which the action of this AuditMessage was initiated..</param>
         /// <param name="ServiceName">The name of the service which sent this AuditMessage. (required).</param>
         /// <param name="Level">The level of this audit. USER or SYSTEM. (required).</param>
@@ -92,7 +92,15 @@ namespace ININ.PureCloudApi.Model
             this.User = User;
             this.CorrelationId = CorrelationId;
             this.TransactionId = TransactionId;
-            this.TransactionInitiator = TransactionInitiator;
+            // use default value if no "TransactionInitiator" provided
+            if (TransactionInitiator == null)
+            {
+                this.TransactionInitiator = false;
+            }
+            else
+            {
+                this.TransactionInitiator = TransactionInitiator;
+            }
             this.Application = Application;
             this.Timestamp = Timestamp;
             this.ActionContext = ActionContext;

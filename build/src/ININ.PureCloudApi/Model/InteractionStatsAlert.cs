@@ -313,7 +313,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatsAlert" /> class.
         /// </summary>
-        /// <param name="Unread">Indicates if the alert has been read. (required).</param>
+        /// <param name="Unread">Indicates if the alert has been read. (required) (default to false).</param>
         /// <param name="NotificationUsers">The ids of users who were notified of alarm state change. (required).</param>
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
         /// <param name="RuleUri">RuleUri.</param>

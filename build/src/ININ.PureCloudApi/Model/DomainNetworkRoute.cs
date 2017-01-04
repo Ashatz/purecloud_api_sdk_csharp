@@ -56,14 +56,22 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Prefix">The IPv4 or IPv6 route prefix in CIDR notation..</param>
         /// <param name="Nexthop">The IPv4 or IPv6 nexthop IP address..</param>
-        /// <param name="Persistent">True if this route will persist on Edge restart.  Routes assigned by DHCP will be returned as false..</param>
+        /// <param name="Persistent">True if this route will persist on Edge restart.  Routes assigned by DHCP will be returned as false. (default to false).</param>
         /// <param name="Metric">The metric being used for route. Lower values will have a higher priority..</param>
         /// <param name="Family">The address family for this route..</param>
         public DomainNetworkRoute(string Prefix = null, string Nexthop = null, bool? Persistent = null, int? Metric = null, FamilyEnum? Family = null)
         {
             this.Prefix = Prefix;
             this.Nexthop = Nexthop;
-            this.Persistent = Persistent;
+            // use default value if no "Persistent" provided
+            if (Persistent == null)
+            {
+                this.Persistent = false;
+            }
+            else
+            {
+                this.Persistent = Persistent;
+            }
             this.Metric = Metric;
             this.Family = Family;
         }

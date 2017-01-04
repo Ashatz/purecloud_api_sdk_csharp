@@ -25,14 +25,22 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Certificate">Certificate.</param>
         /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
-        /// <param name="Disabled">Disabled.</param>
+        /// <param name="Disabled">Disabled (default to false).</param>
         public Salesforce(string Name = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
         {
             this.Name = Name;
             this.Certificate = Certificate;
             this.IssuerURI = IssuerURI;
             this.SsoTargetURI = SsoTargetURI;
-            this.Disabled = Disabled;
+            // use default value if no "Disabled" provided
+            if (Disabled == null)
+            {
+                this.Disabled = false;
+            }
+            else
+            {
+                this.Disabled = Disabled;
+            }
         }
         
         /// <summary>

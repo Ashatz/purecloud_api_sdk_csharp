@@ -617,7 +617,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="User">User.</param>
         /// <param name="Workspace">Workspace.</param>
         /// <param name="TransactionId">TransactionId.</param>
-        /// <param name="TransactionInitiator">TransactionInitiator.</param>
+        /// <param name="TransactionInitiator">TransactionInitiator (default to false).</param>
         /// <param name="Application">Application.</param>
         /// <param name="ServiceName">ServiceName.</param>
         /// <param name="Level">Level.</param>
@@ -633,7 +633,15 @@ namespace ININ.PureCloudApi.Model
             this.User = User;
             this.Workspace = Workspace;
             this.TransactionId = TransactionId;
-            this.TransactionInitiator = TransactionInitiator;
+            // use default value if no "TransactionInitiator" provided
+            if (TransactionInitiator == null)
+            {
+                this.TransactionInitiator = false;
+            }
+            else
+            {
+                this.TransactionInitiator = TransactionInitiator;
+            }
             this.Application = Application;
             this.ServiceName = ServiceName;
             this.Level = Level;

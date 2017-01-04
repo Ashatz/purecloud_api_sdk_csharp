@@ -56,12 +56,20 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="FieldName">FieldName.</param>
         /// <param name="Direction">The sort direction.</param>
-        /// <param name="Numeric">Whether that column contains numeric data.</param>
+        /// <param name="Numeric">Whether that column contains numeric data (default to false).</param>
         public ContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null)
         {
             this.FieldName = FieldName;
             this.Direction = Direction;
-            this.Numeric = Numeric;
+            // use default value if no "Numeric" provided
+            if (Numeric == null)
+            {
+                this.Numeric = false;
+            }
+            else
+            {
+                this.Numeric = Numeric;
+            }
         }
         
         /// <summary>

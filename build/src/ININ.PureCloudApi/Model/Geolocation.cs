@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Type">A string used to describe the type of client the geolocation is being updated from e.g. ios, android, web, etc..</param>
-        /// <param name="Primary">A boolean used to tell whether or not to set this geolocation client as the primary on a PATCH.</param>
+        /// <param name="Primary">A boolean used to tell whether or not to set this geolocation client as the primary on a PATCH (default to false).</param>
         /// <param name="Latitude">Latitude.</param>
         /// <param name="Longitude">Longitude.</param>
         /// <param name="Country">Country.</param>
@@ -33,7 +33,15 @@ namespace ININ.PureCloudApi.Model
         {
             this.Name = Name;
             this.Type = Type;
-            this.Primary = Primary;
+            // use default value if no "Primary" provided
+            if (Primary == null)
+            {
+                this.Primary = false;
+            }
+            else
+            {
+                this.Primary = Primary;
+            }
             this.Latitude = Latitude;
             this.Longitude = Longitude;
             this.Country = Country;

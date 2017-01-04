@@ -7,7 +7,7 @@ title: VoicemailUserPolicy
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Enabled** | **bool?** |  | [optional] |
+| **Enabled** | **bool?** |  | [optional] [default to false]|
 | **AlertTimeoutSeconds** | **int?** |  | [optional] |
 | **MinimumRecordingTimeSeconds** | **int?** |  | [optional] |
 | **MaximumRecordingTimeSeconds** | **int?** |  | [optional] |

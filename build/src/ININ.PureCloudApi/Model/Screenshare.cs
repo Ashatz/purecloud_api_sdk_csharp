@@ -204,7 +204,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">The connection state of this communication..</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
         /// <param name="Context">The room id context (xmpp jid) for the conference session..</param>
-        /// <param name="Sharing">Indicates whether this participant is sharing their screen..</param>
+        /// <param name="Sharing">Indicates whether this participant is sharing their screen. (default to false).</param>
         /// <param name="PeerCount">The number of peer participants from the perspective of the participant in the conference..</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -216,7 +216,15 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.Id = Id;
             this.Context = Context;
-            this.Sharing = Sharing;
+            // use default value if no "Sharing" provided
+            if (Sharing == null)
+            {
+                this.Sharing = false;
+            }
+            else
+            {
+                this.Sharing = Sharing;
+            }
             this.PeerCount = PeerCount;
             this.DisconnectType = DisconnectType;
             this.ConnectedTime = ConnectedTime;

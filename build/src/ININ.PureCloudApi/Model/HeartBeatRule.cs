@@ -88,7 +88,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name of the rule (required).</param>
         /// <param name="SenderId">The value that identifies the sender of the heartbeat. (required).</param>
         /// <param name="HeartBeatTimeoutInMinutes">The number of minutes to wait before alerting missing heartbeats. (required).</param>
-        /// <param name="Enabled">Indicates if the rule is enabled. (required).</param>
+        /// <param name="Enabled">Indicates if the rule is enabled. (required) (default to false).</param>
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
         /// <param name="RuleType">The type of system the will be generating the heartbeat. (required).</param>

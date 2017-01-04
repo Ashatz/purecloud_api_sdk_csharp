@@ -28,13 +28,13 @@ title: AnalyticsSession
 | **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
 | **CallbackScheduledTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ScriptId** | **string** |  | [optional] |
-| **SkipEnabled** | **bool?** |  | [optional] |
+| **SkipEnabled** | **bool?** |  | [optional] [default to false]|
 | **TimeoutSeconds** | **int?** |  | [optional] |
 | **CobrowseRole** | **string** |  | [optional] |
 | **CobrowseRoomId** | **string** |  | [optional] |
 | **MediaBridgeId** | **string** |  | [optional] |
 | **ScreenShareAddressSelf** | **string** |  | [optional] |
-| **SharingScreen** | **bool?** |  | [optional] |
+| **SharingScreen** | **bool?** |  | [optional] [default to false]|
 | **ScreenShareRoomId** | **string** |  | [optional] |
 | **VideoRoomId** | **string** |  | [optional] |
 | **VideoAddressSelf** | **string** |  | [optional] |

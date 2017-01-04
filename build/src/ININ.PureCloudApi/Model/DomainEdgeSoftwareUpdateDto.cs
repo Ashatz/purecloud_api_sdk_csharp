@@ -104,10 +104,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DownloadStartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExecuteStartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExecuteStopTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="ExecuteOnIdle">ExecuteOnIdle.</param>
+        /// <param name="ExecuteOnIdle">ExecuteOnIdle (default to false).</param>
         /// <param name="Status">Status.</param>
         /// <param name="EdgeUri">EdgeUri.</param>
-        /// <param name="Current">Current.</param>
+        /// <param name="Current">Current (default to false).</param>
         public DomainEdgeSoftwareUpdateDto(DomainEdgeSoftwareVersionDto Version = null, int? MaxDownloadRate = null, DateTime? DownloadStartTime = null, DateTime? ExecuteStartTime = null, DateTime? ExecuteStopTime = null, bool? ExecuteOnIdle = null, StatusEnum? Status = null, string EdgeUri = null, bool? Current = null)
         {
             // to ensure "Version" is required (not null)
@@ -123,10 +123,26 @@ namespace ININ.PureCloudApi.Model
             this.DownloadStartTime = DownloadStartTime;
             this.ExecuteStartTime = ExecuteStartTime;
             this.ExecuteStopTime = ExecuteStopTime;
-            this.ExecuteOnIdle = ExecuteOnIdle;
+            // use default value if no "ExecuteOnIdle" provided
+            if (ExecuteOnIdle == null)
+            {
+                this.ExecuteOnIdle = false;
+            }
+            else
+            {
+                this.ExecuteOnIdle = ExecuteOnIdle;
+            }
             this.Status = Status;
             this.EdgeUri = EdgeUri;
-            this.Current = Current;
+            // use default value if no "Current" provided
+            if (Current == null)
+            {
+                this.Current = false;
+            }
+            else
+            {
+                this.Current = Current;
+            }
         }
         
         /// <summary>

@@ -122,13 +122,21 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="ParameterType">ParameterType.</param>
         /// <param name="Domain">Domain.</param>
-        /// <param name="Required">Required.</param>
+        /// <param name="Required">Required (default to false).</param>
         public Parameter(string Name = null, ParameterTypeEnum? ParameterType = null, DomainEnum? Domain = null, bool? Required = null)
         {
             this.Name = Name;
             this.ParameterType = ParameterType;
             this.Domain = Domain;
-            this.Required = Required;
+            // use default value if no "Required" provided
+            if (Required == null)
+            {
+                this.Required = false;
+            }
+            else
+            {
+                this.Required = Required;
+            }
         }
         
         /// <summary>

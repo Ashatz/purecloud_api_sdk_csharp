@@ -10,11 +10,11 @@ title: Call
 | **State** | **string** | The connection state of this communication. | [optional] |
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
 | **Direction** | **string** | The direction of the call | [optional] |
-| **Recording** | **bool?** | True if this call is being recorded. | [optional] |
+| **Recording** | **bool?** | True if this call is being recorded. | [optional] [default to false]|
 | **RecordingState** | **string** | State of recording on this call. | [optional] |
-| **Muted** | **bool?** | True if this call is muted so that remote participants can&#39;t hear any audio from this end. | [optional] |
-| **Confined** | **bool?** | True if this call is held and the person on this side hears hold music. | [optional] |
-| **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
+| **Muted** | **bool?** | True if this call is muted so that remote participants can&#39;t hear any audio from this end. | [optional] [default to false]|
+| **Confined** | **bool?** | True if this call is held and the person on this side hears hold music. | [optional] [default to false]|
+| **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] [default to false]|
 | **RecordingId** | **string** | A globally unique identifier for the recording associated with this call. | [optional] |
 | **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s call, divided into activity segments. | [optional] |
 | **ErrorInfo** | [**ErrorBody**](ErrorBody.html) |  | [optional] |
