@@ -15,6 +15,10 @@ title: VoicemailMessageNotification
 | **ModifiedDate** | **DateTime?** |  | [optional] |
 | **CallerAddress** | **string** |  | [optional] |
 | **CallerName** | **string** |  | [optional] |
+| **Action** | **string** |  | [optional] |
+| **Note** | **string** |  | [optional] |
+| **Deleted** | **bool?** |  | [optional] |
+| **ModifiedByUserId** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -114,6 +114,38 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'CallerName'
         }
+        /// <summary>
+        /// Test the property 'Action'
+        /// </summary>
+        [Test]
+        public void ActionTest()
+        {
+            // TODO: unit test for the property 'Action'
+        }
+        /// <summary>
+        /// Test the property 'Note'
+        /// </summary>
+        [Test]
+        public void NoteTest()
+        {
+            // TODO: unit test for the property 'Note'
+        }
+        /// <summary>
+        /// Test the property 'Deleted'
+        /// </summary>
+        [Test]
+        public void DeletedTest()
+        {
+            // TODO: unit test for the property 'Deleted'
+        }
+        /// <summary>
+        /// Test the property 'ModifiedByUserId'
+        /// </summary>
+        [Test]
+        public void ModifiedByUserIdTest()
+        {
+            // TODO: unit test for the property 'ModifiedByUserId'
+        }
 
     }
 

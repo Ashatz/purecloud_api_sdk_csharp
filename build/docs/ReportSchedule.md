@@ -19,7 +19,7 @@ title: ReportSchedule
 | **Interval** | **string** | Interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
 | **ReportFormat** | **string** |  | [optional] |
 | **Locale** | **string** |  | [optional] |
-| **Enabled** | **bool?** |  | [optional] [default to false]|
+| **Enabled** | **bool?** |  | [optional] |
 | **ReportId** | **string** | Report ID | |
 | **Parameters** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **LastRun** | [**ReportRunEntry**](ReportRunEntry.html) |  | [optional] |

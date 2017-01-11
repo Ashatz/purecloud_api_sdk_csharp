@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Sort">Sort.</param>
         /// <param name="Filters">Filters.</param>
         /// <param name="AttributeFilters">AttributeFilters.</param>
-        /// <param name="IncludeShares">IncludeShares (default to false).</param>
+        /// <param name="IncludeShares">IncludeShares.</param>
         public ContentQueryRequest(string QueryPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> FacetNameRequests = null, List<ContentSortItem> Sort = null, List<ContentFacetFilterItem> Filters = null, List<ContentAttributeFilterItem> AttributeFilters = null, bool? IncludeShares = null)
         {
             this.QueryPhrase = QueryPhrase;
@@ -38,15 +38,7 @@ namespace ININ.PureCloudApi.Model
             this.Sort = Sort;
             this.Filters = Filters;
             this.AttributeFilters = AttributeFilters;
-            // use default value if no "IncludeShares" provided
-            if (IncludeShares == null)
-            {
-                this.IncludeShares = false;
-            }
-            else
-            {
-                this.IncludeShares = IncludeShares;
-            }
+            this.IncludeShares = IncludeShares;
         }
         
         /// <summary>

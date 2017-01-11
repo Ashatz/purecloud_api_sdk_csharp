@@ -215,6 +215,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">The request body</param>
         /// <returns>ApiResponse of ForecastCreationCompletion</returns>
         ApiResponse<ForecastCreationCompletion> PostLongtermforecastsWithHttpInfo (ForecastCreation body);
+        /// <summary>
+        /// Get a schedule for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffRequestList</returns>
+        TimeOffRequestList PostSchedules (CurrentUserScheduleRequestBody body = null);
+
+        /// <summary>
+        /// Get a schedule for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffRequestList</returns>
+        ApiResponse<TimeOffRequestList> PostSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -418,6 +439,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">The request body</param>
         /// <returns>Task of ApiResponse (ForecastCreationCompletion)</returns>
         System.Threading.Tasks.Task<ApiResponse<ForecastCreationCompletion>> PostLongtermforecastsAsyncWithHttpInfo (ForecastCreation body);
+        /// <summary>
+        /// Get a schedule for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffRequestList</returns>
+        System.Threading.Tasks.Task<TimeOffRequestList> PostSchedulesAsync (CurrentUserScheduleRequestBody body = null);
+
+        /// <summary>
+        /// Get a schedule for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null);
         #endregion Asynchronous Operations
     }
 
@@ -2006,6 +2048,171 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ForecastCreationCompletion>(localVarStatusCode,
                 localVarHeaders,
                 (ForecastCreationCompletion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ForecastCreationCompletion)));
+            
+        }
+
+        /// <summary>
+        /// Get a schedule for the current user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>TimeOffRequestList</returns>
+        public TimeOffRequestList PostSchedules (CurrentUserScheduleRequestBody body = null)
+        {
+             ApiResponse<TimeOffRequestList> localVarResponse = PostSchedulesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a schedule for the current user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of TimeOffRequestList</returns>
+        public ApiResponse< TimeOffRequestList > PostSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null)
+        {
+
+            var localVarPath = "/api/v2/workforcemanagement/schedules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSchedules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffRequestList>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffRequestList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestList)));
+            
+        }
+
+        /// <summary>
+        /// Get a schedule for the current user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of TimeOffRequestList</returns>
+        public async System.Threading.Tasks.Task<TimeOffRequestList> PostSchedulesAsync (CurrentUserScheduleRequestBody body = null)
+        {
+             ApiResponse<TimeOffRequestList> localVarResponse = await PostSchedulesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a schedule for the current user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null)
+        {
+
+            var localVarPath = "/api/v2/workforcemanagement/schedules";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSchedules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TimeOffRequestList>(localVarStatusCode,
+                localVarHeaders,
+                (TimeOffRequestList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestList)));
             
         }
 

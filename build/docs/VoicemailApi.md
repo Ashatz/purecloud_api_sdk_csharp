@@ -523,7 +523,7 @@ This endpoint does require any parameters.
 
 <a name="getmessages"></a>
 
-## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) GetMessages (string ids = null)
+## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) GetMessages (string ids = null, List<string> expand = null)
 
 List voicemail messages
 
@@ -549,11 +549,12 @@ namespace Example
 
             var apiInstance = new VoicemailApi();
             var ids = ids_example;  // string | An optional comma separated list of VoicemailMessage ids (optional) 
+            var expand = new List<string>(); // List<string> | If the caller is a known user, which fields, if any, to expand (optional) 
 
             try
             {
                 // List voicemail messages
-                VoicemailMessageEntityListing result = apiInstance.GetMessages(ids);
+                VoicemailMessageEntityListing result = apiInstance.GetMessages(ids, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -571,6 +572,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ids** | **string**| An optional comma separated list of VoicemailMessage ids | [optional]  |
+| **expand** | [**List<string>**](string.html)| If the caller is a known user, which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -579,7 +581,7 @@ namespace Example
 
 <a name="getmessagesmessageid"></a>
 
-## [**VoicemailMessage**](VoicemailMessage.html) GetMessagesMessageId (string messageId)
+## [**VoicemailMessage**](VoicemailMessage.html) GetMessagesMessageId (string messageId, List<string> expand = null)
 
 Get message.
 
@@ -605,11 +607,12 @@ namespace Example
 
             var apiInstance = new VoicemailApi();
             var messageId = messageId_example;  // string | Message ID
+            var expand = new List<string>(); // List<string> | If the caller is a known user, which fields, if any, to expand (optional) 
 
             try
             {
                 // Get message.
-                VoicemailMessage result = apiInstance.GetMessagesMessageId(messageId);
+                VoicemailMessage result = apiInstance.GetMessagesMessageId(messageId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -627,6 +630,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageId** | **string**| Message ID |  |
+| **expand** | [**List<string>**](string.html)| If the caller is a known user, which fields, if any, to expand | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

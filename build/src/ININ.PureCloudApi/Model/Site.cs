@@ -81,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Edges">Edges.</param>
         /// <param name="EdgeAutoUpdateConfig">Recurrance rule, time zone, and start/end settings for automatic edge updates for this site.</param>
         /// <param name="Location">Location (required).</param>
-        /// <param name="Managed">Managed (default to false).</param>
+        /// <param name="Managed">Managed.</param>
         public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, LocationDefinition Location = null, bool? Managed = null)
         {
             // to ensure "Name" is required (not null)
@@ -118,15 +118,7 @@ namespace ININ.PureCloudApi.Model
             this.Addresses = Addresses;
             this.Edges = Edges;
             this.EdgeAutoUpdateConfig = EdgeAutoUpdateConfig;
-            // use default value if no "Managed" provided
-            if (Managed == null)
-            {
-                this.Managed = false;
-            }
-            else
-            {
-                this.Managed = Managed;
-            }
+            this.Managed = Managed;
         }
         
         /// <summary>

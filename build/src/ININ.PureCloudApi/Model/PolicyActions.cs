@@ -21,9 +21,9 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyActions" /> class.
         /// </summary>
-        /// <param name="RetainRecording">true to retain the recording associated with the conversation. Default &#x3D; true (default to false).</param>
-        /// <param name="DeleteRecording">true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false (default to false).</param>
-        /// <param name="AlwaysDelete">true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false (default to false).</param>
+        /// <param name="RetainRecording">true to retain the recording associated with the conversation. Default &#x3D; true.</param>
+        /// <param name="DeleteRecording">true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false.</param>
+        /// <param name="AlwaysDelete">true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false.</param>
         /// <param name="AssignEvaluations">AssignEvaluations.</param>
         /// <param name="AssignMeteredEvaluations">AssignMeteredEvaluations.</param>
         /// <param name="AssignCalibrations">AssignCalibrations.</param>
@@ -31,33 +31,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="InitiateScreenRecording">InitiateScreenRecording.</param>
         public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null)
         {
-            // use default value if no "RetainRecording" provided
-            if (RetainRecording == null)
-            {
-                this.RetainRecording = false;
-            }
-            else
-            {
-                this.RetainRecording = RetainRecording;
-            }
-            // use default value if no "DeleteRecording" provided
-            if (DeleteRecording == null)
-            {
-                this.DeleteRecording = false;
-            }
-            else
-            {
-                this.DeleteRecording = DeleteRecording;
-            }
-            // use default value if no "AlwaysDelete" provided
-            if (AlwaysDelete == null)
-            {
-                this.AlwaysDelete = false;
-            }
-            else
-            {
-                this.AlwaysDelete = AlwaysDelete;
-            }
+            this.RetainRecording = RetainRecording;
+            this.DeleteRecording = DeleteRecording;
+            this.AlwaysDelete = AlwaysDelete;
             this.AssignEvaluations = AssignEvaluations;
             this.AssignMeteredEvaluations = AssignMeteredEvaluations;
             this.AssignCalibrations = AssignCalibrations;

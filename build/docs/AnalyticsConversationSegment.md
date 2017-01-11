@@ -26,11 +26,11 @@ title: AnalyticsConversationSegment
 | **DestinationSessionId** | **string** |  | [optional] |
 | **SipResponseCodes** | **List&lt;long?&gt;** |  | [optional] |
 | **Q850ResponseCodes** | **List&lt;long?&gt;** |  | [optional] |
-| **Conference** | **bool?** |  | [optional] [default to false]|
+| **Conference** | **bool?** |  | [optional] |
 | **GroupId** | **string** |  | [optional] |
 | **Subject** | **string** |  | [optional] |
-| **AudioMuted** | **bool?** |  | [optional] [default to false]|
-| **VideoMuted** | **bool?** |  | [optional] [default to false]|
+| **AudioMuted** | **bool?** |  | [optional] |
+| **VideoMuted** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

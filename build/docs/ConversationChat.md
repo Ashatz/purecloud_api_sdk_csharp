@@ -12,7 +12,7 @@ title: ConversationChat
 | **RoomId** | **string** | The room id for the chat. | [optional] |
 | **RecordingId** | **string** | A globally unique identifier for the recording associated with this chat. | [optional] |
 | **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s chat, divided into activity segments. | [optional] |
-| **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] [default to false]|
+| **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
 | **Direction** | **string** | The direction of the chat | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **StartHoldTime** | **DateTime?** | The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

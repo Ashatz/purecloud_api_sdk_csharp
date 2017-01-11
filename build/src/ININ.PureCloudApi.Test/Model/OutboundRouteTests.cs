@@ -139,14 +139,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CreatedByApp'
         }
         /// <summary>
-        /// Test the property 'Site'
-        /// </summary>
-        [Test]
-        public void SiteTest()
-        {
-            // TODO: unit test for the property 'Site'
-        }
-        /// <summary>
         /// Test the property 'ClassificationTypes'
         /// </summary>
         [Test]
@@ -171,20 +163,28 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Distribution'
         }
         /// <summary>
-        /// Test the property 'Managed'
-        /// </summary>
-        [Test]
-        public void ManagedTest()
-        {
-            // TODO: unit test for the property 'Managed'
-        }
-        /// <summary>
         /// Test the property 'ExternalTrunkBases'
         /// </summary>
         [Test]
         public void ExternalTrunkBasesTest()
         {
             // TODO: unit test for the property 'ExternalTrunkBases'
+        }
+        /// <summary>
+        /// Test the property 'Site'
+        /// </summary>
+        [Test]
+        public void SiteTest()
+        {
+            // TODO: unit test for the property 'Site'
+        }
+        /// <summary>
+        /// Test the property 'Managed'
+        /// </summary>
+        [Test]
+        public void ManagedTest()
+        {
+            // TODO: unit test for the property 'Managed'
         }
         /// <summary>
         /// Test the property 'SelfUri'

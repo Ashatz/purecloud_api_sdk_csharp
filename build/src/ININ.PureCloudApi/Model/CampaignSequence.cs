@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="Campaigns">the ordered list of campaign identifiers (required).</param>
         /// <param name="Status">status of the sequence (required).</param>
-        /// <param name="Repeat">indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false (default to false).</param>
+        /// <param name="Repeat">indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false.</param>
         public CampaignSequence(string Name = null, int? Version = null, List<UriReference> Campaigns = null, StatusEnum? Status = null, bool? Repeat = null)
         {
             // to ensure "Campaigns" is required (not null)
@@ -92,15 +92,7 @@ namespace ININ.PureCloudApi.Model
             }
             this.Name = Name;
             this.Version = Version;
-            // use default value if no "Repeat" provided
-            if (Repeat == null)
-            {
-                this.Repeat = false;
-            }
-            else
-            {
-                this.Repeat = Repeat;
-            }
+            this.Repeat = Repeat;
         }
         
         /// <summary>

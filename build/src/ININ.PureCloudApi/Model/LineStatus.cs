@@ -22,22 +22,14 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="LineStatus" /> class.
         /// </summary>
         /// <param name="Id">The id of this line.</param>
-        /// <param name="Reachable">Indicates whether the edge can reach the line. (default to false).</param>
+        /// <param name="Reachable">Indicates whether the edge can reach the line..</param>
         /// <param name="AddressOfRecord">The line&#39;s address of record..</param>
         /// <param name="ContactAddresses">The addresses used to contact the line..</param>
         /// <param name="ReachableStateTime">The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public LineStatus(string Id = null, bool? Reachable = null, string AddressOfRecord = null, List<string> ContactAddresses = null, DateTime? ReachableStateTime = null)
         {
             this.Id = Id;
-            // use default value if no "Reachable" provided
-            if (Reachable == null)
-            {
-                this.Reachable = false;
-            }
-            else
-            {
-                this.Reachable = Reachable;
-            }
+            this.Reachable = Reachable;
             this.AddressOfRecord = AddressOfRecord;
             this.ContactAddresses = ContactAddresses;
             this.ReachableStateTime = ReachableStateTime;

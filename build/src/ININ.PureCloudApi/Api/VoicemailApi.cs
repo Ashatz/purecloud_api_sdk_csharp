@@ -209,8 +209,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
-        VoicemailMessageEntityListing GetMessages (string ids = null);
+        VoicemailMessageEntityListing GetMessages (string ids = null, List<string> expand = null);
 
         /// <summary>
         /// List voicemail messages
@@ -220,8 +221,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
-        ApiResponse<VoicemailMessageEntityListing> GetMessagesWithHttpInfo (string ids = null);
+        ApiResponse<VoicemailMessageEntityListing> GetMessagesWithHttpInfo (string ids = null, List<string> expand = null);
         /// <summary>
         /// Get message.
         /// </summary>
@@ -230,8 +232,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>VoicemailMessage</returns>
-        VoicemailMessage GetMessagesMessageId (string messageId);
+        VoicemailMessage GetMessagesMessageId (string messageId, List<string> expand = null);
 
         /// <summary>
         /// Get message.
@@ -241,8 +244,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        ApiResponse<VoicemailMessage> GetMessagesMessageIdWithHttpInfo (string messageId);
+        ApiResponse<VoicemailMessage> GetMessagesMessageIdWithHttpInfo (string messageId, List<string> expand = null);
         /// <summary>
         /// Get media playback URI for this message
         /// </summary>
@@ -679,8 +683,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
-        System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMessagesAsync (string ids = null);
+        System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMessagesAsync (string ids = null, List<string> expand = null);
 
         /// <summary>
         /// List voicemail messages
@@ -690,8 +695,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMessagesAsyncWithHttpInfo (string ids = null);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMessagesAsyncWithHttpInfo (string ids = null, List<string> expand = null);
         /// <summary>
         /// Get message.
         /// </summary>
@@ -700,8 +706,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of VoicemailMessage</returns>
-        System.Threading.Tasks.Task<VoicemailMessage> GetMessagesMessageIdAsync (string messageId);
+        System.Threading.Tasks.Task<VoicemailMessage> GetMessagesMessageIdAsync (string messageId, List<string> expand = null);
 
         /// <summary>
         /// Get message.
@@ -711,8 +718,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetMessagesMessageIdAsyncWithHttpInfo (string messageId);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetMessagesMessageIdAsyncWithHttpInfo (string messageId, List<string> expand = null);
         /// <summary>
         /// Get media playback URI for this message
         /// </summary>
@@ -2424,10 +2432,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>VoicemailMessageEntityListing</returns>
-        public VoicemailMessageEntityListing GetMessages (string ids = null)
+        public VoicemailMessageEntityListing GetMessages (string ids = null, List<string> expand = null)
         {
-             ApiResponse<VoicemailMessageEntityListing> localVarResponse = GetMessagesWithHttpInfo(ids);
+             ApiResponse<VoicemailMessageEntityListing> localVarResponse = GetMessagesWithHttpInfo(ids, expand);
              return localVarResponse.Data;
         }
 
@@ -2436,8 +2445,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
-        public ApiResponse< VoicemailMessageEntityListing > GetMessagesWithHttpInfo (string ids = null)
+        public ApiResponse< VoicemailMessageEntityListing > GetMessagesWithHttpInfo (string ids = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/voicemail/messages";
@@ -2466,6 +2476,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2499,10 +2510,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
-        public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMessagesAsync (string ids = null)
+        public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMessagesAsync (string ids = null, List<string> expand = null)
         {
-             ApiResponse<VoicemailMessageEntityListing> localVarResponse = await GetMessagesAsyncWithHttpInfo(ids);
+             ApiResponse<VoicemailMessageEntityListing> localVarResponse = await GetMessagesAsyncWithHttpInfo(ids, expand);
              return localVarResponse.Data;
 
         }
@@ -2512,8 +2524,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">An optional comma separated list of VoicemailMessage ids (optional)</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMessagesAsyncWithHttpInfo (string ids = null)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMessagesAsyncWithHttpInfo (string ids = null, List<string> expand = null)
         {
 
             var localVarPath = "/api/v2/voicemail/messages";
@@ -2542,6 +2555,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2575,10 +2589,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>VoicemailMessage</returns>
-        public VoicemailMessage GetMessagesMessageId (string messageId)
+        public VoicemailMessage GetMessagesMessageId (string messageId, List<string> expand = null)
         {
-             ApiResponse<VoicemailMessage> localVarResponse = GetMessagesMessageIdWithHttpInfo(messageId);
+             ApiResponse<VoicemailMessage> localVarResponse = GetMessagesMessageIdWithHttpInfo(messageId, expand);
              return localVarResponse.Data;
         }
 
@@ -2587,8 +2602,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        public ApiResponse< VoicemailMessage > GetMessagesMessageIdWithHttpInfo (string messageId)
+        public ApiResponse< VoicemailMessage > GetMessagesMessageIdWithHttpInfo (string messageId, List<string> expand = null)
         {
             // verify the required parameter 'messageId' is set
             if (messageId == null)
@@ -2620,6 +2636,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -2653,10 +2670,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of VoicemailMessage</returns>
-        public async System.Threading.Tasks.Task<VoicemailMessage> GetMessagesMessageIdAsync (string messageId)
+        public async System.Threading.Tasks.Task<VoicemailMessage> GetMessagesMessageIdAsync (string messageId, List<string> expand = null)
         {
-             ApiResponse<VoicemailMessage> localVarResponse = await GetMessagesMessageIdAsyncWithHttpInfo(messageId);
+             ApiResponse<VoicemailMessage> localVarResponse = await GetMessagesMessageIdAsyncWithHttpInfo(messageId, expand);
              return localVarResponse.Data;
 
         }
@@ -2666,8 +2684,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
+        /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetMessagesMessageIdAsyncWithHttpInfo (string messageId)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetMessagesMessageIdAsyncWithHttpInfo (string messageId, List<string> expand = null)
         {
             // verify the required parameter 'messageId' is set
             if (messageId == null)
@@ -2699,6 +2718,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

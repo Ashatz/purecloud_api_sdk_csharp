@@ -67,6 +67,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'ConversationStart'
         }
         /// <summary>
+        /// Test the property 'ConversationEnd'
+        /// </summary>
+        [Test]
+        public void ConversationEndTest()
+        {
+            // TODO: unit test for the property 'ConversationEnd'
+        }
+        /// <summary>
         /// Test the property 'Participants'
         /// </summary>
         [Test]

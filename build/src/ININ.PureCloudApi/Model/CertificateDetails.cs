@@ -25,42 +25,18 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Subject">Information about the subject of the certificate.  The value of this property is a comma separated key&#x3D;value format.  Each key is one of the attribute names supported by X.500..</param>
         /// <param name="ExpirationDate">The expiration date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="IssueDate">The issue date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Expired">True if the certificate is expired, false otherwise. (default to false).</param>
-        /// <param name="SignatureValid">SignatureValid (default to false).</param>
-        /// <param name="Valid">Valid (default to false).</param>
+        /// <param name="Expired">True if the certificate is expired, false otherwise..</param>
+        /// <param name="SignatureValid">SignatureValid.</param>
+        /// <param name="Valid">Valid.</param>
         public CertificateDetails(string Issuer = null, string Subject = null, DateTime? ExpirationDate = null, DateTime? IssueDate = null, bool? Expired = null, bool? SignatureValid = null, bool? Valid = null)
         {
             this.Issuer = Issuer;
             this.Subject = Subject;
             this.ExpirationDate = ExpirationDate;
             this.IssueDate = IssueDate;
-            // use default value if no "Expired" provided
-            if (Expired == null)
-            {
-                this.Expired = false;
-            }
-            else
-            {
-                this.Expired = Expired;
-            }
-            // use default value if no "SignatureValid" provided
-            if (SignatureValid == null)
-            {
-                this.SignatureValid = false;
-            }
-            else
-            {
-                this.SignatureValid = SignatureValid;
-            }
-            // use default value if no "Valid" provided
-            if (Valid == null)
-            {
-                this.Valid = false;
-            }
-            else
-            {
-                this.Valid = Valid;
-            }
+            this.Expired = Expired;
+            this.SignatureValid = SignatureValid;
+            this.Valid = Valid;
         }
         
         /// <summary>

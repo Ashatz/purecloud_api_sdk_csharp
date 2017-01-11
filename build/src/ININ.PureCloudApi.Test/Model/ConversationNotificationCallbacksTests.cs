@@ -179,6 +179,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'CallbackScheduledTime'
         }
         /// <summary>
+        /// Test the property 'AutomatedCallbackConfigId'
+        /// </summary>
+        [Test]
+        public void AutomatedCallbackConfigIdTest()
+        {
+            // TODO: unit test for the property 'AutomatedCallbackConfigId'
+        }
+        /// <summary>
         /// Test the property 'AdditionalProperties'
         /// </summary>
         [Test]

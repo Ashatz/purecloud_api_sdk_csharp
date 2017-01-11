@@ -7,7 +7,7 @@ title: UnreadStatus
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Unread** | **bool?** | Sets if the alert is read or unread. | [optional] [default to false]|
+| **Unread** | **bool?** | Sets if the alert is read or unread. | [optional] |
 {: class="table table-striped"}
 
 

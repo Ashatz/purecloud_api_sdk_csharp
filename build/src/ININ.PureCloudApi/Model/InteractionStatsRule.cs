@@ -321,7 +321,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NumericRange">The comparison descriptor used against the metric&#39;s value. (required).</param>
         /// <param name="Statistic">The statistic of concern for the metric. (required).</param>
         /// <param name="Value">The threshold value. (required).</param>
-        /// <param name="Enabled">Indicates if the rule is enabled. (required) (default to false).</param>
+        /// <param name="Enabled">Indicates if the rule is enabled. (required).</param>
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
         public InteractionStatsRule(string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)

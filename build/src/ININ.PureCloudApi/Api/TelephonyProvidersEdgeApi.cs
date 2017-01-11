@@ -269,6 +269,27 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DeleteProvidersEdgesSitesSiteIdWithHttpInfo (string siteId);
         /// <summary>
+        /// Delete Outbound Route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>string</returns>
+        string DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId (string outboundRouteId);
+
+        /// <summary>
+        /// Delete Outbound Route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId);
+        /// <summary>
         /// Delete a Trunk Base Settings object by ID
         /// </summary>
         /// <remarks>
@@ -1415,6 +1436,64 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of NumberPlan</returns>
         ApiResponse<NumberPlan> GetProvidersEdgesSitesSiteIdNumberplansNumberplanIdWithHttpInfo (string siteId, string numberPlanId);
         /// <summary>
+        /// Get outbound routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>OutboundRouteBaseEntityListing</returns>
+        OutboundRouteBaseEntityListing GetProvidersEdgesSitesSiteIdOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+
+        /// <summary>
+        /// Get outbound routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>ApiResponse of OutboundRouteBaseEntityListing</returns>
+        ApiResponse<OutboundRouteBaseEntityListing> GetProvidersEdgesSitesSiteIdOutboundroutesWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        /// <summary>
+        /// Get an outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>OutboundRouteBase</returns>
+        OutboundRouteBase GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId (string outboundRouteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+
+        /// <summary>
+        /// Get an outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>ApiResponse of OutboundRouteBase</returns>
+        ApiResponse<OutboundRouteBase> GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        /// <summary>
         /// Get a list of Edge-compatible time zones
         /// </summary>
         /// <remarks>
@@ -2178,6 +2257,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of Site</returns>
         ApiResponse<Site> PostProvidersEdgesSitesWithHttpInfo (Site body);
         /// <summary>
+        /// Create outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>OutboundRoute</returns>
+        OutboundRoute PostProvidersEdgesSitesSiteIdOutboundroutes (string siteId, OutboundRoute body);
+
+        /// <summary>
+        /// Create outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>ApiResponse of OutboundRoute</returns>
+        ApiResponse<OutboundRoute> PostProvidersEdgesSitesSiteIdOutboundroutesWithHttpInfo (string siteId, OutboundRoute body);
+        /// <summary>
         /// Triggers the rebalance operation.
         /// </summary>
         /// <remarks>
@@ -2569,6 +2671,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
         ApiResponse<List<NumberPlan>> PutProvidersEdgesSitesSiteIdNumberplansWithHttpInfo (string siteId, List<NumberPlan> body);
         /// <summary>
+        /// Update outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>OutboundRouteBase</returns>
+        OutboundRouteBase PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRouteBase body);
+
+        /// <summary>
+        /// Update outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>ApiResponse of OutboundRouteBase</returns>
+        ApiResponse<OutboundRouteBase> PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId, OutboundRouteBase body);
+        /// <summary>
         /// Update a Trunk Base Settings object by ID
         /// </summary>
         /// <remarks>
@@ -2847,6 +2972,27 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgesSitesSiteIdAsyncWithHttpInfo (string siteId);
+        /// <summary>
+        /// Delete Outbound Route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsync (string outboundRouteId);
+
+        /// <summary>
+        /// Delete Outbound Route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId);
         /// <summary>
         /// Delete a Trunk Base Settings object by ID
         /// </summary>
@@ -3994,6 +4140,64 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (NumberPlan)</returns>
         System.Threading.Tasks.Task<ApiResponse<NumberPlan>> GetProvidersEdgesSitesSiteIdNumberplansNumberplanIdAsyncWithHttpInfo (string siteId, string numberPlanId);
         /// <summary>
+        /// Get outbound routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>Task of OutboundRouteBaseEntityListing</returns>
+        System.Threading.Tasks.Task<OutboundRouteBaseEntityListing> GetProvidersEdgesSitesSiteIdOutboundroutesAsync (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+
+        /// <summary>
+        /// Get outbound routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>Task of ApiResponse (OutboundRouteBaseEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OutboundRouteBaseEntityListing>> GetProvidersEdgesSitesSiteIdOutboundroutesAsyncWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        /// <summary>
+        /// Get an outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>Task of OutboundRouteBase</returns>
+        System.Threading.Tasks.Task<OutboundRouteBase> GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsync (string outboundRouteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+
+        /// <summary>
+        /// Get an outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        /// <summary>
         /// Get a list of Edge-compatible time zones
         /// </summary>
         /// <remarks>
@@ -4757,6 +4961,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (Site)</returns>
         System.Threading.Tasks.Task<ApiResponse<Site>> PostProvidersEdgesSitesAsyncWithHttpInfo (Site body);
         /// <summary>
+        /// Create outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of OutboundRoute</returns>
+        System.Threading.Tasks.Task<OutboundRoute> PostProvidersEdgesSitesSiteIdOutboundroutesAsync (string siteId, OutboundRoute body);
+
+        /// <summary>
+        /// Create outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of ApiResponse (OutboundRoute)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PostProvidersEdgesSitesSiteIdOutboundroutesAsyncWithHttpInfo (string siteId, OutboundRoute body);
+        /// <summary>
         /// Triggers the rebalance operation.
         /// </summary>
         /// <remarks>
@@ -5147,6 +5374,29 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">List of number plans</param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutProvidersEdgesSitesSiteIdNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body);
+        /// <summary>
+        /// Update outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of OutboundRouteBase</returns>
+        System.Threading.Tasks.Task<OutboundRouteBase> PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsync (string outboundRouteId, OutboundRouteBase body);
+
+        /// <summary>
+        /// Update outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId, OutboundRouteBase body);
         /// <summary>
         /// Update a Trunk Base Settings object by ID
         /// </summary>
@@ -7147,6 +7397,163 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteProvidersEdgesSitesSiteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteProvidersEdgesSitesSiteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Delete Outbound Route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>string</returns>
+        public string DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId (string outboundRouteId)
+        {
+             ApiResponse<string> localVarResponse = DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdWithHttpInfo(outboundRouteId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete Outbound Route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId)
+        {
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null)
+                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (outboundRouteId != null) localVarPathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        /// <summary>
+        /// Delete Outbound Route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsync (string outboundRouteId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsyncWithHttpInfo(outboundRouteId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete Outbound Route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId)
+        {
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null)
+                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (outboundRouteId != null) localVarPathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarHeaders,
@@ -15033,6 +15440,368 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get outbound routes 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>OutboundRouteBaseEntityListing</returns>
+        public OutboundRouteBaseEntityListing GetProvidersEdgesSitesSiteIdOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+             ApiResponse<OutboundRouteBaseEntityListing> localVarResponse = GetProvidersEdgesSitesSiteIdOutboundroutesWithHttpInfo(siteId, pageSize, pageNumber, name, sortBy);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get outbound routes 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>ApiResponse of OutboundRouteBaseEntityListing</returns>
+        public ApiResponse< OutboundRouteBaseEntityListing > GetProvidersEdgesSitesSiteIdOutboundroutesWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgesSitesSiteIdOutboundroutes");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesSitesSiteIdOutboundroutes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesSitesSiteIdOutboundroutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundRouteBaseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundRouteBaseEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRouteBaseEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get outbound routes 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>Task of OutboundRouteBaseEntityListing</returns>
+        public async System.Threading.Tasks.Task<OutboundRouteBaseEntityListing> GetProvidersEdgesSitesSiteIdOutboundroutesAsync (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+             ApiResponse<OutboundRouteBaseEntityListing> localVarResponse = await GetProvidersEdgesSitesSiteIdOutboundroutesAsyncWithHttpInfo(siteId, pageSize, pageNumber, name, sortBy);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get outbound routes 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>Task of ApiResponse (OutboundRouteBaseEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteBaseEntityListing>> GetProvidersEdgesSitesSiteIdOutboundroutesAsyncWithHttpInfo (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgesSitesSiteIdOutboundroutes");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesSitesSiteIdOutboundroutes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesSitesSiteIdOutboundroutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundRouteBaseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundRouteBaseEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRouteBaseEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get an outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>OutboundRouteBase</returns>
+        public OutboundRouteBase GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId (string outboundRouteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+             ApiResponse<OutboundRouteBase> localVarResponse = GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdWithHttpInfo(outboundRouteId, pageSize, pageNumber, name, sortBy);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>ApiResponse of OutboundRouteBase</returns>
+        public ApiResponse< OutboundRouteBase > GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null)
+                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (outboundRouteId != null) localVarPathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundRouteBase>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundRouteBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRouteBase)));
+            
+        }
+
+        /// <summary>
+        /// Get an outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>Task of OutboundRouteBase</returns>
+        public async System.Threading.Tasks.Task<OutboundRouteBase> GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsync (string outboundRouteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+             ApiResponse<OutboundRouteBase> localVarResponse = await GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsyncWithHttpInfo(outboundRouteId, pageSize, pageNumber, name, sortBy);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null)
+                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (outboundRouteId != null) localVarPathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundRouteBase>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundRouteBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRouteBase)));
+            
+        }
+
+        /// <summary>
         /// Get a list of Edge-compatible time zones 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -20692,6 +21461,189 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Create outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>OutboundRoute</returns>
+        public OutboundRoute PostProvidersEdgesSitesSiteIdOutboundroutes (string siteId, OutboundRoute body)
+        {
+             ApiResponse<OutboundRoute> localVarResponse = PostProvidersEdgesSitesSiteIdOutboundroutesWithHttpInfo(siteId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>ApiResponse of OutboundRoute</returns>
+        public ApiResponse< OutboundRoute > PostProvidersEdgesSitesSiteIdOutboundroutesWithHttpInfo (string siteId, OutboundRoute body)
+        {
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesSitesSiteIdOutboundroutes");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesSitesSiteIdOutboundroutes");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostProvidersEdgesSitesSiteIdOutboundroutes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostProvidersEdgesSitesSiteIdOutboundroutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundRoute>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundRoute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRoute)));
+            
+        }
+
+        /// <summary>
+        /// Create outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of OutboundRoute</returns>
+        public async System.Threading.Tasks.Task<OutboundRoute> PostProvidersEdgesSitesSiteIdOutboundroutesAsync (string siteId, OutboundRoute body)
+        {
+             ApiResponse<OutboundRoute> localVarResponse = await PostProvidersEdgesSitesSiteIdOutboundroutesAsyncWithHttpInfo(siteId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of ApiResponse (OutboundRoute)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PostProvidersEdgesSitesSiteIdOutboundroutesAsyncWithHttpInfo (string siteId, OutboundRoute body)
+        {
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesSitesSiteIdOutboundroutes");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostProvidersEdgesSitesSiteIdOutboundroutes");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (siteId != null) localVarPathParams.Add("siteId", Configuration.ApiClient.ParameterToString(siteId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostProvidersEdgesSitesSiteIdOutboundroutes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostProvidersEdgesSitesSiteIdOutboundroutes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundRoute>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundRoute) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRoute)));
+            
+        }
+
+        /// <summary>
         /// Triggers the rebalance operation. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -23783,6 +24735,189 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<List<NumberPlan>>(localVarStatusCode,
                 localVarHeaders,
                 (List<NumberPlan>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<NumberPlan>)));
+            
+        }
+
+        /// <summary>
+        /// Update outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>OutboundRouteBase</returns>
+        public OutboundRouteBase PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRouteBase body)
+        {
+             ApiResponse<OutboundRouteBase> localVarResponse = PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdWithHttpInfo(outboundRouteId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>ApiResponse of OutboundRouteBase</returns>
+        public ApiResponse< OutboundRouteBase > PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId, OutboundRouteBase body)
+        {
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null)
+                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (outboundRouteId != null) localVarPathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundRouteBase>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundRouteBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRouteBase)));
+            
+        }
+
+        /// <summary>
+        /// Update outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of OutboundRouteBase</returns>
+        public async System.Threading.Tasks.Task<OutboundRouteBase> PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsync (string outboundRouteId, OutboundRouteBase body)
+        {
+             ApiResponse<OutboundRouteBase> localVarResponse = await PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsyncWithHttpInfo(outboundRouteId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update outbound route 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of ApiResponse (OutboundRouteBase)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteBase>> PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId, OutboundRouteBase body)
+        {
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null)
+                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (outboundRouteId != null) localVarPathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundRouteBase>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundRouteBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRouteBase)));
             
         }
 

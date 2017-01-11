@@ -22,7 +22,7 @@ title: Document
 | **SystemType** | **string** |  | [optional] |
 | **Filename** | **string** |  | [optional] |
 | **PageCount** | **long?** |  | [optional] |
-| **Read** | **bool?** |  | [optional] [default to false]|
+| **Read** | **bool?** |  | [optional] |
 | **CallerAddress** | **string** |  | [optional] |
 | **ReceiverAddress** | **string** |  | [optional] |
 | **Tags** | **List&lt;string&gt;** |  | [optional] |

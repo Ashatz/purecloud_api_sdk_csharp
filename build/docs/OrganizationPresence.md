@@ -11,8 +11,8 @@ title: OrganizationPresence
 | **Name** | **string** |  | [optional] |
 | **LanguageLabels** | **Dictionary&lt;string, string&gt;** | The label used for the system presence in each specified language | |
 | **SystemPresence** | **string** |  | [optional] |
-| **Deactivated** | **bool?** |  | [optional] [default to false]|
-| **Primary** | **bool?** |  | [optional] [default to false]|
+| **Deactivated** | **bool?** |  | [optional] |
+| **Primary** | **bool?** |  | [optional] |
 | **CreatedBy** | [**User**](User.html) |  | [optional] |
 | **CreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ModifiedBy** | [**User**](User.html) |  | [optional] |

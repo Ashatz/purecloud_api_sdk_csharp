@@ -73,7 +73,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="Managed">Is this edge group being managed remotely. (default to false).</param>
+        /// <param name="Managed">Is this edge group being managed remotely..</param>
         /// <param name="EdgeTrunkBaseAssignment">A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication. (required).</param>
         /// <param name="PhoneTrunkBases">Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication..</param>
         public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBase> PhoneTrunkBases = null)
@@ -105,15 +105,7 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
-            // use default value if no "Managed" provided
-            if (Managed == null)
-            {
-                this.Managed = false;
-            }
-            else
-            {
-                this.Managed = Managed;
-            }
+            this.Managed = Managed;
             this.PhoneTrunkBases = PhoneTrunkBases;
         }
         

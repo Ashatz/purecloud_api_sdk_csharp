@@ -19,6 +19,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteProvidersEdgesPhonebasesettingsPhonebaseId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesphonebasesettingsphonebaseid) | **DELETE** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Delete a Phone Base Settings by ID |
 | [**DeleteProvidersEdgesPhonesPhoneId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgesphonesphoneid) | **DELETE** /api/v2/telephony/providers/edges/phones/{phoneId} | Delete a Phone by ID |
 | [**DeleteProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgessitessiteid) | **DELETE** /api/v2/telephony/providers/edges/sites/{siteId} | Delete a Site by ID |
+| [**DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgessitessiteidoutboundroutesoutboundrouteid) | **DELETE** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} | Delete Outbound Route |
 | [**DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId**](TelephonyProvidersEdgeApi.html#deleteprovidersedgestrunkbasesettingstrunkbasesettingsid) | **DELETE** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Delete a Trunk Base Settings object by ID |
 | [**GetProvidersEdges**](TelephonyProvidersEdgeApi.html#getprovidersedges) | **GET** /api/v2/telephony/providers/edges | Get the list of edges. |
 | [**GetProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeApi.html#getprovidersedgesavailablelanguages) | **GET** /api/v2/telephony/providers/edges/availablelanguages | Get the list of available languages. |
@@ -67,6 +68,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetProvidersEdgesSitesSiteIdNumberplans**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidnumberplans) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Get the list of Number Plans for this Site. |
 | [**GetProvidersEdgesSitesSiteIdNumberplansClassifications**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidnumberplansclassifications) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications | Get a list of Classifications for this Site |
 | [**GetProvidersEdgesSitesSiteIdNumberplansNumberplanId**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidnumberplansnumberplanid) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId} | Get a Number Plan by ID. |
+| [**GetProvidersEdgesSitesSiteIdOutboundroutes**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidoutboundroutes) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes | Get outbound routes |
+| [**GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId**](TelephonyProvidersEdgeApi.html#getprovidersedgessitessiteidoutboundroutesoutboundrouteid) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} | Get an outbound route |
 | [**GetProvidersEdgesTimezones**](TelephonyProvidersEdgeApi.html#getprovidersedgestimezones) | **GET** /api/v2/telephony/providers/edges/timezones | Get a list of Edge-compatible time zones |
 | [**GetProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkbasesettings) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings | Get Trunk Base Settings listing |
 | [**GetProvidersEdgesTrunkbasesettingsAvailablemetabases**](TelephonyProvidersEdgeApi.html#getprovidersedgestrunkbasesettingsavailablemetabases) | **GET** /api/v2/telephony/providers/edges/trunkbasesettings/availablemetabases | Get a list of available makes and models to create a new Trunk Base Settings |
@@ -100,6 +103,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostProvidersEdgesPhonesPhoneIdReboot**](TelephonyProvidersEdgeApi.html#postprovidersedgesphonesphoneidreboot) | **POST** /api/v2/telephony/providers/edges/phones/{phoneId}/reboot | Reboot a Phone |
 | [**PostProvidersEdgesPhonesReboot**](TelephonyProvidersEdgeApi.html#postprovidersedgesphonesreboot) | **POST** /api/v2/telephony/providers/edges/phones/reboot | Reboot Multiple Phones |
 | [**PostProvidersEdgesSites**](TelephonyProvidersEdgeApi.html#postprovidersedgessites) | **POST** /api/v2/telephony/providers/edges/sites | Create a Site. |
+| [**PostProvidersEdgesSitesSiteIdOutboundroutes**](TelephonyProvidersEdgeApi.html#postprovidersedgessitessiteidoutboundroutes) | **POST** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes | Create outbound route |
 | [**PostProvidersEdgesSitesSiteIdRebalance**](TelephonyProvidersEdgeApi.html#postprovidersedgessitessiteidrebalance) | **POST** /api/v2/telephony/providers/edges/sites/{siteId}/rebalance | Triggers the rebalance operation. |
 | [**PostProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeApi.html#postprovidersedgestrunkbasesettings) | **POST** /api/v2/telephony/providers/edges/trunkbasesettings | Create a Trunk Base Settings object |
 | [**PutProvidersEdgesCertificateauthoritiesCertificateId**](TelephonyProvidersEdgeApi.html#putprovidersedgescertificateauthoritiescertificateid) | **PUT** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Update a certificate authority. |
@@ -117,6 +121,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutProvidersEdgesPhonesPhoneId**](TelephonyProvidersEdgeApi.html#putprovidersedgesphonesphoneid) | **PUT** /api/v2/telephony/providers/edges/phones/{phoneId} | Update a Phone by ID |
 | [**PutProvidersEdgesSitesSiteId**](TelephonyProvidersEdgeApi.html#putprovidersedgessitessiteid) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId} | Update a Site by ID. |
 | [**PutProvidersEdgesSitesSiteIdNumberplans**](TelephonyProvidersEdgeApi.html#putprovidersedgessitessiteidnumberplans) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Update the list of Number Plans. |
+| [**PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId**](TelephonyProvidersEdgeApi.html#putprovidersedgessitessiteidoutboundroutesoutboundrouteid) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} | Update outbound route |
 | [**PutProvidersEdgesTrunkbasesettingsTrunkbasesettingsId**](TelephonyProvidersEdgeApi.html#putprovidersedgestrunkbasesettingstrunkbasesettingsid) | **PUT** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Update a Trunk Base Settings object by ID |
 {: class="table table-striped"}
 
@@ -787,6 +792,62 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **siteId** | **string**| Site ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="deleteprovidersedgessitessiteidoutboundroutesoutboundrouteid"></a>
+
+## **string** DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId (string outboundRouteId)
+
+Delete Outbound Route
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
+
+            try
+            {
+                // Delete Outbound Route
+                string result = apiInstance.DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId(outboundRouteId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **outboundRouteId** | **string**| Outbound route ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3610,6 +3671,134 @@ namespace Example
 
 [**NumberPlan**](NumberPlan.html)
 
+<a name="getprovidersedgessitessiteidoutboundroutes"></a>
+
+## [**OutboundRouteBaseEntityListing**](OutboundRouteBaseEntityListing.html) GetProvidersEdgesSitesSiteIdOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+
+Get outbound routes
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesSitesSiteIdOutboundroutesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var name = name_example;  // string | Name (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+
+            try
+            {
+                // Get outbound routes
+                OutboundRouteBaseEntityListing result = apiInstance.GetProvidersEdgesSitesSiteIdOutboundroutes(siteId, pageSize, pageNumber, name, sortBy);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesSitesSiteIdOutboundroutes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **name** | **string**| Name | [optional]  |
+| **sortBy** | **string**| Sort by | [optional] [default to name] |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutboundRouteBaseEntityListing**](OutboundRouteBaseEntityListing.html)
+
+<a name="getprovidersedgessitessiteidoutboundroutesoutboundrouteid"></a>
+
+## [**OutboundRouteBase**](OutboundRouteBase.html) GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId (string outboundRouteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+
+Get an outbound route
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var name = name_example;  // string | Name (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+
+            try
+            {
+                // Get an outbound route
+                OutboundRouteBase result = apiInstance.GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId(outboundRouteId, pageSize, pageNumber, name, sortBy);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **outboundRouteId** | **string**| Outbound route ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **name** | **string**| Name | [optional]  |
+| **sortBy** | **string**| Sort by | [optional] [default to name] |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutboundRouteBase**](OutboundRouteBase.html)
+
 <a name="getprovidersedgestimezones"></a>
 
 ## [**TimeZoneEntityListing**](TimeZoneEntityListing.html) GetProvidersEdgesTimezones (int? pageSize = null, int? pageNumber = null)
@@ -5525,6 +5714,64 @@ namespace Example
 
 [**Site**](Site.html)
 
+<a name="postprovidersedgessitessiteidoutboundroutes"></a>
+
+## [**OutboundRoute**](OutboundRoute.html) PostProvidersEdgesSitesSiteIdOutboundroutes (string siteId, OutboundRoute body)
+
+Create outbound route
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostProvidersEdgesSitesSiteIdOutboundroutesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID
+            var body = new OutboundRoute(); // OutboundRoute | OutboundRoute
+
+            try
+            {
+                // Create outbound route
+                OutboundRoute result = apiInstance.PostProvidersEdgesSitesSiteIdOutboundroutes(siteId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostProvidersEdgesSitesSiteIdOutboundroutes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID |  |
+| **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutboundRoute**](OutboundRoute.html)
+
 <a name="postprovidersedgessitessiteidrebalance"></a>
 
 ## void PostProvidersEdgesSitesSiteIdRebalance (string siteId)
@@ -6509,6 +6756,64 @@ namespace Example
 ### Return type
 
 [**List<NumberPlan>**](NumberPlan.html)
+
+<a name="putprovidersedgessitessiteidoutboundroutesoutboundrouteid"></a>
+
+## [**OutboundRouteBase**](OutboundRouteBase.html) PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRouteBase body)
+
+Update outbound route
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
+            var body = new OutboundRouteBase(); // OutboundRouteBase | OutboundRoute
+
+            try
+            {
+                // Update outbound route
+                OutboundRouteBase result = apiInstance.PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId(outboundRouteId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **outboundRouteId** | **string**| Outbound route ID |  |
+| **body** | [**OutboundRouteBase**](OutboundRouteBase.html)| OutboundRoute |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutboundRouteBase**](OutboundRouteBase.html)
 
 <a name="putprovidersedgestrunkbasesettingstrunkbasesettingsid"></a>
 

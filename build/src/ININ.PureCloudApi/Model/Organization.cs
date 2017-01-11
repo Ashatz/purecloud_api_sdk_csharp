@@ -71,7 +71,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Version">The current version of the organization. (required).</param>
         /// <param name="State">State.</param>
         /// <param name="DefaultSiteId">DefaultSiteId.</param>
-        /// <param name="Deletable">Deletable (default to false).</param>
+        /// <param name="Deletable">Deletable.</param>
         public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null)
         {
             // to ensure "Version" is required (not null)
@@ -90,15 +90,7 @@ namespace ININ.PureCloudApi.Model
             this.Domain = Domain;
             this.State = State;
             this.DefaultSiteId = DefaultSiteId;
-            // use default value if no "Deletable" provided
-            if (Deletable == null)
-            {
-                this.Deletable = false;
-            }
-            else
-            {
-                this.Deletable = Deletable;
-            }
+            this.Deletable = Deletable;
         }
         
         /// <summary>

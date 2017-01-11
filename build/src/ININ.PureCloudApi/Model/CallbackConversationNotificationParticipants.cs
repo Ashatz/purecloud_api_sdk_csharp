@@ -232,7 +232,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Spam for "spam"
             /// </summary>
             [EnumMember(Value = "spam")]
-            Spam
+            Spam,
+            
+            /// <summary>
+            /// Enum Uncallable for "uncallable"
+            /// </summary>
+            [EnumMember(Value = "uncallable")]
+            Uncallable
         }
         /// <summary>
         /// Gets or Sets State
@@ -282,7 +288,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SkipEnabled">SkipEnabled.</param>
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
-        public CallbackConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataNotificationCreatedBy User = null, CallbackConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, CallbackConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallbackConversationNotificationUriReference ExternalContact = null, CallbackConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationDialerPreview OutboundPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null)
+        /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
+        public CallbackConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataNotificationCreatedBy User = null, CallbackConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, CallbackConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallbackConversationNotificationUriReference ExternalContact = null, CallbackConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationDialerPreview OutboundPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -314,6 +321,7 @@ namespace ININ.PureCloudApi.Model
             this.SkipEnabled = SkipEnabled;
             this.TimeoutSeconds = TimeoutSeconds;
             this.CallbackScheduledTime = CallbackScheduledTime;
+            this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
         }
         
         /// <summary>
@@ -452,6 +460,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
         /// <summary>
+        /// Gets or Sets AutomatedCallbackConfigId
+        /// </summary>
+        [DataMember(Name="automatedCallbackConfigId", EmitDefaultValue=false)]
+        public string AutomatedCallbackConfigId { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -489,6 +502,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
+            sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -674,6 +688,11 @@ namespace ININ.PureCloudApi.Model
                     this.CallbackScheduledTime == other.CallbackScheduledTime ||
                     this.CallbackScheduledTime != null &&
                     this.CallbackScheduledTime.Equals(other.CallbackScheduledTime)
+                ) &&
+                (
+                    this.AutomatedCallbackConfigId == other.AutomatedCallbackConfigId ||
+                    this.AutomatedCallbackConfigId != null &&
+                    this.AutomatedCallbackConfigId.Equals(other.AutomatedCallbackConfigId)
                 );
         }
 
@@ -748,6 +767,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
                 if (this.CallbackScheduledTime != null)
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
+                if (this.AutomatedCallbackConfigId != null)
+                    hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
                 return hash;
             }
         }

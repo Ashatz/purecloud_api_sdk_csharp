@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchTimeoffrequestsTimeoffrequestId**](WorkforceManagementApi.html#patchtimeoffrequeststimeoffrequestid) | **PATCH** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Mark a time off request for the current user as read or unread |
 | [**PostDecisionsDownloadsSearch**](WorkforceManagementApi.html#postdecisionsdownloadssearch) | **POST** /api/v2/workforcemanagement/decisions/downloads/search | Download decisions files metadata |
 | [**PostLongtermforecasts**](WorkforceManagementApi.html#postlongtermforecasts) | **POST** /api/v2/workforcemanagement/longtermforecasts | Create a forecast |
+| [**PostSchedules**](WorkforceManagementApi.html#postschedules) | **POST** /api/v2/workforcemanagement/schedules | Get a schedule for the current user |
 {: class="table table-striped"}
 
 <a name="getadherence"></a>
@@ -532,4 +533,60 @@ namespace Example
 ### Return type
 
 [**ForecastCreationCompletion**](ForecastCreationCompletion.html)
+
+<a name="postschedules"></a>
+
+## [**TimeOffRequestList**](TimeOffRequestList.html) PostSchedules (CurrentUserScheduleRequestBody body = null)
+
+Get a schedule for the current user
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostSchedulesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new CurrentUserScheduleRequestBody(); // CurrentUserScheduleRequestBody | body (optional) 
+
+            try
+            {
+                // Get a schedule for the current user
+                TimeOffRequestList result = apiInstance.PostSchedules(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostSchedules: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CurrentUserScheduleRequestBody**](CurrentUserScheduleRequestBody.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TimeOffRequestList**](TimeOffRequestList.html)
 

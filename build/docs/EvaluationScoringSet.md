@@ -10,7 +10,7 @@ title: EvaluationScoringSet
 | **TotalScore** | **float?** |  | [optional] |
 | **TotalCriticalScore** | **float?** |  | [optional] |
 | **QuestionGroupScores** | [**List&lt;QuestionGroupScore&gt;**](QuestionGroupScore.html) |  | [optional] |
-| **AnyFailedKillQuestions** | **bool?** |  | [optional] [default to false]|
+| **AnyFailedKillQuestions** | **bool?** |  | [optional] |
 | **Comments** | **string** |  | [optional] |
 | **AgentComments** | **string** |  | [optional] |
 {: class="table table-striped"}

@@ -22,34 +22,18 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="VoicemailMessage" /> class.
         /// </summary>
         /// <param name="Conversation">The conversation that the voicemail message is associated with.</param>
-        /// <param name="Read">Whether the voicemail message is marked as read (default to false).</param>
+        /// <param name="Read">Whether the voicemail message is marked as read.</param>
         /// <param name="CallerUser">Optionally the user that left the voicemail message if the caller was a known user.</param>
-        /// <param name="Deleted">Whether the voicemail message has been marked as deleted (default to false).</param>
+        /// <param name="Deleted">Whether the voicemail message has been marked as deleted.</param>
         /// <param name="Note">An optional note.</param>
         /// <param name="User">The user that the voicemail message belongs to or null which means the voicemail message belongs to a group.</param>
         /// <param name="Group">The group that the voicemail message belongs to or null which means the voicemail message belongs to a user.</param>
         public VoicemailMessage(Conversation Conversation = null, bool? Read = null, User CallerUser = null, bool? Deleted = null, string Note = null, User User = null, Group Group = null)
         {
             this.Conversation = Conversation;
-            // use default value if no "Read" provided
-            if (Read == null)
-            {
-                this.Read = false;
-            }
-            else
-            {
-                this.Read = Read;
-            }
+            this.Read = Read;
             this.CallerUser = CallerUser;
-            // use default value if no "Deleted" provided
-            if (Deleted == null)
-            {
-                this.Deleted = false;
-            }
-            else
-            {
-                this.Deleted = Deleted;
-            }
+            this.Deleted = Deleted;
             this.Note = Note;
             this.User = User;
             this.Group = Group;

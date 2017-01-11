@@ -7,7 +7,7 @@ title: TimeOffRequestPatch
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **MarkedAsRead** | **bool?** |  | [optional] [default to false]|
+| **MarkedAsRead** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

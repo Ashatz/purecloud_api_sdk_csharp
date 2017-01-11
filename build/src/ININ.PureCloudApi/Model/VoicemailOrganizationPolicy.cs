@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailOrganizationPolicy" /> class.
         /// </summary>
-        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Enabled">Enabled.</param>
         /// <param name="RetentionTimeDays">RetentionTimeDays.</param>
         /// <param name="AlertTimeoutSeconds">AlertTimeoutSeconds.</param>
         /// <param name="MinimumRecordingTimeSeconds">MinimumRecordingTimeSeconds.</param>
@@ -29,25 +29,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UnavailableMessageUri">UnavailableMessageUri.</param>
         /// <param name="NamePromptMessageUri">NamePromptMessageUri.</param>
         /// <param name="FullMessageUri">FullMessageUri.</param>
-        /// <param name="CompressSilence">CompressSilence (default to false).</param>
+        /// <param name="CompressSilence">CompressSilence.</param>
         /// <param name="PinConfiguration">PinConfiguration.</param>
         /// <param name="QuotaSizeBytes">QuotaSizeBytes.</param>
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="VoicemailExtension">The extension for voicemail retrieval.  The default value is *86..</param>
-        /// <param name="PinRequired">If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone. (default to false).</param>
-        /// <param name="SendEmailNotifications">Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting. (default to false).</param>
+        /// <param name="PinRequired">If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone..</param>
+        /// <param name="SendEmailNotifications">Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting..</param>
         public VoicemailOrganizationPolicy(bool? Enabled = null, int? RetentionTimeDays = null, int? AlertTimeoutSeconds = null, int? MinimumRecordingTimeSeconds = null, int? MaximumRecordingTimeSeconds = null, string UnavailableMessageUri = null, string NamePromptMessageUri = null, string FullMessageUri = null, bool? CompressSilence = null, PINConfiguration PinConfiguration = null, long? QuotaSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string VoicemailExtension = null, bool? PinRequired = null, bool? SendEmailNotifications = null)
         {
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
+            this.Enabled = Enabled;
             this.RetentionTimeDays = RetentionTimeDays;
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
             this.MinimumRecordingTimeSeconds = MinimumRecordingTimeSeconds;
@@ -55,38 +47,14 @@ namespace ININ.PureCloudApi.Model
             this.UnavailableMessageUri = UnavailableMessageUri;
             this.NamePromptMessageUri = NamePromptMessageUri;
             this.FullMessageUri = FullMessageUri;
-            // use default value if no "CompressSilence" provided
-            if (CompressSilence == null)
-            {
-                this.CompressSilence = false;
-            }
-            else
-            {
-                this.CompressSilence = CompressSilence;
-            }
+            this.CompressSilence = CompressSilence;
             this.PinConfiguration = PinConfiguration;
             this.QuotaSizeBytes = QuotaSizeBytes;
             this.CreatedDate = CreatedDate;
             this.ModifiedDate = ModifiedDate;
             this.VoicemailExtension = VoicemailExtension;
-            // use default value if no "PinRequired" provided
-            if (PinRequired == null)
-            {
-                this.PinRequired = false;
-            }
-            else
-            {
-                this.PinRequired = PinRequired;
-            }
-            // use default value if no "SendEmailNotifications" provided
-            if (SendEmailNotifications == null)
-            {
-                this.SendEmailNotifications = false;
-            }
-            else
-            {
-                this.SendEmailNotifications = SendEmailNotifications;
-            }
+            this.PinRequired = PinRequired;
+            this.SendEmailNotifications = SendEmailNotifications;
         }
         
         /// <summary>

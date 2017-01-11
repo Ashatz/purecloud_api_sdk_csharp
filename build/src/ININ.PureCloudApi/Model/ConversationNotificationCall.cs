@@ -232,7 +232,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Spam for "SPAM"
             /// </summary>
             [EnumMember(Value = "SPAM")]
-            Spam
+            Spam,
+            
+            /// <summary>
+            /// Enum Uncallable for "UNCALLABLE"
+            /// </summary>
+            [EnumMember(Value = "UNCALLABLE")]
+            Uncallable
         }
         /// <summary>
         /// Gets or Sets Direction

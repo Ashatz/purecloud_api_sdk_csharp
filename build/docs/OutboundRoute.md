@@ -18,12 +18,12 @@ title: OutboundRoute
 | **State** | **string** |  | [optional] |
 | **ModifiedByApp** | **string** |  | [optional] |
 | **CreatedByApp** | **string** |  | [optional] |
-| **Site** | [**Site**](Site.html) | The site associated to the outbound route. | |
-| **ClassificationTypes** | **List&lt;string&gt;** |  | [optional] |
-| **Enabled** | **bool?** |  | [optional] [default to false]|
+| **ClassificationTypes** | **List&lt;string&gt;** | The site associated to the outbound route. | |
+| **Enabled** | **bool?** |  | [optional] |
 | **Distribution** | **string** |  | [optional] |
-| **Managed** | **bool?** |  | [optional] [default to false]|
 | **ExternalTrunkBases** | [**List&lt;UriReference&gt;**](UriReference.html) | Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. | [optional] |
+| **Site** | [**Site**](Site.html) | The site associated to the outbound route. | [optional] |
+| **Managed** | **bool?** | Is this outbound route being managed remotely. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

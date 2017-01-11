@@ -10,7 +10,7 @@ title: Parameter
 | **Name** | **string** |  | [optional] |
 | **ParameterType** | **string** |  | [optional] |
 | **Domain** | **string** |  | [optional] |
-| **Required** | **bool?** |  | [optional] [default to false]|
+| **Required** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

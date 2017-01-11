@@ -37,6 +37,7 @@ title: CallbackConversationNotificationParticipants
 | **SkipEnabled** | **bool?** |  | [optional] |
 | **TimeoutSeconds** | **int?** |  | [optional] |
 | **CallbackScheduledTime** | **DateTime?** |  | [optional] |
+| **AutomatedCallbackConfigId** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

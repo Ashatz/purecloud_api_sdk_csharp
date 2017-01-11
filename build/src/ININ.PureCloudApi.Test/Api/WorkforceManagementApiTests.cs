@@ -167,6 +167,18 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<ForecastCreationCompletion> (response, "response is ForecastCreationCompletion");
         }
         
+        /// <summary>
+        /// Test PostSchedules
+        /// </summary>
+        [Test]
+        public void PostSchedulesTest()
+        {
+            // TODO: add unit test for the method 'PostSchedules'
+            CurrentUserScheduleRequestBody body = null; // TODO: replace null with proper value
+            var response = instance.PostSchedules(body);
+            Assert.IsInstanceOf<TimeOffRequestList> (response, "response is TimeOffRequestList");
+        }
+        
     }
 
 }

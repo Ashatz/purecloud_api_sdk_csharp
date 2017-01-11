@@ -25,22 +25,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Address">The phone number or address of the transfer target..</param>
         /// <param name="UserName">The user name of the transfer target..</param>
         /// <param name="QueueId">The queue ID of the transfer target..</param>
-        /// <param name="Voicemail">If true, then transfer to the user&#39;s voicemail. (default to false).</param>
+        /// <param name="Voicemail">If true, then transfer to the user&#39;s voicemail..</param>
         public TransferRequest(string UserId = null, string Address = null, string UserName = null, string QueueId = null, bool? Voicemail = null)
         {
             this.UserId = UserId;
             this.Address = Address;
             this.UserName = UserName;
             this.QueueId = QueueId;
-            // use default value if no "Voicemail" provided
-            if (Voicemail == null)
-            {
-                this.Voicemail = false;
-            }
-            else
-            {
-                this.Voicemail = Voicemail;
-            }
+            this.Voicemail = Voicemail;
         }
         
         /// <summary>

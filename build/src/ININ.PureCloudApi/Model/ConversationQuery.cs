@@ -67,6 +67,12 @@ namespace ININ.PureCloudApi.Model
             Conversationstart,
             
             /// <summary>
+            /// Enum Conversationend for "conversationEnd"
+            /// </summary>
+            [EnumMember(Value = "conversationEnd")]
+            Conversationend,
+            
+            /// <summary>
             /// Enum Segmentstart for "segmentStart"
             /// </summary>
             [EnumMember(Value = "segmentStart")]

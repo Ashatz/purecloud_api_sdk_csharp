@@ -9,7 +9,7 @@ title: CampaignRuleActionEntities
 |------------ | ------------- | ------------- | -------------|
 | **Campaigns** | [**List&lt;UriReference&gt;**](UriReference.html) |  | [optional] |
 | **Sequences** | [**List&lt;UriReference&gt;**](UriReference.html) |  | [optional] |
-| **UseTriggeringEntity** | **bool?** |  | [optional] [default to false]|
+| **UseTriggeringEntity** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -168,7 +168,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetMessages'
             string ids = null; // TODO: replace null with proper value
-            var response = instance.GetMessages(ids);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetMessages(ids, expand);
             Assert.IsInstanceOf<VoicemailMessageEntityListing> (response, "response is VoicemailMessageEntityListing");
         }
         
@@ -180,7 +181,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetMessagesMessageId'
             string messageId = null; // TODO: replace null with proper value
-            var response = instance.GetMessagesMessageId(messageId);
+            List<string> expand = null; // TODO: replace null with proper value
+            var response = instance.GetMessagesMessageId(messageId, expand);
             Assert.IsInstanceOf<VoicemailMessage> (response, "response is VoicemailMessage");
         }
         

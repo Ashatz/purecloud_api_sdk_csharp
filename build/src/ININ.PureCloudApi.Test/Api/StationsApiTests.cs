@@ -88,8 +88,9 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
+            string id = null; // TODO: replace null with proper value
             string lineAppearanceId = null; // TODO: replace null with proper value
-            var response = instance.GetStations(pageSize, pageNumber, sortBy, name, lineAppearanceId);
+            var response = instance.GetStations(pageSize, pageNumber, sortBy, name, id, lineAppearanceId);
             Assert.IsInstanceOf<StationEntityListing> (response, "response is StationEntityListing");
         }
         

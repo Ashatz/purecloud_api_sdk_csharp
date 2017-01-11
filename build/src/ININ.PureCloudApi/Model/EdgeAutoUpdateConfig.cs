@@ -23,8 +23,8 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="Rrule">Rrule.</param>
-        /// <param name="Start">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="End">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Start">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS.</param>
+        /// <param name="End">Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS.</param>
         public EdgeAutoUpdateConfig(string TimeZone = null, string Rrule = null, DateTime? Start = null, DateTime? End = null)
         {
             this.TimeZone = TimeZone;
@@ -44,15 +44,15 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="rrule", EmitDefaultValue=false)]
         public string Rrule { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public DateTime? Start { get; set; }
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public DateTime? End { get; set; }
         /// <summary>

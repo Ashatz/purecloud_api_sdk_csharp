@@ -140,7 +140,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SystemType">SystemType.</param>
         /// <param name="Filename">Filename.</param>
         /// <param name="PageCount">PageCount.</param>
-        /// <param name="Read">Read (default to false).</param>
+        /// <param name="Read">Read.</param>
         /// <param name="CallerAddress">CallerAddress.</param>
         /// <param name="ReceiverAddress">ReceiverAddress.</param>
         /// <param name="Tags">Tags.</param>
@@ -171,15 +171,7 @@ namespace ININ.PureCloudApi.Model
             this.SystemType = SystemType;
             this.Filename = Filename;
             this.PageCount = PageCount;
-            // use default value if no "Read" provided
-            if (Read == null)
-            {
-                this.Read = false;
-            }
-            else
-            {
-                this.Read = Read;
-            }
+            this.Read = Read;
             this.CallerAddress = CallerAddress;
             this.ReceiverAddress = ReceiverAddress;
             this.Tags = Tags;

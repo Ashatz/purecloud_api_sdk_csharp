@@ -23,12 +23,14 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="ConversationId">ConversationId.</param>
         /// <param name="ConversationStart">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConversationEnd">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Participants">Participants.</param>
         /// <param name="Evaluations">Evaluations.</param>
-        public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null)
+        public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null)
         {
             this.ConversationId = ConversationId;
             this.ConversationStart = ConversationStart;
+            this.ConversationEnd = ConversationEnd;
             this.Participants = Participants;
             this.Evaluations = Evaluations;
         }
@@ -44,6 +46,12 @@ namespace ININ.PureCloudApi.Model
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="conversationStart", EmitDefaultValue=false)]
         public DateTime? ConversationStart { get; set; }
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="conversationEnd", EmitDefaultValue=false)]
+        public DateTime? ConversationEnd { get; set; }
         /// <summary>
         /// Gets or Sets Participants
         /// </summary>
@@ -64,6 +72,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class AnalyticsConversation {\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  ConversationStart: ").Append(ConversationStart).Append("\n");
+            sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
             sb.Append("}\n");
@@ -113,6 +122,11 @@ namespace ININ.PureCloudApi.Model
                     this.ConversationStart.Equals(other.ConversationStart)
                 ) &&
                 (
+                    this.ConversationEnd == other.ConversationEnd ||
+                    this.ConversationEnd != null &&
+                    this.ConversationEnd.Equals(other.ConversationEnd)
+                ) &&
+                (
                     this.Participants == other.Participants ||
                     this.Participants != null &&
                     this.Participants.SequenceEqual(other.Participants)
@@ -139,6 +153,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ConversationId.GetHashCode();
                 if (this.ConversationStart != null)
                     hash = hash * 59 + this.ConversationStart.GetHashCode();
+                if (this.ConversationEnd != null)
+                    hash = hash * 59 + this.ConversationEnd.GetHashCode();
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
                 if (this.Evaluations != null)

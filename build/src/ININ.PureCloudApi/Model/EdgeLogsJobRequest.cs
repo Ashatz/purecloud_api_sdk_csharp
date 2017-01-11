@@ -23,20 +23,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Path">A relative directory to the root Edge log folder to query from..</param>
         /// <param name="Query">The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter..</param>
-        /// <param name="Recurse">Boolean whether or not to recurse into directories. (default to false).</param>
+        /// <param name="Recurse">Boolean whether or not to recurse into directories..</param>
         public EdgeLogsJobRequest(string Path = null, string Query = null, bool? Recurse = null)
         {
             this.Path = Path;
             this.Query = Query;
-            // use default value if no "Recurse" provided
-            if (Recurse == null)
-            {
-                this.Recurse = false;
-            }
-            else
-            {
-                this.Recurse = Recurse;
-            }
+            this.Recurse = Recurse;
         }
         
         /// <summary>

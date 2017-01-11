@@ -13,7 +13,7 @@ title: DomainPermissionPolicy
 | **PolicyDescription** | **string** |  | [optional] |
 | **ActionSet** | **List&lt;string&gt;** |  | [optional] |
 | **NamedResources** | **List&lt;string&gt;** |  | [optional] |
-| **AllowConditions** | **bool?** |  | [optional] [default to false]|
+| **AllowConditions** | **bool?** |  | [optional] |
 | **ResourceConditionNode** | [**DomainResourceConditionNode**](DomainResourceConditionNode.html) |  | [optional] |
 {: class="table table-striped"}
 

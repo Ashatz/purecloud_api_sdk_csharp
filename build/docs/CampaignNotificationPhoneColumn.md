@@ -1,7 +1,7 @@
 ---
-title: ConversationNotificationDialerPreviewPhoneNumberColumns
+title: CampaignNotificationPhoneColumn
 ---
-## ININ.PureCloudApi.Model.ConversationNotificationDialerPreviewPhoneNumberColumns
+## ININ.PureCloudApi.Model.CampaignNotificationPhoneColumn
 
 ## Properties
 

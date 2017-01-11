@@ -29,8 +29,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="LanguageLabels">The label used for the system presence in each specified language (required).</param>
         /// <param name="SystemPresence">SystemPresence.</param>
-        /// <param name="Deactivated">Deactivated (default to false).</param>
-        /// <param name="Primary">Primary (default to false).</param>
+        /// <param name="Deactivated">Deactivated.</param>
+        /// <param name="Primary">Primary.</param>
         /// <param name="CreatedBy">CreatedBy.</param>
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
@@ -48,24 +48,8 @@ namespace ININ.PureCloudApi.Model
             }
             this.Name = Name;
             this.SystemPresence = SystemPresence;
-            // use default value if no "Deactivated" provided
-            if (Deactivated == null)
-            {
-                this.Deactivated = false;
-            }
-            else
-            {
-                this.Deactivated = Deactivated;
-            }
-            // use default value if no "Primary" provided
-            if (Primary == null)
-            {
-                this.Primary = false;
-            }
-            else
-            {
-                this.Primary = Primary;
-            }
+            this.Deactivated = Deactivated;
+            this.Primary = Primary;
             this.CreatedBy = CreatedBy;
             this.CreatedDate = CreatedDate;
             this.ModifiedBy = ModifiedBy;

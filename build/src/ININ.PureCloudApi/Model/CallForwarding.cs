@@ -23,22 +23,14 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
-        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Enabled">Enabled.</param>
         /// <param name="PhoneNumber">PhoneNumber.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         public CallForwarding(string Name = null, User User = null, bool? Enabled = null, string PhoneNumber = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.User = User;
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
+            this.Enabled = Enabled;
             this.PhoneNumber = PhoneNumber;
             this.ModifiedDate = ModifiedDate;
         }

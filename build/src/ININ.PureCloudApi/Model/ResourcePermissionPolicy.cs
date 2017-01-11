@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PolicyName">PolicyName.</param>
         /// <param name="PolicyDescription">PolicyDescription.</param>
         /// <param name="ActionSetKey">ActionSetKey.</param>
-        /// <param name="AllowConditions">AllowConditions (default to false).</param>
+        /// <param name="AllowConditions">AllowConditions.</param>
         /// <param name="ResourceConditionNode">ResourceConditionNode.</param>
         /// <param name="NamedResources">NamedResources.</param>
         /// <param name="ResourceCondition">ResourceCondition.</param>
@@ -40,15 +40,7 @@ namespace ININ.PureCloudApi.Model
             this.PolicyName = PolicyName;
             this.PolicyDescription = PolicyDescription;
             this.ActionSetKey = ActionSetKey;
-            // use default value if no "AllowConditions" provided
-            if (AllowConditions == null)
-            {
-                this.AllowConditions = false;
-            }
-            else
-            {
-                this.AllowConditions = AllowConditions;
-            }
+            this.AllowConditions = AllowConditions;
             this.ResourceConditionNode = ResourceConditionNode;
             this.NamedResources = NamedResources;
             this.ResourceCondition = ResourceCondition;

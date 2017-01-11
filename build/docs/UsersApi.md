@@ -1556,7 +1556,7 @@ namespace Example
 
 <a name="patchuseridqueues"></a>
 
-## [**UserQueue**](UserQueue.html) PatchUserIdQueues (string userId, List<UserQueue> body)
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) PatchUserIdQueues (string userId, List<UserQueue> body)
 
 Join or unjoin a set of queues for a user
 
@@ -1587,7 +1587,7 @@ namespace Example
             try
             {
                 // Join or unjoin a set of queues for a user
-                UserQueue result = apiInstance.PatchUserIdQueues(userId, body);
+                UserQueueEntityListing result = apiInstance.PatchUserIdQueues(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1610,7 +1610,7 @@ namespace Example
 
 ### Return type
 
-[**UserQueue**](UserQueue.html)
+[**UserQueueEntityListing**](UserQueueEntityListing.html)
 
 <a name="patchuseridqueuesqueueid"></a>
 

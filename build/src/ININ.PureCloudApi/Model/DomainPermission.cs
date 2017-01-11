@@ -25,22 +25,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EntityType">EntityType.</param>
         /// <param name="Action">Action.</param>
         /// <param name="Label">Label.</param>
-        /// <param name="AllowsConditions">AllowsConditions (default to false).</param>
+        /// <param name="AllowsConditions">AllowsConditions.</param>
         public DomainPermission(string Domain = null, string EntityType = null, string Action = null, string Label = null, bool? AllowsConditions = null)
         {
             this.Domain = Domain;
             this.EntityType = EntityType;
             this.Action = Action;
             this.Label = Label;
-            // use default value if no "AllowsConditions" provided
-            if (AllowsConditions == null)
-            {
-                this.AllowsConditions = false;
-            }
-            else
-            {
-                this.AllowsConditions = AllowsConditions;
-            }
+            this.AllowsConditions = AllowsConditions;
         }
         
         /// <summary>

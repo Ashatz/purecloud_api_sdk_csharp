@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="MaxTotalScoreUnweighted">MaxTotalScoreUnweighted.</param>
         /// <param name="TotalCriticalScoreUnweighted">TotalCriticalScoreUnweighted.</param>
         /// <param name="MaxTotalCriticalScoreUnweighted">MaxTotalCriticalScoreUnweighted.</param>
-        /// <param name="MarkedNA">MarkedNA (default to false).</param>
+        /// <param name="MarkedNA">MarkedNA.</param>
         /// <param name="QuestionScores">QuestionScores.</param>
         public QuestionGroupScore(string QuestionGroupId = null, float? TotalScore = null, float? MaxTotalScore = null, float? TotalCriticalScore = null, float? MaxTotalCriticalScore = null, float? TotalScoreUnweighted = null, float? MaxTotalScoreUnweighted = null, float? TotalCriticalScoreUnweighted = null, float? MaxTotalCriticalScoreUnweighted = null, bool? MarkedNA = null, List<QuestionScore> QuestionScores = null)
         {
@@ -43,15 +43,7 @@ namespace ININ.PureCloudApi.Model
             this.MaxTotalScoreUnweighted = MaxTotalScoreUnweighted;
             this.TotalCriticalScoreUnweighted = TotalCriticalScoreUnweighted;
             this.MaxTotalCriticalScoreUnweighted = MaxTotalCriticalScoreUnweighted;
-            // use default value if no "MarkedNA" provided
-            if (MarkedNA == null)
-            {
-                this.MarkedNA = false;
-            }
-            else
-            {
-                this.MarkedNA = MarkedNA;
-            }
+            this.MarkedNA = MarkedNA;
             this.QuestionScores = QuestionScores;
         }
         

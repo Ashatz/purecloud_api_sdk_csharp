@@ -126,7 +126,7 @@ namespace Example
 
 <a name="getstations"></a>
 
-## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string lineAppearanceId = null)
+## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string id = null, string lineAppearanceId = null)
 
 Get the list of available stations.
 
@@ -155,12 +155,13 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var name = name_example;  // string | Name (optional) 
+            var id = id_example;  // string | Comma separated list of stationIds (optional) 
             var lineAppearanceId = lineAppearanceId_example;  // string | lineAppearanceId (optional) 
 
             try
             {
                 // Get the list of available stations.
-                StationEntityListing result = apiInstance.GetStations(pageSize, pageNumber, sortBy, name, lineAppearanceId);
+                StationEntityListing result = apiInstance.GetStations(pageSize, pageNumber, sortBy, name, id, lineAppearanceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -181,6 +182,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 | **name** | **string**| Name | [optional]  |
+| **id** | **string**| Comma separated list of stationIds | [optional]  |
 | **lineAppearanceId** | **string**| lineAppearanceId | [optional]  |
 {: class="table table-striped"}
 

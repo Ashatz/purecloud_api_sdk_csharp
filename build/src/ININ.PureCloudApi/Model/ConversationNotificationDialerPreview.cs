@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CampaignId">CampaignId.</param>
         /// <param name="PhoneNumberColumns">PhoneNumberColumns.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationDialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<ConversationNotificationDialerPreviewPhoneNumberColumns> PhoneNumberColumns = null, Object AdditionalProperties = null)
+        public ConversationNotificationDialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<CampaignNotificationPhoneColumns> PhoneNumberColumns = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.ContactId = ContactId;
@@ -61,7 +61,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets PhoneNumberColumns
         /// </summary>
         [DataMember(Name="phoneNumberColumns", EmitDefaultValue=false)]
-        public List<ConversationNotificationDialerPreviewPhoneNumberColumns> PhoneNumberColumns { get; set; }
+        public List<CampaignNotificationPhoneColumns> PhoneNumberColumns { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>

@@ -23,6 +23,7 @@ title: ConversationNotificationCallback
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |
 | **CallbackScheduledTime** | **DateTime?** |  | [optional] |
+| **AutomatedCallbackConfigId** | **string** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

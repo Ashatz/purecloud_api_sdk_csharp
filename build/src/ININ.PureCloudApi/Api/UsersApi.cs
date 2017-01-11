@@ -619,8 +619,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
-        /// <returns>UserQueue</returns>
-        UserQueue PatchUserIdQueues (string userId, List<UserQueue> body);
+        /// <returns>UserQueueEntityListing</returns>
+        UserQueueEntityListing PatchUserIdQueues (string userId, List<UserQueue> body);
 
         /// <summary>
         /// Join or unjoin a set of queues for a user
@@ -631,8 +631,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
-        /// <returns>ApiResponse of UserQueue</returns>
-        ApiResponse<UserQueue> PatchUserIdQueuesWithHttpInfo (string userId, List<UserQueue> body);
+        /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        ApiResponse<UserQueueEntityListing> PatchUserIdQueuesWithHttpInfo (string userId, List<UserQueue> body);
         /// <summary>
         /// Join or unjoin a queue for a user
         /// </summary>
@@ -1579,8 +1579,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
-        /// <returns>Task of UserQueue</returns>
-        System.Threading.Tasks.Task<UserQueue> PatchUserIdQueuesAsync (string userId, List<UserQueue> body);
+        /// <returns>Task of UserQueueEntityListing</returns>
+        System.Threading.Tasks.Task<UserQueueEntityListing> PatchUserIdQueuesAsync (string userId, List<UserQueue> body);
 
         /// <summary>
         /// Join or unjoin a set of queues for a user
@@ -1591,8 +1591,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
-        /// <returns>Task of ApiResponse (UserQueue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserIdQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body);
+        /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserIdQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body);
         /// <summary>
         /// Join or unjoin a queue for a user
         /// </summary>
@@ -6320,10 +6320,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
-        /// <returns>UserQueue</returns>
-        public UserQueue PatchUserIdQueues (string userId, List<UserQueue> body)
+        /// <returns>UserQueueEntityListing</returns>
+        public UserQueueEntityListing PatchUserIdQueues (string userId, List<UserQueue> body)
         {
-             ApiResponse<UserQueue> localVarResponse = PatchUserIdQueuesWithHttpInfo(userId, body);
+             ApiResponse<UserQueueEntityListing> localVarResponse = PatchUserIdQueuesWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
@@ -6333,8 +6333,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
-        /// <returns>ApiResponse of UserQueue</returns>
-        public ApiResponse< UserQueue > PatchUserIdQueuesWithHttpInfo (string userId, List<UserQueue> body)
+        /// <returns>ApiResponse of UserQueueEntityListing</returns>
+        public ApiResponse< UserQueueEntityListing > PatchUserIdQueuesWithHttpInfo (string userId, List<UserQueue> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -6399,9 +6399,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchUserIdQueues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UserQueue>(localVarStatusCode,
+            return new ApiResponse<UserQueueEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (UserQueue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserQueue)));
+                (UserQueueEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserQueueEntityListing)));
             
         }
 
@@ -6411,10 +6411,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
-        /// <returns>Task of UserQueue</returns>
-        public async System.Threading.Tasks.Task<UserQueue> PatchUserIdQueuesAsync (string userId, List<UserQueue> body)
+        /// <returns>Task of UserQueueEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserQueueEntityListing> PatchUserIdQueuesAsync (string userId, List<UserQueue> body)
         {
-             ApiResponse<UserQueue> localVarResponse = await PatchUserIdQueuesAsyncWithHttpInfo(userId, body);
+             ApiResponse<UserQueueEntityListing> localVarResponse = await PatchUserIdQueuesAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -6425,8 +6425,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
-        /// <returns>Task of ApiResponse (UserQueue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserQueue>> PatchUserIdQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body)
+        /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserIdQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -6491,9 +6491,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchUserIdQueues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UserQueue>(localVarStatusCode,
+            return new ApiResponse<UserQueueEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (UserQueue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserQueue)));
+                (UserQueueEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserQueueEntityListing)));
             
         }
 

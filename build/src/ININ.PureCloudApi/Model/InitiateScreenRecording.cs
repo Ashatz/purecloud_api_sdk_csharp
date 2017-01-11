@@ -21,20 +21,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InitiateScreenRecording" /> class.
         /// </summary>
-        /// <param name="RecordACW">RecordACW (default to false).</param>
+        /// <param name="RecordACW">RecordACW.</param>
         /// <param name="ArchiveRetention">ArchiveRetention.</param>
         /// <param name="DeleteRetention">DeleteRetention.</param>
         public InitiateScreenRecording(bool? RecordACW = null, ArchiveRetention ArchiveRetention = null, DeleteRetention DeleteRetention = null)
         {
-            // use default value if no "RecordACW" provided
-            if (RecordACW == null)
-            {
-                this.RecordACW = false;
-            }
-            else
-            {
-                this.RecordACW = RecordACW;
-            }
+            this.RecordACW = RecordACW;
             this.ArchiveRetention = ArchiveRetention;
             this.DeleteRetention = DeleteRetention;
         }

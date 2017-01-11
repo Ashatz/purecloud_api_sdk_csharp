@@ -244,53 +244,39 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Id">A globally unique identifier for this communication..</param>
         /// <param name="Segments">The time line of the participant&#39;s callback, divided into activity segments..</param>
         /// <param name="Direction">The direction of the call.</param>
-        /// <param name="Held">True if this call is held and the person on this side hears silence. (default to false).</param>
+        /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="StartHoldTime">The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DialerPreview">The preview data to be used when this callback is a Preview..</param>
         /// <param name="CallbackNumbers">The phone number(s) to use to place the callback..</param>
         /// <param name="CallbackUserName">The name of the user requesting a callback..</param>
         /// <param name="ScriptId">The UUID of the script to use..</param>
-        /// <param name="SkipEnabled">True if the ability to skip a callback should be enabled. (default to false).</param>
+        /// <param name="SkipEnabled">True if the ability to skip a callback should be enabled..</param>
         /// <param name="TimeoutSeconds">The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled..</param>
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CallbackScheduledTime">The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal..</param>
         /// <param name="Provider">The source provider for the callback..</param>
-        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string Provider = null)
+        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null)
         {
             this.State = State;
             this.Id = Id;
             this.Segments = Segments;
             this.Direction = Direction;
-            // use default value if no "Held" provided
-            if (Held == null)
-            {
-                this.Held = false;
-            }
-            else
-            {
-                this.Held = Held;
-            }
+            this.Held = Held;
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
             this.DialerPreview = DialerPreview;
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackUserName = CallbackUserName;
             this.ScriptId = ScriptId;
-            // use default value if no "SkipEnabled" provided
-            if (SkipEnabled == null)
-            {
-                this.SkipEnabled = false;
-            }
-            else
-            {
-                this.SkipEnabled = SkipEnabled;
-            }
+            this.SkipEnabled = SkipEnabled;
             this.TimeoutSeconds = TimeoutSeconds;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.CallbackScheduledTime = CallbackScheduledTime;
+            this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
             this.Provider = Provider;
         }
         
@@ -373,6 +359,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
         /// <summary>
+        /// The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal.
+        /// </summary>
+        /// <value>The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal.</value>
+        [DataMember(Name="automatedCallbackConfigId", EmitDefaultValue=false)]
+        public string AutomatedCallbackConfigId { get; set; }
+        /// <summary>
         /// The source provider for the callback.
         /// </summary>
         /// <value>The source provider for the callback.</value>
@@ -402,6 +394,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
+            sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -520,6 +513,11 @@ namespace ININ.PureCloudApi.Model
                     this.CallbackScheduledTime.Equals(other.CallbackScheduledTime)
                 ) &&
                 (
+                    this.AutomatedCallbackConfigId == other.AutomatedCallbackConfigId ||
+                    this.AutomatedCallbackConfigId != null &&
+                    this.AutomatedCallbackConfigId.Equals(other.AutomatedCallbackConfigId)
+                ) &&
+                (
                     this.Provider == other.Provider ||
                     this.Provider != null &&
                     this.Provider.Equals(other.Provider)
@@ -569,6 +567,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
                 if (this.CallbackScheduledTime != null)
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
+                if (this.AutomatedCallbackConfigId != null)
+                    hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
                 return hash;

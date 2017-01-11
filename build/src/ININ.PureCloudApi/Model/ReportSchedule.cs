@@ -37,7 +37,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Interval">Interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="ReportFormat">ReportFormat.</param>
         /// <param name="Locale">Locale.</param>
-        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Enabled">Enabled.</param>
         /// <param name="ReportId">Report ID (required).</param>
         /// <param name="Parameters">Parameters.</param>
         /// <param name="LastRun">LastRun.</param>
@@ -71,15 +71,7 @@ namespace ININ.PureCloudApi.Model
             this.Interval = Interval;
             this.ReportFormat = ReportFormat;
             this.Locale = Locale;
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
+            this.Enabled = Enabled;
             this.Parameters = Parameters;
             this.LastRun = LastRun;
         }

@@ -11,7 +11,7 @@ title: QueueMember
 | **Name** | **string** |  | [optional] |
 | **User** | [**User**](User.html) |  | [optional] |
 | **RingNumber** | **int?** |  | [optional] |
-| **Joined** | **bool?** |  | [optional] [default to false]|
+| **Joined** | **bool?** |  | [optional] |
 | **MemberBy** | **string** |  | [optional] |
 | **RoutingStatus** | [**RoutingStatus**](RoutingStatus.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

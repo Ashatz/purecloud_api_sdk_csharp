@@ -214,7 +214,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Spam for "SPAM"
             /// </summary>
             [EnumMember(Value = "SPAM")]
-            Spam
+            Spam,
+            
+            /// <summary>
+            /// Enum Uncallable for "UNCALLABLE"
+            /// </summary>
+            [EnumMember(Value = "UNCALLABLE")]
+            Uncallable
         }
         /// <summary>
         /// Gets or Sets State
@@ -250,8 +256,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
+        /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, ConversationNotificationDialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationCallback(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, ConversationNotificationDialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -269,6 +276,7 @@ namespace ININ.PureCloudApi.Model
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.CallbackScheduledTime = CallbackScheduledTime;
+            this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
             this.AdditionalProperties = AdditionalProperties;
         }
         
@@ -338,6 +346,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
         /// <summary>
+        /// Gets or Sets AutomatedCallbackConfigId
+        /// </summary>
+        [DataMember(Name="automatedCallbackConfigId", EmitDefaultValue=false)]
+        public string AutomatedCallbackConfigId { get; set; }
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -366,6 +379,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
+            sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -484,6 +498,11 @@ namespace ININ.PureCloudApi.Model
                     this.CallbackScheduledTime.Equals(other.CallbackScheduledTime)
                 ) &&
                 (
+                    this.AutomatedCallbackConfigId == other.AutomatedCallbackConfigId ||
+                    this.AutomatedCallbackConfigId != null &&
+                    this.AutomatedCallbackConfigId.Equals(other.AutomatedCallbackConfigId)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -533,6 +552,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
                 if (this.CallbackScheduledTime != null)
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
+                if (this.AutomatedCallbackConfigId != null)
+                    hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;

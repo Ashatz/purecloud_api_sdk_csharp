@@ -29,7 +29,11 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedDate">ModifiedDate.</param>
         /// <param name="CallerAddress">CallerAddress.</param>
         /// <param name="CallerName">CallerName.</param>
-        public VoicemailMessageNotification(string Id = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, int? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null)
+        /// <param name="Action">Action.</param>
+        /// <param name="Note">Note.</param>
+        /// <param name="Deleted">Deleted.</param>
+        /// <param name="ModifiedByUserId">ModifiedByUserId.</param>
+        public VoicemailMessageNotification(string Id = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, int? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, string Action = null, string Note = null, bool? Deleted = null, string ModifiedByUserId = null)
         {
             this.Id = Id;
             this.Read = Read;
@@ -39,6 +43,10 @@ namespace ININ.PureCloudApi.Model
             this.ModifiedDate = ModifiedDate;
             this.CallerAddress = CallerAddress;
             this.CallerName = CallerName;
+            this.Action = Action;
+            this.Note = Note;
+            this.Deleted = Deleted;
+            this.ModifiedByUserId = ModifiedByUserId;
         }
         
         /// <summary>
@@ -82,6 +90,26 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="callerName", EmitDefaultValue=false)]
         public string CallerName { get; set; }
         /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
+        [DataMember(Name="action", EmitDefaultValue=false)]
+        public string Action { get; set; }
+        /// <summary>
+        /// Gets or Sets Note
+        /// </summary>
+        [DataMember(Name="note", EmitDefaultValue=false)]
+        public string Note { get; set; }
+        /// <summary>
+        /// Gets or Sets Deleted
+        /// </summary>
+        [DataMember(Name="deleted", EmitDefaultValue=false)]
+        public bool? Deleted { get; set; }
+        /// <summary>
+        /// Gets or Sets ModifiedByUserId
+        /// </summary>
+        [DataMember(Name="modifiedByUserId", EmitDefaultValue=false)]
+        public string ModifiedByUserId { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -97,6 +125,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
+            sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  Note: ").Append(Note).Append("\n");
+            sb.Append("  Deleted: ").Append(Deleted).Append("\n");
+            sb.Append("  ModifiedByUserId: ").Append(ModifiedByUserId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,6 +204,26 @@ namespace ININ.PureCloudApi.Model
                     this.CallerName == other.CallerName ||
                     this.CallerName != null &&
                     this.CallerName.Equals(other.CallerName)
+                ) &&
+                (
+                    this.Action == other.Action ||
+                    this.Action != null &&
+                    this.Action.Equals(other.Action)
+                ) &&
+                (
+                    this.Note == other.Note ||
+                    this.Note != null &&
+                    this.Note.Equals(other.Note)
+                ) &&
+                (
+                    this.Deleted == other.Deleted ||
+                    this.Deleted != null &&
+                    this.Deleted.Equals(other.Deleted)
+                ) &&
+                (
+                    this.ModifiedByUserId == other.ModifiedByUserId ||
+                    this.ModifiedByUserId != null &&
+                    this.ModifiedByUserId.Equals(other.ModifiedByUserId)
                 );
         }
 
@@ -202,6 +254,14 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
                 if (this.CallerName != null)
                     hash = hash * 59 + this.CallerName.GetHashCode();
+                if (this.Action != null)
+                    hash = hash * 59 + this.Action.GetHashCode();
+                if (this.Note != null)
+                    hash = hash * 59 + this.Note.GetHashCode();
+                if (this.Deleted != null)
+                    hash = hash * 59 + this.Deleted.GetHashCode();
+                if (this.ModifiedByUserId != null)
+                    hash = hash * 59 + this.ModifiedByUserId.GetHashCode();
                 return hash;
             }
         }

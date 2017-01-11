@@ -15,8 +15,8 @@ title: CampaignRule
 | **CampaignRuleEntities** | [**CampaignRuleEntities**](CampaignRuleEntities.html) | the list of entities the rule monitors | |
 | **CampaignRuleConditions** | [**List&lt;CampaignRuleCondition&gt;**](CampaignRuleCondition.html) | the list of conditions the are evaluated | |
 | **CampaignRuleActions** | [**List&lt;CampaignRuleAction&gt;**](CampaignRuleAction.html) | the list of actions that are executed if the conditions are satisfied | |
-| **MatchAnyConditions** | **bool?** |  | [optional] [default to false]|
-| **Enabled** | **bool?** |  | [optional] [default to false]|
+| **MatchAnyConditions** | **bool?** |  | [optional] |
+| **Enabled** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

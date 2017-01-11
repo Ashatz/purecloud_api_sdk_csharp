@@ -7,7 +7,7 @@ title: InitiateScreenRecording
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **RecordACW** | **bool?** |  | [optional] [default to false]|
+| **RecordACW** | **bool?** |  | [optional] |
 | **ArchiveRetention** | [**ArchiveRetention**](ArchiveRetention.html) |  | [optional] |
 | **DeleteRetention** | [**DeleteRetention**](DeleteRetention.html) |  | [optional] |
 {: class="table table-striped"}

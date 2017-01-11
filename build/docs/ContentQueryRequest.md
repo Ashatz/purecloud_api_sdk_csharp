@@ -14,7 +14,7 @@ title: ContentQueryRequest
 | **Sort** | [**List&lt;ContentSortItem&gt;**](ContentSortItem.html) |  | [optional] |
 | **Filters** | [**List&lt;ContentFacetFilterItem&gt;**](ContentFacetFilterItem.html) |  | [optional] |
 | **AttributeFilters** | [**List&lt;ContentAttributeFilterItem&gt;**](ContentAttributeFilterItem.html) |  | [optional] |
-| **IncludeShares** | **bool?** |  | [optional] [default to false]|
+| **IncludeShares** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

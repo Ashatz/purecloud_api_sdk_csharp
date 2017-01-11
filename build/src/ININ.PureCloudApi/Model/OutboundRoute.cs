@@ -104,13 +104,12 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="Site">The site associated to the outbound route. (required).</param>
-        /// <param name="ClassificationTypes">ClassificationTypes.</param>
-        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="ClassificationTypes">The site associated to the outbound route. (required).</param>
+        /// <param name="Enabled">Enabled.</param>
         /// <param name="Distribution">Distribution.</param>
-        /// <param name="Managed">Managed (default to false).</param>
         /// <param name="ExternalTrunkBases">Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing..</param>
-        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Site Site = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, bool? Managed = null, List<UriReference> ExternalTrunkBases = null)
+        /// <param name="Site">The site associated to the outbound route..</param>
+        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, List<UriReference> ExternalTrunkBases = null, Site Site = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -121,14 +120,14 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Name = Name;
             }
-            // to ensure "Site" is required (not null)
-            if (Site == null)
+            // to ensure "ClassificationTypes" is required (not null)
+            if (ClassificationTypes == null)
             {
-                throw new InvalidDataException("Site is a required property for OutboundRoute and cannot be null");
+                throw new InvalidDataException("ClassificationTypes is a required property for OutboundRoute and cannot be null");
             }
             else
             {
-                this.Site = Site;
+                this.ClassificationTypes = ClassificationTypes;
             }
             this.Description = Description;
             this.Version = Version;
@@ -139,27 +138,10 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
-            this.ClassificationTypes = ClassificationTypes;
-            // use default value if no "Enabled" provided
-            if (Enabled == null)
-            {
-                this.Enabled = false;
-            }
-            else
-            {
-                this.Enabled = Enabled;
-            }
+            this.Enabled = Enabled;
             this.Distribution = Distribution;
-            // use default value if no "Managed" provided
-            if (Managed == null)
-            {
-                this.Managed = false;
-            }
-            else
-            {
-                this.Managed = Managed;
-            }
             this.ExternalTrunkBases = ExternalTrunkBases;
+            this.Site = Site;
         }
         
         /// <summary>
@@ -220,11 +202,6 @@ namespace ININ.PureCloudApi.Model
         /// The site associated to the outbound route.
         /// </summary>
         /// <value>The site associated to the outbound route.</value>
-        [DataMember(Name="site", EmitDefaultValue=false)]
-        public Site Site { get; set; }
-        /// <summary>
-        /// Gets or Sets ClassificationTypes
-        /// </summary>
         [DataMember(Name="classificationTypes", EmitDefaultValue=false)]
         public List<string> ClassificationTypes { get; set; }
         /// <summary>
@@ -233,16 +210,23 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
         /// <summary>
-        /// Gets or Sets Managed
-        /// </summary>
-        [DataMember(Name="managed", EmitDefaultValue=false)]
-        public bool? Managed { get; set; }
-        /// <summary>
         /// Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing.
         /// </summary>
         /// <value>Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing.</value>
         [DataMember(Name="externalTrunkBases", EmitDefaultValue=false)]
         public List<UriReference> ExternalTrunkBases { get; set; }
+        /// <summary>
+        /// The site associated to the outbound route.
+        /// </summary>
+        /// <value>The site associated to the outbound route.</value>
+        [DataMember(Name="site", EmitDefaultValue=false)]
+        public Site Site { get; set; }
+        /// <summary>
+        /// Is this outbound route being managed remotely.
+        /// </summary>
+        /// <value>Is this outbound route being managed remotely.</value>
+        [DataMember(Name="managed", EmitDefaultValue=false)]
+        public bool? Managed { get; private set; }
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -268,12 +252,12 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
-            sb.Append("  Site: ").Append(Site).Append("\n");
             sb.Append("  ClassificationTypes: ").Append(ClassificationTypes).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Distribution: ").Append(Distribution).Append("\n");
-            sb.Append("  Managed: ").Append(Managed).Append("\n");
             sb.Append("  ExternalTrunkBases: ").Append(ExternalTrunkBases).Append("\n");
+            sb.Append("  Site: ").Append(Site).Append("\n");
+            sb.Append("  Managed: ").Append(Managed).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -367,11 +351,6 @@ namespace ININ.PureCloudApi.Model
                     this.CreatedByApp.Equals(other.CreatedByApp)
                 ) &&
                 (
-                    this.Site == other.Site ||
-                    this.Site != null &&
-                    this.Site.Equals(other.Site)
-                ) &&
-                (
                     this.ClassificationTypes == other.ClassificationTypes ||
                     this.ClassificationTypes != null &&
                     this.ClassificationTypes.SequenceEqual(other.ClassificationTypes)
@@ -387,14 +366,19 @@ namespace ININ.PureCloudApi.Model
                     this.Distribution.Equals(other.Distribution)
                 ) &&
                 (
-                    this.Managed == other.Managed ||
-                    this.Managed != null &&
-                    this.Managed.Equals(other.Managed)
-                ) &&
-                (
                     this.ExternalTrunkBases == other.ExternalTrunkBases ||
                     this.ExternalTrunkBases != null &&
                     this.ExternalTrunkBases.SequenceEqual(other.ExternalTrunkBases)
+                ) &&
+                (
+                    this.Site == other.Site ||
+                    this.Site != null &&
+                    this.Site.Equals(other.Site)
+                ) &&
+                (
+                    this.Managed == other.Managed ||
+                    this.Managed != null &&
+                    this.Managed.Equals(other.Managed)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -436,18 +420,18 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
-                if (this.Site != null)
-                    hash = hash * 59 + this.Site.GetHashCode();
                 if (this.ClassificationTypes != null)
                     hash = hash * 59 + this.ClassificationTypes.GetHashCode();
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
                 if (this.Distribution != null)
                     hash = hash * 59 + this.Distribution.GetHashCode();
-                if (this.Managed != null)
-                    hash = hash * 59 + this.Managed.GetHashCode();
                 if (this.ExternalTrunkBases != null)
                     hash = hash * 59 + this.ExternalTrunkBases.GetHashCode();
+                if (this.Site != null)
+                    hash = hash * 59 + this.Site.GetHashCode();
+                if (this.Managed != null)
+                    hash = hash * 59 + this.Managed.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

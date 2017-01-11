@@ -400,7 +400,7 @@ namespace ININ.PureCloudApi.Test
             string userId = null; // TODO: replace null with proper value
             List<UserQueue> body = null; // TODO: replace null with proper value
             var response = instance.PatchUserIdQueues(userId, body);
-            Assert.IsInstanceOf<UserQueue> (response, "response is UserQueue");
+            Assert.IsInstanceOf<UserQueueEntityListing> (response, "response is UserQueueEntityListing");
         }
         
         /// <summary>

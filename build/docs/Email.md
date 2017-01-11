@@ -9,7 +9,7 @@ title: Email
 |------------ | ------------- | ------------- | -------------|
 | **State** | **string** | The connection state of this communication. | [optional] |
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
-| **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] [default to false]|
+| **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
 | **Subject** | **string** | The subject for the initial email that started this conversation. | [optional] |
 | **MessagesSent** | **int?** | The number of email messages sent by this participant. | [optional] |
 | **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s email, divided into activity segments. | [optional] |

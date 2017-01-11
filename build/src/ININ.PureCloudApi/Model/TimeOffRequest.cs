@@ -73,8 +73,8 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="User">The user associated with this TimeOffRequest (required).</param>
-        /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day) (required) (default to false).</param>
-        /// <param name="MarkedAsRead">Whether this request has been marked as read by the agent (required) (default to false).</param>
+        /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day) (required).</param>
+        /// <param name="MarkedAsRead">Whether this request has been marked as read by the agent (required).</param>
         /// <param name="ActivityCodeId">The ID of the activity code associated with this TimeOffRequest (required).</param>
         /// <param name="Status">The administrative status of this TimeOffRequest (required).</param>
         /// <param name="PartialDayStartDateTimes">The start date-times for partial day requests.  Required if isFullDayRequest &#x3D;&#x3D; false.</param>

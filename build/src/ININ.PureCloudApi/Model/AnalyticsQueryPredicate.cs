@@ -457,6 +457,12 @@ namespace ININ.PureCloudApi.Model
             Tsegmentduration,
             
             /// <summary>
+            /// Enum Tconversationduration for "tConversationDuration"
+            /// </summary>
+            [EnumMember(Value = "tConversationDuration")]
+            Tconversationduration,
+            
+            /// <summary>
             /// Enum Ototalcriticalscore for "oTotalCriticalScore"
             /// </summary>
             [EnumMember(Value = "oTotalCriticalScore")]

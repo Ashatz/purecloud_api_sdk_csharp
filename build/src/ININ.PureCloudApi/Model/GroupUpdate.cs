@@ -110,7 +110,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Version">Current version for this resource. (required).</param>
         /// <param name="Images">Images.</param>
         /// <param name="Addresses">Addresses.</param>
-        /// <param name="RulesVisible">Are membership rules visible to the person requesting to view the group (default to false).</param>
+        /// <param name="RulesVisible">Are membership rules visible to the person requesting to view the group.</param>
         /// <param name="Visibility">Who can view this group.</param>
         public GroupUpdate(string Name = null, string Description = null, StateEnum? State = null, int? Version = null, List<UserImage> Images = null, List<Contact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null)
         {
@@ -128,15 +128,7 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.Images = Images;
             this.Addresses = Addresses;
-            // use default value if no "RulesVisible" provided
-            if (RulesVisible == null)
-            {
-                this.RulesVisible = false;
-            }
-            else
-            {
-                this.RulesVisible = RulesVisible;
-            }
+            this.RulesVisible = RulesVisible;
             this.Visibility = Visibility;
         }
         

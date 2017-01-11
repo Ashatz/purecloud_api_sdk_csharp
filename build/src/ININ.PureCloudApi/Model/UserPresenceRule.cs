@@ -96,7 +96,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PresenceType">Indicates to which presence type the presence value belongs. (required).</param>
         /// <param name="PresenceValue">The Org&#39;s UUID or Systems enum constance indicating the presence of concern. (required).</param>
         /// <param name="PresenceLimitInSeconds">The number of seconds to wait before alerting based upon the user&#39;s presence. (required).</param>
-        /// <param name="Enabled">Indicates if the rule is enabled. (required) (default to false).</param>
+        /// <param name="Enabled">Indicates if the rule is enabled. (required).</param>
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
         public UserPresenceRule(string Name = null, User PresenceUser = null, PresenceTypeEnum? PresenceType = null, string PresenceValue = null, int? PresenceLimitInSeconds = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)

@@ -199,6 +199,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId
+        /// </summary>
+        [Test]
+        public void DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId'
+            string outboundRouteId = null; // TODO: replace null with proper value
+            var response = instance.DeleteProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId(outboundRouteId);
+            Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test DeleteProvidersEdgesTrunkbasesettingsTrunkbasesettingsId
         /// </summary>
         [Test]
@@ -844,6 +856,38 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetProvidersEdgesSitesSiteIdOutboundroutes
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesSitesSiteIdOutboundroutesTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesSitesSiteIdOutboundroutes'
+            string siteId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesSitesSiteIdOutboundroutes(siteId, pageSize, pageNumber, name, sortBy);
+            Assert.IsInstanceOf<OutboundRouteBaseEntityListing> (response, "response is OutboundRouteBaseEntityListing");
+        }
+        
+        /// <summary>
+        /// Test GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId'
+            string outboundRouteId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId(outboundRouteId, pageSize, pageNumber, name, sortBy);
+            Assert.IsInstanceOf<OutboundRouteBase> (response, "response is OutboundRouteBase");
+        }
+        
+        /// <summary>
         /// Test GetProvidersEdgesTimezones
         /// </summary>
         [Test]
@@ -1275,6 +1319,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostProvidersEdgesSitesSiteIdOutboundroutes
+        /// </summary>
+        [Test]
+        public void PostProvidersEdgesSitesSiteIdOutboundroutesTest()
+        {
+            // TODO: add unit test for the method 'PostProvidersEdgesSitesSiteIdOutboundroutes'
+            string siteId = null; // TODO: replace null with proper value
+            OutboundRoute body = null; // TODO: replace null with proper value
+            var response = instance.PostProvidersEdgesSitesSiteIdOutboundroutes(siteId, body);
+            Assert.IsInstanceOf<OutboundRoute> (response, "response is OutboundRoute");
+        }
+        
+        /// <summary>
         /// Test PostProvidersEdgesSitesSiteIdRebalance
         /// </summary>
         [Test]
@@ -1493,6 +1550,19 @@ namespace ININ.PureCloudApi.Test
             List<NumberPlan> body = null; // TODO: replace null with proper value
             var response = instance.PutProvidersEdgesSitesSiteIdNumberplans(siteId, body);
             Assert.IsInstanceOf<List<NumberPlan>> (response, "response is List<NumberPlan>");
+        }
+        
+        /// <summary>
+        /// Test PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId
+        /// </summary>
+        [Test]
+        public void PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteIdTest()
+        {
+            // TODO: add unit test for the method 'PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId'
+            string outboundRouteId = null; // TODO: replace null with proper value
+            OutboundRouteBase body = null; // TODO: replace null with proper value
+            var response = instance.PutProvidersEdgesSitesSiteIdOutboundroutesOutboundrouteId(outboundRouteId, body);
+            Assert.IsInstanceOf<OutboundRouteBase> (response, "response is OutboundRouteBase");
         }
         
         /// <summary>
