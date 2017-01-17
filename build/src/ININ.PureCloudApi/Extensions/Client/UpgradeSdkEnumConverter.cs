@@ -20,17 +20,15 @@ namespace ININ.PureCloudApi.Client
             var isNullable = IsNullableType(objectType);
             var enumType = isNullable ? Nullable.GetUnderlyingType(objectType) : objectType;
 
-            var names = Enum.GetNames(enumType);
-
             switch (reader.TokenType)
             {
                 case JsonToken.String:
+                    var stringValues = Enum.GetValues(enumType).Cast<string>();
                     var enumText = reader.Value.ToString();
 
                     if (!string.IsNullOrEmpty(enumText))
                     {
-                        var match = names
-                            .FirstOrDefault(n => string.Equals(n, enumText, StringComparison.OrdinalIgnoreCase));
+                        var match = stringValues.FirstOrDefault(stringValue => string.Equals(stringValue, enumText, StringComparison.OrdinalIgnoreCase));
 
                         if (match != null)
                         {
@@ -40,7 +38,7 @@ namespace ININ.PureCloudApi.Client
                     break;
                 case JsonToken.Integer:
                     var enumVal = Convert.ToInt32(reader.Value);
-                    var values = (int[]) Enum.GetValues(enumType);
+                    var values = (int[])Enum.GetValues(enumType);
                     if (values.Contains(enumVal))
                     {
                         return Enum.Parse(enumType, enumVal.ToString());
@@ -49,6 +47,7 @@ namespace ININ.PureCloudApi.Client
             }
 
             // See if it has a member named "OUTDATED_SDK_VERSION"
+            var names = Enum.GetNames(enumType);
             var outdatedSdkVersionMemberName = names
                 .FirstOrDefault(n => string.Equals(n, "OUTDATED_SDK_VERSION", StringComparison.OrdinalIgnoreCase));
 
