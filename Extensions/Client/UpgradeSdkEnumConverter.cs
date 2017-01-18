@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
 namespace ININ.PureCloudApi.Client
@@ -27,10 +28,26 @@ namespace ININ.PureCloudApi.Client
                 case JsonToken.String:
                     var enumText = reader.Value.ToString();
 
+
+
                     if (!string.IsNullOrEmpty(enumText))
                     {
-                        var match = names
-                            .FirstOrDefault(n => string.Equals(n, enumText, StringComparison.OrdinalIgnoreCase));
+                        var enumMembers = enumType.GetMembers();
+                        string match = null;
+
+                        foreach (var enumMember in enumMembers)
+                        {
+                            var memberAttributes = enumMember.GetCustomAttributes(typeof(EnumMemberAttribute), false);
+                            if (memberAttributes.Length > 0)
+                            {
+                                var attribute = memberAttributes.FirstOrDefault() as EnumMemberAttribute;
+                                if (string.Equals(attribute.Value, enumText, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    match = enumMember.Name;
+                                    break;
+                                }
+                            }
+                        }
 
                         if (match != null)
                         {
