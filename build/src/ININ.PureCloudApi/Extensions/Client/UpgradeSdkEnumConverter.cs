@@ -14,11 +14,6 @@ namespace ININ.PureCloudApi.Client
             return type.IsEnum;
         }
 
-        public static string ObjectToString(Object o)
-        {
-            return o.ToString();
-        }
-
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
             JsonSerializer serializer)
         {
@@ -28,20 +23,12 @@ namespace ININ.PureCloudApi.Client
             switch (reader.TokenType)
             {
                 case JsonToken.String:
-                    var enumValues = Enum.GetValues(enumType);
+                    var stringValues = Enum.GetValues(enumType).Cast<string>();
                     var enumText = reader.Value.ToString();
 
                     if (!string.IsNullOrEmpty(enumText))
                     {
-                        string match = null;
-                        foreach (var value in enumValues)
-                        {
-                            if (string.Equals(value.ToString(), enumText, StringComparison.OrdinalIgnoreCase))
-                            {
-                                match = value.ToString();
-                                break;
-                            }
-                        }
+                        var match = stringValues.FirstOrDefault(stringValue => string.Equals(stringValue, enumText, StringComparison.OrdinalIgnoreCase));
 
                         if (match != null)
                         {
