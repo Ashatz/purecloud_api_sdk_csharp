@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
 namespace ININ.PureCloudApi.Client
@@ -20,8 +21,6 @@ namespace ININ.PureCloudApi.Client
             var isNullable = IsNullableType(objectType);
             var enumType = isNullable ? Nullable.GetUnderlyingType(objectType) : objectType;
 
-            var names = Enum.GetNames(enumType);
-
             switch (reader.TokenType)
             {
                 case JsonToken.String:
@@ -29,8 +28,22 @@ namespace ININ.PureCloudApi.Client
 
                     if (!string.IsNullOrEmpty(enumText))
                     {
-                        var match = names
-                            .FirstOrDefault(n => string.Equals(n, enumText, StringComparison.OrdinalIgnoreCase));
+                        var enumMembers = enumType.GetMembers();
+                        string match = null;
+
+                        foreach (var enumMember in enumMembers)
+                        {
+                            var memberAttributes = enumMember.GetCustomAttributes(typeof(EnumMemberAttribute), false);
+                            if (memberAttributes.Length > 0)
+                            {
+                                var attribute = memberAttributes.FirstOrDefault() as EnumMemberAttribute;
+                                if (string.Equals(attribute.Value, enumText, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    match = enumMember.Name;
+                                    break;
+                                }
+                            }
+                        }
 
                         if (match != null)
                         {
@@ -40,7 +53,7 @@ namespace ININ.PureCloudApi.Client
                     break;
                 case JsonToken.Integer:
                     var enumVal = Convert.ToInt32(reader.Value);
-                    var values = (int[]) Enum.GetValues(enumType);
+                    var values = (int[])Enum.GetValues(enumType);
                     if (values.Contains(enumVal))
                     {
                         return Enum.Parse(enumType, enumVal.ToString());
@@ -49,6 +62,7 @@ namespace ININ.PureCloudApi.Client
             }
 
             // See if it has a member named "OUTDATED_SDK_VERSION"
+            var names = Enum.GetNames(enumType);
             var outdatedSdkVersionMemberName = names
                 .FirstOrDefault(n => string.Equals(n, "OUTDATED_SDK_VERSION", StringComparison.OrdinalIgnoreCase));
 
@@ -60,7 +74,21 @@ namespace ININ.PureCloudApi.Client
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            writer.WriteValue(value.ToString());
+            var enumMembers = value.GetType().GetMembers();
+
+            foreach (var enumMember in enumMembers)
+            {
+                var memberAttributes = enumMember.GetCustomAttributes(typeof(EnumMemberAttribute), false);
+                if (memberAttributes.Length > 0)
+                {
+                    var attribute = memberAttributes.FirstOrDefault() as EnumMemberAttribute;
+                    if (string.Equals(enumMember.Name, value.ToString(), StringComparison.OrdinalIgnoreCase))
+                    {
+                        writer.WriteValue(attribute.Value);
+                        return;
+                    }
+                }
+            }
         }
 
         private bool IsNullableType(Type t)
