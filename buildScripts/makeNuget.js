@@ -1,7 +1,8 @@
 var fs = require('fs');
 
 try {
-	var version = fs.readFileSync('bin/VERSION', 'UTF-8');
+	var prerelease = process.argv[2] ? '-' + process.argv[2] : '';
+	var version = fs.readFileSync('bin/VERSION', 'UTF-8') + prerelease;
 	var nuspecFilePath = 'build/bin/PureCloudApiSdk.nuspec';
 	var content = '<?xml version="1.0" encoding="utf-8"?>' + 
 	'<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">' + 
