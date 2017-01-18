@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
 namespace ININ.PureCloudApi.Client
@@ -31,15 +33,24 @@ namespace ININ.PureCloudApi.Client
                     var enumValues = Enum.GetValues(enumType);
                     var enumText = reader.Value.ToString();
 
+
+
                     if (!string.IsNullOrEmpty(enumText))
                     {
+                        var enumMembers = enumType.GetMembers();
                         string match = null;
-                        foreach (var value in enumValues)
+
+                        foreach (var enumMember in enumMembers)
                         {
-                            if (string.Equals(value.ToString(), enumText, StringComparison.OrdinalIgnoreCase))
+                            var memberAttributes = enumMember.GetCustomAttributes(typeof(EnumMemberAttribute), false);
+                            if (memberAttributes.Length > 0)
                             {
-                                match = value.ToString();
-                                break;
+                                var attribute = memberAttributes.FirstOrDefault() as EnumMemberAttribute;
+                                if (string.Equals(attribute.Value, enumText, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    match = enumMember.Name;
+                                    break;
+                                }
                             }
                         }
 
