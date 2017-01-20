@@ -367,7 +367,7 @@ namespace Example
 
 <a name="deletecampaignscampaignidprogress"></a>
 
-## **string** DeleteCampaignsCampaignIdProgress (string campaignId)
+## void DeleteCampaignsCampaignIdProgress (string campaignId)
 
 Reset campaign progress and recycle the campaign
 
@@ -397,8 +397,7 @@ namespace Example
             try
             {
                 // Reset campaign progress and recycle the campaign
-                string result = apiInstance.DeleteCampaignsCampaignIdProgress(campaignId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteCampaignsCampaignIdProgress(campaignId);
             }
             catch (Exception e)
             {
@@ -419,7 +418,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletecontactlistscontactlistid"></a>
 

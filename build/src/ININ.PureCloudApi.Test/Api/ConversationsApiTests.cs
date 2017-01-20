@@ -520,8 +520,8 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             string communicationId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId(callbackId, participantId, communicationId, body);
-            
+            var response = instance.PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId(callbackId, participantId, communicationId, body);
+            Assert.IsInstanceOf<Empty> (response, "response is Empty");
         }
         
         /// <summary>
@@ -576,8 +576,8 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             string communicationId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId(callId, participantId, communicationId, body);
-            
+            var response = instance.PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId(callId, participantId, communicationId, body);
+            Assert.IsInstanceOf<Empty> (response, "response is Empty");
         }
         
         /// <summary>
@@ -646,8 +646,8 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             string communicationId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId(chatId, participantId, communicationId, body);
-            
+            var response = instance.PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId(chatId, participantId, communicationId, body);
+            Assert.IsInstanceOf<Empty> (response, "response is Empty");
         }
         
         /// <summary>
@@ -702,8 +702,8 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             string communicationId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId(cobrowseId, participantId, communicationId, body);
-            
+            var response = instance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId(cobrowseId, participantId, communicationId, body);
+            Assert.IsInstanceOf<Empty> (response, "response is Empty");
         }
         
         /// <summary>
@@ -786,8 +786,8 @@ namespace ININ.PureCloudApi.Test
             string participantId = null; // TODO: replace null with proper value
             string communicationId = null; // TODO: replace null with proper value
             MediaParticipantRequest body = null; // TODO: replace null with proper value
-            instance.PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId(emailId, participantId, communicationId, body);
-            
+            var response = instance.PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId(emailId, participantId, communicationId, body);
+            Assert.IsInstanceOf<Empty> (response, "response is Empty");
         }
         
         /// <summary>

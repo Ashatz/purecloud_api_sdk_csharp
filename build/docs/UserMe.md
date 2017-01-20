@@ -40,6 +40,7 @@ title: UserMe
 | **DirectReports** | [**List&lt;User&gt;**](User.html) | The first 50 direct reports to this user. | [optional] |
 | **Adjacents** | [**Adjacents**](Adjacents.html) | The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands. | [optional] |
 | **RoutingSkills** | [**List&lt;RoutingSkill&gt;**](RoutingSkill.html) | The first 50 routing skills for user&#39;s organizations | [optional] |
+| **FieldConfigs** | [**FieldConfigs**](FieldConfigs.html) | The field config for all entities types of user&#39;s organization | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

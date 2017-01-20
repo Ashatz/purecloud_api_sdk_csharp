@@ -26,13 +26,15 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ProceedingInteractions">ProceedingInteractions.</param>
         /// <param name="PreviewingInteractions">PreviewingInteractions.</param>
         /// <param name="InteractingInteractions">InteractingInteractions.</param>
-        public CampaignInteractions(UriReference Campaign = null, List<CampaignInteraction> PendingInteractions = null, List<CampaignInteraction> ProceedingInteractions = null, List<CampaignInteraction> PreviewingInteractions = null, List<CampaignInteraction> InteractingInteractions = null)
+        /// <param name="ScheduledInteractions">ScheduledInteractions.</param>
+        public CampaignInteractions(UriReference Campaign = null, List<CampaignInteraction> PendingInteractions = null, List<CampaignInteraction> ProceedingInteractions = null, List<CampaignInteraction> PreviewingInteractions = null, List<CampaignInteraction> InteractingInteractions = null, List<CampaignInteraction> ScheduledInteractions = null)
         {
             this.Campaign = Campaign;
             this.PendingInteractions = PendingInteractions;
             this.ProceedingInteractions = ProceedingInteractions;
             this.PreviewingInteractions = PreviewingInteractions;
             this.InteractingInteractions = InteractingInteractions;
+            this.ScheduledInteractions = ScheduledInteractions;
         }
         
         /// <summary>
@@ -61,6 +63,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="interactingInteractions", EmitDefaultValue=false)]
         public List<CampaignInteraction> InteractingInteractions { get; set; }
         /// <summary>
+        /// Gets or Sets ScheduledInteractions
+        /// </summary>
+        [DataMember(Name="scheduledInteractions", EmitDefaultValue=false)]
+        public List<CampaignInteraction> ScheduledInteractions { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -73,6 +80,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ProceedingInteractions: ").Append(ProceedingInteractions).Append("\n");
             sb.Append("  PreviewingInteractions: ").Append(PreviewingInteractions).Append("\n");
             sb.Append("  InteractingInteractions: ").Append(InteractingInteractions).Append("\n");
+            sb.Append("  ScheduledInteractions: ").Append(ScheduledInteractions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -133,6 +141,11 @@ namespace ININ.PureCloudApi.Model
                     this.InteractingInteractions == other.InteractingInteractions ||
                     this.InteractingInteractions != null &&
                     this.InteractingInteractions.SequenceEqual(other.InteractingInteractions)
+                ) &&
+                (
+                    this.ScheduledInteractions == other.ScheduledInteractions ||
+                    this.ScheduledInteractions != null &&
+                    this.ScheduledInteractions.SequenceEqual(other.ScheduledInteractions)
                 );
         }
 
@@ -157,6 +170,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.PreviewingInteractions.GetHashCode();
                 if (this.InteractingInteractions != null)
                     hash = hash * 59 + this.InteractingInteractions.GetHashCode();
+                if (this.ScheduledInteractions != null)
+                    hash = hash * 59 + this.ScheduledInteractions.GetHashCode();
                 return hash;
             }
         }

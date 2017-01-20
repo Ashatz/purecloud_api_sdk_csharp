@@ -83,20 +83,20 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Total'
         }
         /// <summary>
-        /// Test the property 'FirstUri'
-        /// </summary>
-        [Test]
-        public void FirstUriTest()
-        {
-            // TODO: unit test for the property 'FirstUri'
-        }
-        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]
         public void SelfUriTest()
         {
             // TODO: unit test for the property 'SelfUri'
+        }
+        /// <summary>
+        /// Test the property 'FirstUri'
+        /// </summary>
+        [Test]
+        public void FirstUriTest()
+        {
+            // TODO: unit test for the property 'FirstUri'
         }
         /// <summary>
         /// Test the property 'PreviousUri'

@@ -315,6 +315,14 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'RoutingSkills'
         }
         /// <summary>
+        /// Test the property 'FieldConfigs'
+        /// </summary>
+        [Test]
+        public void FieldConfigsTest()
+        {
+            // TODO: unit test for the property 'FieldConfigs'
+        }
+        /// <summary>
         /// Test the property 'SelfUri'
         /// </summary>
         [Test]

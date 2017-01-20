@@ -409,6 +409,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetProvidersEdgesEdgeIdMetrics
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesEdgeIdMetricsTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesEdgeIdMetrics'
+            string edgeId = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesEdgeIdMetrics(edgeId);
+            Assert.IsInstanceOf<EdgeMetrics> (response, "response is EdgeMetrics");
+        }
+        
+        /// <summary>
         /// Test GetProvidersEdgesEdgeIdPhysicalinterfaces
         /// </summary>
         [Test]
@@ -659,6 +671,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetProvidersEdgesMetrics
+        /// </summary>
+        [Test]
+        public void GetProvidersEdgesMetricsTest()
+        {
+            // TODO: add unit test for the method 'GetProvidersEdgesMetrics'
+            string edgeIds = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesMetrics(edgeIds);
+            Assert.IsInstanceOf<List<EdgeMetrics>> (response, "response is List<EdgeMetrics>");
+        }
+        
+        /// <summary>
         /// Test GetProvidersEdgesOutboundroutes
         /// </summary>
         [Test]
@@ -697,7 +721,8 @@ namespace ININ.PureCloudApi.Test
             int? pageSize = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
-            var response = instance.GetProvidersEdgesPhonebasesettings(pageNumber, pageSize, sortBy, sortOrder);
+            string name = null; // TODO: replace null with proper value
+            var response = instance.GetProvidersEdgesPhonebasesettings(pageNumber, pageSize, sortBy, sortOrder, name);
             Assert.IsInstanceOf<PhoneBaseEntityListing> (response, "response is PhoneBaseEntityListing");
         }
         

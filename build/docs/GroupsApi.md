@@ -78,7 +78,7 @@ namespace Example
 
 <a name="deletegroupidmembers"></a>
 
-## void DeleteGroupIdMembers (string groupId, string ids)
+## [**Empty**](Empty.html) DeleteGroupIdMembers (string groupId, string ids)
 
 Remove members
 
@@ -109,7 +109,8 @@ namespace Example
             try
             {
                 // Remove members
-                apiInstance.DeleteGroupIdMembers(groupId, ids);
+                Empty result = apiInstance.DeleteGroupIdMembers(groupId, ids);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -131,7 +132,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="getfieldconfig"></a>
 
@@ -429,7 +430,7 @@ namespace Example
 
 <a name="postgroupidmembers"></a>
 
-## void PostGroupIdMembers (string groupId, GroupMembersUpdate body)
+## [**Empty**](Empty.html) PostGroupIdMembers (string groupId, GroupMembersUpdate body)
 
 Add members
 
@@ -460,7 +461,8 @@ namespace Example
             try
             {
                 // Add members
-                apiInstance.PostGroupIdMembers(groupId, body);
+                Empty result = apiInstance.PostGroupIdMembers(groupId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -482,7 +484,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="postgroups"></a>
 

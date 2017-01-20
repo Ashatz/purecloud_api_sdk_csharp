@@ -90,6 +90,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'InteractingInteractions'
         }
+        /// <summary>
+        /// Test the property 'ScheduledInteractions'
+        /// </summary>
+        [Test]
+        public void ScheduledInteractionsTest()
+        {
+            // TODO: unit test for the property 'ScheduledInteractions'
+        }
 
     }
 

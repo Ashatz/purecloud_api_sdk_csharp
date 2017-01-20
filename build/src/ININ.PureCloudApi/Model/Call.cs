@@ -262,7 +262,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Spam for "spam"
             /// </summary>
             [EnumMember(Value = "spam")]
-            Spam
+            Spam,
+            
+            /// <summary>
+            /// Enum Uncallable for "uncallable"
+            /// </summary>
+            [EnumMember(Value = "uncallable")]
+            Uncallable
         }
         /// <summary>
         /// The connection state of this communication.

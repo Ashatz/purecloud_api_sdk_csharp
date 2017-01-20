@@ -21,7 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="getadherence"></a>
 
-## [**UserScheduleAdherence**](UserScheduleAdherence.html) GetAdherence (List<string> userId)
+## [**List&lt;UserScheduleAdherence&gt;**](UserScheduleAdherence.html) GetAdherence (List<string> userId)
 
 Get a list of UserScheduleAdherence records for the requested users
 
@@ -46,12 +46,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new WorkforceManagementApi();
-            var userId = new List<string>(); // List<string> | User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request
+            var userId = new List<string>(); // List<string> | User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request
 
             try
             {
                 // Get a list of UserScheduleAdherence records for the requested users
-                UserScheduleAdherence result = apiInstance.GetAdherence(userId);
+                List&lt;UserScheduleAdherence&gt; result = apiInstance.GetAdherence(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -68,12 +68,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | [**List<string>**](string.html)| User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request |  |
+| **userId** | [**List<string>**](string.html)| User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**UserScheduleAdherence**](UserScheduleAdherence.html)
+[**List<UserScheduleAdherence>**](UserScheduleAdherence.html)
 
 <a name="getdecisionsdownloadsdownloadid"></a>
 

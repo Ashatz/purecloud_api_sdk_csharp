@@ -814,7 +814,7 @@ namespace Example
 
 <a name="getsharedsharedid"></a>
 
-## void GetSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+## [**SharedResponse**](SharedResponse.html) GetSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
 
 Get shared documents. Securely download a shared document.
 
@@ -848,7 +848,8 @@ namespace Example
             try
             {
                 // Get shared documents. Securely download a shared document.
-                apiInstance.GetSharedSharedId(sharedId, redirect, disposition, contentType, expand);
+                SharedResponse result = apiInstance.GetSharedSharedId(sharedId, redirect, disposition, contentType, expand);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -873,7 +874,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**SharedResponse**](SharedResponse.html)
 
 <a name="getshares"></a>
 

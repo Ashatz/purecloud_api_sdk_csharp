@@ -62,7 +62,7 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetAdherence'
             List<string> userId = null; // TODO: replace null with proper value
             var response = instance.GetAdherence(userId);
-            Assert.IsInstanceOf<UserScheduleAdherence> (response, "response is UserScheduleAdherence");
+            Assert.IsInstanceOf<List<UserScheduleAdherence>> (response, "response is List<UserScheduleAdherence>");
         }
         
         /// <summary>

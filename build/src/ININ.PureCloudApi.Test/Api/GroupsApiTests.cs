@@ -74,8 +74,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'DeleteGroupIdMembers'
             string groupId = null; // TODO: replace null with proper value
             string ids = null; // TODO: replace null with proper value
-            instance.DeleteGroupIdMembers(groupId, ids);
-            
+            var response = instance.DeleteGroupIdMembers(groupId, ids);
+            Assert.IsInstanceOf<Empty> (response, "response is Empty");
         }
         
         /// <summary>
@@ -154,8 +154,8 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostGroupIdMembers'
             string groupId = null; // TODO: replace null with proper value
             GroupMembersUpdate body = null; // TODO: replace null with proper value
-            instance.PostGroupIdMembers(groupId, body);
-            
+            var response = instance.PostGroupIdMembers(groupId, body);
+            Assert.IsInstanceOf<Empty> (response, "response is Empty");
         }
         
         /// <summary>

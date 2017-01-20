@@ -44,8 +44,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
-        /// <returns></returns>
-        void DeleteGroupIdMembers (string groupId, string ids);
+        /// <returns>Empty</returns>
+        Empty DeleteGroupIdMembers (string groupId, string ids);
 
         /// <summary>
         /// Remove members
@@ -56,8 +56,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteGroupIdMembersWithHttpInfo (string groupId, string ids);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> DeleteGroupIdMembersWithHttpInfo (string groupId, string ids);
         /// <summary>
         /// Fetch field config for an entity type
         /// </summary>
@@ -186,8 +186,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
-        /// <returns></returns>
-        void PostGroupIdMembers (string groupId, GroupMembersUpdate body);
+        /// <returns>Empty</returns>
+        Empty PostGroupIdMembers (string groupId, GroupMembersUpdate body);
 
         /// <summary>
         /// Add members
@@ -198,8 +198,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostGroupIdMembersWithHttpInfo (string groupId, GroupMembersUpdate body);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> PostGroupIdMembersWithHttpInfo (string groupId, GroupMembersUpdate body);
         /// <summary>
         /// Create a group
         /// </summary>
@@ -297,8 +297,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteGroupIdMembersAsync (string groupId, string ids);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> DeleteGroupIdMembersAsync (string groupId, string ids);
 
         /// <summary>
         /// Remove members
@@ -309,8 +309,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupIdMembersAsyncWithHttpInfo (string groupId, string ids);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteGroupIdMembersAsyncWithHttpInfo (string groupId, string ids);
         /// <summary>
         /// Fetch field config for an entity type
         /// </summary>
@@ -439,8 +439,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostGroupIdMembersAsync (string groupId, GroupMembersUpdate body);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> PostGroupIdMembersAsync (string groupId, GroupMembersUpdate body);
 
         /// <summary>
         /// Add members
@@ -451,8 +451,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupIdMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> PostGroupIdMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body);
         /// <summary>
         /// Create a group
         /// </summary>
@@ -771,10 +771,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
-        /// <returns></returns>
-        public void DeleteGroupIdMembers (string groupId, string ids)
+        /// <returns>Empty</returns>
+        public Empty DeleteGroupIdMembers (string groupId, string ids)
         {
-             DeleteGroupIdMembersWithHttpInfo(groupId, ids);
+             ApiResponse<Empty> localVarResponse = DeleteGroupIdMembersWithHttpInfo(groupId, ids);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -783,8 +784,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteGroupIdMembersWithHttpInfo (string groupId, string ids)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > DeleteGroupIdMembersWithHttpInfo (string groupId, string ids)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -842,10 +843,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteGroupIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -854,10 +855,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteGroupIdMembersAsync (string groupId, string ids)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> DeleteGroupIdMembersAsync (string groupId, string ids)
         {
-             await DeleteGroupIdMembersAsyncWithHttpInfo(groupId, ids);
+             ApiResponse<Empty> localVarResponse = await DeleteGroupIdMembersAsyncWithHttpInfo(groupId, ids);
+             return localVarResponse.Data;
 
         }
 
@@ -867,8 +869,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="ids">Comma separated list of userIds to remove</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupIdMembersAsyncWithHttpInfo (string groupId, string ids)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteGroupIdMembersAsyncWithHttpInfo (string groupId, string ids)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -926,10 +928,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteGroupIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -1759,10 +1761,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
-        /// <returns></returns>
-        public void PostGroupIdMembers (string groupId, GroupMembersUpdate body)
+        /// <returns>Empty</returns>
+        public Empty PostGroupIdMembers (string groupId, GroupMembersUpdate body)
         {
-             PostGroupIdMembersWithHttpInfo(groupId, body);
+             ApiResponse<Empty> localVarResponse = PostGroupIdMembersWithHttpInfo(groupId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1771,8 +1774,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostGroupIdMembersWithHttpInfo (string groupId, GroupMembersUpdate body)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > PostGroupIdMembersWithHttpInfo (string groupId, GroupMembersUpdate body)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -1837,10 +1840,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostGroupIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -1849,10 +1852,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostGroupIdMembersAsync (string groupId, GroupMembersUpdate body)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> PostGroupIdMembersAsync (string groupId, GroupMembersUpdate body)
         {
-             await PostGroupIdMembersAsyncWithHttpInfo(groupId, body);
+             ApiResponse<Empty> localVarResponse = await PostGroupIdMembersAsyncWithHttpInfo(groupId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -1862,8 +1866,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <param name="body">Add members</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostGroupIdMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> PostGroupIdMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -1928,10 +1932,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostGroupIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>

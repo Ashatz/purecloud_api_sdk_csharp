@@ -21,9 +21,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request</param>
-        /// <returns>UserScheduleAdherence</returns>
-        UserScheduleAdherence GetAdherence (List<string> userId);
+        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
+        /// <returns>List&lt;UserScheduleAdherence&gt;</returns>
+        List<UserScheduleAdherence> GetAdherence (List<string> userId);
 
         /// <summary>
         /// Get a list of UserScheduleAdherence records for the requested users
@@ -32,9 +32,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request</param>
-        /// <returns>ApiResponse of UserScheduleAdherence</returns>
-        ApiResponse<UserScheduleAdherence> GetAdherenceWithHttpInfo (List<string> userId);
+        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
+        /// <returns>ApiResponse of List&lt;UserScheduleAdherence&gt;</returns>
+        ApiResponse<List<UserScheduleAdherence>> GetAdherenceWithHttpInfo (List<string> userId);
         /// <summary>
         /// Get decisions download link
         /// </summary>
@@ -245,9 +245,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request</param>
-        /// <returns>Task of UserScheduleAdherence</returns>
-        System.Threading.Tasks.Task<UserScheduleAdherence> GetAdherenceAsync (List<string> userId);
+        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
+        /// <returns>Task of List&lt;UserScheduleAdherence&gt;</returns>
+        System.Threading.Tasks.Task<List<UserScheduleAdherence>> GetAdherenceAsync (List<string> userId);
 
         /// <summary>
         /// Get a list of UserScheduleAdherence records for the requested users
@@ -256,9 +256,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request</param>
-        /// <returns>Task of ApiResponse (UserScheduleAdherence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserScheduleAdherence>> GetAdherenceAsyncWithHttpInfo (List<string> userId);
+        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
+        /// <returns>Task of ApiResponse (List&lt;UserScheduleAdherence&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UserScheduleAdherence>>> GetAdherenceAsyncWithHttpInfo (List<string> userId);
         /// <summary>
         /// Get decisions download link
         /// </summary>
@@ -554,11 +554,11 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of UserScheduleAdherence records for the requested users 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request</param>
-        /// <returns>UserScheduleAdherence</returns>
-        public UserScheduleAdherence GetAdherence (List<string> userId)
+        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
+        /// <returns>List&lt;UserScheduleAdherence&gt;</returns>
+        public List<UserScheduleAdherence> GetAdherence (List<string> userId)
         {
-             ApiResponse<UserScheduleAdherence> localVarResponse = GetAdherenceWithHttpInfo(userId);
+             ApiResponse<List<UserScheduleAdherence>> localVarResponse = GetAdherenceWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
@@ -566,9 +566,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of UserScheduleAdherence records for the requested users 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request</param>
-        /// <returns>ApiResponse of UserScheduleAdherence</returns>
-        public ApiResponse< UserScheduleAdherence > GetAdherenceWithHttpInfo (List<string> userId)
+        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
+        /// <returns>ApiResponse of List&lt;UserScheduleAdherence&gt;</returns>
+        public ApiResponse< List<UserScheduleAdherence> > GetAdherenceWithHttpInfo (List<string> userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -622,9 +622,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAdherence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UserScheduleAdherence>(localVarStatusCode,
+            return new ApiResponse<List<UserScheduleAdherence>>(localVarStatusCode,
                 localVarHeaders,
-                (UserScheduleAdherence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleAdherence)));
+                (List<UserScheduleAdherence>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserScheduleAdherence>)));
             
         }
 
@@ -632,11 +632,11 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of UserScheduleAdherence records for the requested users 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request</param>
-        /// <returns>Task of UserScheduleAdherence</returns>
-        public async System.Threading.Tasks.Task<UserScheduleAdherence> GetAdherenceAsync (List<string> userId)
+        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
+        /// <returns>Task of List&lt;UserScheduleAdherence&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UserScheduleAdherence>> GetAdherenceAsync (List<string> userId)
         {
-             ApiResponse<UserScheduleAdherence> localVarResponse = await GetAdherenceAsyncWithHttpInfo(userId);
+             ApiResponse<List<UserScheduleAdherence>> localVarResponse = await GetAdherenceAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -645,9 +645,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a list of UserScheduleAdherence records for the requested users 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Max of 100 userIds per request</param>
-        /// <returns>Task of ApiResponse (UserScheduleAdherence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserScheduleAdherence>> GetAdherenceAsyncWithHttpInfo (List<string> userId)
+        /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
+        /// <returns>Task of ApiResponse (List&lt;UserScheduleAdherence&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserScheduleAdherence>>> GetAdherenceAsyncWithHttpInfo (List<string> userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -701,9 +701,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAdherence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UserScheduleAdherence>(localVarStatusCode,
+            return new ApiResponse<List<UserScheduleAdherence>>(localVarStatusCode,
                 localVarHeaders,
-                (UserScheduleAdherence) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleAdherence)));
+                (List<UserScheduleAdherence>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserScheduleAdherence>)));
             
         }
 

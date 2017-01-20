@@ -829,8 +829,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns></returns>
-        void PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Empty</returns>
+        Empty PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant&#39;s communication by disconnecting it.
@@ -843,8 +843,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
         /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
@@ -929,8 +929,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns></returns>
-        void PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId (string callId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Empty</returns>
+        Empty PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId (string callId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant&#39;s communication by disconnecting it.
@@ -943,8 +943,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
         /// Change who can speak
         /// </summary>
@@ -1054,8 +1054,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns></returns>
-        void PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Empty</returns>
+        Empty PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant&#39;s communication by disconnecting it.
@@ -1068,8 +1068,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
@@ -1154,8 +1154,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns></returns>
-        void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Empty</returns>
+        Empty PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant&#39;s communication by disconnecting it.
@@ -1168,8 +1168,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
         /// Update a participant.
         /// </summary>
@@ -1304,8 +1304,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns></returns>
-        void PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId (string emailId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Empty</returns>
+        Empty PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId (string emailId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant&#39;s communication by disconnecting it.
@@ -1318,8 +1318,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string emailId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>ApiResponse of Empty</returns>
+        ApiResponse<Empty> PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string emailId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
         /// Create a Callback
         /// </summary>
@@ -2580,8 +2580,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant&#39;s communication by disconnecting it.
@@ -2594,8 +2594,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
         /// Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
@@ -2680,8 +2680,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant&#39;s communication by disconnecting it.
@@ -2694,8 +2694,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
         /// Change who can speak
         /// </summary>
@@ -2805,8 +2805,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant&#39;s communication by disconnecting it.
@@ -2819,8 +2819,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
@@ -2905,8 +2905,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant&#39;s communication by disconnecting it.
@@ -2919,8 +2919,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
         /// Update a participant.
         /// </summary>
@@ -3055,8 +3055,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string emailId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Task of Empty</returns>
+        System.Threading.Tasks.Task<Empty> PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string emailId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant&#39;s communication by disconnecting it.
@@ -3069,8 +3069,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string emailId, string participantId, string communicationId, MediaParticipantRequest body);
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Empty>> PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string emailId, string participantId, string communicationId, MediaParticipantRequest body);
         /// <summary>
         /// Create a Callback
         /// </summary>
@@ -9528,10 +9528,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns></returns>
-        public void PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Empty</returns>
+        public Empty PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
         {
-             PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(callbackId, participantId, communicationId, body);
+             ApiResponse<Empty> localVarResponse = PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(callbackId, participantId, communicationId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -9542,8 +9543,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
         {
             // verify the required parameter 'callbackId' is set
             if (callbackId == null)
@@ -9616,10 +9617,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -9630,10 +9631,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
         {
-             await PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(callbackId, participantId, communicationId, body);
+             ApiResponse<Empty> localVarResponse = await PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(callbackId, participantId, communicationId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -9645,8 +9647,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
         {
             // verify the required parameter 'callbackId' is set
             if (callbackId == null)
@@ -9719,10 +9721,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -10302,10 +10304,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns></returns>
-        public void PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId (string callId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Empty</returns>
+        public Empty PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId (string callId, string participantId, string communicationId, MediaParticipantRequest body)
         {
-             PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(callId, participantId, communicationId, body);
+             ApiResponse<Empty> localVarResponse = PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(callId, participantId, communicationId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -10316,8 +10319,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body)
         {
             // verify the required parameter 'callId' is set
             if (callId == null)
@@ -10390,10 +10393,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -10404,10 +10407,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string callId, string participantId, string communicationId, MediaParticipantRequest body)
         {
-             await PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(callId, participantId, communicationId, body);
+             ApiResponse<Empty> localVarResponse = await PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(callId, participantId, communicationId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -10419,8 +10423,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string callId, string participantId, string communicationId, MediaParticipantRequest body)
         {
             // verify the required parameter 'callId' is set
             if (callId == null)
@@ -10493,10 +10497,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -11271,10 +11275,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns></returns>
-        public void PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Empty</returns>
+        public Empty PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
         {
-             PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(chatId, participantId, communicationId, body);
+             ApiResponse<Empty> localVarResponse = PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(chatId, participantId, communicationId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -11285,8 +11290,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
         {
             // verify the required parameter 'chatId' is set
             if (chatId == null)
@@ -11359,10 +11364,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -11373,10 +11378,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
         {
-             await PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(chatId, participantId, communicationId, body);
+             ApiResponse<Empty> localVarResponse = await PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(chatId, participantId, communicationId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -11388,8 +11394,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
         {
             // verify the required parameter 'chatId' is set
             if (chatId == null)
@@ -11462,10 +11468,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -12033,10 +12039,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns></returns>
-        public void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Empty</returns>
+        public Empty PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
         {
-             PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(cobrowseId, participantId, communicationId, body);
+             ApiResponse<Empty> localVarResponse = PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(cobrowseId, participantId, communicationId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -12047,8 +12054,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
         {
             // verify the required parameter 'cobrowseId' is set
             if (cobrowseId == null)
@@ -12121,10 +12128,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -12135,10 +12142,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
         {
-             await PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(cobrowseId, participantId, communicationId, body);
+             ApiResponse<Empty> localVarResponse = await PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(cobrowseId, participantId, communicationId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -12150,8 +12158,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
         {
             // verify the required parameter 'cobrowseId' is set
             if (cobrowseId == null)
@@ -12224,10 +12232,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -13193,10 +13201,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns></returns>
-        public void PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Empty</returns>
+        public Empty PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
         {
-             PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(emailId, participantId, communicationId, body);
+             ApiResponse<Empty> localVarResponse = PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo(emailId, participantId, communicationId, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -13207,8 +13216,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>ApiResponse of Empty</returns>
+        public ApiResponse< Empty > PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdWithHttpInfo (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
         {
             // verify the required parameter 'emailId' is set
             if (emailId == null)
@@ -13281,10 +13290,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>
@@ -13295,10 +13304,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Task of Empty</returns>
+        public async System.Threading.Tasks.Task<Empty> PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdAsync (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
         {
-             await PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(emailId, participantId, communicationId, body);
+             ApiResponse<Empty> localVarResponse = await PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo(emailId, participantId, communicationId, body);
+             return localVarResponse.Data;
 
         }
 
@@ -13310,8 +13320,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participantId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
+        /// <returns>Task of ApiResponse (Empty)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Empty>> PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationIdAsyncWithHttpInfo (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
         {
             // verify the required parameter 'emailId' is set
             if (emailId == null)
@@ -13384,10 +13394,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<Empty>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (Empty) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Empty)));
+            
         }
 
         /// <summary>

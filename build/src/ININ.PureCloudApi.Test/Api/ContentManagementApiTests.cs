@@ -244,8 +244,8 @@ namespace ININ.PureCloudApi.Test
             string disposition = null; // TODO: replace null with proper value
             string contentType = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
-            instance.GetSharedSharedId(sharedId, redirect, disposition, contentType, expand);
-            
+            var response = instance.GetSharedSharedId(sharedId, redirect, disposition, contentType, expand);
+            Assert.IsInstanceOf<SharedResponse> (response, "response is SharedResponse");
         }
         
         /// <summary>

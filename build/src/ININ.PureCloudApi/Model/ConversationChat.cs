@@ -181,7 +181,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Other for "other"
             /// </summary>
             [EnumMember(Value = "other")]
-            Other
+            Other,
+            
+            /// <summary>
+            /// Enum Uncallable for "uncallable"
+            /// </summary>
+            [EnumMember(Value = "uncallable")]
+            Uncallable
         }
         /// <summary>
         /// The connection state of this communication.

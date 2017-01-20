@@ -96,7 +96,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DirectReports">The first 50 direct reports to this user..</param>
         /// <param name="Adjacents">The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands..</param>
         /// <param name="RoutingSkills">The first 50 routing skills for user&#39;s organizations.</param>
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null)
+        /// <param name="FieldConfigs">The field config for all entities types of user&#39;s organization.</param>
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -137,6 +138,7 @@ namespace ININ.PureCloudApi.Model
             this.DirectReports = DirectReports;
             this.Adjacents = Adjacents;
             this.RoutingSkills = RoutingSkills;
+            this.FieldConfigs = FieldConfigs;
         }
         
         /// <summary>
@@ -324,6 +326,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="routingSkills", EmitDefaultValue=false)]
         public List<RoutingSkill> RoutingSkills { get; set; }
         /// <summary>
+        /// The field config for all entities types of user&#39;s organization
+        /// </summary>
+        /// <value>The field config for all entities types of user&#39;s organization</value>
+        [DataMember(Name="fieldConfigs", EmitDefaultValue=false)]
+        public FieldConfigs FieldConfigs { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -370,6 +378,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DirectReports: ").Append(DirectReports).Append("\n");
             sb.Append("  Adjacents: ").Append(Adjacents).Append("\n");
             sb.Append("  RoutingSkills: ").Append(RoutingSkills).Append("\n");
+            sb.Append("  FieldConfigs: ").Append(FieldConfigs).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -573,6 +582,11 @@ namespace ININ.PureCloudApi.Model
                     this.RoutingSkills.SequenceEqual(other.RoutingSkills)
                 ) &&
                 (
+                    this.FieldConfigs == other.FieldConfigs ||
+                    this.FieldConfigs != null &&
+                    this.FieldConfigs.Equals(other.FieldConfigs)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -656,6 +670,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Adjacents.GetHashCode();
                 if (this.RoutingSkills != null)
                     hash = hash * 59 + this.RoutingSkills.GetHashCode();
+                if (this.FieldConfigs != null)
+                    hash = hash * 59 + this.FieldConfigs.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

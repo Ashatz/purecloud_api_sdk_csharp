@@ -13,7 +13,7 @@ title: GroupUpdate
 | **State** | **string** | State of the group. | [optional] |
 | **Version** | **int?** | Current version for this resource. | |
 | **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
-| **Addresses** | [**List&lt;Contact&gt;**](Contact.html) |  | [optional] |
+| **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact.html) |  | [optional] |
 | **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | [optional] |
 | **Visibility** | **string** | Who can view this group | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

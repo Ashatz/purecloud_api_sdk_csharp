@@ -345,8 +345,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
-        /// <returns></returns>
-        void GetSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        /// <returns>SharedResponse</returns>
+        SharedResponse GetSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -360,8 +360,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        /// <returns>ApiResponse of SharedResponse</returns>
+        ApiResponse<SharedResponse> GetSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
         /// </summary>
@@ -1281,8 +1281,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        /// <returns>Task of SharedResponse</returns>
+        System.Threading.Tasks.Task<SharedResponse> GetSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -1296,8 +1296,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        /// <returns>Task of ApiResponse (SharedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SharedResponse>> GetSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
         /// </summary>
@@ -4156,10 +4156,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
-        /// <returns></returns>
-        public void GetSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        /// <returns>SharedResponse</returns>
+        public SharedResponse GetSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
-             GetSharedSharedIdWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
+             ApiResponse<SharedResponse> localVarResponse = GetSharedSharedIdWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -4171,8 +4172,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        /// <returns>ApiResponse of SharedResponse</returns>
+        public ApiResponse< SharedResponse > GetSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
             // verify the required parameter 'sharedId' is set
             if (sharedId == null)
@@ -4230,10 +4231,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSharedSharedId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<SharedResponse>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (SharedResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SharedResponse)));
+            
         }
 
         /// <summary>
@@ -4245,10 +4246,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        /// <returns>Task of SharedResponse</returns>
+        public async System.Threading.Tasks.Task<SharedResponse> GetSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
-             await GetSharedSharedIdAsyncWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
+             ApiResponse<SharedResponse> localVarResponse = await GetSharedSharedIdAsyncWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
+             return localVarResponse.Data;
 
         }
 
@@ -4261,8 +4263,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional, default to attachment)</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)</param>
         /// <param name="expand">Expand some document fields (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        /// <returns>Task of ApiResponse (SharedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SharedResponse>> GetSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
             // verify the required parameter 'sharedId' is set
             if (sharedId == null)
@@ -4320,10 +4322,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSharedSharedId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<SharedResponse>(localVarStatusCode,
                 localVarHeaders,
-                null);
+                (SharedResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SharedResponse)));
+            
         }
 
         /// <summary>

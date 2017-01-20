@@ -16,7 +16,7 @@ title: Group
 | **Version** | **int?** | Current version for this resource. | [optional] |
 | **Type** | **string** | Type of group. | |
 | **Images** | [**List&lt;UserImage&gt;**](UserImage.html) |  | [optional] |
-| **Addresses** | [**List&lt;Contact&gt;**](Contact.html) |  | [optional] |
+| **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact.html) |  | [optional] |
 | **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | |
 | **Visibility** | **string** | Who can view this group | |
 | **SelfUri** | **string** | The URI for this object | [optional] |

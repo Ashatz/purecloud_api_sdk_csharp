@@ -112,7 +112,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Addresses">Addresses.</param>
         /// <param name="RulesVisible">Are membership rules visible to the person requesting to view the group.</param>
         /// <param name="Visibility">Who can view this group.</param>
-        public GroupUpdate(string Name = null, string Description = null, StateEnum? State = null, int? Version = null, List<UserImage> Images = null, List<Contact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null)
+        public GroupUpdate(string Name = null, string Description = null, StateEnum? State = null, int? Version = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -164,7 +164,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Addresses
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
-        public List<Contact> Addresses { get; set; }
+        public List<GroupContact> Addresses { get; set; }
         /// <summary>
         /// Are membership rules visible to the person requesting to view the group
         /// </summary>

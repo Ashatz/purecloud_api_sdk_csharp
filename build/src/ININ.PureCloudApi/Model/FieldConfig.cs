@@ -48,7 +48,13 @@ namespace ININ.PureCloudApi.Model
             /// Enum Org for "org"
             /// </summary>
             [EnumMember(Value = "org")]
-            Org
+            Org,
+            
+            /// <summary>
+            /// Enum Externalcontact for "externalContact"
+            /// </summary>
+            [EnumMember(Value = "externalContact")]
+            Externalcontact
         }
         /// <summary>
         /// Gets or Sets EntityType

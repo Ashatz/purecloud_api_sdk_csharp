@@ -2129,7 +2129,7 @@ void (empty response body)
 
 <a name="patchcallbackscallbackidparticipantsparticipantidcommunicationscommunicationid"></a>
 
-## void PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
+## [**Empty**](Empty.html) PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -2162,7 +2162,8 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                apiInstance.PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId(callbackId, participantId, communicationId, body);
+                Empty result = apiInstance.PatchCallbacksCallbackIdParticipantsParticipantIdCommunicationsCommunicationId(callbackId, participantId, communicationId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -2186,7 +2187,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="patchcallscallid"></a>
 
@@ -2366,7 +2367,7 @@ void (empty response body)
 
 <a name="patchcallscallidparticipantsparticipantidcommunicationscommunicationid"></a>
 
-## void PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId (string callId, string participantId, string communicationId, MediaParticipantRequest body)
+## [**Empty**](Empty.html) PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId (string callId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -2399,7 +2400,8 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                apiInstance.PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId(callId, participantId, communicationId, body);
+                Empty result = apiInstance.PatchCallsCallIdParticipantsParticipantIdCommunicationsCommunicationId(callId, participantId, communicationId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -2423,7 +2425,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="patchcallscallidparticipantsparticipantidconsult"></a>
 
@@ -2663,7 +2665,7 @@ void (empty response body)
 
 <a name="patchchatschatidparticipantsparticipantidcommunicationscommunicationid"></a>
 
-## void PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
+## [**Empty**](Empty.html) PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -2696,7 +2698,8 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                apiInstance.PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId(chatId, participantId, communicationId, body);
+                Empty result = apiInstance.PatchChatsChatIdParticipantsParticipantIdCommunicationsCommunicationId(chatId, participantId, communicationId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -2720,7 +2723,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="patchcobrowsesessionscobrowseid"></a>
 
@@ -2900,7 +2903,7 @@ void (empty response body)
 
 <a name="patchcobrowsesessionscobrowseidparticipantsparticipantidcommunicationscommunicationid"></a>
 
-## void PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+## [**Empty**](Empty.html) PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -2933,7 +2936,8 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                apiInstance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId(cobrowseId, participantId, communicationId, body);
+                Empty result = apiInstance.PatchCobrowsesessionsCobrowseIdParticipantsParticipantIdCommunicationsCommunicationId(cobrowseId, participantId, communicationId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -2957,7 +2961,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="patchconversationidparticipantsparticipantid"></a>
 
@@ -3255,7 +3259,7 @@ void (empty response body)
 
 <a name="patchemailsemailidparticipantsparticipantidcommunicationscommunicationid"></a>
 
-## void PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
+## [**Empty**](Empty.html) PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -3288,7 +3292,8 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                apiInstance.PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId(emailId, participantId, communicationId, body);
+                Empty result = apiInstance.PatchEmailsEmailIdParticipantsParticipantIdCommunicationsCommunicationId(emailId, participantId, communicationId, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -3312,7 +3317,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**Empty**](Empty.html)
 
 <a name="postcallbacks"></a>
 

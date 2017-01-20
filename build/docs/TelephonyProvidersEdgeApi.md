@@ -35,6 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetProvidersEdgesEdgeIdLogicalinterfaces**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidlogicalinterfaces) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces | Get edge logical interfaces. |
 | [**GetProvidersEdgesEdgeIdLogicalinterfacesInterfaceId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidlogicalinterfacesinterfaceid) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Get an edge logical interface |
 | [**GetProvidersEdgesEdgeIdLogsJobsJobId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidlogsjobsjobid) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId} | Get an Edge logs job. |
+| [**GetProvidersEdgesEdgeIdMetrics**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidmetrics) | **GET** /api/v2/telephony/providers/edges/{edgeId}/metrics | Get the edge metrics. |
 | [**GetProvidersEdgesEdgeIdPhysicalinterfaces**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidphysicalinterfaces) | **GET** /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces | Retrieve a list of all configured physical interfaces from a specific edge. |
 | [**GetProvidersEdgesEdgeIdPhysicalinterfacesInterfaceId**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidphysicalinterfacesinterfaceid) | **GET** /api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId} | Get edge physical interface. |
 | [**GetProvidersEdgesEdgeIdSetuppackage**](TelephonyProvidersEdgeApi.html#getprovidersedgesedgeidsetuppackage) | **GET** /api/v2/telephony/providers/edges/{edgeId}/setuppackage | Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge. |
@@ -54,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetProvidersEdgesLines**](TelephonyProvidersEdgeApi.html#getprovidersedgeslines) | **GET** /api/v2/telephony/providers/edges/lines | Get a list of Lines |
 | [**GetProvidersEdgesLinesLineId**](TelephonyProvidersEdgeApi.html#getprovidersedgeslineslineid) | **GET** /api/v2/telephony/providers/edges/lines/{lineId} | Get a Line by ID |
 | [**GetProvidersEdgesLinesTemplate**](TelephonyProvidersEdgeApi.html#getprovidersedgeslinestemplate) | **GET** /api/v2/telephony/providers/edges/lines/template | Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance |
+| [**GetProvidersEdgesMetrics**](TelephonyProvidersEdgeApi.html#getprovidersedgesmetrics) | **GET** /api/v2/telephony/providers/edges/metrics | Get the metrics for a list of edges. |
 | [**GetProvidersEdgesOutboundroutes**](TelephonyProvidersEdgeApi.html#getprovidersedgesoutboundroutes) | **GET** /api/v2/telephony/providers/edges/outboundroutes | Get outbound routes |
 | [**GetProvidersEdgesOutboundroutesOutboundrouteId**](TelephonyProvidersEdgeApi.html#getprovidersedgesoutboundroutesoutboundrouteid) | **GET** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Get outbound route |
 | [**GetProvidersEdgesPhonebasesettings**](TelephonyProvidersEdgeApi.html#getprovidersedgesphonebasesettings) | **GET** /api/v2/telephony/providers/edges/phonebasesettings | Get a list of Phone Base Settings objects |
@@ -1724,6 +1726,62 @@ namespace Example
 
 [**EdgeLogsJob**](EdgeLogsJob.html)
 
+<a name="getprovidersedgesedgeidmetrics"></a>
+
+## [**EdgeMetrics**](EdgeMetrics.html) GetProvidersEdgesEdgeIdMetrics (string edgeId)
+
+Get the edge metrics.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesEdgeIdMetricsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+
+            try
+            {
+                // Get the edge metrics.
+                EdgeMetrics result = apiInstance.GetProvidersEdgesEdgeIdMetrics(edgeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesEdgeIdMetrics: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EdgeMetrics**](EdgeMetrics.html)
+
 <a name="getprovidersedgesedgeidphysicalinterfaces"></a>
 
 ## [**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) GetProvidersEdgesEdgeIdPhysicalinterfaces (string edgeId)
@@ -2829,6 +2887,62 @@ namespace Example
 
 [**Line**](Line.html)
 
+<a name="getprovidersedgesmetrics"></a>
+
+## [**List&lt;EdgeMetrics&gt;**](EdgeMetrics.html) GetProvidersEdgesMetrics (string edgeIds)
+
+Get the metrics for a list of edges.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetProvidersEdgesMetricsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeIds = edgeIds_example;  // string | Comma separated list of Edge Id's
+
+            try
+            {
+                // Get the metrics for a list of edges.
+                List&lt;EdgeMetrics&gt; result = apiInstance.GetProvidersEdgesMetrics(edgeIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetProvidersEdgesMetrics: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeIds** | **string**| Comma separated list of Edge Id&#39;s |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<EdgeMetrics>**](EdgeMetrics.html)
+
 <a name="getprovidersedgesoutboundroutes"></a>
 
 ## [**OutboundRouteEntityListing**](OutboundRouteEntityListing.html) GetProvidersEdgesOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
@@ -2951,7 +3065,7 @@ namespace Example
 
 <a name="getprovidersedgesphonebasesettings"></a>
 
-## [**PhoneBaseEntityListing**](PhoneBaseEntityListing.html) GetProvidersEdgesPhonebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+## [**PhoneBaseEntityListing**](PhoneBaseEntityListing.html) GetProvidersEdgesPhonebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
 
 Get a list of Phone Base Settings objects
 
@@ -2980,11 +3094,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var name = name_example;  // string | Name (optional) 
 
             try
             {
                 // Get a list of Phone Base Settings objects
-                PhoneBaseEntityListing result = apiInstance.GetProvidersEdgesPhonebasesettings(pageNumber, pageSize, sortBy, sortOrder);
+                PhoneBaseEntityListing result = apiInstance.GetProvidersEdgesPhonebasesettings(pageNumber, pageSize, sortBy, sortOrder, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3005,6 +3120,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **name** | **string**| Name | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

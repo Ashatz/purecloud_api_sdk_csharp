@@ -127,8 +127,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>string</returns>
-        string DeleteCampaignsCampaignIdProgress (string campaignId);
+        /// <returns></returns>
+        void DeleteCampaignsCampaignIdProgress (string campaignId);
 
         /// <summary>
         /// Reset campaign progress and recycle the campaign
@@ -138,8 +138,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteCampaignsCampaignIdProgressWithHttpInfo (string campaignId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteCampaignsCampaignIdProgressWithHttpInfo (string campaignId);
         /// <summary>
         /// Delete a contact list.
         /// </summary>
@@ -1893,8 +1893,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteCampaignsCampaignIdProgressAsync (string campaignId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteCampaignsCampaignIdProgressAsync (string campaignId);
 
         /// <summary>
         /// Reset campaign progress and recycle the campaign
@@ -1904,8 +1904,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId);
         /// <summary>
         /// Delete a contact list.
         /// </summary>
@@ -4424,11 +4424,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>string</returns>
-        public string DeleteCampaignsCampaignIdProgress (string campaignId)
+        /// <returns></returns>
+        public void DeleteCampaignsCampaignIdProgress (string campaignId)
         {
-             ApiResponse<string> localVarResponse = DeleteCampaignsCampaignIdProgressWithHttpInfo(campaignId);
-             return localVarResponse.Data;
+             DeleteCampaignsCampaignIdProgressWithHttpInfo(campaignId);
         }
 
         /// <summary>
@@ -4436,8 +4435,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteCampaignsCampaignIdProgressWithHttpInfo (string campaignId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteCampaignsCampaignIdProgressWithHttpInfo (string campaignId)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
@@ -4491,10 +4490,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignIdProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4502,11 +4501,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteCampaignsCampaignIdProgressAsync (string campaignId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteCampaignsCampaignIdProgressAsync (string campaignId)
         {
-             ApiResponse<string> localVarResponse = await DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo(campaignId);
-             return localVarResponse.Data;
+             await DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo(campaignId);
 
         }
 
@@ -4515,8 +4513,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
@@ -4570,10 +4568,10 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignIdProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>

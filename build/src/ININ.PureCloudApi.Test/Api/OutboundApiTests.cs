@@ -121,8 +121,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'DeleteCampaignsCampaignIdProgress'
             string campaignId = null; // TODO: replace null with proper value
-            var response = instance.DeleteCampaignsCampaignIdProgress(campaignId);
-            Assert.IsInstanceOf<string> (response, "response is string");
+            instance.DeleteCampaignsCampaignIdProgress(campaignId);
+            
         }
         
         /// <summary>
