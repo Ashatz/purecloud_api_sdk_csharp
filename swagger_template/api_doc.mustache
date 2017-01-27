@@ -6,9 +6,9 @@ title: {{classname}}
 
 All URIs are relative to *{{basePath}}*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-{{#operations}}{{#operation}}| [**{{operationId}}**]({{classname}}.html#{{operationIdLowerCase}}) | **{{httpMethod}}** {{path}} | {{#summary}}{{summary}}{{/summary}} |
+| Method | Description |
+| ------------- | ------------- |
+{{#operations}}{{#operation}}| [**{{operationId}}**]({{classname}}.html#{{operationIdLowerCase}}) | {{#summary}}{{summary}}{{/summary}} |
 {{/operation}}{{/operations}}{: class="table table-striped"}
 
 {{#operations}}
@@ -20,6 +20,8 @@ All URIs are relative to *{{basePath}}*
 {{{summary}}}{{#notes}}
 
 {{{notes}}}{{/notes}}
+
+Wraps {{&httpMethod}} {{&path}} 
 
 ### Example
 ~~~csharp
