@@ -12,10 +12,10 @@ title: SequenceScheduleNotification
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
 | **Intervals** | [**List&lt;CampaignScheduleNotificationIntervals&gt;**](CampaignScheduleNotificationIntervals.html) |  | [optional] |
 | **TimeZone** | **string** |  | [optional] |
-| **Sequence** | [**DocumentDataNotificationCreatedBy**](DocumentDataNotificationCreatedBy.html) |  | [optional] |
+| **Sequence** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
+| **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 
 

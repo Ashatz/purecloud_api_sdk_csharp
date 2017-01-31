@@ -298,7 +298,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -314,7 +314,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -350,7 +350,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -366,7 +366,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -402,7 +402,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -418,7 +418,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -454,7 +454,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -470,7 +470,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -506,7 +506,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <param name="dncListId">DNC list ID (optional)</param>
@@ -527,7 +527,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <param name="dncListId">DNC list ID (optional)</param>
@@ -654,7 +654,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -672,7 +672,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -781,7 +781,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -799,7 +799,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -883,7 +883,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -899,7 +899,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -1015,7 +1015,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -1031,7 +1031,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2064,7 +2064,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2080,7 +2080,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2116,7 +2116,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2132,7 +2132,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2168,7 +2168,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2184,7 +2184,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2220,7 +2220,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2236,7 +2236,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2272,7 +2272,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <param name="dncListId">DNC list ID (optional)</param>
@@ -2293,7 +2293,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <param name="dncListId">DNC list ID (optional)</param>
@@ -2420,7 +2420,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2438,7 +2438,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2547,7 +2547,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -2565,7 +2565,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -2649,7 +2649,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2665,7 +2665,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2781,7 +2781,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -2797,7 +2797,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -5691,7 +5691,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -5708,7 +5708,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -5781,7 +5781,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -5799,7 +5799,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6029,7 +6029,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6046,7 +6046,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6119,7 +6119,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6137,7 +6137,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6367,7 +6367,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6384,7 +6384,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6457,7 +6457,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6475,7 +6475,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6705,7 +6705,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6722,7 +6722,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6795,7 +6795,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -6813,7 +6813,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -7043,7 +7043,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <param name="dncListId">DNC list ID (optional)</param>
@@ -7065,7 +7065,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <param name="dncListId">DNC list ID (optional)</param>
@@ -7148,7 +7148,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <param name="dncListId">DNC list ID (optional)</param>
@@ -7171,7 +7171,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="contactListId">Contact List ID (optional)</param>
         /// <param name="dncListId">DNC list ID (optional)</param>
@@ -8041,7 +8041,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -8060,7 +8060,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -8137,7 +8137,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -8157,7 +8157,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -8892,7 +8892,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -8911,7 +8911,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -8988,7 +8988,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -9008,7 +9008,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="includeSize">Include size (optional, default to false)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -9572,7 +9572,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -9589,7 +9589,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -9662,7 +9662,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -9680,7 +9680,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -10514,7 +10514,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -10531,7 +10531,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -10604,7 +10604,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
@@ -10622,7 +10622,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="filterType">Filter type (optional, default to PREFIX)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>

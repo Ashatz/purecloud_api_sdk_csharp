@@ -54,6 +54,27 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Organization</returns>
         ApiResponse<Organization> GetMeWithHttpInfo ();
+        /// <summary>
+        /// Update organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Feature to update. (optional)</param>
+        /// <returns>Dictionary&lt;string, string&gt;</returns>
+        Dictionary<string, string> PatchFeatures (EntryFeatureBoolean body = null);
+
+        /// <summary>
+        /// Update organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Feature to update. (optional)</param>
+        /// <returns>ApiResponse of Dictionary&lt;string, string&gt;</returns>
+        ApiResponse<Dictionary<string, string>> PatchFeaturesWithHttpInfo (EntryFeatureBoolean body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -96,6 +117,27 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Organization)</returns>
         System.Threading.Tasks.Task<ApiResponse<Organization>> GetMeAsyncWithHttpInfo ();
+        /// <summary>
+        /// Update organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Feature to update. (optional)</param>
+        /// <returns>Task of Dictionary&lt;string, string&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, string>> PatchFeaturesAsync (EntryFeatureBoolean body = null);
+
+        /// <summary>
+        /// Update organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Feature to update. (optional)</param>
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, string&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, string>>> PatchFeaturesAsyncWithHttpInfo (EntryFeatureBoolean body = null);
         #endregion Asynchronous Operations
     }
 
@@ -485,6 +527,171 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Organization>(localVarStatusCode,
                 localVarHeaders,
                 (Organization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Organization)));
+            
+        }
+
+        /// <summary>
+        /// Update organization 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Feature to update. (optional)</param>
+        /// <returns>Dictionary&lt;string, string&gt;</returns>
+        public Dictionary<string, string> PatchFeatures (EntryFeatureBoolean body = null)
+        {
+             ApiResponse<Dictionary<string, string>> localVarResponse = PatchFeaturesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update organization 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Feature to update. (optional)</param>
+        /// <returns>ApiResponse of Dictionary&lt;string, string&gt;</returns>
+        public ApiResponse< Dictionary<string, string> > PatchFeaturesWithHttpInfo (EntryFeatureBoolean body = null)
+        {
+
+            var localVarPath = "/api/v2/organizations/features";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchFeatures: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchFeatures: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Dictionary<string, string>>(localVarStatusCode,
+                localVarHeaders,
+                (Dictionary<string, string>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, string>)));
+            
+        }
+
+        /// <summary>
+        /// Update organization 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Feature to update. (optional)</param>
+        /// <returns>Task of Dictionary&lt;string, string&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, string>> PatchFeaturesAsync (EntryFeatureBoolean body = null)
+        {
+             ApiResponse<Dictionary<string, string>> localVarResponse = await PatchFeaturesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update organization 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Feature to update. (optional)</param>
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, string&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, string>>> PatchFeaturesAsyncWithHttpInfo (EntryFeatureBoolean body = null)
+        {
+
+            var localVarPath = "/api/v2/organizations/features";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchFeatures: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchFeatures: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Dictionary<string, string>>(localVarStatusCode,
+                localVarHeaders,
+                (Dictionary<string, string>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, string>)));
             
         }
 

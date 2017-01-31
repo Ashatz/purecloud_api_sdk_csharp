@@ -5,18 +5,18 @@ title: LanguagesApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteLanguageId**](LanguagesApi.html#deletelanguageid) | **DELETE** /api/v2/languages/{languageId} | Delete Language (Deprecated) |
-| [**DeleteLanguagesLanguageId**](LanguagesApi.html#deletelanguageslanguageid) | **DELETE** /api/v2/routing/languages/{languageId} | Delete Language |
-| [**GetLanguageId**](LanguagesApi.html#getlanguageid) | **GET** /api/v2/languages/{languageId} | Get language (Deprecated) |
-| [**GetLanguages**](LanguagesApi.html#getlanguages) | **GET** /api/v2/languages | Get the list of supported languages. (Deprecated) |
-| [**GetLanguagesLanguageId**](LanguagesApi.html#getlanguageslanguageid) | **GET** /api/v2/routing/languages/{languageId} | Get language |
-| [**GetTranslations**](LanguagesApi.html#gettranslations) | **GET** /api/v2/languages/translations | Get all available languages for translation |
-| [**GetTranslationsBuiltin**](LanguagesApi.html#gettranslationsbuiltin) | **GET** /api/v2/languages/translations/builtin | Get the builtin translation for a language |
-| [**GetTranslationsOrganization**](LanguagesApi.html#gettranslationsorganization) | **GET** /api/v2/languages/translations/organization | Get effective translation for an organization by language |
-| [**GetTranslationsUsersUserId**](LanguagesApi.html#gettranslationsusersuserid) | **GET** /api/v2/languages/translations/users/{userId} | Get effective language translation for a user |
-| [**PostLanguages**](LanguagesApi.html#postlanguages) | **POST** /api/v2/languages | Create Language (Deprecated) |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteLanguageId**](LanguagesApi.html#deletelanguageid) | Delete Language (Deprecated) |
+| [**DeleteLanguagesLanguageId**](LanguagesApi.html#deletelanguageslanguageid) | Delete Language |
+| [**GetLanguageId**](LanguagesApi.html#getlanguageid) | Get language (Deprecated) |
+| [**GetLanguages**](LanguagesApi.html#getlanguages) | Get the list of supported languages. (Deprecated) |
+| [**GetLanguagesLanguageId**](LanguagesApi.html#getlanguageslanguageid) | Get language |
+| [**GetTranslations**](LanguagesApi.html#gettranslations) | Get all available languages for translation |
+| [**GetTranslationsBuiltin**](LanguagesApi.html#gettranslationsbuiltin) | Get the builtin translation for a language |
+| [**GetTranslationsOrganization**](LanguagesApi.html#gettranslationsorganization) | Get effective translation for an organization by language |
+| [**GetTranslationsUsersUserId**](LanguagesApi.html#gettranslationsusersuserid) | Get effective language translation for a user |
+| [**PostLanguages**](LanguagesApi.html#postlanguages) | Create Language (Deprecated) |
 {: class="table table-striped"}
 
 <a name="deletelanguageid"></a>
@@ -26,6 +26,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete Language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+
+Wraps DELETE /api/v2/languages/{languageId} 
 
 ### Example
 ~~~csharp
@@ -82,6 +84,8 @@ Delete Language
 
 
 
+Wraps DELETE /api/v2/routing/languages/{languageId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -136,6 +140,8 @@ void (empty response body)
 Get language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+
+Wraps GET /api/v2/languages/{languageId} 
 
 ### Example
 ~~~csharp
@@ -192,6 +198,8 @@ namespace Example
 Get the list of supported languages. (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages
+
+Wraps GET /api/v2/languages 
 
 ### Example
 ~~~csharp
@@ -255,6 +263,8 @@ Get language
 
 
 
+Wraps GET /api/v2/routing/languages/{languageId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -311,6 +321,8 @@ Get all available languages for translation
 
 
 
+Wraps GET /api/v2/languages/translations 
+
 ### Example
 ~~~csharp
 using System;
@@ -361,6 +373,8 @@ This endpoint does require any parameters.
 Get the builtin translation for a language
 
 
+
+Wraps GET /api/v2/languages/translations/builtin 
 
 ### Example
 ~~~csharp
@@ -418,6 +432,8 @@ Get effective translation for an organization by language
 
 
 
+Wraps GET /api/v2/languages/translations/organization 
+
 ### Example
 ~~~csharp
 using System;
@@ -474,6 +490,8 @@ Get effective language translation for a user
 
 
 
+Wraps GET /api/v2/languages/translations/users/{userId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -529,6 +547,8 @@ namespace Example
 Create Language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages
+
+Wraps POST /api/v2/languages 
 
 ### Example
 ~~~csharp

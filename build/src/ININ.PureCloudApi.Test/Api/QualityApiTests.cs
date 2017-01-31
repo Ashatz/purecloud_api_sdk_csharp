@@ -317,7 +317,8 @@ namespace ININ.PureCloudApi.Test
             string name = null; // TODO: replace null with proper value
             string queueId = null; // TODO: replace null with proper value
             string agentId = null; // TODO: replace null with proper value
-            var response = instance.GetKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId);
+            string _operator = null; // TODO: replace null with proper value
+            var response = instance.GetKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId, _operator);
             Assert.IsInstanceOf<KeywordSetEntityListing> (response, "response is KeywordSetEntityListing");
         }
         

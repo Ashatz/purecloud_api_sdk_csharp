@@ -5,12 +5,12 @@ title: GeolocationApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**GetSettings**](GeolocationApi.html#getsettings) | **GET** /api/v2/geolocations/settings | Get a organization&#39;s GeolocationSettings |
-| [**GetUserIdGeolocationsClientId**](GeolocationApi.html#getuseridgeolocationsclientid) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
-| [**PatchSettings**](GeolocationApi.html#patchsettings) | **PATCH** /api/v2/geolocations/settings | Patch a organization&#39;s GeolocationSettings |
-| [**PatchUserIdGeolocationsClientId**](GeolocationApi.html#patchuseridgeolocationsclientid) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
+| Method | Description |
+| ------------- | ------------- |
+| [**GetSettings**](GeolocationApi.html#getsettings) | Get a organization&#39;s GeolocationSettings |
+| [**GetUserIdGeolocationsClientId**](GeolocationApi.html#getuseridgeolocationsclientid) | Get a user&#39;s Geolocation |
+| [**PatchSettings**](GeolocationApi.html#patchsettings) | Patch a organization&#39;s GeolocationSettings |
+| [**PatchUserIdGeolocationsClientId**](GeolocationApi.html#patchuseridgeolocationsclientid) | Patch a user&#39;s Geolocation |
 {: class="table table-striped"}
 
 <a name="getsettings"></a>
@@ -20,6 +20,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Get a organization's GeolocationSettings
 
 
+
+Wraps GET /api/v2/geolocations/settings 
 
 ### Example
 ~~~csharp
@@ -71,6 +73,8 @@ This endpoint does require any parameters.
 Get a user's Geolocation
 
 
+
+Wraps GET /api/v2/users/{userId}/geolocations/{clientId} 
 
 ### Example
 ~~~csharp
@@ -130,6 +134,8 @@ Patch a organization's GeolocationSettings
 
 
 
+Wraps PATCH /api/v2/geolocations/settings 
+
 ### Example
 ~~~csharp
 using System;
@@ -185,6 +191,8 @@ namespace Example
 Patch a user's Geolocation
 
 The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+
+Wraps PATCH /api/v2/users/{userId}/geolocations/{clientId} 
 
 ### Example
 ~~~csharp

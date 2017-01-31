@@ -5,14 +5,14 @@ title: AttributesApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteAttributeId**](AttributesApi.html#deleteattributeid) | **DELETE** /api/v2/attributes/{attributeId} | Delete an existing Attribute. |
-| [**GetAttributeId**](AttributesApi.html#getattributeid) | **GET** /api/v2/attributes/{attributeId} | Get details about an existing attribute. |
-| [**GetAttributes**](AttributesApi.html#getattributes) | **GET** /api/v2/attributes | Gets a list of existing attributes. |
-| [**PostAttributes**](AttributesApi.html#postattributes) | **POST** /api/v2/attributes | Create an attribute. |
-| [**PostQuery**](AttributesApi.html#postquery) | **POST** /api/v2/attributes/query | Query attributes |
-| [**PutAttributeId**](AttributesApi.html#putattributeid) | **PUT** /api/v2/attributes/{attributeId} | Update an existing attribute. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteAttributeId**](AttributesApi.html#deleteattributeid) | Delete an existing Attribute. |
+| [**GetAttributeId**](AttributesApi.html#getattributeid) | Get details about an existing attribute. |
+| [**GetAttributes**](AttributesApi.html#getattributes) | Gets a list of existing attributes. |
+| [**PostAttributes**](AttributesApi.html#postattributes) | Create an attribute. |
+| [**PostQuery**](AttributesApi.html#postquery) | Query attributes |
+| [**PutAttributeId**](AttributesApi.html#putattributeid) | Update an existing attribute. |
 {: class="table table-striped"}
 
 <a name="deleteattributeid"></a>
@@ -22,6 +22,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete an existing Attribute.
 
 This will remove attribute.
+
+Wraps DELETE /api/v2/attributes/{attributeId} 
 
 ### Example
 ~~~csharp
@@ -78,6 +80,8 @@ Get details about an existing attribute.
 
 
 
+Wraps GET /api/v2/attributes/{attributeId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -133,6 +137,8 @@ namespace Example
 Gets a list of existing attributes.
 
 
+
+Wraps GET /api/v2/attributes 
 
 ### Example
 ~~~csharp
@@ -192,6 +198,8 @@ Create an attribute.
 
 
 
+Wraps POST /api/v2/attributes 
+
 ### Example
 ~~~csharp
 using System;
@@ -248,6 +256,8 @@ Query attributes
 
 
 
+Wraps POST /api/v2/attributes/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -303,6 +313,8 @@ namespace Example
 Update an existing attribute.
 
 Fields that can be updated: name, description. The most recent version is required for updates.
+
+Wraps PUT /api/v2/attributes/{attributeId} 
 
 ### Example
 ~~~csharp

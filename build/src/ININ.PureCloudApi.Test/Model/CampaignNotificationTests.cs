@@ -91,14 +91,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Version'
         }
         /// <summary>
-        /// Test the property 'AdditionalProperties'
-        /// </summary>
-        [Test]
-        public void AdditionalPropertiesTest()
-        {
-            // TODO: unit test for the property 'AdditionalProperties'
-        }
-        /// <summary>
         /// Test the property 'ContactList'
         /// </summary>
         [Test]
@@ -281,6 +273,14 @@ namespace ININ.PureCloudApi.Test
         public void PriorityTest()
         {
             // TODO: unit test for the property 'Priority'
+        }
+        /// <summary>
+        /// Test the property 'AdditionalProperties'
+        /// </summary>
+        [Test]
+        public void AdditionalPropertiesTest()
+        {
+            // TODO: unit test for the property 'AdditionalProperties'
         }
 
     }

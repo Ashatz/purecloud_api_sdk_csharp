@@ -5,30 +5,30 @@ title: AnalyticsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteReportingSchedulesScheduleId**](AnalyticsApi.html#deletereportingschedulesscheduleid) | **DELETE** /api/v2/analytics/reporting/schedules/{scheduleId} | Delete a scheduled report job. |
-| [**GetConversationsConversationIdDetails**](AnalyticsApi.html#getconversationsconversationiddetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
-| [**GetReportingMetadata**](AnalyticsApi.html#getreportingmetadata) | **GET** /api/v2/analytics/reporting/metadata | Get list of reporting metadata. |
-| [**GetReportingReportIdMetadata**](AnalyticsApi.html#getreportingreportidmetadata) | **GET** /api/v2/analytics/reporting/{reportId}/metadata | Get a reporting metadata. |
-| [**GetReportingReportformats**](AnalyticsApi.html#getreportingreportformats) | **GET** /api/v2/analytics/reporting/reportformats | Get a list of report formats |
-| [**GetReportingSchedules**](AnalyticsApi.html#getreportingschedules) | **GET** /api/v2/analytics/reporting/schedules | Get a list of scheduled report jobs |
-| [**GetReportingSchedulesScheduleId**](AnalyticsApi.html#getreportingschedulesscheduleid) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId} | Get a scheduled report job. |
-| [**GetReportingSchedulesScheduleIdHistory**](AnalyticsApi.html#getreportingschedulesscheduleidhistory) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history | Get list of completed scheduled report jobs. |
-| [**GetReportingSchedulesScheduleIdHistoryLatest**](AnalyticsApi.html#getreportingschedulesscheduleidhistorylatest) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest | Get most recently completed scheduled report job. |
-| [**GetReportingSchedulesScheduleIdHistoryRunId**](AnalyticsApi.html#getreportingschedulesscheduleidhistoryrunid) | **GET** /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} | A completed scheduled report job |
-| [**GetReportingTimeperiods**](AnalyticsApi.html#getreportingtimeperiods) | **GET** /api/v2/analytics/reporting/timeperiods | Get a list of report time periods. |
-| [**PostConversationsAggregatesQuery**](AnalyticsApi.html#postconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
-| [**PostConversationsConversationIdDetailsProperties**](AnalyticsApi.html#postconversationsconversationiddetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
-| [**PostConversationsDetailsQuery**](AnalyticsApi.html#postconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
-| [**PostEvaluationsAggregatesQuery**](AnalyticsApi.html#postevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
-| [**PostQueuesObservationsQuery**](AnalyticsApi.html#postqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
-| [**PostReportingSchedules**](AnalyticsApi.html#postreportingschedules) | **POST** /api/v2/analytics/reporting/schedules | Create a scheduled report job |
-| [**PostReportingSchedulesScheduleIdRunreport**](AnalyticsApi.html#postreportingschedulesscheduleidrunreport) | **POST** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
-| [**PostUsersAggregatesQuery**](AnalyticsApi.html#postusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
-| [**PostUsersDetailsQuery**](AnalyticsApi.html#postusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
-| [**PostUsersObservationsQuery**](AnalyticsApi.html#postusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
-| [**PutReportingSchedulesScheduleId**](AnalyticsApi.html#putreportingschedulesscheduleid) | **PUT** /api/v2/analytics/reporting/schedules/{scheduleId} | Update a scheduled report job. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteReportingSchedulesScheduleId**](AnalyticsApi.html#deletereportingschedulesscheduleid) | Delete a scheduled report job. |
+| [**GetConversationsConversationIdDetails**](AnalyticsApi.html#getconversationsconversationiddetails) | Get a conversation by id |
+| [**GetReportingMetadata**](AnalyticsApi.html#getreportingmetadata) | Get list of reporting metadata. |
+| [**GetReportingReportIdMetadata**](AnalyticsApi.html#getreportingreportidmetadata) | Get a reporting metadata. |
+| [**GetReportingReportformats**](AnalyticsApi.html#getreportingreportformats) | Get a list of report formats |
+| [**GetReportingSchedules**](AnalyticsApi.html#getreportingschedules) | Get a list of scheduled report jobs |
+| [**GetReportingSchedulesScheduleId**](AnalyticsApi.html#getreportingschedulesscheduleid) | Get a scheduled report job. |
+| [**GetReportingSchedulesScheduleIdHistory**](AnalyticsApi.html#getreportingschedulesscheduleidhistory) | Get list of completed scheduled report jobs. |
+| [**GetReportingSchedulesScheduleIdHistoryLatest**](AnalyticsApi.html#getreportingschedulesscheduleidhistorylatest) | Get most recently completed scheduled report job. |
+| [**GetReportingSchedulesScheduleIdHistoryRunId**](AnalyticsApi.html#getreportingschedulesscheduleidhistoryrunid) | A completed scheduled report job |
+| [**GetReportingTimeperiods**](AnalyticsApi.html#getreportingtimeperiods) | Get a list of report time periods. |
+| [**PostConversationsAggregatesQuery**](AnalyticsApi.html#postconversationsaggregatesquery) | Query for conversation aggregates |
+| [**PostConversationsConversationIdDetailsProperties**](AnalyticsApi.html#postconversationsconversationiddetailsproperties) | Index conversation properties |
+| [**PostConversationsDetailsQuery**](AnalyticsApi.html#postconversationsdetailsquery) | Query for conversation details |
+| [**PostEvaluationsAggregatesQuery**](AnalyticsApi.html#postevaluationsaggregatesquery) | Query for evaluation aggregates |
+| [**PostQueuesObservationsQuery**](AnalyticsApi.html#postqueuesobservationsquery) | Query for queue observations |
+| [**PostReportingSchedules**](AnalyticsApi.html#postreportingschedules) | Create a scheduled report job |
+| [**PostReportingSchedulesScheduleIdRunreport**](AnalyticsApi.html#postreportingschedulesscheduleidrunreport) | Place a scheduled report immediately into the reporting queue |
+| [**PostUsersAggregatesQuery**](AnalyticsApi.html#postusersaggregatesquery) | Query for user aggregates |
+| [**PostUsersDetailsQuery**](AnalyticsApi.html#postusersdetailsquery) | Query for user details |
+| [**PostUsersObservationsQuery**](AnalyticsApi.html#postusersobservationsquery) | Query for user observations |
+| [**PutReportingSchedulesScheduleId**](AnalyticsApi.html#putreportingschedulesscheduleid) | Update a scheduled report job. |
 {: class="table table-striped"}
 
 <a name="deletereportingschedulesscheduleid"></a>
@@ -38,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete a scheduled report job.
 
 
+
+Wraps DELETE /api/v2/analytics/reporting/schedules/{scheduleId} 
 
 ### Example
 ~~~csharp
@@ -95,6 +97,8 @@ Get a conversation by id
 
 
 
+Wraps GET /api/v2/analytics/conversations/{conversationId}/details 
+
 ### Example
 ~~~csharp
 using System;
@@ -150,6 +154,8 @@ namespace Example
 Get list of reporting metadata.
 
 
+
+Wraps GET /api/v2/analytics/reporting/metadata 
 
 ### Example
 ~~~csharp
@@ -211,6 +217,8 @@ Get a reporting metadata.
 
 
 
+Wraps GET /api/v2/analytics/reporting/{reportId}/metadata 
+
 ### Example
 ~~~csharp
 using System;
@@ -269,6 +277,8 @@ Get a list of report formats
 
 Get a list of report formats.
 
+Wraps GET /api/v2/analytics/reporting/reportformats 
+
 ### Example
 ~~~csharp
 using System;
@@ -319,6 +329,8 @@ This endpoint does require any parameters.
 Get a list of scheduled report jobs
 
 Get a list of scheduled report jobs.
+
+Wraps GET /api/v2/analytics/reporting/schedules 
 
 ### Example
 ~~~csharp
@@ -378,6 +390,8 @@ Get a scheduled report job.
 
 
 
+Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -433,6 +447,8 @@ namespace Example
 Get list of completed scheduled report jobs.
 
 
+
+Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history 
 
 ### Example
 ~~~csharp
@@ -494,6 +510,8 @@ Get most recently completed scheduled report job.
 
 
 
+Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest 
+
 ### Example
 ~~~csharp
 using System;
@@ -549,6 +567,8 @@ namespace Example
 A completed scheduled report job
 
 A completed scheduled report job.
+
+Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} 
 
 ### Example
 ~~~csharp
@@ -608,6 +628,8 @@ Get a list of report time periods.
 
 
 
+Wraps GET /api/v2/analytics/reporting/timeperiods 
+
 ### Example
 ~~~csharp
 using System;
@@ -658,6 +680,8 @@ This endpoint does require any parameters.
 Query for conversation aggregates
 
 
+
+Wraps POST /api/v2/analytics/conversations/aggregates/query 
 
 ### Example
 ~~~csharp
@@ -714,6 +738,8 @@ namespace Example
 Index conversation properties
 
 
+
+Wraps POST /api/v2/analytics/conversations/{conversationId}/details/properties 
 
 ### Example
 ~~~csharp
@@ -773,6 +799,8 @@ Query for conversation details
 
 
 
+Wraps POST /api/v2/analytics/conversations/details/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -828,6 +856,8 @@ namespace Example
 Query for evaluation aggregates
 
 
+
+Wraps POST /api/v2/analytics/evaluations/aggregates/query 
 
 ### Example
 ~~~csharp
@@ -885,6 +915,8 @@ Query for queue observations
 
 
 
+Wraps POST /api/v2/analytics/queues/observations/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -940,6 +972,8 @@ namespace Example
 Create a scheduled report job
 
 Create a scheduled report job.
+
+Wraps POST /api/v2/analytics/reporting/schedules 
 
 ### Example
 ~~~csharp
@@ -997,6 +1031,8 @@ Place a scheduled report immediately into the reporting queue
 
 
 
+Wraps POST /api/v2/analytics/reporting/schedules/{scheduleId}/runreport 
+
 ### Example
 ~~~csharp
 using System;
@@ -1052,6 +1088,8 @@ namespace Example
 Query for user aggregates
 
 
+
+Wraps POST /api/v2/analytics/users/aggregates/query 
 
 ### Example
 ~~~csharp
@@ -1109,6 +1147,8 @@ Query for user details
 
 
 
+Wraps POST /api/v2/analytics/users/details/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -1165,6 +1205,8 @@ Query for user observations
 
 
 
+Wraps POST /api/v2/analytics/users/observations/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -1220,6 +1262,8 @@ namespace Example
 Update a scheduled report job.
 
 
+
+Wraps PUT /api/v2/analytics/reporting/schedules/{scheduleId} 
 
 ### Example
 ~~~csharp

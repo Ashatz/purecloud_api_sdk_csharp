@@ -15,7 +15,6 @@ title: WrapUpCodeMappingNotification
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -138,6 +138,14 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: unit test for the property 'SelfUri'
         }
+        /// <summary>
+        /// Test the property 'Features'
+        /// </summary>
+        [Test]
+        public void FeaturesTest()
+        {
+            // TODO: unit test for the property 'Features'
+        }
 
     }
 

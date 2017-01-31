@@ -5,24 +5,24 @@ title: GreetingsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteGreetingId**](GreetingsApi.html#deletegreetingid) | **DELETE** /api/v2/greetings/{greetingId} | Deletes a Greeting with the given GreetingId |
-| [**GetDefaults**](GreetingsApi.html#getdefaults) | **GET** /api/v2/greetings/defaults | Get an Organization&#39;s DefaultGreetingList |
-| [**GetGreetingId**](GreetingsApi.html#getgreetingid) | **GET** /api/v2/greetings/{greetingId} | Get a Greeting with the given GreetingId |
-| [**GetGreetingIdMedia**](GreetingsApi.html#getgreetingidmedia) | **GET** /api/v2/greetings/{greetingId}/media | Get media playback URI for this greeting |
-| [**GetGreetings**](GreetingsApi.html#getgreetings) | **GET** /api/v2/greetings | Gets an Organization&#39;s Greetings |
-| [**GetGroupIdGreetings**](GreetingsApi.html#getgroupidgreetings) | **GET** /api/v2/groups/{groupId}/greetings | Get a list of the Group&#39;s Greetings |
-| [**GetGroupIdGreetingsDefaults**](GreetingsApi.html#getgroupidgreetingsdefaults) | **GET** /api/v2/groups/{groupId}/greetings/defaults | Grabs the list of Default Greetings given a Group&#39;s ID |
-| [**GetUserIdGreetings**](GreetingsApi.html#getuseridgreetings) | **GET** /api/v2/users/{userId}/greetings | Get a list of the User&#39;s Greetings |
-| [**GetUserIdGreetingsDefaults**](GreetingsApi.html#getuseridgreetingsdefaults) | **GET** /api/v2/users/{userId}/greetings/defaults | Grabs the list of Default Greetings given a User&#39;s ID |
-| [**PostGreetings**](GreetingsApi.html#postgreetings) | **POST** /api/v2/greetings | Create a Greeting for an Organization |
-| [**PostGroupIdGreetings**](GreetingsApi.html#postgroupidgreetings) | **POST** /api/v2/groups/{groupId}/greetings | Creates a Greeting for a Group |
-| [**PostUserIdGreetings**](GreetingsApi.html#postuseridgreetings) | **POST** /api/v2/users/{userId}/greetings | Creates a Greeting for a User |
-| [**PutDefaults**](GreetingsApi.html#putdefaults) | **PUT** /api/v2/greetings/defaults | Update an Organization&#39;s DefaultGreetingList |
-| [**PutGreetingId**](GreetingsApi.html#putgreetingid) | **PUT** /api/v2/greetings/{greetingId} | Updates the Greeting with the given GreetingId |
-| [**PutGroupIdGreetingsDefaults**](GreetingsApi.html#putgroupidgreetingsdefaults) | **PUT** /api/v2/groups/{groupId}/greetings/defaults | Updates the DefaultGreetingList of the specified Group |
-| [**PutUserIdGreetingsDefaults**](GreetingsApi.html#putuseridgreetingsdefaults) | **PUT** /api/v2/users/{userId}/greetings/defaults | Updates the DefaultGreetingList of the specified User |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteGreetingId**](GreetingsApi.html#deletegreetingid) | Deletes a Greeting with the given GreetingId |
+| [**GetDefaults**](GreetingsApi.html#getdefaults) | Get an Organization&#39;s DefaultGreetingList |
+| [**GetGreetingId**](GreetingsApi.html#getgreetingid) | Get a Greeting with the given GreetingId |
+| [**GetGreetingIdMedia**](GreetingsApi.html#getgreetingidmedia) | Get media playback URI for this greeting |
+| [**GetGreetings**](GreetingsApi.html#getgreetings) | Gets an Organization&#39;s Greetings |
+| [**GetGroupIdGreetings**](GreetingsApi.html#getgroupidgreetings) | Get a list of the Group&#39;s Greetings |
+| [**GetGroupIdGreetingsDefaults**](GreetingsApi.html#getgroupidgreetingsdefaults) | Grabs the list of Default Greetings given a Group&#39;s ID |
+| [**GetUserIdGreetings**](GreetingsApi.html#getuseridgreetings) | Get a list of the User&#39;s Greetings |
+| [**GetUserIdGreetingsDefaults**](GreetingsApi.html#getuseridgreetingsdefaults) | Grabs the list of Default Greetings given a User&#39;s ID |
+| [**PostGreetings**](GreetingsApi.html#postgreetings) | Create a Greeting for an Organization |
+| [**PostGroupIdGreetings**](GreetingsApi.html#postgroupidgreetings) | Creates a Greeting for a Group |
+| [**PostUserIdGreetings**](GreetingsApi.html#postuseridgreetings) | Creates a Greeting for a User |
+| [**PutDefaults**](GreetingsApi.html#putdefaults) | Update an Organization&#39;s DefaultGreetingList |
+| [**PutGreetingId**](GreetingsApi.html#putgreetingid) | Updates the Greeting with the given GreetingId |
+| [**PutGroupIdGreetingsDefaults**](GreetingsApi.html#putgroupidgreetingsdefaults) | Updates the DefaultGreetingList of the specified Group |
+| [**PutUserIdGreetingsDefaults**](GreetingsApi.html#putuseridgreetingsdefaults) | Updates the DefaultGreetingList of the specified User |
 {: class="table table-striped"}
 
 <a name="deletegreetingid"></a>
@@ -32,6 +32,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Deletes a Greeting with the given GreetingId
 
 
+
+Wraps DELETE /api/v2/greetings/{greetingId} 
 
 ### Example
 ~~~csharp
@@ -89,6 +91,8 @@ Get an Organization's DefaultGreetingList
 
 
 
+Wraps GET /api/v2/greetings/defaults 
+
 ### Example
 ~~~csharp
 using System;
@@ -139,6 +143,8 @@ This endpoint does require any parameters.
 Get a Greeting with the given GreetingId
 
 
+
+Wraps GET /api/v2/greetings/{greetingId} 
 
 ### Example
 ~~~csharp
@@ -195,6 +201,8 @@ namespace Example
 Get media playback URI for this greeting
 
 
+
+Wraps GET /api/v2/greetings/{greetingId}/media 
 
 ### Example
 ~~~csharp
@@ -254,6 +262,8 @@ Gets an Organization's Greetings
 
 
 
+Wraps GET /api/v2/greetings 
+
 ### Example
 ~~~csharp
 using System;
@@ -311,6 +321,8 @@ namespace Example
 Get a list of the Group's Greetings
 
 
+
+Wraps GET /api/v2/groups/{groupId}/greetings 
 
 ### Example
 ~~~csharp
@@ -372,6 +384,8 @@ Grabs the list of Default Greetings given a Group's ID
 
 
 
+Wraps GET /api/v2/groups/{groupId}/greetings/defaults 
+
 ### Example
 ~~~csharp
 using System;
@@ -427,6 +441,8 @@ namespace Example
 Get a list of the User's Greetings
 
 
+
+Wraps GET /api/v2/users/{userId}/greetings 
 
 ### Example
 ~~~csharp
@@ -488,6 +504,8 @@ Grabs the list of Default Greetings given a User's ID
 
 
 
+Wraps GET /api/v2/users/{userId}/greetings/defaults 
+
 ### Example
 ~~~csharp
 using System;
@@ -544,6 +562,8 @@ Create a Greeting for an Organization
 
 
 
+Wraps POST /api/v2/greetings 
+
 ### Example
 ~~~csharp
 using System;
@@ -599,6 +619,8 @@ namespace Example
 Creates a Greeting for a Group
 
 
+
+Wraps POST /api/v2/groups/{groupId}/greetings 
 
 ### Example
 ~~~csharp
@@ -658,6 +680,8 @@ Creates a Greeting for a User
 
 
 
+Wraps POST /api/v2/users/{userId}/greetings 
+
 ### Example
 ~~~csharp
 using System;
@@ -716,6 +740,8 @@ Update an Organization's DefaultGreetingList
 
 
 
+Wraps PUT /api/v2/greetings/defaults 
+
 ### Example
 ~~~csharp
 using System;
@@ -771,6 +797,8 @@ namespace Example
 Updates the Greeting with the given GreetingId
 
 
+
+Wraps PUT /api/v2/greetings/{greetingId} 
 
 ### Example
 ~~~csharp
@@ -830,6 +858,8 @@ Updates the DefaultGreetingList of the specified Group
 
 
 
+Wraps PUT /api/v2/groups/{groupId}/greetings/defaults 
+
 ### Example
 ~~~csharp
 using System;
@@ -887,6 +917,8 @@ namespace Example
 Updates the DefaultGreetingList of the specified User
 
 
+
+Wraps PUT /api/v2/users/{userId}/greetings/defaults 
 
 ### Example
 ~~~csharp

@@ -5,12 +5,12 @@ title: LocationsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**GetLocationId**](LocationsApi.html#getlocationid) | **GET** /api/v2/locations/{locationId} | Get Location by ID. |
-| [**GetLocations**](LocationsApi.html#getlocations) | **GET** /api/v2/locations | Get a list of all locations. |
-| [**GetSearch**](LocationsApi.html#getsearch) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
-| [**PostSearch**](LocationsApi.html#postsearch) | **POST** /api/v2/locations/search | Search locations |
+| Method | Description |
+| ------------- | ------------- |
+| [**GetLocationId**](LocationsApi.html#getlocationid) | Get Location by ID. |
+| [**GetLocations**](LocationsApi.html#getlocations) | Get a list of all locations. |
+| [**GetSearch**](LocationsApi.html#getsearch) | Search locations using the q64 value returned from a previous search |
+| [**PostSearch**](LocationsApi.html#postsearch) | Search locations |
 {: class="table table-striped"}
 
 <a name="getlocationid"></a>
@@ -20,6 +20,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Get Location by ID.
 
 
+
+Wraps GET /api/v2/locations/{locationId} 
 
 ### Example
 ~~~csharp
@@ -76,6 +78,8 @@ namespace Example
 Get a list of all locations.
 
 
+
+Wraps GET /api/v2/locations 
 
 ### Example
 ~~~csharp
@@ -137,6 +141,8 @@ Search locations using the q64 value returned from a previous search
 
 
 
+Wraps GET /api/v2/locations/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -194,6 +200,8 @@ namespace Example
 Search locations
 
 
+
+Wraps POST /api/v2/locations/search 
 
 ### Example
 ~~~csharp

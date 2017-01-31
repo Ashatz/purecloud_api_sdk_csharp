@@ -98,8 +98,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="DateModified">DateModified.</param>
         /// <param name="Version">Version.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public WrapUpCodeMappingNotification(FlagEnum? Flag = null, List<DefaultSetEnum> DefaultSet = null, Dictionary<string, List<string>> Mapping = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Object AdditionalProperties = null)
+        public WrapUpCodeMappingNotification(FlagEnum? Flag = null, List<DefaultSetEnum> DefaultSet = null, Dictionary<string, List<string>> Mapping = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
             this.Flag = Flag;
             this.DefaultSet = DefaultSet;
@@ -109,7 +108,6 @@ namespace ININ.PureCloudApi.Model
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
-            this.AdditionalProperties = AdditionalProperties;
         }
         
         /// <summary>
@@ -148,11 +146,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -168,7 +161,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -244,11 +236,6 @@ namespace ININ.PureCloudApi.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -279,8 +266,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;
             }
         }

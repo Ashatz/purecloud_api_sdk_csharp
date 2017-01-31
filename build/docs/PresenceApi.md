@@ -5,16 +5,16 @@ title: PresenceApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeletePresenceId**](PresenceApi.html#deletepresenceid) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition |
-| [**GetPresenceId**](PresenceApi.html#getpresenceid) | **GET** /api/v2/presencedefinitions/{presenceId} | Get a Presence Definition |
-| [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions |
-| [**GetSystempresences**](PresenceApi.html#getsystempresences) | **GET** /api/v2/systempresences | Get the list of SystemPresences |
-| [**GetUserIdPresencesSourceId**](PresenceApi.html#getuseridpresencessourceid) | **GET** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
-| [**PatchUserIdPresencesSourceId**](PresenceApi.html#patchuseridpresencessourceid) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
-| [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
-| [**PutPresenceId**](PresenceApi.html#putpresenceid) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeletePresenceId**](PresenceApi.html#deletepresenceid) | Delete a Presence Definition |
+| [**GetPresenceId**](PresenceApi.html#getpresenceid) | Get a Presence Definition |
+| [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | Get an Organization&#39;s list of Presence Definitions |
+| [**GetSystempresences**](PresenceApi.html#getsystempresences) | Get the list of SystemPresences |
+| [**GetUserIdPresencesSourceId**](PresenceApi.html#getuseridpresencessourceid) | Get a user&#39;s Presence |
+| [**PatchUserIdPresencesSourceId**](PresenceApi.html#patchuseridpresencessourceid) | Patch a user&#39;s Presence |
+| [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | Create a Presence Definition |
+| [**PutPresenceId**](PresenceApi.html#putpresenceid) | Update a Presence Definition |
 {: class="table table-striped"}
 
 <a name="deletepresenceid"></a>
@@ -24,6 +24,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete a Presence Definition
 
 
+
+Wraps DELETE /api/v2/presencedefinitions/{presenceId} 
 
 ### Example
 ~~~csharp
@@ -79,6 +81,8 @@ void (empty response body)
 Get a Presence Definition
 
 
+
+Wraps GET /api/v2/presencedefinitions/{presenceId} 
 
 ### Example
 ~~~csharp
@@ -137,6 +141,8 @@ namespace Example
 Get an Organization's list of Presence Definitions
 
 
+
+Wraps GET /api/v2/presencedefinitions 
 
 ### Example
 ~~~csharp
@@ -200,6 +206,8 @@ Get the list of SystemPresences
 
 
 
+Wraps GET /api/v2/systempresences 
+
 ### Example
 ~~~csharp
 using System;
@@ -250,6 +258,8 @@ This endpoint does require any parameters.
 Get a user's Presence
 
 
+
+Wraps GET /api/v2/users/{userId}/presences/{sourceId} 
 
 ### Example
 ~~~csharp
@@ -308,6 +318,8 @@ namespace Example
 Patch a user's Presence
 
 The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+
+Wraps PATCH /api/v2/users/{userId}/presences/{sourceId} 
 
 ### Example
 ~~~csharp
@@ -369,6 +381,8 @@ Create a Presence Definition
 
 
 
+Wraps POST /api/v2/presencedefinitions 
+
 ### Example
 ~~~csharp
 using System;
@@ -424,6 +438,8 @@ namespace Example
 Update a Presence Definition
 
 
+
+Wraps PUT /api/v2/presencedefinitions/{presenceId} 
 
 ### Example
 ~~~csharp

@@ -5,15 +5,15 @@ title: NotificationsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteChannelsChannelIdSubscriptions**](NotificationsApi.html#deletechannelschannelidsubscriptions) | **DELETE** /api/v2/notifications/channels/{channelId}/subscriptions | Remove all subscriptions |
-| [**GetAvailabletopics**](NotificationsApi.html#getavailabletopics) | **GET** /api/v2/notifications/availabletopics | Get available notification topics. |
-| [**GetChannels**](NotificationsApi.html#getchannels) | **GET** /api/v2/notifications/channels | The list of existing channels |
-| [**GetChannelsChannelIdSubscriptions**](NotificationsApi.html#getchannelschannelidsubscriptions) | **GET** /api/v2/notifications/channels/{channelId}/subscriptions | The list of all subscriptions for this channel |
-| [**PostChannels**](NotificationsApi.html#postchannels) | **POST** /api/v2/notifications/channels | Create a new channel |
-| [**PostChannelsChannelIdSubscriptions**](NotificationsApi.html#postchannelschannelidsubscriptions) | **POST** /api/v2/notifications/channels/{channelId}/subscriptions | Add a list of subscriptions to the existing list of subscriptions |
-| [**PutChannelsChannelIdSubscriptions**](NotificationsApi.html#putchannelschannelidsubscriptions) | **PUT** /api/v2/notifications/channels/{channelId}/subscriptions | Replace the current list of subscriptions with a new list. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteChannelsChannelIdSubscriptions**](NotificationsApi.html#deletechannelschannelidsubscriptions) | Remove all subscriptions |
+| [**GetAvailabletopics**](NotificationsApi.html#getavailabletopics) | Get available notification topics. |
+| [**GetChannels**](NotificationsApi.html#getchannels) | The list of existing channels |
+| [**GetChannelsChannelIdSubscriptions**](NotificationsApi.html#getchannelschannelidsubscriptions) | The list of all subscriptions for this channel |
+| [**PostChannels**](NotificationsApi.html#postchannels) | Create a new channel |
+| [**PostChannelsChannelIdSubscriptions**](NotificationsApi.html#postchannelschannelidsubscriptions) | Add a list of subscriptions to the existing list of subscriptions |
+| [**PutChannelsChannelIdSubscriptions**](NotificationsApi.html#putchannelschannelidsubscriptions) | Replace the current list of subscriptions with a new list. |
 {: class="table table-striped"}
 
 <a name="deletechannelschannelidsubscriptions"></a>
@@ -23,6 +23,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Remove all subscriptions
 
 
+
+Wraps DELETE /api/v2/notifications/channels/{channelId}/subscriptions 
 
 ### Example
 ~~~csharp
@@ -80,6 +82,8 @@ Get available notification topics.
 
 
 
+Wraps GET /api/v2/notifications/availabletopics 
+
 ### Example
 ~~~csharp
 using System;
@@ -136,6 +140,8 @@ The list of existing channels
 
 
 
+Wraps GET /api/v2/notifications/channels 
+
 ### Example
 ~~~csharp
 using System;
@@ -186,6 +192,8 @@ This endpoint does require any parameters.
 The list of all subscriptions for this channel
 
 
+
+Wraps GET /api/v2/notifications/channels/{channelId}/subscriptions 
 
 ### Example
 ~~~csharp
@@ -243,6 +251,8 @@ Create a new channel
 
 There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
 
+Wraps POST /api/v2/notifications/channels 
+
 ### Example
 ~~~csharp
 using System;
@@ -293,6 +303,8 @@ This endpoint does require any parameters.
 Add a list of subscriptions to the existing list of subscriptions
 
 
+
+Wraps POST /api/v2/notifications/channels/{channelId}/subscriptions 
 
 ### Example
 ~~~csharp
@@ -351,6 +363,8 @@ namespace Example
 Replace the current list of subscriptions with a new list.
 
 
+
+Wraps PUT /api/v2/notifications/channels/{channelId}/subscriptions 
 
 ### Example
 ~~~csharp

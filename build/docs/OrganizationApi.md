@@ -5,10 +5,11 @@ title: OrganizationApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**GetFieldconfig**](OrganizationApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
-| [**GetMe**](OrganizationApi.html#getme) | **GET** /api/v2/organizations/me | Get organization. |
+| Method | Description |
+| ------------- | ------------- |
+| [**GetFieldconfig**](OrganizationApi.html#getfieldconfig) | Fetch field config for an entity type |
+| [**GetMe**](OrganizationApi.html#getme) | Get organization. |
+| [**PatchFeatures**](OrganizationApi.html#patchfeatures) | Update organization |
 {: class="table table-striped"}
 
 <a name="getfieldconfig"></a>
@@ -18,6 +19,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Fetch field config for an entity type
 
 
+
+Wraps GET /api/v2/fieldconfig 
 
 ### Example
 ~~~csharp
@@ -75,6 +78,8 @@ Get organization.
 
 
 
+Wraps GET /api/v2/organizations/me 
+
 ### Example
 ~~~csharp
 using System;
@@ -117,4 +122,62 @@ This endpoint does require any parameters.
 ### Return type
 
 [**Organization**](Organization.html)
+
+<a name="patchfeatures"></a>
+
+## **Dictionary&lt;string, string&gt;** PatchFeatures (EntryFeatureBoolean body = null)
+
+Update organization
+
+
+
+Wraps PATCH /api/v2/organizations/features 
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PatchFeaturesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OrganizationApi();
+            var body = new EntryFeatureBoolean(); // EntryFeatureBoolean | Feature to update. (optional) 
+
+            try
+            {
+                // Update organization
+                Dictionary&lt;string, string&gt; result = apiInstance.PatchFeatures(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.PatchFeatures: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**EntryFeatureBoolean**](EntryFeatureBoolean.html)| Feature to update. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+**Dictionary<string, string>**
 

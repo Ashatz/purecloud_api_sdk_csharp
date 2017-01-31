@@ -21,26 +21,24 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Entry" /> class.
         /// </summary>
-        /// <param name="Value">A value included in this facet..</param>
-        /// <param name="Count">The number of results with this value..</param>
-        public Entry(string Value = null, int? Count = null)
+        /// <param name="Value">Value.</param>
+        /// <param name="Key">Key.</param>
+        public Entry(Object Value = null, Object Key = null)
         {
             this.Value = Value;
-            this.Count = Count;
+            this.Key = Key;
         }
         
         /// <summary>
-        /// A value included in this facet.
+        /// Gets or Sets Value
         /// </summary>
-        /// <value>A value included in this facet.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
-        public string Value { get; set; }
+        public Object Value { get; set; }
         /// <summary>
-        /// The number of results with this value.
+        /// Gets or Sets Key
         /// </summary>
-        /// <value>The number of results with this value.</value>
-        [DataMember(Name="count", EmitDefaultValue=false)]
-        public int? Count { get; set; }
+        [DataMember(Name="key", EmitDefaultValue=false)]
+        public Object Key { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -50,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Entry {\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
-            sb.Append("  Count: ").Append(Count).Append("\n");
+            sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,9 +91,9 @@ namespace ININ.PureCloudApi.Model
                     this.Value.Equals(other.Value)
                 ) &&
                 (
-                    this.Count == other.Count ||
-                    this.Count != null &&
-                    this.Count.Equals(other.Count)
+                    this.Key == other.Key ||
+                    this.Key != null &&
+                    this.Key.Equals(other.Key)
                 );
         }
 
@@ -112,8 +110,8 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                if (this.Count != null)
-                    hash = hash * 59 + this.Count.GetHashCode();
+                if (this.Key != null)
+                    hash = hash * 59 + this.Key.GetHashCode();
                 return hash;
             }
         }

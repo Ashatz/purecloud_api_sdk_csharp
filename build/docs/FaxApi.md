@@ -5,14 +5,14 @@ title: FaxApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteDocumentsDocumentId**](FaxApi.html#deletedocumentsdocumentid) | **DELETE** /api/v2/fax/documents/{documentId} | Delete a fax document. |
-| [**GetDocuments**](FaxApi.html#getdocuments) | **GET** /api/v2/fax/documents | Get a list of fax documents. |
-| [**GetDocumentsDocumentId**](FaxApi.html#getdocumentsdocumentid) | **GET** /api/v2/fax/documents/{documentId} | Get a document. |
-| [**GetDocumentsDocumentIdContent**](FaxApi.html#getdocumentsdocumentidcontent) | **GET** /api/v2/fax/documents/{documentId}/content | Download a fax document. |
-| [**GetSummary**](FaxApi.html#getsummary) | **GET** /api/v2/fax/summary | Get fax summary |
-| [**PutDocumentsDocumentId**](FaxApi.html#putdocumentsdocumentid) | **PUT** /api/v2/fax/documents/{documentId} | Update a fax document. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteDocumentsDocumentId**](FaxApi.html#deletedocumentsdocumentid) | Delete a fax document. |
+| [**GetDocuments**](FaxApi.html#getdocuments) | Get a list of fax documents. |
+| [**GetDocumentsDocumentId**](FaxApi.html#getdocumentsdocumentid) | Get a document. |
+| [**GetDocumentsDocumentIdContent**](FaxApi.html#getdocumentsdocumentidcontent) | Download a fax document. |
+| [**GetSummary**](FaxApi.html#getsummary) | Get fax summary |
+| [**PutDocumentsDocumentId**](FaxApi.html#putdocumentsdocumentid) | Update a fax document. |
 {: class="table table-striped"}
 
 <a name="deletedocumentsdocumentid"></a>
@@ -22,6 +22,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete a fax document.
 
 
+
+Wraps DELETE /api/v2/fax/documents/{documentId} 
 
 ### Example
 ~~~csharp
@@ -77,6 +79,8 @@ void (empty response body)
 Get a list of fax documents.
 
 
+
+Wraps GET /api/v2/fax/documents 
 
 ### Example
 ~~~csharp
@@ -136,6 +140,8 @@ Get a document.
 
 
 
+Wraps GET /api/v2/fax/documents/{documentId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -191,6 +197,8 @@ namespace Example
 Download a fax document.
 
 
+
+Wraps GET /api/v2/fax/documents/{documentId}/content 
 
 ### Example
 ~~~csharp
@@ -248,6 +256,8 @@ Get fax summary
 
 
 
+Wraps GET /api/v2/fax/summary 
+
 ### Example
 ~~~csharp
 using System;
@@ -298,6 +308,8 @@ This endpoint does require any parameters.
 Update a fax document.
 
 
+
+Wraps PUT /api/v2/fax/documents/{documentId} 
 
 ### Example
 ~~~csharp

@@ -72,7 +72,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="DefaultSiteId">DefaultSiteId.</param>
         /// <param name="Deletable">Deletable.</param>
-        public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null)
+        /// <param name="Features">The state of features available for the organization..</param>
+        public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null, Dictionary<string, bool?> Features = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -91,6 +92,7 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.DefaultSiteId = DefaultSiteId;
             this.Deletable = Deletable;
+            this.Features = Features;
         }
         
         /// <summary>
@@ -147,6 +149,12 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
         /// <summary>
+        /// The state of features available for the organization.
+        /// </summary>
+        /// <value>The state of features available for the organization.</value>
+        [DataMember(Name="features", EmitDefaultValue=false)]
+        public Dictionary<string, bool?> Features { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -165,6 +173,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DefaultSiteId: ").Append(DefaultSiteId).Append("\n");
             sb.Append("  Deletable: ").Append(Deletable).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  Features: ").Append(Features).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -255,6 +264,11 @@ namespace ININ.PureCloudApi.Model
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.Features == other.Features ||
+                    this.Features != null &&
+                    this.Features.SequenceEqual(other.Features)
                 );
         }
 
@@ -291,6 +305,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Deletable.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                if (this.Features != null)
+                    hash = hash * 59 + this.Features.GetHashCode();
                 return hash;
             }
         }

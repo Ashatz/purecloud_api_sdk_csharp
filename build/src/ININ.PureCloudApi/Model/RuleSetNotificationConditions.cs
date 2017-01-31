@@ -57,10 +57,10 @@ namespace ININ.PureCloudApi.Model
             Period
         }
         /// <summary>
-        /// Gets or Sets ComparisonOperator
+        /// Gets or Sets _Operator
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum ComparisonOperatorEnum
+        public enum OperatorEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -136,10 +136,10 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="valueType", EmitDefaultValue=false)]
         public ValueTypeEnum? ValueType { get; set; }
         /// <summary>
-        /// Gets or Sets ComparisonOperator
+        /// Gets or Sets _Operator
         /// </summary>
-        [DataMember(Name="comparisonOperator", EmitDefaultValue=false)]
-        public ComparisonOperatorEnum? ComparisonOperator { get; set; }
+        [DataMember(Name="operator", EmitDefaultValue=false)]
+        public OperatorEnum? _Operator { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetNotificationConditions" /> class.
         /// </summary>
@@ -148,17 +148,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AttributeName">AttributeName.</param>
         /// <param name="Value">Value.</param>
         /// <param name="ValueType">ValueType.</param>
-        /// <param name="ComparisonOperator">ComparisonOperator.</param>
+        /// <param name="_Operator">_Operator.</param>
         /// <param name="Codes">Codes.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public RuleSetNotificationConditions(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, ComparisonOperatorEnum? ComparisonOperator = null, List<string> Codes = null, Object AdditionalProperties = null)
+        public RuleSetNotificationConditions(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, Object AdditionalProperties = null)
         {
             this.Type = Type;
             this.Inverted = Inverted;
             this.AttributeName = AttributeName;
             this.Value = Value;
             this.ValueType = ValueType;
-            this.ComparisonOperator = ComparisonOperator;
+            this._Operator = _Operator;
             this.Codes = Codes;
             this.AdditionalProperties = AdditionalProperties;
         }
@@ -206,7 +206,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  ValueType: ").Append(ValueType).Append("\n");
-            sb.Append("  ComparisonOperator: ").Append(ComparisonOperator).Append("\n");
+            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Codes: ").Append(Codes).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
@@ -271,9 +271,9 @@ namespace ININ.PureCloudApi.Model
                     this.ValueType.Equals(other.ValueType)
                 ) &&
                 (
-                    this.ComparisonOperator == other.ComparisonOperator ||
-                    this.ComparisonOperator != null &&
-                    this.ComparisonOperator.Equals(other.ComparisonOperator)
+                    this._Operator == other._Operator ||
+                    this._Operator != null &&
+                    this._Operator.Equals(other._Operator)
                 ) &&
                 (
                     this.Codes == other.Codes ||
@@ -308,8 +308,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Value.GetHashCode();
                 if (this.ValueType != null)
                     hash = hash * 59 + this.ValueType.GetHashCode();
-                if (this.ComparisonOperator != null)
-                    hash = hash * 59 + this.ComparisonOperator.GetHashCode();
+                if (this._Operator != null)
+                    hash = hash * 59 + this._Operator.GetHashCode();
                 if (this.Codes != null)
                     hash = hash * 59 + this.Codes.GetHashCode();
                 if (this.AdditionalProperties != null)

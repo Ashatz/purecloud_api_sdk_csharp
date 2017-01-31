@@ -79,6 +79,30 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetManagementunitsMuIdActivitycodes
+        /// </summary>
+        [Test]
+        public void GetManagementunitsMuIdActivitycodesTest()
+        {
+            // TODO: add unit test for the method 'GetManagementunitsMuIdActivitycodes'
+            string muId = null; // TODO: replace null with proper value
+            var response = instance.GetManagementunitsMuIdActivitycodes(muId);
+            Assert.IsInstanceOf<ActivityCodeContainer> (response, "response is ActivityCodeContainer");
+        }
+        
+        /// <summary>
+        /// Test GetManagementunitsMuIdUsers
+        /// </summary>
+        [Test]
+        public void GetManagementunitsMuIdUsersTest()
+        {
+            // TODO: add unit test for the method 'GetManagementunitsMuIdUsers'
+            string muId = null; // TODO: replace null with proper value
+            var response = instance.GetManagementunitsMuIdUsers(muId);
+            Assert.IsInstanceOf<WfmUserEntityListing> (response, "response is WfmUserEntityListing");
+        }
+        
+        /// <summary>
         /// Test GetManagementunitsMuIdUsersUserIdTimeoffrequests
         /// </summary>
         [Test]
@@ -168,6 +192,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostManagementunitsMuIdSchedulesSearch
+        /// </summary>
+        [Test]
+        public void PostManagementunitsMuIdSchedulesSearchTest()
+        {
+            // TODO: add unit test for the method 'PostManagementunitsMuIdSchedulesSearch'
+            string muId = null; // TODO: replace null with proper value
+            UserListScheduleRequestBody body = null; // TODO: replace null with proper value
+            var response = instance.PostManagementunitsMuIdSchedulesSearch(muId, body);
+            Assert.IsInstanceOf<UserScheduleContainer> (response, "response is UserScheduleContainer");
+        }
+        
+        /// <summary>
         /// Test PostSchedules
         /// </summary>
         [Test]
@@ -176,7 +213,7 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PostSchedules'
             CurrentUserScheduleRequestBody body = null; // TODO: replace null with proper value
             var response = instance.PostSchedules(body);
-            Assert.IsInstanceOf<TimeOffRequestList> (response, "response is TimeOffRequestList");
+            Assert.IsInstanceOf<UserScheduleContainer> (response, "response is UserScheduleContainer");
         }
         
     }

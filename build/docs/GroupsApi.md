@@ -5,19 +5,19 @@ title: GroupsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteGroupId**](GroupsApi.html#deletegroupid) | **DELETE** /api/v2/groups/{groupId} | Delete group |
-| [**DeleteGroupIdMembers**](GroupsApi.html#deletegroupidmembers) | **DELETE** /api/v2/groups/{groupId}/members | Remove members |
-| [**GetFieldconfig**](GroupsApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
-| [**GetGroupId**](GroupsApi.html#getgroupid) | **GET** /api/v2/groups/{groupId} | Get group |
-| [**GetGroupIdMembers**](GroupsApi.html#getgroupidmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
-| [**GetGroups**](GroupsApi.html#getgroups) | **GET** /api/v2/groups | Get a group list |
-| [**GetSearch**](GroupsApi.html#getsearch) | **GET** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
-| [**PostGroupIdMembers**](GroupsApi.html#postgroupidmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
-| [**PostGroups**](GroupsApi.html#postgroups) | **POST** /api/v2/groups | Create a group |
-| [**PostSearch**](GroupsApi.html#postsearch) | **POST** /api/v2/groups/search | Search groups |
-| [**PutGroupId**](GroupsApi.html#putgroupid) | **PUT** /api/v2/groups/{groupId} | Update group |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteGroupId**](GroupsApi.html#deletegroupid) | Delete group |
+| [**DeleteGroupIdMembers**](GroupsApi.html#deletegroupidmembers) | Remove members |
+| [**GetFieldconfig**](GroupsApi.html#getfieldconfig) | Fetch field config for an entity type |
+| [**GetGroupId**](GroupsApi.html#getgroupid) | Get group |
+| [**GetGroupIdMembers**](GroupsApi.html#getgroupidmembers) | Get group members |
+| [**GetGroups**](GroupsApi.html#getgroups) | Get a group list |
+| [**GetSearch**](GroupsApi.html#getsearch) | Search groups using the q64 value returned from a previous search |
+| [**PostGroupIdMembers**](GroupsApi.html#postgroupidmembers) | Add members |
+| [**PostGroups**](GroupsApi.html#postgroups) | Create a group |
+| [**PostSearch**](GroupsApi.html#postsearch) | Search groups |
+| [**PutGroupId**](GroupsApi.html#putgroupid) | Update group |
 {: class="table table-striped"}
 
 <a name="deletegroupid"></a>
@@ -27,6 +27,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete group
 
 
+
+Wraps DELETE /api/v2/groups/{groupId} 
 
 ### Example
 ~~~csharp
@@ -83,6 +85,8 @@ namespace Example
 Remove members
 
 
+
+Wraps DELETE /api/v2/groups/{groupId}/members 
 
 ### Example
 ~~~csharp
@@ -142,6 +146,8 @@ Fetch field config for an entity type
 
 
 
+Wraps GET /api/v2/fieldconfig 
+
 ### Example
 ~~~csharp
 using System;
@@ -198,6 +204,8 @@ Get group
 
 
 
+Wraps GET /api/v2/groups/{groupId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -253,6 +261,8 @@ namespace Example
 Get group members
 
 
+
+Wraps GET /api/v2/groups/{groupId}/members 
 
 ### Example
 ~~~csharp
@@ -318,6 +328,8 @@ Get a group list
 
 
 
+Wraps GET /api/v2/groups 
+
 ### Example
 ~~~csharp
 using System;
@@ -378,6 +390,8 @@ Search groups using the q64 value returned from a previous search
 
 
 
+Wraps GET /api/v2/groups/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -435,6 +449,8 @@ namespace Example
 Add members
 
 
+
+Wraps POST /api/v2/groups/{groupId}/members 
 
 ### Example
 ~~~csharp
@@ -494,6 +510,8 @@ Create a group
 
 
 
+Wraps POST /api/v2/groups 
+
 ### Example
 ~~~csharp
 using System;
@@ -550,6 +568,8 @@ Search groups
 
 
 
+Wraps POST /api/v2/groups/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -605,6 +625,8 @@ namespace Example
 Update group
 
 
+
+Wraps PUT /api/v2/groups/{groupId} 
 
 ### Example
 ~~~csharp

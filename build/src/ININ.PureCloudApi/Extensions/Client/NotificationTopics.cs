@@ -13,8 +13,8 @@ namespace ININ.PureCloudApi.Client
             Topics = new Dictionary<string, Type>
             { 
               {"billing.tasks.{id}", typeof(BillingTaskResultNotification)},
-              {"v2.contentmanagement.documents.{id}", typeof(DocumentDataNotification)},
-              {"v2.contentmanagement.workspaces.{id}.documents", typeof(DocumentDataNotification)},
+              {"v2.contentmanagement.documents.{id}", typeof(DocumentDataV2Notification)},
+              {"v2.contentmanagement.workspaces.{id}.documents", typeof(DocumentDataV2Notification)},
               {"v2.outbound.attemptlimits.{id}", typeof(AttemptLimitsNotification)},
               {"v2.outbound.callabletimesets.{id}", typeof(CallableTimeSetNotification)},
               {"v2.outbound.campaignrules.{id}", typeof(CampaignRuleNotification)},
@@ -54,13 +54,13 @@ namespace ININ.PureCloudApi.Client
               {"v2.users.{id}.conversations.socialexpressions", typeof(SocialConversationNotification)},
               {"v2.users.{id}.conversations.videos", typeof(VideoConversationNotification)},
               {"v2.users.{id}.conversationsummary", typeof(UserConversationSummaryNotification)},
-              {"v2.users.{id}.fax.documents", typeof(FaxDataNotification)},
+              {"v2.users.{id}.fax.documents", typeof(FaxDataV2Notification)},
               {"v2.users.{id}.outbound.contactlists.{id}.export", typeof(ExportUriNotification)},
               {"v2.users.{id}.outbound.dnclists.{id}.export", typeof(ExportUriNotification)},
               {"v2.users.{id}.outofoffice", typeof(OutOfOfficeNotification)},
               {"v2.users.{id}.presence", typeof(UserPresenceNotification)},
               {"v2.users.{id}.routingStatus", typeof(UserRoutingStatusNotification)},
-              {"v2.users.{id}.userrecordings", typeof(RecordingDataNotification)},
+              {"v2.users.{id}.userrecordings", typeof(RecordingDataV2Notification)},
               {"v2.users.{id}.voicemail.messages", typeof(VoicemailMessageNotification)},
             };
         }

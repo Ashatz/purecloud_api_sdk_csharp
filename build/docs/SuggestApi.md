@@ -5,12 +5,12 @@ title: SuggestApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**GetSearch**](SuggestApi.html#getsearch) | **GET** /api/v2/search | Search using the q64 value returned from a previous search. |
-| [**GetSuggest**](SuggestApi.html#getsuggest) | **GET** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
-| [**PostSearch**](SuggestApi.html#postsearch) | **POST** /api/v2/search | Search resources. |
-| [**PostSuggest**](SuggestApi.html#postsuggest) | **POST** /api/v2/search/suggest | Suggest resources. |
+| Method | Description |
+| ------------- | ------------- |
+| [**GetSearch**](SuggestApi.html#getsearch) | Search using the q64 value returned from a previous search. |
+| [**GetSuggest**](SuggestApi.html#getsuggest) | Suggest resources using the q64 value returned from a previous suggest query. |
+| [**PostSearch**](SuggestApi.html#postsearch) | Search resources. |
+| [**PostSuggest**](SuggestApi.html#postsuggest) | Suggest resources. |
 {: class="table table-striped"}
 
 <a name="getsearch"></a>
@@ -20,6 +20,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Search using the q64 value returned from a previous search.
 
 
+
+Wraps GET /api/v2/search 
 
 ### Example
 ~~~csharp
@@ -81,6 +83,8 @@ Suggest resources using the q64 value returned from a previous suggest query.
 
 
 
+Wraps GET /api/v2/search/suggest 
+
 ### Example
 ~~~csharp
 using System;
@@ -141,6 +145,8 @@ Search resources.
 
 
 
+Wraps POST /api/v2/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -198,6 +204,8 @@ namespace Example
 Suggest resources.
 
 
+
+Wraps POST /api/v2/search/suggest 
 
 ### Example
 ~~~csharp

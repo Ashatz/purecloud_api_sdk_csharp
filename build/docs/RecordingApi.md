@@ -5,41 +5,41 @@ title: RecordingApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#deleteconversationidrecordingsrecordingidannotationsannotationid) | **DELETE** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Delete annotation |
-| [**DeleteMediaretentionpolicies**](RecordingApi.html#deletemediaretentionpolicies) | **DELETE** /api/v2/recording/mediaretentionpolicies | Delete media retention policies |
-| [**DeleteMediaretentionpoliciesPolicyId**](RecordingApi.html#deletemediaretentionpoliciespolicyid) | **DELETE** /api/v2/recording/mediaretentionpolicies/{policyId} | Delete a media retention policy |
-| [**DeleteOrphanId**](RecordingApi.html#deleteorphanid) | **DELETE** /api/v2/orphanrecordings/{orphanId} | Deletes a single orphan recording |
-| [**GetConversationIdRecordings**](RecordingApi.html#getconversationidrecordings) | **GET** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
-| [**GetConversationIdRecordingsRecordingId**](RecordingApi.html#getconversationidrecordingsrecordingid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
-| [**GetConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#getconversationidrecordingsrecordingidannotations) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
-| [**GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#getconversationidrecordingsrecordingidannotationsannotationid) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
-| [**GetLocalkeysSettings**](RecordingApi.html#getlocalkeyssettings) | **GET** /api/v2/recording/localkeys/settings | gets a list local key settings data |
-| [**GetLocalkeysSettingsSettingsId**](RecordingApi.html#getlocalkeyssettingssettingsid) | **GET** /api/v2/recording/localkeys/settings/{settingsId} | Get the local encryption settings |
-| [**GetMediaretentionpolicies**](RecordingApi.html#getmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
-| [**GetMediaretentionpoliciesPolicyId**](RecordingApi.html#getmediaretentionpoliciespolicyid) | **GET** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
-| [**GetOrphanId**](RecordingApi.html#getorphanid) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
-| [**GetOrphanIdMedia**](RecordingApi.html#getorphanidmedia) | **GET** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
-| [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **GET** /api/v2/orphanrecordings | Gets all orphan recordings |
-| [**GetRecordingkeys**](RecordingApi.html#getrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
-| [**GetRecordingkeysRotationschedule**](RecordingApi.html#getrecordingkeysrotationschedule) | **GET** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
-| [**GetSettings**](RecordingApi.html#getsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
-| [**GetsScreensessions**](RecordingApi.html#getsscreensessions) | **GET** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
-| [**PatchMediaretentionpoliciesPolicyId**](RecordingApi.html#patchmediaretentionpoliciespolicyid) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
-| [**PatchsScreensessionsRecordingsessionId**](RecordingApi.html#patchsscreensessionsrecordingsessionid) | **PATCH** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
-| [**PostConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#postconversationidrecordingsrecordingidannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
-| [**PostLocalkeys**](RecordingApi.html#postlocalkeys) | **POST** /api/v2/recording/localkeys | create a local recording key |
-| [**PostLocalkeysSettings**](RecordingApi.html#postlocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation |
-| [**PostMediaretentionpolicies**](RecordingApi.html#postmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
-| [**PostRecordingkeys**](RecordingApi.html#postrecordingkeys) | **POST** /api/v2/recording/recordingkeys | Create encryption key |
-| [**PutConversationIdRecordingsRecordingId**](RecordingApi.html#putconversationidrecordingsrecordingid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Updates the retention records on a recording. |
-| [**PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#putconversationidrecordingsrecordingidannotationsannotationid) | **PUT** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Update annotation |
-| [**PutLocalkeysSettingsSettingsId**](RecordingApi.html#putlocalkeyssettingssettingsid) | **PUT** /api/v2/recording/localkeys/settings/{settingsId} | Update the local encryption settings |
-| [**PutMediaretentionpoliciesPolicyId**](RecordingApi.html#putmediaretentionpoliciespolicyid) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
-| [**PutOrphanId**](RecordingApi.html#putorphanid) | **PUT** /api/v2/orphanrecordings/{orphanId} | Updates an orphan recording to a regular recording with retention values |
-| [**PutRecordingkeysRotationschedule**](RecordingApi.html#putrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
-| [**PutSettings**](RecordingApi.html#putsettings) | **PUT** /api/v2/recording/settings | Update the Recording Settings for the Organization |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#deleteconversationidrecordingsrecordingidannotationsannotationid) | Delete annotation |
+| [**DeleteMediaretentionpolicies**](RecordingApi.html#deletemediaretentionpolicies) | Delete media retention policies |
+| [**DeleteMediaretentionpoliciesPolicyId**](RecordingApi.html#deletemediaretentionpoliciespolicyid) | Delete a media retention policy |
+| [**DeleteOrphanId**](RecordingApi.html#deleteorphanid) | Deletes a single orphan recording |
+| [**GetConversationIdRecordings**](RecordingApi.html#getconversationidrecordings) | Get all of a Conversation&#39;s Recordings. |
+| [**GetConversationIdRecordingsRecordingId**](RecordingApi.html#getconversationidrecordingsrecordingid) | Gets a specific recording. |
+| [**GetConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#getconversationidrecordingsrecordingidannotations) | Get annotations for recording |
+| [**GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#getconversationidrecordingsrecordingidannotationsannotationid) | Get annotation |
+| [**GetLocalkeysSettings**](RecordingApi.html#getlocalkeyssettings) | gets a list local key settings data |
+| [**GetLocalkeysSettingsSettingsId**](RecordingApi.html#getlocalkeyssettingssettingsid) | Get the local encryption settings |
+| [**GetMediaretentionpolicies**](RecordingApi.html#getmediaretentionpolicies) | Gets media retention policy list with query options to filter on name and enabled. |
+| [**GetMediaretentionpoliciesPolicyId**](RecordingApi.html#getmediaretentionpoliciespolicyid) | Get a media retention policy |
+| [**GetOrphanId**](RecordingApi.html#getorphanid) | Gets a single orphan recording |
+| [**GetOrphanIdMedia**](RecordingApi.html#getorphanidmedia) | Gets the media of a single orphan recording |
+| [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | Gets all orphan recordings |
+| [**GetRecordingkeys**](RecordingApi.html#getrecordingkeys) | Get encryption key list |
+| [**GetRecordingkeysRotationschedule**](RecordingApi.html#getrecordingkeysrotationschedule) | Get key rotation schedule |
+| [**GetSettings**](RecordingApi.html#getsettings) | Get the Recording Settings for the Organization |
+| [**GetsScreensessions**](RecordingApi.html#getsscreensessions) | Retrieves a paged listing of screen recording sessions |
+| [**PatchMediaretentionpoliciesPolicyId**](RecordingApi.html#patchmediaretentionpoliciespolicyid) | Patch a media retention policy |
+| [**PatchsScreensessionsRecordingsessionId**](RecordingApi.html#patchsscreensessionsrecordingsessionid) | Update a screen recording session |
+| [**PostConversationIdRecordingsRecordingIdAnnotations**](RecordingApi.html#postconversationidrecordingsrecordingidannotations) | Create annotation |
+| [**PostLocalkeys**](RecordingApi.html#postlocalkeys) | create a local recording key |
+| [**PostLocalkeysSettings**](RecordingApi.html#postlocalkeyssettings) | create settings for local key creation |
+| [**PostMediaretentionpolicies**](RecordingApi.html#postmediaretentionpolicies) | Create media retention policy |
+| [**PostRecordingkeys**](RecordingApi.html#postrecordingkeys) | Create encryption key |
+| [**PutConversationIdRecordingsRecordingId**](RecordingApi.html#putconversationidrecordingsrecordingid) | Updates the retention records on a recording. |
+| [**PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId**](RecordingApi.html#putconversationidrecordingsrecordingidannotationsannotationid) | Update annotation |
+| [**PutLocalkeysSettingsSettingsId**](RecordingApi.html#putlocalkeyssettingssettingsid) | Update the local encryption settings |
+| [**PutMediaretentionpoliciesPolicyId**](RecordingApi.html#putmediaretentionpoliciespolicyid) | Update a media retention policy |
+| [**PutOrphanId**](RecordingApi.html#putorphanid) | Updates an orphan recording to a regular recording with retention values |
+| [**PutRecordingkeysRotationschedule**](RecordingApi.html#putrecordingkeysrotationschedule) | Update key rotation schedule |
+| [**PutSettings**](RecordingApi.html#putsettings) | Update the Recording Settings for the Organization |
 {: class="table table-striped"}
 
 <a name="deleteconversationidrecordingsrecordingidannotationsannotationid"></a>
@@ -49,6 +49,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete annotation
 
 
+
+Wraps DELETE /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} 
 
 ### Example
 ~~~csharp
@@ -109,6 +111,8 @@ Delete media retention policies
 
 Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
 
+Wraps DELETE /api/v2/recording/mediaretentionpolicies 
+
 ### Example
 ~~~csharp
 using System;
@@ -164,6 +168,8 @@ namespace Example
 Delete a media retention policy
 
 
+
+Wraps DELETE /api/v2/recording/mediaretentionpolicies/{policyId} 
 
 ### Example
 ~~~csharp
@@ -221,6 +227,8 @@ Deletes a single orphan recording
 
 
 
+Wraps DELETE /api/v2/orphanrecordings/{orphanId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -276,6 +284,8 @@ namespace Example
 Get all of a Conversation's Recordings.
 
 
+
+Wraps GET /api/v2/conversations/{conversationId}/recordings 
 
 ### Example
 ~~~csharp
@@ -336,6 +346,8 @@ namespace Example
 Gets a specific recording.
 
 
+
+Wraps GET /api/v2/conversations/{conversationId}/recordings/{recordingId} 
 
 ### Example
 ~~~csharp
@@ -401,6 +413,8 @@ Get annotations for recording
 
 
 
+Wraps GET /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations 
+
 ### Example
 ~~~csharp
 using System;
@@ -458,6 +472,8 @@ namespace Example
 Get annotation
 
 
+
+Wraps GET /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} 
 
 ### Example
 ~~~csharp
@@ -519,6 +535,8 @@ gets a list local key settings data
 
 
 
+Wraps GET /api/v2/recording/localkeys/settings 
+
 ### Example
 ~~~csharp
 using System;
@@ -569,6 +587,8 @@ This endpoint does require any parameters.
 Get the local encryption settings
 
 
+
+Wraps GET /api/v2/recording/localkeys/settings/{settingsId} 
 
 ### Example
 ~~~csharp
@@ -625,6 +645,8 @@ namespace Example
 Gets media retention policy list with query options to filter on name and enabled.
 
 for a less verbose response, add summary=true to this endpoint
+
+Wraps GET /api/v2/recording/mediaretentionpolicies 
 
 ### Example
 ~~~csharp
@@ -700,6 +722,8 @@ Get a media retention policy
 
 
 
+Wraps GET /api/v2/recording/mediaretentionpolicies/{policyId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -756,6 +780,8 @@ Gets a single orphan recording
 
 
 
+Wraps GET /api/v2/orphanrecordings/{orphanId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -811,6 +837,8 @@ namespace Example
 Gets the media of a single orphan recording
 
 A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
+
+Wraps GET /api/v2/orphanrecordings/{orphanId}/media 
 
 ### Example
 ~~~csharp
@@ -873,6 +901,8 @@ namespace Example
 Gets all orphan recordings
 
 
+
+Wraps GET /api/v2/orphanrecordings 
 
 ### Example
 ~~~csharp
@@ -942,6 +972,8 @@ Get encryption key list
 
 
 
+Wraps GET /api/v2/recording/recordingkeys 
+
 ### Example
 ~~~csharp
 using System;
@@ -1000,6 +1032,8 @@ Get key rotation schedule
 
 
 
+Wraps GET /api/v2/recording/recordingkeys/rotationschedule 
+
 ### Example
 ~~~csharp
 using System;
@@ -1050,6 +1084,8 @@ This endpoint does require any parameters.
 Get the Recording Settings for the Organization
 
 
+
+Wraps GET /api/v2/recording/settings 
 
 ### Example
 ~~~csharp
@@ -1106,6 +1142,8 @@ namespace Example
 Retrieves a paged listing of screen recording sessions
 
 
+
+Wraps GET /api/v2/recordings/screensessions 
 
 ### Example
 ~~~csharp
@@ -1165,6 +1203,8 @@ Patch a media retention policy
 
 
 
+Wraps PATCH /api/v2/recording/mediaretentionpolicies/{policyId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1223,6 +1263,8 @@ Update a screen recording session
 
 
 
+Wraps PATCH /api/v2/recordings/screensessions/{recordingSessionId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1279,6 +1321,8 @@ void (empty response body)
 Create annotation
 
 
+
+Wraps POST /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations 
 
 ### Example
 ~~~csharp
@@ -1340,6 +1384,8 @@ create a local recording key
 
 
 
+Wraps POST /api/v2/recording/localkeys 
+
 ### Example
 ~~~csharp
 using System;
@@ -1395,6 +1441,8 @@ namespace Example
 create settings for local key creation
 
 
+
+Wraps POST /api/v2/recording/localkeys/settings 
 
 ### Example
 ~~~csharp
@@ -1452,6 +1500,8 @@ Create media retention policy
 
 
 
+Wraps POST /api/v2/recording/mediaretentionpolicies 
+
 ### Example
 ~~~csharp
 using System;
@@ -1508,6 +1558,8 @@ Create encryption key
 
 
 
+Wraps POST /api/v2/recording/recordingkeys 
+
 ### Example
 ~~~csharp
 using System;
@@ -1558,6 +1610,8 @@ This endpoint does require any parameters.
 Updates the retention records on a recording.
 
 Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+
+Wraps PUT /api/v2/conversations/{conversationId}/recordings/{recordingId} 
 
 ### Example
 ~~~csharp
@@ -1618,6 +1672,8 @@ namespace Example
 Update annotation
 
 
+
+Wraps PUT /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} 
 
 ### Example
 ~~~csharp
@@ -1681,6 +1737,8 @@ Update the local encryption settings
 
 
 
+Wraps PUT /api/v2/recording/localkeys/settings/{settingsId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1738,6 +1796,8 @@ namespace Example
 Update a media retention policy
 
 
+
+Wraps PUT /api/v2/recording/mediaretentionpolicies/{policyId} 
 
 ### Example
 ~~~csharp
@@ -1797,6 +1857,8 @@ Updates an orphan recording to a regular recording with retention values
 
 If this operation is successful the orphan will no longer exist. It will be replaced by the resulting recording in the response. This replacement recording is accessible by the normal Recording api.
 
+Wraps PUT /api/v2/orphanrecordings/{orphanId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1855,6 +1917,8 @@ Update key rotation schedule
 
 
 
+Wraps PUT /api/v2/recording/recordingkeys/rotationschedule 
+
 ### Example
 ~~~csharp
 using System;
@@ -1910,6 +1974,8 @@ namespace Example
 Update the Recording Settings for the Organization
 
 
+
+Wraps PUT /api/v2/recording/settings 
 
 ### Example
 ~~~csharp

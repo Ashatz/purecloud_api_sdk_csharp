@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TotalNumberOfContacts">TotalNumberOfContacts.</param>
         /// <param name="Percentage">Percentage.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public CampaignProgressNotification(DocumentDataNotificationCreatedBy Campaign = null, double? NumberOfContactsCalled = null, double? TotalNumberOfContacts = null, int? Percentage = null, Object AdditionalProperties = null)
+        public CampaignProgressNotification(DocumentDataV2NotificationCreatedBy Campaign = null, double? NumberOfContactsCalled = null, double? TotalNumberOfContacts = null, int? Percentage = null, Object AdditionalProperties = null)
         {
             this.Campaign = Campaign;
             this.NumberOfContactsCalled = NumberOfContactsCalled;
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Campaign
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
-        public DocumentDataNotificationCreatedBy Campaign { get; set; }
+        public DocumentDataV2NotificationCreatedBy Campaign { get; set; }
         /// <summary>
         /// Gets or Sets NumberOfContactsCalled
         /// </summary>

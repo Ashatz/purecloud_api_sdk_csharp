@@ -5,30 +5,30 @@ title: VoicemailApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteMessages**](VoicemailApi.html#deletemessages) | **DELETE** /api/v2/voicemail/messages | Delete all voicemail messages |
-| [**DeleteMessagesMessageId**](VoicemailApi.html#deletemessagesmessageid) | **DELETE** /api/v2/voicemail/messages/{messageId} | Delete a message. |
-| [**GetGroupsGroupIdMailbox**](VoicemailApi.html#getgroupsgroupidmailbox) | **GET** /api/v2/voicemail/groups/{groupId}/mailbox | Get the group&#39;s mailbox information |
-| [**GetGroupsGroupIdMessages**](VoicemailApi.html#getgroupsgroupidmessages) | **GET** /api/v2/voicemail/groups/{groupId}/messages | List voicemail messages |
-| [**GetGroupsGroupIdPolicy**](VoicemailApi.html#getgroupsgroupidpolicy) | **GET** /api/v2/voicemail/groups/{groupId}/policy | Get a group&#39;s voicemail policy |
-| [**GetMailbox**](VoicemailApi.html#getmailbox) | **GET** /api/v2/voicemail/mailbox | Get the current user&#39;s mailbox information |
-| [**GetMeMailbox**](VoicemailApi.html#getmemailbox) | **GET** /api/v2/voicemail/me/mailbox | Get the current user&#39;s mailbox information |
-| [**GetMeMessages**](VoicemailApi.html#getmemessages) | **GET** /api/v2/voicemail/me/messages | List voicemail messages |
-| [**GetMePolicy**](VoicemailApi.html#getmepolicy) | **GET** /api/v2/voicemail/me/policy | Get the current user&#39;s voicemail policy |
-| [**GetMessages**](VoicemailApi.html#getmessages) | **GET** /api/v2/voicemail/messages | List voicemail messages |
-| [**GetMessagesMessageId**](VoicemailApi.html#getmessagesmessageid) | **GET** /api/v2/voicemail/messages/{messageId} | Get message. |
-| [**GetMessagesMessageIdMedia**](VoicemailApi.html#getmessagesmessageidmedia) | **GET** /api/v2/voicemail/messages/{messageId}/media | Get media playback URI for this message |
-| [**GetPolicy**](VoicemailApi.html#getpolicy) | **GET** /api/v2/voicemail/policy | Get a policy |
-| [**GetSearch**](VoicemailApi.html#getsearch) | **GET** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
-| [**GetUserpoliciesUserId**](VoicemailApi.html#getuserpoliciesuserid) | **GET** /api/v2/voicemail/userpolicies/{userId} | Get a user&#39;s voicemail policy |
-| [**PatchGroupsGroupIdPolicy**](VoicemailApi.html#patchgroupsgroupidpolicy) | **PATCH** /api/v2/voicemail/groups/{groupId}/policy | Update a group&#39;s voicemail policy |
-| [**PatchMePolicy**](VoicemailApi.html#patchmepolicy) | **PATCH** /api/v2/voicemail/me/policy | Update the current user&#39;s voicemail policy |
-| [**PatchUserpoliciesUserId**](VoicemailApi.html#patchuserpoliciesuserid) | **PATCH** /api/v2/voicemail/userpolicies/{userId} | Update a user&#39;s voicemail policy |
-| [**PostMessages**](VoicemailApi.html#postmessages) | **POST** /api/v2/voicemail/messages | Copy a voicemail message to a user or group |
-| [**PostSearch**](VoicemailApi.html#postsearch) | **POST** /api/v2/voicemail/search | Search voicemails |
-| [**PutMessagesMessageId**](VoicemailApi.html#putmessagesmessageid) | **PUT** /api/v2/voicemail/messages/{messageId} | Update a message. |
-| [**PutPolicy**](VoicemailApi.html#putpolicy) | **PUT** /api/v2/voicemail/policy | Update a policy |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteMessages**](VoicemailApi.html#deletemessages) | Delete all voicemail messages |
+| [**DeleteMessagesMessageId**](VoicemailApi.html#deletemessagesmessageid) | Delete a message. |
+| [**GetGroupsGroupIdMailbox**](VoicemailApi.html#getgroupsgroupidmailbox) | Get the group&#39;s mailbox information |
+| [**GetGroupsGroupIdMessages**](VoicemailApi.html#getgroupsgroupidmessages) | List voicemail messages |
+| [**GetGroupsGroupIdPolicy**](VoicemailApi.html#getgroupsgroupidpolicy) | Get a group&#39;s voicemail policy |
+| [**GetMailbox**](VoicemailApi.html#getmailbox) | Get the current user&#39;s mailbox information |
+| [**GetMeMailbox**](VoicemailApi.html#getmemailbox) | Get the current user&#39;s mailbox information |
+| [**GetMeMessages**](VoicemailApi.html#getmemessages) | List voicemail messages |
+| [**GetMePolicy**](VoicemailApi.html#getmepolicy) | Get the current user&#39;s voicemail policy |
+| [**GetMessages**](VoicemailApi.html#getmessages) | List voicemail messages |
+| [**GetMessagesMessageId**](VoicemailApi.html#getmessagesmessageid) | Get message. |
+| [**GetMessagesMessageIdMedia**](VoicemailApi.html#getmessagesmessageidmedia) | Get media playback URI for this message |
+| [**GetPolicy**](VoicemailApi.html#getpolicy) | Get a policy |
+| [**GetSearch**](VoicemailApi.html#getsearch) | Search voicemails using the q64 value returned from a previous search |
+| [**GetUserpoliciesUserId**](VoicemailApi.html#getuserpoliciesuserid) | Get a user&#39;s voicemail policy |
+| [**PatchGroupsGroupIdPolicy**](VoicemailApi.html#patchgroupsgroupidpolicy) | Update a group&#39;s voicemail policy |
+| [**PatchMePolicy**](VoicemailApi.html#patchmepolicy) | Update the current user&#39;s voicemail policy |
+| [**PatchUserpoliciesUserId**](VoicemailApi.html#patchuserpoliciesuserid) | Update a user&#39;s voicemail policy |
+| [**PostMessages**](VoicemailApi.html#postmessages) | Copy a voicemail message to a user or group |
+| [**PostSearch**](VoicemailApi.html#postsearch) | Search voicemails |
+| [**PutMessagesMessageId**](VoicemailApi.html#putmessagesmessageid) | Update a message. |
+| [**PutPolicy**](VoicemailApi.html#putpolicy) | Update a policy |
 {: class="table table-striped"}
 
 <a name="deletemessages"></a>
@@ -38,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete all voicemail messages
 
 
+
+Wraps DELETE /api/v2/voicemail/messages 
 
 ### Example
 ~~~csharp
@@ -89,6 +91,8 @@ This endpoint does require any parameters.
 Delete a message.
 
 
+
+Wraps DELETE /api/v2/voicemail/messages/{messageId} 
 
 ### Example
 ~~~csharp
@@ -146,6 +150,8 @@ Get the group's mailbox information
 
 
 
+Wraps GET /api/v2/voicemail/groups/{groupId}/mailbox 
+
 ### Example
 ~~~csharp
 using System;
@@ -201,6 +207,8 @@ namespace Example
 List voicemail messages
 
 
+
+Wraps GET /api/v2/voicemail/groups/{groupId}/messages 
 
 ### Example
 ~~~csharp
@@ -262,6 +270,8 @@ Get a group's voicemail policy
 
 
 
+Wraps GET /api/v2/voicemail/groups/{groupId}/policy 
+
 ### Example
 ~~~csharp
 using System;
@@ -318,6 +328,8 @@ Get the current user's mailbox information
 
 
 
+Wraps GET /api/v2/voicemail/mailbox 
+
 ### Example
 ~~~csharp
 using System;
@@ -369,6 +381,8 @@ Get the current user's mailbox information
 
 
 
+Wraps GET /api/v2/voicemail/me/mailbox 
+
 ### Example
 ~~~csharp
 using System;
@@ -419,6 +433,8 @@ This endpoint does require any parameters.
 List voicemail messages
 
 
+
+Wraps GET /api/v2/voicemail/me/messages 
 
 ### Example
 ~~~csharp
@@ -478,6 +494,8 @@ Get the current user's voicemail policy
 
 
 
+Wraps GET /api/v2/voicemail/me/policy 
+
 ### Example
 ~~~csharp
 using System;
@@ -528,6 +546,8 @@ This endpoint does require any parameters.
 List voicemail messages
 
 
+
+Wraps GET /api/v2/voicemail/messages 
 
 ### Example
 ~~~csharp
@@ -587,6 +607,8 @@ Get message.
 
 
 
+Wraps GET /api/v2/voicemail/messages/{messageId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -644,6 +666,8 @@ namespace Example
 Get media playback URI for this message
 
 
+
+Wraps GET /api/v2/voicemail/messages/{messageId}/media 
 
 ### Example
 ~~~csharp
@@ -703,6 +727,8 @@ Get a policy
 
 
 
+Wraps GET /api/v2/voicemail/policy 
+
 ### Example
 ~~~csharp
 using System;
@@ -753,6 +779,8 @@ This endpoint does require any parameters.
 Search voicemails using the q64 value returned from a previous search
 
 
+
+Wraps GET /api/v2/voicemail/search 
 
 ### Example
 ~~~csharp
@@ -812,6 +840,8 @@ Get a user's voicemail policy
 
 
 
+Wraps GET /api/v2/voicemail/userpolicies/{userId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -867,6 +897,8 @@ namespace Example
 Update a group's voicemail policy
 
 
+
+Wraps PATCH /api/v2/voicemail/groups/{groupId}/policy 
 
 ### Example
 ~~~csharp
@@ -926,6 +958,8 @@ Update the current user's voicemail policy
 
 
 
+Wraps PATCH /api/v2/voicemail/me/policy 
+
 ### Example
 ~~~csharp
 using System;
@@ -981,6 +1015,8 @@ namespace Example
 Update a user's voicemail policy
 
 
+
+Wraps PATCH /api/v2/voicemail/userpolicies/{userId} 
 
 ### Example
 ~~~csharp
@@ -1040,6 +1076,8 @@ Copy a voicemail message to a user or group
 
 
 
+Wraps POST /api/v2/voicemail/messages 
+
 ### Example
 ~~~csharp
 using System;
@@ -1096,6 +1134,8 @@ Search voicemails
 
 
 
+Wraps POST /api/v2/voicemail/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -1151,6 +1191,8 @@ namespace Example
 Update a message.
 
 
+
+Wraps PUT /api/v2/voicemail/messages/{messageId} 
 
 ### Example
 ~~~csharp
@@ -1209,6 +1251,8 @@ namespace Example
 Update a policy
 
 
+
+Wraps PUT /api/v2/voicemail/policy 
 
 ### Example
 ~~~csharp

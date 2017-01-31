@@ -67,20 +67,20 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Sequences'
         }
         /// <summary>
-        /// Test the property 'AdditionalProperties'
-        /// </summary>
-        [Test]
-        public void AdditionalPropertiesTest()
-        {
-            // TODO: unit test for the property 'AdditionalProperties'
-        }
-        /// <summary>
         /// Test the property 'UseTriggeringEntity'
         /// </summary>
         [Test]
         public void UseTriggeringEntityTest()
         {
             // TODO: unit test for the property 'UseTriggeringEntity'
+        }
+        /// <summary>
+        /// Test the property 'AdditionalProperties'
+        /// </summary>
+        [Test]
+        public void AdditionalPropertiesTest()
+        {
+            // TODO: unit test for the property 'AdditionalProperties'
         }
 
     }

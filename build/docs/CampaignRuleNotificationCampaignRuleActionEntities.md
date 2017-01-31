@@ -7,10 +7,10 @@ title: CampaignRuleNotificationCampaignRuleActionEntities
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Campaigns** | **List&lt;string&gt;** |  | [optional] |
-| **Sequences** | **List&lt;string&gt;** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **Campaigns** | [**List&lt;CampaignRuleNotificationUriReference&gt;**](CampaignRuleNotificationUriReference.html) |  | [optional] |
+| **Sequences** | [**List&lt;CampaignRuleNotificationUriReference&gt;**](CampaignRuleNotificationUriReference.html) |  | [optional] |
 | **UseTriggeringEntity** | **bool?** |  | [optional] |
+| **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 
 

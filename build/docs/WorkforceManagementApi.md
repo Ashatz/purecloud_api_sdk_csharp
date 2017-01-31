@@ -5,18 +5,21 @@ title: WorkforceManagementApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**GetAdherence**](WorkforceManagementApi.html#getadherence) | **GET** /api/v2/workforcemanagement/adherence | Get a list of UserScheduleAdherence records for the requested users |
-| [**GetDecisionsDownloadsDownloadId**](WorkforceManagementApi.html#getdecisionsdownloadsdownloadid) | **GET** /api/v2/workforcemanagement/decisions/downloads/{downloadId} | Get decisions download link |
-| [**GetManagementunitsMuIdUsersUserIdTimeoffrequests**](WorkforceManagementApi.html#getmanagementunitsmuidusersuseridtimeoffrequests) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests | Get a list of time off requests for any user |
-| [**GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId**](WorkforceManagementApi.html#getmanagementunitsmuidusersuseridtimeoffrequeststimeoffrequestid) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Get a time off request by id |
-| [**GetTimeoffrequests**](WorkforceManagementApi.html#gettimeoffrequests) | **GET** /api/v2/workforcemanagement/timeoffrequests | Get a list of time off requests for the current user |
-| [**GetTimeoffrequestsTimeoffrequestId**](WorkforceManagementApi.html#gettimeoffrequeststimeoffrequestid) | **GET** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user by id |
-| [**PatchTimeoffrequestsTimeoffrequestId**](WorkforceManagementApi.html#patchtimeoffrequeststimeoffrequestid) | **PATCH** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Mark a time off request for the current user as read or unread |
-| [**PostDecisionsDownloadsSearch**](WorkforceManagementApi.html#postdecisionsdownloadssearch) | **POST** /api/v2/workforcemanagement/decisions/downloads/search | Download decisions files metadata |
-| [**PostLongtermforecasts**](WorkforceManagementApi.html#postlongtermforecasts) | **POST** /api/v2/workforcemanagement/longtermforecasts | Create a forecast |
-| [**PostSchedules**](WorkforceManagementApi.html#postschedules) | **POST** /api/v2/workforcemanagement/schedules | Get a schedule for the current user |
+| Method | Description |
+| ------------- | ------------- |
+| [**GetAdherence**](WorkforceManagementApi.html#getadherence) | Get a list of UserScheduleAdherence records for the requested users |
+| [**GetDecisionsDownloadsDownloadId**](WorkforceManagementApi.html#getdecisionsdownloadsdownloadid) | Get decisions download link |
+| [**GetManagementunitsMuIdActivitycodes**](WorkforceManagementApi.html#getmanagementunitsmuidactivitycodes) | Get activity codes corresponding to a management unit |
+| [**GetManagementunitsMuIdUsers**](WorkforceManagementApi.html#getmanagementunitsmuidusers) | Get agents in the management unit |
+| [**GetManagementunitsMuIdUsersUserIdTimeoffrequests**](WorkforceManagementApi.html#getmanagementunitsmuidusersuseridtimeoffrequests) | Get a list of time off requests for any user |
+| [**GetManagementunitsMuIdUsersUserIdTimeoffrequestsTimeoffrequestId**](WorkforceManagementApi.html#getmanagementunitsmuidusersuseridtimeoffrequeststimeoffrequestid) | Get a time off request by id |
+| [**GetTimeoffrequests**](WorkforceManagementApi.html#gettimeoffrequests) | Get a list of time off requests for the current user |
+| [**GetTimeoffrequestsTimeoffrequestId**](WorkforceManagementApi.html#gettimeoffrequeststimeoffrequestid) | Get a time off request for the current user by id |
+| [**PatchTimeoffrequestsTimeoffrequestId**](WorkforceManagementApi.html#patchtimeoffrequeststimeoffrequestid) | Mark a time off request for the current user as read or unread |
+| [**PostDecisionsDownloadsSearch**](WorkforceManagementApi.html#postdecisionsdownloadssearch) | Download decisions files metadata |
+| [**PostLongtermforecasts**](WorkforceManagementApi.html#postlongtermforecasts) | Create a forecast |
+| [**PostManagementunitsMuIdSchedulesSearch**](WorkforceManagementApi.html#postmanagementunitsmuidschedulessearch) | Get user schedules within the given time range |
+| [**PostSchedules**](WorkforceManagementApi.html#postschedules) | Get a schedule for the current user |
 {: class="table table-striped"}
 
 <a name="getadherence"></a>
@@ -26,6 +29,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Get a list of UserScheduleAdherence records for the requested users
 
 
+
+Wraps GET /api/v2/workforcemanagement/adherence 
 
 ### Example
 ~~~csharp
@@ -83,6 +88,8 @@ Get decisions download link
 
 
 
+Wraps GET /api/v2/workforcemanagement/decisions/downloads/{downloadId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -133,6 +140,122 @@ namespace Example
 
 [**DecisionsDownloadLink**](DecisionsDownloadLink.html)
 
+<a name="getmanagementunitsmuidactivitycodes"></a>
+
+## [**ActivityCodeContainer**](ActivityCodeContainer.html) GetManagementunitsMuIdActivitycodes (string muId)
+
+Get activity codes corresponding to a management unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/activitycodes 
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetManagementunitsMuIdActivitycodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new WorkforceManagementApi();
+            var muId = muId_example;  // string | The muId of the management unit.
+
+            try
+            {
+                // Get activity codes corresponding to a management unit
+                ActivityCodeContainer result = apiInstance.GetManagementunitsMuIdActivitycodes(muId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetManagementunitsMuIdActivitycodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **muId** | **string**| The muId of the management unit. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActivityCodeContainer**](ActivityCodeContainer.html)
+
+<a name="getmanagementunitsmuidusers"></a>
+
+## [**WfmUserEntityListing**](WfmUserEntityListing.html) GetManagementunitsMuIdUsers (string muId)
+
+Get agents in the management unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/users 
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class GetManagementunitsMuIdUsersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new WorkforceManagementApi();
+            var muId = muId_example;  // string | The muId of the management unit.
+
+            try
+            {
+                // Get agents in the management unit
+                WfmUserEntityListing result = apiInstance.GetManagementunitsMuIdUsers(muId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetManagementunitsMuIdUsers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **muId** | **string**| The muId of the management unit. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WfmUserEntityListing**](WfmUserEntityListing.html)
+
 <a name="getmanagementunitsmuidusersuseridtimeoffrequests"></a>
 
 ## [**TimeOffRequestList**](TimeOffRequestList.html) GetManagementunitsMuIdUsersUserIdTimeoffrequests (string muId, string userId, bool? recentlyReviewed = null)
@@ -140,6 +263,8 @@ namespace Example
 Get a list of time off requests for any user
 
 
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests 
 
 ### Example
 ~~~csharp
@@ -201,6 +326,8 @@ Get a time off request by id
 
 
 
+Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -261,6 +388,8 @@ Get a list of time off requests for the current user
 
 
 
+Wraps GET /api/v2/workforcemanagement/timeoffrequests 
+
 ### Example
 ~~~csharp
 using System;
@@ -317,6 +446,8 @@ Get a time off request for the current user by id
 
 
 
+Wraps GET /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -372,6 +503,8 @@ namespace Example
 Mark a time off request for the current user as read or unread
 
 
+
+Wraps PATCH /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} 
 
 ### Example
 ~~~csharp
@@ -430,6 +563,8 @@ Download decisions files metadata
 
 
 
+Wraps POST /api/v2/workforcemanagement/decisions/downloads/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -486,6 +621,8 @@ Create a forecast
 
 
 
+Wraps POST /api/v2/workforcemanagement/longtermforecasts 
+
 ### Example
 ~~~csharp
 using System;
@@ -534,13 +671,75 @@ namespace Example
 
 [**ForecastCreationCompletion**](ForecastCreationCompletion.html)
 
+<a name="postmanagementunitsmuidschedulessearch"></a>
+
+## [**UserScheduleContainer**](UserScheduleContainer.html) PostManagementunitsMuIdSchedulesSearch (string muId, UserListScheduleRequestBody body = null)
+
+Get user schedules within the given time range
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/schedules/search 
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using ININ.PureCloudApi.Api;
+using ININ.PureCloudApi.Client;
+using ININ.PureCloudApi.Model;
+
+namespace Example
+{
+    public class PostManagementunitsMuIdSchedulesSearchExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new WorkforceManagementApi();
+            var muId = muId_example;  // string | The muId of the management unit.
+            var body = new UserListScheduleRequestBody(); // UserListScheduleRequestBody | body (optional) 
+
+            try
+            {
+                // Get user schedules within the given time range
+                UserScheduleContainer result = apiInstance.PostManagementunitsMuIdSchedulesSearch(muId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostManagementunitsMuIdSchedulesSearch: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **muId** | **string**| The muId of the management unit. |  |
+| **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserScheduleContainer**](UserScheduleContainer.html)
+
 <a name="postschedules"></a>
 
-## [**TimeOffRequestList**](TimeOffRequestList.html) PostSchedules (CurrentUserScheduleRequestBody body = null)
+## [**UserScheduleContainer**](UserScheduleContainer.html) PostSchedules (CurrentUserScheduleRequestBody body = null)
 
 Get a schedule for the current user
 
 
+
+Wraps POST /api/v2/workforcemanagement/schedules 
 
 ### Example
 ~~~csharp
@@ -566,7 +765,7 @@ namespace Example
             try
             {
                 // Get a schedule for the current user
-                TimeOffRequestList result = apiInstance.PostSchedules(body);
+                UserScheduleContainer result = apiInstance.PostSchedules(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -588,5 +787,5 @@ namespace Example
 
 ### Return type
 
-[**TimeOffRequestList**](TimeOffRequestList.html)
+[**UserScheduleContainer**](UserScheduleContainer.html)
 

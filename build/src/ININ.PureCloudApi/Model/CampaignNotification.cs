@@ -124,7 +124,6 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="DateModified">DateModified.</param>
         /// <param name="Version">Version.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="ContactList">ContactList.</param>
         /// <param name="Queue">Queue.</param>
         /// <param name="DialingMode">DialingMode.</param>
@@ -148,14 +147,14 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NoAnswerTimeout">NoAnswerTimeout.</param>
         /// <param name="CallAnalysisLanguage">CallAnalysisLanguage.</param>
         /// <param name="Priority">Priority.</param>
-        public CampaignNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Object AdditionalProperties = null, DocumentDataNotificationCreatedBy ContactList = null, CampaignNotificationUriReference Queue = null, DialingModeEnum? DialingMode = null, CampaignNotificationUriReference Script = null, CampaignNotificationUriReference EdgeGroup = null, CampaignStatusEnum? CampaignStatus = null, List<CampaignNotificationPhoneColumns> PhoneColumns = null, double? AbandonRate = null, List<CampaignNotificationUriReference> DncLists = null, CampaignNotificationUriReference CallableTimeSet = null, CampaignNotificationUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<CampaignNotificationErrors> Errors = null, List<CampaignNotificationUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, CampaignNotificationContactSort ContactSort = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public CampaignNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, CampaignNotificationUriReference Queue = null, DialingModeEnum? DialingMode = null, CampaignNotificationUriReference Script = null, CampaignNotificationUriReference EdgeGroup = null, CampaignStatusEnum? CampaignStatus = null, List<CampaignNotificationPhoneColumns> PhoneColumns = null, double? AbandonRate = null, List<CampaignNotificationUriReference> DncLists = null, CampaignNotificationUriReference CallableTimeSet = null, CampaignNotificationUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<CampaignNotificationErrors> Errors = null, List<CampaignNotificationUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, CampaignNotificationContactSort ContactSort = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
-            this.AdditionalProperties = AdditionalProperties;
             this.ContactList = ContactList;
             this.Queue = Queue;
             this.DialingMode = DialingMode;
@@ -179,6 +178,7 @@ namespace ININ.PureCloudApi.Model
             this.NoAnswerTimeout = NoAnswerTimeout;
             this.CallAnalysisLanguage = CallAnalysisLanguage;
             this.Priority = Priority;
+            this.AdditionalProperties = AdditionalProperties;
         }
         
         /// <summary>
@@ -207,15 +207,10 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
-        /// <summary>
         /// Gets or Sets ContactList
         /// </summary>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
-        public DocumentDataNotificationCreatedBy ContactList { get; set; }
+        public DocumentDataV2NotificationCreatedBy ContactList { get; set; }
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
@@ -317,6 +312,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
         /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Object AdditionalProperties { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -329,7 +329,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  DialingMode: ").Append(DialingMode).Append("\n");
@@ -353,6 +352,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  NoAnswerTimeout: ").Append(NoAnswerTimeout).Append("\n");
             sb.Append("  CallAnalysisLanguage: ").Append(CallAnalysisLanguage).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -413,11 +413,6 @@ namespace ININ.PureCloudApi.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 ) &&
                 (
                     this.ContactList == other.ContactList ||
@@ -533,6 +528,11 @@ namespace ININ.PureCloudApi.Model
                     this.Priority == other.Priority ||
                     this.Priority != null &&
                     this.Priority.Equals(other.Priority)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -557,8 +557,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
                 if (this.Queue != null)
@@ -605,6 +603,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.CallAnalysisLanguage.GetHashCode();
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;
             }
         }

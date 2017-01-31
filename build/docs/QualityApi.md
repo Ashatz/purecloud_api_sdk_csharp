@@ -5,39 +5,39 @@ title: QualityApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteCalibrationsCalibrationId**](QualityApi.html#deletecalibrationscalibrationid) | **DELETE** /api/v2/quality/calibrations/{calibrationId} | Delete a calibration by id. |
-| [**DeleteConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#deleteconversationsconversationidevaluationsevaluationid) | **DELETE** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Delete an evaluation |
-| [**DeleteFormsFormId**](QualityApi.html#deleteformsformid) | **DELETE** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
-| [**DeleteKeywordsets**](QualityApi.html#deletekeywordsets) | **DELETE** /api/v2/quality/keywordsets | Delete keyword sets |
-| [**DeleteKeywordsetsKeywordsetId**](QualityApi.html#deletekeywordsetskeywordsetid) | **DELETE** /api/v2/quality/keywordsets/{keywordSetId} | Delete a keywordSet by id. |
-| [**GetAgentsActivity**](QualityApi.html#getagentsactivity) | **GET** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
-| [**GetCalibrations**](QualityApi.html#getcalibrations) | **GET** /api/v2/quality/calibrations | Get the list of calibrations |
-| [**GetCalibrationsCalibrationId**](QualityApi.html#getcalibrationscalibrationid) | **GET** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id. |
-| [**GetConversationsConversationIdAudits**](QualityApi.html#getconversationsconversationidaudits) | **GET** /api/v2/quality/conversations/{conversationId}/audits | Get audits for conversation or recording |
-| [**GetConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#getconversationsconversationidevaluationsevaluationid) | **GET** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
-| [**GetEvaluationsQuery**](QualityApi.html#getevaluationsquery) | **GET** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
-| [**GetEvaluatorsActivity**](QualityApi.html#getevaluatorsactivity) | **GET** /api/v2/quality/evaluators/activity | Get an evaluator activity |
-| [**GetForms**](QualityApi.html#getforms) | **GET** /api/v2/quality/forms | Get the list of evaluation forms |
-| [**GetFormsFormId**](QualityApi.html#getformsformid) | **GET** /api/v2/quality/forms/{formId} | Get an evaluation form |
-| [**GetFormsFormIdVersions**](QualityApi.html#getformsformidversions) | **GET** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
-| [**GetKeywordsets**](QualityApi.html#getkeywordsets) | **GET** /api/v2/quality/keywordsets | Get the list of keyword sets |
-| [**GetKeywordsetsKeywordsetId**](QualityApi.html#getkeywordsetskeywordsetid) | **GET** /api/v2/quality/keywordsets/{keywordSetId} | Get a keywordSet by id. |
-| [**GetPublishedforms**](QualityApi.html#getpublishedforms) | **GET** /api/v2/quality/publishedforms | Get the published evaluation forms. |
-| [**GetPublishedformsFormId**](QualityApi.html#getpublishedformsformid) | **GET** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
-| [**PostCalibrations**](QualityApi.html#postcalibrations) | **POST** /api/v2/quality/calibrations | Create a calibration |
-| [**PostConversationsConversationIdEvaluations**](QualityApi.html#postconversationsconversationidevaluations) | **POST** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
-| [**PostEvaluationsAggregatesQuery**](QualityApi.html#postevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
-| [**PostEvaluationsScoring**](QualityApi.html#postevaluationsscoring) | **POST** /api/v2/quality/evaluations/scoring | Score evaluation |
-| [**PostForms**](QualityApi.html#postforms) | **POST** /api/v2/quality/forms | Create an evaluation form. |
-| [**PostKeywordsets**](QualityApi.html#postkeywordsets) | **POST** /api/v2/quality/keywordsets | Create a Keyword Set |
-| [**PostPublishedforms**](QualityApi.html#postpublishedforms) | **POST** /api/v2/quality/publishedforms | Publish an evaluation form. |
-| [**PostSpotability**](QualityApi.html#postspotability) | **POST** /api/v2/quality/spotability | Retrieve the spotability statistic |
-| [**PutCalibrationsCalibrationId**](QualityApi.html#putcalibrationscalibrationid) | **PUT** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
-| [**PutConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#putconversationsconversationidevaluationsevaluationid) | **PUT** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
-| [**PutFormsFormId**](QualityApi.html#putformsformid) | **PUT** /api/v2/quality/forms/{formId} | Update an evaluation form. |
-| [**PutKeywordsetsKeywordsetId**](QualityApi.html#putkeywordsetskeywordsetid) | **PUT** /api/v2/quality/keywordsets/{keywordSetId} | Update a keywordSet to the specified keywordSet via PUT. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteCalibrationsCalibrationId**](QualityApi.html#deletecalibrationscalibrationid) | Delete a calibration by id. |
+| [**DeleteConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#deleteconversationsconversationidevaluationsevaluationid) | Delete an evaluation |
+| [**DeleteFormsFormId**](QualityApi.html#deleteformsformid) | Delete an evaluation form. |
+| [**DeleteKeywordsets**](QualityApi.html#deletekeywordsets) | Delete keyword sets |
+| [**DeleteKeywordsetsKeywordsetId**](QualityApi.html#deletekeywordsetskeywordsetid) | Delete a keywordSet by id. |
+| [**GetAgentsActivity**](QualityApi.html#getagentsactivity) | Gets a list of Agent Activities |
+| [**GetCalibrations**](QualityApi.html#getcalibrations) | Get the list of calibrations |
+| [**GetCalibrationsCalibrationId**](QualityApi.html#getcalibrationscalibrationid) | Get a calibration by id. |
+| [**GetConversationsConversationIdAudits**](QualityApi.html#getconversationsconversationidaudits) | Get audits for conversation or recording |
+| [**GetConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#getconversationsconversationidevaluationsevaluationid) | Get an evaluation |
+| [**GetEvaluationsQuery**](QualityApi.html#getevaluationsquery) | Queries Evaluations and returns a paged list |
+| [**GetEvaluatorsActivity**](QualityApi.html#getevaluatorsactivity) | Get an evaluator activity |
+| [**GetForms**](QualityApi.html#getforms) | Get the list of evaluation forms |
+| [**GetFormsFormId**](QualityApi.html#getformsformid) | Get an evaluation form |
+| [**GetFormsFormIdVersions**](QualityApi.html#getformsformidversions) | Gets all the revisions for a specific evaluation. |
+| [**GetKeywordsets**](QualityApi.html#getkeywordsets) | Get the list of keyword sets |
+| [**GetKeywordsetsKeywordsetId**](QualityApi.html#getkeywordsetskeywordsetid) | Get a keywordSet by id. |
+| [**GetPublishedforms**](QualityApi.html#getpublishedforms) | Get the published evaluation forms. |
+| [**GetPublishedformsFormId**](QualityApi.html#getpublishedformsformid) | Get the published evaluation forms. |
+| [**PostCalibrations**](QualityApi.html#postcalibrations) | Create a calibration |
+| [**PostConversationsConversationIdEvaluations**](QualityApi.html#postconversationsconversationidevaluations) | Create an evaluation |
+| [**PostEvaluationsAggregatesQuery**](QualityApi.html#postevaluationsaggregatesquery) | Query for evaluation aggregates |
+| [**PostEvaluationsScoring**](QualityApi.html#postevaluationsscoring) | Score evaluation |
+| [**PostForms**](QualityApi.html#postforms) | Create an evaluation form. |
+| [**PostKeywordsets**](QualityApi.html#postkeywordsets) | Create a Keyword Set |
+| [**PostPublishedforms**](QualityApi.html#postpublishedforms) | Publish an evaluation form. |
+| [**PostSpotability**](QualityApi.html#postspotability) | Retrieve the spotability statistic |
+| [**PutCalibrationsCalibrationId**](QualityApi.html#putcalibrationscalibrationid) | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
+| [**PutConversationsConversationIdEvaluationsEvaluationId**](QualityApi.html#putconversationsconversationidevaluationsevaluationid) | Update an evaluation |
+| [**PutFormsFormId**](QualityApi.html#putformsformid) | Update an evaluation form. |
+| [**PutKeywordsetsKeywordsetId**](QualityApi.html#putkeywordsetskeywordsetid) | Update a keywordSet to the specified keywordSet via PUT. |
 {: class="table table-striped"}
 
 <a name="deletecalibrationscalibrationid"></a>
@@ -47,6 +47,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete a calibration by id.
 
 
+
+Wraps DELETE /api/v2/quality/calibrations/{calibrationId} 
 
 ### Example
 ~~~csharp
@@ -105,6 +107,8 @@ namespace Example
 Delete an evaluation
 
 
+
+Wraps DELETE /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} 
 
 ### Example
 ~~~csharp
@@ -166,6 +170,8 @@ Delete an evaluation form.
 
 
 
+Wraps DELETE /api/v2/quality/forms/{formId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -221,6 +227,8 @@ namespace Example
 Delete keyword sets
 
 Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
+
+Wraps DELETE /api/v2/quality/keywordsets 
 
 ### Example
 ~~~csharp
@@ -278,6 +286,8 @@ Delete a keywordSet by id.
 
 
 
+Wraps DELETE /api/v2/quality/keywordsets/{keywordSetId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -332,6 +342,8 @@ void (empty response body)
 Gets a list of Agent Activities
 
 Including the number of evaluations and average evaluation score
+
+Wraps GET /api/v2/quality/agents/activity 
 
 ### Example
 ~~~csharp
@@ -411,6 +423,8 @@ Get the list of calibrations
 
 
 
+Wraps GET /api/v2/quality/calibrations 
+
 ### Example
 ~~~csharp
 using System;
@@ -485,6 +499,8 @@ Get a calibration by id.
 
 
 
+Wraps GET /api/v2/quality/calibrations/{calibrationId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -542,6 +558,8 @@ namespace Example
 Get audits for conversation or recording
 
 
+
+Wraps GET /api/v2/quality/conversations/{conversationId}/audits 
 
 ### Example
 ~~~csharp
@@ -615,6 +633,8 @@ Get an evaluation
 
 
 
+Wraps GET /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -674,6 +694,8 @@ namespace Example
 Queries Evaluations and returns a paged list
 
 Query params must include one of conversationId, evaluatorUserId, or agentUserId
+
+Wraps GET /api/v2/quality/evaluations/query 
 
 ### Example
 ~~~csharp
@@ -763,6 +785,8 @@ Get an evaluator activity
 
 
 
+Wraps GET /api/v2/quality/evaluators/activity 
+
 ### Example
 ~~~csharp
 using System;
@@ -839,6 +863,8 @@ Get the list of evaluation forms
 
 
 
+Wraps GET /api/v2/quality/forms 
+
 ### Example
 ~~~csharp
 using System;
@@ -907,6 +933,8 @@ Get an evaluation form
 
 
 
+Wraps GET /api/v2/quality/forms/{formId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -963,6 +991,8 @@ Gets all the revisions for a specific evaluation.
 
 
 
+Wraps GET /api/v2/quality/forms/{formId}/versions 
+
 ### Example
 ~~~csharp
 using System;
@@ -1017,11 +1047,13 @@ namespace Example
 
 <a name="getkeywordsets"></a>
 
-## [**KeywordSetEntityListing**](KeywordSetEntityListing.html) GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null)
+## [**KeywordSetEntityListing**](KeywordSetEntityListing.html) GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
 
 Get the list of keyword sets
 
 
+
+Wraps GET /api/v2/quality/keywordsets 
 
 ### Example
 ~~~csharp
@@ -1051,11 +1083,12 @@ namespace Example
             var name = name_example;  // string | the keyword set name - used for filtering results in searches. (optional) 
             var queueId = queueId_example;  // string | the queue id - used for filtering results in searches. (optional) 
             var agentId = agentId_example;  // string | the agent id - used for filtering results in searches. (optional) 
+            var _operator = _operator_example;  // string | If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional) 
 
             try
             {
                 // Get the list of keyword sets
-                KeywordSetEntityListing result = apiInstance.GetKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId);
+                KeywordSetEntityListing result = apiInstance.GetKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId, _operator);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1081,6 +1114,7 @@ namespace Example
 | **name** | **string**| the keyword set name - used for filtering results in searches. | [optional]  |
 | **queueId** | **string**| the queue id - used for filtering results in searches. | [optional]  |
 | **agentId** | **string**| the agent id - used for filtering results in searches. | [optional]  |
+| **_operator** | **string**| If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1094,6 +1128,8 @@ namespace Example
 Get a keywordSet by id.
 
 
+
+Wraps GET /api/v2/quality/keywordsets/{keywordSetId} 
 
 ### Example
 ~~~csharp
@@ -1150,6 +1186,8 @@ namespace Example
 Get the published evaluation forms.
 
 
+
+Wraps GET /api/v2/quality/publishedforms 
 
 ### Example
 ~~~csharp
@@ -1211,6 +1249,8 @@ Get the published evaluation forms.
 
 
 
+Wraps GET /api/v2/quality/publishedforms/{formId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1266,6 +1306,8 @@ namespace Example
 Create a calibration
 
 
+
+Wraps POST /api/v2/quality/calibrations 
 
 ### Example
 ~~~csharp
@@ -1324,6 +1366,8 @@ namespace Example
 Create an evaluation
 
 
+
+Wraps POST /api/v2/quality/conversations/{conversationId}/evaluations 
 
 ### Example
 ~~~csharp
@@ -1385,6 +1429,8 @@ Query for evaluation aggregates
 
 
 
+Wraps POST /api/v2/analytics/evaluations/aggregates/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -1440,6 +1486,8 @@ namespace Example
 Score evaluation
 
 
+
+Wraps POST /api/v2/quality/evaluations/scoring 
 
 ### Example
 ~~~csharp
@@ -1497,6 +1545,8 @@ Create an evaluation form.
 
 
 
+Wraps POST /api/v2/quality/forms 
+
 ### Example
 ~~~csharp
 using System;
@@ -1552,6 +1602,8 @@ namespace Example
 Create a Keyword Set
 
 
+
+Wraps POST /api/v2/quality/keywordsets 
 
 ### Example
 ~~~csharp
@@ -1611,6 +1663,8 @@ Publish an evaluation form.
 
 
 
+Wraps POST /api/v2/quality/publishedforms 
+
 ### Example
 ~~~csharp
 using System;
@@ -1667,6 +1721,8 @@ Retrieve the spotability statistic
 
 
 
+Wraps POST /api/v2/quality/spotability 
+
 ### Example
 ~~~csharp
 using System;
@@ -1722,6 +1778,8 @@ namespace Example
 Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
 
 
+
+Wraps PUT /api/v2/quality/calibrations/{calibrationId} 
 
 ### Example
 ~~~csharp
@@ -1780,6 +1838,8 @@ namespace Example
 Update an evaluation
 
 
+
+Wraps PUT /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} 
 
 ### Example
 ~~~csharp
@@ -1843,6 +1903,8 @@ Update an evaluation form.
 
 
 
+Wraps PUT /api/v2/quality/forms/{formId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1900,6 +1962,8 @@ namespace Example
 Update a keywordSet to the specified keywordSet via PUT.
 
 
+
+Wraps PUT /api/v2/quality/keywordsets/{keywordSetId} 
 
 ### Example
 ~~~csharp

@@ -896,6 +896,18 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostChats
+        /// </summary>
+        [Test]
+        public void PostChatsTest()
+        {
+            // TODO: add unit test for the method 'PostChats'
+            CreateWebChatRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostChats(body);
+            Assert.IsInstanceOf<ChatConversation> (response, "response is ChatConversation");
+        }
+        
+        /// <summary>
         /// Test PostChatsChatIdParticipantsParticipantIdReplace
         /// </summary>
         [Test]
@@ -986,6 +998,18 @@ namespace ININ.PureCloudApi.Test
             ConversationQuery body = null; // TODO: replace null with proper value
             var response = instance.PostConversationsDetailsQuery(body);
             Assert.IsInstanceOf<AnalyticsConversationQueryResponse> (response, "response is AnalyticsConversationQueryResponse");
+        }
+        
+        /// <summary>
+        /// Test PostEmails
+        /// </summary>
+        [Test]
+        public void PostEmailsTest()
+        {
+            // TODO: add unit test for the method 'PostEmails'
+            CreateEmailRequest body = null; // TODO: replace null with proper value
+            var response = instance.PostEmails(body);
+            Assert.IsInstanceOf<EmailConversation> (response, "response is EmailConversation");
         }
         
         /// <summary>

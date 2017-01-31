@@ -286,7 +286,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SocialMediaHub">SocialMediaHub.</param>
         /// <param name="SocialUserName">SocialUserName.</param>
         /// <param name="PreviewText">PreviewText.</param>
-        public SocialConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataNotificationCreatedBy User = null, SocialConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, SocialConversationNotificationErrorInfo ErrorInfo = null, SocialConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, SocialConversationNotificationUriReference ExternalContact = null, SocialConversationNotificationUriReference ExternalOrganization = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
+        public SocialConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, SocialConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, SocialConversationNotificationErrorInfo ErrorInfo = null, SocialConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, SocialConversationNotificationUriReference ExternalContact = null, SocialConversationNotificationUriReference ExternalOrganization = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -377,7 +377,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public DocumentDataNotificationCreatedBy User { get; set; }
+        public DocumentDataV2NotificationCreatedBy User { get; set; }
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>

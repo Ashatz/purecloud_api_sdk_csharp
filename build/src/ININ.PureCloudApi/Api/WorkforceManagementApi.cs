@@ -59,6 +59,48 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of DecisionsDownloadLink</returns>
         ApiResponse<DecisionsDownloadLink> GetDecisionsDownloadsDownloadIdWithHttpInfo (string downloadId, string downloadfilename = null);
         /// <summary>
+        /// Get activity codes corresponding to a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>ActivityCodeContainer</returns>
+        ActivityCodeContainer GetManagementunitsMuIdActivitycodes (string muId);
+
+        /// <summary>
+        /// Get activity codes corresponding to a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>ApiResponse of ActivityCodeContainer</returns>
+        ApiResponse<ActivityCodeContainer> GetManagementunitsMuIdActivitycodesWithHttpInfo (string muId);
+        /// <summary>
+        /// Get agents in the management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>WfmUserEntityListing</returns>
+        WfmUserEntityListing GetManagementunitsMuIdUsers (string muId);
+
+        /// <summary>
+        /// Get agents in the management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>ApiResponse of WfmUserEntityListing</returns>
+        ApiResponse<WfmUserEntityListing> GetManagementunitsMuIdUsersWithHttpInfo (string muId);
+        /// <summary>
         /// Get a list of time off requests for any user
         /// </summary>
         /// <remarks>
@@ -216,6 +258,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>ApiResponse of ForecastCreationCompletion</returns>
         ApiResponse<ForecastCreationCompletion> PostLongtermforecastsWithHttpInfo (ForecastCreation body);
         /// <summary>
+        /// Get user schedules within the given time range
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>UserScheduleContainer</returns>
+        UserScheduleContainer PostManagementunitsMuIdSchedulesSearch (string muId, UserListScheduleRequestBody body = null);
+
+        /// <summary>
+        /// Get user schedules within the given time range
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of UserScheduleContainer</returns>
+        ApiResponse<UserScheduleContainer> PostManagementunitsMuIdSchedulesSearchWithHttpInfo (string muId, UserListScheduleRequestBody body = null);
+        /// <summary>
         /// Get a schedule for the current user
         /// </summary>
         /// <remarks>
@@ -223,8 +288,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>TimeOffRequestList</returns>
-        TimeOffRequestList PostSchedules (CurrentUserScheduleRequestBody body = null);
+        /// <returns>UserScheduleContainer</returns>
+        UserScheduleContainer PostSchedules (CurrentUserScheduleRequestBody body = null);
 
         /// <summary>
         /// Get a schedule for the current user
@@ -234,8 +299,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of TimeOffRequestList</returns>
-        ApiResponse<TimeOffRequestList> PostSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null);
+        /// <returns>ApiResponse of UserScheduleContainer</returns>
+        ApiResponse<UserScheduleContainer> PostSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -282,6 +347,48 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadfilename">The file name used to get the download url (optional, default to downloadfilename)</param>
         /// <returns>Task of ApiResponse (DecisionsDownloadLink)</returns>
         System.Threading.Tasks.Task<ApiResponse<DecisionsDownloadLink>> GetDecisionsDownloadsDownloadIdAsyncWithHttpInfo (string downloadId, string downloadfilename = null);
+        /// <summary>
+        /// Get activity codes corresponding to a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>Task of ActivityCodeContainer</returns>
+        System.Threading.Tasks.Task<ActivityCodeContainer> GetManagementunitsMuIdActivitycodesAsync (string muId);
+
+        /// <summary>
+        /// Get activity codes corresponding to a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>Task of ApiResponse (ActivityCodeContainer)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetManagementunitsMuIdActivitycodesAsyncWithHttpInfo (string muId);
+        /// <summary>
+        /// Get agents in the management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>Task of WfmUserEntityListing</returns>
+        System.Threading.Tasks.Task<WfmUserEntityListing> GetManagementunitsMuIdUsersAsync (string muId);
+
+        /// <summary>
+        /// Get agents in the management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetManagementunitsMuIdUsersAsyncWithHttpInfo (string muId);
         /// <summary>
         /// Get a list of time off requests for any user
         /// </summary>
@@ -440,6 +547,29 @@ namespace ININ.PureCloudApi.Api
         /// <returns>Task of ApiResponse (ForecastCreationCompletion)</returns>
         System.Threading.Tasks.Task<ApiResponse<ForecastCreationCompletion>> PostLongtermforecastsAsyncWithHttpInfo (ForecastCreation body);
         /// <summary>
+        /// Get user schedules within the given time range
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of UserScheduleContainer</returns>
+        System.Threading.Tasks.Task<UserScheduleContainer> PostManagementunitsMuIdSchedulesSearchAsync (string muId, UserListScheduleRequestBody body = null);
+
+        /// <summary>
+        /// Get user schedules within the given time range
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostManagementunitsMuIdSchedulesSearchAsyncWithHttpInfo (string muId, UserListScheduleRequestBody body = null);
+        /// <summary>
         /// Get a schedule for the current user
         /// </summary>
         /// <remarks>
@@ -447,8 +577,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of TimeOffRequestList</returns>
-        System.Threading.Tasks.Task<TimeOffRequestList> PostSchedulesAsync (CurrentUserScheduleRequestBody body = null);
+        /// <returns>Task of UserScheduleContainer</returns>
+        System.Threading.Tasks.Task<UserScheduleContainer> PostSchedulesAsync (CurrentUserScheduleRequestBody body = null);
 
         /// <summary>
         /// Get a schedule for the current user
@@ -458,8 +588,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null);
+        /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null);
         #endregion Asynchronous Operations
     }
 
@@ -867,6 +997,320 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<DecisionsDownloadLink>(localVarStatusCode,
                 localVarHeaders,
                 (DecisionsDownloadLink) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionsDownloadLink)));
+            
+        }
+
+        /// <summary>
+        /// Get activity codes corresponding to a management unit 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>ActivityCodeContainer</returns>
+        public ActivityCodeContainer GetManagementunitsMuIdActivitycodes (string muId)
+        {
+             ApiResponse<ActivityCodeContainer> localVarResponse = GetManagementunitsMuIdActivitycodesWithHttpInfo(muId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get activity codes corresponding to a management unit 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>ApiResponse of ActivityCodeContainer</returns>
+        public ApiResponse< ActivityCodeContainer > GetManagementunitsMuIdActivitycodesWithHttpInfo (string muId)
+        {
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetManagementunitsMuIdActivitycodes");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/activitycodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdActivitycodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdActivitycodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityCodeContainer>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityCodeContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityCodeContainer)));
+            
+        }
+
+        /// <summary>
+        /// Get activity codes corresponding to a management unit 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>Task of ActivityCodeContainer</returns>
+        public async System.Threading.Tasks.Task<ActivityCodeContainer> GetManagementunitsMuIdActivitycodesAsync (string muId)
+        {
+             ApiResponse<ActivityCodeContainer> localVarResponse = await GetManagementunitsMuIdActivitycodesAsyncWithHttpInfo(muId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get activity codes corresponding to a management unit 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>Task of ApiResponse (ActivityCodeContainer)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetManagementunitsMuIdActivitycodesAsyncWithHttpInfo (string muId)
+        {
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetManagementunitsMuIdActivitycodes");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/activitycodes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdActivitycodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdActivitycodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityCodeContainer>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityCodeContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityCodeContainer)));
+            
+        }
+
+        /// <summary>
+        /// Get agents in the management unit 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>WfmUserEntityListing</returns>
+        public WfmUserEntityListing GetManagementunitsMuIdUsers (string muId)
+        {
+             ApiResponse<WfmUserEntityListing> localVarResponse = GetManagementunitsMuIdUsersWithHttpInfo(muId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get agents in the management unit 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>ApiResponse of WfmUserEntityListing</returns>
+        public ApiResponse< WfmUserEntityListing > GetManagementunitsMuIdUsersWithHttpInfo (string muId)
+        {
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetManagementunitsMuIdUsers");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmUserEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (WfmUserEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmUserEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get agents in the management unit 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>Task of WfmUserEntityListing</returns>
+        public async System.Threading.Tasks.Task<WfmUserEntityListing> GetManagementunitsMuIdUsersAsync (string muId)
+        {
+             ApiResponse<WfmUserEntityListing> localVarResponse = await GetManagementunitsMuIdUsersAsyncWithHttpInfo(muId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get agents in the management unit 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetManagementunitsMuIdUsersAsyncWithHttpInfo (string muId)
+        {
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetManagementunitsMuIdUsers");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetManagementunitsMuIdUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmUserEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (WfmUserEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmUserEntityListing)));
             
         }
 
@@ -2052,14 +2496,191 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
+        /// Get user schedules within the given time range 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>UserScheduleContainer</returns>
+        public UserScheduleContainer PostManagementunitsMuIdSchedulesSearch (string muId, UserListScheduleRequestBody body = null)
+        {
+             ApiResponse<UserScheduleContainer> localVarResponse = PostManagementunitsMuIdSchedulesSearchWithHttpInfo(muId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get user schedules within the given time range 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of UserScheduleContainer</returns>
+        public ApiResponse< UserScheduleContainer > PostManagementunitsMuIdSchedulesSearchWithHttpInfo (string muId, UserListScheduleRequestBody body = null)
+        {
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostManagementunitsMuIdSchedulesSearch");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/schedules/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostManagementunitsMuIdSchedulesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostManagementunitsMuIdSchedulesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserScheduleContainer>(localVarStatusCode,
+                localVarHeaders,
+                (UserScheduleContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleContainer)));
+            
+        }
+
+        /// <summary>
+        /// Get user schedules within the given time range 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of UserScheduleContainer</returns>
+        public async System.Threading.Tasks.Task<UserScheduleContainer> PostManagementunitsMuIdSchedulesSearchAsync (string muId, UserListScheduleRequestBody body = null)
+        {
+             ApiResponse<UserScheduleContainer> localVarResponse = await PostManagementunitsMuIdSchedulesSearchAsyncWithHttpInfo(muId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get user schedules within the given time range 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostManagementunitsMuIdSchedulesSearchAsyncWithHttpInfo (string muId, UserListScheduleRequestBody body = null)
+        {
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostManagementunitsMuIdSchedulesSearch");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/schedules/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostManagementunitsMuIdSchedulesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostManagementunitsMuIdSchedulesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserScheduleContainer>(localVarStatusCode,
+                localVarHeaders,
+                (UserScheduleContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleContainer)));
+            
+        }
+
+        /// <summary>
         /// Get a schedule for the current user 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>TimeOffRequestList</returns>
-        public TimeOffRequestList PostSchedules (CurrentUserScheduleRequestBody body = null)
+        /// <returns>UserScheduleContainer</returns>
+        public UserScheduleContainer PostSchedules (CurrentUserScheduleRequestBody body = null)
         {
-             ApiResponse<TimeOffRequestList> localVarResponse = PostSchedulesWithHttpInfo(body);
+             ApiResponse<UserScheduleContainer> localVarResponse = PostSchedulesWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -2068,8 +2689,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of TimeOffRequestList</returns>
-        public ApiResponse< TimeOffRequestList > PostSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null)
+        /// <returns>ApiResponse of UserScheduleContainer</returns>
+        public ApiResponse< UserScheduleContainer > PostSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null)
         {
 
             var localVarPath = "/api/v2/workforcemanagement/schedules";
@@ -2127,9 +2748,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TimeOffRequestList>(localVarStatusCode,
+            return new ApiResponse<UserScheduleContainer>(localVarStatusCode,
                 localVarHeaders,
-                (TimeOffRequestList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestList)));
+                (UserScheduleContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleContainer)));
             
         }
 
@@ -2138,10 +2759,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of TimeOffRequestList</returns>
-        public async System.Threading.Tasks.Task<TimeOffRequestList> PostSchedulesAsync (CurrentUserScheduleRequestBody body = null)
+        /// <returns>Task of UserScheduleContainer</returns>
+        public async System.Threading.Tasks.Task<UserScheduleContainer> PostSchedulesAsync (CurrentUserScheduleRequestBody body = null)
         {
-             ApiResponse<TimeOffRequestList> localVarResponse = await PostSchedulesAsyncWithHttpInfo(body);
+             ApiResponse<UserScheduleContainer> localVarResponse = await PostSchedulesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -2151,8 +2772,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> PostSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null)
+        /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null)
         {
 
             var localVarPath = "/api/v2/workforcemanagement/schedules";
@@ -2210,9 +2831,9 @@ namespace ININ.PureCloudApi.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TimeOffRequestList>(localVarStatusCode,
+            return new ApiResponse<UserScheduleContainer>(localVarStatusCode,
                 localVarHeaders,
-                (TimeOffRequestList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimeOffRequestList)));
+                (UserScheduleContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserScheduleContainer)));
             
         }
 

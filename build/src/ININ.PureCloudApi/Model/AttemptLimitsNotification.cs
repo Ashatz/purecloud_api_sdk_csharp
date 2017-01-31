@@ -57,25 +57,27 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="DateModified">DateModified.</param>
         /// <param name="Version">Version.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="MaxAttemptsPerContact">MaxAttemptsPerContact.</param>
         /// <param name="MaxAttemptsPerNumber">MaxAttemptsPerNumber.</param>
         /// <param name="TimeZoneId">TimeZoneId.</param>
         /// <param name="ResetPeriod">ResetPeriod.</param>
         /// <param name="RecallEntries">RecallEntries.</param>
-        public AttemptLimitsNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Object AdditionalProperties = null, int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, AttemptLimitsNotificationRecallEntries> RecallEntries = null)
+        /// <param name="BreadthFirstRecalls">BreadthFirstRecalls.</param>
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public AttemptLimitsNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, AttemptLimitsNotificationRecallEntries> RecallEntries = null, bool? BreadthFirstRecalls = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
-            this.AdditionalProperties = AdditionalProperties;
             this.MaxAttemptsPerContact = MaxAttemptsPerContact;
             this.MaxAttemptsPerNumber = MaxAttemptsPerNumber;
             this.TimeZoneId = TimeZoneId;
             this.ResetPeriod = ResetPeriod;
             this.RecallEntries = RecallEntries;
+            this.BreadthFirstRecalls = BreadthFirstRecalls;
+            this.AdditionalProperties = AdditionalProperties;
         }
         
         /// <summary>
@@ -104,11 +106,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
-        /// <summary>
         /// Gets or Sets MaxAttemptsPerContact
         /// </summary>
         [DataMember(Name="maxAttemptsPerContact", EmitDefaultValue=false)]
@@ -129,6 +126,16 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="recallEntries", EmitDefaultValue=false)]
         public Dictionary<string, AttemptLimitsNotificationRecallEntries> RecallEntries { get; set; }
         /// <summary>
+        /// Gets or Sets BreadthFirstRecalls
+        /// </summary>
+        [DataMember(Name="breadthFirstRecalls", EmitDefaultValue=false)]
+        public bool? BreadthFirstRecalls { get; set; }
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Object AdditionalProperties { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -141,12 +148,13 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  MaxAttemptsPerContact: ").Append(MaxAttemptsPerContact).Append("\n");
             sb.Append("  MaxAttemptsPerNumber: ").Append(MaxAttemptsPerNumber).Append("\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("  ResetPeriod: ").Append(ResetPeriod).Append("\n");
             sb.Append("  RecallEntries: ").Append(RecallEntries).Append("\n");
+            sb.Append("  BreadthFirstRecalls: ").Append(BreadthFirstRecalls).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -209,11 +217,6 @@ namespace ININ.PureCloudApi.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
-                ) &&
-                (
                     this.MaxAttemptsPerContact == other.MaxAttemptsPerContact ||
                     this.MaxAttemptsPerContact != null &&
                     this.MaxAttemptsPerContact.Equals(other.MaxAttemptsPerContact)
@@ -237,6 +240,16 @@ namespace ININ.PureCloudApi.Model
                     this.RecallEntries == other.RecallEntries ||
                     this.RecallEntries != null &&
                     this.RecallEntries.SequenceEqual(other.RecallEntries)
+                ) &&
+                (
+                    this.BreadthFirstRecalls == other.BreadthFirstRecalls ||
+                    this.BreadthFirstRecalls != null &&
+                    this.BreadthFirstRecalls.Equals(other.BreadthFirstRecalls)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -261,8 +274,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 if (this.MaxAttemptsPerContact != null)
                     hash = hash * 59 + this.MaxAttemptsPerContact.GetHashCode();
                 if (this.MaxAttemptsPerNumber != null)
@@ -273,6 +284,10 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.ResetPeriod.GetHashCode();
                 if (this.RecallEntries != null)
                     hash = hash * 59 + this.RecallEntries.GetHashCode();
+                if (this.BreadthFirstRecalls != null)
+                    hash = hash * 59 + this.BreadthFirstRecalls.GetHashCode();
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;
             }
         }

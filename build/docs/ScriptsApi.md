@@ -5,17 +5,17 @@ title: ScriptsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**GetPublished**](ScriptsApi.html#getpublished) | **GET** /api/v2/scripts/published | Get the published scripts. |
-| [**GetPublishedScriptId**](ScriptsApi.html#getpublishedscriptid) | **GET** /api/v2/scripts/published/{scriptId} | Get the published script. |
-| [**GetPublishedScriptIdPages**](ScriptsApi.html#getpublishedscriptidpages) | **GET** /api/v2/scripts/published/{scriptId}/pages | Get the list of published pages |
-| [**GetPublishedScriptIdPagesPageId**](ScriptsApi.html#getpublishedscriptidpagespageid) | **GET** /api/v2/scripts/published/{scriptId}/pages/{pageId} | Get the published page. |
-| [**GetPublishedScriptIdVariables**](ScriptsApi.html#getpublishedscriptidvariables) | **GET** /api/v2/scripts/published/{scriptId}/variables | Get the published variables |
-| [**GetScriptId**](ScriptsApi.html#getscriptid) | **GET** /api/v2/scripts/{scriptId} | Get a script |
-| [**GetScriptIdPages**](ScriptsApi.html#getscriptidpages) | **GET** /api/v2/scripts/{scriptId}/pages | Get the list of pages |
-| [**GetScriptIdPagesPageId**](ScriptsApi.html#getscriptidpagespageid) | **GET** /api/v2/scripts/{scriptId}/pages/{pageId} | Get a page |
-| [**GetScripts**](ScriptsApi.html#getscripts) | **GET** /api/v2/scripts | Get the list of scripts |
+| Method | Description |
+| ------------- | ------------- |
+| [**GetPublished**](ScriptsApi.html#getpublished) | Get the published scripts. |
+| [**GetPublishedScriptId**](ScriptsApi.html#getpublishedscriptid) | Get the published script. |
+| [**GetPublishedScriptIdPages**](ScriptsApi.html#getpublishedscriptidpages) | Get the list of published pages |
+| [**GetPublishedScriptIdPagesPageId**](ScriptsApi.html#getpublishedscriptidpagespageid) | Get the published page. |
+| [**GetPublishedScriptIdVariables**](ScriptsApi.html#getpublishedscriptidvariables) | Get the published variables |
+| [**GetScriptId**](ScriptsApi.html#getscriptid) | Get a script |
+| [**GetScriptIdPages**](ScriptsApi.html#getscriptidpages) | Get the list of pages |
+| [**GetScriptIdPagesPageId**](ScriptsApi.html#getscriptidpagespageid) | Get a page |
+| [**GetScripts**](ScriptsApi.html#getscripts) | Get the list of scripts |
 {: class="table table-striped"}
 
 <a name="getpublished"></a>
@@ -25,6 +25,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Get the published scripts.
 
 
+
+Wraps GET /api/v2/scripts/published 
 
 ### Example
 ~~~csharp
@@ -92,6 +94,8 @@ Get the published script.
 
 
 
+Wraps GET /api/v2/scripts/published/{scriptId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -148,6 +152,8 @@ Get the list of published pages
 
 
 
+Wraps GET /api/v2/scripts/published/{scriptId}/pages 
+
 ### Example
 ~~~csharp
 using System;
@@ -203,6 +209,8 @@ namespace Example
 Get the published page.
 
 
+
+Wraps GET /api/v2/scripts/published/{scriptId}/pages/{pageId} 
 
 ### Example
 ~~~csharp
@@ -262,6 +270,8 @@ Get the published variables
 
 
 
+Wraps GET /api/v2/scripts/published/{scriptId}/variables 
+
 ### Example
 ~~~csharp
 using System;
@@ -317,6 +327,8 @@ namespace Example
 Get a script
 
 
+
+Wraps GET /api/v2/scripts/{scriptId} 
 
 ### Example
 ~~~csharp
@@ -374,6 +386,8 @@ Get the list of pages
 
 
 
+Wraps GET /api/v2/scripts/{scriptId}/pages 
+
 ### Example
 ~~~csharp
 using System;
@@ -429,6 +443,8 @@ namespace Example
 Get a page
 
 
+
+Wraps GET /api/v2/scripts/{scriptId}/pages/{pageId} 
 
 ### Example
 ~~~csharp
@@ -487,6 +503,8 @@ namespace Example
 Get the list of scripts
 
 
+
+Wraps GET /api/v2/scripts 
 
 ### Example
 ~~~csharp

@@ -42,13 +42,7 @@ namespace ININ.PureCloudApi.Model
             /// Enum Failed for "FAILED"
             /// </summary>
             [EnumMember(Value = "FAILED")]
-            Failed,
-            
-            /// <summary>
-            /// Enum Completed for "COMPLETED"
-            /// </summary>
-            [EnumMember(Value = "COMPLETED")]
-            Completed
+            Failed
         }
         /// <summary>
         /// Gets or Sets ImportState

@@ -12,14 +12,14 @@ title: ContactListNotification
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
 | **ColumnNames** | **List&lt;string&gt;** |  | [optional] |
 | **PhoneColumns** | [**List&lt;ContactListNotificationPhoneColumns&gt;**](ContactListNotificationPhoneColumns.html) |  | [optional] |
 | **ImportStatus** | [**ContactListNotificationImportStatus**](ContactListNotificationImportStatus.html) |  | [optional] |
 | **PreviewModeColumnName** | **string** |  | [optional] |
 | **PreviewModeAcceptedValues** | **List&lt;string&gt;** |  | [optional] |
 | **Size** | **int?** |  | [optional] |
-| **AttemptLimits** | [**DocumentDataNotificationCreatedBy**](DocumentDataNotificationCreatedBy.html) |  | [optional] |
+| **AttemptLimits** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
+| **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 
 

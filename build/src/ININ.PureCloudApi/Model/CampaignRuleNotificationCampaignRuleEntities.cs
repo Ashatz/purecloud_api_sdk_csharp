@@ -23,29 +23,22 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Campaigns">Campaigns.</param>
         /// <param name="Sequences">Sequences.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public CampaignRuleNotificationCampaignRuleEntities(List<string> Campaigns = null, List<string> Sequences = null, Object AdditionalProperties = null)
+        public CampaignRuleNotificationCampaignRuleEntities(List<DocumentDataV2NotificationCreatedBy> Campaigns = null, List<CampaignRuleNotificationUriReference> Sequences = null)
         {
             this.Campaigns = Campaigns;
             this.Sequences = Sequences;
-            this.AdditionalProperties = AdditionalProperties;
         }
         
         /// <summary>
         /// Gets or Sets Campaigns
         /// </summary>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
-        public List<string> Campaigns { get; set; }
+        public List<DocumentDataV2NotificationCreatedBy> Campaigns { get; set; }
         /// <summary>
         /// Gets or Sets Sequences
         /// </summary>
         [DataMember(Name="sequences", EmitDefaultValue=false)]
-        public List<string> Sequences { get; set; }
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
+        public List<CampaignRuleNotificationUriReference> Sequences { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,7 +49,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class CampaignRuleNotificationCampaignRuleEntities {\n");
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,11 +94,6 @@ namespace ININ.PureCloudApi.Model
                     this.Sequences == other.Sequences ||
                     this.Sequences != null &&
                     this.Sequences.SequenceEqual(other.Sequences)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -125,8 +112,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.Campaigns.GetHashCode();
                 if (this.Sequences != null)
                     hash = hash * 59 + this.Sequences.GetHashCode();
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;
             }
         }

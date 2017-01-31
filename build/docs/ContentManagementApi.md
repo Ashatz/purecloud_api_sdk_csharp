@@ -5,46 +5,46 @@ title: ContentManagementApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteDocumentsDocumentId**](ContentManagementApi.html#deletedocumentsdocumentid) | **DELETE** /api/v2/contentmanagement/documents/{documentId} | Delete a document. |
-| [**DeleteSharesShareId**](ContentManagementApi.html#deletesharesshareid) | **DELETE** /api/v2/contentmanagement/shares/{shareId} | Deletes an existing share. |
-| [**DeleteStatusStatusId**](ContentManagementApi.html#deletestatusstatusid) | **DELETE** /api/v2/contentmanagement/status/{statusId} | Cancel the command for this status |
-| [**DeleteWorkspacesWorkspaceId**](ContentManagementApi.html#deleteworkspacesworkspaceid) | **DELETE** /api/v2/contentmanagement/workspaces/{workspaceId} | Delete a workspace |
-| [**DeleteWorkspacesWorkspaceIdMembersMemberId**](ContentManagementApi.html#deleteworkspacesworkspaceidmembersmemberid) | **DELETE** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Delete a member from a workspace |
-| [**DeleteWorkspacesWorkspaceIdTagvaluesTagId**](ContentManagementApi.html#deleteworkspacesworkspaceidtagvaluestagid) | **DELETE** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Delete workspace tag |
-| [**GetDocuments**](ContentManagementApi.html#getdocuments) | **GET** /api/v2/contentmanagement/documents | Get a list of documents. |
-| [**GetDocumentsDocumentId**](ContentManagementApi.html#getdocumentsdocumentid) | **GET** /api/v2/contentmanagement/documents/{documentId} | Get a document. |
-| [**GetDocumentsDocumentIdAudits**](ContentManagementApi.html#getdocumentsdocumentidaudits) | **GET** /api/v2/contentmanagement/documents/{documentId}/audits | Get a list of audits for a document. |
-| [**GetDocumentsDocumentIdContent**](ContentManagementApi.html#getdocumentsdocumentidcontent) | **GET** /api/v2/contentmanagement/documents/{documentId}/content | Download a document. |
-| [**GetQuery**](ContentManagementApi.html#getquery) | **GET** /api/v2/contentmanagement/query | Query content |
-| [**GetSecurityprofiles**](ContentManagementApi.html#getsecurityprofiles) | **GET** /api/v2/contentmanagement/securityprofiles | Get a List of Security Profiles |
-| [**GetSecurityprofilesSecurityprofileId**](ContentManagementApi.html#getsecurityprofilessecurityprofileid) | **GET** /api/v2/contentmanagement/securityprofiles/{securityProfileId} | Get a Security Profile |
-| [**GetSharedSharedId**](ContentManagementApi.html#getsharedsharedid) | **GET** /api/v2/contentmanagement/shared/{sharedId} | Get shared documents. Securely download a shared document. |
-| [**GetShares**](ContentManagementApi.html#getshares) | **GET** /api/v2/contentmanagement/shares | Gets a list of shares.  You must specify at least one filter (e.g. entityId). |
-| [**GetSharesShareId**](ContentManagementApi.html#getsharesshareid) | **GET** /api/v2/contentmanagement/shares/{shareId} | Retrieve details about an existing share. |
-| [**GetStatus**](ContentManagementApi.html#getstatus) | **GET** /api/v2/contentmanagement/status | Get a list of statuses for pending operations |
-| [**GetStatusStatusId**](ContentManagementApi.html#getstatusstatusid) | **GET** /api/v2/contentmanagement/status/{statusId} | Get a status. |
-| [**GetUsage**](ContentManagementApi.html#getusage) | **GET** /api/v2/contentmanagement/usage | Get usage details. |
-| [**GetWorkspaces**](ContentManagementApi.html#getworkspaces) | **GET** /api/v2/contentmanagement/workspaces | Get a list of workspaces. |
-| [**GetWorkspacesWorkspaceId**](ContentManagementApi.html#getworkspacesworkspaceid) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId} | Get a workspace. |
-| [**GetWorkspacesWorkspaceIdDocuments**](ContentManagementApi.html#getworkspacesworkspaceiddocuments) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/documents | Get a list of documents. |
-| [**GetWorkspacesWorkspaceIdMembers**](ContentManagementApi.html#getworkspacesworkspaceidmembers) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/members | Get a list workspace members |
-| [**GetWorkspacesWorkspaceIdMembersMemberId**](ContentManagementApi.html#getworkspacesworkspaceidmembersmemberid) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Get a workspace member |
-| [**GetWorkspacesWorkspaceIdTagvalues**](ContentManagementApi.html#getworkspacesworkspaceidtagvalues) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Get a list of workspace tags |
-| [**GetWorkspacesWorkspaceIdTagvaluesTagId**](ContentManagementApi.html#getworkspacesworkspaceidtagvaluestagid) | **GET** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Get a workspace tag |
-| [**PostAuditquery**](ContentManagementApi.html#postauditquery) | **POST** /api/v2/contentmanagement/auditquery | Query audits |
-| [**PostDocuments**](ContentManagementApi.html#postdocuments) | **POST** /api/v2/contentmanagement/documents | Add a document. |
-| [**PostDocumentsDocumentId**](ContentManagementApi.html#postdocumentsdocumentid) | **POST** /api/v2/contentmanagement/documents/{documentId} | Update a document. |
-| [**PostDocumentsDocumentIdContent**](ContentManagementApi.html#postdocumentsdocumentidcontent) | **POST** /api/v2/contentmanagement/documents/{documentId}/content | Replace the contents of a document. |
-| [**PostQuery**](ContentManagementApi.html#postquery) | **POST** /api/v2/contentmanagement/query | Query content |
-| [**PostShares**](ContentManagementApi.html#postshares) | **POST** /api/v2/contentmanagement/shares | Creates a new share or updates an existing share if the entity has already been shared |
-| [**PostWorkspaces**](ContentManagementApi.html#postworkspaces) | **POST** /api/v2/contentmanagement/workspaces | Create a group workspace |
-| [**PostWorkspacesWorkspaceIdTagvalues**](ContentManagementApi.html#postworkspacesworkspaceidtagvalues) | **POST** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Create a workspace tag |
-| [**PostWorkspacesWorkspaceIdTagvaluesQuery**](ContentManagementApi.html#postworkspacesworkspaceidtagvaluesquery) | **POST** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query | Perform a prefix query on tags in the workspace |
-| [**PutWorkspacesWorkspaceId**](ContentManagementApi.html#putworkspacesworkspaceid) | **PUT** /api/v2/contentmanagement/workspaces/{workspaceId} | Update a workspace |
-| [**PutWorkspacesWorkspaceIdMembersMemberId**](ContentManagementApi.html#putworkspacesworkspaceidmembersmemberid) | **PUT** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Add a member to a workspace |
-| [**PutWorkspacesWorkspaceIdTagvaluesTagId**](ContentManagementApi.html#putworkspacesworkspaceidtagvaluestagid) | **PUT** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Update a workspace tag. Will update all documents with the new tag value. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteDocumentsDocumentId**](ContentManagementApi.html#deletedocumentsdocumentid) | Delete a document. |
+| [**DeleteSharesShareId**](ContentManagementApi.html#deletesharesshareid) | Deletes an existing share. |
+| [**DeleteStatusStatusId**](ContentManagementApi.html#deletestatusstatusid) | Cancel the command for this status |
+| [**DeleteWorkspacesWorkspaceId**](ContentManagementApi.html#deleteworkspacesworkspaceid) | Delete a workspace |
+| [**DeleteWorkspacesWorkspaceIdMembersMemberId**](ContentManagementApi.html#deleteworkspacesworkspaceidmembersmemberid) | Delete a member from a workspace |
+| [**DeleteWorkspacesWorkspaceIdTagvaluesTagId**](ContentManagementApi.html#deleteworkspacesworkspaceidtagvaluestagid) | Delete workspace tag |
+| [**GetDocuments**](ContentManagementApi.html#getdocuments) | Get a list of documents. |
+| [**GetDocumentsDocumentId**](ContentManagementApi.html#getdocumentsdocumentid) | Get a document. |
+| [**GetDocumentsDocumentIdAudits**](ContentManagementApi.html#getdocumentsdocumentidaudits) | Get a list of audits for a document. |
+| [**GetDocumentsDocumentIdContent**](ContentManagementApi.html#getdocumentsdocumentidcontent) | Download a document. |
+| [**GetQuery**](ContentManagementApi.html#getquery) | Query content |
+| [**GetSecurityprofiles**](ContentManagementApi.html#getsecurityprofiles) | Get a List of Security Profiles |
+| [**GetSecurityprofilesSecurityprofileId**](ContentManagementApi.html#getsecurityprofilessecurityprofileid) | Get a Security Profile |
+| [**GetSharedSharedId**](ContentManagementApi.html#getsharedsharedid) | Get shared documents. Securely download a shared document. |
+| [**GetShares**](ContentManagementApi.html#getshares) | Gets a list of shares.  You must specify at least one filter (e.g. entityId). |
+| [**GetSharesShareId**](ContentManagementApi.html#getsharesshareid) | Retrieve details about an existing share. |
+| [**GetStatus**](ContentManagementApi.html#getstatus) | Get a list of statuses for pending operations |
+| [**GetStatusStatusId**](ContentManagementApi.html#getstatusstatusid) | Get a status. |
+| [**GetUsage**](ContentManagementApi.html#getusage) | Get usage details. |
+| [**GetWorkspaces**](ContentManagementApi.html#getworkspaces) | Get a list of workspaces. |
+| [**GetWorkspacesWorkspaceId**](ContentManagementApi.html#getworkspacesworkspaceid) | Get a workspace. |
+| [**GetWorkspacesWorkspaceIdDocuments**](ContentManagementApi.html#getworkspacesworkspaceiddocuments) | Get a list of documents. |
+| [**GetWorkspacesWorkspaceIdMembers**](ContentManagementApi.html#getworkspacesworkspaceidmembers) | Get a list workspace members |
+| [**GetWorkspacesWorkspaceIdMembersMemberId**](ContentManagementApi.html#getworkspacesworkspaceidmembersmemberid) | Get a workspace member |
+| [**GetWorkspacesWorkspaceIdTagvalues**](ContentManagementApi.html#getworkspacesworkspaceidtagvalues) | Get a list of workspace tags |
+| [**GetWorkspacesWorkspaceIdTagvaluesTagId**](ContentManagementApi.html#getworkspacesworkspaceidtagvaluestagid) | Get a workspace tag |
+| [**PostAuditquery**](ContentManagementApi.html#postauditquery) | Query audits |
+| [**PostDocuments**](ContentManagementApi.html#postdocuments) | Add a document. |
+| [**PostDocumentsDocumentId**](ContentManagementApi.html#postdocumentsdocumentid) | Update a document. |
+| [**PostDocumentsDocumentIdContent**](ContentManagementApi.html#postdocumentsdocumentidcontent) | Replace the contents of a document. |
+| [**PostQuery**](ContentManagementApi.html#postquery) | Query content |
+| [**PostShares**](ContentManagementApi.html#postshares) | Creates a new share or updates an existing share if the entity has already been shared |
+| [**PostWorkspaces**](ContentManagementApi.html#postworkspaces) | Create a group workspace |
+| [**PostWorkspacesWorkspaceIdTagvalues**](ContentManagementApi.html#postworkspacesworkspaceidtagvalues) | Create a workspace tag |
+| [**PostWorkspacesWorkspaceIdTagvaluesQuery**](ContentManagementApi.html#postworkspacesworkspaceidtagvaluesquery) | Perform a prefix query on tags in the workspace |
+| [**PutWorkspacesWorkspaceId**](ContentManagementApi.html#putworkspacesworkspaceid) | Update a workspace |
+| [**PutWorkspacesWorkspaceIdMembersMemberId**](ContentManagementApi.html#putworkspacesworkspaceidmembersmemberid) | Add a member to a workspace |
+| [**PutWorkspacesWorkspaceIdTagvaluesTagId**](ContentManagementApi.html#putworkspacesworkspaceidtagvaluestagid) | Update a workspace tag. Will update all documents with the new tag value. |
 {: class="table table-striped"}
 
 <a name="deletedocumentsdocumentid"></a>
@@ -54,6 +54,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete a document.
 
 
+
+Wraps DELETE /api/v2/contentmanagement/documents/{documentId} 
 
 ### Example
 ~~~csharp
@@ -112,6 +114,8 @@ Deletes an existing share.
 
 This revokes sharing rights specified in the share record
 
+Wraps DELETE /api/v2/contentmanagement/shares/{shareId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -167,6 +171,8 @@ Cancel the command for this status
 
 
 
+Wraps DELETE /api/v2/contentmanagement/status/{statusId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -221,6 +227,8 @@ void (empty response body)
 Delete a workspace
 
 
+
+Wraps DELETE /api/v2/contentmanagement/workspaces/{workspaceId} 
 
 ### Example
 ~~~csharp
@@ -279,6 +287,8 @@ Delete a member from a workspace
 
 
 
+Wraps DELETE /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -336,6 +346,8 @@ Delete workspace tag
 
 Delete a tag from a workspace. Will remove this tag from all documents.
 
+Wraps DELETE /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -392,6 +404,8 @@ void (empty response body)
 Get a list of documents.
 
 
+
+Wraps GET /api/v2/contentmanagement/documents 
 
 ### Example
 ~~~csharp
@@ -461,6 +475,8 @@ Get a document.
 
 
 
+Wraps GET /api/v2/contentmanagement/documents/{documentId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -518,6 +534,8 @@ namespace Example
 Get a list of audits for a document.
 
 
+
+Wraps GET /api/v2/contentmanagement/documents/{documentId}/audits 
 
 ### Example
 ~~~csharp
@@ -587,6 +605,8 @@ Download a document.
 
 
 
+Wraps GET /api/v2/contentmanagement/documents/{documentId}/content 
+
 ### Example
 ~~~csharp
 using System;
@@ -646,6 +666,8 @@ namespace Example
 Query content
 
 
+
+Wraps GET /api/v2/contentmanagement/query 
 
 ### Example
 ~~~csharp
@@ -713,6 +735,8 @@ Get a List of Security Profiles
 
 
 
+Wraps GET /api/v2/contentmanagement/securityprofiles 
+
 ### Example
 ~~~csharp
 using System;
@@ -763,6 +787,8 @@ This endpoint does require any parameters.
 Get a Security Profile
 
 
+
+Wraps GET /api/v2/contentmanagement/securityprofiles/{securityProfileId} 
 
 ### Example
 ~~~csharp
@@ -819,6 +845,8 @@ namespace Example
 Get shared documents. Securely download a shared document.
 
 This method requires the download sharing URI obtained in the get document response (downloadSharingUri). Documents may be shared between users in the same workspace. Documents may also be shared between any user by creating a content management share.
+
+Wraps GET /api/v2/contentmanagement/shared/{sharedId} 
 
 ### Example
 ~~~csharp
@@ -884,6 +912,8 @@ Gets a list of shares.  You must specify at least one filter (e.g. entityId).
 
 Failing to specify a filter will return 400.
 
+Wraps GET /api/v2/contentmanagement/shares 
+
 ### Example
 ~~~csharp
 using System;
@@ -946,6 +976,8 @@ Retrieve details about an existing share.
 
 
 
+Wraps GET /api/v2/contentmanagement/shares/{shareId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1003,6 +1035,8 @@ namespace Example
 Get a list of statuses for pending operations
 
 
+
+Wraps GET /api/v2/contentmanagement/status 
 
 ### Example
 ~~~csharp
@@ -1062,6 +1096,8 @@ Get a status.
 
 
 
+Wraps GET /api/v2/contentmanagement/status/{statusId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1118,6 +1154,8 @@ Get usage details.
 
 
 
+Wraps GET /api/v2/contentmanagement/usage 
+
 ### Example
 ~~~csharp
 using System;
@@ -1168,6 +1206,8 @@ This endpoint does require any parameters.
 Get a list of workspaces.
 
 Specifying 'content' access will return all workspaces the user has document access to, while 'admin' access will return all group workspaces the user has administrative rights to.
+
+Wraps GET /api/v2/contentmanagement/workspaces 
 
 ### Example
 ~~~csharp
@@ -1231,6 +1271,8 @@ Get a workspace.
 
 
 
+Wraps GET /api/v2/contentmanagement/workspaces/{workspaceId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1288,6 +1330,8 @@ namespace Example
 Get a list of documents.
 
 
+
+Wraps GET /api/v2/contentmanagement/workspaces/{workspaceId}/documents 
 
 ### Example
 ~~~csharp
@@ -1355,6 +1399,8 @@ Get a list workspace members
 
 
 
+Wraps GET /api/v2/contentmanagement/workspaces/{workspaceId}/members 
+
 ### Example
 ~~~csharp
 using System;
@@ -1417,6 +1463,8 @@ Get a workspace member
 
 
 
+Wraps GET /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1476,6 +1524,8 @@ namespace Example
 Get a list of workspace tags
 
 
+
+Wraps GET /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues 
 
 ### Example
 ~~~csharp
@@ -1541,6 +1591,8 @@ Get a workspace tag
 
 
 
+Wraps GET /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1601,6 +1653,8 @@ Query audits
 
 
 
+Wraps POST /api/v2/contentmanagement/auditquery 
+
 ### Example
 ~~~csharp
 using System;
@@ -1656,6 +1710,8 @@ namespace Example
 Add a document.
 
 
+
+Wraps POST /api/v2/contentmanagement/documents 
 
 ### Example
 ~~~csharp
@@ -1719,6 +1775,8 @@ Update a document.
 
 
 
+Wraps POST /api/v2/contentmanagement/documents/{documentId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1781,6 +1839,8 @@ Replace the contents of a document.
 
 
 
+Wraps POST /api/v2/contentmanagement/documents/{documentId}/content 
+
 ### Example
 ~~~csharp
 using System;
@@ -1841,6 +1901,8 @@ Query content
 
 
 
+Wraps POST /api/v2/contentmanagement/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -1899,6 +1961,8 @@ Creates a new share or updates an existing share if the entity has already been 
 
 
 
+Wraps POST /api/v2/contentmanagement/shares 
+
 ### Example
 ~~~csharp
 using System;
@@ -1955,6 +2019,8 @@ Create a group workspace
 
 
 
+Wraps POST /api/v2/contentmanagement/workspaces 
+
 ### Example
 ~~~csharp
 using System;
@@ -2010,6 +2076,8 @@ namespace Example
 Create a workspace tag
 
 
+
+Wraps POST /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues 
 
 ### Example
 ~~~csharp
@@ -2068,6 +2136,8 @@ namespace Example
 Perform a prefix query on tags in the workspace
 
 
+
+Wraps POST /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query 
 
 ### Example
 ~~~csharp
@@ -2129,6 +2199,8 @@ Update a workspace
 
 
 
+Wraps PUT /api/v2/contentmanagement/workspaces/{workspaceId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -2186,6 +2258,8 @@ namespace Example
 Add a member to a workspace
 
 
+
+Wraps PUT /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} 
 
 ### Example
 ~~~csharp
@@ -2246,6 +2320,8 @@ namespace Example
 Update a workspace tag. Will update all documents with the new tag value.
 
 
+
+Wraps PUT /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} 
 
 ### Example
 ~~~csharp

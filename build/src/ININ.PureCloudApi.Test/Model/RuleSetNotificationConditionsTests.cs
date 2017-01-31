@@ -91,12 +91,12 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'ValueType'
         }
         /// <summary>
-        /// Test the property 'ComparisonOperator'
+        /// Test the property '_Operator'
         /// </summary>
         [Test]
-        public void ComparisonOperatorTest()
+        public void _OperatorTest()
         {
-            // TODO: unit test for the property 'ComparisonOperator'
+            // TODO: unit test for the property '_Operator'
         }
         /// <summary>
         /// Test the property 'Codes'

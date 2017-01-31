@@ -5,84 +5,84 @@ title: OutboundApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteAttemptlimitsAttemptlimitsId**](OutboundApi.html#deleteattemptlimitsattemptlimitsid) | **DELETE** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Delete attempt limits |
-| [**DeleteCallabletimesetsCallabletimesetId**](OutboundApi.html#deletecallabletimesetscallabletimesetid) | **DELETE** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Delete callable time set |
-| [**DeleteCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#deletecallanalysisresponsesetscallanalysissetid) | **DELETE** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Delete a dialer call analysis response set. |
-| [**DeleteCampaignrulesCampaignruleId**](OutboundApi.html#deletecampaignrulescampaignruleid) | **DELETE** /api/v2/outbound/campaignrules/{campaignRuleId} | Delete Campaign Rule |
-| [**DeleteCampaignsCampaignId**](OutboundApi.html#deletecampaignscampaignid) | **DELETE** /api/v2/outbound/campaigns/{campaignId} | Delete a campaign. |
-| [**DeleteCampaignsCampaignIdProgress**](OutboundApi.html#deletecampaignscampaignidprogress) | **DELETE** /api/v2/outbound/campaigns/{campaignId}/progress | Reset campaign progress and recycle the campaign |
-| [**DeleteContactlistsContactlistId**](OutboundApi.html#deletecontactlistscontactlistid) | **DELETE** /api/v2/outbound/contactlists/{contactListId} | Delete a contact list. |
-| [**DeleteContactlistsContactlistIdContactsContactId**](OutboundApi.html#deletecontactlistscontactlistidcontactscontactid) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Delete a contact. |
-| [**DeleteDnclistsDnclistId**](OutboundApi.html#deletednclistsdnclistid) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
-| [**DeleteRulesetsRulesetId**](OutboundApi.html#deleterulesetsrulesetid) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule set. |
-| [**DeleteSchedulesCampaignsCampaignId**](OutboundApi.html#deleteschedulescampaignscampaignid) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
-| [**DeleteSchedulesSequencesSequenceId**](OutboundApi.html#deleteschedulessequencessequenceid) | **DELETE** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
-| [**DeleteSequencesSequenceId**](OutboundApi.html#deletesequencessequenceid) | **DELETE** /api/v2/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
-| [**GetAttemptlimits**](OutboundApi.html#getattemptlimits) | **GET** /api/v2/outbound/attemptlimits | Query attempt limits list |
-| [**GetAttemptlimitsAttemptlimitsId**](OutboundApi.html#getattemptlimitsattemptlimitsid) | **GET** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Get attempt limits |
-| [**GetCallabletimesets**](OutboundApi.html#getcallabletimesets) | **GET** /api/v2/outbound/callabletimesets | Query callable time set list |
-| [**GetCallabletimesetsCallabletimesetId**](OutboundApi.html#getcallabletimesetscallabletimesetid) | **GET** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Get callable time set |
-| [**GetCallanalysisresponsesets**](OutboundApi.html#getcallanalysisresponsesets) | **GET** /api/v2/outbound/callanalysisresponsesets | Query a list of dialer call analysis response sets. |
-| [**GetCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#getcallanalysisresponsesetscallanalysissetid) | **GET** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Get a dialer call analysis response set. |
-| [**GetCampaignrules**](OutboundApi.html#getcampaignrules) | **GET** /api/v2/outbound/campaignrules | Query Campaign Rule list |
-| [**GetCampaignrulesCampaignruleId**](OutboundApi.html#getcampaignrulescampaignruleid) | **GET** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
-| [**GetCampaigns**](OutboundApi.html#getcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
-| [**GetCampaignsCampaignId**](OutboundApi.html#getcampaignscampaignid) | **GET** /api/v2/outbound/campaigns/{campaignId} | Get dialer campaign. |
-| [**GetCampaignsCampaignIdDiagnostics**](OutboundApi.html#getcampaignscampaigniddiagnostics) | **GET** /api/v2/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
-| [**GetCampaignsCampaignIdInteractions**](OutboundApi.html#getcampaignscampaignidinteractions) | **GET** /api/v2/outbound/campaigns/{campaignId}/interactions | Get dialer campaign interactions. |
-| [**GetCampaignsCampaignIdProgress**](OutboundApi.html#getcampaignscampaignidprogress) | **GET** /api/v2/outbound/campaigns/{campaignId}/progress | Get campaign progress |
-| [**GetCampaignsCampaignIdStats**](OutboundApi.html#getcampaignscampaignidstats) | **GET** /api/v2/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
-| [**GetContactlists**](OutboundApi.html#getcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
-| [**GetContactlistsContactlistId**](OutboundApi.html#getcontactlistscontactlistid) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get a dialer contact list. |
-| [**GetContactlistsContactlistIdContactsContactId**](OutboundApi.html#getcontactlistscontactlistidcontactscontactid) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get a contact. |
-| [**GetContactlistsContactlistIdExport**](OutboundApi.html#getcontactlistscontactlistidexport) | **GET** /api/v2/outbound/contactlists/{contactListId}/export | Get the URI of a contact list export. |
-| [**GetContactlistsContactlistIdImportstatus**](OutboundApi.html#getcontactlistscontactlistidimportstatus) | **GET** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
-| [**GetDnclists**](OutboundApi.html#getdnclists) | **GET** /api/v2/outbound/dnclists | Query dialer DNC lists |
-| [**GetDnclistsDnclistId**](OutboundApi.html#getdnclistsdnclistid) | **GET** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
-| [**GetDnclistsDnclistIdExport**](OutboundApi.html#getdnclistsdnclistidexport) | **GET** /api/v2/outbound/dnclists/{dncListId}/export | Get the URI of a DNC list export. |
-| [**GetDnclistsDnclistIdImportstatus**](OutboundApi.html#getdnclistsdnclistidimportstatus) | **GET** /api/v2/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
-| [**GetRulesets**](OutboundApi.html#getrulesets) | **GET** /api/v2/outbound/rulesets | Query a list of Rule Sets. |
-| [**GetRulesetsRulesetId**](OutboundApi.html#getrulesetsrulesetid) | **GET** /api/v2/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
-| [**GetSchedulesCampaigns**](OutboundApi.html#getschedulescampaigns) | **GET** /api/v2/outbound/schedules/campaigns | Query for a list of dialer campaign schedules. |
-| [**GetSchedulesCampaignsCampaignId**](OutboundApi.html#getschedulescampaignscampaignid) | **GET** /api/v2/outbound/schedules/campaigns/{campaignId} | Get a dialer campaign schedule. |
-| [**GetSchedulesSequences**](OutboundApi.html#getschedulessequences) | **GET** /api/v2/outbound/schedules/sequences | Query for a list of dialer sequence schedules. |
-| [**GetSchedulesSequencesSequenceId**](OutboundApi.html#getschedulessequencessequenceid) | **GET** /api/v2/outbound/schedules/sequences/{sequenceId} | Get a dialer sequence schedule. |
-| [**GetSequences**](OutboundApi.html#getsequences) | **GET** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
-| [**GetSequencesSequenceId**](OutboundApi.html#getsequencessequenceid) | **GET** /api/v2/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
-| [**GetWrapupcodemappings**](OutboundApi.html#getwrapupcodemappings) | **GET** /api/v2/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
-| [**PostAttemptlimits**](OutboundApi.html#postattemptlimits) | **POST** /api/v2/outbound/attemptlimits | Create attempt limits |
-| [**PostAudits**](OutboundApi.html#postaudits) | **POST** /api/v2/outbound/audits | Retrieves audits for dialer. |
-| [**PostCallabletimesets**](OutboundApi.html#postcallabletimesets) | **POST** /api/v2/outbound/callabletimesets | Create callable time set |
-| [**PostCallanalysisresponsesets**](OutboundApi.html#postcallanalysisresponsesets) | **POST** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
-| [**PostCampaignrules**](OutboundApi.html#postcampaignrules) | **POST** /api/v2/outbound/campaignrules | Create Campaign Rule |
-| [**PostCampaigns**](OutboundApi.html#postcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
-| [**PostCampaignsCampaignIdCallbackSchedule**](OutboundApi.html#postcampaignscampaignidcallbackschedule) | **POST** /api/v2/outbound/campaigns/{campaignId}/callback/schedule | Schedule a Callback for a Dialer Campaign (Deprecated) |
-| [**PostCampaignsProgress**](OutboundApi.html#postcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
-| [**PostContactlists**](OutboundApi.html#postcontactlists) | **POST** /api/v2/outbound/contactlists | Create a contact List. |
-| [**PostContactlistsContactlistIdContacts**](OutboundApi.html#postcontactlistscontactlistidcontacts) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
-| [**PostContactlistsContactlistIdExport**](OutboundApi.html#postcontactlistscontactlistidexport) | **POST** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
-| [**PostConversationsConversationIdDnc**](OutboundApi.html#postconversationsconversationiddnc) | **POST** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
-| [**PostDnclists**](OutboundApi.html#postdnclists) | **POST** /api/v2/outbound/dnclists | Create dialer DNC list |
-| [**PostDnclistsDnclistIdExport**](OutboundApi.html#postdnclistsdnclistidexport) | **POST** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
-| [**PostDnclistsDnclistIdPhonenumbers**](OutboundApi.html#postdnclistsdnclistidphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a Dialer DNC list. |
-| [**PostRulesets**](OutboundApi.html#postrulesets) | **POST** /api/v2/outbound/rulesets | Create a Dialer Call Analysis Response Set. |
-| [**PostSequences**](OutboundApi.html#postsequences) | **POST** /api/v2/outbound/sequences | Create a new campaign sequence. |
-| [**PutAttemptlimitsAttemptlimitsId**](OutboundApi.html#putattemptlimitsattemptlimitsid) | **PUT** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Update attempt limits |
-| [**PutCallabletimesetsCallabletimesetId**](OutboundApi.html#putcallabletimesetscallabletimesetid) | **PUT** /api/v2/outbound/callabletimesets/{callableTimeSetId} | Update callable time set |
-| [**PutCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#putcallanalysisresponsesetscallanalysissetid) | **PUT** /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} | Update a dialer call analysis response set. |
-| [**PutCampaignrulesCampaignruleId**](OutboundApi.html#putcampaignrulescampaignruleid) | **PUT** /api/v2/outbound/campaignrules/{campaignRuleId} | Update Campaign Rule |
-| [**PutCampaignsCampaignId**](OutboundApi.html#putcampaignscampaignid) | **PUT** /api/v2/outbound/campaigns/{campaignId} | Update a campaign. |
-| [**PutCampaignsCampaignIdAgentsUserId**](OutboundApi.html#putcampaignscampaignidagentsuserid) | **PUT** /api/v2/outbound/campaigns/{campaignId}/agents/{userId} | Send notification that an agent&#39;s state changed  |
-| [**PutContactlistsContactlistId**](OutboundApi.html#putcontactlistscontactlistid) | **PUT** /api/v2/outbound/contactlists/{contactListId} | Update a contact list. |
-| [**PutContactlistsContactlistIdContactsContactId**](OutboundApi.html#putcontactlistscontactlistidcontactscontactid) | **PUT** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
-| [**PutDnclistsDnclistId**](OutboundApi.html#putdnclistsdnclistid) | **PUT** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
-| [**PutRulesetsRulesetId**](OutboundApi.html#putrulesetsrulesetid) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a RuleSet. |
-| [**PutSchedulesCampaignsCampaignId**](OutboundApi.html#putschedulescampaignscampaignid) | **PUT** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
-| [**PutSchedulesSequencesSequenceId**](OutboundApi.html#putschedulessequencessequenceid) | **PUT** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
-| [**PutSequencesSequenceId**](OutboundApi.html#putsequencessequenceid) | **PUT** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
-| [**PutWrapupcodemappings**](OutboundApi.html#putwrapupcodemappings) | **PUT** /api/v2/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteAttemptlimitsAttemptlimitsId**](OutboundApi.html#deleteattemptlimitsattemptlimitsid) | Delete attempt limits |
+| [**DeleteCallabletimesetsCallabletimesetId**](OutboundApi.html#deletecallabletimesetscallabletimesetid) | Delete callable time set |
+| [**DeleteCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#deletecallanalysisresponsesetscallanalysissetid) | Delete a dialer call analysis response set. |
+| [**DeleteCampaignrulesCampaignruleId**](OutboundApi.html#deletecampaignrulescampaignruleid) | Delete Campaign Rule |
+| [**DeleteCampaignsCampaignId**](OutboundApi.html#deletecampaignscampaignid) | Delete a campaign. |
+| [**DeleteCampaignsCampaignIdProgress**](OutboundApi.html#deletecampaignscampaignidprogress) | Reset campaign progress and recycle the campaign |
+| [**DeleteContactlistsContactlistId**](OutboundApi.html#deletecontactlistscontactlistid) | Delete a contact list. |
+| [**DeleteContactlistsContactlistIdContactsContactId**](OutboundApi.html#deletecontactlistscontactlistidcontactscontactid) | Delete a contact. |
+| [**DeleteDnclistsDnclistId**](OutboundApi.html#deletednclistsdnclistid) | Delete dialer DNC list |
+| [**DeleteRulesetsRulesetId**](OutboundApi.html#deleterulesetsrulesetid) | Delete a Rule set. |
+| [**DeleteSchedulesCampaignsCampaignId**](OutboundApi.html#deleteschedulescampaignscampaignid) | Delete a dialer campaign schedule. |
+| [**DeleteSchedulesSequencesSequenceId**](OutboundApi.html#deleteschedulessequencessequenceid) | Delete a dialer sequence schedule. |
+| [**DeleteSequencesSequenceId**](OutboundApi.html#deletesequencessequenceid) | Delete a dialer campaign sequence. |
+| [**GetAttemptlimits**](OutboundApi.html#getattemptlimits) | Query attempt limits list |
+| [**GetAttemptlimitsAttemptlimitsId**](OutboundApi.html#getattemptlimitsattemptlimitsid) | Get attempt limits |
+| [**GetCallabletimesets**](OutboundApi.html#getcallabletimesets) | Query callable time set list |
+| [**GetCallabletimesetsCallabletimesetId**](OutboundApi.html#getcallabletimesetscallabletimesetid) | Get callable time set |
+| [**GetCallanalysisresponsesets**](OutboundApi.html#getcallanalysisresponsesets) | Query a list of dialer call analysis response sets. |
+| [**GetCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#getcallanalysisresponsesetscallanalysissetid) | Get a dialer call analysis response set. |
+| [**GetCampaignrules**](OutboundApi.html#getcampaignrules) | Query Campaign Rule list |
+| [**GetCampaignrulesCampaignruleId**](OutboundApi.html#getcampaignrulescampaignruleid) | Get Campaign Rule |
+| [**GetCampaigns**](OutboundApi.html#getcampaigns) | Query a list of dialer campaigns. |
+| [**GetCampaignsCampaignId**](OutboundApi.html#getcampaignscampaignid) | Get dialer campaign. |
+| [**GetCampaignsCampaignIdDiagnostics**](OutboundApi.html#getcampaignscampaigniddiagnostics) | Get campaign diagnostics |
+| [**GetCampaignsCampaignIdInteractions**](OutboundApi.html#getcampaignscampaignidinteractions) | Get dialer campaign interactions. |
+| [**GetCampaignsCampaignIdProgress**](OutboundApi.html#getcampaignscampaignidprogress) | Get campaign progress |
+| [**GetCampaignsCampaignIdStats**](OutboundApi.html#getcampaignscampaignidstats) | Get statistics about a Dialer Campaign |
+| [**GetContactlists**](OutboundApi.html#getcontactlists) | Query a list of contact lists. |
+| [**GetContactlistsContactlistId**](OutboundApi.html#getcontactlistscontactlistid) | Get a dialer contact list. |
+| [**GetContactlistsContactlistIdContactsContactId**](OutboundApi.html#getcontactlistscontactlistidcontactscontactid) | Get a contact. |
+| [**GetContactlistsContactlistIdExport**](OutboundApi.html#getcontactlistscontactlistidexport) | Get the URI of a contact list export. |
+| [**GetContactlistsContactlistIdImportstatus**](OutboundApi.html#getcontactlistscontactlistidimportstatus) | Get dialer contactList import status. |
+| [**GetDnclists**](OutboundApi.html#getdnclists) | Query dialer DNC lists |
+| [**GetDnclistsDnclistId**](OutboundApi.html#getdnclistsdnclistid) | Get dialer DNC list |
+| [**GetDnclistsDnclistIdExport**](OutboundApi.html#getdnclistsdnclistidexport) | Get the URI of a DNC list export. |
+| [**GetDnclistsDnclistIdImportstatus**](OutboundApi.html#getdnclistsdnclistidimportstatus) | Get dialer dncList import status. |
+| [**GetRulesets**](OutboundApi.html#getrulesets) | Query a list of Rule Sets. |
+| [**GetRulesetsRulesetId**](OutboundApi.html#getrulesetsrulesetid) | Get a Rule Set by ID. |
+| [**GetSchedulesCampaigns**](OutboundApi.html#getschedulescampaigns) | Query for a list of dialer campaign schedules. |
+| [**GetSchedulesCampaignsCampaignId**](OutboundApi.html#getschedulescampaignscampaignid) | Get a dialer campaign schedule. |
+| [**GetSchedulesSequences**](OutboundApi.html#getschedulessequences) | Query for a list of dialer sequence schedules. |
+| [**GetSchedulesSequencesSequenceId**](OutboundApi.html#getschedulessequencessequenceid) | Get a dialer sequence schedule. |
+| [**GetSequences**](OutboundApi.html#getsequences) | Query a list of dialer campaign sequences. |
+| [**GetSequencesSequenceId**](OutboundApi.html#getsequencessequenceid) | Get a dialer campaign sequence. |
+| [**GetWrapupcodemappings**](OutboundApi.html#getwrapupcodemappings) | Get the Dialer wrap up code mapping. |
+| [**PostAttemptlimits**](OutboundApi.html#postattemptlimits) | Create attempt limits |
+| [**PostAudits**](OutboundApi.html#postaudits) | Retrieves audits for dialer. |
+| [**PostCallabletimesets**](OutboundApi.html#postcallabletimesets) | Create callable time set |
+| [**PostCallanalysisresponsesets**](OutboundApi.html#postcallanalysisresponsesets) | Create a dialer call analysis response set. |
+| [**PostCampaignrules**](OutboundApi.html#postcampaignrules) | Create Campaign Rule |
+| [**PostCampaigns**](OutboundApi.html#postcampaigns) | Create a campaign. |
+| [**PostCampaignsCampaignIdCallbackSchedule**](OutboundApi.html#postcampaignscampaignidcallbackschedule) | Schedule a Callback for a Dialer Campaign (Deprecated) |
+| [**PostCampaignsProgress**](OutboundApi.html#postcampaignsprogress) | Get progress for a list of campaigns |
+| [**PostContactlists**](OutboundApi.html#postcontactlists) | Create a contact List. |
+| [**PostContactlistsContactlistIdContacts**](OutboundApi.html#postcontactlistscontactlistidcontacts) | Add contacts to a contact list. |
+| [**PostContactlistsContactlistIdExport**](OutboundApi.html#postcontactlistscontactlistidexport) | Initiate the export of a contact list. |
+| [**PostConversationsConversationIdDnc**](OutboundApi.html#postconversationsconversationiddnc) | Add phone numbers to a Dialer DNC list. |
+| [**PostDnclists**](OutboundApi.html#postdnclists) | Create dialer DNC list |
+| [**PostDnclistsDnclistIdExport**](OutboundApi.html#postdnclistsdnclistidexport) | Initiate the export of a dnc list. |
+| [**PostDnclistsDnclistIdPhonenumbers**](OutboundApi.html#postdnclistsdnclistidphonenumbers) | Add phone numbers to a Dialer DNC list. |
+| [**PostRulesets**](OutboundApi.html#postrulesets) | Create a Dialer Call Analysis Response Set. |
+| [**PostSequences**](OutboundApi.html#postsequences) | Create a new campaign sequence. |
+| [**PutAttemptlimitsAttemptlimitsId**](OutboundApi.html#putattemptlimitsattemptlimitsid) | Update attempt limits |
+| [**PutCallabletimesetsCallabletimesetId**](OutboundApi.html#putcallabletimesetscallabletimesetid) | Update callable time set |
+| [**PutCallanalysisresponsesetsCallanalysissetId**](OutboundApi.html#putcallanalysisresponsesetscallanalysissetid) | Update a dialer call analysis response set. |
+| [**PutCampaignrulesCampaignruleId**](OutboundApi.html#putcampaignrulescampaignruleid) | Update Campaign Rule |
+| [**PutCampaignsCampaignId**](OutboundApi.html#putcampaignscampaignid) | Update a campaign. |
+| [**PutCampaignsCampaignIdAgentsUserId**](OutboundApi.html#putcampaignscampaignidagentsuserid) | Send notification that an agent&#39;s state changed  |
+| [**PutContactlistsContactlistId**](OutboundApi.html#putcontactlistscontactlistid) | Update a contact list. |
+| [**PutContactlistsContactlistIdContactsContactId**](OutboundApi.html#putcontactlistscontactlistidcontactscontactid) | Update a contact. |
+| [**PutDnclistsDnclistId**](OutboundApi.html#putdnclistsdnclistid) | Update dialer DNC list |
+| [**PutRulesetsRulesetId**](OutboundApi.html#putrulesetsrulesetid) | Update a RuleSet. |
+| [**PutSchedulesCampaignsCampaignId**](OutboundApi.html#putschedulescampaignscampaignid) | Update a new campaign schedule. |
+| [**PutSchedulesSequencesSequenceId**](OutboundApi.html#putschedulessequencessequenceid) | Update a new sequence schedule. |
+| [**PutSequencesSequenceId**](OutboundApi.html#putsequencessequenceid) | Update a new campaign sequence. |
+| [**PutWrapupcodemappings**](OutboundApi.html#putwrapupcodemappings) | Update the Dialer wrap up code mapping. |
 {: class="table table-striped"}
 
 <a name="deleteattemptlimitsattemptlimitsid"></a>
@@ -92,6 +92,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete attempt limits
 
 
+
+Wraps DELETE /api/v2/outbound/attemptlimits/{attemptLimitsId} 
 
 ### Example
 ~~~csharp
@@ -149,6 +151,8 @@ Delete callable time set
 
 
 
+Wraps DELETE /api/v2/outbound/callabletimesets/{callableTimeSetId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -204,6 +208,8 @@ namespace Example
 Delete a dialer call analysis response set.
 
 
+
+Wraps DELETE /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} 
 
 ### Example
 ~~~csharp
@@ -261,6 +267,8 @@ Delete Campaign Rule
 
 
 
+Wraps DELETE /api/v2/outbound/campaignrules/{campaignRuleId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -316,6 +324,8 @@ namespace Example
 Delete a campaign.
 
 
+
+Wraps DELETE /api/v2/outbound/campaigns/{campaignId} 
 
 ### Example
 ~~~csharp
@@ -373,6 +383,8 @@ Reset campaign progress and recycle the campaign
 
 
 
+Wraps DELETE /api/v2/outbound/campaigns/{campaignId}/progress 
+
 ### Example
 ~~~csharp
 using System;
@@ -427,6 +439,8 @@ void (empty response body)
 Delete a contact list.
 
 
+
+Wraps DELETE /api/v2/outbound/contactlists/{contactListId} 
 
 ### Example
 ~~~csharp
@@ -483,6 +497,8 @@ namespace Example
 Delete a contact.
 
 
+
+Wraps DELETE /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} 
 
 ### Example
 ~~~csharp
@@ -542,6 +558,8 @@ Delete dialer DNC list
 
 
 
+Wraps DELETE /api/v2/outbound/dnclists/{dncListId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -597,6 +615,8 @@ namespace Example
 Delete a Rule set.
 
 
+
+Wraps DELETE /api/v2/outbound/rulesets/{ruleSetId} 
 
 ### Example
 ~~~csharp
@@ -654,6 +674,8 @@ Delete a dialer campaign schedule.
 
 
 
+Wraps DELETE /api/v2/outbound/schedules/campaigns/{campaignId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -709,6 +731,8 @@ namespace Example
 Delete a dialer sequence schedule.
 
 
+
+Wraps DELETE /api/v2/outbound/schedules/sequences/{sequenceId} 
 
 ### Example
 ~~~csharp
@@ -766,6 +790,8 @@ Delete a dialer campaign sequence.
 
 
 
+Wraps DELETE /api/v2/outbound/sequences/{sequenceId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -822,6 +848,8 @@ Query attempt limits list
 
 
 
+Wraps GET /api/v2/outbound/attemptlimits 
+
 ### Example
 ~~~csharp
 using System;
@@ -843,7 +871,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
@@ -870,7 +898,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a] |
@@ -887,6 +915,8 @@ namespace Example
 Get attempt limits
 
 
+
+Wraps GET /api/v2/outbound/attemptlimits/{attemptLimitsId} 
 
 ### Example
 ~~~csharp
@@ -944,6 +974,8 @@ Query callable time set list
 
 
 
+Wraps GET /api/v2/outbound/callabletimesets 
+
 ### Example
 ~~~csharp
 using System;
@@ -965,7 +997,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
@@ -992,7 +1024,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a] |
@@ -1009,6 +1041,8 @@ namespace Example
 Get callable time set
 
 
+
+Wraps GET /api/v2/outbound/callabletimesets/{callableTimeSetId} 
 
 ### Example
 ~~~csharp
@@ -1066,6 +1100,8 @@ Query a list of dialer call analysis response sets.
 
 
 
+Wraps GET /api/v2/outbound/callanalysisresponsesets 
+
 ### Example
 ~~~csharp
 using System;
@@ -1087,7 +1123,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
@@ -1114,7 +1150,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a] |
@@ -1131,6 +1167,8 @@ namespace Example
 Get a dialer call analysis response set.
 
 
+
+Wraps GET /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} 
 
 ### Example
 ~~~csharp
@@ -1188,6 +1226,8 @@ Query Campaign Rule list
 
 
 
+Wraps GET /api/v2/outbound/campaignrules 
+
 ### Example
 ~~~csharp
 using System;
@@ -1209,7 +1249,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
@@ -1236,7 +1276,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a] |
@@ -1253,6 +1293,8 @@ namespace Example
 Get Campaign Rule
 
 
+
+Wraps GET /api/v2/outbound/campaignrules/{campaignRuleId} 
 
 ### Example
 ~~~csharp
@@ -1310,6 +1352,8 @@ Query a list of dialer campaigns.
 
 
 
+Wraps GET /api/v2/outbound/campaigns 
+
 ### Example
 ~~~csharp
 using System;
@@ -1331,7 +1375,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var contactListId = contactListId_example;  // string | Contact List ID (optional) 
             var dncListId = dncListId_example;  // string | DNC list ID (optional) 
@@ -1363,7 +1407,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
 | **name** | **string**| Name | [optional]  |
 | **contactListId** | **string**| Contact List ID | [optional]  |
 | **dncListId** | **string**| DNC list ID | [optional]  |
@@ -1385,6 +1429,8 @@ namespace Example
 Get dialer campaign.
 
 
+
+Wraps GET /api/v2/outbound/campaigns/{campaignId} 
 
 ### Example
 ~~~csharp
@@ -1442,6 +1488,8 @@ Get campaign diagnostics
 
 
 
+Wraps GET /api/v2/outbound/campaigns/{campaignId}/diagnostics 
+
 ### Example
 ~~~csharp
 using System;
@@ -1497,6 +1545,8 @@ namespace Example
 Get dialer campaign interactions.
 
 
+
+Wraps GET /api/v2/outbound/campaigns/{campaignId}/interactions 
 
 ### Example
 ~~~csharp
@@ -1554,6 +1604,8 @@ Get campaign progress
 
 
 
+Wraps GET /api/v2/outbound/campaigns/{campaignId}/progress 
+
 ### Example
 ~~~csharp
 using System;
@@ -1609,6 +1661,8 @@ namespace Example
 Get statistics about a Dialer Campaign
 
 
+
+Wraps GET /api/v2/outbound/campaigns/{campaignId}/stats 
 
 ### Example
 ~~~csharp
@@ -1666,6 +1720,8 @@ Query a list of contact lists.
 
 
 
+Wraps GET /api/v2/outbound/contactlists 
+
 ### Example
 ~~~csharp
 using System;
@@ -1689,7 +1745,7 @@ namespace Example
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
@@ -1718,7 +1774,7 @@ namespace Example
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a] |
@@ -1735,6 +1791,8 @@ namespace Example
 Get a dialer contact list.
 
 
+
+Wraps GET /api/v2/outbound/contactlists/{contactListId} 
 
 ### Example
 ~~~csharp
@@ -1796,6 +1854,8 @@ Get a contact.
 
 
 
+Wraps GET /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1853,6 +1913,8 @@ namespace Example
 Get the URI of a contact list export.
 
 
+
+Wraps GET /api/v2/outbound/contactlists/{contactListId}/export 
 
 ### Example
 ~~~csharp
@@ -1912,6 +1974,8 @@ Get dialer contactList import status.
 
 
 
+Wraps GET /api/v2/outbound/contactlists/{contactListId}/importstatus 
+
 ### Example
 ~~~csharp
 using System;
@@ -1968,6 +2032,8 @@ Query dialer DNC lists
 
 
 
+Wraps GET /api/v2/outbound/dnclists 
+
 ### Example
 ~~~csharp
 using System;
@@ -1991,7 +2057,7 @@ namespace Example
             var includeSize = true;  // bool? | Include size (optional)  (default to false)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
@@ -2020,7 +2086,7 @@ namespace Example
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional]  |
@@ -2037,6 +2103,8 @@ namespace Example
 Get dialer DNC list
 
 
+
+Wraps GET /api/v2/outbound/dnclists/{dncListId} 
 
 ### Example
 ~~~csharp
@@ -2098,6 +2166,8 @@ Get the URI of a DNC list export.
 
 
 
+Wraps GET /api/v2/outbound/dnclists/{dncListId}/export 
+
 ### Example
 ~~~csharp
 using System;
@@ -2156,6 +2226,8 @@ Get dialer dncList import status.
 
 
 
+Wraps GET /api/v2/outbound/dnclists/{dncListId}/importstatus 
+
 ### Example
 ~~~csharp
 using System;
@@ -2212,6 +2284,8 @@ Query a list of Rule Sets.
 
 
 
+Wraps GET /api/v2/outbound/rulesets 
+
 ### Example
 ~~~csharp
 using System;
@@ -2233,7 +2307,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
@@ -2260,7 +2334,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a] |
@@ -2277,6 +2351,8 @@ namespace Example
 Get a Rule Set by ID.
 
 
+
+Wraps GET /api/v2/outbound/rulesets/{ruleSetId} 
 
 ### Example
 ~~~csharp
@@ -2334,6 +2410,8 @@ Query for a list of dialer campaign schedules.
 
 
 
+Wraps GET /api/v2/outbound/schedules/campaigns 
+
 ### Example
 ~~~csharp
 using System;
@@ -2384,6 +2462,8 @@ This endpoint does require any parameters.
 Get a dialer campaign schedule.
 
 
+
+Wraps GET /api/v2/outbound/schedules/campaigns/{campaignId} 
 
 ### Example
 ~~~csharp
@@ -2441,6 +2521,8 @@ Query for a list of dialer sequence schedules.
 
 
 
+Wraps GET /api/v2/outbound/schedules/sequences 
+
 ### Example
 ~~~csharp
 using System;
@@ -2491,6 +2573,8 @@ This endpoint does require any parameters.
 Get a dialer sequence schedule.
 
 
+
+Wraps GET /api/v2/outbound/schedules/sequences/{sequenceId} 
 
 ### Example
 ~~~csharp
@@ -2548,6 +2632,8 @@ Query a list of dialer campaign sequences.
 
 
 
+Wraps GET /api/v2/outbound/sequences 
+
 ### Example
 ~~~csharp
 using System;
@@ -2569,7 +2655,7 @@ namespace Example
             var apiInstance = new OutboundApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var filterType = filterType_example;  // string | Filter type (optional)  (default to PREFIX)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
@@ -2596,7 +2682,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **filterType** | **string**| Filter type | [optional] [default to PREFIX] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a] |
@@ -2613,6 +2699,8 @@ namespace Example
 Get a dialer campaign sequence.
 
 
+
+Wraps GET /api/v2/outbound/sequences/{sequenceId} 
 
 ### Example
 ~~~csharp
@@ -2670,6 +2758,8 @@ Get the Dialer wrap up code mapping.
 
 
 
+Wraps GET /api/v2/outbound/wrapupcodemappings 
+
 ### Example
 ~~~csharp
 using System;
@@ -2720,6 +2810,8 @@ This endpoint does require any parameters.
 Create attempt limits
 
 
+
+Wraps POST /api/v2/outbound/attemptlimits 
 
 ### Example
 ~~~csharp
@@ -2776,6 +2868,8 @@ namespace Example
 Retrieves audits for dialer.
 
 
+
+Wraps POST /api/v2/outbound/audits 
 
 ### Example
 ~~~csharp
@@ -2843,6 +2937,8 @@ Create callable time set
 
 
 
+Wraps POST /api/v2/outbound/callabletimesets 
+
 ### Example
 ~~~csharp
 using System;
@@ -2898,6 +2994,8 @@ namespace Example
 Create a dialer call analysis response set.
 
 
+
+Wraps POST /api/v2/outbound/callanalysisresponsesets 
 
 ### Example
 ~~~csharp
@@ -2955,6 +3053,8 @@ Create Campaign Rule
 
 
 
+Wraps POST /api/v2/outbound/campaignrules 
+
 ### Example
 ~~~csharp
 using System;
@@ -3011,6 +3111,8 @@ Create a campaign.
 
 
 
+Wraps POST /api/v2/outbound/campaigns 
+
 ### Example
 ~~~csharp
 using System;
@@ -3066,6 +3168,8 @@ namespace Example
 Schedule a Callback for a Dialer Campaign (Deprecated)
 
 This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
+
+Wraps POST /api/v2/outbound/campaigns/{campaignId}/callback/schedule 
 
 ### Example
 ~~~csharp
@@ -3125,6 +3229,8 @@ Get progress for a list of campaigns
 
 
 
+Wraps POST /api/v2/outbound/campaigns/progress 
+
 ### Example
 ~~~csharp
 using System;
@@ -3181,6 +3287,8 @@ Create a contact List.
 
 
 
+Wraps POST /api/v2/outbound/contactlists 
+
 ### Example
 ~~~csharp
 using System;
@@ -3236,6 +3344,8 @@ namespace Example
 Add contacts to a contact list.
 
 
+
+Wraps POST /api/v2/outbound/contactlists/{contactListId}/contacts 
 
 ### Example
 ~~~csharp
@@ -3299,6 +3409,8 @@ Initiate the export of a contact list.
 
 Returns 200 if received OK.
 
+Wraps POST /api/v2/outbound/contactlists/{contactListId}/export 
+
 ### Example
 ~~~csharp
 using System;
@@ -3355,6 +3467,8 @@ Add phone numbers to a Dialer DNC list.
 
 
 
+Wraps POST /api/v2/outbound/conversations/{conversationId}/dnc 
+
 ### Example
 ~~~csharp
 using System;
@@ -3409,6 +3523,8 @@ void (empty response body)
 Create dialer DNC list
 
 
+
+Wraps POST /api/v2/outbound/dnclists 
 
 ### Example
 ~~~csharp
@@ -3466,6 +3582,8 @@ Initiate the export of a dnc list.
 
 Returns 200 if received OK.
 
+Wraps POST /api/v2/outbound/dnclists/{dncListId}/export 
+
 ### Example
 ~~~csharp
 using System;
@@ -3521,6 +3639,8 @@ namespace Example
 Add phone numbers to a Dialer DNC list.
 
 Only Internal DNC lists may be appended to
+
+Wraps POST /api/v2/outbound/dnclists/{dncListId}/phonenumbers 
 
 ### Example
 ~~~csharp
@@ -3579,6 +3699,8 @@ Create a Dialer Call Analysis Response Set.
 
 
 
+Wraps POST /api/v2/outbound/rulesets 
+
 ### Example
 ~~~csharp
 using System;
@@ -3635,6 +3757,8 @@ Create a new campaign sequence.
 
 
 
+Wraps POST /api/v2/outbound/sequences 
+
 ### Example
 ~~~csharp
 using System;
@@ -3690,6 +3814,8 @@ namespace Example
 Update attempt limits
 
 
+
+Wraps PUT /api/v2/outbound/attemptlimits/{attemptLimitsId} 
 
 ### Example
 ~~~csharp
@@ -3749,6 +3875,8 @@ Update callable time set
 
 
 
+Wraps PUT /api/v2/outbound/callabletimesets/{callableTimeSetId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -3806,6 +3934,8 @@ namespace Example
 Update a dialer call analysis response set.
 
 
+
+Wraps PUT /api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId} 
 
 ### Example
 ~~~csharp
@@ -3865,6 +3995,8 @@ Update Campaign Rule
 
 
 
+Wraps PUT /api/v2/outbound/campaignrules/{campaignRuleId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -3923,6 +4055,8 @@ Update a campaign.
 
 
 
+Wraps PUT /api/v2/outbound/campaigns/{campaignId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -3980,6 +4114,8 @@ namespace Example
 Send notification that an agent's state changed 
 
 New agent state.
+
+Wraps PUT /api/v2/outbound/campaigns/{campaignId}/agents/{userId} 
 
 ### Example
 ~~~csharp
@@ -4041,6 +4177,8 @@ Update a contact list.
 
 
 
+Wraps PUT /api/v2/outbound/contactlists/{contactListId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -4098,6 +4236,8 @@ namespace Example
 Update a contact.
 
 
+
+Wraps PUT /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} 
 
 ### Example
 ~~~csharp
@@ -4159,6 +4299,8 @@ Update dialer DNC list
 
 
 
+Wraps PUT /api/v2/outbound/dnclists/{dncListId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -4216,6 +4358,8 @@ namespace Example
 Update a RuleSet.
 
 
+
+Wraps PUT /api/v2/outbound/rulesets/{ruleSetId} 
 
 ### Example
 ~~~csharp
@@ -4275,6 +4419,8 @@ Update a new campaign schedule.
 
 
 
+Wraps PUT /api/v2/outbound/schedules/campaigns/{campaignId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -4332,6 +4478,8 @@ namespace Example
 Update a new sequence schedule.
 
 
+
+Wraps PUT /api/v2/outbound/schedules/sequences/{sequenceId} 
 
 ### Example
 ~~~csharp
@@ -4391,6 +4539,8 @@ Update a new campaign sequence.
 
 
 
+Wraps PUT /api/v2/outbound/sequences/{sequenceId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -4448,6 +4598,8 @@ namespace Example
 Update the Dialer wrap up code mapping.
 
 
+
+Wraps PUT /api/v2/outbound/wrapupcodemappings 
 
 ### Example
 ~~~csharp

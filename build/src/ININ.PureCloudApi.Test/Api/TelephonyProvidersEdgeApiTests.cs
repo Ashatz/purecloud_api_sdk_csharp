@@ -1194,7 +1194,8 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostProvidersEdgesEdgeIdReboot'
             string edgeId = null; // TODO: replace null with proper value
-            var response = instance.PostProvidersEdgesEdgeIdReboot(edgeId);
+            EdgeRebootParameters body = null; // TODO: replace null with proper value
+            var response = instance.PostProvidersEdgesEdgeIdReboot(edgeId, body);
             Assert.IsInstanceOf<string> (response, "response is string");
         }
         

@@ -5,11 +5,11 @@ title: StationsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteStationIdAssociateduser**](StationsApi.html#deletestationidassociateduser) | **DELETE** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
-| [**GetStationId**](StationsApi.html#getstationid) | **GET** /api/v2/stations/{stationId} | Get station. |
-| [**GetStations**](StationsApi.html#getstations) | **GET** /api/v2/stations | Get the list of available stations. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteStationIdAssociateduser**](StationsApi.html#deletestationidassociateduser) | Unassigns the user assigned to this station |
+| [**GetStationId**](StationsApi.html#getstationid) | Get station. |
+| [**GetStations**](StationsApi.html#getstations) | Get the list of available stations. |
 {: class="table table-striped"}
 
 <a name="deletestationidassociateduser"></a>
@@ -19,6 +19,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Unassigns the user assigned to this station
 
 
+
+Wraps DELETE /api/v2/stations/{stationId}/associateduser 
 
 ### Example
 ~~~csharp
@@ -76,6 +78,8 @@ Get station.
 
 
 
+Wraps GET /api/v2/stations/{stationId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -131,6 +135,8 @@ namespace Example
 Get the list of available stations.
 
 
+
+Wraps GET /api/v2/stations 
 
 ### Example
 ~~~csharp

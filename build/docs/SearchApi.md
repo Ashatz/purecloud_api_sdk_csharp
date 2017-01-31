@@ -5,20 +5,20 @@ title: SearchApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**GetSearch**](SearchApi.html#getsearch) | **GET** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
-| [**GetSearch_0**](SearchApi.html#getsearch_0) | **GET** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
-| [**GetSearch_1**](SearchApi.html#getsearch_1) | **GET** /api/v2/search | Search using the q64 value returned from a previous search. |
-| [**GetSearch_2**](SearchApi.html#getsearch_2) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
-| [**GetSearch_3**](SearchApi.html#getsearch_3) | **GET** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
-| [**GetSuggest**](SearchApi.html#getsuggest) | **GET** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
-| [**PostSearch**](SearchApi.html#postsearch) | **POST** /api/v2/groups/search | Search groups |
-| [**PostSearch_0**](SearchApi.html#postsearch_0) | **POST** /api/v2/locations/search | Search locations |
-| [**PostSearch_1**](SearchApi.html#postsearch_1) | **POST** /api/v2/search | Search resources. |
-| [**PostSearch_2**](SearchApi.html#postsearch_2) | **POST** /api/v2/users/search | Search users |
-| [**PostSearch_3**](SearchApi.html#postsearch_3) | **POST** /api/v2/voicemail/search | Search voicemails |
-| [**PostSuggest**](SearchApi.html#postsuggest) | **POST** /api/v2/search/suggest | Suggest resources. |
+| Method | Description |
+| ------------- | ------------- |
+| [**GetSearch**](SearchApi.html#getsearch) | Search groups using the q64 value returned from a previous search |
+| [**GetSearch_0**](SearchApi.html#getsearch_0) | Search locations using the q64 value returned from a previous search |
+| [**GetSearch_1**](SearchApi.html#getsearch_1) | Search using the q64 value returned from a previous search. |
+| [**GetSearch_2**](SearchApi.html#getsearch_2) | Search users using the q64 value returned from a previous search |
+| [**GetSearch_3**](SearchApi.html#getsearch_3) | Search voicemails using the q64 value returned from a previous search |
+| [**GetSuggest**](SearchApi.html#getsuggest) | Suggest resources using the q64 value returned from a previous suggest query. |
+| [**PostSearch**](SearchApi.html#postsearch) | Search groups |
+| [**PostSearch_0**](SearchApi.html#postsearch_0) | Search locations |
+| [**PostSearch_1**](SearchApi.html#postsearch_1) | Search resources. |
+| [**PostSearch_2**](SearchApi.html#postsearch_2) | Search users |
+| [**PostSearch_3**](SearchApi.html#postsearch_3) | Search voicemails |
+| [**PostSuggest**](SearchApi.html#postsuggest) | Suggest resources. |
 {: class="table table-striped"}
 
 <a name="getsearch"></a>
@@ -28,6 +28,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Search groups using the q64 value returned from a previous search
 
 
+
+Wraps GET /api/v2/groups/search 
 
 ### Example
 ~~~csharp
@@ -87,6 +89,8 @@ Search locations using the q64 value returned from a previous search
 
 
 
+Wraps GET /api/v2/locations/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -144,6 +148,8 @@ namespace Example
 Search using the q64 value returned from a previous search.
 
 
+
+Wraps GET /api/v2/search 
 
 ### Example
 ~~~csharp
@@ -205,6 +211,8 @@ Search users using the q64 value returned from a previous search
 
 
 
+Wraps GET /api/v2/users/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -263,6 +271,8 @@ Search voicemails using the q64 value returned from a previous search
 
 
 
+Wraps GET /api/v2/voicemail/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -320,6 +330,8 @@ namespace Example
 Suggest resources using the q64 value returned from a previous suggest query.
 
 
+
+Wraps GET /api/v2/search/suggest 
 
 ### Example
 ~~~csharp
@@ -381,6 +393,8 @@ Search groups
 
 
 
+Wraps POST /api/v2/groups/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -437,6 +451,8 @@ Search locations
 
 
 
+Wraps POST /api/v2/locations/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -492,6 +508,8 @@ namespace Example
 Search resources.
 
 
+
+Wraps POST /api/v2/search 
 
 ### Example
 ~~~csharp
@@ -551,6 +569,8 @@ Search users
 
 
 
+Wraps POST /api/v2/users/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -607,6 +627,8 @@ Search voicemails
 
 
 
+Wraps POST /api/v2/voicemail/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -662,6 +684,8 @@ namespace Example
 Suggest resources.
 
 
+
+Wraps POST /api/v2/search/suggest 
 
 ### Example
 ~~~csharp

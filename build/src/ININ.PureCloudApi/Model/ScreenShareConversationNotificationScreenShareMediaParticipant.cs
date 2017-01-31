@@ -285,7 +285,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Context">Context.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Sharing">Sharing.</param>
-        public ScreenShareConversationNotificationScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataNotificationCreatedBy User = null, ScreenShareConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ScreenShareConversationNotificationErrorInfo ErrorInfo = null, ScreenShareConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ScreenShareConversationNotificationUriReference ExternalContact = null, ScreenShareConversationNotificationUriReference ExternalOrganization = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
+        public ScreenShareConversationNotificationScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, ScreenShareConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ScreenShareConversationNotificationErrorInfo ErrorInfo = null, ScreenShareConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ScreenShareConversationNotificationUriReference ExternalContact = null, ScreenShareConversationNotificationUriReference ExternalOrganization = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -375,7 +375,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public DocumentDataNotificationCreatedBy User { get; set; }
+        public DocumentDataV2NotificationCreatedBy User { get; set; }
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>

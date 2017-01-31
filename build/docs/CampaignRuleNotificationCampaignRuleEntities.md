@@ -7,9 +7,8 @@ title: CampaignRuleNotificationCampaignRuleEntities
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Campaigns** | **List&lt;string&gt;** |  | [optional] |
-| **Sequences** | **List&lt;string&gt;** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
+| **Campaigns** | [**List&lt;DocumentDataV2NotificationCreatedBy&gt;**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
+| **Sequences** | [**List&lt;CampaignRuleNotificationUriReference&gt;**](CampaignRuleNotificationUriReference.html) |  | [optional] |
 {: class="table table-striped"}
 
 

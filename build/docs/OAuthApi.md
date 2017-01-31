@@ -5,14 +5,14 @@ title: OAuthApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteClientsClientId**](OAuthApi.html#deleteclientsclientid) | **DELETE** /api/v2/oauth/clients/{clientId} | Delete OAuth Client |
-| [**GetClients**](OAuthApi.html#getclients) | **GET** /api/v2/oauth/clients | The list of OAuth clients |
-| [**GetClientsClientId**](OAuthApi.html#getclientsclientid) | **GET** /api/v2/oauth/clients/{clientId} | Get OAuth Client |
-| [**PostClients**](OAuthApi.html#postclients) | **POST** /api/v2/oauth/clients | Create OAuth client |
-| [**PostClientsClientIdSecret**](OAuthApi.html#postclientsclientidsecret) | **POST** /api/v2/oauth/clients/{clientId}/secret | Regenerate Client Secret |
-| [**PutClientsClientId**](OAuthApi.html#putclientsclientid) | **PUT** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteClientsClientId**](OAuthApi.html#deleteclientsclientid) | Delete OAuth Client |
+| [**GetClients**](OAuthApi.html#getclients) | The list of OAuth clients |
+| [**GetClientsClientId**](OAuthApi.html#getclientsclientid) | Get OAuth Client |
+| [**PostClients**](OAuthApi.html#postclients) | Create OAuth client |
+| [**PostClientsClientIdSecret**](OAuthApi.html#postclientsclientidsecret) | Regenerate Client Secret |
+| [**PutClientsClientId**](OAuthApi.html#putclientsclientid) | Update OAuth Client |
 {: class="table table-striped"}
 
 <a name="deleteclientsclientid"></a>
@@ -22,6 +22,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete OAuth Client
 
 
+
+Wraps DELETE /api/v2/oauth/clients/{clientId} 
 
 ### Example
 ~~~csharp
@@ -78,6 +80,8 @@ The list of OAuth clients
 
 
 
+Wraps GET /api/v2/oauth/clients 
+
 ### Example
 ~~~csharp
 using System;
@@ -128,6 +132,8 @@ This endpoint does require any parameters.
 Get OAuth Client
 
 
+
+Wraps GET /api/v2/oauth/clients/{clientId} 
 
 ### Example
 ~~~csharp
@@ -185,6 +191,8 @@ Create OAuth client
 
 The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
 
+Wraps POST /api/v2/oauth/clients 
+
 ### Example
 ~~~csharp
 using System;
@@ -241,6 +249,8 @@ Regenerate Client Secret
 
 This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
 
+Wraps POST /api/v2/oauth/clients/{clientId}/secret 
+
 ### Example
 ~~~csharp
 using System;
@@ -295,6 +305,8 @@ void (empty response body)
 Update OAuth Client
 
 
+
+Wraps PUT /api/v2/oauth/clients/{clientId} 
 
 ### Example
 ~~~csharp

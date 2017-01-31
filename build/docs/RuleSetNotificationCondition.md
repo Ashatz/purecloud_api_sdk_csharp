@@ -12,7 +12,7 @@ title: RuleSetNotificationCondition
 | **AttributeName** | **string** |  | [optional] |
 | **Value** | **string** |  | [optional] |
 | **ValueType** | **string** |  | [optional] |
-| **ComparisonOperator** | **string** |  | [optional] |
+| **_Operator** | **string** |  | [optional] |
 | **Codes** | **List&lt;string&gt;** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}

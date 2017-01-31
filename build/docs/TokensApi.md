@@ -5,9 +5,9 @@ title: TokensApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteMe**](TokensApi.html#deleteme) | **DELETE** /api/v2/tokens/me | Delete  auth token used to make the request. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteMe**](TokensApi.html#deleteme) | Delete  auth token used to make the request. |
 {: class="table table-striped"}
 
 <a name="deleteme"></a>
@@ -17,6 +17,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete  auth token used to make the request.
 
 
+
+Wraps DELETE /api/v2/tokens/me 
 
 ### Example
 ~~~csharp

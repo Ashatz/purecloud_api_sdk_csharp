@@ -12,8 +12,7 @@ title: CampaignNotification
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
-| **AdditionalProperties** | **Object** |  | [optional] |
-| **ContactList** | [**DocumentDataNotificationCreatedBy**](DocumentDataNotificationCreatedBy.html) |  | [optional] |
+| **ContactList** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
 | **Queue** | [**CampaignNotificationUriReference**](CampaignNotificationUriReference.html) |  | [optional] |
 | **DialingMode** | **string** |  | [optional] |
 | **Script** | [**CampaignNotificationUriReference**](CampaignNotificationUriReference.html) |  | [optional] |
@@ -36,6 +35,7 @@ title: CampaignNotification
 | **NoAnswerTimeout** | **int?** |  | [optional] |
 | **CallAnalysisLanguage** | **string** |  | [optional] |
 | **Priority** | **int?** |  | [optional] |
+| **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -18,6 +18,7 @@ title: Organization
 | **DefaultSiteId** | **string** |  | [optional] |
 | **Deletable** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
+| **Features** | **Dictionary&lt;string, bool?&gt;** | The state of features available for the organization. | [optional] |
 {: class="table table-striped"}
 
 

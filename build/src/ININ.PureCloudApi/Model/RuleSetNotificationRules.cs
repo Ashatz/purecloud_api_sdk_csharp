@@ -19,6 +19,37 @@ namespace ININ.PureCloudApi.Model
     public partial class RuleSetNotificationRules :  IEquatable<RuleSetNotificationRules>
     {
         /// <summary>
+        /// Gets or Sets Category
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CategoryEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Precall for "DIALER_PRECALL"
+            /// </summary>
+            [EnumMember(Value = "DIALER_PRECALL")]
+            Precall,
+            
+            /// <summary>
+            /// Enum Wrapup for "DIALER_WRAPUP"
+            /// </summary>
+            [EnumMember(Value = "DIALER_WRAPUP")]
+            Wrapup
+        }
+        /// <summary>
+        /// Gets or Sets Category
+        /// </summary>
+        [DataMember(Name="category", EmitDefaultValue=false)]
+        public CategoryEnum? Category { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetNotificationRules" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -28,7 +59,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Conditions">Conditions.</param>
         /// <param name="Actions">Actions.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public RuleSetNotificationRules(string Id = null, string Name = null, int? Order = null, string Category = null, List<RuleSetNotificationConditions> Conditions = null, List<RuleSetNotificationActions> Actions = null, Object AdditionalProperties = null)
+        public RuleSetNotificationRules(string Id = null, string Name = null, int? Order = null, CategoryEnum? Category = null, List<RuleSetNotificationConditions> Conditions = null, List<RuleSetNotificationActions> Actions = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -54,11 +85,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
-        /// <summary>
-        /// Gets or Sets Category
-        /// </summary>
-        [DataMember(Name="category", EmitDefaultValue=false)]
-        public string Category { get; set; }
         /// <summary>
         /// Gets or Sets Conditions
         /// </summary>

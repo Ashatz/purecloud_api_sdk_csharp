@@ -5,25 +5,25 @@ title: AuthorizationApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteRolesRoleId**](AuthorizationApi.html#deleterolesroleid) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
-| [**DeleteUserIdRoles**](AuthorizationApi.html#deleteuseridroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
-| [**GetPermissions**](AuthorizationApi.html#getpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
-| [**GetProducts**](AuthorizationApi.html#getproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
-| [**GetRoles**](AuthorizationApi.html#getroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
-| [**GetRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.html#getrolesleftroleidcomparedefaultrightroleid) | **GET** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an org role to default role comparison comparison |
-| [**GetRolesRoleId**](AuthorizationApi.html#getrolesroleid) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
-| [**GetUserIdRoles**](AuthorizationApi.html#getuseridroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
-| [**PatchRolesRoleId**](AuthorizationApi.html#patchrolesroleid) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
-| [**PostRoles**](AuthorizationApi.html#postroles) | **POST** /api/v2/authorization/roles | Create an organization role. |
-| [**PostRolesDefault**](AuthorizationApi.html#postrolesdefault) | **POST** /api/v2/authorization/roles/default | Restores all default roles |
-| [**PostRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.html#postrolesleftroleidcomparedefaultrightroleid) | **POST** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an unsaved org role to default role comparison |
-| [**PutRolesDefault**](AuthorizationApi.html#putrolesdefault) | **PUT** /api/v2/authorization/roles/default | Restore specified default roles |
-| [**PutRolesRoleId**](AuthorizationApi.html#putrolesroleid) | **PUT** /api/v2/authorization/roles/{roleId} | Update an organization role. |
-| [**PutRolesRoleIdUsersAdd**](AuthorizationApi.html#putrolesroleidusersadd) | **PUT** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
-| [**PutRolesRoleIdUsersRemove**](AuthorizationApi.html#putrolesroleidusersremove) | **PUT** /api/v2/authorization/roles/{roleId}/users/remove | Removes the users from the role |
-| [**PutUserIdRoles**](AuthorizationApi.html#putuseridroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteRolesRoleId**](AuthorizationApi.html#deleterolesroleid) | Delete an organization role. |
+| [**DeleteUserIdRoles**](AuthorizationApi.html#deleteuseridroles) | Removes all the roles from the user. |
+| [**GetPermissions**](AuthorizationApi.html#getpermissions) | Get all permissions. |
+| [**GetProducts**](AuthorizationApi.html#getproducts) | Get the list of enabled products |
+| [**GetRoles**](AuthorizationApi.html#getroles) | Retrieve a list of all roles defined for the organization |
+| [**GetRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.html#getrolesleftroleidcomparedefaultrightroleid) | Get an org role to default role comparison comparison |
+| [**GetRolesRoleId**](AuthorizationApi.html#getrolesroleid) | Get a single organization role. |
+| [**GetUserIdRoles**](AuthorizationApi.html#getuseridroles) | Returns a listing of roles and permissions for a user. |
+| [**PatchRolesRoleId**](AuthorizationApi.html#patchrolesroleid) | Patch Organization Role for needsUpdate Field |
+| [**PostRoles**](AuthorizationApi.html#postroles) | Create an organization role. |
+| [**PostRolesDefault**](AuthorizationApi.html#postrolesdefault) | Restores all default roles |
+| [**PostRolesLeftroleIdComparedefaultRightroleId**](AuthorizationApi.html#postrolesleftroleidcomparedefaultrightroleid) | Get an unsaved org role to default role comparison |
+| [**PutRolesDefault**](AuthorizationApi.html#putrolesdefault) | Restore specified default roles |
+| [**PutRolesRoleId**](AuthorizationApi.html#putrolesroleid) | Update an organization role. |
+| [**PutRolesRoleIdUsersAdd**](AuthorizationApi.html#putrolesroleidusersadd) | Sets the users for the role |
+| [**PutRolesRoleIdUsersRemove**](AuthorizationApi.html#putrolesroleidusersremove) | Removes the users from the role |
+| [**PutUserIdRoles**](AuthorizationApi.html#putuseridroles) | Sets the user&#39;s roles |
 {: class="table table-striped"}
 
 <a name="deleterolesroleid"></a>
@@ -33,6 +33,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete an organization role.
 
 
+
+Wraps DELETE /api/v2/authorization/roles/{roleId} 
 
 ### Example
 ~~~csharp
@@ -89,6 +91,8 @@ Removes all the roles from the user.
 
 
 
+Wraps DELETE /api/v2/users/{userId}/roles 
+
 ### Example
 ~~~csharp
 using System;
@@ -143,6 +147,8 @@ void (empty response body)
 Get all permissions.
 
 Retrieve a list of all permission defined in the system.
+
+Wraps GET /api/v2/authorization/permissions 
 
 ### Example
 ~~~csharp
@@ -202,6 +208,8 @@ Get the list of enabled products
 
 Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
 
+Wraps GET /api/v2/authorization/products 
+
 ### Example
 ~~~csharp
 using System;
@@ -252,6 +260,8 @@ This endpoint does require any parameters.
 Retrieve a list of all roles defined for the organization
 
 
+
+Wraps GET /api/v2/authorization/roles 
 
 ### Example
 ~~~csharp
@@ -323,6 +333,8 @@ Get an org role to default role comparison comparison
 
 Compares any organization role to a default role id and show differences
 
+Wraps GET /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -381,6 +393,8 @@ Get a single organization role.
 
 Get the organization role specified by its ID.
 
+Wraps GET /api/v2/authorization/roles/{roleId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -437,6 +451,8 @@ Returns a listing of roles and permissions for a user.
 
 
 
+Wraps GET /api/v2/users/{userId}/roles 
+
 ### Example
 ~~~csharp
 using System;
@@ -492,6 +508,8 @@ namespace Example
 Patch Organization Role for needsUpdate Field
 
 Patch Organization Role for needsUpdate Field
+
+Wraps PATCH /api/v2/authorization/roles/{roleId} 
 
 ### Example
 ~~~csharp
@@ -551,6 +569,8 @@ Create an organization role.
 
 
 
+Wraps POST /api/v2/authorization/roles 
+
 ### Example
 ~~~csharp
 using System;
@@ -607,6 +627,8 @@ Restores all default roles
 
 This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force=true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force=true, you can restore all default roles. Note: This does not have an effect on custom roles.
 
+Wraps POST /api/v2/authorization/roles/default 
+
 ### Example
 ~~~csharp
 using System;
@@ -662,6 +684,8 @@ namespace Example
 Get an unsaved org role to default role comparison
 
 Allows users to compare their existing roles in an unsaved state to its default role
+
+Wraps POST /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} 
 
 ### Example
 ~~~csharp
@@ -723,6 +747,8 @@ Restore specified default roles
 
 
 
+Wraps PUT /api/v2/authorization/roles/default 
+
 ### Example
 ~~~csharp
 using System;
@@ -778,6 +804,8 @@ namespace Example
 Update an organization role.
 
 Update
+
+Wraps PUT /api/v2/authorization/roles/{roleId} 
 
 ### Example
 ~~~csharp
@@ -837,6 +865,8 @@ Sets the users for the role
 
 
 
+Wraps PUT /api/v2/authorization/roles/{roleId}/users/add 
+
 ### Example
 ~~~csharp
 using System;
@@ -895,6 +925,8 @@ Removes the users from the role
 
 
 
+Wraps PUT /api/v2/authorization/roles/{roleId}/users/remove 
+
 ### Example
 ~~~csharp
 using System;
@@ -952,6 +984,8 @@ namespace Example
 Sets the user's roles
 
 
+
+Wraps PUT /api/v2/users/{userId}/roles 
 
 ### Example
 ~~~csharp

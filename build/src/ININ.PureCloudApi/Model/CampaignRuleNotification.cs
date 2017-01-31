@@ -26,25 +26,25 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="DateModified">DateModified.</param>
         /// <param name="Version">Version.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="CampaignRuleEntities">CampaignRuleEntities.</param>
         /// <param name="CampaignRuleConditions">CampaignRuleConditions.</param>
         /// <param name="CampaignRuleActions">CampaignRuleActions.</param>
         /// <param name="MatchAnyConditions">MatchAnyConditions.</param>
         /// <param name="Enabled">Enabled.</param>
-        public CampaignRuleNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Object AdditionalProperties = null, CampaignRuleNotificationCampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleNotificationCampaignRuleConditions> CampaignRuleConditions = null, List<CampaignRuleNotificationCampaignRuleActions> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public CampaignRuleNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, CampaignRuleNotificationCampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleNotificationCampaignRuleConditions> CampaignRuleConditions = null, List<CampaignRuleNotificationCampaignRuleActions> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
-            this.AdditionalProperties = AdditionalProperties;
             this.CampaignRuleEntities = CampaignRuleEntities;
             this.CampaignRuleConditions = CampaignRuleConditions;
             this.CampaignRuleActions = CampaignRuleActions;
             this.MatchAnyConditions = MatchAnyConditions;
             this.Enabled = Enabled;
+            this.AdditionalProperties = AdditionalProperties;
         }
         
         /// <summary>
@@ -73,11 +73,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
-        /// <summary>
         /// Gets or Sets CampaignRuleEntities
         /// </summary>
         [DataMember(Name="campaignRuleEntities", EmitDefaultValue=false)]
@@ -103,6 +98,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
         /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Object AdditionalProperties { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -115,12 +115,12 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  CampaignRuleEntities: ").Append(CampaignRuleEntities).Append("\n");
             sb.Append("  CampaignRuleConditions: ").Append(CampaignRuleConditions).Append("\n");
             sb.Append("  CampaignRuleActions: ").Append(CampaignRuleActions).Append("\n");
             sb.Append("  MatchAnyConditions: ").Append(MatchAnyConditions).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -183,11 +183,6 @@ namespace ININ.PureCloudApi.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
-                ) &&
-                (
                     this.CampaignRuleEntities == other.CampaignRuleEntities ||
                     this.CampaignRuleEntities != null &&
                     this.CampaignRuleEntities.Equals(other.CampaignRuleEntities)
@@ -211,6 +206,11 @@ namespace ININ.PureCloudApi.Model
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -235,8 +235,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 if (this.CampaignRuleEntities != null)
                     hash = hash * 59 + this.CampaignRuleEntities.GetHashCode();
                 if (this.CampaignRuleConditions != null)
@@ -247,6 +245,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.MatchAnyConditions.GetHashCode();
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;
             }
         }

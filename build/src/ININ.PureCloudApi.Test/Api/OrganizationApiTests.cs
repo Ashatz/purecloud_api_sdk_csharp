@@ -76,6 +76,18 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<Organization> (response, "response is Organization");
         }
         
+        /// <summary>
+        /// Test PatchFeatures
+        /// </summary>
+        [Test]
+        public void PatchFeaturesTest()
+        {
+            // TODO: add unit test for the method 'PatchFeatures'
+            EntryFeatureBoolean body = null; // TODO: replace null with proper value
+            var response = instance.PatchFeatures(body);
+            Assert.IsInstanceOf<Dictionary<string, string>> (response, "response is Dictionary<string, string>");
+        }
+        
     }
 
 }

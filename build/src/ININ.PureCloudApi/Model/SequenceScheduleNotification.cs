@@ -26,21 +26,21 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="DateModified">DateModified.</param>
         /// <param name="Version">Version.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Intervals">Intervals.</param>
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="Sequence">Sequence.</param>
-        public SequenceScheduleNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Object AdditionalProperties = null, List<CampaignScheduleNotificationIntervals> Intervals = null, string TimeZone = null, DocumentDataNotificationCreatedBy Sequence = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public SequenceScheduleNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleNotificationIntervals> Intervals = null, string TimeZone = null, DocumentDataV2NotificationCreatedBy Sequence = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
-            this.AdditionalProperties = AdditionalProperties;
             this.Intervals = Intervals;
             this.TimeZone = TimeZone;
             this.Sequence = Sequence;
+            this.AdditionalProperties = AdditionalProperties;
         }
         
         /// <summary>
@@ -69,11 +69,6 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
-        /// <summary>
         /// Gets or Sets Intervals
         /// </summary>
         [DataMember(Name="intervals", EmitDefaultValue=false)]
@@ -87,7 +82,12 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Sequence
         /// </summary>
         [DataMember(Name="sequence", EmitDefaultValue=false)]
-        public DocumentDataNotificationCreatedBy Sequence { get; set; }
+        public DocumentDataV2NotificationCreatedBy Sequence { get; set; }
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Object AdditionalProperties { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,10 +101,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Intervals: ").Append(Intervals).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  Sequence: ").Append(Sequence).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -167,11 +167,6 @@ namespace ININ.PureCloudApi.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
-                ) &&
-                (
                     this.Intervals == other.Intervals ||
                     this.Intervals != null &&
                     this.Intervals.SequenceEqual(other.Intervals)
@@ -185,6 +180,11 @@ namespace ININ.PureCloudApi.Model
                     this.Sequence == other.Sequence ||
                     this.Sequence != null &&
                     this.Sequence.Equals(other.Sequence)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -209,14 +209,14 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 if (this.Intervals != null)
                     hash = hash * 59 + this.Intervals.GetHashCode();
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
                 if (this.Sequence != null)
                     hash = hash * 59 + this.Sequence.GetHashCode();
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;
             }
         }

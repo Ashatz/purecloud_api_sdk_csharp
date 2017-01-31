@@ -5,30 +5,30 @@ title: IdentityProviderApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteAdfs**](IdentityProviderApi.html#deleteadfs) | **DELETE** /api/v2/identityproviders/adfs | Delete ADFS Identity Provider |
-| [**DeleteCic**](IdentityProviderApi.html#deletecic) | **DELETE** /api/v2/identityproviders/cic | Delete Customer Interaction Center (CIC) Identity Provider |
-| [**DeleteOkta**](IdentityProviderApi.html#deleteokta) | **DELETE** /api/v2/identityproviders/okta | Delete Okta Identity Provider |
-| [**DeleteOnelogin**](IdentityProviderApi.html#deleteonelogin) | **DELETE** /api/v2/identityproviders/onelogin | Delete OneLogin Identity Provider |
-| [**DeleteProviderId**](IdentityProviderApi.html#deleteproviderid) | **DELETE** /api/v2/identityproviders/{providerId} | Delete an identity provider |
-| [**DeletePurecloud**](IdentityProviderApi.html#deletepurecloud) | **DELETE** /api/v2/identityproviders/purecloud | Delete PureCloud Identity Provider |
-| [**DeleteSalesforce**](IdentityProviderApi.html#deletesalesforce) | **DELETE** /api/v2/identityproviders/salesforce | Delete Salesforce Identity Provider |
-| [**GetAdfs**](IdentityProviderApi.html#getadfs) | **GET** /api/v2/identityproviders/adfs | Get ADFS Identity Provider |
-| [**GetCic**](IdentityProviderApi.html#getcic) | **GET** /api/v2/identityproviders/cic | Get Customer Interaction Center (CIC) Identity Provider |
-| [**GetIdentityproviders**](IdentityProviderApi.html#getidentityproviders) | **GET** /api/v2/identityproviders | The list of identity providers |
-| [**GetOkta**](IdentityProviderApi.html#getokta) | **GET** /api/v2/identityproviders/okta | Get Okta Identity Provider |
-| [**GetOnelogin**](IdentityProviderApi.html#getonelogin) | **GET** /api/v2/identityproviders/onelogin | Get OneLogin Identity Provider |
-| [**GetProviderId**](IdentityProviderApi.html#getproviderid) | **GET** /api/v2/identityproviders/{providerId} | Get an identity provider |
-| [**GetPurecloud**](IdentityProviderApi.html#getpurecloud) | **GET** /api/v2/identityproviders/purecloud | Get PureCloud Identity Provider |
-| [**GetSalesforce**](IdentityProviderApi.html#getsalesforce) | **GET** /api/v2/identityproviders/salesforce | Get Salesforce Identity Provider |
-| [**PutAdfs**](IdentityProviderApi.html#putadfs) | **PUT** /api/v2/identityproviders/adfs | Update/Create ADFS Identity Provider |
-| [**PutCic**](IdentityProviderApi.html#putcic) | **PUT** /api/v2/identityproviders/cic | Update/Create Customer Interaction Center (CIC) Identity Provider |
-| [**PutOkta**](IdentityProviderApi.html#putokta) | **PUT** /api/v2/identityproviders/okta | Update/Create Okta Identity Provider |
-| [**PutOnelogin**](IdentityProviderApi.html#putonelogin) | **PUT** /api/v2/identityproviders/onelogin | Update/Create OneLogin Identity Provider |
-| [**PutProviderId**](IdentityProviderApi.html#putproviderid) | **PUT** /api/v2/identityproviders/{providerId} | Update an identity provider |
-| [**PutPurecloud**](IdentityProviderApi.html#putpurecloud) | **PUT** /api/v2/identityproviders/purecloud | Update/Create PureCloud Identity Provider |
-| [**PutSalesforce**](IdentityProviderApi.html#putsalesforce) | **PUT** /api/v2/identityproviders/salesforce | Update/Create Salesforce Identity Provider |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteAdfs**](IdentityProviderApi.html#deleteadfs) | Delete ADFS Identity Provider |
+| [**DeleteCic**](IdentityProviderApi.html#deletecic) | Delete Customer Interaction Center (CIC) Identity Provider |
+| [**DeleteOkta**](IdentityProviderApi.html#deleteokta) | Delete Okta Identity Provider |
+| [**DeleteOnelogin**](IdentityProviderApi.html#deleteonelogin) | Delete OneLogin Identity Provider |
+| [**DeleteProviderId**](IdentityProviderApi.html#deleteproviderid) | Delete an identity provider |
+| [**DeletePurecloud**](IdentityProviderApi.html#deletepurecloud) | Delete PureCloud Identity Provider |
+| [**DeleteSalesforce**](IdentityProviderApi.html#deletesalesforce) | Delete Salesforce Identity Provider |
+| [**GetAdfs**](IdentityProviderApi.html#getadfs) | Get ADFS Identity Provider |
+| [**GetCic**](IdentityProviderApi.html#getcic) | Get Customer Interaction Center (CIC) Identity Provider |
+| [**GetIdentityproviders**](IdentityProviderApi.html#getidentityproviders) | The list of identity providers |
+| [**GetOkta**](IdentityProviderApi.html#getokta) | Get Okta Identity Provider |
+| [**GetOnelogin**](IdentityProviderApi.html#getonelogin) | Get OneLogin Identity Provider |
+| [**GetProviderId**](IdentityProviderApi.html#getproviderid) | Get an identity provider |
+| [**GetPurecloud**](IdentityProviderApi.html#getpurecloud) | Get PureCloud Identity Provider |
+| [**GetSalesforce**](IdentityProviderApi.html#getsalesforce) | Get Salesforce Identity Provider |
+| [**PutAdfs**](IdentityProviderApi.html#putadfs) | Update/Create ADFS Identity Provider |
+| [**PutCic**](IdentityProviderApi.html#putcic) | Update/Create Customer Interaction Center (CIC) Identity Provider |
+| [**PutOkta**](IdentityProviderApi.html#putokta) | Update/Create Okta Identity Provider |
+| [**PutOnelogin**](IdentityProviderApi.html#putonelogin) | Update/Create OneLogin Identity Provider |
+| [**PutProviderId**](IdentityProviderApi.html#putproviderid) | Update an identity provider |
+| [**PutPurecloud**](IdentityProviderApi.html#putpurecloud) | Update/Create PureCloud Identity Provider |
+| [**PutSalesforce**](IdentityProviderApi.html#putsalesforce) | Update/Create Salesforce Identity Provider |
 {: class="table table-striped"}
 
 <a name="deleteadfs"></a>
@@ -38,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete ADFS Identity Provider
 
 
+
+Wraps DELETE /api/v2/identityproviders/adfs 
 
 ### Example
 ~~~csharp
@@ -89,6 +91,8 @@ Delete Customer Interaction Center (CIC) Identity Provider
 
 
 
+Wraps DELETE /api/v2/identityproviders/cic 
+
 ### Example
 ~~~csharp
 using System;
@@ -138,6 +142,8 @@ void (empty response body)
 Delete Okta Identity Provider
 
 
+
+Wraps DELETE /api/v2/identityproviders/okta 
 
 ### Example
 ~~~csharp
@@ -189,6 +195,8 @@ Delete OneLogin Identity Provider
 
 
 
+Wraps DELETE /api/v2/identityproviders/onelogin 
+
 ### Example
 ~~~csharp
 using System;
@@ -238,6 +246,8 @@ void (empty response body)
 Delete an identity provider
 
 
+
+Wraps DELETE /api/v2/identityproviders/{providerId} 
 
 ### Example
 ~~~csharp
@@ -289,6 +299,8 @@ Delete PureCloud Identity Provider
 
 
 
+Wraps DELETE /api/v2/identityproviders/purecloud 
+
 ### Example
 ~~~csharp
 using System;
@@ -339,6 +351,8 @@ Delete Salesforce Identity Provider
 
 
 
+Wraps DELETE /api/v2/identityproviders/salesforce 
+
 ### Example
 ~~~csharp
 using System;
@@ -388,6 +402,8 @@ void (empty response body)
 Get ADFS Identity Provider
 
 
+
+Wraps GET /api/v2/identityproviders/adfs 
 
 ### Example
 ~~~csharp
@@ -440,6 +456,8 @@ Get Customer Interaction Center (CIC) Identity Provider
 
 
 
+Wraps GET /api/v2/identityproviders/cic 
+
 ### Example
 ~~~csharp
 using System;
@@ -490,6 +508,8 @@ This endpoint does require any parameters.
 The list of identity providers
 
 
+
+Wraps GET /api/v2/identityproviders 
 
 ### Example
 ~~~csharp
@@ -542,6 +562,8 @@ Get Okta Identity Provider
 
 
 
+Wraps GET /api/v2/identityproviders/okta 
+
 ### Example
 ~~~csharp
 using System;
@@ -592,6 +614,8 @@ This endpoint does require any parameters.
 Get OneLogin Identity Provider
 
 
+
+Wraps GET /api/v2/identityproviders/onelogin 
 
 ### Example
 ~~~csharp
@@ -644,6 +668,8 @@ Get an identity provider
 
 
 
+Wraps GET /api/v2/identityproviders/{providerId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -694,6 +720,8 @@ This endpoint does require any parameters.
 Get PureCloud Identity Provider
 
 
+
+Wraps GET /api/v2/identityproviders/purecloud 
 
 ### Example
 ~~~csharp
@@ -746,6 +774,8 @@ Get Salesforce Identity Provider
 
 
 
+Wraps GET /api/v2/identityproviders/salesforce 
+
 ### Example
 ~~~csharp
 using System;
@@ -796,6 +826,8 @@ This endpoint does require any parameters.
 Update/Create ADFS Identity Provider
 
 
+
+Wraps PUT /api/v2/identityproviders/adfs 
 
 ### Example
 ~~~csharp
@@ -852,6 +884,8 @@ Update/Create Customer Interaction Center (CIC) Identity Provider
 
 
 
+Wraps PUT /api/v2/identityproviders/cic 
+
 ### Example
 ~~~csharp
 using System;
@@ -906,6 +940,8 @@ void (empty response body)
 Update/Create Okta Identity Provider
 
 
+
+Wraps PUT /api/v2/identityproviders/okta 
 
 ### Example
 ~~~csharp
@@ -962,6 +998,8 @@ Update/Create OneLogin Identity Provider
 
 
 
+Wraps PUT /api/v2/identityproviders/onelogin 
+
 ### Example
 ~~~csharp
 using System;
@@ -1016,6 +1054,8 @@ void (empty response body)
 Update an identity provider
 
 
+
+Wraps PUT /api/v2/identityproviders/{providerId} 
 
 ### Example
 ~~~csharp
@@ -1072,6 +1112,8 @@ Update/Create PureCloud Identity Provider
 
 
 
+Wraps PUT /api/v2/identityproviders/purecloud 
+
 ### Example
 ~~~csharp
 using System;
@@ -1126,6 +1168,8 @@ void (empty response body)
 Update/Create Salesforce Identity Provider
 
 
+
+Wraps PUT /api/v2/identityproviders/salesforce 
 
 ### Example
 ~~~csharp

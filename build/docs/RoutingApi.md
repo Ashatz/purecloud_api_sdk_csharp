@@ -5,56 +5,56 @@ title: RoutingApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteEmailDomainsDomainId**](RoutingApi.html#deleteemaildomainsdomainid) | **DELETE** /api/v2/routing/email/domains/{domainId} | Delete a domain |
-| [**DeleteEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#deleteemaildomainsdomainnameroutesrouteid) | **DELETE** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
-| [**DeleteQueuesQueueId**](RoutingApi.html#deletequeuesqueueid) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
-| [**DeleteQueuesQueueIdUsersMemberId**](RoutingApi.html#deletequeuesqueueidusersmemberid) | **DELETE** /api/v2/routing/queues/{queueId}/users/{memberId} | Delete queue member |
-| [**DeleteQueuesQueueIdWrapupcodesCodeId**](RoutingApi.html#deletequeuesqueueidwrapupcodescodeid) | **DELETE** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
-| [**DeleteSkillsSkillId**](RoutingApi.html#deleteskillsskillid) | **DELETE** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
-| [**DeleteUserIdRoutingskillsSkillId**](RoutingApi.html#deleteuseridroutingskillsskillid) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
-| [**DeleteUtilization**](RoutingApi.html#deleteutilization) | **DELETE** /api/v2/routing/utilization | Delete utilization settings and revert to system defaults. |
-| [**DeleteWrapupcodesCodeId**](RoutingApi.html#deletewrapupcodescodeid) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
-| [**GetEmailDomains**](RoutingApi.html#getemaildomains) | **GET** /api/v2/routing/email/domains | Get domains |
-| [**GetEmailDomainsDomainId**](RoutingApi.html#getemaildomainsdomainid) | **GET** /api/v2/routing/email/domains/{domainId} | Get domain |
-| [**GetEmailDomainsDomainnameRoutes**](RoutingApi.html#getemaildomainsdomainnameroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
-| [**GetEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#getemaildomainsdomainnameroutesrouteid) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
-| [**GetEmailSetup**](RoutingApi.html#getemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
-| [**GetLanguages**](RoutingApi.html#getlanguages) | **GET** /api/v2/routing/languages | Get the list of supported languages. |
-| [**GetQueues**](RoutingApi.html#getqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
-| [**GetQueuesQueueId**](RoutingApi.html#getqueuesqueueid) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
-| [**GetQueuesQueueIdConversations**](RoutingApi.html#getqueuesqueueidconversations) | **GET** /api/v2/routing/queues/{queueId}/conversations | Get recent conversations that are still active |
-| [**GetQueuesQueueIdConversationsCallbacks**](RoutingApi.html#getqueuesqueueidconversationscallbacks) | **GET** /api/v2/routing/queues/{queueId}/conversations/callbacks | Get recent callback conversations that are still active |
-| [**GetQueuesQueueIdConversationsCalls**](RoutingApi.html#getqueuesqueueidconversationscalls) | **GET** /api/v2/routing/queues/{queueId}/conversations/calls | Get recent call conversations that are still active |
-| [**GetQueuesQueueIdConversationsChats**](RoutingApi.html#getqueuesqueueidconversationschats) | **GET** /api/v2/routing/queues/{queueId}/conversations/chats | Get recent chat conversations that are still active |
-| [**GetQueuesQueueIdConversationsEmails**](RoutingApi.html#getqueuesqueueidconversationsemails) | **GET** /api/v2/routing/queues/{queueId}/conversations/emails | Get recent email conversations that are still active |
-| [**GetQueuesQueueIdEstimatedwaittime**](RoutingApi.html#getqueuesqueueidestimatedwaittime) | **GET** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
-| [**GetQueuesQueueIdUsers**](RoutingApi.html#getqueuesqueueidusers) | **GET** /api/v2/routing/queues/{queueId}/users | Get the members of this queue |
-| [**GetQueuesQueueIdWrapupcodes**](RoutingApi.html#getqueuesqueueidwrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
-| [**GetSkills**](RoutingApi.html#getskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
-| [**GetSkillsSkillId**](RoutingApi.html#getskillsskillid) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
-| [**GetUserIdRoutingskills**](RoutingApi.html#getuseridroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
-| [**GetUtilization**](RoutingApi.html#getutilization) | **GET** /api/v2/routing/utilization | Get the utilization settings. |
-| [**GetWrapupcodes**](RoutingApi.html#getwrapupcodes) | **GET** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
-| [**GetWrapupcodesCodeId**](RoutingApi.html#getwrapupcodescodeid) | **GET** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
-| [**PatchQueuesQueueIdUsers**](RoutingApi.html#patchqueuesqueueidusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | Join or unjoin a set of users for a queue |
-| [**PatchQueuesQueueIdUsersMemberId**](RoutingApi.html#patchqueuesqueueidusersmemberid) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number of joined status for a User in a Queue |
-| [**PostEmailDomains**](RoutingApi.html#postemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
-| [**PostEmailDomainsDomainnameRoutes**](RoutingApi.html#postemaildomainsdomainnameroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
-| [**PostLanguages**](RoutingApi.html#postlanguages) | **POST** /api/v2/routing/languages | Create Language |
-| [**PostQueues**](RoutingApi.html#postqueues) | **POST** /api/v2/routing/queues | Create queue |
-| [**PostQueuesObservationsQuery**](RoutingApi.html#postqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
-| [**PostQueuesQueueIdUsers**](RoutingApi.html#postqueuesqueueidusers) | **POST** /api/v2/routing/queues/{queueId}/users | Bulk add or delete up to 100 queue members |
-| [**PostQueuesQueueIdWrapupcodes**](RoutingApi.html#postqueuesqueueidwrapupcodes) | **POST** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
-| [**PostSkills**](RoutingApi.html#postskills) | **POST** /api/v2/routing/skills | Create Skill |
-| [**PostUserIdRoutingskills**](RoutingApi.html#postuseridroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
-| [**PostWrapupcodes**](RoutingApi.html#postwrapupcodes) | **POST** /api/v2/routing/wrapupcodes | Create a wrap-up code |
-| [**PutEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#putemaildomainsdomainnameroutesrouteid) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
-| [**PutQueuesQueueId**](RoutingApi.html#putqueuesqueueid) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
-| [**PutUserIdRoutingskillsSkillId**](RoutingApi.html#putuseridroutingskillsskillid) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
-| [**PutUtilization**](RoutingApi.html#pututilization) | **PUT** /api/v2/routing/utilization | Update the utilization settings. |
-| [**PutWrapupcodesCodeId**](RoutingApi.html#putwrapupcodescodeid) | **PUT** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteEmailDomainsDomainId**](RoutingApi.html#deleteemaildomainsdomainid) | Delete a domain |
+| [**DeleteEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#deleteemaildomainsdomainnameroutesrouteid) | Delete a route |
+| [**DeleteQueuesQueueId**](RoutingApi.html#deletequeuesqueueid) | Delete a queue |
+| [**DeleteQueuesQueueIdUsersMemberId**](RoutingApi.html#deletequeuesqueueidusersmemberid) | Delete queue member |
+| [**DeleteQueuesQueueIdWrapupcodesCodeId**](RoutingApi.html#deletequeuesqueueidwrapupcodescodeid) | Delete a wrap-up code from a queue |
+| [**DeleteSkillsSkillId**](RoutingApi.html#deleteskillsskillid) | Delete Routing Skill |
+| [**DeleteUserIdRoutingskillsSkillId**](RoutingApi.html#deleteuseridroutingskillsskillid) | Remove routing skill from user |
+| [**DeleteUtilization**](RoutingApi.html#deleteutilization) | Delete utilization settings and revert to system defaults. |
+| [**DeleteWrapupcodesCodeId**](RoutingApi.html#deletewrapupcodescodeid) | Delete wrap-up code |
+| [**GetEmailDomains**](RoutingApi.html#getemaildomains) | Get domains |
+| [**GetEmailDomainsDomainId**](RoutingApi.html#getemaildomainsdomainid) | Get domain |
+| [**GetEmailDomainsDomainnameRoutes**](RoutingApi.html#getemaildomainsdomainnameroutes) | Get routes |
+| [**GetEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#getemaildomainsdomainnameroutesrouteid) | Get a route |
+| [**GetEmailSetup**](RoutingApi.html#getemailsetup) | Get email setup |
+| [**GetLanguages**](RoutingApi.html#getlanguages) | Get the list of supported languages. |
+| [**GetQueues**](RoutingApi.html#getqueues) | Get list of queues. |
+| [**GetQueuesQueueId**](RoutingApi.html#getqueuesqueueid) | Get details about this queue. |
+| [**GetQueuesQueueIdConversations**](RoutingApi.html#getqueuesqueueidconversations) | Get recent conversations that are still active |
+| [**GetQueuesQueueIdConversationsCallbacks**](RoutingApi.html#getqueuesqueueidconversationscallbacks) | Get recent callback conversations that are still active |
+| [**GetQueuesQueueIdConversationsCalls**](RoutingApi.html#getqueuesqueueidconversationscalls) | Get recent call conversations that are still active |
+| [**GetQueuesQueueIdConversationsChats**](RoutingApi.html#getqueuesqueueidconversationschats) | Get recent chat conversations that are still active |
+| [**GetQueuesQueueIdConversationsEmails**](RoutingApi.html#getqueuesqueueidconversationsemails) | Get recent email conversations that are still active |
+| [**GetQueuesQueueIdEstimatedwaittime**](RoutingApi.html#getqueuesqueueidestimatedwaittime) | Get Estimated Wait Time |
+| [**GetQueuesQueueIdUsers**](RoutingApi.html#getqueuesqueueidusers) | Get the members of this queue |
+| [**GetQueuesQueueIdWrapupcodes**](RoutingApi.html#getqueuesqueueidwrapupcodes) | Get the wrap-up codes for a queue |
+| [**GetSkills**](RoutingApi.html#getskills) | Get the list of routing skills. |
+| [**GetSkillsSkillId**](RoutingApi.html#getskillsskillid) | Get Routing Skill |
+| [**GetUserIdRoutingskills**](RoutingApi.html#getuseridroutingskills) | List routing skills for user |
+| [**GetUtilization**](RoutingApi.html#getutilization) | Get the utilization settings. |
+| [**GetWrapupcodes**](RoutingApi.html#getwrapupcodes) | Get list of wrapup codes. |
+| [**GetWrapupcodesCodeId**](RoutingApi.html#getwrapupcodescodeid) | Get details about this wrap-up code. |
+| [**PatchQueuesQueueIdUsers**](RoutingApi.html#patchqueuesqueueidusers) | Join or unjoin a set of users for a queue |
+| [**PatchQueuesQueueIdUsersMemberId**](RoutingApi.html#patchqueuesqueueidusersmemberid) | Update the ring number of joined status for a User in a Queue |
+| [**PostEmailDomains**](RoutingApi.html#postemaildomains) | Create a domain |
+| [**PostEmailDomainsDomainnameRoutes**](RoutingApi.html#postemaildomainsdomainnameroutes) | Create a route |
+| [**PostLanguages**](RoutingApi.html#postlanguages) | Create Language |
+| [**PostQueues**](RoutingApi.html#postqueues) | Create queue |
+| [**PostQueuesObservationsQuery**](RoutingApi.html#postqueuesobservationsquery) | Query for queue observations |
+| [**PostQueuesQueueIdUsers**](RoutingApi.html#postqueuesqueueidusers) | Bulk add or delete up to 100 queue members |
+| [**PostQueuesQueueIdWrapupcodes**](RoutingApi.html#postqueuesqueueidwrapupcodes) | Add up to 100 wrap-up codes to a queue |
+| [**PostSkills**](RoutingApi.html#postskills) | Create Skill |
+| [**PostUserIdRoutingskills**](RoutingApi.html#postuseridroutingskills) | Add routing skill to user |
+| [**PostWrapupcodes**](RoutingApi.html#postwrapupcodes) | Create a wrap-up code |
+| [**PutEmailDomainsDomainnameRoutesRouteId**](RoutingApi.html#putemaildomainsdomainnameroutesrouteid) | Update a route |
+| [**PutQueuesQueueId**](RoutingApi.html#putqueuesqueueid) | Update a queue |
+| [**PutUserIdRoutingskillsSkillId**](RoutingApi.html#putuseridroutingskillsskillid) | Update routing skill proficiency or state. |
+| [**PutUtilization**](RoutingApi.html#pututilization) | Update the utilization settings. |
+| [**PutWrapupcodesCodeId**](RoutingApi.html#putwrapupcodescodeid) | Update wrap-up code |
 {: class="table table-striped"}
 
 <a name="deleteemaildomainsdomainid"></a>
@@ -64,6 +64,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete a domain
 
 
+
+Wraps DELETE /api/v2/routing/email/domains/{domainId} 
 
 ### Example
 ~~~csharp
@@ -120,6 +122,8 @@ namespace Example
 Delete a route
 
 
+
+Wraps DELETE /api/v2/routing/email/domains/{domainName}/routes/{routeId} 
 
 ### Example
 ~~~csharp
@@ -179,6 +183,8 @@ Delete a queue
 
 
 
+Wraps DELETE /api/v2/routing/queues/{queueId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -236,6 +242,8 @@ namespace Example
 Delete queue member
 
 
+
+Wraps DELETE /api/v2/routing/queues/{queueId}/users/{memberId} 
 
 ### Example
 ~~~csharp
@@ -295,6 +303,8 @@ Delete a wrap-up code from a queue
 
 
 
+Wraps DELETE /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -353,6 +363,8 @@ Delete Routing Skill
 
 
 
+Wraps DELETE /api/v2/routing/skills/{skillId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -408,6 +420,8 @@ namespace Example
 Remove routing skill from user
 
 
+
+Wraps DELETE /api/v2/users/{userId}/routingskills/{skillId} 
 
 ### Example
 ~~~csharp
@@ -467,6 +481,8 @@ Delete utilization settings and revert to system defaults.
 
 
 
+Wraps DELETE /api/v2/routing/utilization 
+
 ### Example
 ~~~csharp
 using System;
@@ -517,6 +533,8 @@ This endpoint does require any parameters.
 Delete wrap-up code
 
 
+
+Wraps DELETE /api/v2/routing/wrapupcodes/{codeId} 
 
 ### Example
 ~~~csharp
@@ -574,6 +592,8 @@ Get domains
 
 
 
+Wraps GET /api/v2/routing/email/domains 
+
 ### Example
 ~~~csharp
 using System;
@@ -624,6 +644,8 @@ This endpoint does require any parameters.
 Get domain
 
 
+
+Wraps GET /api/v2/routing/email/domains/{domainId} 
 
 ### Example
 ~~~csharp
@@ -680,6 +702,8 @@ namespace Example
 Get routes
 
 
+
+Wraps GET /api/v2/routing/email/domains/{domainName}/routes 
 
 ### Example
 ~~~csharp
@@ -743,6 +767,8 @@ Get a route
 
 
 
+Wraps GET /api/v2/routing/email/domains/{domainName}/routes/{routeId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -801,6 +827,8 @@ Get email setup
 
 
 
+Wraps GET /api/v2/routing/email/setup 
+
 ### Example
 ~~~csharp
 using System;
@@ -851,6 +879,8 @@ This endpoint does require any parameters.
 Get the list of supported languages.
 
 
+
+Wraps GET /api/v2/routing/languages 
 
 ### Example
 ~~~csharp
@@ -913,6 +943,8 @@ namespace Example
 Get list of queues.
 
 
+
+Wraps GET /api/v2/routing/queues 
 
 ### Example
 ~~~csharp
@@ -978,6 +1010,8 @@ Get details about this queue.
 
 
 
+Wraps GET /api/v2/routing/queues/{queueId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1033,6 +1067,8 @@ namespace Example
 Get recent conversations that are still active
 
 
+
+Wraps GET /api/v2/routing/queues/{queueId}/conversations 
 
 ### Example
 ~~~csharp
@@ -1094,6 +1130,8 @@ Get recent callback conversations that are still active
 
 
 
+Wraps GET /api/v2/routing/queues/{queueId}/conversations/callbacks 
+
 ### Example
 ~~~csharp
 using System;
@@ -1153,6 +1191,8 @@ namespace Example
 Get recent call conversations that are still active
 
 
+
+Wraps GET /api/v2/routing/queues/{queueId}/conversations/calls 
 
 ### Example
 ~~~csharp
@@ -1214,6 +1254,8 @@ Get recent chat conversations that are still active
 
 
 
+Wraps GET /api/v2/routing/queues/{queueId}/conversations/chats 
+
 ### Example
 ~~~csharp
 using System;
@@ -1273,6 +1315,8 @@ namespace Example
 Get recent email conversations that are still active
 
 
+
+Wraps GET /api/v2/routing/queues/{queueId}/conversations/emails 
 
 ### Example
 ~~~csharp
@@ -1334,6 +1378,8 @@ Get Estimated Wait Time
 
 
 
+Wraps GET /api/v2/routing/queues/{queueId}/estimatedwaittime 
+
 ### Example
 ~~~csharp
 using System;
@@ -1391,6 +1437,8 @@ namespace Example
 Get the members of this queue
 
 
+
+Wraps GET /api/v2/routing/queues/{queueId}/users 
 
 ### Example
 ~~~csharp
@@ -1470,6 +1518,8 @@ Get the wrap-up codes for a queue
 
 
 
+Wraps GET /api/v2/routing/queues/{queueId}/wrapupcodes 
+
 ### Example
 ~~~csharp
 using System;
@@ -1525,6 +1575,8 @@ namespace Example
 Get the list of routing skills.
 
 
+
+Wraps GET /api/v2/routing/skills 
 
 ### Example
 ~~~csharp
@@ -1586,6 +1638,8 @@ Get Routing Skill
 
 
 
+Wraps GET /api/v2/routing/skills/{skillId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1641,6 +1695,8 @@ namespace Example
 List routing skills for user
 
 
+
+Wraps GET /api/v2/users/{userId}/routingskills 
 
 ### Example
 ~~~csharp
@@ -1704,6 +1760,8 @@ Get the utilization settings.
 
 
 
+Wraps GET /api/v2/routing/utilization 
+
 ### Example
 ~~~csharp
 using System;
@@ -1754,6 +1812,8 @@ This endpoint does require any parameters.
 Get list of wrapup codes.
 
 
+
+Wraps GET /api/v2/routing/wrapupcodes 
 
 ### Example
 ~~~csharp
@@ -1815,6 +1875,8 @@ Get details about this wrap-up code.
 
 
 
+Wraps GET /api/v2/routing/wrapupcodes/{codeId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1870,6 +1932,8 @@ namespace Example
 Join or unjoin a set of users for a queue
 
 
+
+Wraps PATCH /api/v2/routing/queues/{queueId}/users 
 
 ### Example
 ~~~csharp
@@ -1928,6 +1992,8 @@ namespace Example
 Update the ring number of joined status for a User in a Queue
 
 
+
+Wraps PATCH /api/v2/routing/queues/{queueId}/users/{memberId} 
 
 ### Example
 ~~~csharp
@@ -1989,6 +2055,8 @@ Create a domain
 
 
 
+Wraps POST /api/v2/routing/email/domains 
+
 ### Example
 ~~~csharp
 using System;
@@ -2044,6 +2112,8 @@ namespace Example
 Create a route
 
 
+
+Wraps POST /api/v2/routing/email/domains/{domainName}/routes 
 
 ### Example
 ~~~csharp
@@ -2103,6 +2173,8 @@ Create Language
 
 
 
+Wraps POST /api/v2/routing/languages 
+
 ### Example
 ~~~csharp
 using System;
@@ -2158,6 +2230,8 @@ namespace Example
 Create queue
 
 
+
+Wraps POST /api/v2/routing/queues 
 
 ### Example
 ~~~csharp
@@ -2215,6 +2289,8 @@ Query for queue observations
 
 
 
+Wraps POST /api/v2/analytics/queues/observations/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -2270,6 +2346,8 @@ namespace Example
 Bulk add or delete up to 100 queue members
 
 
+
+Wraps POST /api/v2/routing/queues/{queueId}/users 
 
 ### Example
 ~~~csharp
@@ -2331,6 +2409,8 @@ Add up to 100 wrap-up codes to a queue
 
 
 
+Wraps POST /api/v2/routing/queues/{queueId}/wrapupcodes 
+
 ### Example
 ~~~csharp
 using System;
@@ -2389,6 +2469,8 @@ Create Skill
 
 
 
+Wraps POST /api/v2/routing/skills 
+
 ### Example
 ~~~csharp
 using System;
@@ -2444,6 +2526,8 @@ namespace Example
 Add routing skill to user
 
 
+
+Wraps POST /api/v2/users/{userId}/routingskills 
 
 ### Example
 ~~~csharp
@@ -2503,6 +2587,8 @@ Create a wrap-up code
 
 
 
+Wraps POST /api/v2/routing/wrapupcodes 
+
 ### Example
 ~~~csharp
 using System;
@@ -2558,6 +2644,8 @@ namespace Example
 Update a route
 
 
+
+Wraps PUT /api/v2/routing/email/domains/{domainName}/routes/{routeId} 
 
 ### Example
 ~~~csharp
@@ -2619,6 +2707,8 @@ Update a queue
 
 
 
+Wraps PUT /api/v2/routing/queues/{queueId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -2676,6 +2766,8 @@ namespace Example
 Update routing skill proficiency or state.
 
 
+
+Wraps PUT /api/v2/users/{userId}/routingskills/{skillId} 
 
 ### Example
 ~~~csharp
@@ -2737,6 +2829,8 @@ Update the utilization settings.
 
 
 
+Wraps PUT /api/v2/routing/utilization 
+
 ### Example
 ~~~csharp
 using System;
@@ -2792,6 +2886,8 @@ namespace Example
 Update wrap-up code
 
 
+
+Wraps PUT /api/v2/routing/wrapupcodes/{codeId} 
 
 ### Example
 ~~~csharp

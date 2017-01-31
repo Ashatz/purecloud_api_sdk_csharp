@@ -5,19 +5,19 @@ title: ResponseManagementApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteLibrariesLibraryId**](ResponseManagementApi.html#deletelibrarieslibraryid) | **DELETE** /api/v2/responsemanagement/libraries/{libraryId} | Delete an existing response library. |
-| [**DeleteResponsesResponseId**](ResponseManagementApi.html#deleteresponsesresponseid) | **DELETE** /api/v2/responsemanagement/responses/{responseId} | Delete an existing response. |
-| [**GetLibraries**](ResponseManagementApi.html#getlibraries) | **GET** /api/v2/responsemanagement/libraries | Gets a list of existing response libraries. |
-| [**GetLibrariesLibraryId**](ResponseManagementApi.html#getlibrarieslibraryid) | **GET** /api/v2/responsemanagement/libraries/{libraryId} | Get details about an existing response library. |
-| [**GetResponses**](ResponseManagementApi.html#getresponses) | **GET** /api/v2/responsemanagement/responses | Gets a list of existing responses. |
-| [**GetResponsesResponseId**](ResponseManagementApi.html#getresponsesresponseid) | **GET** /api/v2/responsemanagement/responses/{responseId} | Get details about an existing response. |
-| [**PostLibraries**](ResponseManagementApi.html#postlibraries) | **POST** /api/v2/responsemanagement/libraries | Create a response library. |
-| [**PostResponses**](ResponseManagementApi.html#postresponses) | **POST** /api/v2/responsemanagement/responses | Create a response. |
-| [**PostResponsesQuery**](ResponseManagementApi.html#postresponsesquery) | **POST** /api/v2/responsemanagement/responses/query | Query responses |
-| [**PutLibrariesLibraryId**](ResponseManagementApi.html#putlibrarieslibraryid) | **PUT** /api/v2/responsemanagement/libraries/{libraryId} | Update an existing response library. |
-| [**PutResponsesResponseId**](ResponseManagementApi.html#putresponsesresponseid) | **PUT** /api/v2/responsemanagement/responses/{responseId} | Update an existing response. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteLibrariesLibraryId**](ResponseManagementApi.html#deletelibrarieslibraryid) | Delete an existing response library. |
+| [**DeleteResponsesResponseId**](ResponseManagementApi.html#deleteresponsesresponseid) | Delete an existing response. |
+| [**GetLibraries**](ResponseManagementApi.html#getlibraries) | Gets a list of existing response libraries. |
+| [**GetLibrariesLibraryId**](ResponseManagementApi.html#getlibrarieslibraryid) | Get details about an existing response library. |
+| [**GetResponses**](ResponseManagementApi.html#getresponses) | Gets a list of existing responses. |
+| [**GetResponsesResponseId**](ResponseManagementApi.html#getresponsesresponseid) | Get details about an existing response. |
+| [**PostLibraries**](ResponseManagementApi.html#postlibraries) | Create a response library. |
+| [**PostResponses**](ResponseManagementApi.html#postresponses) | Create a response. |
+| [**PostResponsesQuery**](ResponseManagementApi.html#postresponsesquery) | Query responses |
+| [**PutLibrariesLibraryId**](ResponseManagementApi.html#putlibrarieslibraryid) | Update an existing response library. |
+| [**PutResponsesResponseId**](ResponseManagementApi.html#putresponsesresponseid) | Update an existing response. |
 {: class="table table-striped"}
 
 <a name="deletelibrarieslibraryid"></a>
@@ -27,6 +27,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete an existing response library.
 
 This will remove any responses associated with the library.
+
+Wraps DELETE /api/v2/responsemanagement/libraries/{libraryId} 
 
 ### Example
 ~~~csharp
@@ -83,6 +85,8 @@ Delete an existing response.
 
 This will remove the response from any libraries associated with it.
 
+Wraps DELETE /api/v2/responsemanagement/responses/{responseId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -137,6 +141,8 @@ void (empty response body)
 Gets a list of existing response libraries.
 
 
+
+Wraps GET /api/v2/responsemanagement/libraries 
 
 ### Example
 ~~~csharp
@@ -196,6 +202,8 @@ Get details about an existing response library.
 
 
 
+Wraps GET /api/v2/responsemanagement/libraries/{libraryId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -251,6 +259,8 @@ namespace Example
 Gets a list of existing responses.
 
 
+
+Wraps GET /api/v2/responsemanagement/responses 
 
 ### Example
 ~~~csharp
@@ -312,6 +322,8 @@ Get details about an existing response.
 
 
 
+Wraps GET /api/v2/responsemanagement/responses/{responseId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -367,6 +379,8 @@ namespace Example
 Create a response library.
 
 
+
+Wraps POST /api/v2/responsemanagement/libraries 
 
 ### Example
 ~~~csharp
@@ -424,6 +438,8 @@ Create a response.
 
 
 
+Wraps POST /api/v2/responsemanagement/responses 
+
 ### Example
 ~~~csharp
 using System;
@@ -480,6 +496,8 @@ Query responses
 
 
 
+Wraps POST /api/v2/responsemanagement/responses/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -535,6 +553,8 @@ namespace Example
 Update an existing response library.
 
 Fields that can be updated: name. The most recent version is required for updates.
+
+Wraps PUT /api/v2/responsemanagement/libraries/{libraryId} 
 
 ### Example
 ~~~csharp
@@ -593,6 +613,8 @@ namespace Example
 Update an existing response.
 
 Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
+
+Wraps PUT /api/v2/responsemanagement/responses/{responseId} 
 
 ### Example
 ~~~csharp

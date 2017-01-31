@@ -2033,8 +2033,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>string</returns>
-        string PostProvidersEdgesEdgeIdReboot (string edgeId);
+        string PostProvidersEdgesEdgeIdReboot (string edgeId, EdgeRebootParameters body = null);
 
         /// <summary>
         /// Reboot an Edge
@@ -2044,8 +2045,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PostProvidersEdgesEdgeIdRebootWithHttpInfo (string edgeId);
+        ApiResponse<string> PostProvidersEdgesEdgeIdRebootWithHttpInfo (string edgeId, EdgeRebootParameters body = null);
         /// <summary>
         /// Starts a software update for this edge.
         /// </summary>
@@ -4781,8 +4783,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PostProvidersEdgesEdgeIdRebootAsync (string edgeId);
+        System.Threading.Tasks.Task<string> PostProvidersEdgesEdgeIdRebootAsync (string edgeId, EdgeRebootParameters body = null);
 
         /// <summary>
         /// Reboot an Edge
@@ -4792,8 +4795,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PostProvidersEdgesEdgeIdRebootAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<string>> PostProvidersEdgesEdgeIdRebootAsyncWithHttpInfo (string edgeId, EdgeRebootParameters body = null);
         /// <summary>
         /// Starts a software update for this edge.
         /// </summary>
@@ -19684,10 +19688,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>string</returns>
-        public string PostProvidersEdgesEdgeIdReboot (string edgeId)
+        public string PostProvidersEdgesEdgeIdReboot (string edgeId, EdgeRebootParameters body = null)
         {
-             ApiResponse<string> localVarResponse = PostProvidersEdgesEdgeIdRebootWithHttpInfo(edgeId);
+             ApiResponse<string> localVarResponse = PostProvidersEdgesEdgeIdRebootWithHttpInfo(edgeId, body);
              return localVarResponse.Data;
         }
 
@@ -19696,8 +19701,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PostProvidersEdgesEdgeIdRebootWithHttpInfo (string edgeId)
+        public ApiResponse< string > PostProvidersEdgesEdgeIdRebootWithHttpInfo (string edgeId, EdgeRebootParameters body = null)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -19729,6 +19735,14 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -19762,10 +19776,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PostProvidersEdgesEdgeIdRebootAsync (string edgeId)
+        public async System.Threading.Tasks.Task<string> PostProvidersEdgesEdgeIdRebootAsync (string edgeId, EdgeRebootParameters body = null)
         {
-             ApiResponse<string> localVarResponse = await PostProvidersEdgesEdgeIdRebootAsyncWithHttpInfo(edgeId);
+             ApiResponse<string> localVarResponse = await PostProvidersEdgesEdgeIdRebootAsyncWithHttpInfo(edgeId, body);
              return localVarResponse.Data;
 
         }
@@ -19775,8 +19790,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">Parameters for the edge reboot (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PostProvidersEdgesEdgeIdRebootAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostProvidersEdgesEdgeIdRebootAsyncWithHttpInfo (string edgeId, EdgeRebootParameters body = null)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -19808,6 +19824,14 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
 
             // authentication (PureCloud Auth) required
             // oauth required

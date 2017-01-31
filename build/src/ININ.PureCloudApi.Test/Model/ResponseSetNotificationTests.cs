@@ -91,20 +91,20 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Version'
         }
         /// <summary>
-        /// Test the property 'AdditionalProperties'
-        /// </summary>
-        [Test]
-        public void AdditionalPropertiesTest()
-        {
-            // TODO: unit test for the property 'AdditionalProperties'
-        }
-        /// <summary>
         /// Test the property 'Responses'
         /// </summary>
         [Test]
         public void ResponsesTest()
         {
             // TODO: unit test for the property 'Responses'
+        }
+        /// <summary>
+        /// Test the property 'AdditionalProperties'
+        /// </summary>
+        [Test]
+        public void AdditionalPropertiesTest()
+        {
+            // TODO: unit test for the property 'AdditionalProperties'
         }
 
     }

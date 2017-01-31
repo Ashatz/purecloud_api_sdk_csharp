@@ -5,14 +5,14 @@ title: UserRecordingsApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteRecordingId**](UserRecordingsApi.html#deleterecordingid) | **DELETE** /api/v2/userrecordings/{recordingId} | Delete a user recording. |
-| [**GetRecordingId**](UserRecordingsApi.html#getrecordingid) | **GET** /api/v2/userrecordings/{recordingId} | Get a user recording. |
-| [**GetRecordingIdMedia**](UserRecordingsApi.html#getrecordingidmedia) | **GET** /api/v2/userrecordings/{recordingId}/media | Download a user recording. |
-| [**GetSummary**](UserRecordingsApi.html#getsummary) | **GET** /api/v2/userrecordings/summary | Get user recording summary |
-| [**GetUserrecordings**](UserRecordingsApi.html#getuserrecordings) | **GET** /api/v2/userrecordings | Get a list of user recordings. |
-| [**PutRecordingId**](UserRecordingsApi.html#putrecordingid) | **PUT** /api/v2/userrecordings/{recordingId} | Update a user recording. |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteRecordingId**](UserRecordingsApi.html#deleterecordingid) | Delete a user recording. |
+| [**GetRecordingId**](UserRecordingsApi.html#getrecordingid) | Get a user recording. |
+| [**GetRecordingIdMedia**](UserRecordingsApi.html#getrecordingidmedia) | Download a user recording. |
+| [**GetSummary**](UserRecordingsApi.html#getsummary) | Get user recording summary |
+| [**GetUserrecordings**](UserRecordingsApi.html#getuserrecordings) | Get a list of user recordings. |
+| [**PutRecordingId**](UserRecordingsApi.html#putrecordingid) | Update a user recording. |
 {: class="table table-striped"}
 
 <a name="deleterecordingid"></a>
@@ -22,6 +22,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete a user recording.
 
 
+
+Wraps DELETE /api/v2/userrecordings/{recordingId} 
 
 ### Example
 ~~~csharp
@@ -77,6 +79,8 @@ void (empty response body)
 Get a user recording.
 
 
+
+Wraps GET /api/v2/userrecordings/{recordingId} 
 
 ### Example
 ~~~csharp
@@ -136,6 +140,8 @@ Download a user recording.
 
 
 
+Wraps GET /api/v2/userrecordings/{recordingId}/media 
+
 ### Example
 ~~~csharp
 using System;
@@ -194,6 +200,8 @@ Get user recording summary
 
 
 
+Wraps GET /api/v2/userrecordings/summary 
+
 ### Example
 ~~~csharp
 using System;
@@ -244,6 +252,8 @@ This endpoint does require any parameters.
 Get a list of user recordings.
 
 
+
+Wraps GET /api/v2/userrecordings 
 
 ### Example
 ~~~csharp
@@ -304,6 +314,8 @@ namespace Example
 Update a user recording.
 
 
+
+Wraps PUT /api/v2/userrecordings/{recordingId} 
 
 ### Example
 ~~~csharp

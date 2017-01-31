@@ -481,8 +481,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
+        /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>KeywordSetEntityListing</returns>
-        KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null);
+        KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
 
         /// <summary>
         /// Get the list of keyword sets
@@ -500,8 +501,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
+        /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>ApiResponse of KeywordSetEntityListing</returns>
-        ApiResponse<KeywordSetEntityListing> GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null);
+        ApiResponse<KeywordSetEntityListing> GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
         /// <summary>
         /// Get a keywordSet by id.
         /// </summary>
@@ -1310,8 +1312,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
+        /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>Task of KeywordSetEntityListing</returns>
-        System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null);
+        System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
 
         /// <summary>
         /// Get the list of keyword sets
@@ -1329,8 +1332,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
+        /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null);
+        System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
         /// <summary>
         /// Get a keywordSet by id.
         /// </summary>
@@ -4534,10 +4538,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
+        /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>KeywordSetEntityListing</returns>
-        public KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null)
+        public KeywordSetEntityListing GetKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
         {
-             ApiResponse<KeywordSetEntityListing> localVarResponse = GetKeywordsetsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId);
+             ApiResponse<KeywordSetEntityListing> localVarResponse = GetKeywordsetsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId, _operator);
              return localVarResponse.Data;
         }
 
@@ -4554,8 +4559,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
+        /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>ApiResponse of KeywordSetEntityListing</returns>
-        public ApiResponse< KeywordSetEntityListing > GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null)
+        public ApiResponse< KeywordSetEntityListing > GetKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
         {
 
             var localVarPath = "/api/v2/quality/keywordsets";
@@ -4592,6 +4598,7 @@ namespace ININ.PureCloudApi.Api
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (queueId != null) localVarQueryParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // query parameter
             if (agentId != null) localVarQueryParams.Add("agentId", Configuration.ApiClient.ParameterToString(agentId)); // query parameter
+            if (_operator != null) localVarQueryParams.Add("operator", Configuration.ApiClient.ParameterToString(_operator)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -4633,10 +4640,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
+        /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>Task of KeywordSetEntityListing</returns>
-        public async System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null)
+        public async System.Threading.Tasks.Task<KeywordSetEntityListing> GetKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
         {
-             ApiResponse<KeywordSetEntityListing> localVarResponse = await GetKeywordsetsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId);
+             ApiResponse<KeywordSetEntityListing> localVarResponse = await GetKeywordsetsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId, _operator);
              return localVarResponse.Data;
 
         }
@@ -4654,8 +4662,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">the keyword set name - used for filtering results in searches. (optional)</param>
         /// <param name="queueId">the queue id - used for filtering results in searches. (optional)</param>
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
+        /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
         {
 
             var localVarPath = "/api/v2/quality/keywordsets";
@@ -4692,6 +4701,7 @@ namespace ININ.PureCloudApi.Api
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (queueId != null) localVarQueryParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // query parameter
             if (agentId != null) localVarQueryParams.Add("agentId", Configuration.ApiClient.ParameterToString(agentId)); // query parameter
+            if (_operator != null) localVarQueryParams.Add("operator", Configuration.ApiClient.ParameterToString(_operator)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

@@ -63,25 +63,25 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="DateModified">DateModified.</param>
         /// <param name="Version">Version.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Campaigns">Campaigns.</param>
         /// <param name="CurrentCampaign">CurrentCampaign.</param>
         /// <param name="Status">Status.</param>
         /// <param name="StopMessage">StopMessage.</param>
         /// <param name="Repeat">Repeat.</param>
-        public CampaignSequenceNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Object AdditionalProperties = null, List<DocumentDataNotificationCreatedBy> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public CampaignSequenceNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<DocumentDataV2NotificationCreatedBy> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
-            this.AdditionalProperties = AdditionalProperties;
             this.Campaigns = Campaigns;
             this.CurrentCampaign = CurrentCampaign;
             this.Status = Status;
             this.StopMessage = StopMessage;
             this.Repeat = Repeat;
+            this.AdditionalProperties = AdditionalProperties;
         }
         
         /// <summary>
@@ -110,15 +110,10 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Object AdditionalProperties { get; set; }
-        /// <summary>
         /// Gets or Sets Campaigns
         /// </summary>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
-        public List<DocumentDataNotificationCreatedBy> Campaigns { get; set; }
+        public List<DocumentDataV2NotificationCreatedBy> Campaigns { get; set; }
         /// <summary>
         /// Gets or Sets CurrentCampaign
         /// </summary>
@@ -135,6 +130,11 @@ namespace ININ.PureCloudApi.Model
         [DataMember(Name="repeat", EmitDefaultValue=false)]
         public bool? Repeat { get; set; }
         /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Object AdditionalProperties { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -147,12 +147,12 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
             sb.Append("  CurrentCampaign: ").Append(CurrentCampaign).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StopMessage: ").Append(StopMessage).Append("\n");
             sb.Append("  Repeat: ").Append(Repeat).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -215,11 +215,6 @@ namespace ININ.PureCloudApi.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.Equals(other.AdditionalProperties)
-                ) &&
-                (
                     this.Campaigns == other.Campaigns ||
                     this.Campaigns != null &&
                     this.Campaigns.SequenceEqual(other.Campaigns)
@@ -243,6 +238,11 @@ namespace ININ.PureCloudApi.Model
                     this.Repeat == other.Repeat ||
                     this.Repeat != null &&
                     this.Repeat.Equals(other.Repeat)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -267,8 +267,6 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 if (this.Campaigns != null)
                     hash = hash * 59 + this.Campaigns.GetHashCode();
                 if (this.CurrentCampaign != null)
@@ -279,6 +277,8 @@ namespace ININ.PureCloudApi.Model
                     hash = hash * 59 + this.StopMessage.GetHashCode();
                 if (this.Repeat != null)
                     hash = hash * 59 + this.Repeat.GetHashCode();
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;
             }
         }

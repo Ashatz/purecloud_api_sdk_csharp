@@ -5,11 +5,11 @@ title: UtilitiesApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**GetDate**](UtilitiesApi.html#getdate) | **GET** /api/v2/date | Get the current system date/time |
-| [**GetTimezones**](UtilitiesApi.html#gettimezones) | **GET** /api/v2/timezones | Get time zones list |
-| [**PostDetails**](UtilitiesApi.html#postdetails) | **POST** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
+| Method | Description |
+| ------------- | ------------- |
+| [**GetDate**](UtilitiesApi.html#getdate) | Get the current system date/time |
+| [**GetTimezones**](UtilitiesApi.html#gettimezones) | Get time zones list |
+| [**PostDetails**](UtilitiesApi.html#postdetails) | Returns the information about an X509 PEM encoded certificate or certificate chain. |
 {: class="table table-striped"}
 
 <a name="getdate"></a>
@@ -19,6 +19,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Get the current system date/time
 
 
+
+Wraps GET /api/v2/date 
 
 ### Example
 ~~~csharp
@@ -70,6 +72,8 @@ This endpoint does require any parameters.
 Get time zones list
 
 
+
+Wraps GET /api/v2/timezones 
 
 ### Example
 ~~~csharp
@@ -128,6 +132,8 @@ namespace Example
 Returns the information about an X509 PEM encoded certificate or certificate chain.
 
 
+
+Wraps POST /api/v2/certificate/details 
 
 ### Example
 ~~~csharp

@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="StartDate">StartDate.</param>
         /// <param name="EndDate">EndDate.</param>
         /// <param name="ModifiedDate">ModifiedDate.</param>
-        public OutOfOfficeNotification(DocumentDataNotificationWorkspace User = null, bool? Active = null, DateTime? StartDate = null, DateTime? EndDate = null, DateTime? ModifiedDate = null)
+        public OutOfOfficeNotification(DocumentDataV2NotificationWorkspace User = null, bool? Active = null, DateTime? StartDate = null, DateTime? EndDate = null, DateTime? ModifiedDate = null)
         {
             this.User = User;
             this.Active = Active;
@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public DocumentDataNotificationWorkspace User { get; set; }
+        public DocumentDataV2NotificationWorkspace User { get; set; }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>

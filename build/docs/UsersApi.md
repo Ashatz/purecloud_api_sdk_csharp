@@ -5,50 +5,50 @@ title: UsersApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteUserId**](UsersApi.html#deleteuserid) | **DELETE** /api/v2/users/{userId} | Delete user |
-| [**DeleteUserIdRoles**](UsersApi.html#deleteuseridroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
-| [**DeleteUserIdRoutingskillsSkillId**](UsersApi.html#deleteuseridroutingskillsskillid) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
-| [**DeleteUserIdStationAssociatedstation**](UsersApi.html#deleteuseridstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
-| [**DeleteUserIdStationDefaultstation**](UsersApi.html#deleteuseridstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
-| [**GetFieldconfig**](UsersApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
-| [**GetMe**](UsersApi.html#getme) | **GET** /api/v2/users/me | Get current user details. |
-| [**GetSearch**](UsersApi.html#getsearch) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
-| [**GetUserId**](UsersApi.html#getuserid) | **GET** /api/v2/users/{userId} | Get user. |
-| [**GetUserIdAdjacents**](UsersApi.html#getuseridadjacents) | **GET** /api/v2/users/{userId}/adjacents | Get adjacents |
-| [**GetUserIdCallforwarding**](UsersApi.html#getuseridcallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
-| [**GetUserIdDirectreports**](UsersApi.html#getuseriddirectreports) | **GET** /api/v2/users/{userId}/directreports | Get direct reports |
-| [**GetUserIdFavorites**](UsersApi.html#getuseridfavorites) | **GET** /api/v2/users/{userId}/favorites | Get favorites |
-| [**GetUserIdGeolocationsClientId**](UsersApi.html#getuseridgeolocationsclientid) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
-| [**GetUserIdOutofoffice**](UsersApi.html#getuseridoutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
-| [**GetUserIdProfileskills**](UsersApi.html#getuseridprofileskills) | **GET** /api/v2/users/{userId}/profileskills | List profile skills for a user |
-| [**GetUserIdQueues**](UsersApi.html#getuseridqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
-| [**GetUserIdRoles**](UsersApi.html#getuseridroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
-| [**GetUserIdRoutingskills**](UsersApi.html#getuseridroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
-| [**GetUserIdRoutingstatus**](UsersApi.html#getuseridroutingstatus) | **GET** /api/v2/users/{userId}/routingstatus | Fetch the routing status of a user |
-| [**GetUserIdStation**](UsersApi.html#getuseridstation) | **GET** /api/v2/users/{userId}/station | Get station information for user |
-| [**GetUserIdSuperiors**](UsersApi.html#getuseridsuperiors) | **GET** /api/v2/users/{userId}/superiors | Get superiors |
-| [**GetUsers**](UsersApi.html#getusers) | **GET** /api/v2/users | Get the list of available users. |
-| [**PatchUserId**](UsersApi.html#patchuserid) | **PATCH** /api/v2/users/{userId} | Update user |
-| [**PatchUserIdCallforwarding**](UsersApi.html#patchuseridcallforwarding) | **PATCH** /api/v2/users/{userId}/callforwarding | Patch a user&#39;s CallForwarding |
-| [**PatchUserIdGeolocationsClientId**](UsersApi.html#patchuseridgeolocationsclientid) | **PATCH** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
-| [**PatchUserIdQueues**](UsersApi.html#patchuseridqueues) | **PATCH** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
-| [**PatchUserIdQueuesQueueId**](UsersApi.html#patchuseridqueuesqueueid) | **PATCH** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
-| [**PostSearch**](UsersApi.html#postsearch) | **POST** /api/v2/users/search | Search users |
-| [**PostUserIdRoutingskills**](UsersApi.html#postuseridroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
-| [**PostUsers**](UsersApi.html#postusers) | **POST** /api/v2/users | Create user |
-| [**PostUsersAggregatesQuery**](UsersApi.html#postusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
-| [**PostUsersDetailsQuery**](UsersApi.html#postusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
-| [**PostUsersObservationsQuery**](UsersApi.html#postusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
-| [**PutUserIdCallforwarding**](UsersApi.html#putuseridcallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
-| [**PutUserIdOutofoffice**](UsersApi.html#putuseridoutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
-| [**PutUserIdProfileskills**](UsersApi.html#putuseridprofileskills) | **PUT** /api/v2/users/{userId}/profileskills | Update profile skills for a user |
-| [**PutUserIdRoles**](UsersApi.html#putuseridroles) | **PUT** /api/v2/users/{userId}/roles | Sets the user&#39;s roles |
-| [**PutUserIdRoutingskillsSkillId**](UsersApi.html#putuseridroutingskillsskillid) | **PUT** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
-| [**PutUserIdRoutingstatus**](UsersApi.html#putuseridroutingstatus) | **PUT** /api/v2/users/{userId}/routingstatus | Update the routing status of a user |
-| [**PutUserIdStationAssociatedstationStationId**](UsersApi.html#putuseridstationassociatedstationstationid) | **PUT** /api/v2/users/{userId}/station/associatedstation/{stationId} | Set associated station |
-| [**PutUserIdStationDefaultstationStationId**](UsersApi.html#putuseridstationdefaultstationstationid) | **PUT** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteUserId**](UsersApi.html#deleteuserid) | Delete user |
+| [**DeleteUserIdRoles**](UsersApi.html#deleteuseridroles) | Removes all the roles from the user. |
+| [**DeleteUserIdRoutingskillsSkillId**](UsersApi.html#deleteuseridroutingskillsskillid) | Remove routing skill from user |
+| [**DeleteUserIdStationAssociatedstation**](UsersApi.html#deleteuseridstationassociatedstation) | Clear associated station |
+| [**DeleteUserIdStationDefaultstation**](UsersApi.html#deleteuseridstationdefaultstation) | Clear default station |
+| [**GetFieldconfig**](UsersApi.html#getfieldconfig) | Fetch field config for an entity type |
+| [**GetMe**](UsersApi.html#getme) | Get current user details. |
+| [**GetSearch**](UsersApi.html#getsearch) | Search users using the q64 value returned from a previous search |
+| [**GetUserId**](UsersApi.html#getuserid) | Get user. |
+| [**GetUserIdAdjacents**](UsersApi.html#getuseridadjacents) | Get adjacents |
+| [**GetUserIdCallforwarding**](UsersApi.html#getuseridcallforwarding) | Get a user&#39;s CallForwarding |
+| [**GetUserIdDirectreports**](UsersApi.html#getuseriddirectreports) | Get direct reports |
+| [**GetUserIdFavorites**](UsersApi.html#getuseridfavorites) | Get favorites |
+| [**GetUserIdGeolocationsClientId**](UsersApi.html#getuseridgeolocationsclientid) | Get a user&#39;s Geolocation |
+| [**GetUserIdOutofoffice**](UsersApi.html#getuseridoutofoffice) | Get a OutOfOffice |
+| [**GetUserIdProfileskills**](UsersApi.html#getuseridprofileskills) | List profile skills for a user |
+| [**GetUserIdQueues**](UsersApi.html#getuseridqueues) | Get queues for user |
+| [**GetUserIdRoles**](UsersApi.html#getuseridroles) | Returns a listing of roles and permissions for a user. |
+| [**GetUserIdRoutingskills**](UsersApi.html#getuseridroutingskills) | List routing skills for user |
+| [**GetUserIdRoutingstatus**](UsersApi.html#getuseridroutingstatus) | Fetch the routing status of a user |
+| [**GetUserIdStation**](UsersApi.html#getuseridstation) | Get station information for user |
+| [**GetUserIdSuperiors**](UsersApi.html#getuseridsuperiors) | Get superiors |
+| [**GetUsers**](UsersApi.html#getusers) | Get the list of available users. |
+| [**PatchUserId**](UsersApi.html#patchuserid) | Update user |
+| [**PatchUserIdCallforwarding**](UsersApi.html#patchuseridcallforwarding) | Patch a user&#39;s CallForwarding |
+| [**PatchUserIdGeolocationsClientId**](UsersApi.html#patchuseridgeolocationsclientid) | Patch a user&#39;s Geolocation |
+| [**PatchUserIdQueues**](UsersApi.html#patchuseridqueues) | Join or unjoin a set of queues for a user |
+| [**PatchUserIdQueuesQueueId**](UsersApi.html#patchuseridqueuesqueueid) | Join or unjoin a queue for a user |
+| [**PostSearch**](UsersApi.html#postsearch) | Search users |
+| [**PostUserIdRoutingskills**](UsersApi.html#postuseridroutingskills) | Add routing skill to user |
+| [**PostUsers**](UsersApi.html#postusers) | Create user |
+| [**PostUsersAggregatesQuery**](UsersApi.html#postusersaggregatesquery) | Query for user aggregates |
+| [**PostUsersDetailsQuery**](UsersApi.html#postusersdetailsquery) | Query for user details |
+| [**PostUsersObservationsQuery**](UsersApi.html#postusersobservationsquery) | Query for user observations |
+| [**PutUserIdCallforwarding**](UsersApi.html#putuseridcallforwarding) | Update a user&#39;s CallForwarding |
+| [**PutUserIdOutofoffice**](UsersApi.html#putuseridoutofoffice) | Update an OutOfOffice |
+| [**PutUserIdProfileskills**](UsersApi.html#putuseridprofileskills) | Update profile skills for a user |
+| [**PutUserIdRoles**](UsersApi.html#putuseridroles) | Sets the user&#39;s roles |
+| [**PutUserIdRoutingskillsSkillId**](UsersApi.html#putuseridroutingskillsskillid) | Update routing skill proficiency or state. |
+| [**PutUserIdRoutingstatus**](UsersApi.html#putuseridroutingstatus) | Update the routing status of a user |
+| [**PutUserIdStationAssociatedstationStationId**](UsersApi.html#putuseridstationassociatedstationstationid) | Set associated station |
+| [**PutUserIdStationDefaultstationStationId**](UsersApi.html#putuseridstationdefaultstationstationid) | Set default station |
 {: class="table table-striped"}
 
 <a name="deleteuserid"></a>
@@ -58,6 +58,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete user
 
 
+
+Wraps DELETE /api/v2/users/{userId} 
 
 ### Example
 ~~~csharp
@@ -115,6 +117,8 @@ Removes all the roles from the user.
 
 
 
+Wraps DELETE /api/v2/users/{userId}/roles 
+
 ### Example
 ~~~csharp
 using System;
@@ -169,6 +173,8 @@ void (empty response body)
 Remove routing skill from user
 
 
+
+Wraps DELETE /api/v2/users/{userId}/routingskills/{skillId} 
 
 ### Example
 ~~~csharp
@@ -228,6 +234,8 @@ Clear associated station
 
 
 
+Wraps DELETE /api/v2/users/{userId}/station/associatedstation 
+
 ### Example
 ~~~csharp
 using System;
@@ -283,6 +291,8 @@ Clear default station
 
 
 
+Wraps DELETE /api/v2/users/{userId}/station/defaultstation 
+
 ### Example
 ~~~csharp
 using System;
@@ -337,6 +347,8 @@ void (empty response body)
 Fetch field config for an entity type
 
 
+
+Wraps GET /api/v2/fieldconfig 
 
 ### Example
 ~~~csharp
@@ -394,6 +406,8 @@ Get current user details.
 
 This request is not valid when using the Client Credentials OAuth grant.
 
+Wraps GET /api/v2/users/me 
+
 ### Example
 ~~~csharp
 using System;
@@ -449,6 +463,8 @@ namespace Example
 Search users using the q64 value returned from a previous search
 
 
+
+Wraps GET /api/v2/users/search 
 
 ### Example
 ~~~csharp
@@ -508,6 +524,8 @@ Get user.
 
 
 
+Wraps GET /api/v2/users/{userId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -565,6 +583,8 @@ namespace Example
 Get adjacents
 
 
+
+Wraps GET /api/v2/users/{userId}/adjacents 
 
 ### Example
 ~~~csharp
@@ -624,6 +644,8 @@ Get a user's CallForwarding
 
 
 
+Wraps GET /api/v2/users/{userId}/callforwarding 
+
 ### Example
 ~~~csharp
 using System;
@@ -679,6 +701,8 @@ namespace Example
 Get direct reports
 
 
+
+Wraps GET /api/v2/users/{userId}/directreports 
 
 ### Example
 ~~~csharp
@@ -737,6 +761,8 @@ namespace Example
 Get favorites
 
 
+
+Wraps GET /api/v2/users/{userId}/favorites 
 
 ### Example
 ~~~csharp
@@ -802,6 +828,8 @@ Get a user's Geolocation
 
 
 
+Wraps GET /api/v2/users/{userId}/geolocations/{clientId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -860,6 +888,8 @@ Get a OutOfOffice
 
 
 
+Wraps GET /api/v2/users/{userId}/outofoffice 
+
 ### Example
 ~~~csharp
 using System;
@@ -916,6 +946,8 @@ List profile skills for a user
 
 
 
+Wraps GET /api/v2/users/{userId}/profileskills 
+
 ### Example
 ~~~csharp
 using System;
@@ -971,6 +1003,8 @@ namespace Example
 Get queues for user
 
 
+
+Wraps GET /api/v2/users/{userId}/queues 
 
 ### Example
 ~~~csharp
@@ -1034,6 +1068,8 @@ Returns a listing of roles and permissions for a user.
 
 
 
+Wraps GET /api/v2/users/{userId}/roles 
+
 ### Example
 ~~~csharp
 using System;
@@ -1089,6 +1125,8 @@ namespace Example
 List routing skills for user
 
 
+
+Wraps GET /api/v2/users/{userId}/routingskills 
 
 ### Example
 ~~~csharp
@@ -1152,6 +1190,8 @@ Fetch the routing status of a user
 
 
 
+Wraps GET /api/v2/users/{userId}/routingstatus 
+
 ### Example
 ~~~csharp
 using System;
@@ -1208,6 +1248,8 @@ Get station information for user
 
 
 
+Wraps GET /api/v2/users/{userId}/station 
+
 ### Example
 ~~~csharp
 using System;
@@ -1263,6 +1305,8 @@ namespace Example
 Get superiors
 
 
+
+Wraps GET /api/v2/users/{userId}/superiors 
 
 ### Example
 ~~~csharp
@@ -1321,6 +1365,8 @@ namespace Example
 Get the list of available users.
 
 
+
+Wraps GET /api/v2/users 
 
 ### Example
 ~~~csharp
@@ -1386,6 +1432,8 @@ Update user
 
 
 
+Wraps PATCH /api/v2/users/{userId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1444,6 +1492,8 @@ Patch a user's CallForwarding
 
 
 
+Wraps PATCH /api/v2/users/{userId}/callforwarding 
+
 ### Example
 ~~~csharp
 using System;
@@ -1501,6 +1551,8 @@ namespace Example
 Patch a user's Geolocation
 
 The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+
+Wraps PATCH /api/v2/users/{userId}/geolocations/{clientId} 
 
 ### Example
 ~~~csharp
@@ -1562,6 +1614,8 @@ Join or unjoin a set of queues for a user
 
 
 
+Wraps PATCH /api/v2/users/{userId}/queues 
+
 ### Example
 ~~~csharp
 using System;
@@ -1619,6 +1673,8 @@ namespace Example
 Join or unjoin a queue for a user
 
 
+
+Wraps PATCH /api/v2/users/{userId}/queues/{queueId} 
 
 ### Example
 ~~~csharp
@@ -1680,6 +1736,8 @@ Search users
 
 
 
+Wraps POST /api/v2/users/search 
+
 ### Example
 ~~~csharp
 using System;
@@ -1735,6 +1793,8 @@ namespace Example
 Add routing skill to user
 
 
+
+Wraps POST /api/v2/users/{userId}/routingskills 
 
 ### Example
 ~~~csharp
@@ -1794,6 +1854,8 @@ Create user
 
 
 
+Wraps POST /api/v2/users 
+
 ### Example
 ~~~csharp
 using System;
@@ -1849,6 +1911,8 @@ namespace Example
 Query for user aggregates
 
 
+
+Wraps POST /api/v2/analytics/users/aggregates/query 
 
 ### Example
 ~~~csharp
@@ -1906,6 +1970,8 @@ Query for user details
 
 
 
+Wraps POST /api/v2/analytics/users/details/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -1962,6 +2028,8 @@ Query for user observations
 
 
 
+Wraps POST /api/v2/analytics/users/observations/query 
+
 ### Example
 ~~~csharp
 using System;
@@ -2017,6 +2085,8 @@ namespace Example
 Update a user's CallForwarding
 
 
+
+Wraps PUT /api/v2/users/{userId}/callforwarding 
 
 ### Example
 ~~~csharp
@@ -2076,6 +2146,8 @@ Update an OutOfOffice
 
 
 
+Wraps PUT /api/v2/users/{userId}/outofoffice 
+
 ### Example
 ~~~csharp
 using System;
@@ -2133,6 +2205,8 @@ namespace Example
 Update profile skills for a user
 
 
+
+Wraps PUT /api/v2/users/{userId}/profileskills 
 
 ### Example
 ~~~csharp
@@ -2192,6 +2266,8 @@ Sets the user's roles
 
 
 
+Wraps PUT /api/v2/users/{userId}/roles 
+
 ### Example
 ~~~csharp
 using System;
@@ -2249,6 +2325,8 @@ namespace Example
 Update routing skill proficiency or state.
 
 
+
+Wraps PUT /api/v2/users/{userId}/routingskills/{skillId} 
 
 ### Example
 ~~~csharp
@@ -2310,6 +2388,8 @@ Update the routing status of a user
 
 
 
+Wraps PUT /api/v2/users/{userId}/routingstatus 
+
 ### Example
 ~~~csharp
 using System;
@@ -2368,6 +2448,8 @@ Set associated station
 
 
 
+Wraps PUT /api/v2/users/{userId}/station/associatedstation/{stationId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -2424,6 +2506,8 @@ void (empty response body)
 Set default station
 
 
+
+Wraps PUT /api/v2/users/{userId}/station/defaultstation/{stationId} 
 
 ### Example
 ~~~csharp

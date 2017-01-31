@@ -5,42 +5,42 @@ title: AlertingApi
 
 All URIs are relative to *https://api.mypurecloud.com*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**DeleteHeartbeatAlertsAlertId**](AlertingApi.html#deleteheartbeatalertsalertid) | **DELETE** /api/v2/alerting/heartbeat/alerts/{alertId} | Delete a heart beat alert |
-| [**DeleteHeartbeatRulesRuleId**](AlertingApi.html#deleteheartbeatrulesruleid) | **DELETE** /api/v2/alerting/heartbeat/rules/{ruleId} | Delete a heart beat rule. |
-| [**DeleteInteractionstatsAlertsAlertId**](AlertingApi.html#deleteinteractionstatsalertsalertid) | **DELETE** /api/v2/alerting/interactionstats/alerts/{alertId} | Delete an interaction stats alert |
-| [**DeleteInteractionstatsRulesRuleId**](AlertingApi.html#deleteinteractionstatsrulesruleid) | **DELETE** /api/v2/alerting/interactionstats/rules/{ruleId} | Delete an interaction stats rule. |
-| [**DeleteRoutingstatusAlertsAlertId**](AlertingApi.html#deleteroutingstatusalertsalertid) | **DELETE** /api/v2/alerting/routingstatus/alerts/{alertId} | Delete a routing status alert |
-| [**DeleteRoutingstatusRulesRuleId**](AlertingApi.html#deleteroutingstatusrulesruleid) | **DELETE** /api/v2/alerting/routingstatus/rules/{ruleId} | Delete a routing status rule. |
-| [**DeleteUserpresenceAlertsAlertId**](AlertingApi.html#deleteuserpresencealertsalertid) | **DELETE** /api/v2/alerting/userpresence/alerts/{alertId} | Delete a user presence alert |
-| [**DeleteUserpresenceRulesRuleId**](AlertingApi.html#deleteuserpresencerulesruleid) | **DELETE** /api/v2/alerting/userpresence/rules/{ruleId} | Delete a user presence rule. |
-| [**GetHeartbeatAlerts**](AlertingApi.html#getheartbeatalerts) | **GET** /api/v2/alerting/heartbeat/alerts | Get heart beat alert list. |
-| [**GetHeartbeatAlertsAlertId**](AlertingApi.html#getheartbeatalertsalertid) | **GET** /api/v2/alerting/heartbeat/alerts/{alertId} | Get a heart beat alert |
-| [**GetHeartbeatRules**](AlertingApi.html#getheartbeatrules) | **GET** /api/v2/alerting/heartbeat/rules | Get a heart beat rule list. |
-| [**GetHeartbeatRulesRuleId**](AlertingApi.html#getheartbeatrulesruleid) | **GET** /api/v2/alerting/heartbeat/rules/{ruleId} | Get a heart beat rule. |
-| [**GetInteractionstatsAlerts**](AlertingApi.html#getinteractionstatsalerts) | **GET** /api/v2/alerting/interactionstats/alerts | Get interaction stats alert list. |
-| [**GetInteractionstatsAlertsAlertId**](AlertingApi.html#getinteractionstatsalertsalertid) | **GET** /api/v2/alerting/interactionstats/alerts/{alertId} | Get an interaction stats alert |
-| [**GetInteractionstatsAlertsUnread**](AlertingApi.html#getinteractionstatsalertsunread) | **GET** /api/v2/alerting/interactionstats/alerts/unread | Gets user unread count of interaction stats alerts. |
-| [**GetInteractionstatsRules**](AlertingApi.html#getinteractionstatsrules) | **GET** /api/v2/alerting/interactionstats/rules | Get an interaction stats rule list. |
-| [**GetInteractionstatsRulesRuleId**](AlertingApi.html#getinteractionstatsrulesruleid) | **GET** /api/v2/alerting/interactionstats/rules/{ruleId} | Get an interaction stats rule. |
-| [**GetRoutingstatusAlerts**](AlertingApi.html#getroutingstatusalerts) | **GET** /api/v2/alerting/routingstatus/alerts | Get routing status alert list. |
-| [**GetRoutingstatusAlertsAlertId**](AlertingApi.html#getroutingstatusalertsalertid) | **GET** /api/v2/alerting/routingstatus/alerts/{alertId} | Get a routing status alert |
-| [**GetRoutingstatusRules**](AlertingApi.html#getroutingstatusrules) | **GET** /api/v2/alerting/routingstatus/rules | Get a routing status rule list. |
-| [**GetRoutingstatusRulesRuleId**](AlertingApi.html#getroutingstatusrulesruleid) | **GET** /api/v2/alerting/routingstatus/rules/{ruleId} | Get a routing status rule. |
-| [**GetUserpresenceAlerts**](AlertingApi.html#getuserpresencealerts) | **GET** /api/v2/alerting/userpresence/alerts | Get user presence alert list. |
-| [**GetUserpresenceAlertsAlertId**](AlertingApi.html#getuserpresencealertsalertid) | **GET** /api/v2/alerting/userpresence/alerts/{alertId} | Get a user presence alert |
-| [**GetUserpresenceRules**](AlertingApi.html#getuserpresencerules) | **GET** /api/v2/alerting/userpresence/rules | Get a user presence rule list. |
-| [**GetUserpresenceRulesRuleId**](AlertingApi.html#getuserpresencerulesruleid) | **GET** /api/v2/alerting/userpresence/rules/{ruleId} | Get a user presence rule. |
-| [**PostHeartbeatRules**](AlertingApi.html#postheartbeatrules) | **POST** /api/v2/alerting/heartbeat/rules | Create a heart beat rule. |
-| [**PostInteractionstatsRules**](AlertingApi.html#postinteractionstatsrules) | **POST** /api/v2/alerting/interactionstats/rules | Create an interaction stats rule. |
-| [**PostRoutingstatusRules**](AlertingApi.html#postroutingstatusrules) | **POST** /api/v2/alerting/routingstatus/rules | Create a routing status rule. |
-| [**PostUserpresenceRules**](AlertingApi.html#postuserpresencerules) | **POST** /api/v2/alerting/userpresence/rules | Create a user presence rule. |
-| [**PutHeartbeatRulesRuleId**](AlertingApi.html#putheartbeatrulesruleid) | **PUT** /api/v2/alerting/heartbeat/rules/{ruleId} | Update a heart beat rule |
-| [**PutInteractionstatsAlertsAlertId**](AlertingApi.html#putinteractionstatsalertsalertid) | **PUT** /api/v2/alerting/interactionstats/alerts/{alertId} | Update an interaction stats alert read status |
-| [**PutInteractionstatsRulesRuleId**](AlertingApi.html#putinteractionstatsrulesruleid) | **PUT** /api/v2/alerting/interactionstats/rules/{ruleId} | Update an interaction stats rule |
-| [**PutRoutingstatusRulesRuleId**](AlertingApi.html#putroutingstatusrulesruleid) | **PUT** /api/v2/alerting/routingstatus/rules/{ruleId} | Update a routing status rule |
-| [**PutUserpresenceRulesRuleId**](AlertingApi.html#putuserpresencerulesruleid) | **PUT** /api/v2/alerting/userpresence/rules/{ruleId} | Update a user presence rule |
+| Method | Description |
+| ------------- | ------------- |
+| [**DeleteHeartbeatAlertsAlertId**](AlertingApi.html#deleteheartbeatalertsalertid) | Delete a heart beat alert |
+| [**DeleteHeartbeatRulesRuleId**](AlertingApi.html#deleteheartbeatrulesruleid) | Delete a heart beat rule. |
+| [**DeleteInteractionstatsAlertsAlertId**](AlertingApi.html#deleteinteractionstatsalertsalertid) | Delete an interaction stats alert |
+| [**DeleteInteractionstatsRulesRuleId**](AlertingApi.html#deleteinteractionstatsrulesruleid) | Delete an interaction stats rule. |
+| [**DeleteRoutingstatusAlertsAlertId**](AlertingApi.html#deleteroutingstatusalertsalertid) | Delete a routing status alert |
+| [**DeleteRoutingstatusRulesRuleId**](AlertingApi.html#deleteroutingstatusrulesruleid) | Delete a routing status rule. |
+| [**DeleteUserpresenceAlertsAlertId**](AlertingApi.html#deleteuserpresencealertsalertid) | Delete a user presence alert |
+| [**DeleteUserpresenceRulesRuleId**](AlertingApi.html#deleteuserpresencerulesruleid) | Delete a user presence rule. |
+| [**GetHeartbeatAlerts**](AlertingApi.html#getheartbeatalerts) | Get heart beat alert list. |
+| [**GetHeartbeatAlertsAlertId**](AlertingApi.html#getheartbeatalertsalertid) | Get a heart beat alert |
+| [**GetHeartbeatRules**](AlertingApi.html#getheartbeatrules) | Get a heart beat rule list. |
+| [**GetHeartbeatRulesRuleId**](AlertingApi.html#getheartbeatrulesruleid) | Get a heart beat rule. |
+| [**GetInteractionstatsAlerts**](AlertingApi.html#getinteractionstatsalerts) | Get interaction stats alert list. |
+| [**GetInteractionstatsAlertsAlertId**](AlertingApi.html#getinteractionstatsalertsalertid) | Get an interaction stats alert |
+| [**GetInteractionstatsAlertsUnread**](AlertingApi.html#getinteractionstatsalertsunread) | Gets user unread count of interaction stats alerts. |
+| [**GetInteractionstatsRules**](AlertingApi.html#getinteractionstatsrules) | Get an interaction stats rule list. |
+| [**GetInteractionstatsRulesRuleId**](AlertingApi.html#getinteractionstatsrulesruleid) | Get an interaction stats rule. |
+| [**GetRoutingstatusAlerts**](AlertingApi.html#getroutingstatusalerts) | Get routing status alert list. |
+| [**GetRoutingstatusAlertsAlertId**](AlertingApi.html#getroutingstatusalertsalertid) | Get a routing status alert |
+| [**GetRoutingstatusRules**](AlertingApi.html#getroutingstatusrules) | Get a routing status rule list. |
+| [**GetRoutingstatusRulesRuleId**](AlertingApi.html#getroutingstatusrulesruleid) | Get a routing status rule. |
+| [**GetUserpresenceAlerts**](AlertingApi.html#getuserpresencealerts) | Get user presence alert list. |
+| [**GetUserpresenceAlertsAlertId**](AlertingApi.html#getuserpresencealertsalertid) | Get a user presence alert |
+| [**GetUserpresenceRules**](AlertingApi.html#getuserpresencerules) | Get a user presence rule list. |
+| [**GetUserpresenceRulesRuleId**](AlertingApi.html#getuserpresencerulesruleid) | Get a user presence rule. |
+| [**PostHeartbeatRules**](AlertingApi.html#postheartbeatrules) | Create a heart beat rule. |
+| [**PostInteractionstatsRules**](AlertingApi.html#postinteractionstatsrules) | Create an interaction stats rule. |
+| [**PostRoutingstatusRules**](AlertingApi.html#postroutingstatusrules) | Create a routing status rule. |
+| [**PostUserpresenceRules**](AlertingApi.html#postuserpresencerules) | Create a user presence rule. |
+| [**PutHeartbeatRulesRuleId**](AlertingApi.html#putheartbeatrulesruleid) | Update a heart beat rule |
+| [**PutInteractionstatsAlertsAlertId**](AlertingApi.html#putinteractionstatsalertsalertid) | Update an interaction stats alert read status |
+| [**PutInteractionstatsRulesRuleId**](AlertingApi.html#putinteractionstatsrulesruleid) | Update an interaction stats rule |
+| [**PutRoutingstatusRulesRuleId**](AlertingApi.html#putroutingstatusrulesruleid) | Update a routing status rule |
+| [**PutUserpresenceRulesRuleId**](AlertingApi.html#putuserpresencerulesruleid) | Update a user presence rule |
 {: class="table table-striped"}
 
 <a name="deleteheartbeatalertsalertid"></a>
@@ -50,6 +50,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 Delete a heart beat alert
 
 
+
+Wraps DELETE /api/v2/alerting/heartbeat/alerts/{alertId} 
 
 ### Example
 ~~~csharp
@@ -106,6 +108,8 @@ Delete a heart beat rule.
 
 
 
+Wraps DELETE /api/v2/alerting/heartbeat/rules/{ruleId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -160,6 +164,8 @@ void (empty response body)
 Delete an interaction stats alert
 
 
+
+Wraps DELETE /api/v2/alerting/interactionstats/alerts/{alertId} 
 
 ### Example
 ~~~csharp
@@ -216,6 +222,8 @@ Delete an interaction stats rule.
 
 
 
+Wraps DELETE /api/v2/alerting/interactionstats/rules/{ruleId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -270,6 +278,8 @@ void (empty response body)
 Delete a routing status alert
 
 
+
+Wraps DELETE /api/v2/alerting/routingstatus/alerts/{alertId} 
 
 ### Example
 ~~~csharp
@@ -326,6 +336,8 @@ Delete a routing status rule.
 
 
 
+Wraps DELETE /api/v2/alerting/routingstatus/rules/{ruleId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -380,6 +392,8 @@ void (empty response body)
 Delete a user presence alert
 
 
+
+Wraps DELETE /api/v2/alerting/userpresence/alerts/{alertId} 
 
 ### Example
 ~~~csharp
@@ -436,6 +450,8 @@ Delete a user presence rule.
 
 
 
+Wraps DELETE /api/v2/alerting/userpresence/rules/{ruleId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -490,6 +506,8 @@ void (empty response body)
 Get heart beat alert list.
 
 
+
+Wraps GET /api/v2/alerting/heartbeat/alerts 
 
 ### Example
 ~~~csharp
@@ -546,6 +564,8 @@ namespace Example
 Get a heart beat alert
 
 
+
+Wraps GET /api/v2/alerting/heartbeat/alerts/{alertId} 
 
 ### Example
 ~~~csharp
@@ -605,6 +625,8 @@ Get a heart beat rule list.
 
 
 
+Wraps GET /api/v2/alerting/heartbeat/rules 
+
 ### Example
 ~~~csharp
 using System;
@@ -660,6 +682,8 @@ namespace Example
 Get a heart beat rule.
 
 
+
+Wraps GET /api/v2/alerting/heartbeat/rules/{ruleId} 
 
 ### Example
 ~~~csharp
@@ -719,6 +743,8 @@ Get interaction stats alert list.
 
 
 
+Wraps GET /api/v2/alerting/interactionstats/alerts 
+
 ### Example
 ~~~csharp
 using System;
@@ -774,6 +800,8 @@ namespace Example
 Get an interaction stats alert
 
 
+
+Wraps GET /api/v2/alerting/interactionstats/alerts/{alertId} 
 
 ### Example
 ~~~csharp
@@ -833,6 +861,8 @@ Gets user unread count of interaction stats alerts.
 
 
 
+Wraps GET /api/v2/alerting/interactionstats/alerts/unread 
+
 ### Example
 ~~~csharp
 using System;
@@ -883,6 +913,8 @@ This endpoint does require any parameters.
 Get an interaction stats rule list.
 
 
+
+Wraps GET /api/v2/alerting/interactionstats/rules 
 
 ### Example
 ~~~csharp
@@ -939,6 +971,8 @@ namespace Example
 Get an interaction stats rule.
 
 
+
+Wraps GET /api/v2/alerting/interactionstats/rules/{ruleId} 
 
 ### Example
 ~~~csharp
@@ -998,6 +1032,8 @@ Get routing status alert list.
 
 
 
+Wraps GET /api/v2/alerting/routingstatus/alerts 
+
 ### Example
 ~~~csharp
 using System;
@@ -1053,6 +1089,8 @@ namespace Example
 Get a routing status alert
 
 
+
+Wraps GET /api/v2/alerting/routingstatus/alerts/{alertId} 
 
 ### Example
 ~~~csharp
@@ -1112,6 +1150,8 @@ Get a routing status rule list.
 
 
 
+Wraps GET /api/v2/alerting/routingstatus/rules 
+
 ### Example
 ~~~csharp
 using System;
@@ -1167,6 +1207,8 @@ namespace Example
 Get a routing status rule.
 
 
+
+Wraps GET /api/v2/alerting/routingstatus/rules/{ruleId} 
 
 ### Example
 ~~~csharp
@@ -1226,6 +1268,8 @@ Get user presence alert list.
 
 
 
+Wraps GET /api/v2/alerting/userpresence/alerts 
+
 ### Example
 ~~~csharp
 using System;
@@ -1281,6 +1325,8 @@ namespace Example
 Get a user presence alert
 
 
+
+Wraps GET /api/v2/alerting/userpresence/alerts/{alertId} 
 
 ### Example
 ~~~csharp
@@ -1340,6 +1386,8 @@ Get a user presence rule list.
 
 
 
+Wraps GET /api/v2/alerting/userpresence/rules 
+
 ### Example
 ~~~csharp
 using System;
@@ -1395,6 +1443,8 @@ namespace Example
 Get a user presence rule.
 
 
+
+Wraps GET /api/v2/alerting/userpresence/rules/{ruleId} 
 
 ### Example
 ~~~csharp
@@ -1454,6 +1504,8 @@ Create a heart beat rule.
 
 
 
+Wraps POST /api/v2/alerting/heartbeat/rules 
+
 ### Example
 ~~~csharp
 using System;
@@ -1511,6 +1563,8 @@ namespace Example
 Create an interaction stats rule.
 
 
+
+Wraps POST /api/v2/alerting/interactionstats/rules 
 
 ### Example
 ~~~csharp
@@ -1570,6 +1624,8 @@ Create a routing status rule.
 
 
 
+Wraps POST /api/v2/alerting/routingstatus/rules 
+
 ### Example
 ~~~csharp
 using System;
@@ -1628,6 +1684,8 @@ Create a user presence rule.
 
 
 
+Wraps POST /api/v2/alerting/userpresence/rules 
+
 ### Example
 ~~~csharp
 using System;
@@ -1685,6 +1743,8 @@ namespace Example
 Update a heart beat rule
 
 
+
+Wraps PUT /api/v2/alerting/heartbeat/rules/{ruleId} 
 
 ### Example
 ~~~csharp
@@ -1746,6 +1806,8 @@ Update an interaction stats alert read status
 
 
 
+Wraps PUT /api/v2/alerting/interactionstats/alerts/{alertId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1805,6 +1867,8 @@ namespace Example
 Update an interaction stats rule
 
 
+
+Wraps PUT /api/v2/alerting/interactionstats/rules/{ruleId} 
 
 ### Example
 ~~~csharp
@@ -1866,6 +1930,8 @@ Update a routing status rule
 
 
 
+Wraps PUT /api/v2/alerting/routingstatus/rules/{ruleId} 
+
 ### Example
 ~~~csharp
 using System;
@@ -1925,6 +1991,8 @@ namespace Example
 Update a user presence rule
 
 
+
+Wraps PUT /api/v2/alerting/userpresence/rules/{ruleId} 
 
 ### Example
 ~~~csharp
